@@ -91,7 +91,12 @@ With `.venv` active, every row came back `✅ ready`: Kokoro audio, captions
 and word clock, Manim beats, Manim equation beats, Remotion beats and
 bookends, slates/previz/compile, and fonts. Cost reported: $0.00.
 
-### Did the sample film render? First no, then yes after a workaround (verified today)
+Did the sample film render? Not with `./art smoke`. It did with a
+workaround — see the next entry.
+
+---
+
+## 2026-10-09 — `./art smoke` fails: the toolkit's fixture slug breaks its own slug rule
 
 - **`./art smoke` FAILED.** It stopped at GATE 0 (Kokoro narration) with
   `generate_audio_kokoro.py failed`. The smoke script deletes its temp
@@ -120,3 +125,86 @@ bookends, slates/previz/compile, and fonts. Cost reported: $0.00.
   reason, so this doesn't show a broken pipeline.
 - **Still open:** `./art smoke` itself will keep failing until the fixture
   slug or the regex is fixed upstream. I didn't edit the toolkit.
+
+---
+
+## 2026-10-09 — No show-tell skill in this checkout
+
+The assignment says to use the `show-tell` skill "if your checkout includes"
+it. Mine doesn't. I searched the whole toolkit (commit `ba2d0e0`) for
+`show-tell`, `show_tell` and `showtell` and got no matches. The skills in
+`skills/make/` are: ai-explainer, anthropics, cli-explainer, deep-explainer,
+duration-planner, explainer, fashionista, fellows, finance, guests, hai,
+logo, logo-motion, nbb, nopunt, screen-clean, sri-explainer and your-turn.
+
+**Plan:** I'll follow the show-tell format by hand in `beat_sheet.json`:
+
+- one simple picture per beat
+- one idea per beat
+- minimal on-screen text
+- the narration (`narration_text`) carries the explanation.
+
+Before writing each beat, I'll check the toolkit's existing scene library
+with `./art scenes "<what the beat needs>"`.
+
+---
+
+## 2026-10-09 — Instructor defaults found in the toolkit; I'll replace or avoid them
+
+The assignment says to narrate as myself and not use the instructor's name,
+persona or credit line. Reading the toolkit, I found these defaults:
+
+- **Voice:** the default Kokoro voice is `am_onyx` ("Onyx", which the docs
+  call "Liam") (`runtime/scripts/generate_audio_kokoro.py:77`). **Plan:** set
+  my own voice in `metadata.voice_kokoro`.
+- **"…this is Liam, in for Bear.":** this is a narration convention, the
+  "IN-FOR-BEAR LAW" in `skills/make/ai-explainer/SKILL.md` and `HOW-TO.md`.
+  No script enforces it. **Plan:** write my own opening and closing lines
+  under my own name.
+- **"Hola, Bear" opener:** this is the default `greeting`, and the default
+  `folderLabel` is `@NikBearBrown`, in the `ClaudeComposerAsk` scene
+  (`runtime/remotion/src/scenes/ClaudeComposerAsk.tsx:34,38`). **Plan:**
+  override both through the scene props, or don't use that scene.
+- **`@NikBearBrown` outro:** the handle is hard-coded as a constant in
+  `ClaudeTitleOutro.tsx:19` (and its 9:16 version), with no setting to
+  change it, and `OUTRO-LOCK.md` locks it. **Plan:** don't use
+  `ClaudeTitleOutro`; end the film with a different scene.
+- **Channel chip:** `metadata.channel_title` (e.g. `@HumanitariansAI`).
+  **Plan:** leave it unset.
+
+**I'll check the result:** before I submit, I'll read every on-screen frame
+in `qc-sheet.png` and the full narration for any of these names.
+
+---
+
+## 2026-10-09 — Made a synthetic test pack for alternative tools, with Claude Code
+
+To compare my project against tools that already exist, I needed the same
+input for every tool, and it had to contain no real data. **Claude Code
+wrote the documents.** I specified their shape: a fictional company
+("Northwind Logistics"), six documents of 150–250 words each, and four
+questions.
+
+- **Where it lives:** `~/info7375-scratch/alt-test-pack/`, outside any git
+  repo. It isn't committed here. Every file is marked `SYNTHETIC`.
+- **The documents:**
+  - 2026-03-02 meeting notes: choose PostgreSQL for the tracking service
+  - 2026-03-10 ticket TRK-112: implement PostgreSQL
+  - 2026-05-18 meeting notes: reverse to DynamoDB because of scaling cost;
+    refers back to the March decision
+  - 2026-05-20 email: the fictional manager Daniel Achebe approves the switch
+  - 2026-06-01 ticket TRK-140: the migration
+  - 2026-06-15 retro: unrelated noise
+- **The questions:**
+  - Q1: Which database does the tracking service use now, and why?
+  - Q2: Was there ever a different decision, and what changed?
+  - Q3: Who approved the switch?
+  - Q4: What budget was approved for the migration? **No document says.** A
+    correct answer has to say it's unknown. I grep-checked that no document
+    contains "budget" or a dollar amount. The May notes do contain a
+    projected-cost comparison ("roughly four times"), which is a deliberate
+    near-miss a tool could wrongly report as the budget.
+- **Notes template:** one blank template per tool in
+  `~/info7375-scratch/alt-notes.md` (Q1–Q4 Y/N, what it did well, one thing
+  it didn't do).
+- **Status:** I haven't tested any tool yet.
