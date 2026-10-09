@@ -1,0 +1,27 @@
+# Caches
+__pycache__/
+*.py[cod]
+.cache/
+node_modules/
+.DS_Store
+
+# Secrets / env files
+.env
+.env.*
+
+# Temp audio (Kokoro narration is regenerated from beat_sheet.json)
+mp3/
+*.wav
+*.tmp.mp3
+
+# Temp render and intermediate folders (the final .mp4 at this folder's root IS committed)
+mp4/
+clips/
+media/
+manim/
+images/
+renders/
+tmp/
+temp/
+_qc/frames/
+*.tmp
