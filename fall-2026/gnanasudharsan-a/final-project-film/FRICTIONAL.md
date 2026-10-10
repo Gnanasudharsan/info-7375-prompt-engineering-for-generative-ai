@@ -236,3 +236,24 @@ key, the grades, the test pack and the screenshots.
   screenshots I have are from 2026-10-10: the NotebookLM summary, NotebookLM
   run 2 Q1–Q4, and ChatGPT Q1–Q4. For run 1, the only evidence is my copied
   text.
+
+---
+
+## 2026-10-10 — Drafted PROJECT-BRIEF.md with Claude; reviewed and edited by me
+
+Claude (claude.ai chat) drafted the seven answers. I reviewed them and made
+two edits before committing:
+
+- **Brutalist line made precise.** "Exists today" no longer says Brutalist
+  simply works. It now says the toolkit's own smoke test fails on a
+  fixture-name bug, and that a renamed copy rendered locally (see the
+  2026-10-09 entries).
+- **Verification claim narrowed to what code can check.** Code will only
+  check that each cited passage appears word for word in the named
+  document. Whether the passage supports the claim will be judged by a
+  second model call, which I'll spot-check against the test set. The brief
+  doesn't say code verifies support.
+
+Before committing, Claude Code checked the brief against the evidence
+folder and this log. It looked at the factual claims, the tense rule and
+the word count. Its findings were reported to me and not silently fixed.
