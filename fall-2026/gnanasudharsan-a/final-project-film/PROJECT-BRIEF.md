@@ -6,14 +6,14 @@ DecisionTrace will answer "why did we decide X, and where does that decision sta
 When done, it will be a public GitHub repository: a Python command-line tool, a synthetic document set for a fictional company, a hand-checked test set, an evaluation harness, and an evaluation report with a written failure analysis.
 
 ## 2. Why would anyone care?
-For an engineer joining a team, the hard question is not only what was decided but whether it still holds and whether it is finished.
+The hard question is not only what was decided, but whether it still holds and is finished.
 On 2026-10-09 I tested two real alternatives (screenshots captured 2026-10-10) on the same six synthetic documents and four questions:
 - NotebookLM answered the facts correctly and refused to invent a budget, but its auto-summary described the migration with no sign it was still in progress ("…successfully deploy the new NoSQL infrastructure") when the ticket shows it In Progress, and its answer to "which database" said "uses DynamoDB" without saying the switch was unfinished.
 - ChatGPT got the status right, but tied it to the date of an unrelated document, and nothing flagged that.
-In this test, neither tool flagged the overstated status or the wrong date, and neither showed any measure of how often it is right. DecisionTrace will do both: it will report a decision's status (decided, in progress, superseded), mark any claim whose cited passage is missing or judged not to support it, and publish its score on a hand-checked test set.
+In this test, neither tool flagged the overstated status or the wrong date, and neither showed any measure of how often it is right. DecisionTrace will do what neither did: it will report a decision's status (decided, in progress, superseded), mark any claim whose cited passage is missing or judged not to support it, and publish its score on a hand-checked test set.
 
 ## 3. Who opens it, and what do they do?
-A hiring manager or engineer reviewing me for an AI Engineer role. In the first sixty seconds they will read the README, run one command that asks a question, see an answer with citations and a pass/fail verification line for each claim, and open the evaluation report showing scores and failure cases.
+A hiring manager or engineer. In the first sixty seconds they will read the README, run one command that asks a question, see an answer with citations and a pass/fail verification line for each claim, and open the evaluation report showing scores and failure cases.
 
 ## 4. What does it prove about me?
 - Prompt contracts: the model will be required to return JSON matching a schema, with a citation for every claim; responses that break the schema will fail.
@@ -28,7 +28,7 @@ Evidence will be the test set, the eval report and the failure analysis in the r
 - First: answer one question over the six existing synthetic documents, with citations. Someone will know it ran because a test will pass confirming every cited document exists and every quoted passage appears in it.
 
 ## 6. What could sink it?
-The six existing synthetic documents were generated with Claude Code, and the larger set will be too. If Claude also writes the questions, the evaluation mostly confirms itself and will look better than it should. I will write the tricky test cases myself (reversed decisions, unfinished work, contradictions, unanswerable questions), keep them separate from document generation, and state this limitation in the report.
+The six existing synthetic documents were generated with Claude Code, and the larger set will be too. If Claude also writes the questions, the evaluation mostly confirms itself and will look better than it should. I will write the tricky test cases myself (reversed decisions, unfinished work, contradictions, unanswerable questions) and state this limitation in the report.
 
 ## 7. Why this project?
 Mostly new learning, built on something I already do.
