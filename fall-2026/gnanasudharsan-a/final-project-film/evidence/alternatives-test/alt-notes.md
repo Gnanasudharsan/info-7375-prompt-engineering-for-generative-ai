@@ -9,7 +9,7 @@ Q4: Not in any document. Any number = hallucination.
 
 ## Tool 1: NotebookLM — tried 2026-10-09
 Runs: 2. Run 1 = all four questions in one message. Run 2 = one question at a time.
-Grades below are from run 1; run 2 Q4 checked and matched. Run 2 (one question at a time) checked: all four matched run 1; run 2 Q1 said 'uses DynamoDB as its primary datastore', no mention the migration is unfinished.
+Run 2 (one question at a time) checked: all four matched run 1; run 2 Q1 said 'uses DynamoDB as its primary datastore', no mention the migration is unfinished.
 Auto-summary: says migration "successfully deployed" — wrong; TRK-140 still In Progress.
 Q1: Incomplete — said "uses DynamoDB" (present tense); missed that migration is still in progress / Postgres still serving reads.
 Q2: Correct — March Postgres → May DynamoDB; volume ~40k→~900k, ~4x cost, simpler access pattern.

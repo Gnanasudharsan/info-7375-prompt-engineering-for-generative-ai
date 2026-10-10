@@ -15,8 +15,7 @@ fictional company, "Northwind Logistics", plus `questions.txt`. Claude Code
 generated them on 2026-10-09 from a spec I wrote. They contain no real
 company, people or data, and every file is labelled `SYNTHETIC`.
 
-**Answer key.** I wrote the answer key (top of `alt-notes.md`) before
-grading either tool's answers.
+**Answer key.** The answer key was drafted by Claude (claude.ai chat, 2026-10-09) from the six docs before any tool was asked Q1–Q4, and checked by me against the docs. The NotebookLM auto-summary appeared on upload, before the key existed.
 
 **Tools and dates.**
 
