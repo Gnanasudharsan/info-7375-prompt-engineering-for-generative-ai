@@ -7,16 +7,16 @@ When done, it will be a public GitHub repository: a Python command-line tool, a 
 
 ## 2. Why would anyone care?
 For an engineer joining a team, the hard question is not only what was decided but whether it still holds and whether it is finished.
-On 2026-10-09/10 I tested two real alternatives on the same six synthetic documents and four questions:
-- NotebookLM answered the facts correctly and refused to invent a budget, but its auto-summary said the migration was "successfully" deployed when the ticket shows it still in progress, and it answered "uses DynamoDB" with no mention that the switch was unfinished.
+On 2026-10-09 I tested two real alternatives (screenshots captured 2026-10-10) on the same six synthetic documents and four questions:
+- NotebookLM answered the facts correctly and refused to invent a budget, but its auto-summary described the migration with no sign it was still in progress ("…successfully deploy the new NoSQL infrastructure") when the ticket shows it In Progress, and its answer to "which database" said "uses DynamoDB" without saying the switch was unfinished.
 - ChatGPT got the status right, but tied it to the date of an unrelated document, and nothing flagged that.
-Neither tool checks its own claims against its sources or tells you how often it is right. DecisionTrace will do both: it will report a decision's status (decided, in progress, superseded), mark any claim whose cited passage is missing or judged not to support it, and publish its score on a hand-checked test set.
+In this test, neither tool flagged the overstated status or the wrong date, and neither showed any measure of how often it is right. DecisionTrace will do both: it will report a decision's status (decided, in progress, superseded), mark any claim whose cited passage is missing or judged not to support it, and publish its score on a hand-checked test set.
 
 ## 3. Who opens it, and what do they do?
 A hiring manager or engineer reviewing me for an AI Engineer role. In the first sixty seconds they will read the README, run one command that asks a question, see an answer with citations and a pass/fail verification line for each claim, and open the evaluation report showing scores and failure cases.
 
 ## 4. What does it prove about me?
-- Prompt contracts: the model must return JSON matching a schema, with a citation for every claim; responses that break the schema fail.
+- Prompt contracts: the model will be required to return JSON matching a schema, with a citation for every claim; responses that break the schema will fail.
 - Verification: code will check that each cited passage appears word for word in the named document; whether it supports the claim will be judged by a second model call, and I will spot-check those judgments against the test set.
 - Agent loop: retrieve → answer → verify → retry once with the failing claims flagged, or answer "not supported by the sources."
 - Evaluation and source grounding: a hand-checked test set and metrics for citation support, status accuracy, and correct refusal on unanswerable questions.
@@ -25,10 +25,10 @@ Evidence will be the test set, the eval report and the failure analysis in the r
 ## 5. In, out, first
 - Out: no real company data and no live Slack, Jira or email connectors.
 - In: synthetic documents, the command-line tool, the verifier, the eval harness and the report.
-- First: answer one question over the six existing synthetic documents, with citations. Someone will know it ran because a test passes confirming every cited document exists and every quoted passage appears in it.
+- First: answer one question over the six existing synthetic documents, with citations. Someone will know it ran because a test will pass confirming every cited document exists and every quoted passage appears in it.
 
 ## 6. What could sink it?
-The synthetic documents are generated with Claude. If Claude also writes the questions, the evaluation mostly confirms itself and will look better than it should. I will write the tricky test cases myself (reversed decisions, unfinished work, contradictions, unanswerable questions), keep them separate from document generation, and state this limitation in the report.
+The six existing synthetic documents were generated with Claude Code, and the larger set will be too. If Claude also writes the questions, the evaluation mostly confirms itself and will look better than it should. I will write the tricky test cases myself (reversed decisions, unfinished work, contradictions, unanswerable questions), keep them separate from document generation, and state this limitation in the report.
 
 ## 7. Why this project?
 Mostly new learning, built on something I already do.

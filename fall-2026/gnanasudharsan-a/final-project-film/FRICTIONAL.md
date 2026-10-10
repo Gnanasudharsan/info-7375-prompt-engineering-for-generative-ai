@@ -257,3 +257,38 @@ two edits before committing:
 Before committing, Claude Code checked the brief against the evidence
 folder and this log. It looked at the factual claims, the tense rule and
 the word count. Its findings were reported to me and not silently fixed.
+
+---
+
+## 2026-10-10 — Narrowed competitor claims and fixed tense after Claude Code's evidence check
+
+Claude Code checked the brief against `evidence/alternatives-test/` and
+this log. It flagged four claims and three tense problems. I fixed them by
+replacing specific sentences:
+
+**Competitor claims**
+
+- The test date now says I tested on 2026-10-09 and captured the
+  screenshots on 2026-10-10. It used to say "2026-10-09/10".
+- **NotebookLM summary.** The brief no longer says the summary called the
+  migration "successfully" deployed. The screenshot only says TRK-140 was
+  initiated "to … successfully deploy the new NoSQL infrastructure". It now
+  says the summary gave no sign the migration was still in progress, and
+  quotes it.
+- **NotebookLM "which database" answer.** It now says the answer itself
+  didn't say the switch was unfinished. The run 2 Q1 suggested follow-up
+  does mention "completing the migration".
+- I dropped "Neither tool checks its own claims against its sources". Two
+  tests can't show how either product works. It now says only what this
+  test showed: neither flagged the overstated status or the wrong date, and
+  neither showed how often it is right.
+
+**Tense**
+
+- §4 prompt contracts: "must … fail" became "will be required … will fail".
+- §5: "a test passes" became "a test will pass".
+- §6: the six existing documents "were generated with Claude Code"; the
+  larger set "will be too".
+
+**Still open:** the brief is 805 words, over my ~750 target. I'll choose
+the cuts myself.
