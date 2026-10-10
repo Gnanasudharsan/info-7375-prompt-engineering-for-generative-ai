@@ -1,0 +1,39 @@
+NORTHWIND LOGISTICS — CUSTOMER APPS TEAM
+Sprint 11 Retrospective
+Date: 2026-06-15
+[SYNTHETIC DOCUMENT — fictional company and people, generated for a test set]
+
+Facilitator: Hana Lindqvist
+Attendees: Hana Lindqvist, Jorge Mendes, Aisha Karim, Ben Whitlock
+
+Sprint goal
+Ship the redesigned delivery-window picker in the customer mobile app and
+fix the top three crash reports from the May release.
+
+What went well
+- The delivery-window picker shipped on day eight, two days early.
+- Aisha's screenshot tests caught a layout bug on small Android screens
+  before release.
+- Crash-free sessions rose after the image-cache fix.
+- Pairing on the accessibility review worked well; we want to keep doing it.
+
+What didn't go well
+- Design handoff for the picker arrived mid-sprint, so estimates were off.
+- The staging app build broke twice because of an expired signing
+  certificate. Nobody owned renewing it.
+- Stand-ups ran long on Tuesdays and Thursdays.
+- Two stories were too large and rolled over.
+
+Action items
+- Ben: add certificate expiry dates to the team calendar with a two-week
+  reminder, and write a one-page renewal runbook.
+- Hana: ask design for handoff no later than sprint planning.
+- Jorge: split stories over five points during refinement.
+- Everyone: time-box stand-up to fifteen minutes; move deep dives to
+  follow-ups.
+
+Kudos
+- To Aisha for the screenshot test suite.
+- To Jorge for staying late to chase the crash in the order-history screen.
+
+Next retro: 2026-06-29.

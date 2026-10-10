@@ -1,0 +1,38 @@
+[SYNTHETIC DOCUMENT — fictional company and people, generated for a test set]
+
+From: Daniel Achebe <d.achebe@northwind-logistics.example>
+To: Priya Raman <p.raman@northwind-logistics.example>
+Cc: Marcus Okafor <m.okafor@northwind-logistics.example>,
+    Tom Hadley <t.hadley@northwind-logistics.example>
+Date: Wed, 20 May 2026 09:42
+Subject: RE: Tracking service datastore — request to switch to DynamoDB
+
+Hi Priya,
+
+Thanks for the write-up from Monday's review and for laying out the March
+decision next to the new numbers. It's helpful to see why PostgreSQL made
+sense at 40k events a day and why it doesn't at the volume we're running now.
+
+I'm approving the switch of the Shipment Tracking Service from PostgreSQL to
+DynamoDB, as described in the 2026-05-18 meeting notes.
+
+Two conditions:
+
+1. No lost scan events during cutover. Please run dual writes until the
+   counts match for at least seven consecutive days before PostgreSQL is
+   switched to read-only.
+2. Elena's warehouse export needs to be live before we turn off SQL access,
+   so the weekly delivery-time report doesn't break.
+
+Please have Marcus link this email in the migration ticket so the approval
+is easy to find later. I'd also like the March decision entry in the
+architecture log updated to say it was superseded, rather than deleted.
+
+Let me know if the timeline slips past the end of June.
+
+Thanks,
+Daniel
+
+Daniel Achebe
+Engineering Manager, Platform
+Northwind Logistics

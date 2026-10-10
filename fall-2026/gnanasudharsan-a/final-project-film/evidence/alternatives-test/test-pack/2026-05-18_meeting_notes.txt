@@ -1,0 +1,39 @@
+NORTHWIND LOGISTICS — PLATFORM ENGINEERING
+Meeting notes: Shipment Tracking Service — datastore review
+Date: 2026-05-18
+[SYNTHETIC DOCUMENT — fictional company and people, generated for a test set]
+
+Attendees: Priya Raman (Tech Lead, Tracking), Marcus Okafor (Backend Engineer),
+Tom Hadley (SRE), Elena Voss (Data Engineer)
+
+Context
+On 2026-03-02 we chose PostgreSQL for the tracking service (implemented in
+TRK-112). Since the regional carrier partnership launched in April, scan
+volume has risen from about 40,000 to about 900,000 events per day, with
+sharp peaks during evening sorting.
+
+What changed
+- To hold peak write load, Tom had to move the primary to a much larger
+  instance class twice in five weeks. Projected database cost at the
+  expected autumn volume is roughly four times what it is today.
+- Almost all reads are now "get all events for one shipment ID," which no
+  longer needs joins.
+- Dashboard joins can move to the analytics warehouse.
+
+Decision
+We are reversing the March decision. The tracking service will move from
+PostgreSQL to DynamoDB, keyed on shipment ID with scan time as the sort key.
+
+Reasons
+- On-demand capacity follows the evening peaks.
+- The dominant access pattern is now stable, which was the open concern in
+  March.
+
+Risks noted
+- Elena loses direct SQL access; the warehouse export must be ready first.
+- Migration must not drop events during cutover.
+
+Action items
+- Priya: get engineering-manager sign-off on the switch.
+- Marcus: open migration ticket.
+- Elena: design the DynamoDB-to-warehouse export.

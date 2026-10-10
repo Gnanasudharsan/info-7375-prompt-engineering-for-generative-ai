@@ -1,0 +1,39 @@
+NORTHWIND LOGISTICS — ISSUE TRACKER
+[SYNTHETIC DOCUMENT — fictional company and people, generated for a test set]
+
+Ticket: TRK-140
+Title: Migrate Shipment Tracking Service from PostgreSQL to DynamoDB
+Type: Epic
+Status: In Progress
+Created: 2026-06-01
+Reporter: Marcus Okafor
+Assignee: Marcus Okafor
+Linked: Supersedes storage design in TRK-112; decision 2026-05-18;
+        approval email from Daniel Achebe, 2026-05-20
+
+Description
+Move tracking persistence from PostgreSQL (TRK-112) to DynamoDB, following
+the 2026-05-18 review. Approved by Daniel Achebe on 2026-05-20 with two
+conditions: dual writes until counts match for seven consecutive days, and
+the warehouse export live before SQL access is removed.
+
+Plan
+1. Create table "tracking_events": partition key shipment_id, sort key
+   scanned_at.
+2. Add a dual-write path: every scan event written to both stores.
+3. Backfill historical events from PostgreSQL in batches of 10,000.
+4. Run a nightly count comparison per day of events; alert on mismatch.
+5. Switch reads to DynamoDB behind a feature flag.
+6. After seven matching days and the warehouse export going live, set
+   PostgreSQL to read-only. Decommission after 30 days.
+
+Sub-tasks
+- TRK-141 Table + IAM policy (Tom) — Done
+- TRK-142 Dual-write path (Marcus) — Done
+- TRK-143 Backfill job (Marcus) — In Progress
+- TRK-144 Warehouse export (Elena) — In Progress
+
+Comments
+2026-06-04 Tom Hadley: Table created with on-demand capacity.
+2026-06-09 Marcus Okafor: Dual writes enabled in production. Counts matched
+for the first two days.

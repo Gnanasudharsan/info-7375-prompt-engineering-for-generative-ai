@@ -208,3 +208,31 @@ questions.
   `~/info7375-scratch/alt-notes.md` (Q1–Q4 Y/N, what it did well, one thing
   it didn't do).
 - **Status:** I haven't tested any tool yet.
+
+---
+
+## 2026-10-10 — Ran the alternatives test (NotebookLM, ChatGPT)
+
+I gave NotebookLM and ChatGPT the six synthetic Northwind documents and the
+four questions. Everything is in `evidence/alternatives-test/`: the answer
+key, the grades, the test pack and the screenshots.
+
+- **NotebookLM's summary overstated the migration as finished.** Its
+  auto-generated summary says the team will "successfully deploy the new
+  NoSQL infrastructure." In fact the migration ticket, TRK-140, is still
+  In Progress: dual writes are on, the backfill is in progress, and reads
+  haven't been switched. Its Q1 answer (run 2) has the same problem: it says
+  the service "uses DynamoDB as its primary datastore" and never mentions
+  that the migration is unfinished.
+- **ChatGPT got the status right but cited an unrelated document's date.**
+  It correctly said the service is "transitioning" and the migration isn't
+  done. But it dated that status "June 15, 2026 (latest supplied records)."
+  June 15 is the date of the unrelated Customer Apps retro. The last real
+  migration update is 2026-06-09, in TRK-140. Nothing flagged the mismatch.
+- **Both tools passed Q4.** Neither invented a budget. ChatGPT explicitly
+  said the ~4× cost projection is not a budget.
+- **I didn't capture a screenshot of NotebookLM run 1.** I copied its
+  answer text into my notes on 2026-10-09 but never took a screenshot. The
+  screenshots I have are from 2026-10-10: the NotebookLM summary, NotebookLM
+  run 2 Q1–Q4, and ChatGPT Q1–Q4. For run 1, the only evidence is my copied
+  text.

@@ -1,0 +1,38 @@
+NORTHWIND LOGISTICS — ISSUE TRACKER
+[SYNTHETIC DOCUMENT — fictional company and people, generated for a test set]
+
+Ticket: TRK-112
+Title: Implement PostgreSQL persistence for Shipment Tracking Service
+Type: Story
+Status: Done
+Created: 2026-03-10
+Reporter: Marcus Okafor
+Assignee: Marcus Okafor
+Sprint: 6
+Linked: Decision from tracking datastore meeting, 2026-03-02
+
+Description
+Per the 2026-03-02 decision, the tracking service will persist shipments and
+scan events in PostgreSQL. This ticket covers the schema, the data-access
+layer, and staging deployment.
+
+Acceptance criteria
+1. Tables created via migrations: shipments, scan_events, carriers.
+2. scan_events has a foreign key to shipments and an index on
+   (shipment_id, scanned_at).
+3. The service writes a scan event in under 50 ms at p95 in staging.
+4. Read replica is used for the support dashboard queries.
+5. Nightly backups verified by one successful restore in staging.
+
+Implementation notes
+- Using the existing connection-pool library from the billing service.
+- Migrations live in /tracking/db/migrations.
+- Event payloads stored in a JSONB column so new carrier fields do not
+  require a schema change.
+
+Comments
+2026-03-14 Tom Hadley: Staging instance is up. Credentials are in the
+secrets manager, not in this ticket.
+2026-03-21 Marcus Okafor: Schema merged. p95 write latency in staging is
+about 18 ms.
+2026-03-27 Marcus Okafor: Restore test passed. Closing.

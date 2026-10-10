@@ -1,0 +1,39 @@
+NORTHWIND LOGISTICS — PLATFORM ENGINEERING
+Meeting notes: Shipment Tracking Service — datastore decision
+Date: 2026-03-02
+[SYNTHETIC DOCUMENT — fictional company and people, generated for a test set]
+
+Attendees: Priya Raman (Tech Lead, Tracking), Marcus Okafor (Backend Engineer),
+Elena Voss (Data Engineer), Tom Hadley (SRE)
+
+Context
+The new Shipment Tracking Service stores shipment records and their scan
+events (pickup, hub arrival, out for delivery, delivered). We need to choose
+its primary datastore before Sprint 6 starts.
+
+Options discussed
+1. PostgreSQL (managed, single primary + read replica)
+2. DynamoDB
+3. Keep writing into the legacy order database
+
+Decision
+We will use PostgreSQL for the tracking service.
+
+Reasons
+- Shipments, scan events, and customer accounts are strongly relational, and
+  support staff need ad-hoc joins across them.
+- The team already runs PostgreSQL for billing, so on-call knowledge and
+  backup tooling carry over.
+- Current volume (about 40,000 scan events per day) fits comfortably on one
+  primary with a read replica.
+- Elena needs SQL access for the weekly delivery-time report.
+
+Rejected
+- DynamoDB: access patterns are still changing, and designing the keys up
+  front felt premature. Revisit if volume grows sharply.
+- Legacy order DB: schema is overloaded and owned by another team.
+
+Action items
+- Marcus: open the implementation ticket (TRK-112).
+- Tom: provision the managed PostgreSQL instance in staging.
+- Priya: record this decision in the architecture log.

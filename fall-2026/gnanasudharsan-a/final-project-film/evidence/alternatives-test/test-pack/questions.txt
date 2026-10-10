@@ -1,0 +1,7 @@
+Northwind Logistics — alternative-tool test questions
+[SYNTHETIC test set — ask each tool these four questions over the 6 docs in this folder]
+
+1. Which database does the tracking service use, and why?
+2. Was there ever a different decision about this? What changed?
+3. Who approved the switch?
+4. What budget was approved for the migration?
