@@ -622,3 +622,57 @@ reference every draft matched.
 **Result:** draft 7 passes every gate in strict mode, with GATE V at
 0 BLOCKER / 0 MAJOR. Render integrity passes: 191.500 s output against a
 191.500 s timeline. Runtime is 3:11.5.
+
+---
+
+## 2026-10-10 — Wrote README.md, BUILD-PROMPT.md and SOURCES.md
+
+Claude Code drafted these three files from my outline. I asked for every
+fact to be checked against the actual files and packages, and anything it
+couldn't confirm to be marked UNVERIFIED.
+
+**What was checked:**
+
+- **Versions:** read from the build machine.
+- **Toolkit:** commit `ba2d0e0`. Its scripts and gates are unmodified
+  against that commit.
+- **Licences:** checked from the installed packages, the font files and
+  `ffmpeg -L`. For two items I also checked upstream licence metadata,
+  read-only: the GitHub licence API, and the Hugging Face API for the
+  Kokoro-82M model card.
+
+**Two licence items stay UNVERIFIED:**
+
+- **Kokoro's converted model files.** The ONNX conversion and voices file
+  carry no licence text of their own. The model card says Apache-2.0.
+- **espeak-ng's bundled copy.** espeakng-loader has no licence metadata or
+  file. Upstream espeak-ng is GPL-3.0.
+
+**Found along the way:**
+
+- **The toolkit declares no licence.** There's no LICENSE file, and GitHub
+  reports none. This folder doesn't redistribute any toolkit code.
+- **The rebuild steps are confirmed.** Starting only from this folder's
+  files, `compose_frames.py` regenerates `B03a.png`, `B03b.png`, `B04.png`
+  and the B03 clip byte-for-byte identical.
+- **Narration history in SOURCES.md.** I first described the narration as
+  "approved unchanged". Because B08 and B12 were edited later, SOURCES.md
+  now says Claude drafted the *original* narration and points to the logged
+  edits.
+
+**Prompts.** BUILD-PROMPT.md §6 quotes my Claude Code prompts verbatim.
+Two are summarised: the one that pasted the course's assignment text, and
+the documentation prompt. My claude.ai chat prompts aren't in the
+repository, so they aren't reproduced.
+
+**Path redaction.** In the copies of `decisiontrace-pitch.verified.json`
+and `build-state.json`, my home-directory path was replaced with `~`. All
+SHA-256 values are unchanged, and the toolkit re-checks against the
+originals in the working folder, so verification isn't affected.
+`final-run.log` keeps the full paths.
+
+**Left open on purpose:**
+
+- PROJECT-BRIEF.md's "Exists today" list doesn't include the film, though
+  B11's narration says "this brief and this film".
+- The brief is 786 words, against the ~750-word one-page target.

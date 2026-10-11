@@ -21,3 +21,9 @@ Independent re-check of the master:
 
 GATE V on the final candidate: 26 frames, 0 BLOCKER, 0 MAJOR (gate-V-REPORT.md, gate-V-contact_sheet.png).
 Size 12,633,193 bytes (12.6 MB). Runtime 3:11.5.
+
+Note on the two toolkit records in this folder: in `decisiontrace-pitch.verified.json` and
+`build-state.json` the home-directory prefix `/Users/gnanasudharsanashokumar` was replaced with `~`
+(2026-10-10). Only path strings changed; every SHA-256 value (the master's and the 26 input hashes) is
+unchanged. These are copies for the record — the toolkit re-checks against the originals in the
+working folder, so the redaction cannot affect verification.
