@@ -676,3 +676,16 @@ originals in the working folder, so verification isn't affected.
 - PROJECT-BRIEF.md's "Exists today" list doesn't include the film, though
   B11's narration says "this brief and this film".
 - The brief is 786 words, against the ~750-word one-page target.
+
+---
+
+## 2026-10-11 — Added the film to "Exists today" in the brief
+
+I added this line to PROJECT-BRIEF.md under "Exists today": "This film and
+its build files (decisiontrace-pitch.mp4, build/, gate-reports/)".
+
+The brief now matches B11's narration ("…plus this brief and this film").
+The 2026-10-10 consistency check had found the gap. No other change.
+
+I date this entry 2026-10-11 because I made the edit just after midnight,
+local time.

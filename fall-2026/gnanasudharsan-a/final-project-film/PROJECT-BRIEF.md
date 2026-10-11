@@ -41,6 +41,7 @@ Stack: Python, Claude (Anthropic API).
 - Alternatives test, 2026-10-09/10: six synthetic Northwind Logistics documents, four questions, an answer key, graded notes and nine screenshots (evidence/alternatives-test/)
 - Brutalist toolkit installed; its own smoke test fails on a fixture-name bug, and a renamed copy rendered locally (logged in FRICTIONAL.md)
 - This brief and the submission folder scaffold
+- This film and its build files (decisiontrace-pitch.mp4, build/, gate-reports/)
 
 ## Will exist
 - The DecisionTrace command-line tool, verifier and retry loop
