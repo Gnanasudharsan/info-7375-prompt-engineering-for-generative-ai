@@ -25,3 +25,7 @@ tmp/
 temp/
 _qc/frames/
 *.tmp
+
+# The course repo's root .gitignore excludes every *.mp4. The assignment requires the
+# rendered film in this folder, so allow exactly this one file back in.
+!decisiontrace-pitch.mp4

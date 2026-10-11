@@ -1,0 +1,342 @@
+{
+  "metadata": {
+    "title": "DecisionTrace — Final Project Pitch",
+    "slug": "decisiontrace-pitch",
+    "engine": "kokoro",
+    "voice_kokoro": "af_heart",
+    "aspect": "16:9",
+    "fit": "pad",
+    "build": {
+      "at": "2026-10-10T22:54:40",
+      "cut": "master",
+      "filled": 13,
+      "of": 13,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "title",
+      "narration_text": "I'm Gnanasudharsan Ashokumar. This is a pitch for a project that doesn't exist yet. Its working title is DecisionTrace.",
+      "engine": "kokoro-phoneme",
+      "estimated_duration_s": 7.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B00_Title"
+        }
+      },
+      "actual_duration_s": 8.13,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 8.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim:B00_Title",
+        "at": "2026-10-10T22:54:40"
+      },
+      "voice": "af_heart",
+      "phoneme_note": {
+        "tool": "tools/phoneme_name.py",
+        "variant": "E",
+        "name_ipa": "ɲˈɑːnɑːsˌuːdʰɚʃɑːn ɑːʃˈoʊk kuːmˈɑːɹ",
+        "phonemes": "aɪm ɲˈɑːnɑːsˌuːdʰɚʃɑːn ɑːʃˈoʊk kuːmˈɑːɹ. ðɪs ɪz ɐ pˈɪtʃ fɚɹə pɹˈɑːdʒɛkt ðæt dˈʌzənt ɛɡzˈɪst jˈɛt. ɪts wˈɜːkɪŋ tˈaɪɾəl ɪz dᵻsˈɪʒən tɹˈeɪs."
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "what",
+      "narration_text": "DecisionTrace will answer one question about a team's history: why did we decide this, and where does that decision stand now? It will be a public GitHub repository: a Python command-line tool, a synthetic document set, a hand-checked test set, and an evaluation report.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 16.3,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B01_StatusTag"
+        }
+      },
+      "actual_duration_s": 17.09,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 17.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim:B01_StatusTag",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "test setup",
+      "narration_text": "Before pitching it, I tested two tools that already do something close. On October ninth, I gave NotebookLM and ChatGPT the same six synthetic documents about a fictional company switching databases. The switch was approved, but not finished.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 14.1,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B02_TestSetup"
+        }
+      },
+      "actual_duration_s": 16.19,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 16.208333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim:B02_TestSetup",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "notebooklm",
+      "narration_text": "NotebookLM got the facts right and refused to invent a budget. But its summary gave no sign the migration was still in progress. Asked which database the service uses, it said DynamoDB, without saying the switch wasn't done.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 14.1,
+      "shot": {
+        "type": "STILL",
+        "motion": "hold",
+        "treatment": "none",
+        "note": "media/B03.mp4 = two real screenshots in sequence (tools/compose_frames.py): summary, then run-2 Q1 from 8.61 s"
+      },
+      "actual_duration_s": 14.68,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 14.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "chatgpt",
+      "narration_text": "ChatGPT got the status right. But it dated that status to June fifteenth, which is an unrelated team retrospective. Nothing flagged it.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 8.1,
+      "shot": {
+        "type": "STILL",
+        "motion": "hold",
+        "treatment": "none"
+      },
+      "actual_duration_s": 9.22,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 9.25,
+      "build": {
+        "status": "STILL",
+        "src": "media/B04.png",
+        "filled_by": "still",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "difference",
+      "narration_text": "In this test, neither tool flagged those mistakes, and neither showed how often it was right. DecisionTrace will do what neither did: report a decision's status, mark any claim whose cited passage is missing or doesn't support it, and publish its score on a hand-checked test set.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 17.4,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B05_ClaimCheck"
+        }
+      },
+      "actual_duration_s": 16.96,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim:B05_ClaimCheck",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "who",
+      "narration_text": "The person opening it will be a hiring manager or an engineer. In the first sixty seconds, they'll run one command, see an answer with a pass or fail line for every claim, and open the evaluation report.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 14.1,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B06_Terminal"
+        },
+        "note": "CONSTRUCTED terminal mock-up, labelled on screen"
+      },
+      "actual_duration_s": 13.01,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 13.041666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim:B06_Terminal",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "proves",
+      "narration_text": "It will show I can build and measure a grounded tool. A prompt contract will force JSON with a citation for every claim. Code will check each quote appears word for word. A second model call will judge whether it supports the claim, and I'll spot-check those judgments. If a claim fails, the loop retries once, or says the sources don't support it. It won't prove it works on real company data, because it won't be tested on any.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 29.3,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B07_VerifyLoop"
+        }
+      },
+      "actual_duration_s": 24.73,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 24.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim:B07_VerifyLoop",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "scope",
+      "narration_text": "It will not connect to Slack, Jira, or email, and it will use no real data. What's in: the tool, the verifier, the test set, and the evaluation report. The first piece to run will answer one question over those six documents, and a test will pass confirming every quote appears in its source.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 15.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B08_Scope"
+        }
+      },
+      "actual_duration_s": 18.62,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 18.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim:B08_Scope",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "risk",
+      "narration_text": "The risk that could sink it: the documents are written with Claude. If Claude also writes the questions, the evaluation grades its own homework. So I'll write the hard cases myself, including reversed decisions, unfinished work, and questions with no answer, and report that limit.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 16.7,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B09_OwnHomework"
+        }
+      },
+      "actual_duration_s": 17.13,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 17.166666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim:B09_OwnHomework",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "why",
+      "narration_text": "Why this project? Mostly to learn. Evaluation harnesses, citation checking, prompt contracts, and agent loops are new to me. What I already have is building RAG pipelines and LLM backends in Python, from a co-op. That code belongs to the company, so this repository will be the first public evidence.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 18.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B10_WhyThis"
+        }
+      },
+      "actual_duration_s": 19.88,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 19.916666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim:B10_WhyThis",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "exists vs will",
+      "narration_text": "What exists today is the test I just showed you, with its documents, notes, and screenshots, plus this brief and this film. Everything else is will.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 9.6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B11_ExistsVsWill"
+        }
+      },
+      "actual_duration_s": 8.7,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 8.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim:B11_ExistsVsWill",
+        "at": "2026-10-10T22:54:40"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "outro",
+      "narration_text": "I'm Gnanasudharsan Ashokumar. The narration voice is synthetic, made with Kokoro. Thanks for watching.",
+      "engine": "kokoro-phoneme",
+      "estimated_duration_s": 5.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B12_Outro"
+        }
+      },
+      "actual_duration_s": 6.83,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 6.833333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim:B12_Outro",
+        "at": "2026-10-10T22:54:40"
+      },
+      "voice": "af_heart",
+      "phoneme_note": {
+        "tool": "tools/phoneme_name.py",
+        "variant": "E",
+        "name_ipa": "ɲˈɑːnɑːsˌuːdʰɚʃɑːn ɑːʃˈoʊk kuːmˈɑːɹ",
+        "phonemes": "aɪm ɲˈɑːnɑːsˌuːdʰɚʃɑːn ɑːʃˈoʊk kuːmˈɑːɹ. ðə nɚɹˈeɪʃən vˈɔɪs ɪz sɪnθˈɛɾɪk, mˌeɪd wɪð kəkˈɔːɹoʊ. θˈæŋks fɔːɹ wˈɑːtʃɪŋ."
+      }
+    }
+  ]
+}
