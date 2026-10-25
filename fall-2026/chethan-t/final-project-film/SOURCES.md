@@ -4,9 +4,11 @@
 - The project idea, the plan (problem, setup, pipeline, eval plan, known limits) and the choice of target role.
 - Direction and approval of the film: I gave the assignment and the plan, approved the draft brief and beat outline, and chose the Kokoro voice and the scope (including the 2026-10-14 change to draft fix PRs), and directed the recruiter-facing cut.
 
+- The oasdiff check (2026-10-25): forked RealWorld, planted the `Profile.username` → `handle` rename by hand (commit 85c2a15), ran oasdiff 1.34.1 and read its output. Files in `evidence/`.
+
 ## Contributed by Claude (Claude Code, Opus 5.5, session of 2026-10-13)
 - **Drafting:** this brief's wording, the beat sheet (narration and visual plan), the toolkit's gate paperwork, and this file, README, BUILD-PROMPT and FRICTIONAL. All were drafted from my plan and the assignment text, then reviewed by me.
-- **Code:** the film's custom Remotion scenes, in the brutalist.art toolkit at `runtime/remotion/src/ApiImpactPitch.tsx`.
+- **Code:** the film's custom Remotion scenes, `scenes/ApiImpactPitch.tsx` in this folder, and their registration, `scenes/Root.tsx.patch`.
 - **Checking:**
   - Ran the search on angular-realworld-example-app that produces the B04 numbers, in my session on 2026-10-13. The narration says "a plain search returns," not "I ran."
   - Checked the line numbers of the B05 call chain.

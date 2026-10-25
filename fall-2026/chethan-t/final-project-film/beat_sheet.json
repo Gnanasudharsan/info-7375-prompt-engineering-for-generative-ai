@@ -21,7 +21,7 @@
     ],
     "honesty": "Past tense only for what exists (the plan, this film, the grep run). Every tool behavior is 'will'. Constructed visuals are labelled on screen.",
     "build": {
-      "at": "2026-10-14T12:50:21",
+      "at": "2026-10-25T20:44:52",
       "cut": "master",
       "filled": 15,
       "of": 15,
@@ -81,13 +81,13 @@
         "status": "VIDEO",
         "src": "media/B02.mp4",
         "filled_by": "remotion:AipRenameBreak",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B00",
       "act": "OPEN",
-      "narration_text": "I'm Chethan. I'm working toward A I software engineering roles, and this is the project I want to build to get there: API Impact.",
+      "narration_text": "I'm Chethan. I'm working toward AI software engineering roles, and this is the project I want to build to get there: API Impact.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -111,29 +111,29 @@
         "remotion": {
           "pattern": "AipOpen",
           "props": {
-            "durationSeconds": 9.3
+            "durationSeconds": 9.54
           },
           "rendered": {
             "out": "media/B00.mp4",
-            "at": "2026-10-14T15:47:34.353529+00:00"
+            "at": "2026-10-26T00:39:37.362184+00:00"
           }
         },
         "honesty_label": "Status shown as Planned; synthetic narration disclosed on screen"
       },
       "audio_file": "mp3/beat-B00.mp3",
-      "actual_duration_s": 9.3,
-      "render_duration_s": 9.333333333333334,
+      "actual_duration_s": 9.54,
+      "render_duration_s": 9.541666666666666,
       "build": {
         "status": "VIDEO",
         "src": "media/B00.mp4",
         "filled_by": "remotion:AipOpen",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B01",
       "act": "BLUF",
-      "narration_text": "The idea: before you merge, API Impact will find the frontend lines your change breaks, and open a fix pull request in each frontend repo, linked to yours.",
+      "narration_text": "Think of a city renaming a street. Every map still showing the old name now sends people nowhere. API Impact will find those maps and fix them first. In code: before you merge, it will find the frontend lines your change breaks, and open a fix pull request in each frontend repo.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -174,29 +174,29 @@
               }
             ],
             "brandLabel": "Chethan Gowda",
-            "durationSeconds": 11.43
+            "durationSeconds": 19.46
           },
           "rendered": {
             "out": "media/B01.mp4",
-            "at": "2026-10-14T15:36:47.913413+00:00"
+            "at": "2026-10-26T00:24:44.492355+00:00"
           }
         }
       },
       "audio_file": "mp3/beat-B01.mp3",
-      "actual_duration_s": 11.43,
+      "actual_duration_s": 19.46,
       "lead_silence_s": 0.8,
-      "render_duration_s": 11.458333333333334,
+      "render_duration_s": 19.5,
       "build": {
         "status": "VIDEO",
         "src": "media/B01.mp4",
         "filled_by": "remotion:BrutalistHesitantWriter",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B03",
       "act": "ALTERNATIVES",
-      "narration_text": "Half of this is solved. Tools like O-A-S diff and Optic flag breaking changes in an OpenAPI spec, in C I. They tell you the spec broke. They don't find the frontend lines or fix them, and that's the part that costs a backend developer a broken release.",
+      "narration_text": "Half of this is solved. Tools like OAS diff and Optic flag breaking changes in an OpenAPI spec, in C I. They tell you the spec broke. They don't find the frontend lines or fix them, and that's the part that breaks the release.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -229,22 +229,22 @@
           "pattern": "AipAltCompare",
           "props": {
             "sparkLine": "Spec half: solved.",
-            "durationSeconds": 18.37
+            "durationSeconds": 16.51
           },
           "rendered": {
             "out": "media/B03.mp4",
-            "at": "2026-10-14T16:25:20.288324+00:00"
+            "at": "2026-10-26T00:40:20.353063+00:00"
           }
         }
       },
       "audio_file": "mp3/beat-B03.mp3",
-      "actual_duration_s": 18.37,
-      "render_duration_s": 18.375,
+      "actual_duration_s": 16.51,
+      "render_duration_s": 16.541666666666668,
       "build": {
         "status": "VIDEO",
         "src": "media/B03.mp4",
         "filled_by": "remotion:AipAltCompare",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
@@ -295,7 +295,7 @@
         "status": "VIDEO",
         "src": "media/B04.mp4",
         "filled_by": "remotion:AipGrepNoise",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
@@ -346,13 +346,13 @@
         "status": "VIDEO",
         "src": "media/B05.mp4",
         "filled_by": "remotion:AipTraceChain",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B06",
       "act": "PIPELINE",
-      "narration_text": "Here's how it will work. O-A-S diff will find the break, tree-sitter will trace each field to where it's read, and Claude will handle what static analysis can't settle, in a fixed format, and draft the edits. Then it will open draft pull requests.",
+      "narration_text": "How it will work: OAS diff will find the break, tree-sitter will trace each field to where it's read, and Claude will handle what static analysis can't settle, in a fixed format, and draft the edits. Then it will open draft pull requests.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -385,23 +385,23 @@
           "pattern": "AipPipeline",
           "props": {
             "sparkLine": "Planned, not built.",
-            "durationSeconds": 16.06
+            "durationSeconds": 15.74
           },
           "rendered": {
             "out": "media/B06.mp4",
-            "at": "2026-10-14T16:29:12.102818+00:00"
+            "at": "2026-10-26T00:41:02.220309+00:00"
           }
         },
         "honesty_label": "PLANNED"
       },
       "audio_file": "mp3/beat-B06.mp3",
-      "actual_duration_s": 16.06,
-      "render_duration_s": 16.083333333333332,
+      "actual_duration_s": 15.74,
+      "render_duration_s": 15.75,
       "build": {
         "status": "VIDEO",
         "src": "media/B06.mp4",
         "filled_by": "remotion:AipPipeline",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
@@ -452,13 +452,13 @@
         "status": "VIDEO",
         "src": "media/B07.mp4",
         "filled_by": "remotion:AipVerifyGate",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B08",
       "act": "FIX PR MOCK-UP",
-      "narration_text": "Here's what that will look like, as a mock-up: a draft pull request in the frontend repo, linked to the backend change, with the edit and its checks. Possible matches will be listed, not edited, and nothing will merge without a human.",
+      "narration_text": "Here's what that will look like, as a mock-up: a draft pull request in the frontend repo, linked to the backend change, with the edit and its checks. Possible matches will be listed, not edited.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -491,29 +491,29 @@
           "pattern": "AipPrComment",
           "props": {
             "sparkLine": "Draft PRs, human merge.",
-            "durationSeconds": 15.62
+            "durationSeconds": 13.08
           },
           "rendered": {
             "out": "media/B08.mp4",
-            "at": "2026-10-14T16:32:06.097568+00:00"
+            "at": "2026-10-26T00:26:45.392741+00:00"
           }
         },
         "honesty_label": "CONSTRUCTED — mock-up of a v1 draft fix PR"
       },
       "audio_file": "mp3/beat-B08.mp3",
-      "actual_duration_s": 15.62,
-      "render_duration_s": 15.625,
+      "actual_duration_s": 13.08,
+      "render_duration_s": 13.083333333333334,
       "build": {
         "status": "VIDEO",
         "src": "media/B08.mp4",
         "filled_by": "remotion:AipPrComment",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B09",
       "act": "EVAL · PROOF",
-      "narration_text": "I'll test it on forked RealWorld repos with about twenty planted breaks, measuring catches, false alarms, citation accuracy and fixes that pass tests, against plain search and a type-check baseline. No results yet, so no numbers here. If they hold up, they'll show I can ground a model in real code, verify its output, and evaluate it. Not agent loops: this is a pipeline.",
+      "narration_text": "I'll test it on forked RealWorld repos with about twenty planted breaks, measuring catches, false alarms, citation accuracy and fixes that pass tests, against plain search and a type-check baseline. No results yet, so no numbers here. If they hold up, they'll show I can ground a model in real code, verify its output, and evaluate it.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -542,23 +542,23 @@
           "pattern": "AipEvalGrid",
           "props": {
             "sparkLine": "Empty until real.",
-            "durationSeconds": 24.92
+            "durationSeconds": 22.93
           },
           "rendered": {
             "out": "media/B09.mp4",
-            "at": "2026-10-14T16:34:28.124056+00:00"
+            "at": "2026-10-26T00:27:47.010703+00:00"
           }
         },
         "honesty_label": "PLANNED — no results exist"
       },
       "audio_file": "mp3/beat-B09.mp3",
-      "actual_duration_s": 24.92,
-      "render_duration_s": 24.958333333333332,
+      "actual_duration_s": 22.93,
+      "render_duration_s": 22.958333333333332,
       "build": {
         "status": "VIDEO",
         "src": "media/B09.mp4",
         "filled_by": "remotion:AipEvalGrid",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
@@ -609,13 +609,13 @@
         "status": "VIDEO",
         "src": "media/B10.mp4",
         "filled_by": "remotion:AipScope",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B11",
       "act": "RISK",
-      "narration_text": "The real risk is a fix that compiles but is wrong, like a username from a different endpoint. So only confirmed lines get edited, fixes must pass the tests, and a human merges. If tracing doesn't hold up on real Angular code, I'll narrow the scope and say so.",
+      "narration_text": "The real risk is a fix that compiles but is wrong, like a username from a different endpoint. So only confirmed lines get edited, and a human merges every fix. If tracing doesn't hold up on real Angular code, I'll narrow the scope and say so.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -640,28 +640,28 @@
           "pattern": "AipRisk",
           "props": {
             "sparkLine": "Only confirmed lines change.",
-            "durationSeconds": 18.28
+            "durationSeconds": 17.15
           },
           "rendered": {
             "out": "media/B11.mp4",
-            "at": "2026-10-14T16:38:53.405046+00:00"
+            "at": "2026-10-26T00:28:32.867029+00:00"
           }
         }
       },
       "audio_file": "mp3/beat-B11.mp3",
-      "actual_duration_s": 18.28,
-      "render_duration_s": 18.291666666666668,
+      "actual_duration_s": 17.15,
+      "render_duration_s": 17.166666666666668,
       "build": {
         "status": "VIDEO",
         "src": "media/B11.mp4",
         "filled_by": "remotion:AipRisk",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
       "beat_id": "B12",
       "act": "WHY",
-      "narration_text": "Why this project? It's mostly learning. I come from Angular and TypeScript, so I know the code on the receiving end, though none of that work is public yet. New to me: tree-sitter, O-A-S diff, GitHub Actions, Claude's structured output, and evaluating an A I that edits code.",
+      "narration_text": "Why this project? It's mostly learning. I come from Angular and TypeScript, so I know the code on the receiving end, and some of that work is on my GitHub. New to me: tree-sitter, OAS diff, GitHub Actions, Claude's structured output, and evaluating an AI that edits code.",
       "engine": "kokoro",
       "voice": "am_michael",
       "shot": {
@@ -671,7 +671,7 @@
         "show": [
           {
             "at": 0.15,
-            "event": "left: ALREADY HAVE — Angular · TypeScript (tag: experience, not public yet)"
+            "event": "left: ALREADY HAVE — Angular · TypeScript (tag: experience · on GitHub)"
           },
           {
             "at": 0.45,
@@ -686,22 +686,22 @@
           "pattern": "AipWhy",
           "props": {
             "sparkLine": "Learning, mostly.",
-            "durationSeconds": 18.26
+            "durationSeconds": 18.73
           },
           "rendered": {
             "out": "media/B12.mp4",
-            "at": "2026-10-14T16:41:05.490445+00:00"
+            "at": "2026-10-26T00:41:50.851049+00:00"
           }
         }
       },
       "audio_file": "mp3/beat-B12.mp3",
-      "actual_duration_s": 18.26,
-      "render_duration_s": 18.291666666666668,
+      "actual_duration_s": 18.73,
+      "render_duration_s": 18.75,
       "build": {
         "status": "VIDEO",
         "src": "media/B12.mp4",
         "filled_by": "remotion:AipWhy",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
@@ -748,7 +748,7 @@
         "status": "VIDEO",
         "src": "media/BVDT.mp4",
         "filled_by": "remotion:ClaudeVerdictArtifact",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     },
     {
@@ -788,7 +788,7 @@
         "status": "VIDEO",
         "src": "media/BOUT.mp4",
         "filled_by": "remotion:AipTitleOutro",
-        "at": "2026-10-14T12:50:21"
+        "at": "2026-10-25T20:44:52"
       }
     }
   ]

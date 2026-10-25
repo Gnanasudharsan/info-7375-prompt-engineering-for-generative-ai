@@ -11,7 +11,7 @@ Before a backend change merges, API Impact will find the frontend lines it break
 - an evaluation report on GitHub Pages
 
 **2. Why would anyone care?**
-It helps a backend engineer who is about to rename a field that other teams' frontends read. Tools like oasdiff and Optic already compare two OpenAPI versions and flag breaking changes in CI. I know of them and their purpose, though I haven't used them myself. They tell you the spec broke. They don't find the frontend lines that depend on it, and they don't fix them. Search-and-replace isn't a substitute. A plain search of the public Angular RealWorld frontend for `username` returns 171 matches in 23 files, and 124 of them are in tests. That search was run by Claude Code in my session on 2026-10-13. API Impact will trace the data from the API call to the property read, edit only those lines, and prove each edit with the frontend's own checks.
+It helps a backend engineer who is about to rename a field that other teams' frontends read. Tools like oasdiff and Optic already compare two OpenAPI versions and flag breaking changes in CI. On 2026-10-25 I ran oasdiff myself: I forked RealWorld and renamed `Profile.username` to `handle` ([commit 85c2a15](https://github.com/chethangowda-git/fork-realworld/commit/85c2a15ddf56ee41c224e7073776c97e7ad0cd2e)). It flagged 12 breaking changes across 12 endpoints, reported `username` as removed rather than renamed, and named no frontend files (see `evidence/`). I haven't used Optic; I know it only from its docs. They tell you the spec broke. They don't find the frontend lines that depend on it, and they don't fix them. Search-and-replace isn't a substitute. A plain search of the public Angular RealWorld frontend for `username` returns 171 matches in 23 files, and 124 of them are in tests. That search was run by Claude Code in my session on 2026-10-13. API Impact will trace the data from the API call to the property read, edit only those lines, and prove each edit with the frontend's own checks.
 
 **3. Who opens it, and what do they do in the first 60 seconds?**
 - **Hiring manager or engineer reviewing my portfolio:** opens the README. The first link is the eval report. Next to it is a real draft fix PR generated on the test bed.
@@ -39,13 +39,14 @@ A fix that compiles but is wrong, such as editing a `username` that actually cam
 
 **7. Why this project?**
 A mix, mostly learning.
-- **Already have:** Angular and TypeScript, so I know the code on the receiving end of these breaks. None of it is public yet, so I can't point to evidence here.
+- **Already have:** Angular and TypeScript, so I know the code on the receiving end of these breaks. Evidence: [ms_node_project](https://github.com/chethangowda-git/ms_node_project), a task app I built with an Angular frontend and a Node.js/SQL Server backend (pushed to GitHub 2026-01-03). It didn't involve the breaking-change problem itself.
 - **New to me:** tree-sitter, oasdiff, writing GitHub Actions and Apps, Claude API structured output, and evaluating an AI that edits code.
 
 **Exists today**
 - This plan (PROJECT-BRIEF.md)
 - The pitch video, its beat sheet and build files (this folder)
 - One real measurement shown in the video: the `username` search on angular-realworld-example-app @ dd99ed2 (2026-10-13)
+- One oasdiff run on a planted rename in my RealWorld fork, commit 85c2a15 (2026-10-25), with its output in `evidence/`
 
 **Will exist**
 - The detector: the CLI and the GitHub Action

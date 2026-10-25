@@ -1,0 +1,49 @@
+12 changes: 12 error, 0 warning, 0 info
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API GET /articles
+        removed the required property `articles/items/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API POST /articles
+        removed the required property `article/author/username` from the response with the `201` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API GET /articles/feed
+        removed the required property `articles/items/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API GET /articles/{slug}
+        removed the required property `article/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API PUT /articles/{slug}
+        removed the required property `article/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API GET /articles/{slug}/comments
+        removed the required property `comments/items/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API POST /articles/{slug}/comments
+        removed the required property `comment/author/username` from the response with the `201` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API DELETE /articles/{slug}/favorite
+        removed the required property `article/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API POST /articles/{slug}/favorite
+        removed the required property `article/author/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API GET /profiles/{username}
+        removed the required property `profile/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API DELETE /profiles/{username}/follow
+        removed the required property `profile/username` from the response with the `200` status
+
+error    [response-required-property-removed] at specs/api/openapi.yml
+    in API POST /profiles/{username}/follow
+        removed the required property `profile/username` from the response with the `200` status
+

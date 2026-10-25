@@ -15,10 +15,14 @@ Everything is free and local, with no keys. The prompts used are listed first, t
 8. "drop namaskara and regenerate the video" · "say as api impact" (outro)
 9. "the in and out slide explanation is not understandable, make it smooth and check if video explains all of these questions" [seven questions pasted], then "approve"
 
+## Resubmission prompts (2026-10-25)
+10. TA comment pasted: "make sure the pitch video contains who is doing it, explains what you are doing easily to a 5 year old or a non-technical person clearly and make sure it is concise…", then "it's from the TA, make both changes" (a plain-language street-renaming comparison in B01; repeated "human merges" lines trimmed from B08 and B11). B03, B06 and B09 were tightened to stay under 4:00, and B12 now says some of the Angular work is on GitHub. Audio regenerated with `--only` for those beats.
+11. "in second beat it AI software voice, its not AI, it A I": the voice read "A I" as "uh eye" and "O-A-S diff" as "oh-uh-ess diff". Narration now writes "AI" (B00, B12) and "OAS diff" (B03, B06, B12), which Kokoro reads as letters.
+
 ## Paste-ready rebuild prompt
-> In `brutalist.art`, using the `ai-explainer` skill, rebuild the reel at `../fall-2026/chethan-g/final-project-film`.
+> In `brutalist.art`, using the `ai-explainer` skill, rebuild the reel at `../fall-2026/chethan-t/final-project-film`.
 > - Keep `beat_sheet.json` as the source of truth: Kokoro `am_michael`, no Liam persona, no `@NikBearBrown`.
-> - Make sure the film's custom scenes, `runtime/remotion/src/ApiImpactPitch.tsx`, exist in the toolkit and that their compositions are registered in `Root.tsx`.
+> - Copy the film's custom scenes from the reel's `scenes/ApiImpactPitch.tsx` into `runtime/remotion/src/`, and apply `scenes/Root.tsx.patch` to register their compositions in `Root.tsx`.
 > - Regenerate audio, run `./art run` at 1080, then read the `_qc/` contact sheet and frames. Fix any BLOCKER or MAJOR defect in scene source and re-run.
 > - Then run `./art final <reel> --out <reel>`. Never publish.
 
@@ -26,11 +30,12 @@ Everything is free and local, with no keys. The prompts used are listed first, t
 ```bash
 cd brutalist.art
 source .venv/bin/activate                      # Python 3.12 venv (not Anaconda)
-REEL=../fall-2026/chethan-g/final-project-film
+REEL=../fall-2026/chethan-t/final-project-film
 
 # 0. scenes: the film's custom Remotion compositions
-#    runtime/remotion/src/ApiImpactPitch.tsx must be present in the toolkit
-#    and register the 13 Aip* compositions in runtime/remotion/src/Root.tsx (folder "ApiImpactPitch")
+#    ship in this folder; install them into the toolkit (patch made against brutalist.art @ 29ba0e8)
+cp $REEL/scenes/ApiImpactPitch.tsx runtime/remotion/src/
+git apply $REEL/scenes/Root.tsx.patch     # registers the 13 Aip* compositions (folder "ApiImpactPitch")
 
 # 1. audio first: the durations become the clock
 python3 runtime/scripts/generate_audio_kokoro.py $REEL

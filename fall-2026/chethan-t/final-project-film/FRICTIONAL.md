@@ -1,6 +1,25 @@
 # FRICTIONAL — dated log
 
-## 2026-10-13
+## My entries (in my own words)
+
+<!-- Chethan: add your own dated entries here, newest first. -->
+
+### 2026-10-25
+i knew the results would come back but i had no solid evidence for it so i run the oasdiff myself got the evidence and then uploaded eviecne for video making flow
+
+### 2026-10-14
+because just reporting  break was not enough, i wanted somthing which fixed the issue, because its mostly reduntant work and small changes which had to be done in many places
+
+### 2026-10-13
+The idea for this project came because of my probelm i faced in as a frontend developer when i was working, when backed people changed a API but forgot to inform and the frontend broke.
+
+---
+
+## Claude-drafted summary (2026-10-13 to 2026-10-14)
+
+Claude wrote the entries below from my session. The decisions are mine, but the wording is Claude's. My own entries are above.
+
+### 2026-10-13
 - **Picked the project and the tool.** Project: API Impact. I chose the toolkit's `ai-explainer` skill. The assignment suggests `show-tell`, but this checkout of brutalist.art doesn't include it.
 - **The skill's defaults clash with the assignment.**
   - `ai-explainer` narrates as "Liam, in for Bear," puts `@NikBearBrown` on the footer chip and corner logo, and its outro card (`ClaudeTitleOutro`) hardcodes `@NikBearBrown` with no override.
@@ -20,7 +39,7 @@
 - **The skin lint warns that the outro isn't `ClaudeTitleOutro`.** That's expected and deliberate (see the persona override above), so I left it as is.
 - **`./art final` wrote the master to the toolkit's `renders/` folder, not the reel folder.** I moved `api-impact-pitch.mp4` and its `verified.json` here, then ran Gate V on the 4K master itself: 0 BLOCKER, 0 MAJOR.
 
-## 2026-10-14
+### 2026-10-14
 - **I asked for the opening to start straight into the idea, without calling the film a pitch.**
   - The B00 line "This is a pitch, not a build: nothing here runs yet" became "I'm Chethan, and this is API Impact." The B01 banner "PITCH · NOTHING BUILT YET" was removed, and the composer title "API Impact — The Pitch" became "API Impact."
   - Honesty still holds: every tool behavior is "will," B01 still shows Exists today / Will exist, and B06–B11 keep their PLANNED and CONSTRUCTED labels.
