@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "slug": "datasentry-pitch",
+    "slug": "datasentry-pitch-v3",
     "title": "DataSentry: A Project Pitch",
     "topic": "FINAL PROJECT · PITCH",
     "skill": "show-tell",
@@ -38,10 +38,10 @@
       "final project pitch"
     ],
     "build": {
-      "at": "2026-10-14T20:15:26",
+      "at": "2026-10-25T19:57:08",
       "cut": "master",
-      "filled": 19,
-      "of": 19,
+      "filled": 17,
+      "of": 17,
       "slates": [],
       "skin_warnings": [
         "BIDEA: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
@@ -55,8 +55,8 @@
       "act": "title",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "This is a Final Project Pitch Film created by Ethan Gomes. The project is called Data Sentry. Nothing is built yet; everything here is a plan. The question isn't whether Claude can write data checks. It's whether anyone can measure what they miss.",
-      "estimated_duration_s": 16.5,
+      "narration_text": "This is a Final Project Pitch Film created by Ethan Gomes. The project is called Data Sentry, and its first pieces already run. The question isn't whether Claude can write data checks. It's whether anyone can measure what they miss.",
+      "estimated_duration_s": 15.4,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
@@ -87,77 +87,60 @@
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
       "lead_silence_s": 0.8,
-      "actual_duration_s": 17.269,
+      "actual_duration_s": 16.16,
       "audio_file": "mp3/beat-BIDEA.mp3",
-      "render_duration_s": 17.291666666666668,
+      "render_duration_s": 16.166666666666668,
       "build": {
         "status": "MANIM",
         "src": "manim/BIDEA.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
-      "beat_id": "BDEFS",
-      "act": "terms",
-      "lane": "bookend",
-      "proof_gate": "CARD",
-      "narration_text": "Three terms. A data check: a rule a table must pass. A planted defect: a mistake put into a copy of the data on purpose. And a catch rate: the share of planted defects the checks find.",
-      "estimated_duration_s": 14.2,
+      "beat_id": "BSIMPLE",
+      "act": "in plain words",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "In plain words: companies set rules to catch bad data, like a taxi fare below zero. Data Sentry tests those rules the way you'd test a spell-checker: hide some mistakes on purpose, then count which ones it catches, and which slip through.",
+      "estimated_duration_s": 16.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
-        "type": "REMOTION",
+        "type": "GRAPHIC",
         "source": "own",
+        "visual_intent": "Plain-language picture: a page of writing; terracotta marks are hidden in it on purpose; a magnifier passes over and ticks the ones it finds; one mark is left with no tick ('slipped through').",
         "show": [
           {
-            "at": 0.12,
-            "event": "'data check' lands"
+            "at": 0.2,
+            "event": "the page"
           },
           {
-            "at": 0.45,
-            "event": "'planted defect' lands"
+            "at": 0.55,
+            "event": "mistakes hidden"
           },
           {
-            "at": 0.75,
-            "event": "'catch rate' lands"
+            "at": 0.8,
+            "event": "caught / slipped through"
           }
         ],
-        "remotion": {
-          "pattern": "ClaudeDefinitions",
-          "props": {
-            "title": "Terms In This Film",
-            "terms": [
-              {
-                "term": "data check",
-                "meaning": "a rule a table must pass, like no missing fares"
-              },
-              {
-                "term": "planted defect",
-                "meaning": "a mistake put into a copy of the data on purpose"
-              },
-              {
-                "term": "catch rate",
-                "meaning": "the share of planted defects the checks find"
-              }
-            ],
-            "folderLabel": "@EthanGomes14",
-            "durationSeconds": 13.461
-          }
-        }
+        "manim": {
+          "class": "BSIMPLE_Spellcheck"
+        },
+        "motion_claim": "Plain-language picture: a page of writing; terracotta marks are hidden in it on purpose; a magnifier passes over and ticks the ones it finds; one mark is left with no tick ('slipped through')."
       },
       "qc": {
         "sparse_by_design": true,
-        "sparse_reason": "TERMS card: three prerequisites, one line each."
+        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 13.461,
-      "audio_file": "mp3/beat-BDEFS.mp3",
-      "render_duration_s": 13.5,
+      "actual_duration_s": 16.277,
+      "audio_file": "mp3/beat-BSIMPLE.mp3",
+      "render_duration_s": 16.291666666666668,
       "build": {
-        "status": "VIDEO",
-        "src": "media/BDEFS.mp4",
-        "filled_by": "media",
-        "at": "2026-10-14T20:15:26"
+        "status": "MANIM",
+        "src": "manim/BSIMPLE.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -165,8 +148,8 @@
       "act": "what it is",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Data Sentry will be a workflow, built in Claude Code, that writes data checks for a table, then scores those checks by planting defects they have to catch.",
-      "estimated_duration_s": 10.8,
+      "narration_text": "Data Sentry has an AI write data checks for a table, then scores those checks by planting defects they have to catch.",
+      "estimated_duration_s": 8.5,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
@@ -196,14 +179,14 @@
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 10.112,
+      "actual_duration_s": 7.787,
       "audio_file": "mp3/beat-B00.mp3",
-      "render_duration_s": 10.125,
+      "render_duration_s": 7.791666666666667,
       "build": {
         "status": "MANIM",
         "src": "manim/B00.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -211,14 +194,14 @@
       "act": "what it is",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "When it's done, it will be a public GitHub repo with three parts: a check writer, a defect planter, and a scorecard of what was caught and what was missed.",
-      "estimated_duration_s": 11.5,
+      "narration_text": "When it's done, it will be a public GitHub repo with three parts: a part that writes checks, a defect planter, and a scorecard of what was caught and what was missed. All three have already run.",
+      "estimated_duration_s": 14.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "A kraft crate (the repo) opens; three parts rise beside it one by one, a check page, a dark planter block, a binder; each labelled once.",
+        "visual_intent": "A kraft crate labelled 'public GitHub repo / when done' opens; three parts rise beside it one by one, a check page, a dark planter block, a binder; each labelled once.",
         "show": [
           {
             "at": 0.15,
@@ -240,35 +223,35 @@
         "manim": {
           "class": "B01_Repo"
         },
-        "motion_claim": "A kraft crate (the repo) opens; three parts rise beside it one by one, a check page, a dark planter block, a binder; each labelled once."
+        "motion_claim": "A kraft crate labelled 'public GitHub repo / when done' opens; three parts rise beside it one by one, a check page, a dark planter block, a binder; each labelled once."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 9.429,
+      "actual_duration_s": 11.989,
       "audio_file": "mp3/beat-B01.mp3",
-      "render_duration_s": 9.458333333333334,
+      "render_duration_s": 12.0,
       "build": {
         "status": "MANIM",
         "src": "manim/B01.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
       "beat_id": "B02",
-      "act": "how it will work",
+      "act": "the data",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "It will start from public data, for example one month of New York City yellow taxi trips, about ten thousand rows. Pick-up time, drop-off time, passengers, distance, and fare.",
-      "estimated_duration_s": 11.2,
+      "narration_text": "It starts from public data. My first run used New York City yellow taxi trips from January twenty twenty-five, sampled to ten thousand rows.",
+      "estimated_duration_s": 9.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "A flat table card lands; five column headers block in; grey rows stack down it as the columns are named.",
+        "visual_intent": "A flat table card lands; column blocks and grey rows fill in; labels 'NYC taxi · Jan 2025' and the real sample size from the first run.",
         "show": [
           {
             "at": 0.15,
@@ -286,158 +269,112 @@
         "manim": {
           "class": "B02_Table"
         },
-        "motion_claim": "A flat table card lands; five column headers block in; grey rows stack down it as the columns are named."
+        "motion_claim": "A flat table card lands; column blocks and grey rows fill in; labels 'NYC taxi · Jan 2025' and the real sample size from the first run."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 12.395,
+      "actual_duration_s": 9.643,
       "audio_file": "mp3/beat-B02.mp3",
-      "render_duration_s": 12.416666666666666,
+      "render_duration_s": 9.666666666666666,
       "build": {
         "status": "MANIM",
         "src": "manim/B02.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
       "beat_id": "B03",
-      "act": "how it will work",
+      "act": "under the hood",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Claude Code will see only the column names and types, and write checks in pandera, an open-source Python library for testing data frames. It will never see the list of defects.",
-      "estimated_duration_s": 11.9,
+      "narration_text": "Under the hood, part one. Python and pandas load the table. A planter script makes copies, breaks each one a different way, five ways in all, and writes an answer key that no check ever reads.",
+      "estimated_duration_s": 13.8,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "An agent workstation; check pages drop beside it; at right a sealed box marked 'defect list' sits behind a closed barrier.",
+        "visual_intent": "Pipeline, part one (exists): a table card, an arrow to a dark planter block, an arrow to a broken copy with terracotta marks, and a locked answer key beside it; labels 'pandas', 'planter', 'answer key'.",
         "show": [
           {
-            "at": 0.1,
-            "event": "workstation"
+            "at": 0.2,
+            "event": "pandas loads the table"
           },
           {
             "at": 0.45,
-            "event": "check pages drop"
+            "event": "planter breaks a copy"
           },
           {
-            "at": 0.8,
-            "event": "sealed defect list"
+            "at": 0.7,
+            "event": "answer key, locked"
           }
         ],
         "manim": {
-          "class": "B03_Writer"
+          "class": "B03_PipeOne"
         },
-        "motion_claim": "An agent workstation; check pages drop beside it; at right a sealed box marked 'defect list' sits behind a closed barrier."
+        "motion_claim": "Pipeline, part one (exists): a table card, an arrow to a dark planter block, an arrow to a broken copy with terracotta marks, and a locked answer key beside it; labels 'pandas', 'planter', 'answer key'."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 12.011,
+      "actual_duration_s": 12.907,
       "audio_file": "mp3/beat-B03.mp3",
-      "render_duration_s": 12.041666666666666,
+      "render_duration_s": 12.916666666666666,
       "build": {
         "status": "MANIM",
         "src": "manim/B03.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
       "beat_id": "B04",
-      "act": "how it will work",
+      "act": "under the hood",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Separately, a plain Python script will copy the clean sample and break it five ways: duplicates, missing values, impossible numbers like a negative fare, a drop-off before its pick-up, and the wrong type.",
-      "estimated_duration_s": 12.7,
+      "narration_text": "Part two. Claude, Opus five point five, saw only the column names and types, and wrote pandera checks under a prompt contract. Each check runs on the clean copy and every broken copy, and a scorer compares the flags with the answer key, one defect type at a time.",
+      "estimated_duration_s": 18.8,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "Two table cards side by side, clean and broken copy; five terracotta marks land on the broken copy, one per defect named.",
+        "visual_intent": "Pipeline, part two, titled 'Part 2': a workstation (Claude) writes check pages; the checks run over the clean and broken copies; the scorer binder lands with a tick and a dot (caught / missed); labels 'Claude / Opus 5.5', 'pandera checks', 'scorer'.",
         "show": [
           {
             "at": 0.15,
-            "event": "copy appears"
+            "event": "Claude Code"
           },
           {
-            "at": 0.45,
-            "event": "defects land one by one"
+            "at": 0.4,
+            "event": "pandera checks"
           },
           {
-            "at": 0.9,
-            "event": "five"
+            "at": 0.75,
+            "event": "scorer, per defect"
           }
         ],
         "manim": {
-          "class": "B04_Planter"
+          "class": "B04_PipeTwo"
         },
-        "motion_claim": "Two table cards side by side, clean and broken copy; five terracotta marks land on the broken copy, one per defect named."
+        "motion_claim": "Pipeline, part two, titled 'Part 2': a workstation (Claude) writes check pages; the checks run over the clean and broken copies; the scorer binder lands with a tick and a dot (caught / missed); labels 'Claude / Opus 5.5', 'pandera checks', 'scorer'."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 14.421,
+      "actual_duration_s": 18.859,
       "audio_file": "mp3/beat-B04.mp3",
-      "render_duration_s": 14.458333333333334,
+      "render_duration_s": 18.875,
       "build": {
         "status": "MANIM",
         "src": "manim/B04.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
-      }
-    },
-    {
-      "beat_id": "B05",
-      "act": "how it will work",
-      "lane": "manim",
-      "proof_gate": "SHOW",
-      "narration_text": "Then every check runs twice. On the clean copy, it must pass. On the broken copy, it must fail. Out comes a catch rate for each kind of defect, with every miss written down.",
-      "estimated_duration_s": 13.1,
-      "voice": "am_michael",
-      "engine": "kokoro",
-      "shot": {
-        "type": "GRAPHIC",
-        "source": "own",
-        "visual_intent": "The scanner from B00; the clean parcel rides through and gets a check; the broken parcel is stopped at the arch with a terracotta light.",
-        "show": [
-          {
-            "at": 0.15,
-            "event": "clean parcel passes"
-          },
-          {
-            "at": 0.5,
-            "event": "broken parcel stopped"
-          },
-          {
-            "at": 0.8,
-            "event": "tally"
-          }
-        ],
-        "manim": {
-          "class": "B05_TwoRuns"
-        },
-        "motion_claim": "The scanner from B00; the clean parcel rides through and gets a check; the broken parcel is stopped at the arch with a terracotta light."
-      },
-      "qc": {
-        "sparse_by_design": true,
-        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
-      },
-      "actual_duration_s": 11.712,
-      "audio_file": "mp3/beat-B05.mp3",
-      "render_duration_s": 11.75,
-      "build": {
-        "status": "MANIM",
-        "src": "manim/B05.mp4",
-        "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -445,14 +382,14 @@
       "act": "why care",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Why would anyone care? I looked at two tools data teams already use. First, D B T. Its built-in tests check exactly what you write: unique, not null, accepted values, relationships.",
-      "estimated_duration_s": 11.9,
+      "narration_text": "Why would anyone care? I ran one rule, fare can't be negative, in two tools data teams use. In D B T, it passed the clean copy and failed twenty-five rows of the broken one.",
+      "estimated_duration_s": 13.5,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "Two comparison trays; the left tray fills with four small test blocks, one per built-in test named; label 'dbt'.",
+        "visual_intent": "Recorded output (typeset) of the real dbt run: dbt build with the not_negative test PASS on trips_clean and FAIL 25 on trips_broken; tagged 'recorded output · <date>'.",
         "show": [
           {
             "at": 0.3,
@@ -466,20 +403,20 @@
         "manim": {
           "class": "B06_Dbt"
         },
-        "motion_claim": "Two comparison trays; the left tray fills with four small test blocks, one per built-in test named; label 'dbt'."
+        "motion_claim": "Recorded output (typeset) of the real dbt run: dbt build with the not_negative test PASS on trips_clean and FAIL 25 on trips_broken; tagged 'recorded output · <date>'."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 13.504,
+      "actual_duration_s": 12.544,
       "audio_file": "mp3/beat-B06.mp3",
-      "render_duration_s": 13.541666666666666,
+      "render_duration_s": 12.583333333333334,
       "build": {
         "status": "MANIM",
         "src": "manim/B06.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -487,14 +424,14 @@
       "act": "why care",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "The second is Great Expectations. Its paid G X Cloud has a feature, Expect A I, that suggests checks for you to review and approve. So AI-suggested checks already exist.",
-      "estimated_duration_s": 11.5,
+      "narration_text": "In Great Expectations, with the free G X Core, the same: pass, then twenty-five unexpected values. Its paid G X Cloud adds Expect A I, which suggests checks for you. I tested that same idea with Claude.",
+      "estimated_duration_s": 14.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "The right tray fills with suggested check pages; an approval stamp comes down on the top page; label 'GX Cloud'.",
+        "visual_intent": "Recorded output (typeset) of the real GX Core run: ExpectColumnValuesToBeBetween(fare_amount, min_value=0), PASS on clean, FAIL 25 unexpected on broken; 'ExpectAI (GX Cloud): not run'.",
         "show": [
           {
             "at": 0.2,
@@ -512,20 +449,20 @@
         "manim": {
           "class": "B07_Gx"
         },
-        "motion_claim": "The right tray fills with suggested check pages; an approval stamp comes down on the top page; label 'GX Cloud'."
+        "motion_claim": "Recorded output (typeset) of the real GX Core run: ExpectColumnValuesToBeBetween(fare_amount, min_value=0), PASS on clean, FAIL 25 unexpected on broken; 'ExpectAI (GX Cloud): not run'."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 12.907,
+      "actual_duration_s": 15.253,
       "audio_file": "mp3/beat-B07.mp3",
-      "render_duration_s": 12.916666666666666,
+      "render_duration_s": 15.291666666666666,
       "build": {
         "status": "MANIM",
         "src": "manim/B07.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -533,14 +470,14 @@
       "act": "why care",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "What I didn't find, in what I read, was a way to measure how good those checks are. Data Sentry will tell a data engineer which bad rows their checks would let through.",
-      "estimated_duration_s": 12.7,
+      "narration_text": "But I had planted twenty-five trips that end before they start. None of the three tools flagged them, because no rule asked. Data Sentry tells a data engineer which bad rows their checks let through.",
+      "estimated_duration_s": 13.5,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "Both trays stay; a broken parcel with a terracotta mark slides past both trays untouched; a question-mark tag lands beside it.",
+        "visual_intent": "Recorded output (typeset): the three tools side by side (all PASS clean, FAIL 25 broken), then the answer key: negative fares 25/25 CAUGHT, drop-off before pick-up 0/25 MISSED.",
         "show": [
           {
             "at": 0.25,
@@ -554,20 +491,20 @@
         "manim": {
           "class": "B08_Gap"
         },
-        "motion_claim": "Both trays stay; a broken parcel with a terracotta mark slides past both trays untouched; a question-mark tag lands beside it."
+        "motion_claim": "Recorded output (typeset): the three tools side by side (all PASS clean, FAIL 25 broken), then the answer key: negative fares 25/25 CAUGHT, drop-off before pick-up 0/25 MISSED."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 10.88,
+      "actual_duration_s": 13.12,
       "audio_file": "mp3/beat-B08.mp3",
-      "render_duration_s": 10.916666666666666,
+      "render_duration_s": 13.125,
       "build": {
         "status": "MANIM",
         "src": "manim/B08.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -575,14 +512,14 @@
       "act": "who opens it",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Who opens it? A hiring manager for a data engineering role. In the first minute, they'll run one command on a broken file and see each defect type: caught, or missed.",
-      "estimated_duration_s": 11.9,
+      "narration_text": "Who opens it? A hiring manager for a data engineering role. One command shows each defect type, caught or missed. My one hand-written rule caught two of five. Claude's first checks caught all five, but rejected two hundred twenty good trips. Its revision fixed that, and missed every negative fare.",
+      "estimated_duration_s": 19.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "A terminal window (dark title bar) opens; a cursor types one grey command bar; five result rows land with a mark each; tagged 'constructed'.",
+        "visual_intent": "Recorded output (typeset) of the scorecard from ./score_round.sh 1 and 2: hand-written 1 rule, clean PASS, 2 of 5; Claude round 1, 220 clean rows flagged, 5 of 5; round 2, 1 check crashes, 4 of 5; round 2 negative fares 0/25 MISSED; tagged \"Claude Opus 5.5 · recorded output · <date>\".",
         "show": [
           {
             "at": 0.2,
@@ -600,20 +537,20 @@
         "manim": {
           "class": "B09_FirstMinute"
         },
-        "motion_claim": "A terminal window (dark title bar) opens; a cursor types one grey command bar; five result rows land with a mark each; tagged 'constructed'."
+        "motion_claim": "Recorded output (typeset) of the scorecard from ./score_round.sh 1 and 2: hand-written 1 rule, clean PASS, 2 of 5; Claude round 1, 220 clean rows flagged, 5 of 5; round 2, 1 check crashes, 4 of 5; round 2 negative fares 0/25 MISSED; tagged \"Claude Opus 5.5 · recorded output · <date>\"."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 11.477,
+      "actual_duration_s": 19.883,
       "audio_file": "mp3/beat-B09.mp3",
-      "render_duration_s": 11.5,
+      "render_duration_s": 19.916666666666668,
       "build": {
         "status": "MANIM",
         "src": "manim/B09.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -621,8 +558,8 @@
       "act": "what it proves",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "What would it prove? Four skills from this class: a prompt contract for each check, an agent loop that writes, runs, and revises, verification against a clean copy, and evaluation by catch rate.",
-      "estimated_duration_s": 12.7,
+      "narration_text": "What does it prove? Four skills from this class, each with a run behind it: a prompt contract, a two-round loop, a clean-copy control, and a catch rate per defect. I test an AI's output instead of trusting it.",
+      "estimated_duration_s": 15.0,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
@@ -660,60 +597,14 @@
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 13.803,
+      "actual_duration_s": 14.379,
       "audio_file": "mp3/beat-B10.mp3",
-      "render_duration_s": 13.833333333333334,
+      "render_duration_s": 14.416666666666666,
       "build": {
         "status": "MANIM",
         "src": "manim/B10.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
-      }
-    },
-    {
-      "beat_id": "B10A",
-      "act": "what it proves",
-      "lane": "manim",
-      "proof_gate": "SHOW",
-      "narration_text": "Once it's built, a reviewer could fairly conclude that I test an AI's output instead of trusting it. The evidence will be in the repo: the scorecard, the log of every round, and the prompts behind each check.",
-      "estimated_duration_s": 14.6,
-      "voice": "am_michael",
-      "engine": "kokoro",
-      "shot": {
-        "type": "GRAPHIC",
-        "source": "own",
-        "visual_intent": "A review desk; a check mark lands with 'tested, not trusted'; then three pieces of planned evidence (scorecard binder, log sheet, prompt page) slide onto the desk; tagged 'planned evidence'.",
-        "show": [
-          {
-            "at": 0.1,
-            "event": "desk + reviewer"
-          },
-          {
-            "at": 0.35,
-            "event": "tested, not trusted"
-          },
-          {
-            "at": 0.7,
-            "event": "evidence lands"
-          }
-        ],
-        "manim": {
-          "class": "B10A_Conclude"
-        },
-        "motion_claim": "A review desk; a check mark lands with 'tested, not trusted'; then three pieces of planned evidence (scorecard binder, log sheet, prompt page) slide onto the desk; tagged 'planned evidence'."
-      },
-      "qc": {
-        "sparse_by_design": true,
-        "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
-      },
-      "actual_duration_s": 13.675,
-      "audio_file": "mp3/beat-B10A.mp3",
-      "render_duration_s": 13.708333333333334,
-      "build": {
-        "status": "MANIM",
-        "src": "manim/B10A.mp4",
-        "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -721,14 +612,14 @@
       "act": "scope",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "In scope: one table, five defect types, one scorecard. Out of scope, on purpose: orchestration, so no Airflow. First to run: one defect, one check, one printed line. If it prints, it ran.",
-      "estimated_duration_s": 12.7,
+      "narration_text": "In scope: one table, five defect types, one scorecard. Out of scope, on purpose: orchestration, so no Airflow. The first pieces have run, and each run saves its scorecard with the date.",
+      "estimated_duration_s": 12.3,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "A task queue; the waiting tasks stay ghosted; the next task slides forward onto the rail, a single printed line appears beside it with a check; label 'first run'.",
+        "visual_intent": "An 'in scope' box fills (table, defects, scorecard); Airflow stays outside; a printed slip with a tick, labelled with the date the first piece ran.",
         "show": [
           {
             "at": 0.15,
@@ -746,20 +637,20 @@
         "manim": {
           "class": "B11_Scope"
         },
-        "motion_claim": "A task queue; the waiting tasks stay ghosted; the next task slides forward onto the rail, a single printed line appears beside it with a check; label 'first run'."
+        "motion_claim": "An 'in scope' box fills (table, defects, scorecard); Airflow stays outside; a printed slip with a tick, labelled with the date the first piece ran."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 13.675,
+      "actual_duration_s": 13.013,
       "audio_file": "mp3/beat-B11.mp3",
-      "render_duration_s": 13.708333333333334,
+      "render_duration_s": 13.041666666666666,
       "build": {
         "status": "MANIM",
         "src": "manim/B11.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -767,8 +658,8 @@
       "act": "risk",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "What could sink it? Checks that are too loose. A check that passes everything catches nothing, and the score would still look fine. So the clean copy and the broken copy are both required, every time.",
-      "estimated_duration_s": 13.8,
+      "narration_text": "What could sink it? Checks that are too strict, or too loose, like Claude's two rounds. So the clean copy and the broken copies are both required, every time.",
+      "estimated_duration_s": 11.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
@@ -798,14 +689,14 @@
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 13.035,
+      "actual_duration_s": 10.304,
       "audio_file": "mp3/beat-B12.mp3",
-      "render_duration_s": 13.041666666666666,
+      "render_duration_s": 10.333333333333334,
       "build": {
         "status": "MANIM",
         "src": "manim/B12.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -813,14 +704,14 @@
       "act": "why this project",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Why this project? It will help me land a data job, like a Data Engineer or Data Analyst role. It will highlight the skills I'm working on: Python, pandas, pandera, and Claude Code in a loop that fixes its own checks.",
-      "estimated_duration_s": 15.8,
+      "narration_text": "Why this project? In my Food Inspections Dataset Project, my checks let bad rows through, and I didn't know which ones until later. Data Sentry measures exactly that. It's a mix: pandera, D B T, Great Expectations, and prompting Claude are new to me. Working with messy public data, I've done before, in that project.",
+      "estimated_duration_s": 21.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "A tray labelled 'working on' fills with four skill blocks, one per skill named; an arrow draws from the tray to the hiring manager's desk (from B10A), labelled 'Data Engineer' and 'Data Analyst'.",
+        "visual_intent": "A table card labelled 'Food Inspections Dataset Project' gets terracotta marks (bad rows that got through); an arrow leads to two lists: 'New to me: pandera, dbt, GX, Claude' and 'Done before: messy public data'.",
         "show": [
           {
             "at": 0.15,
@@ -838,20 +729,20 @@
         "manim": {
           "class": "B13_Why"
         },
-        "motion_claim": "A tray labelled 'working on' fills with four skill blocks, one per skill named; an arrow draws from the tray to the hiring manager's desk (from B10A), labelled 'Data Engineer' and 'Data Analyst'."
+        "motion_claim": "A table card labelled 'Food Inspections Dataset Project' gets terracotta marks (bad rows that got through); an arrow leads to two lists: 'New to me: pandera, dbt, GX, Claude' and 'Done before: messy public data'."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 15.168,
+      "actual_duration_s": 21.653,
       "audio_file": "mp3/beat-B13.mp3",
-      "render_duration_s": 15.208333333333334,
+      "render_duration_s": 21.666666666666668,
       "build": {
         "status": "MANIM",
         "src": "manim/B13.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -859,14 +750,14 @@
       "act": "honesty",
       "lane": "manim",
       "proof_gate": "SHOW",
-      "narration_text": "Where this stands today, October fourteenth, twenty twenty-six. What exists: this pitch, a written brief, and my notes on the two tools. What doesn't exist yet: the code, the defect planter, and any score.",
-      "estimated_duration_s": 13.1,
+      "narration_text": "Where this stands, October twenty-fifth. What exists: this pitch, the five-defect planter, the scorer, and two rounds of checks written by Claude, all run on real taxi data. Still to build: the public repo, and a loop that runs on its own.",
+      "estimated_duration_s": 16.2,
       "voice": "am_michael",
       "engine": "kokoro",
       "shot": {
         "type": "GRAPHIC",
         "source": "own",
-        "visual_intent": "Two shelves: the left fills with three solid pages ('exists'); the right holds three dashed outlines that stay empty ('will exist').",
+        "visual_intent": "Two columns dated by the run: three real pages land under 'exists' (this pitch, the five-defect planter and scorer, two rounds of Claude's checks); two empty slots under 'will exist' (the public repo, a loop that runs on its own).",
         "show": [
           {
             "at": 0.3,
@@ -880,20 +771,20 @@
         "manim": {
           "class": "B14_Exists"
         },
-        "motion_claim": "Two shelves: the left fills with three solid pages ('exists'); the right holds three dashed outlines that stay empty ('will exist')."
+        "motion_claim": "Two columns dated by the run: three real pages land under 'exists' (this pitch, the five-defect planter and scorer, two rounds of Claude's checks); two empty slots under 'will exist' (the public repo, a loop that runs on its own)."
       },
       "qc": {
         "sparse_by_design": true,
         "sparse_reason": "show-tell: one drawn object on a cream stage, a label or two; the voice explains. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
       },
-      "actual_duration_s": 13.611,
+      "actual_duration_s": 16.427,
       "audio_file": "mp3/beat-B14.mp3",
-      "render_duration_s": 13.625,
+      "render_duration_s": 16.458333333333332,
       "build": {
         "status": "MANIM",
         "src": "manim/B14.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     },
     {
@@ -936,7 +827,7 @@
         "status": "MANIM",
         "src": "manim/BEND.mp4",
         "filled_by": "manim",
-        "at": "2026-10-14T20:15:26"
+        "at": "2026-10-25T19:57:08"
       }
     }
   ]

@@ -1,0 +1,21 @@
+Gate B (post-render layout audit) across every v3 render. Each ./art run audits only the scenes it renders.
+Source: art-run.log (the last run) and earlier-runs/art-run-<run>.log (2026-10-25).
+
+earlier-runs/art-run-no-who.log
+  rendered: BIDEA BSIMPLE B00 B01 B02 B03 B04 B06 B07 B08 B09 B10 B11 B12 B13 B14 BEND 
+  audits:   8 snapshots → CLEAN;11 snapshots → CLEAN;17 snapshots → CLEAN;19 snapshots → CLEAN;11 snapshots → CLEAN;13 snapshots → CLEAN;8 snapshots → CLEAN;16 snapshots → CLEAN;19 snapshots → CLEAN;18 snapshots → CLEAN;14 snapshots → CLEAN;21 snapshots → CLEAN;
+earlier-runs/art-run-part-titles.log
+  rendered: BIDEA 
+  audits:   10 snapshots → CLEAN;
+earlier-runs/art-run-b13-reason.log
+  rendered: B03 B04 
+  audits:   20 snapshots → CLEAN;20 snapshots → CLEAN;
+earlier-runs/art-run-gaps-fix.log
+  rendered: B13 
+  audits:   15 snapshots → CLEAN;
+
+art-run.log (B01, B11, B13 revised)
+  rendered: B01 B11 B13 
+  audits:   12 snapshots → CLEAN;16 snapshots → CLEAN;16 snapshots → CLEAN;
+
+Result: every audit CLEAN (0 errors, 0 warnings). GATE-B-layout-audit.md is the report of the last audit.

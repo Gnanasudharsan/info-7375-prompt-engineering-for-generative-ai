@@ -1,0 +1,245 @@
+{
+  "video": "film-v3",
+  "metadata": {
+    "slug": "datasentry-pitch-v3",
+    "title": "DataSentry: A Project Pitch",
+    "topic": "FINAL PROJECT \u00b7 PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "ethan-gomes",
+    "channel_title": "@EthanGomes14",
+    "persona": "Ethan Gomes (narrated in first person; synthetic Kokoro voice)",
+    "voice": "am_michael",
+    "voice_kokoro": "am_michael",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Course assignment (INFO 7375 Final Project Pitch Film): narrate as yourself, no instructor name, persona, or credit line. No composer cold open, no verdict card, no Your Turn. The house outro card (ClaudeTitleOutro) hard-codes @NikBearBrown, so the film closes on a drawn beat (BEND) instead; bookend_check.py is expected to report the missing ClaudeTitleOutro, and that is recorded in FRICTIONAL.md.",
+    "audience": "INFO 7375 instructor and TAs; a data engineering hiring manager",
+    "source_doc": "PROJECT-BRIEF.md (2026-10-14); docs.getdbt.com/docs/build/data-tests (read 2026-10-14); greatexpectations.io blog '2025 In Review' (2026-01-09, read 2026-10-14); nyc.gov TLC trip record data page",
+    "playlist": "",
+    "chapter_number": 0,
+    "tags": [
+      "data engineering",
+      "data quality",
+      "pandera",
+      "Claude Code",
+      "evaluation",
+      "final project pitch"
+    ],
+    "build": {
+      "at": "2026-10-25T19:54:37",
+      "cut": "review",
+      "filled": 17,
+      "of": 17,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'un-annotated' \u2014 COLD OPEN LAW wants ClaudeComposerAsk",
+        "BEND: palette=claude but the outro is 'un-annotated' \u2014 OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 17,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "status": "filled",
+      "on_disk": "manim/BIDEA.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/BIDEA.mp4",
+      "label": "This is a Final Project Pitch Film created by Ethan Gomes. The project is called Data Sentry, and it"
+    },
+    {
+      "beat_id": "BSIMPLE",
+      "status": "filled",
+      "on_disk": "manim/BSIMPLE.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/BSIMPLE.mp4",
+      "label": "In plain words: companies set rules to catch bad data, like a taxi fare below zero. Data Sentry test"
+    },
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "manim/B00.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B00.mp4",
+      "label": "Data Sentry has an AI write data checks for a table, then scores those checks by planting defects th"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "manim/B01.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B01.mp4",
+      "label": "When it's done, it will be a public GitHub repo with three parts: a part that writes checks, a defec"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "manim/B02.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B02.mp4",
+      "label": "It starts from public data. My first run used New York City yellow taxi trips from January twenty tw"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "manim/B03.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B03.mp4",
+      "label": "Under the hood, part one. Python and pandas load the table. A planter script makes copies, breaks ea"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "manim/B04.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B04.mp4",
+      "label": "Part two. Claude, Opus five point five, saw only the column names and types, and wrote pandera check"
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "Why would anyone care? I ran one rule, fare can't be negative, in two tools data teams use. In D B T"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "manim/B07.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B07.mp4",
+      "label": "In Great Expectations, with the free G X Core, the same: pass, then twenty-five unexpected values. I"
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "manim/B08.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B08.mp4",
+      "label": "But I had planted twenty-five trips that end before they start. None of the three tools flagged them"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "manim/B09.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B09.mp4",
+      "label": "Who opens it? A hiring manager for a data engineering role. One command shows each defect type, caug"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "manim/B10.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B10.mp4",
+      "label": "What does it prove? Four skills from this class, each with a run behind it: a prompt contract, a two"
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "manim/B11.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B11.mp4",
+      "label": "In scope: one table, five defect types, one scorecard. Out of scope, on purpose: orchestration, so n"
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "manim/B12.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B12.mp4",
+      "label": "What could sink it? Checks that are too strict, or too loose, like Claude's two rounds. So the clean"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "manim/B13.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B13.mp4",
+      "label": "Why this project? In my Food Inspections Dataset Project, my checks let bad rows through, and I didn"
+    },
+    {
+      "beat_id": "B14",
+      "status": "filled",
+      "on_disk": "manim/B14.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B14.mp4",
+      "label": "Where this stands, October twenty-fifth. What exists: this pitch, the five-defect planter, the score"
+    },
+    {
+      "beat_id": "BEND",
+      "status": "filled",
+      "on_disk": "manim/BEND.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/BEND.mp4",
+      "label": "That's Data Sentry. I'm Ethan Gomes. Thanks for watching."
+    }
+  ]
+}

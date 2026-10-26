@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""make_sheet.py — beat_sheet.json for the DataSentry final-project pitch (Ethan Gomes, INFO 7375).
+"""make_sheet.py — beat_sheet.json for the DataSentry final-project pitch, VERSION 3 (v2 + the Claude-written checks, scored) (Ethan Gomes, INFO 7375).
 
 show-tell format: one drawn isometric picture per beat, a label or two, the narration explains.
 Assignment rules override the skill's house bookends: narrated as Ethan (first person), no
@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SLUG = "datasentry-pitch"
+SLUG = "datasentry-pitch-v3"
 TITLE = "DataSentry: A Project Pitch"
 VOICE = "am_michael"   # a stock Kokoro voice, not the toolkit's Liam persona (am_onyx)
 SPARSE = ("show-tell: one drawn object on a cream stage, a label or two; the voice explains. "
@@ -42,117 +42,103 @@ def remotion(bid, act, narration, pattern, props, show, gate="SHOW", **extra):
 
 OPEN = [
  beat("BIDEA", "title",
-    "This is a Final Project Pitch Film created by Ethan Gomes. The project is called Data Sentry. "
-    "Nothing is built yet; everything here is a plan. "
-    "The question isn't whether Claude can write data checks. It's whether anyone can measure what they miss.",
+    "This is a Final Project Pitch Film created by Ethan Gomes. The project is called Data Sentry, and its first "
+    "pieces already run. The question isn't whether Claude can write data checks. It's whether anyone can measure "
+    "what they miss.",
     "BIDEA_Title", "Title card: 'DataSentry' large and centred; a thin rule draws beneath it with one terracotta dot; one line below: 'Scoring AI-written data checks with planted defects'.",
     [{"at": 0.05, "event": "DataSentry"}, {"at": 0.2, "event": "rule + dot"}, {"at": 0.3, "event": "one-line description"}],
     lead_silence_s=0.8),
- remotion("BDEFS", "terms",
-    "Three terms. A data check: a rule a table must pass. A planted defect: a mistake put into a copy of the "
-    "data on purpose. And a catch rate: the share of planted defects the checks find.",
-    "ClaudeDefinitions",
-    {"title": "Terms In This Film",
-     "terms": [{"term": "data check", "meaning": "a rule a table must pass, like no missing fares"},
-               {"term": "planted defect", "meaning": "a mistake put into a copy of the data on purpose"},
-               {"term": "catch rate", "meaning": "the share of planted defects the checks find"}],
-     "folderLabel": "@EthanGomes14"},
-    [{"at": 0.12, "event": "'data check' lands"}, {"at": 0.45, "event": "'planted defect' lands"},
-     {"at": 0.75, "event": "'catch rate' lands"}], gate="CARD",
-    qc={"sparse_by_design": True, "sparse_reason": "TERMS card: three prerequisites, one line each."}),
+ beat("BSIMPLE", "in plain words",
+    "In plain words: companies set rules to catch bad data, like a taxi fare below zero. Data Sentry tests those "
+    "rules the way you'd test a spell-checker: hide some mistakes on purpose, then count which ones it catches, "
+    "and which slip through.",
+    "BSIMPLE_Spellcheck", "Plain-language picture: a page of writing; terracotta marks are hidden in it on purpose; a magnifier passes over and ticks the ones it finds; one mark is left with no tick ('slipped through').",
+    [{"at": 0.2, "event": "the page"}, {"at": 0.55, "event": "mistakes hidden"}, {"at": 0.8, "event": "caught / slipped through"}]),
 ]
 
 BODY = [
  # Q1 — what is it
  beat("B00", "what it is",
-    "Data Sentry will be a workflow, built in Claude Code, that writes data checks for a table, then scores "
-    "those checks by planting defects they have to catch.",
+    "Data Sentry has an AI write data checks for a table, then scores those checks by planting defects they "
+    "have to catch.",
     "B00_Scanner", "A checkpoint scanner arch lands on the stage with its floor shadow; the name 'DataSentry' sits beside it; a parcel (the table) slides under the arch.",
     [{"at": 0.1, "event": "scanner lands"}, {"at": 0.35, "event": "label"}, {"at": 0.7, "event": "parcel rides in"}]),
  beat("B01", "what it is",
-    "When it's done, it will be a public GitHub repo with three parts: a check writer, a defect planter, "
-    "and a scorecard of what was caught and what was missed.",
-    "B01_Repo", "A kraft crate (the repo) opens; three parts rise beside it one by one, a check page, a dark planter block, a binder; each labelled once.",
+    "When it's done, it will be a public GitHub repo with three parts: a part that writes checks, a defect planter, "
+    "and a scorecard of what was caught and what was missed. All three have already run.",
+    "B01_Repo", "A kraft crate labelled 'public GitHub repo / when done' opens; three parts rise beside it one by one, a check page, a dark planter block, a binder; each labelled once.",
     [{"at": 0.15, "event": "crate opens"}, {"at": 0.45, "event": "check writer"}, {"at": 0.6, "event": "defect planter"}, {"at": 0.75, "event": "scorecard"}]),
  # how it will work
- beat("B02", "how it will work",
-    "It will start from public data, for example one month of New York City yellow taxi trips, about ten thousand rows. "
-    "Pick-up time, drop-off time, passengers, distance, and fare.",
-    "B02_Table", "A flat table card lands; five column headers block in; grey rows stack down it as the columns are named.",
+ beat("B02", "the data",
+    "It starts from public data. My first run used New York City yellow taxi trips from January twenty "
+    "twenty-five, sampled to ten thousand rows.",
+    "B02_Table", "A flat table card lands; column blocks and grey rows fill in; labels 'NYC taxi · Jan 2025' and the real sample size from the first run.",
     [{"at": 0.15, "event": "table lands"}, {"at": 0.5, "event": "rows stack"}, {"at": 0.7, "event": "columns"}]),
- beat("B03", "how it will work",
-    "Claude Code will see only the column names and types, and write checks in pandera, an open-source Python "
-    "library for testing data frames. It will never see the list of defects.",
-    "B03_Writer", "An agent workstation; check pages drop beside it; at right a sealed box marked 'defect list' sits behind a closed barrier.",
-    [{"at": 0.1, "event": "workstation"}, {"at": 0.45, "event": "check pages drop"}, {"at": 0.8, "event": "sealed defect list"}]),
- beat("B04", "how it will work",
-    "Separately, a plain Python script will copy the clean sample and break it five ways: "
-    "duplicates, missing values, impossible numbers like a negative fare, a drop-off before its pick-up, "
-    "and the wrong type.",
-    "B04_Planter", "Two table cards side by side, clean and broken copy; five terracotta marks land on the broken copy, one per defect named.",
-    [{"at": 0.15, "event": "copy appears"}, {"at": 0.45, "event": "defects land one by one"}, {"at": 0.9, "event": "five"}]),
- beat("B05", "how it will work",
-    "Then every check runs twice. On the clean copy, it must pass. On the broken copy, it must fail. Out comes "
-    "a catch rate for each kind of defect, with every miss written down.",
-    "B05_TwoRuns", "The scanner from B00; the clean parcel rides through and gets a check; the broken parcel is stopped at the arch with a terracotta light.",
-    [{"at": 0.15, "event": "clean parcel passes"}, {"at": 0.5, "event": "broken parcel stopped"}, {"at": 0.8, "event": "tally"}]),
+ beat("B03", "under the hood",
+    "Under the hood, part one. Python and pandas load the table. A planter script makes copies, breaks each one a "
+    "different way, five ways in all, and writes an answer key that no check ever reads.",
+    "B03_PipeOne", "Pipeline, part one (exists): a table card, an arrow to a dark planter block, an arrow to a broken copy with terracotta marks, and a locked answer key beside it; labels 'pandas', 'planter', 'answer key'.",
+    [{"at": 0.2, "event": "pandas loads the table"}, {"at": 0.45, "event": "planter breaks a copy"}, {"at": 0.7, "event": "answer key, locked"}]),
+ beat("B04", "under the hood",
+    "Part two. Claude, Opus five point five, saw only the column names and types, and wrote pandera checks under "
+    "a prompt contract. Each check runs on the clean copy and every broken copy, and a scorer compares the flags "
+    "with the answer key, one defect type at a time.",
+    "B04_PipeTwo", "Pipeline, part two, titled 'Part 2': a workstation (Claude) writes check pages; the checks run over the clean and broken copies; the scorer binder lands with a tick and a dot (caught / missed); labels 'Claude / Opus 5.5', 'pandera checks', 'scorer'.",
+    [{"at": 0.15, "event": "Claude Code"}, {"at": 0.4, "event": "pandera checks"}, {"at": 0.75, "event": "scorer, per defect"}]),
  # Q2 — why care, real alternatives
  beat("B06", "why care",
-    "Why would anyone care? I looked at two tools data teams already use. First, D B T. Its built-in tests "
-    "check exactly what you write: unique, not null, accepted values, relationships.",
-    "B06_Dbt", "Two comparison trays; the left tray fills with four small test blocks, one per built-in test named; label 'dbt'.",
+    "Why would anyone care? I ran one rule, fare can't be negative, in two tools data teams use. In D B T, it "
+    "passed the clean copy and failed twenty-five rows of the broken one.",
+    "B06_Dbt", "Recorded output (typeset) of the real dbt run: dbt build with the not_negative test PASS on trips_clean and FAIL 25 on trips_broken; tagged 'recorded output · <date>'.",
     [{"at": 0.3, "event": "trays"}, {"at": 0.6, "event": "four test blocks drop"}]),
  beat("B07", "why care",
-    "The second is Great Expectations. Its paid G X Cloud has a feature, Expect A I, that suggests checks "
-    "for you to review and approve. So AI-suggested checks already exist.",
-    "B07_Gx", "The right tray fills with suggested check pages; an approval stamp comes down on the top page; label 'GX Cloud'.",
+    "In Great Expectations, with the free G X Core, the same: pass, then twenty-five unexpected values. Its paid "
+    "G X Cloud adds Expect A I, which suggests checks for you. I tested that same idea with Claude.",
+    "B07_Gx", "Recorded output (typeset) of the real GX Core run: ExpectColumnValuesToBeBetween(fare_amount, min_value=0), PASS on clean, FAIL 25 unexpected on broken; 'ExpectAI (GX Cloud): not run'.",
     [{"at": 0.2, "event": "right tray"}, {"at": 0.5, "event": "suggested pages"}, {"at": 0.75, "event": "stamp"}]),
  beat("B08", "why care",
-    "What I didn't find, in what I read, was a way to measure how good those checks are. Data Sentry will tell "
-    "a data engineer which bad rows their checks would let through.",
-    "B08_Gap", "Both trays stay; a broken parcel with a terracotta mark slides past both trays untouched; a question-mark tag lands beside it.",
+    "But I had planted twenty-five trips that end before they start. None of the three tools flagged them, because "
+    "no rule asked. Data Sentry tells a data engineer which bad rows their checks let through.",
+    "B08_Gap", 'Recorded output (typeset): the three tools side by side (all PASS clean, FAIL 25 broken), then the answer key: negative fares 25/25 CAUGHT, drop-off before pick-up 0/25 MISSED.',
     [{"at": 0.25, "event": "broken parcel slides past"}, {"at": 0.7, "event": "the gap"}]),
  # Q3 — who opens it
  beat("B09", "who opens it",
-    "Who opens it? A hiring manager for a data engineering role. In the first minute, they'll run one "
-    "command on a broken file and see each defect type: caught, or missed.",
-    "B09_FirstMinute", "A terminal window (dark title bar) opens; a cursor types one grey command bar; five result rows land with a mark each; tagged 'constructed'.",
+    "Who opens it? A hiring manager for a data engineering role. One command shows each defect type, caught or "
+    "missed. My one hand-written rule caught two of five. Claude's first checks caught all five, but rejected two "
+    "hundred twenty good trips. Its revision fixed that, and missed every negative fare.",
+    "B09_FirstMinute", 'Recorded output (typeset) of the scorecard from ./score_round.sh 1 and 2: hand-written 1 rule, clean PASS, 2 of 5; Claude round 1, 220 clean rows flagged, 5 of 5; round 2, 1 check crashes, 4 of 5; round 2 negative fares 0/25 MISSED; tagged "Claude Opus 5.5 · recorded output · <date>".',
     [{"at": 0.2, "event": "window opens"}, {"at": 0.45, "event": "one command"}, {"at": 0.7, "event": "result rows"}]),
  # Q4 — what it proves
  beat("B10", "what it proves",
-    "What would it prove? Four skills from this class: a prompt contract for each check, an agent loop that "
-    "writes, runs, and revises, verification against a clean copy, and evaluation by catch rate.",
+    "What does it prove? Four skills from this class, each with a run behind it: a prompt contract, a two-round "
+    "loop, a clean-copy control, and a catch rate per defect. I test an AI's output instead of trusting it.",
     "B10_Proves", "An evidence binder; its cover opens; four record sheets fan out in a row with ink numerals 1 to 4, one per skill named.",
     [{"at": 0.15, "event": "binder opens"}, {"at": 0.3, "event": "1"}, {"at": 0.45, "event": "2"}, {"at": 0.62, "event": "3"}, {"at": 0.75, "event": "4"}]),
- beat("B10A", "what it proves",
-    "Once it's built, a reviewer could fairly conclude that I test an AI's output instead of trusting it. "
-    "The evidence will be in the repo: the scorecard, the log of every round, and the prompts behind each check.",
-    "B10A_Conclude", "A review desk; a check mark lands with 'tested, not trusted'; then three pieces of planned evidence (scorecard binder, log sheet, prompt page) slide onto the desk; tagged 'planned evidence'.",
-    [{"at": 0.1, "event": "desk + reviewer"}, {"at": 0.35, "event": "tested, not trusted"}, {"at": 0.7, "event": "evidence lands"}]),
  # Q5 — in / out / first
  beat("B11", "scope",
     "In scope: one table, five defect types, one scorecard. Out of scope, on purpose: orchestration, so no "
-    "Airflow. First to run: one defect, one check, one printed line. If it prints, it ran.",
-    "B11_Scope", "A task queue; the waiting tasks stay ghosted; the next task slides forward onto the rail, a single printed line appears beside it with a check; label 'first run'.",
+    "Airflow. The first pieces have run, and each run saves its scorecard with the date.",
+    "B11_Scope", "An 'in scope' box fills (table, defects, scorecard); Airflow stays outside; a printed slip with a tick, labelled with the date the first piece ran.",
     [{"at": 0.15, "event": "queue"}, {"at": 0.5, "event": "out of scope stays back"}, {"at": 0.75, "event": "first run"}]),
  # Q6 — risk
  beat("B12", "risk",
-    "What could sink it? Checks that are too loose. A check that passes everything catches nothing, and the "
-    "score would still look fine. So the clean copy and the broken copy are both required, every time.",
+    "What could sink it? Checks that are too strict, or too loose, like Claude's two rounds. So the clean copy and "
+    "the broken copies are both required, every time.",
     "B12_Loose", "A permission gate with its barrier raised; a broken parcel rides straight through; then the barrier comes down and the next broken parcel stops.",
     [{"at": 0.2, "event": "barrier up"}, {"at": 0.45, "event": "broken parcel slips through"}, {"at": 0.8, "event": "barrier down"}]),
  # Q7 — why this project
  beat("B13", "why this project",
-    "Why this project? It will help me land a data job, like a Data Engineer or Data Analyst role. It will "
-    "highlight the skills I'm working on: Python, pandas, pandera, and Claude Code in a loop that fixes its own "
-    "checks.",
-    "B13_Why", "A tray labelled 'working on' fills with four skill blocks, one per skill named; an arrow draws from the tray to the hiring manager's desk (from B10A), labelled 'Data Engineer' and 'Data Analyst'.",
+    "Why this project? In my Food Inspections Dataset Project, my checks let bad rows through, and I didn't know "
+    "which ones until later. Data Sentry measures exactly that. It's a mix: pandera, D B T, Great Expectations, "
+    "and prompting Claude are new to me. Working with messy public data, I've done before, in that project.",
+    "B13_Why", "A table card labelled 'Food Inspections Dataset Project' gets terracotta marks (bad rows that got through); an arrow leads to two lists: 'New to me: pandera, dbt, GX, Claude' and 'Done before: messy public data'.",
     [{"at": 0.15, "event": "desk + roles"}, {"at": 0.5, "event": "skills drop in"}, {"at": 0.9, "event": "arrow to the role"}]),
  # exists vs will exist
  beat("B14", "honesty",
-    "Where this stands today, October fourteenth, twenty twenty-six. What exists: this pitch, a written brief, "
-    "and my notes on the two tools. What doesn't exist yet: the code, the defect planter, and any score.",
-    "B14_Exists", "Two shelves: the left fills with three solid pages ('exists'); the right holds three dashed outlines that stay empty ('will exist').",
+    "Where this stands, October twenty-fifth. What exists: this pitch, the five-defect planter, the scorer, and two "
+    "rounds of checks written by Claude, all run on real taxi data. Still to build: the public repo, and a loop "
+    "that runs on its own.",
+    "B14_Exists", "Two columns dated by the run: three real pages land under 'exists' (this pitch, the five-defect planter and scorer, two rounds of Claude's checks); two empty slots under 'will exist' (the public repo, a loop that runs on its own).",
     [{"at": 0.3, "event": "exists"}, {"at": 0.65, "event": "will exist"}]),
  beat("BEND", "close",
     "That's Data Sentry. I'm Ethan Gomes. Thanks for watching.",

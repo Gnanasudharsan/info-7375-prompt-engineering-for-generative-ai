@@ -4,380 +4,374 @@ This is a Final Project
 Pitch Film created by
 
 2
-00:00:03,750 --> 00:00:08,000
+00:00:03,750 --> 00:00:08,125
 Ethan Gomes. The project is
-called DataSentry.
+called DataSentry, and its
 
 3
-00:00:08,000 --> 00:00:09,167
-Nothing is built yet;
+00:00:08,125 --> 00:00:09,750
+first pieces already run.
 
 4
-00:00:09,458 --> 00:00:11,083
-everything here is a plan.
-
-5
-00:00:11,500 --> 00:00:14,458
+00:00:10,292 --> 00:00:13,333
 The question isn't whether Claude
 can write data checks.
 
-6
-00:00:14,792 --> 00:00:17,125
+5
+00:00:13,500 --> 00:00:16,000
 It's whether anyone can
 measure what they miss.
 
+6
+00:00:16,167 --> 00:00:19,542
+In plain words: companies set
+rules to catch bad
+
 7
-00:00:17,292 --> 00:00:19,417
-Three terms. A data check:
+00:00:19,542 --> 00:00:22,500
+data, like a taxi fare below zero.
 
 8
-00:00:19,667 --> 00:00:21,625
-a rule a table must pass.
+00:00:22,833 --> 00:00:26,250
+DataSentry tests those rules
+the way you'd test a
 
 9
-00:00:21,833 --> 00:00:25,000
-A planted defect: a mistake
-put into a copy
+00:00:26,667 --> 00:00:30,125
+spell-checker: hide some mistakes on
+purpose, then count which
 
 10
-00:00:25,000 --> 00:00:26,417
-of the data on purpose.
+00:00:30,125 --> 00:00:32,375
+ones it catches, and which slip through.
 
 11
-00:00:26,792 --> 00:00:27,750
-And a catch rate:
+00:00:33,292 --> 00:00:35,667
+DataSentry has an AI write
+data checks for a
 
 12
-00:00:27,750 --> 00:00:30,625
-the share of planted defects
-the checks find.
+00:00:35,667 --> 00:00:39,292
+table, then scores those checks
+by planting defects they
 
 13
-00:00:31,667 --> 00:00:34,250
-DataSentry will be a workflow,
-built in Claude Code,
+00:00:39,292 --> 00:00:40,125
+have to catch.
 
 14
-00:00:34,250 --> 00:00:37,708
-that writes data checks for a
-table, then scores
-
-15
-00:00:37,708 --> 00:00:40,833
-those checks by planting
-defects they have to catch.
-
-16
-00:00:40,917 --> 00:00:42,958
+00:00:40,250 --> 00:00:42,333
 When it's done, it will be a public GitHub
 
-17
-00:00:42,958 --> 00:00:44,500
+15
+00:00:42,333 --> 00:00:43,917
 repo with three parts:
 
+16
+00:00:44,208 --> 00:00:47,458
+a part that writes checks, a
+defect planter, and
+
+17
+00:00:47,458 --> 00:00:49,542
+a scorecard of what was
+caught and what was
+
 18
-00:00:44,833 --> 00:00:48,458
-a check writer, a defect
-planter, and a scorecard
+00:00:49,542 --> 00:00:52,125
+missed. All three have already run.
 
 19
-00:00:48,458 --> 00:00:50,208
-of what was caught and what was missed.
+00:00:52,250 --> 00:00:53,833
+It starts from public data.
 
 20
-00:00:50,375 --> 00:00:53,250
-It will start from public
-data, for example one
+00:00:54,083 --> 00:00:56,875
+My first run used New York
+City yellow taxi
 
 21
-00:00:53,250 --> 00:00:56,250
-month of New York City yellow
-taxi trips, about
+00:00:56,875 --> 00:01:01,125
+trips from January twenty twenty-
+five, sampled to ten thousand
 
 22
-00:00:56,375 --> 00:01:01,375
-ten thousand rows. Pick-up time,
-drop-off time, passengers,
+00:01:01,125 --> 00:01:01,625
+rows.
 
 23
-00:01:01,625 --> 00:01:02,750
-distance, and fare.
+00:01:01,917 --> 00:01:03,875
+Under the hood, part one.
 
 24
-00:01:02,792 --> 00:01:05,583
-Claude Code will see only
-the column names and
+00:01:03,875 --> 00:01:05,875
+Python and pandas load the table.
 
 25
-00:01:05,583 --> 00:01:09,875
-types, and write checks in
-pandera, an open-source Python
+00:01:06,208 --> 00:01:09,375
+A planter script makes
+copies, breaks each one a
 
 26
-00:01:09,875 --> 00:01:12,167
-library for testing data frames.
+00:01:09,375 --> 00:01:12,250
+different way, five ways in
+all, and writes an
 
 27
-00:01:12,708 --> 00:01:14,583
-It will never see the list of defects.
+00:01:12,250 --> 00:01:14,667
+answer key that no check ever reads.
 
 28
-00:01:14,833 --> 00:01:17,875
-Separately, a plain Python
-script will copy the clean
+00:01:14,833 --> 00:01:19,042
+Part two. Claude, Opus five
+point five, saw only
 
 29
-00:01:17,875 --> 00:01:20,042
-sample and break it five ways:
+00:01:19,042 --> 00:01:22,167
+the column names and types, and
+wrote pandera checks
 
 30
-00:01:20,625 --> 00:01:25,042
-duplicates, missing values,
-impossible numbers like a negative
+00:01:22,167 --> 00:01:23,708
+under a prompt contract.
 
 31
-00:01:25,042 --> 00:01:28,625
-fare, a drop-off before its
-pick-up, and the wrong
+00:01:24,167 --> 00:01:27,000
+Each check runs on the
+clean copy and every
 
 32
-00:01:28,625 --> 00:01:29,208
-type.
+00:01:27,000 --> 00:01:30,375
+broken copy, and a scorer
+compares the flags with
 
 33
-00:01:29,291 --> 00:01:31,166
-Then every check runs twice.
+00:01:30,375 --> 00:01:33,708
+the answer key, one defect type at a time.
 
 34
-00:01:31,500 --> 00:01:33,625
-On the clean copy, it must pass.
-
-35
-00:01:33,875 --> 00:01:36,125
-On the broken copy, it must fail.
-
-36
-00:01:36,625 --> 00:01:38,708
-Out comes a catch rate for each kind of
-
-37
-00:01:38,708 --> 00:01:40,916
-defect, with every miss written down.
-
-38
-00:01:41,041 --> 00:01:42,208
+00:01:33,708 --> 00:01:34,917
 Why would anyone care?
 
+35
+00:01:35,458 --> 00:01:38,208
+I ran one rule, fare can't be negative, in
+
+36
+00:01:38,208 --> 00:01:40,167
+two tools data teams use.
+
+37
+00:01:40,667 --> 00:01:44,083
+In dbt, it passed the clean
+copy and failed
+
+38
+00:01:44,250 --> 00:01:46,292
+twenty-five rows of the broken one.
+
 39
-00:01:42,666 --> 00:01:45,958
-I looked at two tools data
-teams already use.
+00:01:46,292 --> 00:01:48,958
+In Great Expectations, with
+the free G X Core,
 
 40
-00:01:45,958 --> 00:01:50,208
-First, dbt. Its built-in tests
-check exactly what you
+00:01:48,958 --> 00:01:53,500
+the same: pass, then twenty-
+five unexpected values.
 
 41
-00:01:50,208 --> 00:01:54,250
-write: unique, not null, accepted
-values, relationships.
+00:01:53,833 --> 00:01:58,291
+Its paid GX Cloud adds ExpectAI,
+which suggests checks for
 
 42
-00:01:54,583 --> 00:01:56,625
-The second is Great Expectations.
+00:01:58,291 --> 00:02:01,083
+you. I tested that same idea with Claude.
 
 43
-00:01:57,166 --> 00:02:01,666
-Its paid GX Cloud has a feature,
-ExpectAI, that suggests
+00:02:01,583 --> 00:02:04,416
+But I had planted twenty-five
+trips that end before
 
 44
-00:02:01,666 --> 00:02:03,958
-checks for you to review and approve.
+00:02:04,416 --> 00:02:07,625
+they start. None of the three
+tools flagged them,
 
 45
-00:02:04,541 --> 00:02:07,458
-So AI-suggested checks already exist.
+00:02:07,625 --> 00:02:09,708
+because no rule asked.
 
 46
-00:02:07,500 --> 00:02:10,333
-What I didn't find, in what I read, was
+00:02:10,000 --> 00:02:13,583
+DataSentry tells a data engineer
+which bad rows their
 
 47
-00:02:10,333 --> 00:02:12,875
-a way to measure how good
-those checks are.
+00:02:13,583 --> 00:02:14,666
+checks let through.
 
 48
-00:02:13,250 --> 00:02:16,666
-DataSentry will tell a data
-engineer which bad rows
-
-49
-00:02:16,666 --> 00:02:18,291
-their checks would let through.
-
-50
-00:02:18,416 --> 00:02:21,541
+00:02:14,708 --> 00:02:17,791
 Who opens it? A hiring manager for a data
 
+49
+00:02:17,791 --> 00:02:22,000
+engineering role. One command shows
+each defect type, caught
+
+50
+00:02:22,000 --> 00:02:25,333
+or missed. My one hand-written
+rule caught two of
+
 51
-00:02:21,541 --> 00:02:24,958
-engineering role. In the first
-minute, they'll run one
+00:02:25,333 --> 00:02:29,291
+five. Claude's first checks caught
+all five, but rejected
 
 52
-00:02:24,958 --> 00:02:27,666
-command on a broken file
-and see each defect
+00:02:29,333 --> 00:02:30,916
+two hundred twenty good trips.
 
 53
-00:02:27,666 --> 00:02:29,708
-type: caught, or missed.
+00:02:31,333 --> 00:02:34,541
+Its revision fixed that, and
+missed every negative fare.
 
 54
-00:02:29,916 --> 00:02:30,875
-What would it prove?
+00:02:34,625 --> 00:02:35,500
+What does it prove?
 
 55
-00:02:31,500 --> 00:02:33,291
-Four skills from this class:
+00:02:36,041 --> 00:02:38,583
+Four skills from this
+class, each with a run
 
 56
-00:02:33,500 --> 00:02:36,458
-a prompt contract for each
-check, an agent loop
+00:02:38,583 --> 00:02:42,708
+behind it: a prompt contract,
+a two-round loop, a
 
 57
-00:02:36,458 --> 00:02:40,916
-that writes, runs, and revises,
-verification against a clean
+00:02:42,875 --> 00:02:45,500
+clean-copy control, and a
+catch rate per defect.
 
 58
-00:02:40,916 --> 00:02:43,750
-copy, and evaluation by catch rate.
-
-59
-00:02:43,750 --> 00:02:46,916
-Once it's built, a reviewer
-could fairly conclude that
-
-60
-00:02:46,916 --> 00:02:49,999
+00:02:45,958 --> 00:02:49,041
 I test an AI's output
 instead of trusting it.
 
-61
-00:02:50,374 --> 00:02:52,291
-The evidence will be in the repo:
-
-62
-00:02:52,666 --> 00:02:55,666
-the scorecard, the log of
-every round, and the
-
-63
-00:02:55,666 --> 00:02:57,374
-prompts behind each check.
-
-64
-00:02:57,457 --> 00:03:01,499
+59
+00:02:49,041 --> 00:02:53,166
 In scope: one table, five defect
 types, one scorecard.
 
-65
-00:03:01,707 --> 00:03:03,207
+60
+00:02:53,416 --> 00:02:55,000
 Out of scope, on purpose:
 
-66
-00:03:03,624 --> 00:03:05,207
+61
+00:02:55,375 --> 00:02:57,208
 orchestration, so no Airflow.
 
-67
-00:03:05,666 --> 00:03:08,874
-First to run: one defect, one
-check, one printed
+62
+00:02:57,708 --> 00:03:00,333
+The first pieces have run,
+and each run saves
 
-68
-00:03:08,874 --> 00:03:11,041
-line. If it prints, it ran.
+63
+00:03:00,333 --> 00:03:02,041
+its scorecard with the date.
 
-69
-00:03:11,165 --> 00:03:12,249
+64
+00:03:02,083 --> 00:03:03,166
 What could sink it?
 
+65
+00:03:03,500 --> 00:03:06,250
+Checks that are too strict,
+or too loose, like
+
+66
+00:03:06,375 --> 00:03:09,333
+Claude's two rounds. So the
+clean copy and the
+
+67
+00:03:09,333 --> 00:03:12,250
+broken copies are both
+required, every time.
+
+68
+00:03:12,416 --> 00:03:16,541
+Why this project? In my Food
+Inspections Dataset Project,
+
+69
+00:03:16,624 --> 00:03:18,916
+my checks let bad rows
+through, and I didn't
+
 70
-00:03:12,624 --> 00:03:14,082
-Checks that are too loose.
+00:03:18,916 --> 00:03:20,541
+know which ones until later.
 
 71
-00:03:14,374 --> 00:03:17,499
-A check that passes everything
-catches nothing, and the
+00:03:21,083 --> 00:03:23,249
+DataSentry measures exactly that.
 
 72
-00:03:17,499 --> 00:03:19,249
-score would still look fine.
+00:03:23,583 --> 00:03:28,624
+It's a mix: pandera, dbt, Great
+Expectations, and prompting
 
 73
-00:03:19,582 --> 00:03:22,124
-So the clean copy and the broken copy are
+00:03:28,708 --> 00:03:29,833
+Claude are new to me.
 
 74
-00:03:22,124 --> 00:03:24,082
-both required, every time.
+00:03:30,249 --> 00:03:33,124
+Working with messy public data,
+I've done before, in
 
 75
-00:03:24,207 --> 00:03:26,707
-Why this project? It will help me land a
+00:03:33,124 --> 00:03:33,958
+that project.
 
 76
-00:03:26,707 --> 00:03:29,749
-data job, like a Data
-Engineer or Data Analyst
+00:03:34,083 --> 00:03:36,708
+Where this stands, October twenty-fifth.
 
 77
-00:03:29,749 --> 00:03:33,374
-role. It will highlight the
-skills I'm working on:
+00:03:36,708 --> 00:03:40,916
+What exists: this pitch, the five-
+defect planter, the scorer,
 
 78
-00:03:33,707 --> 00:03:37,499
-Python, pandas, pandera, and
-Claude Code in a loop
+00:03:40,916 --> 00:03:43,791
+and two rounds of checks
+written by Claude, all
 
 79
-00:03:37,499 --> 00:03:39,332
-that fixes its own checks.
+00:03:43,791 --> 00:03:45,874
+run on real taxi data.
 
 80
-00:03:39,415 --> 00:03:43,582
-Where this stands today,
-October fourteenth, 2026.
+00:03:46,124 --> 00:03:48,999
+Still to build: the public
+repo, and a loop
 
 81
-00:03:43,582 --> 00:03:46,748
-What exists: this pitch, a
-written brief, and my
+00:03:48,999 --> 00:03:50,499
+that runs on its own.
 
 82
-00:03:46,748 --> 00:03:48,332
-notes on the two tools.
-
-83
-00:03:48,707 --> 00:03:50,123
-What doesn't exist yet:
-
-84
-00:03:50,332 --> 00:03:52,915
-the code, the defect
-planter, and any score.
-
-85
-00:03:53,040 --> 00:03:55,540
+00:03:50,541 --> 00:03:53,041
 That's DataSentry. I'm Ethan Gomes.
 
-86
-00:03:55,707 --> 00:03:56,665
+83
+00:03:53,208 --> 00:03:54,166
 Thanks for watching.

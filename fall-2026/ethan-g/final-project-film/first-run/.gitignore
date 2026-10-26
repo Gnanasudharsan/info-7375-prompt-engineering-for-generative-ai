@@ -1,0 +1,7 @@
+# local environment and data copies (re-created by run_all.sh); results/ is kept
+.venv/
+data/
+dbt_compare/target/
+dbt_compare/logs/
+logs/
+__pycache__/

@@ -1,0 +1,344 @@
+[run] skip BIDEA_Title — BIDEA already filled
+[run] skip B00_Scanner — B00 already filled
+[run] skip B01_Repo — B01 already filled
+[run] skip B02_Table — B02 already filled
+[run] skip BSIMPLE_Spellcheck — BSIMPLE already filled
+[run] skip B06_Dbt — B06 already filled
+[run] skip B07_Gx — B07 already filled
+[run] skip B08_Gap — B08 already filled
+[run] skip B09_FirstMinute — B09 already filled
+[run] skip B10_Proves — B10 already filled
+[run] skip B11_Scope — B11 already filled
+[run] skip B12_Loose — B12 already filled
+[run] skip B13_Why — B13 already filled
+[run] skip B14_Exists — B14 already filled
+[run] skip BEND_Close — BEND already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B03_PipeOne clean
+[gateW] B04_PipeTwo clean
+[run] rendering B03_PipeOne
+Manim Community v0.20.1
+
+Animation 0: FadeIn(Text('Part 1')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: FadeIn(Text('Part 1')), etc.:  92%|█████████▏| 11/12 [00:00<00:00, 102.69it/s]                                                                                           [10/25/26 18:58:15] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1697911619_1094102275_                         
+                             223132457.mp4'                                     
+                    INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_2075896529_                         
+                             1465268971.mp4'                                    
+Animation 2: FadeIn(Text('pandas')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                              INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_892668035_2                         
+                             760311656.mp4'                                     
+[10/25/26 18:58:16] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_3031964098_                         
+                             809691018.mp4'                                     
+Animation 4: Create(Line):   0%|          | 0/10 [00:00<?, ?it/s]                                                                                     INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_446129148_3                         
+                             487523693.mp4'                                     
+Animation 5: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                                          [10/25/26 18:58:17] INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_4235040492_                         
+                             2371752290.mp4'                                    
+                    INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_376408712_1                         
+                             591239815.mp4'                                     
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_2209038109_                         
+                             967121003.mp4'                                     
+Animation 8: Create(Line):   0%|          | 0/10 [00:00<?, ?it/s]                                                                 [10/25/26 18:58:18] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_1997031688_                         
+                             3451047412.mp4'                                    
+Animation 9: FadeIn(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                                        INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_1722308051_                         
+                             2393078346.mp4'                                    
+Animation 10: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                            INFO     Animation 10 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_222319146_1                         
+                             000301794.mp4'                                     
+[10/25/26 18:58:19] INFO     Animation 11 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_1418068949_                         
+                             1599594787.mp4'                                    
+Animation 12: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                                                               INFO     Animation 12 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_2235708549_                         
+                             2507806905.mp4'                                    
+[10/25/26 18:58:20] INFO     Animation 13 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B03_Pipe                         
+                             One/1167814662_412524291_5                         
+                             59882288.mp4'                                      
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/B0                         
+                             3_PipeOne.mp4'                                     
+                                                                                
+                    INFO     Rendered B03_PipeOne                   scene.py:278
+                             Played 14 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Text('Part 1')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                /Users/ethangomes/Desktop/Prompt_Engineering/Brutalist/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: FadeIn(Text('pandas')):   0%|          | 0/5 [00:00<?, ?it/s]                                                                          Animation 4: Create(Line):   0%|          | 0/6 [00:00<?, ?it/s]                                                                Animation 5: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                         Animation 8: Create(Line):   0%|          | 0/6 [00:00<?, ?it/s]                                                                Animation 9: FadeIn(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 10: LaggedStart(Group):   0%|          | 0/8 [00:00<?, ?it/s]                                                                       Animation 12: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                          [audit] scenes: 20 snapshots → CLEAN
+[audit] report: /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3/layout_audit.md
+[run] rendering B04_PipeTwo
+Manim Community v0.20.1
+
+Animation 0: FadeIn(Text('Part 2')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: FadeIn(Text('Part 2')), etc.:  83%|████████▎ | 10/12 [00:00<00:00, 94.61it/s]                                                                                          [10/25/26 18:58:22] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1697911619_1728407324_                         
+                             223132457.mp4'                                     
+Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                                       INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1900944230_                         
+                             2607129739.mp4'                                    
+[10/25/26 18:58:24] INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_145614020_3                         
+                             139128272.mp4'                                     
+Animation 3: Create(Line):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_3953929139_                         
+                             2085553302.mp4'                                    
+Animation 4: LaggedStart(Group), etc.:   0%|          | 0/20 [00:00<?, ?it/s]Animation 4: LaggedStart(Group), etc.:  60%|██████    | 12/20 [00:00<00:00, 112.99it/s]                                                                                                           INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1173511950_                         
+                             1332125821.mp4'                                    
+[10/25/26 18:58:26] INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_2670537375_                         
+                             2966318124.mp4'                                    
+Animation 6: Create(Line):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                    INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1883137515_                         
+                             1738023598.mp4'                                    
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                                                              INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_47644642_29                         
+                             11738731.mp4'                                      
+Animation 8: GrowFromCenter(Dot):   0%|          | 0/8 [00:00<?, ?it/s]                                                                       [10/25/26 18:58:27] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1105858507_                         
+                             4269160139.mp4'                                    
+                    INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_761049222_8                         
+                             89337786.mp4'                                      
+Animation 10: Create(Line):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                     INFO     Animation 10 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1736516588_                         
+                             1406458092.mp4'                                    
+Animation 11: FadeIn(VGroup of 4 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 11: FadeIn(VGroup of 4 submobjects), etc.: 100%|██████████| 12/12 [00:00<00:00, 113.05it/s]                                                                                                     [10/25/26 18:58:28] INFO     Animation 11 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_3627632554_                         
+                             2666359080.mp4'                                    
+[10/25/26 18:58:29] INFO     Animation 12 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1830954365_                         
+                             3934992427.mp4'                                    
+Animation 13: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                                                               INFO     Animation 13 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_1570873027_                         
+                             3502712058.mp4'                                    
+                    INFO     Animation 14 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/pa                         
+                             rtial_movie_files/B04_Pipe                         
+                             Two/1167814662_845639746_2                         
+                             309026425.mp4'                                     
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+[10/25/26 18:58:30] INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/ethangomes/Desktop                         
+                             /Prompt_Engineering/Final_                         
+                             Project_Pitch/film-v3/medi                         
+                             a/videos/scenes/2160p24/B0                         
+                             4_PipeTwo.mp4'                                     
+                                                                                
+                    INFO     Rendered B04_PipeTwo                   scene.py:278
+                             Played 15 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Text('Part 2')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/5 [00:00<?, ?it/s]                                                                                   /Users/ethangomes/Desktop/Prompt_Engineering/Brutalist/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 3: Create(Line):   0%|          | 0/6 [00:00<?, ?it/s]                                                                Animation 4: LaggedStart(Group), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                             Animation 6: Create(Line):   0%|          | 0/6 [00:00<?, ?it/s]                                                                Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                         Animation 8: GrowFromCenter(Dot):   0%|          | 0/5 [00:00<?, ?it/s]                                                                       Animation 10: Create(Line):   0%|          | 0/6 [00:00<?, ?it/s]                                                                 Animation 11: FadeIn(VGroup of 4 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                          Animation 13: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                                          [audit] scenes: 20 snapshots → CLEAN
+[audit] report: /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3/layout_audit.md
+[remotion] nothing to do — no shot.remotion.pattern beats
+[art] compiled B03  MANIM    12.9s  ← B03.mp4
+[art] compiled B04  MANIM    18.9s  ← B04.mp4
+[art] motion histogram: graphic:17
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BEND: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (17/17 filled)
+[art] QC contact sheet → /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3/qc-sheet.png
+[art] wrote /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3/datasentry-pitch-v3-slate.mp4  (223.9s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 17/17 filled — BIDEA:MANIM BSIMPLE:MANIM B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM BEND:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=34 BLOCKER=0 MAJOR=0 → /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3/_qc/REPORT.md
+[run] done → /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see /Users/ethangomes/Desktop/Prompt_Engineering/Final_Project_Pitch/film-v3/SHOTLIST.md
+RUN EXIT 0

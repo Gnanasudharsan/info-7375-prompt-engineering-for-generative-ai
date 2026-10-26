@@ -1,82 +1,61 @@
 # PROJECT-BRIEF — DataSentry (working title)
 
-**Ethan Gomes · INFO 7375 · Final Project Pitch · written 2026-10-14**
-**Target role:** Data Engineer (also relevant to Data Analyst and BI roles)
-**Stack (planned):** Python, pandas, pandera, Claude Code. Public data, for example NYC TLC yellow taxi trip records.
+**Ethan Gomes · INFO 7375 · Final Project Pitch · written 2026-10-14, revised 2026-10-25**
+**Target role:** Data Engineer (also Data Analyst / BI) · **Stack:** Python, pandas, pandera, Claude (Opus 5.5); NYC TLC
+taxi data (public). dbt and Great Expectations used only to compare against.
 
-Nothing in DataSentry is built yet. Everything about the tool below is written as "will."
+**1. What is it?** DataSentry has an AI write data-quality checks for a table, then scores those checks by planting
+known defects and counting how many they catch. When done, it will be a public GitHub repository with three parts, all
+of which have already run: a check writer (Claude, given only column names and types, writing pandera checks under a
+prompt contract), a defect planter (five defect types, with an answer key no check reads), and a scorecard (CAUGHT or
+MISSED per defect type, plus false alarms on a clean copy).
 
----
+**2. Why would anyone care?** It tells a data engineer which bad rows their checks let through. On 2026-10-25 I ran
+one rule, `fare_amount >= 0`, in **dbt** (dbt-duckdb) and **Great Expectations** (GX Core) on a clean 10,000-row
+sample and a broken copy. Both passed the clean copy and flagged the 25 negative fares. Neither said anything about
+the 25 trips I planted that end before they start, because no rule asked. GX Cloud's ExpectAI already suggests checks
+with AI (paid; I did not run it). DataSentry does what neither does: it grades a set of checks, AI-written or not,
+against defects you know are there.
 
-## 1. What is it?
+**3. Who opens it?** A hiring manager for a data engineering role. After a one-time setup (`./run_all.sh`, which
+downloads the data), they run one command, `./score_round.sh 2`, and within a minute read the scorecard. On 2026-10-25: my one hand-written rule caught 2 of 5 defect types
+(clean PASS); Claude's round 1 caught 5 of 5 but flagged 220 good trips; round 2, told only about those false alarms,
+flagged none but dropped the negative-fare rule (0/25) and added a check that crashes.
 
-DataSentry will be a Claude Code workflow that writes data-quality checks for a table, then scores those checks by planting known defects and counting how many the checks catch.
+**4. What does it prove?** Four course skills, each with a run behind it: a **prompt contract**, a **two-round loop**
+(write, score, feed back clean-copy errors only, revise), **verification** by a clean-copy control, and **evaluation**
+by catch rate per defect type on two plantings. A reviewer could fairly conclude that I test an AI's output instead of
+trusting it. Evidence: prompts, Claude's dated replies and recorded scorecards in `first-run/`.
 
-When it is done it will be a public GitHub repository with three parts: a check writer (Claude Code, writing pandera checks from the table's column names and types), a defect planter (a plain Python script that copies a clean sample and breaks it on purpose), and a scorecard (a report of caught and missed defects for each defect type, plus a log of every round).
+**5. In, out, first.** In: one table, five defect types, one scorecard. Out, on purpose: orchestration (no Airflow),
+dashboards, more than one dataset. First piece: one check on a clean and a broken copy (ran 2026-10-25: clean PASS,
+negative fares 25/25 CAUGHT, drop-off before pick-up 0/25 MISSED). You know it ran because every run saves its output
+under `first-run/results/<date>/`.
 
-## 2. Why would anyone care?
+**6. What could sink it?** Checks that are too strict or too loose, and Claude's two rounds showed both. So the clean
+copy and the broken copies are both required, every time, and a crashing check counts as an error, not a pass. Leakage
+is the second risk: Claude never sees the data, the defects or the answer key, and every prompt is saved.
 
-It answers the question a data engineer actually has about a test suite: which bad rows will these checks let through?
+**7. Why this project?** In my Food Inspections Dataset Project (a group project on Chicago and Dallas
+food-inspection data), my checks let bad rows through, and I didn't know which ones until later. DataSentry measures
+exactly that. It is a mix, mostly new learning:
 
-I looked at two tools data teams already use (notes dated 2026-10-14 in SOURCES.md):
-
-- **dbt data tests.** dbt ships four built-in generic tests (unique, not_null, accepted_values, relationships). A test passes when its query returns zero failing rows. It checks only what you wrote, and the docs page I read does not report what your tests would miss.
-- **Great Expectations.** GX Core is open source (Apache 2.0). Its paid GX Cloud has a feature called ExpectAI that, in GX's words, "analyzes real dataset patterns and generates suggested Expectations you can review, refine, and approve" (GX blog, 2026-01-09). So AI-written checks already exist. In what I read, I did not find a measured report of which defect types those suggested checks catch or miss.
-
-What DataSentry will do that they do not: plant known defects, run the checks against both a clean copy and a broken copy, and publish a catch rate per defect type, with the misses written down. It is not a replacement for either tool. It is a way to grade a set of checks, including AI-written ones.
-
-## 3. Who opens it, and what do they do with it?
-
-The reader is a hiring manager or senior engineer for a data engineering role. In the first sixty seconds they will read the README, run one command on a broken sample file, and see a table: each defect type, caught or missed, plus the clean-control result. Then they can open the log to see which prompt produced which check.
-
-## 4. What does it prove about me?
-
-It is meant to show four things this course teaches:
-
-- **Prompt contracts:** a written contract for what a generated check must look like (pandera schema, one rule per column property, no access to the defect list).
-- **Agent loops:** Claude Code writes checks, runs them, reads what was missed, and revises, for one or two rounds, each round logged.
-- **Verification:** every check must pass on the clean sample and fail on the broken one; a check that rejects clean data is counted as a failure.
-- **Evaluation:** catch rate per defect type, reported with the misses, not just a single score.
-
-A reviewer could fairly conclude that I can build a small, testable data-quality pipeline and measure an AI tool's output instead of trusting it. The evidence will be the scorecard, the round-by-round log, and the prompts in the repo. Until those exist, this is a plan, not a result.
-
-## 5. What is in, what is out, what comes first?
-
-- **In:** one public table (for example, a sample of about 10,000 rows from one month of NYC yellow taxi trips), five defect types (duplicate rows, missing values, impossible values such as a negative fare, a drop-off time before its pick-up time, wrong data types), one scorecard.
-- **Out, on purpose:** orchestration and scheduling (no Airflow), dashboards or a web app, more than one dataset, dbt and warehouses.
-- **First piece that runs:** one defect type, one generated check, and one printed line that says CAUGHT or MISSED. Someone will know it ran because that line prints, and because the same check also prints PASS on the clean sample.
-
-## 6. What could sink it?
-
-**Risk:** checks that are too loose. A check that passes everything also catches nothing, and a catch rate built on loose checks would be meaningless. The opposite failure is checks so strict they reject clean data.
-
-**What I will do about it:** every check runs twice, on the clean control and on the broken copy, and both results are reported. A second, related risk is leakage: if Claude can see the defect list, the score means nothing. The check writer and the defect planter will be kept separate, and every prompt will be logged so a reviewer can confirm it.
-
-## 7. Why this project?
-
-This project will help me land a data job, like a Data Engineer or a Data Analyst role. Data quality and pipeline
-testing are part of that work, and the same approach can be pointed at the kind of data a specific company works with.
-
-It will highlight the skills I am working on. I am not claiming any of them as finished skills yet, and the project is
-how I will build and show them:
-
-- **Skills I am working on:** Python, pandas, cleaning and validating tabular data, pandera, running Claude Code as an
-  agent loop that writes and revises checks, and scoring generated checks against planted defects.
-- **Evidence:** none is claimed today. The evidence for these skills will be the DataSentry repository itself: the
-  scorecard, the round-by-round log, and the prompts.
+- **New to me:** pandera, dbt tests, Great Expectations, and prompting Claude to write and revise checks.
+- **Done before:** working with messy public data. Evidence: that project's repository,
+  github.com/EthanGomes14/DAMG7370_Final_Project_Group13.
 
 ---
 
-## Exists today (2026-10-14)
+**Exists today (2026-10-25)**
 
-- This brief.
-- The pitch film, its beat sheet, and its build files in this folder.
-- Notes on dbt data tests and Great Expectations / GX Cloud ExpectAI, with links and dates, in SOURCES.md.
+- This brief, the pitch film, its beat sheet and build files.
+- `first-run/`: data script; the one-check first piece; the same rule in dbt and GX Core; the five-defect planter; the
+  scorer; two rounds of checks written by Claude (Opus 5.5) with prompts and verbatim replies; recorded output of my
+  runs, with package versions and data hashes.
 
-## Will exist
+**Will exist**
 
-- The DataSentry GitHub repository.
-- The check-writer prompt contract and the Claude Code workflow.
-- The defect-planter script and the clean 10,000-row sample.
-- The scorecard (catch rate per defect type) and the round-by-round log.
+- The public DataSentry GitHub repository.
+- A loop that runs on its own: Claude Code writing checks, running the clean-copy control, and revising, every round
+  logged.
 - A write-up of where Claude's checks were wrong and how that was caught.
