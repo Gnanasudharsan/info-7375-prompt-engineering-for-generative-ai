@@ -21,6 +21,7 @@
 | `FRICTIONAL.md` | dated log: my own entries first, then a Claude-drafted summary |
 | `FACTCHECK.md` | every claim in the film, its source and its status |
 | `CHECKS-REPORT.md` | proof-gate report written before the first render |
+| `SHOTLIST.md`, `PROMPTS.md` | the toolkit's work order and prompt list (with FACTCHECK.md, required by its Gate F before it renders) |
 | `evidence/` | my oasdiff run on a planted rename in my RealWorld fork (2026-10-25) |
 | `_qc/REPORT.md`, `_qc/contact_sheet.png` | Gate V visual-QC report |
 | `scenes/ApiImpactPitch.tsx` | the film's custom Remotion scenes (13 `Aip*` compositions) |
@@ -30,7 +31,9 @@
 You need the brutalist.art toolkit cloned next to `fall-2026/`, with its `.venv` and Kokoro model set up (`./setup --install`). Then:
 
 ```bash
-cd brutalist.art && source .venv/bin/activate
+cd brutalist.art
+git checkout 29ba0e8          # the toolkit version this film was built with; the patch below doesn't apply to later versions
+source .venv/bin/activate
 # install the film's scenes from this folder into the toolkit
 cp ../fall-2026/chethan-t/final-project-film/scenes/ApiImpactPitch.tsx runtime/remotion/src/
 git apply ../fall-2026/chethan-t/final-project-film/scenes/Root.tsx.patch
