@@ -47,3 +47,6 @@ secrets.json
 *transcript*.jsonl
 *transcript*.md
 *chat_history*
+
+# The submitted film is tracked so GitHub matches the Canvas zip
+!final-project-pitch.mp4

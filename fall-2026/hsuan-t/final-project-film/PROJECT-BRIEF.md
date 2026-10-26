@@ -1,20 +1,22 @@
 # PROJECT BRIEF — The Reallocation Engine CLI
 
 ## 1. What is it?
-This is an evidence-first, automated job-application filtering CLI and workflow designed specifically for F-1 STEM OPT students (with a focus on Information Systems and Computer Science backgrounds). It targets broad software engineering roles (SWE, DevOps, QA, Cloud Infrastructure). It evaluates job postings against authentic public immigration and corporate filings—outputting an evidence-backed decision report with clear `Apply` or `Skip` verdicts.
+I'm Isaac Tai, an F-1 student. My final project will be a command-line tool for F-1 STEM OPT students that checks, before you apply, whether a company has really sponsored work visas before, using government records instead of AI guesses. When it is done, it will be a local CLI plus a markdown decision report: it will score SWE, DevOps, QA, and cloud infrastructure roles against public immigration and corporate filings and give a clear `Apply` or `Skip`. What exists today is a prototype recipe (`tisaac-swe-stem-opt`, committed 2026-10-03) that scored three test roles on 2026-10-04 (`role-scores.md`).
 
 ## 2. Why would anyone care?
-International students on F-1 STEM OPT face strict 90-day unemployment clocks and limited application capacity. Millions of applications are wasted on companies that never sponsor visas or roles with phantom postings. Unlike opaque "black-box AI" tools that paste descriptions into raw LLMs, this system delivers **zero-hallucination provenance and transparency**. Every single claim is explicitly labeled: verified against database records (`[record]`), flagged as deterministic rule gates (`[rule-gate]`), or explicitly isolated as model reasoning (`[model-judgment]`). It restores trust by telling the user exactly what it did.
+International students on F-1 STEM OPT face a 90-day unemployment clock and limited application capacity, so applying to a company that never sponsors is expensive.
+
+**The real tool I tried: ChatGPT.** I asked it about sponsorship directly. The specific difference: with ChatGPT I had to ask about one company at a time, and every answer still had to be checked by hand. This tool will turn that check into a fixed script (an SOP) built for my own job-search situation: sponsorship will come straight from government records (the Labor Department's H-1B visa filings and the SEC's Form D funding filings), matched by me, and AI will only do the part it is good at, reading the job description. Every score will carry a source tag (`[record]`, `[rule-gate]`, `[model-judgment]`) so the user can see which part is data and which part is AI.
 
 ## 3. Who opens it, and what do they do with it?
 **Target User:** F-1 STEM OPT job seekers.  
-**First 60 Seconds:** The student opens their local Terminal, runs the CLI command with a target job posting URL (e.g., `reallocate score <job-url>`), and receives an instant, structured markdown summary showing gate status, DOL H-1B filing track record, SEC Form D funding evidence, deduplication status, and an actionable `Apply` or `Skip` recommendation.
+**First 60 Seconds (planned):** The student will open a terminal, run the CLI with a job posting URL (e.g., `reallocate score <job-url>`), and will get a markdown summary showing gate status, DOL H-1B filing record, SEC Form D funding evidence, duplicate status, and an `Apply` or `Skip` recommendation.
 
 ## 4. What does it prove about you?
-It demonstrates mastery of **source-grounded AI workflows**:
-1. Architecting strict **Prompt Contracts** that enforce structural constraints and prevent hallucination.
-2. Integrating verified multi-source external datasets (DOL LCA disclosures, SEC Form D) as immutable deterministic gates rather than relying on probabilistic LLM memory.
-3. Building observable AI pipelines with clear audit logs, architectural decision records (ADRs), and friction logs.
+It will show I can build **source-grounded AI workflows**:
+1. **Prompt Contracts** that will constrain the model and stop hallucination.
+2. Public datasets (DOL LCA disclosures, SEC Form D) used as deterministic gates instead of LLM memory. (The 2026-10-03 prototype already reads this file and tags each score with its source.)
+3. Observable AI pipelines with audit logs, ADRs, and friction logs, plus an evaluation suite that will measure decision accuracy.
 
 ## 5. What is in, what is out, what comes first?
 * **In Scope:**
@@ -26,28 +28,29 @@ It demonstrates mastery of **source-grounded AI workflows**:
   - Automated resume spamming or auto-apply bots (aggressively rejected to protect applicant reputation).
   - Heavy multi-user SaaS databases or web frontends (kept as a local CLI script).
 * **What Comes First:**
-  - Core data matching against verified local files and the lightweight deduplication tracker.
+  - The first piece I will make run is the sponsor lookup: matching company names against the H-1B filing records. The duplicate tracker will come next.
 
 ## 6. What could sink it?
-1. **False Rejections (LLM Over-filtering):** The model might misread nuanced job language (e.g., confusing "must be authorized to work" with "will not sponsor visas").  
-   *Countermeasure:* Strict Prompt Contracts requiring **Quote Proof** (exact quotation from posting text) before any disqualification gate can trip.
-2. **UX Friction:** If duplicate job postings from aggregators clutter the evaluation log, the user abandons the tool.  
-   *Countermeasure:* Silent hash deduplication intercepting identical postings before LLM scoring runs.
+**Company names that don't match the filing file.** A posting says "Toast", but the DOL/SEC file has 9 names containing TOAST, including `TOAST INC` (150 H-1B approvals), `TOAST HOLDINGS INC`, and `MOONTOAST INC` (no approvals). A wrong match gives a wrong verdict. The 2026-10-04 prototype run already shows the effect: `Isaac Super Fake Tech LLC` was not in the file (`[no-matched]`) and still came out `Apply`.
+*What I will do:* I will confirm each company's legal name myself before it is scored, and when a name doesn't match, the tool will hold the role instead of scoring it.
 
 ## 7. Why this project?
-* **The Mindset Shift:** Moving from naive, uncritical trust in conversational LLMs to defensive, verification-driven engineering. Fluency is treated as a warning sign, not proof of truth.
-* **Demonstrated Skills & Evidence:** Demonstrates structured AI governance. Reviewers can independently inspect: (1) in-repo `AI_Task_Logs/`, ADRs, and `FRICTIONAL.md` tracing human-agent collaboration; (2) provenance metadata emitted on every CLI evaluation.
-* **Skills Being Acquired:** Learning how to design automated verification gates, multi-agent linting pipelines, and ruthless anti-hallucination guardrails.
+* **Personal:** I'm an F-1 student. I face this sponsorship check myself on every application, and I used to trust AI answers about it blindly.
+* **Shown, not claimed:** my friction logs and the source tags in the prototype's `role-scores.md` (2026-10-04) already show how I check AI work.
+* **What I will learn:** to replace prompt-pasting with strict verification gates.
 
 ---
 
-### Exists Today (Verified Prototype)
-* Working recipe `tisaac-swe-stem-opt` in *The Reallocation Engine*.
-* In-repo verification against DOL H-1B CSV records and SEC Form D data.
-* Structured provenance tagging (`[record]`, `[model-judgment]`, `[rule-gate]`).
-* Integrated role scorer scoring SWE, DevOps, and QA profiles.
+### Exists Today (as of 2026-10-10, can be shown)
+* Prototype recipe `tisaac-swe-stem-opt` in *The Reallocation Engine* (committed 2026-10-03).
+* It reads the DOL H-1B / SEC Form D CSV and tags each score with its source (`[record]`, `[model-judgment]`, `[no-matched]`).
+* One real run on 3 test roles: `role-scores.md` (2026-10-04). Shown in the film (B01, B07), labelled REAL OUTPUT.
 
-### Will Exist (Planned CLI Extensions)
-* Standalone single-command CLI interface with instant terminal output.
-* Automatic quote-proof extraction harness for human verification gates.
-* Local persistent hash cache for instant aggregator deduplication.
+### Will Exist (planned)
+* Single-command CLI that takes a job URL; URL extract and clean pipeline.
+* Legal-name confirmation and HOLD for unmatched names.
+* Quote-proof check before any disqualification.
+* Local hash cache for duplicate postings.
+* Evaluation suite for decision accuracy.
+
+Everything shown in the film that is not REAL OUTPUT or REAL CSV ROWS is labelled CONSTRUCTED MOCK-UP on screen.

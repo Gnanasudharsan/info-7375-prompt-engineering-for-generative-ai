@@ -5,7 +5,7 @@ All components of this film were synthesized, rendered, and verified locally wit
 ## 1. Narration & Audio
 * **Engine**: Local Kokoro TTS v0.19 running on Apple Silicon Metal acceleration.
 * **Voice Model**: `am_puck` (American Male, authoritative & clean conversational tone).
-* **Source Script**: Written by Isaac Tai adhering strictly to the assignment's Honesty Rule (past tense for working prototype, future tense for planned CLI extensions). Zero hallucinated metrics or employers.
+* **Source Script**: Written by Isaac Tai under the assignment's Honesty Rule: past tense only for the prototype recipe (2026-10-03) and its one run (2026-10-04); "will" for everything else.
 
 ## 2. Visuals & Animation
 * **Animation Framework**: Brutalist (`brutalist.art`), built on Remotion v4 + React 18 with TypeScript.
@@ -21,7 +21,10 @@ All components of this film were synthesized, rendered, and verified locally wit
 * **Underlying Project**: *The Reallocation Engine* (`tisaac-swe-stem-opt` recipe).
 * **Immigration Data**: Department of Labor (DOL) Office of Foreign Labor Certification (OFLC) H-1B LCA Disclosure Data (FY2024 / FY2025 public records).
 * **Corporate Filings**: SEC EDGAR Form D Regulation D Exemption Filings API.
-* **Deduplication Demonstration**: Exact 3-row deduplication list reflecting realistic aggregator duplicates (`Meta SWE`, `Amazon DevOps`, `Stripe Infra`).
+* **On-screen labels (revision 2026-10-25)**: every card carries a stamp saying what it is.
+  - `REAL OUTPUT · role-scores.md · 2026-10-04` (B01, B07): rows copied verbatim from `reallocation-engine/the-reallocation-engine/scripts/contrib/2026fa/tisaac-swe-stem-opt/role-scores.md`, commit `98a46a1`.
+  - `REAL CSV ROWS · LAYOUT CONSTRUCTED` (B06): TOAST INC / TOAST HOLDINGS INC / MOONTOAST INC values read from `data/80-days-to-stay/80-days-csv/mapped_student_employment_targets_v3.csv` (in the repo since 2026-08-17).
+  - `CONSTRUCTED MOCK-UP` (B02 to B05): sketches of the planned tool. The B02 values (`15 Approved`, `$24M Raised`) are constructed examples, not real records.
 
 ## 4. Quality & Gate Verification
 * **Gate L (Beat Lint)**: Checked beat duration, transition pacing, and shot diversity.

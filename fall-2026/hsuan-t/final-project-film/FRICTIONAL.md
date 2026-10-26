@@ -373,3 +373,44 @@ Automated quality gates must never be bypassed by disabling the checks; they mus
 
 **What's next**
 Deliver the completed Canvas submission package and review files to Isaac.
+
+### 2026-10-25: Revising the film from the instructor's comments
+
+**What I tried and expected**
+The grades came back. Main deductions: P1 What and who 5/7, P2 Unique value 0/5, P3 What it proves 3/5, P4 Why this project 2/4, P5 Scope and honest risk 1/5, P6 Shown, not asserted 2/4, Frictional 4/5, GitHub matching Canvas 4/5. The instructor's next step: re-cut the narration so everything not yet built says "will", label each mock-up as constructed, and name one real tool I actually tried with a specific difference. I told the AI to fix only what the comments cover and leave everything else alone.
+
+**What happened**
+The AI checked what really existed on 10/10: only my recipe prototype (10/03) and its one run on three test roles (`role-scores.md`, 10/04). It asked me which real tool I had tried. I said ChatGPT: with ChatGPT you have to ask one company at a time and still verify every answer yourself, so a fixed SOP script works better for my situation, with AI only doing the part it's good at (reading the JD) while I match against the real data myself. The AI suggested changing the risk from "LLM false rejections" to "company names don't match the visa file". It found that "Toast" matches 9 names in the CSV. I accepted that. The AI also suggested using the real numbers from my 10/21 mode-build run. I rejected that: this is the previous assignment, so the film should go back to the 10/10 state and only respond to the comments. I also pointed out that P1 needs the opening to say who I am and what this is first, then why. For P6, the AI suggested showing the real 10/04 report rows in B01 and B07 instead of fake numbers. It also added a stamp to every card: REAL OUTPUT, REAL CSV ROWS, or CONSTRUCTED MOCK-UP. It rewrote the narration with "will", updated PROJECT-BRIEF, README, SOURCES, SHOTLIST, and BUILD-PROMPT, and re-rendered. Gate V failed because the stamp sat outside the title-safe area, and the B06 badge said "9 Duplicates" because the component hardcodes that word. The AI fixed both but held the re-render.
+
+**My judgment calls**
+I wasn't sure the AI had covered everything, so I asked what it changed and whether it matched the instructor's requests. I also pasted the class announcement: the film has to show who is doing it, explain the project so a 5-year-old or a non-technical person gets it, stay concise, and still give the full technical detail.
+
+**What's next**
+I asked the AI to check the changes against that announcement too.
+
+### 2026-10-25: Checking the re-cut against the "explain it to a 5-year-old" announcement
+
+**What I tried and expected**
+I asked what the AI had changed and whether it followed the instructor's requests. I pasted the announcement: the film must say who is doing it, explain the project simply enough for a 5-year-old or a non-technical person, be concise, and still explain the project in full technical detail.
+
+**What happened**
+The AI listed each change next to the deduction it answers. It said the "explain it to a 5-year-old" part was not covered yet, because terms like "DOL H-1B and SEC Form D" and "source-grounded agent workflows" are never explained. The AI suggested rewriting three lines (BIDEA, B02, B04) so each technical term comes with a plain-English version, and asked me to confirm before it re-renders.
+
+**My judgment calls**
+I accepted the three plain-English lines. I asked whether the failed render was the same Gate V problem I hit before. The AI checked this log: last time (10/10) it was underfill on the BIDEA typewriter. This time it was edge-bleed from the new stamps, a different cause. I reminded the AI to run everything from the start (mp3 first, and the animations too), and to check this log for the steps it might forget.
+
+**What's next**
+Re-render the whole film from the audio up with the new lines, then check the gates.
+
+### 2026-10-25: Re-rendering from the audio up with the plain-English lines
+
+**What I tried and expected**
+I said to go ahead with the three plain-English lines and re-render. I asked whether the Gate V failure was something I had hit before, and reminded the AI to run everything from the start (mp3 first, then the animations), checking this log for the steps it might forget.
+
+**What happened**
+The AI rewrote BIDEA, B02, and B04, regenerated all the audio, cleared the clip cache, and rendered the whole film. Gate V passed, but Gate T flagged B06: lines ending in "Form D" looked like cut-off words to the truncation check, so the AI reworded them to "Form D: $38.2M raised". Checking frames, the AI also found that the B02 tab switched to "Tool (will)" about 3 seconds in, while the voice was still talking about ChatGPT. The cards animate over a default 8 seconds unless they are given the real narration length. The AI passed B02 its 18-second length, so the switch now lands around 8 seconds, right when the voice says "This tool will". Final cut: 126.2s, Gate V and Gate T both pass. The AI rebuilt the zip with the same 14 files as the GitHub folder (now including the mp4) and staged them, but did not commit or push.
+Trace: exports/landscape/final-project-pitch.mp4, TYPECHECK.md, _qc/REPORT.md
+
+**My judgment calls**
+
+**What's next**

@@ -1,12 +1,12 @@
 # TYPECHECK.md — GATE T
 
-Reel: `final-project-pitch`  |  Checked: 2026-10-10T23:47  |  Overall: PASS  |  Beats checked: 9  |  FAILs: 0
+Reel: `final-project-pitch`  |  Checked: 2026-10-25T08:20  |  Overall: PASS  |  Beats checked: 9  |  FAILs: 0
 
 Spec: `skills/make/kerning/reference/type-spec.md` §8.  Floor: 1.9% frame-height.  Contrast: 4.5:1 WCAG.  Kern threshold: 3.5× expected advance.  Wordy budget: 2 elements.
 
 | beat | lane | polarity | worst finding | status | fix |
 |------|------|----------|---------------|--------|-----|
-| BIDEA | bookend | light | min-size §8.1: min text-run height 59px >= floor 41px | PASS | — |
+| BIDEA | bookend | light | min-size §8.1: min text-run height 59px >= floor 41px (individual-char fallback at 2×) | PASS | — |
 | B01 | card | light | no-wordy-card §8.5: no prose payload found | PASS | — |
 | B02 | card | light | no-wordy-card §8.5: no prose payload found | PASS | — |
 | B03 | card | light | no-wordy-card §8.5: no prose payload found | PASS | — |

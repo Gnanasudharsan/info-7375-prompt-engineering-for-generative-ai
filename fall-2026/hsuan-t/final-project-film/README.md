@@ -3,8 +3,8 @@
 **Course:** INFO7375 Prompt Engineering & Agentic AI  
 **Author:** Isaac Tai  
 **Project:** The Reallocation Engine CLI (`tisaac-swe-stem-opt`)  
-**Duration:** 111.2 seconds (1m 51s, 4K UHD 3840×2160 @ 24fps)  
-**Deliverable File:** `Tai_Isaac_INFO7375_FinalProjectFilm.zip`  
+**Duration:** 126.2 seconds (2m 06s, 4K UHD 3840×2160 @ 24fps)  
+**Deliverable File:** `Tai_HsuanHung_INFO7375_FinalProjectFilm.zip`  
 
 ---
 
@@ -15,8 +15,8 @@ The film was authored using **Brutalist** (`brutalist.art`), rendered via Remoti
 
 ### Key Highlights
 1. **The 7 Pitch Questions**: Fully answered in [PROJECT-BRIEF.md](PROJECT-BRIEF.md) and demonstrated across the 9 beats.
-2. **The Honesty Rule**: Strictly observed. Past tense is used exclusively for verified, working prototypes (`tisaac-swe-stem-opt` in *The Reallocation Engine*); future tense ("will") is reserved for planned CLI extensions.
-3. **Zero Fabricated Metrics**: No inflated numbers or phantom users. Deduplication shows 3 realistic duplicate postings with SHA-256 hash proofs.
+2. **The Honesty Rule**: Past tense only for the prototype recipe `tisaac-swe-stem-opt` (2026-10-03) and its one run (`role-scores.md`, 2026-10-04). Everything else says "will".
+3. **Labels on screen**: every card is stamped `REAL OUTPUT`, `REAL CSV ROWS · LAYOUT CONSTRUCTED`, or `CONSTRUCTED MOCK-UP`. Constructed example values are listed in [SOURCES.md](SOURCES.md).
 4. **All Verification Gates Passed**:
    - **Gate L (Beat Lint)**: Clean beat-mix structure.
    - **Gate T (Typography & OCR)**: All 9 beats pass WCAG 4.5:1 contrast, text-floor sizing, and bounding-box overlap checks ([TYPECHECK.md](TYPECHECK.md)).
@@ -24,10 +24,22 @@ The film was authored using **Brutalist** (`brutalist.art`), rendered via Remoti
 
 ---
 
+## Revision (2026-10-25)
+Re-cut after instructor feedback. Baseline is what existed on 2026-10-10; nothing built later was added.
+- **What and who (P1):** the opening now says who I am and what the tool is first; B01 says the form it will take and who opens it.
+- **Unique value (P2):** names the real tool I tried (ChatGPT) and the specific difference: one company per chat and every answer checked by hand, versus a fixed script that reads DOL/SEC records, with AI only reading the job description.
+- **Tense (P3, P5):** everything not built yet says "will".
+- **Risk (P5):** changed from duplicate postings to company-name mismatch, shown with real CSV rows. Logged in FRICTIONAL.md.
+- **Why this project (P4):** I'm an F-1 student and face this check myself.
+- **Shown, not asserted (P6):** B01 and B07 show real rows from the 2026-10-04 prototype run; every mock-up is labelled CONSTRUCTED on screen.
+- **GitHub matches Canvas:** the `.mp4` is now committed, and the GitHub folder holds the same files as the zip.
+
+---
+
 ## Submission Package Contents
-The submission archive `Tai_Isaac_INFO7375_FinalProjectFilm.zip` contains:
+The submission archive `Tai_HsuanHung_INFO7375_FinalProjectFilm.zip` contains:
 - `README.md`: This project overview and execution summary.
-- `final-project-pitch.mp4`: Verified 4K master pitch film (111.2s).
+- `final-project-pitch.mp4`: Verified 4K master pitch film (126.2s).
 - `PROJECT-BRIEF.md`: Complete answers to the 7 mandatory pitch questions.
 - `beat_sheet.json`: Machine-readable beat sheet with audio timings and shot definitions.
 - `BUILD-PROMPT.md`: Exact prompt logs and CLI reproduction commands.
