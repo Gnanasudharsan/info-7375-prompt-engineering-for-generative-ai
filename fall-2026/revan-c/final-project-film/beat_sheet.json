@@ -38,7 +38,7 @@
       "INFO 7375"
     ],
     "build": {
-      "at": "2026-10-25T22:16:03",
+      "at": "2026-10-25T22:51:55",
       "cut": "master",
       "filled": 18,
       "of": 18,
@@ -55,8 +55,8 @@
       "act": "the question",
       "lane": "bookend",
       "proof_gate": "SHOW",
-      "narration_text": "Hola. I'm Revan, a graduate student at Northeastern. This voice is synthetic; I wrote the script with Claude and reviewed every line. This film pitches a project that doesn't exist yet. The question: not just what's cheapest, but why.",
-      "estimated_duration_s": 15.6,
+      "narration_text": "Hola. I'm Revan, a graduate student at Northeastern. This film pitches a project that doesn't exist yet, for people sending money to family in Mexico. The obvious question is which way is cheapest. Remnix will also answer why.",
+      "estimated_duration_s": 15.2,
       "voice": "af_bella",
       "engine": "kokoro",
       "shot": {
@@ -87,11 +87,11 @@
             "seed": "remnix-agent-pitch",
             "banner": "",
             "brandLabel": "Synthetic voice (Kokoro) · written with Claude, reviewed by Revan",
-            "durationSeconds": 15.605
+            "durationSeconds": 16.096
           },
           "rendered": {
             "out": "media/BIDEA.mp4",
-            "at": "2026-10-26T02:12:30.748934+00:00"
+            "at": "2026-10-26T02:48:59.520864+00:00"
           }
         }
       },
@@ -101,14 +101,14 @@
         "sparse_by_design": true,
         "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
       },
-      "actual_duration_s": 15.605,
+      "actual_duration_s": 16.096,
       "audio_file": "mp3/beat-BIDEA.mp3",
-      "render_duration_s": 15.625,
+      "render_duration_s": 16.125,
       "build": {
         "status": "VIDEO",
         "src": "media/BIDEA.mp4",
         "filled_by": "remotion:BrutalistHesitantWriter",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -154,7 +154,7 @@
         "status": "MANIM",
         "src": "manim/BPLAIN.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -192,7 +192,7 @@
         "status": "MANIM",
         "src": "manim/B00.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -234,7 +234,7 @@
         "status": "MANIM",
         "src": "manim/B02.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -276,7 +276,7 @@
         "status": "MANIM",
         "src": "manim/B03.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -322,7 +322,7 @@
         "status": "MANIM",
         "src": "manim/B04.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -368,7 +368,7 @@
         "status": "MANIM",
         "src": "manim/B05.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -414,7 +414,7 @@
         "status": "MANIM",
         "src": "manim/B06.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -460,7 +460,7 @@
         "status": "MANIM",
         "src": "manim/B07.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -506,7 +506,7 @@
         "status": "MANIM",
         "src": "manim/B08.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -552,7 +552,7 @@
         "status": "MANIM",
         "src": "manim/B09.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -598,7 +598,7 @@
         "status": "MANIM",
         "src": "manim/B10.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -644,7 +644,7 @@
         "status": "MANIM",
         "src": "manim/B11.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -690,7 +690,7 @@
         "status": "MANIM",
         "src": "manim/B12.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -732,7 +732,7 @@
         "status": "MANIM",
         "src": "manim/B13.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -774,7 +774,7 @@
         "status": "MANIM",
         "src": "manim/B14.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -816,7 +816,7 @@
         "status": "MANIM",
         "src": "manim/B15.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     },
     {
@@ -860,7 +860,7 @@
         "status": "MANIM",
         "src": "manim/BOUT.mp4",
         "filled_by": "manim",
-        "at": "2026-10-25T22:16:03"
+        "at": "2026-10-25T22:51:55"
       }
     }
   ]

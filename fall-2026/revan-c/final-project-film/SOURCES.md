@@ -20,8 +20,9 @@ All dates are 2026-10-14 unless stated.
 
 ## What Claude contributed (Claude Code, Claude Opus 5.5, in my build sessions on 2026-10-14 and 2026-10-25)
 
-- **The narration was written with Claude and reviewed by me.** The film now says this in its opening line and
-  on screen; the first submission wrongly said "the words are mine".
+- **The narration was written with Claude and reviewed by me.** The film's opening beat now says this on screen
+  ("written with Claude, reviewed by Revan"); the first submission wrongly said "the words are mine" and that
+  spoken claim has been removed.
 - **2026-10-25 resubmission:** Claude proposed the plan (authorship fix, who-I-am line, plain-language beat,
   concrete technical beats, trims to stay under 4:00), asked me the FRICTIONAL questions, laid out my answers,
   redrew BPLAIN, B03 and B04, re-voiced and re-rendered the changed beats, re-ran every gate, and updated these
@@ -36,7 +37,10 @@ All dates are 2026-10-14 unless stated.
   (stablecoin) readings come from the screenshot.
 - Wrote the narration drafts, `make_sheet.py`, `scene_body.py` (all 17 Manim drawings), `build_scenes.py`,
   `finish_audio.py` and `env.sh`, plus the paperwork (`FACTCHECK.md`, `SHOTLIST.md`, `PROMPTS.md`,
-  `GATE-SUMMARY.md`) and these four documents.
+  `GATE-SUMMARY.md`) and these four documents, **except the "In my words" section at the top of
+  FRICTIONAL.md, which is mine**: Claude asked the questions, I typed the answers, and Claude only fixed
+  spelling and four small grammar slips (listed there). The rest of FRICTIONAL.md (the build log and the
+  resubmission log) was drafted by Claude and is labelled that way.
 - Ran the install, the audio, the renders and every gate. It fixed gate failures in the scene source and
   ran the line-by-line honesty check (Step 6). That check found 7 lines and 2 drawings that made Remnix
   sound built, and 1 unbacked claim about users; all were fixed with my approval.

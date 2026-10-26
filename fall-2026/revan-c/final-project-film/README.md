@@ -6,15 +6,15 @@
 | **Course** | INFO 7375 · Final Project Pitch Film |
 | **Working title** | Remnix Agent |
 | **Target role** | Software engineer at fintech and crypto companies |
-| **Runtime** | 3:51 (230.8 s), 3840×2160, 24 fps |
-| **Film** | `remnix-agent-pitch.mp4`: in the Canvas zip. The course repo keeps audio/video out of Git (`.gitignore`), so it is not in the GitHub folder. SHA-256 `8144a988844e7af4877b758d70dc2aeb8f2e26fed6a31de516af15a12094453c` |
+| **Runtime** | 3:51 (231.2 s), 3840×2160, 24 fps |
+| **Film** | `remnix-agent-pitch.mp4`: in the Canvas zip. The course repo keeps audio/video out of Git (`.gitignore`), so it is not in the GitHub folder. SHA-256 `55d9b16616854ac8b552918c868cfaefd7177de9b1c8e79cf81f84ded87e2f86` |
 | **Made with** | Brutalist toolkit, `show-tell` skill, free local pipeline (Kokoro voice, Manim, Remotion) |
 
 **What the film pitches:** Remnix will be an agent that answers USD→Mexico remittance cost questions using Money Map's data, showing the math and the source behind every number, including stablecoin routes.
 
 **What exists today:** only Money Map (https://mit-dci.github.io/payments-dashboard/), the dashboard I built as a Software Engineer Co-op at the MIT Digital Currency Initiative. Nothing about Remnix is built yet; the film says "will" for all of it. The one mock-up (beat B05) is labelled CONSTRUCTED on screen. The film shows no Claude response.
 
-**The voice is synthetic, and the script was written with Claude.** A free Kokoro voice (`af_bella`) reads a first-person script that I wrote with Claude and reviewed line by line. The film says this in its opening lines and on screen.
+**The voice is synthetic, and the script was written with Claude.** A free Kokoro voice (`af_bella`) reads a first-person script that I wrote with Claude and reviewed line by line. The opening beat says so on screen: "Synthetic voice (Kokoro) · written with Claude, reviewed by Revan".
 
 **Resubmitted 2026-10-25** after grading: the authorship line now says the script was written with Claude, the film says who I am, a plain-language beat replaces the terms card, the technical beats name the planned design, and FRICTIONAL.md opens with my own answers about why I made each decision. Details at the top of FRICTIONAL.md and in SOURCES.md.
 
@@ -73,4 +73,4 @@ python3 "$REEL/build_scenes.py"                                      # scenes.py
 
 The master lands at `build/exports/landscape/remnix-agent-pitch.mp4`. `art final` also runs the compiler's own output verification (the render-integrity check). The other checks are listed in `BUILD-PROMPT.md`.
 
-Expected result: 18 beats, about 230.8 s. Kokoro gave the same audio on every run here, so the timings should match `beat_sheet.json`.
+Expected result: 18 beats, about 231.2 s. Kokoro gave the same audio on every run here, so the timings should match `beat_sheet.json`.

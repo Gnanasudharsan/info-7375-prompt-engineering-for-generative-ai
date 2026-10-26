@@ -146,9 +146,10 @@ name keeps my last name, because the assignment requires it.
 **2026-10-25 — Grades came back with two deductions.** P6 (−0.5): the film said "the words are mine" and the
 opening card said "words by Revan", but SOURCES.md said Claude drafted the narration. Frictional (−2): the log
 was drafted by Claude, not in my own words. The TAs' class note also asked every film to say who is doing it,
-explain the project simply, stay concise, and give full technical detail. **What I did:** changed the line to
-"I wrote the script with Claude and reviewed every line" (spoken and on screen), and answered Claude's
-questions about my decisions in my own words at the top of this file.
+explain the project simply, stay concise, and give full technical detail. **What I did:** removed the spoken
+"the words are mine", changed the on-screen label to "written with Claude, reviewed by Revan", and answered
+Claude's questions about my decisions in my own words at the top of this file. (A spoken version of the
+credit was tried first; I chose to keep it on screen only so the opening could start with the project.)
 
 **2026-10-25 — Some decisions had no reason from me yet.** For the voice, push route, bookend gate and the
 feedback, my first answers were "idk", and for the push route I asked Claude to make something up. Claude

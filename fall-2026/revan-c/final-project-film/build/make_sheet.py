@@ -56,7 +56,7 @@ def remotion(bid, act, narration, pattern, props, show, gate="SHOW", **extra):
 
 OPEN = [
     remotion("BIDEA", "the question",
-        "Hola. I'm Revan, a graduate student at Northeastern. This voice is synthetic; I wrote the script with Claude and reviewed every line. This film pitches a project that doesn't exist yet. The question: not just what's cheapest, but why.",
+        "Hola. I'm Revan, a graduate student at Northeastern. This film pitches a project that doesn't exist yet, for people sending money to family in Mexico. The obvious question is which way is cheapest. Remnix will also answer why.",
         "BrutalistHesitantWriter",
         {"text": "Which way to send $500\nto Mexico is cheapest?",
          "triggerWords": "is cheapest", "replacementWords": "is cheapest and why",

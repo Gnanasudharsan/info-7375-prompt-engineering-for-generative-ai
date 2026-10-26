@@ -8,7 +8,7 @@ Status: rows 3–8 and 11–14 checked by Claude in Revan's build session on 202
 
 | # | Beat | Claim | Verdict | Source | Fix |
 |---|---|---|---|---|---|
-| 1 | BIDEA | The project does not exist yet; the voice is synthetic; the script was written with Claude and reviewed by Revan | CORRECTED | Revan; Kokoro `af_bella`; SOURCES.md | Was "the words are mine" / "words by Revan"; graded down because Claude drafted the narration. Changed 2026-10-25 (resubmission). |
+| 1 | BIDEA | The project does not exist yet (spoken); the voice is synthetic and the script was written with Claude and reviewed by Revan (on screen) | CORRECTED | Revan; Kokoro `af_bella`; SOURCES.md | Was "the words are mine" (spoken) / "words by Revan" (on screen); graded down because Claude drafted the narration. 2026-10-25: the false spoken claim was removed and the on-screen label now reads "Synthetic voice (Kokoro) · written with Claude, reviewed by Revan". |
 | 1b | BIDEA | Revan is a graduate student at Northeastern | PASS | Revan (confirmed 2026-10-25) | — |
 | 1c | BPLAIN | Sending money abroad loses part of it to fees and the exchange rate | PASS | Money Map's own definition: "Fee = everything you lose compared with the mid-market rate: transfer fees plus any exchange-rate markup" (viewed 2026-10-14) | — |
 | 2 | B00 | Revan built Money Map as a software engineer co-op at the MIT Digital Currency Initiative; built alone | PASS | Revan (stated 2026-10-14) | — |
