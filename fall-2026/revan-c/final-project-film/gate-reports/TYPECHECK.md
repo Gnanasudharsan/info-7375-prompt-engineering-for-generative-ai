@@ -1,18 +1,17 @@
 # TYPECHECK.md — GATE T
 
-Reel: `remnix-agent-pitch`  |  Checked: 2026-10-14T17:55  |  Overall: PASS  |  Beats checked: 19  |  FAILs: 0
+Reel: `remnix-agent-pitch`  |  Checked: 2026-10-25T22:14  |  Overall: PASS  |  Beats checked: 18  |  FAILs: 0
 
 Spec: `skills/make/kerning/reference/type-spec.md` §8.  Floor: 1.9% frame-height.  Contrast: 4.5:1 WCAG.  Kern threshold: 3.5× expected advance.  Wordy budget: 2 elements.
 
 | beat | lane | polarity | worst finding | status | fix |
 |------|------|----------|---------------|--------|-----|
 | BIDEA | bookend | light | min-size §8.1: min text-run height 59px >= floor 41px | PASS | — |
-| BDEFS | bookend | light | no-wordy-card §8.5: no prose payload found | PASS | — |
+| BPLAIN | manim | light | min-size §8.1: min text-run height 63px >= floor 41px (individual-char fallback at 2×) | PASS | — |
 | B00 | manim | — | no video | SKIP | — |
-| B01 | manim | light | min-size §8.1: min text-run height 42px >= floor 41px | PASS | — |
 | B02 | manim | light | min-size §8.1: min text-run height 97px >= floor 41px | PASS | — |
-| B03 | manim | light | min-size §8.1: min text-run height 62px >= floor 41px (individual-char fallback at 2×) | PASS | — |
-| B04 | manim | light | min-size §8.1: min text-run height 62px >= floor 41px (individual-char fallback at 2×) | PASS | — |
+| B03 | manim | light | min-size §8.1: min text-run height 60px >= floor 41px (individual-char fallback at 2×) | PASS | — |
+| B04 | manim | light | min-size §8.1: min text-run height 64px >= floor 41px | PASS | — |
 | B05 | manim | light | min-size §8.1: min text-run height 57px >= floor 41px | PASS | — |
 | B06 | manim | light | min-size §8.1: min text-run height 64px >= floor 41px (individual-char fallback at 2×) | PASS | — |
 | B07 | manim | light | min-size §8.1: min text-run height 63px >= floor 41px (individual-char fallback at 2×) | PASS | — |
@@ -37,13 +36,13 @@ Spec: `skills/make/kerning/reference/type-spec.md` §8.  Floor: 1.9% frame-heigh
 
 | Check | Beats checked | FAILs |
 |-------|---------------|-------|
-| no-wordy-card §8.5 | 1 | 0 |
-| min-size §8.1 | 18 | 0 |
-| overflow §8.2 | 18 | 0 |
-| contrast §8.3 | 18 | 0 |
-| contrast-local §8.3b | 18 | 0 |
-| bbox-overlap §8.6b | 18 | 0 |
-| card-clip §8.13 | 18 | 0 |
+| no-wordy-card §8.5 | 0 | 0 |
+| min-size §8.1 | 17 | 0 |
+| overflow §8.2 | 17 | 0 |
+| contrast §8.3 | 17 | 0 |
+| contrast-local §8.3b | 17 | 0 |
+| bbox-overlap §8.6b | 17 | 0 |
+| card-clip §8.13 | 17 | 0 |
 | kerning §8.4 | 16 | 0 |
 | redundancy §8.10 (advisory) | 0 | 0 (advisory — no exit effect) |
 

@@ -38,6 +38,15 @@ These are my instructions to Claude in the build session, summarised, not a tran
 9. Step 6: apply all the honesty fixes, keep the film under 4:00, re-render and re-run the gates.
 10. Push to the course repo; use "Revan C" instead of my full name, because the course repo stores no full names.
 
+**Resubmission, 2026-10-25** (after grades and the TA's class note asking films to say who is doing it, explain
+simply for a non-technical viewer, stay concise and give full technical detail):
+
+11. Make improvements from the grading comments; ask me the FRICTIONAL questions here and I'll answer in my own words.
+12. No dated snapshot for now.
+13. Introduce me as a graduate student at Northeastern who built Money Map at MIT DCI.
+14. Plan approved as proposed, including the technical design (tables `quotes`, `fx_rates`, `snapshots`;
+    `POST /ask`; tools `get_quotes`, `compute_cost`; pytest writing `wrong_answers.md`).
+
 ## 3. Commands
 
 Environment (the toolkit's venv plus the espeak-ng fix; see `build/env.sh`):

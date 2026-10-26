@@ -4,11 +4,13 @@ Every factual claim in the narration or on screen. Verdicts: PASS (checked again
 the source), CORRECTED (changed after checking), EXEMPT (a plan, stated as "will",
 not a fact). Checked 2026-10-14.
 
-Status: rows 3–8 and 11–14 checked by Claude in Revan's build session on 2026-10-14; rows 2, 9, 10, 16, 16b are Revan's own statements and checks (2026-10-14). Final sign-off: Revan C, pending.
+Status: rows 3–8 and 11–14 checked by Claude in Revan's build session on 2026-10-14; rows 2, 9, 10, 16, 16b are Revan's own statements and checks (2026-10-14). Final sign-off: Revan C, pending. Updated 2026-10-25 for the resubmission (rows 1, 1b, 1c, 17, 18).
 
 | # | Beat | Claim | Verdict | Source | Fix |
 |---|---|---|---|---|---|
-| 1 | BIDEA | The project does not exist yet; the voice is synthetic | PASS | Revan; Kokoro `af_bella` is the narration engine | — |
+| 1 | BIDEA | The project does not exist yet; the voice is synthetic; the script was written with Claude and reviewed by Revan | CORRECTED | Revan; Kokoro `af_bella`; SOURCES.md | Was "the words are mine" / "words by Revan"; graded down because Claude drafted the narration. Changed 2026-10-25 (resubmission). |
+| 1b | BIDEA | Revan is a graduate student at Northeastern | PASS | Revan (confirmed 2026-10-25) | — |
+| 1c | BPLAIN | Sending money abroad loses part of it to fees and the exchange rate | PASS | Money Map's own definition: "Fee = everything you lose compared with the mid-market rate: transfer fees plus any exchange-rate markup" (viewed 2026-10-14) | — |
 | 2 | B00 | Revan built Money Map as a software engineer co-op at the MIT Digital Currency Initiative; built alone | PASS | Revan (stated 2026-10-14) | — |
 | 3 | B00 | Money Map is public and live; compares banks, apps, transfer services and stablecoins for USD→Mexico | PASS | https://mit-dci.github.io/payments-dashboard/ viewed 2026-10-14 ("Compare banks, payment apps, money transfer services and stablecoins") | — |
 | 4 | B00 | The screenshot is real, taken 2026-10-14 | PASS | `pantry/money-map-2026-10-14.png`, headless Chrome, 16:20 EDT | — |
@@ -27,5 +29,5 @@ Status: rows 3–8 and 11–14 checked by Claude in Revan's build session on 202
 | 16 | B14 | Picked because it builds on Money Map and points at fintech work Revan wants | PASS | Revan's project statement (target role: software engineer at fintech/crypto companies) — Revan to confirm wording | — |
 | 16b | B14 | Existing skills: cost modeling, dashboard work, GitHub Pages; new: source grounding, tool calling, eval sets, PostgreSQL, FastAPI | PASS | Revan's project statement | — |
 | 16c | B08 | Readers also include researchers and policymakers who study remittance costs | PASS | Revan (stated 2026-10-14); scoped to the one corridor Remnix covers | — |
-| 17 | B02–B04, B08–B11, B13, B15 | Everything about Remnix (repo, FastAPI, PostgreSQL, tool calls, test set, log, scope) | EXEMPT | Plans, narrated with "will" | — |
-| 18 | BDEFS | Definitions of remittance, stablecoin, source grounding | PASS | General definitions; stablecoin worded "pegged to the U.S. dollar" (true of USDC, the coin Money Map's route uses) | — |
+| 17 | BPLAIN, B02–B04, B08–B11, B13, B15 | Everything about Remnix (repo, tables quotes/fx_rates/snapshots, POST /ask, tools get_quotes/compute_cost, pytest test set, log, scope) | EXEMPT | Plans, narrated with "will"; design names approved by Revan 2026-10-25 | — |
+| 18 | B06 | A stablecoin is a digital dollar | PASS | General definition (USDC, the coin Money Map's route uses, is pegged to the U.S. dollar). The terms card (BDEFS) was removed 2026-10-25. | — |

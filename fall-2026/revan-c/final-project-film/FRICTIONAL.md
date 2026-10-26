@@ -1,8 +1,45 @@
 # FRICTIONAL — what went wrong, and what I did
 
-Everything below really happened in the build session on **2026-10-14** (times are local EDT, from file
-timestamps and logs). Nothing is invented. Entries are in order. "I" is me (Revan); Claude Code ran the
-commands and wrote the fixes in my session, as described in SOURCES.md.
+## In my words — why I made each decision (Revan, answered 2026-10-25)
+
+*Note by Claude: after grading, Claude asked me these questions in our session and I typed the answers.
+The answers are mine. Claude fixed only spelling, capitals and four small grammar slips ("working or
+created" → "working on or created", "this upcoming" → "these upcoming", "it will again would save" → "it
+would again save", "amount of to be sent" → "the amount to be sent"), and set each answer under its question.
+The decisions themselves were made on 2026-10-14 unless marked otherwise.*
+
+**2026-10-14 · Voice: why a synthetic Kokoro voice instead of recording my own?**
+Easier and faster, I didn't want to record, and also Claude suggested it and I went with it because it is easier.
+
+**2026-10-14 · Why I removed the "I'll ask MIT DCI first" part**
+Because I don't need to ask them, as I was the one who was working on or created this project, and it is kind of open sourced.
+
+**2026-10-14 · Why I added researchers and policymakers as people who'd open it**
+Because this kind of data is very relevant to them in these upcoming payments networks, and stuff like keeping track of upcoming stablecoin payments.
+
+**2026-10-14 · Why I switched from my full name to "Revan C" before pushing**
+I switched because the course repo's `fall-2026/README.md` says "No IDs and no full names are stored here."
+
+**2026-10-14 · Why I pushed straight to `main` instead of opening a pull request**
+I didn't think about it much and followed what I did in Week 01.
+
+**2026-10-14 · The toolkit's end card always shows the instructor's handle, so the film ends on my own card and the toolkit's bookend check fails. Do I agree with that trade-off?**
+I agree.
+
+**2026-10-14 · Why this project: why Remnix, and why build on Money Map?**
+Since I have built Money Map, I think if we build something like this, Remnix, it would again save time for somebody who would have to select countries and the amount to be sent and everything. They can just know what are the amounts of payments they can make to other countries and stuff. It would be an interesting way to use the data of Money Map.
+
+**2026-10-25 · The TA's feedback: is there anything I'd push back on?**
+No.
+
+---
+
+## Build log (drafted by Claude from the session's logs, 2026-10-14)
+
+*These entries were written by Claude, not by me. They record what happened in the build session on
+**2026-10-14** (times are local EDT, from file timestamps and logs). Nothing is invented. "I" in them means
+me (Revan), but the wording is Claude's. Claude Code ran the commands and wrote the fixes in my session,
+as described in SOURCES.md.*
 
 ---
 
@@ -99,3 +136,29 @@ The film said and showed my full name (opening line, terms card, end card) and s
 did:** switched everything to "Revan C", re-voiced and re-rendered the three beats that carry my name, rebuilt
 the master and re-ran the gates, so the Canvas and GitHub copies stay identical. Only the Canvas zip's file
 name keeps my last name, because the assignment requires it.
+
+---
+
+## Resubmission log (drafted by Claude, 2026-10-25)
+
+*Written by Claude, not by me; "I" means me (Revan).*
+
+**2026-10-25 — Grades came back with two deductions.** P6 (−0.5): the film said "the words are mine" and the
+opening card said "words by Revan", but SOURCES.md said Claude drafted the narration. Frictional (−2): the log
+was drafted by Claude, not in my own words. The TAs' class note also asked every film to say who is doing it,
+explain the project simply, stay concise, and give full technical detail. **What I did:** changed the line to
+"I wrote the script with Claude and reviewed every line" (spoken and on screen), and answered Claude's
+questions about my decisions in my own words at the top of this file.
+
+**2026-10-25 — Some decisions had no reason from me yet.** For the voice, push route, bookend gate and the
+feedback, my first answers were "idk", and for the push route I asked Claude to make something up. Claude
+refused, because a made-up reason would repeat the problem the TA graded down. It showed me what the session
+record said I had chosen, and I answered each one myself.
+
+**2026-10-25 — Adding "who" and plain language pushed the film over 4:00.** The first rewrite was estimated at
+about 4:05. **What I did:** dropped the terms card (its words are explained where they first come up), merged
+the old B01 into B02, and trimmed seven lines. Measured runtime 3:50 before rendering; the master is 3:51.
+
+**2026-10-25 — Layout audit caught one new problem before rendering.** In the new $500 beat, the "$500" label sat
+on the top of the bill stack. Moved it up, re-audited clean, then rendered. Gate V passed on the first full run
+(0 blockers, 0 majors).

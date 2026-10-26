@@ -14,8 +14,18 @@ All dates are 2026-10-14 unless stated.
 - **Decisions and review:** I chose the Kokoro voice, removed the "ask MIT DCI first" beat, added
   researchers and policymakers as an audience, approved the B14 "why I picked it" line, approved the Step 6
   honesty fixes, and watched the review cut.
+- **Resubmission (2026-10-25):** my answers at the top of FRICTIONAL.md ("In my words") are mine, typed by me;
+  I approved the resubmission plan, the opening line about who I am, and the technical design the film names
+  (tables, endpoint, tools, test runner).
 
-## What Claude contributed (Claude Code, Claude Opus 5.5, in my build session on 2026-10-14)
+## What Claude contributed (Claude Code, Claude Opus 5.5, in my build sessions on 2026-10-14 and 2026-10-25)
+
+- **The narration was written with Claude and reviewed by me.** The film now says this in its opening line and
+  on screen; the first submission wrongly said "the words are mine".
+- **2026-10-25 resubmission:** Claude proposed the plan (authorship fix, who-I-am line, plain-language beat,
+  concrete technical beats, trims to stay under 4:00), asked me the FRICTIONAL questions, laid out my answers,
+  redrew BPLAIN, B03 and B04, re-voiced and re-rendered the changed beats, re-ran every gate, and updated these
+  documents.
 
 - Read the toolkit and explained the pipeline. Drafted `PROJECT-BRIEF.md` from my answers and asked me for
   anything it did not know.

@@ -56,33 +56,28 @@ def remotion(bid, act, narration, pattern, props, show, gate="SHOW", **extra):
 
 OPEN = [
     remotion("BIDEA", "the question",
-        "Hola. I'm Revan. This voice is synthetic; the words are mine. This film pitches a project that doesn't exist yet. My question: not just which way to Mexico is cheapest, but why, and where each number comes from.",
+        "Hola. I'm Revan, a graduate student at Northeastern. This voice is synthetic; I wrote the script with Claude and reviewed every line. This film pitches a project that doesn't exist yet. The question: not just what's cheapest, but why.",
         "BrutalistHesitantWriter",
         {"text": "Which way to send $500\nto Mexico is cheapest?",
          "triggerWords": "is cheapest", "replacementWords": "is cheapest and why",
          "fontSize": 70, "charMs": 22, "hesitateBetween": 6, "hesitateWithin": 1,
          "mistakeRate": 2, "jitter": 20, "seed": SLUG,
-         "banner": "", "brandLabel": "Synthetic voice (Kokoro) · words by Revan"},
+         "banner": "", "brandLabel": "Synthetic voice (Kokoro) · written with Claude, reviewed by Revan"},
         [{"at": 0.0, "event": "types the naive question"},
          {"at": 0.75, "event": "'is cheapest' → 'is cheapest and why' on the spoken correction"}],
         lead_silence_s=0.8,
         motion_claim="The writer types the naive 'cheapest' question and corrects it to 'cheapest and why'.",
         qc={"sparse_by_design": True, "sparse_reason": "Hesitant-writer bookend: the correction is the motion."}),
-    remotion("BDEFS", "terms",
-        "Remittance: money sent to family abroad. Stablecoin: a digital token pegged to the U S dollar. Source grounding: every number traced to where it came from.",
-        "ClaudeDefinitions",
-        {"title": "Terms In This Film",
-         "terms": [{"term": "remittance", "meaning": "money sent to family abroad"},
-                   {"term": "stablecoin", "meaning": "a digital token pegged to the U.S. dollar"},
-                   {"term": "source grounding", "meaning": "every number traced to where it came from"}],
-         "folderLabel": NAME},
-        [{"at": 0.12, "event": "'remittance'"}, {"at": 0.45, "event": "'stablecoin'"},
-         {"at": 0.75, "event": "'source grounding'"}],
-        gate="CARD",
-        qc={"sparse_by_design": True, "sparse_reason": "TERMS card: three prerequisites, one line each."}),
 ]
 
 BODY = [
+    beat("BPLAIN",
+         "When you send money home to Mexico, part of it disappears in fees and the exchange rate. Remnix will be like a calculator that shows its work: you ask what it costs, and it shows every number and where it came from.",
+         "BPLAIN_Simple",
+         "A stack of bills labelled '$500'; two bills slide off into a small tray labelled 'fees'; then a receipt "
+         "page appears and its lines write in (the calculator showing its work).",
+         [{"at": 0.1, "event": "$500 stack"}, {"at": 0.35, "event": "bills slide into 'fees'"},
+          {"at": 0.7, "event": "receipt writes in"}]),
     beat("B00",
          "First, what's real. As a software engineer co-op at the MIT Digital Currency Initiative, I built Money Map, a public dashboard that's live today. It compares banks, apps, transfer services and stablecoins for sending dollars to Mexico.",
          "B00_MoneyMap",
@@ -93,70 +88,62 @@ BODY = [
 ]
 # B00 shows a real screenshot: shot.type STILL tells GATE T the small text inside the
 # screenshot is the page's own content, not this film's typography.
-BODY[0]["shot"]["type"] = "STILL"
+BODY[1]["shot"]["type"] = "STILL"
 BODY += [
-    beat("B01",
-         "Money Map is a dashboard: you pick filters and read numbers. But a sender's question might come in plain words: why is Wise cheaper than my bank? Remnix will answer that, with the math written out.",
-         "B01_Gap",
-         "A stack of three ranked cards (the dashboard list) sits left; a question page with a scribbled "
-         "plain-words question drops in on the right; a dashed line draws from the question toward the list.",
-         [{"at": 0.15, "event": "list"}, {"at": 0.45, "event": "question page drops"},
-          {"at": 0.75, "event": "dashed line draws"}]),
     beat("B02",
-         "So I will build Remnix: an agent that will answer U S to Mexico remittance cost questions with Money Map's data, showing the math and the source behind every number. None of it exists yet.",
+         "Money Map is a dashboard: you pick filters and read numbers. So I will build Remnix, an agent you can ask in plain words, like: why is Wise cheaper than my bank? It will answer with Money Map's data, showing the math and the source behind every number. None of it exists yet.",
          "B02_Remnix",
          "A sealed kraft crate drops onto the stage, drawn in dashed outline (not built); "
          "labels 'Remnix' and 'proposed' sit beside it.",
          [{"at": 0.1, "event": "dashed crate drops"}, {"at": 0.6, "event": "'proposed' tag"}]),
     beat("B03",
-         "When it's done, it will be a public GitHub repository: a Fast API service, a Postgres database of Mexico prices, and a set of tests.",
-         "B03_Parts",
-         "The crate lid lifts; three parts rise out of it in a row: a server tower (FastAPI), "
-         "memory drawers (PostgreSQL), and a page stack (tests).",
-         [{"at": 0.15, "event": "lid lifts"}, {"at": 0.35, "event": "server"},
-          {"at": 0.55, "event": "drawers"}, {"at": 0.75, "event": "pages"}]),
+         "It will be a public GitHub repo. A Postgres database will hold three tables: quotes, exchange rates and snapshots, each row stamped with its source and time. A Fast API endpoint, POST slash ask, will take the question.",
+         "B03_Data",
+         "Database drawers with three table labels beside them (quotes, fx_rates, snapshots); then a server "
+         "tower labelled 'POST /ask' appears and a cable draws from it to the drawers.",
+         [{"at": 0.1, "event": "drawers + table labels"}, {"at": 0.7, "event": "POST /ask server + cable"}]),
     beat("B04",
-         "Here's how one answer will work. You'll ask a question, Claude will pick a tool, the tool will read prices from Postgres, and Python, not the language model, will do the math.",
-         "B04_ToolCall",
-         "A question page slides into an agent workstation; a dark tool block undocks; a cable draws "
-         "to the drawers and one drawer slides out.",
-         [{"at": 0.2, "event": "question in"}, {"at": 0.45, "event": "tool undocks"},
-          {"at": 0.7, "event": "drawer slides out"}]),
+         "Then Claude will pick one of two tools: get quotes, which reads prices from the database, or compute cost, which does the math in Python, not in the language model. The answer will come back with the row IDs and timestamps it used.",
+         "B04_Tools",
+         "An agent workstation with two tool blocks beside it (get_quotes, compute_cost); the compute_cost tool "
+         "undocks; an answer page appears with its 'row IDs' label.",
+         [{"at": 0.15, "event": "two tools"}, {"at": 0.6, "event": "compute_cost undocks"},
+          {"at": 0.8, "event": "answer + row IDs"}]),
     beat("B05",
-         "Its rule will be a prompt contract: no number without a source. This card is a constructed mock-up, not real output. Its number is real, from my Money Map screenshot: sending a thousand dollars with Wise cost seven fifty-four.",
+         "Its rule will be a prompt contract: no number without a source. This card is a constructed mock-up; its number is real, from my Money Map screenshot: a thousand dollars with Wise cost seven fifty-four.",
          "B05_Answer",
          "An answer page with a large hero number '$7.54'; a source tag 'Money Map · Oct 14' clips to its "
          "edge; a big 'CONSTRUCTED' label sits beside the page the whole beat.",
          [{"at": 0.0, "event": "'CONSTRUCTED' label"}, {"at": 0.35, "event": "$7.54 lands"},
           {"at": 0.7, "event": "source tag clips on"}]),
     beat("B06",
-         "Money Map models a stablecoin sandwich: dollars become a digital dollar, cross a blockchain, then become pesos. Remnix will show the cost of each layer.",
+         "Money Map models a stablecoin sandwich: dollars become a stablecoin, a digital dollar, cross a blockchain, then become pesos. Remnix will show the cost of each layer.",
          "B06_Sandwich",
          "Three slabs stack one at a time (buy, send, sell); a terracotta dot lights on each slab as it lands.",
          [{"at": 0.25, "event": "buy slab"}, {"at": 0.45, "event": "send slab"}, {"at": 0.65, "event": "sell slab"}]),
     beat("B07",
-         "I checked three alternatives on October fourteenth. Wise's comparison page and Monito didn't include stablecoin routes. The World Bank's database covers this corridor, but its newest data is from August twenty twenty-five. So a sender will get stablecoin routes next to the usual options, every number sourced.",
+         "I checked three alternatives on October fourteenth. Wise's comparison page and Monito didn't include stablecoin routes, and the World Bank's newest data for this corridor is from August twenty twenty-five. Remnix will include them, every number sourced.",
          "B07_Alternatives",
          "Three comparison trays in a row labelled Wise, Monito, World Bank; the sandwich slab tries each of the "
          "first two and doesn't fit; a dated tag drops on the third.",
          [{"at": 0.2, "event": "three trays"}, {"at": 0.45, "event": "slab misses Wise, Monito"},
           {"at": 0.75, "event": "date tag on World Bank"}]),
     beat("B08",
-         "Who opens it? Hiring managers and engineers at fintech and crypto companies, my target role as a software engineer, plus researchers and policymakers who study remittance costs. In sixty seconds, they'll read the read-me, run one command, and trace every number to a database row.",
+         "Who opens it? Hiring managers and engineers at fintech and crypto companies, my target role as a software engineer, plus researchers and policymakers who study remittance costs. In sixty seconds, they'll run one command and trace every number to a database row.",
          "B08_Reviewer",
          "A README page opens; a dark terminal block runs (a terracotta cursor light); an answer page appears and "
          "leader lines run from it to one drawer; a '60 s' counter climbs.",
          [{"at": 0.2, "event": "README"}, {"at": 0.45, "event": "terminal runs"},
           {"at": 0.7, "event": "answer → drawer"}]),
     beat("B09",
-         "The first piece I'll make run: load Money Map's Mexico data into Postgres, and answer one question correctly, with sources. You'll know it ran when the answer prints its source rows and timestamp, and the total matches Money Map's snapshot.",
+         "The first piece I'll make run: load Money Map's Mexico data into Postgres and answer one question with sources. You'll know it ran when the total matches Money Map's snapshot, sources printed.",
          "B09_FirstRun",
          "Records drop into the drawers; one answer page and one Money Map page sit side by side with the same "
          "number; a check mark draws between them.",
          [{"at": 0.2, "event": "records load"}, {"at": 0.55, "event": "two matching pages"},
           {"at": 0.8, "event": "check"}]),
     beat("B10",
-         "Then I'll build twenty known-answer questions, scored the same way every run. Every wrong answer will go in a log, with how it was caught.",
+         "Then twenty known-answer questions: a pie test suite will score them the same way every run, and write each wrong answer, and how it was caught, to a log.",
          "B10_TestSet",
          "A queue of question cards in a row passes a checkpoint scanner one by one; a hero '20' sits above; "
          "one card is pulled aside into an open binder (the wrong-answer log).",
@@ -175,13 +162,13 @@ BODY += [
          "vault with a date tag; the vault bar locks.",
          [{"at": 0.25, "event": "number ticks"}, {"at": 0.6, "event": "snapshot clamped"}, {"at": 0.8, "event": "vault locks"}]),
     beat("B13",
-         "What will this prove? Source grounding, tool calling, prompt contracts and evaluation. A reviewer could fairly conclude I can build a small, checked AI tool on real payment data. The evidence will be the test scores and the wrong-answer log.",
+         "What will this prove? Source grounding, tool calling, prompt contracts and evaluation. A reviewer could fairly conclude I can build a small, checked AI tool on real payment data, backed by the test scores and the wrong-answer log.",
          "B13_Proves",
          "A review desk: a results page slides onto it (test scores); an evidence binder lands beside it "
          "(wrong-answer log).",
          [{"at": 0.1, "event": "results page onto the desk"}, {"at": 0.8, "event": "binder lands"}]),
     beat("B14",
-         "Why this project? It's a mix. I picked it because it builds on Money Map and points at the fintech work I want. Cost modeling, dashboard work and GitHub Pages deployment I already have; Money Map is the evidence. New to me: source grounding, agent tool calling, evaluation test sets, Postgres and Fast API.",
+         "Why this project? It's a mix. It builds on Money Map and points at the fintech work I want. Cost modeling, dashboards and GitHub Pages I already have; Money Map is the evidence. New to me: source grounding, tool calling, evaluation, Postgres and Fast API.",
          "B14_Skills",
          "Two shelves: left 'have' holds three solid blocks next to the Money Map page; right 'new' shows five "
          "dashed outlines that draw in one by one.",
@@ -214,7 +201,7 @@ sheet = {"metadata": {
     "aspect_ratio": "16:9", "width": 3840, "height": 2160, "caption_policy": "none",
     "greeting_language": "Spanish (Hola)",
     "bookend_exempt": ["cold-open", "bvdt", "bhtf"],
-    "bookend_exempt_reason": ("Student pitch on the show-tell chassis: opens on the hesitant writer + terms card, "
+    "bookend_exempt_reason": ("Student pitch on the show-tell chassis: opens on the hesitant writer, then a plain-language beat instead of the terms card, "
                               "no verdict card, and no Claude.ai Your Turn composer (the film shows no Claude "
                               "interface or response). Outro is the student's own card, narrated as themselves."),
     "audience": "hiring managers and engineers at fintech and crypto companies; INFO 7375 reviewers",

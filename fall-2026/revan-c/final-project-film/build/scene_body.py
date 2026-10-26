@@ -70,25 +70,29 @@ class B00_MoneyMap(Scene):
         finish(self)
 
 
-# ── B01 · the gap: a dashboard vs a question in plain words ──────────────────────
-class B01_Gap(Scene):
+# ── BPLAIN · the simple version: fees eat part of the money; Remnix shows its work ──
+class BPLAIN_Simple(Scene):
     def construct(self):
-        bars = VGroup(*[RoundedRectangle(width=wd, height=0.55, corner_radius=0.1, fill_color=c, fill_opacity=1,
-                                         stroke_color=INK, stroke_width=3).move_to([-4.2 + (wd - 3.4) / 2, 1.2 - i * 0.85, 0])
-                        for i, (wd, c) in enumerate([(2.2, BAR1), (2.9, BAR2), (3.4, BAR3)])])
-        l1 = lab("dashboard", -4.2, -1.6)
-        page = paper(3.2, 0.5, w=2.8, h=3.0, tilt=0.04)
-        lines = scribbles_on(page, n=4)
-        l2 = lab("plain words", 3.2, -1.75)
-        gplay(self, LaggedStart(*[FadeIn(b, shift=RIGHT * 0.3) for b in bars], lag_ratio=0.3), FadeIn(l1), run_time=1.2)
-        until(self, "But a sender")
-        gplay(self, FadeIn(page, shift=DOWN * 0.4), FadeIn(l2), run_time=0.7)
-        gplay(self, Create(lines), run_time=1.0)
-        until(self, "Remnix will answer")
-        link = Line([1.55, 0.5, 0], [-1.9, 0.5, 0], color=CONNECT, stroke_width=8)
-        end = Dot([-1.9, 0.5, 0], radius=0.11, color=TERRA)
-        gplay(self, Create(link), run_time=0.8)
-        gplay(self, GrowFromCenter(end), run_time=0.3)
+        iso = Iso(-3.9, -1.6, 1.0)
+        bills = [iso.box(0, 0, 0.32 * i, 2.2, 1.3, 0.26, PAGE_TOP, PAGE_L, PAGE_R) for i in range(6)]
+        for i, bl in enumerate(bills):
+            bl.set_z_index(i)
+        amount = lab("$500", -3.5, 2.7, 64, bold=True)
+        gplay(self, LaggedStart(*[FadeIn(bl, shift=DOWN * 0.2) for bl in bills], lag_ratio=0.15),
+              FadeIn(amount), run_time=1.0)
+        tray_iso = Iso(-0.2, -1.5, 0.8)
+        tb, tf = tray_iso.open_box(-0.9, -0.9, 0, 1.8, 1.8, 0.5)
+        fees = lab("fees", -0.2, -2.75)
+        until(self, "part of it disappears")
+        gplay(self, FadeIn(VGroup(tb, tf)), FadeIn(fees), run_time=0.5)
+        for bl in bills[-2:][::-1]:
+            gplay(self, bl.animate.shift(RIGHT * 3.6 + DOWN * 1.0).scale(0.55), run_time=0.6)
+        until(self, "like a calculator that shows its work")
+        receipt = paper(4.3, 0.4, w=2.4, h=3.2)
+        rlines = scribbles_on(receipt, n=5)
+        rl = lab("shows its work", 4.3, -1.75)
+        gplay(self, FadeIn(receipt, shift=UP * 0.3), FadeIn(rl), run_time=0.5)
+        gplay(self, Create(rlines), run_time=1.0)
         finish(self)
 
 
@@ -112,44 +116,43 @@ class B02_Remnix(Scene):
         finish(self)
 
 
-# ── B03 · what the finished repo holds ───────────────────────────────────────────
-class B03_Parts(Scene):
+# ── B03 · the data: PostgreSQL tables + the FastAPI endpoint ─────────────────
+class B03_Data(Scene):
     def construct(self):
-        crate = remnix_crate()
-        sh = shadow(-1.6, -1.75, 4.4, 0.7)
-        self.add(sh, crate)
-        server = make_original("server-tower", height=2.0, x=-0.6, y=1.2)
-        drawers = make_original("memory-drawers", height=2.0, x=2.3, y=1.2)
-        pages = make_original("skill-stack", height=1.3, x=5.0, y=1.2)
-        labels = [lab("FastAPI", -0.6, -0.25), lab("PostgreSQL", 2.3, -0.25), lab("tests", 5.0, -0.25)]
-        gplay(self, VGroup(crate, sh).animate.shift(LEFT * 2.6 + DOWN * 0.6).scale(0.7), run_time=0.7)
-        gplay(self, crate.parts["lid"].animate.shift(crate.action_vectors["lid"] * 0.7), run_time=0.5)
-        for part, l in zip((server, drawers, pages), labels):
-            gplay(self, FadeIn(part, shift=UP * 0.4), FadeIn(l), run_time=0.55)
-        floor = Line([-1.8, -0.85, 0], [6.1, -0.85, 0], color=GHOST, stroke_width=6)
-        gplay(self, Create(floor), run_time=0.6)
+        drawers = make_original("memory-drawers", height=3.2, x=-3.6, y=0.0)
+        gplay(self, FadeIn(drawers, shift=UP * 0.3), run_time=0.6)
+        tables = [lab("quotes", -0.9, 1.1), lab("fx_rates", -0.9, 0.2), lab("snapshots", -0.9, -0.7)]
+        db = lab("PostgreSQL", -3.6, -2.35, 40, bold=True)
+        gplay(self, LaggedStart(*[FadeIn(t) for t in tables], lag_ratio=0.4), FadeIn(db), run_time=1.2)
+        until(self, "A Fast API endpoint")
+        server = make_original("server-tower", height=2.6, x=4.0, y=0.2)
+        api = lab("POST /ask", 4.0, -1.85, 44, bold=True)
+        cable = Line([0.6, 0.2, 0], [2.6, 0.2, 0], color=CONNECT, stroke_width=8)
+        gplay(self, FadeIn(server, shift=UP * 0.3), FadeIn(api), run_time=0.6)
+        gplay(self, Create(cable), run_time=0.6)
         finish(self)
 
 
-# ── B04 · one answer: question → Claude picks a tool → PostgreSQL → Python math ──
-class B04_ToolCall(Scene):
+# ── B04 · the agent: Claude picks get_quotes or compute_cost; the answer cites rows ──
+class B04_Tools(Scene):
     def construct(self):
-        ws = make_original("agent-workstation", height=2.8, x=-3.4, y=0.2)
-        drawers = make_original("memory-drawers", height=2.6, x=3.7, y=0.1)
-        l1, l2 = lab("Claude", -3.4, -1.85), lab("PostgreSQL", 3.7, -1.85)
-        self.add(ws, drawers, l1, l2)
-        q = paper(-5.4, 2.3, w=1.1, h=1.3)
-        until(self, "You'll ask a question")
-        gplay(self, FadeIn(q, shift=DOWN * 0.3), run_time=0.5)
-        gplay(self, q.animate.move_to([-3.9, 0.9, 0]).scale(0.7), run_time=0.7)
-        until(self, "Claude will pick a tool")
-        gplay(self, ws.parts["tool"].animate.shift(ws.action_vectors["tool"]), run_time=0.7)
-        until(self, "the tool will read prices")
-        cable = Line([-1.4, -0.6, 0], [2.0, -0.6, 0], color=CONNECT, stroke_width=8)
-        gplay(self, Create(cable), run_time=0.8)
-        until(self, "and Python")
-        l3 = lab("Python math", 3.7, 2.55)
-        gplay(self, drawers.parts["drawer"].animate.shift(drawers.action_vectors["drawer"]), FadeIn(l3), run_time=0.7)
+        ws = make_original("agent-workstation", height=2.6, x=-4.4, y=0.2)
+        l0 = lab("Claude", -4.4, -1.75)
+        self.add(ws, l0)
+        t1 = make_original("tool-block", height=1.6, x=-1.1, y=1.3)
+        t2 = make_original("tool-block", height=1.6, x=-1.1, y=-1.0)
+        n1 = lab("get_quotes", 1.45, 1.3, 40)
+        n2 = lab("compute_cost", 1.65, -1.0, 40)
+        gplay(self, FadeIn(t1, shift=UP * 0.2), FadeIn(n1), run_time=0.5)
+        gplay(self, FadeIn(t2, shift=UP * 0.2), FadeIn(n2), run_time=0.5)
+        until(self, "does the math in Python")
+        gplay(self, t2.parts["tool"].animate.shift(t2.action_vectors["tool"]), run_time=0.6)
+        until(self, "The answer will come back")
+        ans = paper(5.3, 0.3, w=1.6, h=2.2)
+        alines = scribbles_on(ans, n=3)
+        ids = lab("row IDs", 5.3, -1.4)
+        gplay(self, FadeIn(ans, shift=LEFT * 0.3), FadeIn(ids), run_time=0.5)
+        gplay(self, Create(alines), run_time=0.6)
         finish(self)
 
 
@@ -164,7 +167,7 @@ class B05_Answer(Scene):
         hero = T("$7.54", 120, bold=True).move_to([-1.5, -0.05, 0])
         math = VGroup(scribble(-3.6, -1.3, 4.2), scribble(-3.6, -1.75, 2.8))
         gplay(self, FadeIn(hero), Create(math), run_time=0.8)
-        until(self, "Its number is real")
+        until(self, "its number is real")
         tag = Rectangle(width=0.5, height=1.0, fill_color=BOX_R, fill_opacity=1, stroke_color=INK, stroke_width=4).move_to([1.45, -0.55, 0])
         hole = Dot([1.45, -0.25, 0], radius=0.08, color=TERRA)
         src = lab("Money Map · Oct 14", 4.1, -0.55, 36)
@@ -279,7 +282,7 @@ class B10_TestSet(Scene):
         gplay(self, FadeIn(twenty), FadeIn(q), run_time=0.5)
         light = Dot([-1.0, 1.15, 0], radius=0.1, color=TERRA)
         gplay(self, GrowFromCenter(light), scan.parts["parcel"].animate.shift(scan.action_vectors["parcel"]), run_time=1.2)
-        until(self, "Every wrong answer")
+        until(self, "each wrong answer")
         binder = make_original("evidence-binder", height=1.7, x=4.3, y=-0.8)
         l2 = lab("log", 4.3, -2.2)
         gplay(self, FadeIn(binder, shift=UP * 0.3), FadeIn(l2), run_time=0.6)
