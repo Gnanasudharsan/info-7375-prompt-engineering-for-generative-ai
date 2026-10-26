@@ -468,10 +468,10 @@ class B04_Tests(Scene):
     def construct(self):
         tray = Rectangle(width=6.9, height=2.0, fill_color=CARD, fill_opacity=1, stroke_color=INK, stroke_width=4).move_to([-2.55, 0.2, 0])
         sq = VGroup(*[Square(0.5, fill_color=BAR1, fill_opacity=1, stroke_color=BAR2, stroke_width=2)
-                      .move_to([-5.4 + 0.68 * (i % 9), 0.6 - 0.8 * (i // 9), 0]) for i in range(17)])
-        hero = T("17 / 17", 110, bold=True).move_to([3.6, 0.6, 0])
+                      .move_to([-5.4 + 0.68 * (i % 9), 0.6 - 0.8 * (i // 9), 0]) for i in range(18)])
+        hero = T("18 / 18", 110, bold=True).move_to([3.6, 0.6, 0])
         l1 = label("tests pass", 3.6, -0.75, 40)
-        tg = tag("EXISTS · re-run 2026-10-10")
+        tg = tag("EXISTS · 18 / 18 · 2026-10-24")
         self.play(FadeIn(tray), FadeIn(tg), run_time=rt(self, 0.06))
         self.play(LaggedStart(*[FadeIn(s) for s in sq], lag_ratio=0.12), run_time=rt(self, 0.16))
         self.play(FadeIn(hero), FadeIn(l1), run_time=rt(self, 0.08))
@@ -500,23 +500,20 @@ class B06_Second(Scene):
 
 class B07_Eval(Scene):
     def construct(self):
-        grid = VGroup(*[Square(0.5, fill_color=(BAR1 if i < 6 else BOX_TOP), fill_opacity=1, stroke_color="#917A55", stroke_width=3)
+        grid = VGroup(*[Square(0.5, fill_color=BOX_TOP, fill_opacity=1, stroke_color="#917A55", stroke_width=3)
                         .move_to([-4.5 + 0.66 * (i % 5), 1.5 - 0.66 * (i // 5), 0]) for i in range(25)])
-        for sq in grid[:6]:
-            sq.set_fill(BOX_TOP)
         l1 = label("25 companies", -3.18, -2.2)
         tbl = Rectangle(width=4.4, height=3.2, fill_color=CARD, fill_opacity=1, stroke_color=BAR1, stroke_width=4).move_to([2.8, 0.2, 0])
         head = Rectangle(width=4.4, height=0.5, fill_color=BAR2, fill_opacity=1, stroke_width=0).move_to([2.8, 1.55, 0])
         rows = VGroup(*[Rectangle(width=3.6, height=0.18, fill_color=BAR1, fill_opacity=1, stroke_width=0).move_to([2.8, 1.0 - 0.36 * k, 0]) for k in range(6)])
-        l2 = label("6 rows ran", 2.8, -1.95)
-        tg = tag("6 RAN · 2026-10-12 · 19 PLANNED")
+        l2 = label("2 of 25 found", 2.8, -1.95)
+        tg = tag("25 RAN · 2026-10-12 / 10-25")
         self.play(FadeIn(tg), LaggedStart(*[FadeIn(s) for s in grid], lag_ratio=0.04), FadeIn(l1), run_time=rt(self, 0.12))
-        self.play(FadeIn(tbl), FadeIn(head), FadeIn(l2), *[s.animate.set_fill(BAR1) for s in grid[:6]], run_time=rt(self, 0.08))
+        self.play(FadeIn(tbl), FadeIn(head), FadeIn(l2), *[s.animate.set_fill(BAR1) for s in grid], run_time=rt(self, 0.08))
         self.play(LaggedStart(*[FadeIn(r) for r in rows], lag_ratio=0.2), run_time=rt(self, 0.12))
         to(self, 0.62)
-        lens = VGroup(Circle(radius=0.45, stroke_color=INK, stroke_width=7).move_to([-3.84, 0.84, 0]),
-                      Line([-3.52, 0.52, 0], [-3.1, 0.1, 0], color=INK, stroke_width=10))
-        self.play(Create(lens), run_time=rt(self, 0.08))
+        hits = VGroup(*[Dot(grid[k].get_center(), radius=0.12, color=TERRA) for k in (16, 19)])
+        self.play(LaggedStart(*[GrowFromCenter(h) for h in hits], lag_ratio=0.3), run_time=rt(self, 0.08))
         finish(self)
 
 
@@ -526,17 +523,14 @@ class B07A_Bug(Scene):
         a.move_to([-5.6 + a.width / 2, 1.2, 0])
         la = label("hub name", -5.6 + 1.0, 2.0, 40)
         arr = Arrow([-3.6, 0.55, 0], [-3.6, -0.45, 0], color=INK, stroke_width=8, buff=0, max_tip_length_to_length_ratio=0.35)
-        b = T("GOLDMAN SACHS AND", 48)
+        b = T("GOLDMAN SACHS", 48)
         b.move_to([-5.6 + b.width / 2, -1.1, 0])
-        lb = label("my matcher's output", -5.6 + 1.9, -1.95, 40)
-        tg = tag("FOUND · 2026-10-12")
+        lb = label("my matcher, fixed", -5.6 + 1.7, -1.95, 40)
+        tg = tag("FIXED · 2026-10-24 · test 18 / 18")
         self.play(FadeIn(tg), FadeIn(a), FadeIn(la), run_time=rt(self, 0.1))
         self.play(GrowArrow(arr), FadeIn(b), FadeIn(lb), run_time=rt(self, 0.12))
         to(self, 0.62)
-        cx, cy = 3.6, -1.1
-        x = VGroup(Line([cx - 0.45, cy - 0.45, 0], [cx + 0.45, cy + 0.45, 0], color=INK, stroke_width=10),
-                   Line([cx - 0.45, cy + 0.45, 0], [cx + 0.45, cy - 0.45, 0], color=INK, stroke_width=10))
-        self.play(Create(x), run_time=rt(self, 0.08))
+        self.play(Create(check(1.9, -1.1, s=0.35, w=10)), run_time=rt(self, 0.08))
         finish(self)
 
 
@@ -725,4 +719,24 @@ class B09P_Proves(Scene):
         self.play(FadeIn(tags3), FadeIn(rows), FadeIn(VGroup(pg, plines)), GrowArrow(ptr), run_time=rt(self, 0.12))
         to(self, 0.62)
         self.play(LaggedStart(*[GrowFromCenter(Dot([x, -2.2, 0], radius=0.1, color=TERRA)) for x in xs], lag_ratio=0.25), run_time=rt(self, 0.1))
+        finish(self)
+
+
+class B07B_Brand(Scene):
+    def construct(self):
+        typed = T("Robinhood", 54)
+        typed.move_to([-5.4 + typed.width / 2, 1.2, 0])
+        lt = label("typed", -5.4 + 0.6, 2.0, 40)
+        x0 = -5.4 + typed.width + 0.4
+        arr = Arrow([x0, 1.2, 0], [x0 + 1.4, 1.2, 0], color=INK, stroke_width=8, buff=0, max_tip_length_to_length_ratio=0.3)
+        q = T("?", 110, bold=True).move_to([x0 + 2.1, 1.2, 0])
+        row = T("ROBINHOOD MARKETS INC · 824", 44)
+        row.move_to([-5.4 + row.width / 2, -1.2, 0])
+        lr = label("in my data, missed", -5.4 + 1.85, -2.05, 40)
+        tg = tag("FOUND · 2026-10-25")
+        self.play(FadeIn(tg), FadeIn(typed), FadeIn(lt), run_time=rt(self, 0.08))
+        self.play(GrowArrow(arr), FadeIn(q), run_time=rt(self, 0.08))
+        self.play(FadeIn(row), FadeIn(lr), run_time=rt(self, 0.08))
+        to(self, 0.62)
+        self.play(GrowFromCenter(Dot([-5.75, -1.2, 0], radius=0.12, color=TERRA)), run_time=rt(self, 0.08))
         finish(self)

@@ -43,34 +43,39 @@ def remotion(bid, act, narration, pattern, props, show, gate="SHOW", **extra):
 
 
 OPEN = [
+ remotion("BNAME", "who",
+    f"Hello. I'm {NAME}, a master's student at Northeastern.",
+    "BrutalistHesitantWriter",
+    {"text": "Arundhati Kandelkar\nMSIS, Northeastern University", "triggerWords": "", "replacementWords": "",
+     "fontSize": 72, "charMs": 22, "hesitateBetween": 2, "hesitateWithin": 0, "mistakeRate": 0, "jitter": 10,
+     "seed": SLUG + "-name", "banner": ""},
+    [{"at": 0.0, "event": "my name types"}],
+    lead_silence_s=0.5, motion_claim="My name and programme type in while I say them.",
+    qc={"sparse_by_design": True, "sparse_reason": "Name card: the name is the whole picture."}),
+ remotion("BBUILD", "what",
+    "I'm building Co-op Sponsor Check: a tool that tells international students whether a company has ever sponsored someone for a software job.",
+    "BrutalistHesitantWriter",
+    {"text": "I'm building Co-op Sponsor Check", "triggerWords": "", "replacementWords": "",
+     "fontSize": 72, "charMs": 18, "hesitateBetween": 0, "hesitateWithin": 0, "mistakeRate": 0, "jitter": 8,
+     "seed": SLUG + "-build", "banner": ""},
+    [{"at": 0.0, "event": "types 'I'm building Co-op Sponsor Check' as it is spoken"}],
+    motion_claim="The one-sentence summary types in as it is spoken.",
+    qc={"sparse_by_design": True, "sparse_reason": "One-sentence summary card."}),
  remotion("BIDEA", "the question",
-    f"Hello. I'm {NAME}. This is a pitch, not a finished build. "
-    "The question I started with was, does this company sponsor visas? The question a tool can actually answer is narrower. "
-    "Does this company have a record of sponsoring software jobs?",
+    "When international students like me pick an internship, we need to know one thing: has this company ever sponsored someone for a software job? "
+    "Today we guess, and a missing record looks like a no. My tool says I don't know, instead of guessing no.",
     "BrutalistHesitantWriter",
     {"text": "Does this company sponsor visas", "triggerWords": "sponsor visas",
      "replacementWords": "have a record of sponsoring software jobs",
      "fontSize": 64, "charMs": 22, "hesitateBetween": 6, "hesitateWithin": 1, "mistakeRate": 2, "jitter": 20,
      "seed": SLUG, "banner": ""},
-    [{"at": 0.0, "event": "types the naive question"}, {"at": 0.6, "event": "corrects 'sponsor visas' to the narrower question"}],
-    lead_silence_s=0.8, motion_claim="The writer types the naive question and corrects it to the one a tool can answer.",
+    [{"at": 0.0, "event": "types the naive question"}, {"at": 0.5, "event": "corrects 'sponsor visas' to the narrower question"}],
+    motion_claim="The naive question is corrected to the one a tool can answer.",
     qc={"sparse_by_design": True, "sparse_reason": "Hesitant-writer bookend: the correction is the motion."}),
- remotion("BDEFS", "terms",
-    "Three terms. A sponsor record: a public government record of an employer filing for a work visa. "
-    "A co-op: a paid work term during my degree. And unknown: the data is silent, which is not the same as no.",
-    "ClaudeDefinitions",
-    {"title": "Terms In This Film",
-     "terms": [{"term": "sponsor record", "meaning": "a public record of an employer filing for a work visa"},
-               {"term": "Co-op", "meaning": "a paid work term during my degree"},
-               {"term": "unknown", "meaning": "the data is silent, which is not the same as no"}],
-     "folderLabel": ""},   # 32px UI label fails GATE T's 41px floor at 4K; my name is on the outro
-    [{"at": 0.12, "event": "'sponsor record'"}, {"at": 0.5, "event": "'Co-op'"}, {"at": 0.75, "event": "'unknown'"}], gate="CARD",
-    qc={"sparse_by_design": True, "sparse_reason": "TERMS card: three prerequisites, one line each."}),
 ]
 
 B = [
- beat("BWHAT", "What is it? When it's done, a public GitHub repository: a small Python tool that tells an international student whether a company has sponsored software jobs, "
-      "plus an evaluation set, and a log of where it fails.",
+ beat("BWHAT", "When it's done, it will be a public GitHub repository: the tool, a twenty-five company evaluation set, and a log of where it fails.",
       "BWHAT_Repo", "A repository folder tray holding three things: the company box (the tool), a small grid (the evaluation set), a page (the failure log); tag 'PLANNED · finished form'.",
       [{"at": 0.15, "event": "repo tray"}, {"at": 0.3, "event": "three parts drop in"}, {"at": 0.62, "event": "folder tab"}]),
  beat("B00", "Here is what exists today. On October third I pushed a recipe to my fork of the Reallocation Engine. "
@@ -85,12 +90,11 @@ B = [
       "It says unknown, and tells you to ask a person.",
       "B02_Unknown", "A box rides up to a gate; the gate shows a question mark, never a zero.",
       [{"at": 0.2, "event": "box rides to gate"}, {"at": 0.62, "event": "question mark"}]),
- beat("B03", "Building it, I found its biggest limit. JPMorgan Chase, Goldman Sachs and Morgan Stanley were not in the dataset at all. "
-      "The dataset's own notes say it was built from a list of funded startups taken from S E C filings, which would explain why the big banks are missing.",
+ beat("B03", "Building it, I found its biggest limit. The big banks were not in the dataset at all, because it was built from a list of funded startups taken from S E C filings.",
       "B03_Gap", "A data page with a gap; three bank boxes drop toward it and pass through the gap.",
       [{"at": 0.2, "event": "page with gap"}, {"at": 0.35, "event": "three boxes fall through"}]),
- beat("B04", "Seventeen tests passed when I built it, and again when I re-ran them on October tenth. They cover six failure cases.",
-      "B04_Tests", "A tray of seventeen small slots; each gets a check; tag '17 / 17 pass · re-run 10-10'.",
+ beat("B04", "Eighteen tests pass today: six failure cases, plus a new test for a bug the evaluation found.",
+      "B04_Tests", "A tray of eighteen small slots; each gets a check; tag 'EXISTS · 18 / 18 · 2026-10-24'.",
       [{"at": 0.15, "event": "checks land"}, {"at": 0.62, "event": "tag"}]),
  beat("B05", "The real alternative is the official U S C I S, H-1B Employer Data Hub. Searched on October twelfth, it does list JPMorgan Chase, which my dataset is missing. "
       "But it is searched one employer at a time, by name, place or industry, not by job title.",
@@ -104,24 +108,27 @@ B = [
       "so a missing bank becomes a real answer or an honest unknown.",
       "B06_Second", "A second page slides under the gapped page and fills the hole; tag 'PLANNED'.",
       [{"at": 0.2, "event": "second page slides in"}, {"at": 0.62, "event": "gap filled"}]),
- beat("B07", "And an evaluation. The first six of twenty-five rows ran on October twelfth. All six companies file in the official hub. "
-      "My dataset had a sponsorship record for none of them, and the tool said unknown every time, not zero.",
+ beat("B07", "Then I tested it on twenty-five companies. Every company I looked up in the official hub was there. My tool found a record for only two. "
+      "It never guessed no. But that number told me something was wrong.",
       "B07_Eval", "A grid of twenty-five company squares; the first six fill grey and their rows land in the results table; the rest stay empty; tag '6 RAN · 2026-10-12 · 19 PLANNED'.",
       [{"at": 0.15, "event": "grid"}, {"at": 0.3, "event": "six squares fill, six rows land"}, {"at": 0.62, "event": "magnifier moves to square seven"}]),
- beat("B07A", "The check also found a real bug. The hub lists Goldman Sachs and Co, L L C. My name matcher shortens that to Goldman Sachs and, which would never match. "
-      "That gets fixed before the hub is joined. The other nineteen rows are next.",
-      "B07A_Bug", "The hub's name 'GOLDMAN SACHS AND CO LLC', an arrow, and the matcher's output 'GOLDMAN SACHS AND' with a cross; tag 'FOUND · 2026-10-12'.",
-      [{"at": 0.15, "event": "hub name"}, {"at": 0.3, "event": "arrow and matcher output"}, {"at": 0.62, "event": "cross"}]),
- beat("B08", "The risk that could sink it is names. B N Y Mellon, and The Bank of New York Mellon, may be one employer or two. "
-      "So the tool will not guess. "
-      "It will show the candidates to a person, and I will report how many of the twenty-five needed one.",
+ beat("B07A", "Two real problems. First, my matcher turned Goldman Sachs and Co, L L C, into Goldman Sachs and. "
+      "It is fixed now, with a test that failed before the fix and passes after.",
+      "B07A_Bug", "The hub's name 'GOLDMAN SACHS AND CO LLC', an arrow, and the matcher's output 'GOLDMAN SACHS' with a tick; tag 'FIXED · 2026-10-24'.",
+      [{"at": 0.15, "event": "hub name"}, {"at": 0.3, "event": "arrow and fixed output"}, {"at": 0.62, "event": "tick"}]),
+ beat("B07B", "Second, brand names. Typing Robinhood found nothing, but my data holds Robinhood Markets, with eight hundred and twenty-four approvals. "
+      "Chime, and So Fi, failed the same way. That is the next fix.",
+      "B07B_Brand", "A typed name 'Robinhood' leads to a question mark; beside it, the dataset row 'ROBINHOOD MARKETS INC · 824' it missed; tag 'FOUND · 2026-10-25'.",
+      [{"at": 0.15, "event": "typed name and question mark"}, {"at": 0.62, "event": "the missed row lights up"}]),
+ beat("B08", "So the risk that could sink this is names, and my test proved it. B N Y Mellon, and The Bank of New York Mellon, may be one employer or two. "
+      "The tool will not guess. It will show the likely legal names to a person, who decides.",
       "B08_Names", "One box with two name tags pulling in different directions; a 'human check' stamp lands between them.",
       [{"at": 0.2, "event": "two tags"}, {"at": 0.62, "event": "human check stamp"}]),
  beat("B09", "One thing it will deliberately not do: give immigration advice, or predict whether anyone gets a visa. It reports history.",
       "B09_Out", "A stop sign beside the box; three small label tags clip onto the box.",
       [{"at": 0.2, "event": "stop sign"}, {"at": 0.62, "event": "three label tags"}]),
  beat("B09P", "What does it prove? Verification: every answer is labelled as a record, a judgment, or your input. "
-      "Evaluation: six answers were checked against the official hub. Source grounding: every sponsor record in the run log cites its C S V line.",
+      "Evaluation: twenty-five answers were checked against the official hub. Source grounding: every sponsor record in the run log cites its C S V line.",
       "B09P_Proves", "Three trays in a row, labelled verification, evaluation, source grounding: label tags on a box; a ticked six-row table; a page with a line pointer; tag 'WHAT IT PROVES'.",
       [{"at": 0.15, "event": "three trays and labels"}, {"at": 0.62, "event": "a terracotta dot lands on each"}]),
  beat("B10", "Who opens it? A hiring manager or engineer hiring software developers. "
@@ -156,7 +163,7 @@ SPARSE_REASON = ("show-tell style: one drawn object or scene on a cream stage pe
 for b in B:
     b["qc"] = {"sparse_by_design": True, "sparse_reason": SPARSE_REASON}
 
-BEATS = OPEN + B + [YOURTURN]
+BEATS = OPEN + B
 BEATS.append({"beat_id": "BOUT", "act": "outro", "lane": "bookend", "proof_gate": "SHOW",
               "narration_text": f"{TITLE}. Pitched by {NAME}.", "estimated_duration_s": 4.0,
               "voice": VOICE, "engine": "kokoro",
@@ -184,8 +191,8 @@ sheet = {"metadata": {
     "channel": "info7375-student", "channel_title": NAME, "persona": NAME, "voice": VOICE, "voice_kokoro": VOICE,
     "engine": "kokoro", "clock": "narration", "palette": "claude", "register": "Teardown", "fps": 24,
     "aspect_ratio": "16:9", "width": 3840, "height": 2160, "caption_policy": "none",
-    "bookend_exempt": ["cold-open", "bvdt"],
-    "bookend_exempt_reason": "show-tell style: opens on the hesitant writer + terms card, no verdict card; Your Turn is the composer; spoken outro stays (with the student's name, per the assignment).",
+    "bookend_exempt": ["cold-open", "bvdt", "bhtf"],
+    "bookend_exempt_reason": "Your Turn cut for concision (TA feedback 2026-10-21: concise pitch). show-tell style: opens on the hesitant writer + terms card, no verdict card; Your Turn is the composer; spoken outro stays (with the student's name, per the assignment).",
     "audience": "INFO 7375 instructor and TAs; later, hiring managers for software developer roles",
     "source_doc": "PROJECT-BRIEF.md; the-reallocation-engine fork at 03784b0; evidence/recipe-rerun-2026-10-10.txt",
     "playlist": "INFO 7375 Final Project", "chapter_number": 0,

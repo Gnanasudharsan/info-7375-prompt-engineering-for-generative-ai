@@ -39,6 +39,10 @@ disclosure here and in README.md.)
 - **Ran the first 6 evaluation rows on my instruction** (2026-10-12): wrote `evidence/eval_first_rows.py`, which
   imports my recipe's matcher unchanged, and searched each company in the USCIS hub; table in
   `evidence/eval-first-rows-2026-10-12.md`. The six companies were my choice.
+- **2026-10-24/25, on my instruction:** fixed the "AND" defect with a test (fork commit `379252f`); wrote
+  `evidence/eval_rows.py`; recorded my predictions *before* the run (`evidence/predictions-2026-10-25.md`, options
+  offered by Claude, choice mine); ran rows 7–25 and searched 18 of them in the USCIS hub. **Row 12 (Capital One) I
+  searched myself.** It rewrote the opening, B04, B07, B07A, new B07B, B08, B09P; cut the terms card and Your Turn.
 - Re-ran my recipe and tests on 2026-10-10 (`evidence/recipe-rerun-2026-10-10.txt`).
 - Diagnosed the setup failures, fixed two mispronunciations found by a whisper transcript, and made a
   local edit to the toolkit's outro card so it shows my name instead of the instructor's handle.

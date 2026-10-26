@@ -5,6 +5,10 @@ Cast kept across the film: the kraft company box, the data page, the gate.
 
 | Beat | Picture | Motion | Honesty tag on screen |
 |---|---|---|---|
+| BNAME | name card (hesitant writer, no correction) | my name and programme type in | — |
+| BBUILD | hesitant writer | "I'm building Co-op Sponsor Check" types as it is spoken | — |
+| BNAME | name card (hesitant writer, no correction) | my name and programme type in | — |
+| BBUILD | hesitant writer | "I'm building Co-op Sponsor Check" types as it is spoken | — |
 | BIDEA | hesitant writer | naive question corrected to the narrower one | — |
 | BDEFS | Terms In This Film | three terms land | — |
 | BWHAT | repository tray holding the box (tool), a grid (evaluation set), a page (failure log) | parts drop in; folder tab | PLANNED · finished form |

@@ -1,6 +1,6 @@
 # PROJECT-BRIEF — Co-op Sponsor Check
 
-Arundhati Kandelkar · INFO 7375 Final Project pitch · 2026-10-12. Past tense = shown in `evidence/`; everything else = will.
+Arundhati Kandelkar · INFO 7375 Final Project pitch · 2026-10-12, revised 2026-10-25. Past tense = shown in `evidence/`; everything else = will.
 
 **1. What is it?** A Python tool that tells an international student whether a company has a public record of
 sponsoring *software* jobs, and says "unknown" instead of "no" when the record is missing. When done: a public
@@ -19,15 +19,15 @@ fintech. In 60 seconds: README, one command, a report that says unknown where th
 where the tool was right and wrong.
 
 **4. What does it prove?** *Verification* — every value is labelled record / judgment / your input (exists; tested).
-*Evaluation* — answers checked against the hub (6 of 25 rows ran). *Source grounding* — every record-sourced value in
+*Evaluation* — 25 answers checked against the hub (all 25 rows ran; predictions written first). *Source grounding* — every record-sourced value in
 the run log cites its CSV line (exists: 48 `csv_line` fields). A reviewer can conclude I build small, tested data
 tools and report where they fail — **not** that it is accurate for every company.
 
 **5. In / out / first.** Out: no immigration advice, no visa predictions. In: sponsorship history for software titles
-from public government-derived data. First: the evaluation table — **first 6 rows ran 2026-10-12**.
+from public government-derived data. First: the evaluation table — **all 25 rows ran (2026-10-12 and 2026-10-25)**.
 
 **6. What could sink it?** Company names. The hub lists Goldman under four legal names plus "J GOLDMAN AND CO L P";
-my matcher turns "GOLDMAN SACHS AND CO LLC" into "GOLDMAN SACHS AND" (found by the first rows). Response: no fuzzy
+the evaluation found two matcher defects: "…AND CO LLC" (fixed, with a test) and brand names (typing "Robinhood" misses ROBINHOOD MARKETS INC, 824 approvals — not yet fixed). Response: no fuzzy
 auto-match; candidates go to a human (gate G2, exists); traps stay in the evaluation set; I report how many of 25
 needed a human. Known limit: the dataset is built from an SEC list of funded startups, so big banks are missing.
 
@@ -41,11 +41,14 @@ Giesecke+Devrient (G+D), Pune, Aug 2021–Sep 2024. This project does not show t
   [nikbearbrown/the-reallocation-engine#40](https://github.com/nikbearbrown/the-reallocation-engine/pull/40) open, DRAFT, not merged.
 - 17 passing tests; sample run over 7 roles covering failure cases F1–F6 (re-run 2026-10-10, same results).
 - Gates G1–G5 incl. the human name check (G2); every value labelled; CSV line cited in the run log.
-- First 6 of 25 evaluation rows (2026-10-12): 6/6 in the hub, 0/6 with a record in my dataset, 1 matcher defect.
+- All 25 evaluation rows (`evidence/eval-25-rows-2026-10-25.md`): every company searched is in the hub; my tool found 2; it
+  never guessed no; it missed three strong sponsors stored under legal names (Robinhood, SoFi, Chime).
+- The "AND" defect fixed with a test using the hub's exact Goldman name (fork branch `final/arundhatik26-and-fix`,
+  `379252f`; 18 tests pass).
 
 ## Will exist
 
-- The USCIS hub joined as a second data source; the "AND" defect fixed first.
-- The other 19 evaluation rows; a written failure analysis.
+- A fix for brand-name lookups (Robinhood, SoFi, Chime); then the USCIS hub joined as a second data source.
+- A written failure analysis from the 25 rows.
 - Source citations shown in the human-readable report, not only the run log.
 - A README for a hiring manager with a one-command demo.
