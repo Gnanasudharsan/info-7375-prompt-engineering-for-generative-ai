@@ -5,7 +5,8 @@
 *Note by Claude: after grading, Claude asked me these questions in our session and I typed the answers.
 The answers are mine. Claude fixed only spelling, capitals and four small grammar slips ("working or
 created" → "working on or created", "this upcoming" → "these upcoming", "it will again would save" → "it
-would again save", "amount of to be sent" → "the amount to be sent"), and set each answer under its question.
+would again save", "amount of to be sent" → "the amount to be sent"), and set each answer under its question. For the last two answers (end card and feedback), Claude first offered example
+reasons; I then answered in my own words on 2026-10-25, and Claude added only punctuation.
 The decisions themselves were made on 2026-10-14 unless marked otherwise.*
 
 **2026-10-14 · Voice: why a synthetic Kokoro voice instead of recording my own?**
@@ -24,13 +25,13 @@ I switched because the course repo's `fall-2026/README.md` says "No IDs and no f
 I didn't think about it much and followed what I did in Week 01.
 
 **2026-10-14 · The toolkit's end card always shows the instructor's handle, so the film ends on my own card and the toolkit's bookend check fails. Do I agree with that trade-off?**
-I agree.
+I agree. I feel like ending with my name makes it much more clear and who is gonna build that project, and you know, like the name of the agent and stuff makes more sense.
 
 **2026-10-14 · Why this project: why Remnix, and why build on Money Map?**
 Since I have built Money Map, I think if we build something like this, Remnix, it would again save time for somebody who would have to select countries and the amount to be sent and everything. They can just know what are the amounts of payments they can make to other countries and stuff. It would be an interesting way to use the data of Money Map.
 
-**2026-10-25 · The TA's feedback: is there anything I'd push back on?**
-No.
+**2026-10-25 · The TA's feedback: is there anything I'd push back on, and what do I think of it?**
+No. I think the authorship comment is also kind of fair because the film, like, indicated that the words are mine, but actually Claude helped me to script it, yeah. Also, I may be using the next step given there and start building on it afterwards, later, soon.
 
 ---
 
