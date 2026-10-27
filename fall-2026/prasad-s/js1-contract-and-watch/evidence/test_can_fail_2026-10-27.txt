@@ -1,0 +1,26 @@
+Deliberate test-can-fail check, 2026-10-27. I changed R05 expect_verdict from relevant to not_relevant, ran the tests (output below), then restored the file with git checkout. First done earlier the same day; repeated to capture the output to this file.
+
+test_every_case (test_refusal_cases.ResumeCases.test_every_case) ... ok
+test_every_case (test_refusal_cases.UrlCases.test_every_case) ... ok
+test_every_case (test_rule_cases.RuleCases.test_every_case) ... 
+  test_every_case (test_rule_cases.RuleCases.test_every_case) (case='R05') ... FAIL
+test_every_case (test_validator_cases.ValidatorCases.test_every_case) ... ok
+test_every_case (test_watch_cases.WatchCases.test_every_case) ... ok
+
+======================================================================
+FAIL: test_every_case (test_rule_cases.RuleCases.test_every_case) (case='R05')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prasadshinde/Documents/Code/info-7375-prompt-engineering-for-generative-ai/fall-2026/prasad-s/js1-contract-and-watch/tests/test_rule_cases.py", line 24, in test_every_case
+    self.assertEqual(verdict, row["expect_verdict"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'relevant' != 'not_relevant'
+- relevant
++ not_relevant
+? ++++
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+FAILED (failures=1)
