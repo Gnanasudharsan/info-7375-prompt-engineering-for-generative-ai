@@ -2,7 +2,7 @@
 
 **Author:** Prasad Shinde  
 **Date written (before any run):** 2026-10-25  
-**Version:** v0.2 — 2026-10-25. Supersedes v0.1, which was committed and pushed as `b27b1a8` on 2026-10-25. No run of the agent has happened at either version.  
+**Version:** v0.3 — 2026-10-26. Amends v0.2 (`5cd4c28`); see §9. v0.1 was `b27b1a8`. No run of the agent has happened at any version.  
 **Board:** Greenhouse — token: `stripe`  
 **Language / toolchain:** Python 3.11 or newer (3.11 is the floor because CI checks 3.11), standard library only, tests with `unittest`. On my machine: Python 3.13.17, run as `python3.13` (the Mac's default `python3` is 3.9.6, which is too old). Test command: `python3.13 -m unittest discover -s tests -v`. No `pip install` is required or permitted for v1.
 
@@ -21,6 +21,19 @@
   saved replies; one `field=value` per line in Claude's format; the
   validator checks citations; the cleanup order; named matching quirks;
   sections 8 and 9.]
+- **2026-10-26 — v0.3.** Writing the CP2 expected-outcome tables
+  (rule cases, watch cases, refusal cases, validator cases) turned up
+  three gaps in the contract: no skills minimum, no rule for an
+  existing but empty state.json, and a phone rule that did not say
+  whether an area code may come before the 555. Claude pointed out a
+  fourth: the required-fields rule had been deleted during the v0.2
+  edits. Decisions: the skills minimum is 2, so a persona with exactly
+  two skills runs; an existing state.json that is an empty list is not
+  a baseline, so every id in the response is new; a phone counts as a
+  555 number when 555 is the exchange, so 617-555-0142 runs. Main
+  changes: [required-fields rule restored; skills minimum set to 2;
+  empty-but-existing state.json is not a baseline; phone rule
+  clarified to the 555 exchange.]
 
 > This contract was written before I asked Claude to implement anything.
 > Implementation must match this document. If implementation and contract
@@ -57,6 +70,11 @@
 
 2. **Résumé as JSON (fictional persona only)**
    - A local file path to a résumé in JSON, e.g. `resume_persona.json`.
+   - **Required fields.** If any field is missing, empty, or below its
+     minimum, the agent stops with an error and produces no verdicts:
+     `name`, `email`, `phone` (not empty); `target_titles` (at least 1);
+     `skills` (at least 2, because C3 needs 2 distinct skills);
+     `locations` (at least 1); `max_years_required` (a whole number).
    - **Final persona (invented, not me), fixed before any run:**
      - `name`: `"Alex Rivera"`
      - `email`: `"alex.rivera@example.com"`
@@ -70,8 +88,11 @@
 
 3. **State file and the `id` rule**
    - A local JSON file, `state.json`, containing the list of posting ids
-     seen on previous runs. If it does not exist, it is created empty and
-     that run is the baseline (see §2).
+     seen on previous runs. If it does not exist, that run is the baseline
+     (see §2). If it exists, even as an empty list `[]`, the run is not a
+     baseline: every id not in it is new. The agent writes `state.json`
+     only after a run finishes successfully, so a failed run can never
+     leave behind an empty file.
    - In the board response, each `id` is a JSON number (see the evidence
      note in item 1). The agent converts each `id` to a string once, as
      soon as it reads the response (`str(id)`), and uses only that string
@@ -177,8 +198,10 @@ The agent **will not**:
    SmartRecruiters — is refused and logged, not followed.
 2. Show a real résumé on screen, in logs, in tests, or on GitHub. Only the
    fictional persona résumé may be printed, committed, or screenshotted.
-   If the résumé email is not `@example.com` or the phone is not a `555-`
-   number, the agent refuses to run.
+   The agent refuses to run unless the résumé email ends in
+   `@example.com` and the phone contains `555-01` followed by two digits
+   (the range reserved for fiction), with or without an area code
+   before it — e.g. `555-0142` or `617-555-0142`.
 3. Present a model's judgment as a fact. Claude verdicts are always labeled
    `judgment (Claude)`. Only the rule verdict in §4 is a record that anyone
    can recompute from the saved raw response and the persona résumé.
@@ -395,7 +418,9 @@ Other failures are possible; this is the minimum I commit to checking first.
 
 | Date | Section | Old → New | Reason | Tests re-run |
 |---|---|---|---|---|
-| _(none yet)_ | | | | |
+| 2026-10-26 | §1 résumé item | required-fields rule missing (deleted during v0.2 edits) → restored; `skills` at least 2 | refusal cases P05–P07 depend on it | none yet (no code exists) |
+| 2026-10-26 | §1 state item | "created empty … baseline" → an existing empty `state.json` is not a baseline; state written only after a successful run | watch case S07 | none yet (no code exists) |
+| 2026-10-26 | §3 item 3 | "a `555-` number" → contains `555-01` plus two digits, area code allowed | refusal case P04 | none yet (no code exists) |
 
 ---
 
