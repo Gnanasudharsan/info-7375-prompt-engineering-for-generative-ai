@@ -2,7 +2,7 @@
 
 **Author:** Prasad Shinde  
 **Date written (before any run):** 2026-10-25  
-**Version:** v0.3 — 2026-10-26. Amends v0.2 (`5cd4c28`); see §9. v0.1 was `b27b1a8`. No run of the agent has happened at any version.  
+**Version:** v0.4 — 2026-10-27. Amends v0.3 (`13f40e9`); see §9. v0.2 was `5cd4c28`, v0.1 was `b27b1a8`. No run of the agent has happened at any version.
 **Board:** Greenhouse — token: `stripe`  
 **Language / toolchain:** Python 3.11 or newer (3.11 is the floor because CI checks 3.11), standard library only, tests with `unittest`. On my machine: Python 3.13.17, run as `python3.13` (the Mac's default `python3` is 3.9.6, which is too old). Test command: `python3.13 -m unittest discover -s tests -v`. No `pip install` is required or permitted for v1.
 
@@ -34,6 +34,17 @@
   changes: [required-fields rule restored; skills minimum set to 2;
   empty-but-existing state.json is not a baseline; phone rule
   clarified to the 555 exchange.]
+- **2026-10-27 — v0.4.** During CP3, Claude Code raised three
+  points: §1.3 still listed Alex's old locations while the rule cases
+  used the final list; the working draft named board `vercel` and no
+  commit, while my changelog and the CP2 tables say board `stripe`
+  and v0.1 committed as `b27b1a8`; and the changelog wording for v0.1
+  and v0.2 was still open. My decisions: the board is `stripe` and
+  v0.1 stands as committed at `b27b1a8`, so changes from here are
+  amendments, not drafting fixes; §1.3 follows the final locations,
+  ["New York", "NYC", "Remote"]; the changelog keeps my own wording
+  for v0.1 and v0.2. I reviewed the rest of the points and accepted
+  them. Main changes: [§1.3 locations updated to the final list.]
 
 > This contract was written before I asked Claude to implement anything.
 > Implementation must match this document. If implementation and contract
@@ -421,7 +432,38 @@ Other failures are possible; this is the minimum I commit to checking first.
 | 2026-10-26 | §1 résumé item | required-fields rule missing (deleted during v0.2 edits) → restored; `skills` at least 2 | refusal cases P05–P07 depend on it | none yet (no code exists) |
 | 2026-10-26 | §1 state item | "created empty … baseline" → an existing empty `state.json` is not a baseline; state written only after a successful run | watch case S07 | none yet (no code exists) |
 | 2026-10-26 | §3 item 3 | "a `555-` number" → contains `555-01` plus two digits, area code allowed | refusal case P04 | none yet (no code exists) |
+| 2026-10-27 | §1, §2, §3, §6 | unspecified → the 12 CP3 decisions listed below the table | found unclear while implementing v0.3 | yes: 5/5 tests pass on 2026-10-27, after the decisions were coded |
 
+### v0.4 — decisions made during CP3 (2026-10-27)
+
+Claude Code found these points unclear while implementing v0.3. For
+items 1–6 it stopped and asked, and I chose. Items 7–12 it decided and
+reported, and I reviewed and accepted them. Each is marked in the code
+with a dated comment.
+
+1. §6: a saved reply may end with exactly one final line break; anything
+   else extra (including `\r`) is rejected.
+2. §6: `RESUME_FIELD` may cite only `target_titles`, `locations` or
+   `skills`, and the value must equal one entry exactly (case-sensitive).
+3. §1/§2: the run report is written where `--report` says (default
+   `run_report.json` next to `config.json`); `config.json` is unchanged.
+4. §1 replies item: `metadata.json` is an object keyed by `posting_id`,
+   each entry with `file` (`<posting_id>.txt`), `collected`, `model`,
+   `prompt_version`.
+5. §2: C3's condition entry records whether `content` was present and
+   which skills were found — never the content text.
+6. §1 résumé item: blank list entries are refused, and the `skills`
+   minimum counts distinct skills.
+7. §6: `POSTING_FIELD` values are matched like §4 — case-insensitive
+   plain substring, after cleanup.
+8. §2: a seeded run updates `state.json` but saves no new evidence,
+   because nothing is fetched.
+9. §3 item 1: every redirect is refused, even to the same host.
+10. §3 item 3: the `@example.com` check is case-sensitive.
+11. §1 state item: if an id appears twice in one response, only the
+    first posting is judged.
+12. §2: each condition's compared value is the cleaned value; the
+    record's `title` and `location.name` stay raw copies.
 ---
 
 
