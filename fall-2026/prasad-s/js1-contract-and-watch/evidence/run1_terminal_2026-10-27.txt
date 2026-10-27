@@ -1,0 +1,4 @@
+mode: live
+total_fetched: 711
+new_count: 0
+baseline run: 711 ids saved, 0 postings reported as new
