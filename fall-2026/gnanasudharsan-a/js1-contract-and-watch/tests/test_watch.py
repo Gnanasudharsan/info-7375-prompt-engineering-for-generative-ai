@@ -148,7 +148,8 @@ def test_run_report_file_matches_contract_fields(tmp_path):
     run_watch(tmp_path, T0, session=RecordingSession(body=BASE.read_bytes()))
     report = json.loads((tmp_path / "data" / "runs" / "20261028T120000Z.json").read_text())
     assert set(report) == {"run_type", "label", "baseline", "run_time_utc", "raw_file",
-                           "total_postings", "new_count", "new_postings"}
+                           "total_postings", "new_count", "new_postings",
+                           "claude_enabled", "results"}
     assert report["raw_file"].endswith("anthropic_20261028T120000Z.json")
 
 
@@ -159,7 +160,8 @@ def test_seeded_run_is_labeled_seeded_in_report_and_output(tmp_path, capsys, mon
         raise AssertionError("seeded run must not fetch")
 
     monkeypatch.setattr(fetcher, "fetch", no_network)
-    assert main(["watch", "--from-file", str(PLUS_ONE), "--root", str(tmp_path)]) == 0
+    assert main(["watch", "--from-file", str(PLUS_ONE), "--root", str(tmp_path),
+                 "--no-claude"]) == 0
     out = capsys.readouterr().out
     assert all(line.startswith("SEEDED ") for line in out.strip().splitlines())
     assert "SEEDED NEW 1003 Fixture Posting C" in out
@@ -183,7 +185,7 @@ def test_seeded_run_without_root_leaves_project_state_untouched(tmp_path, monkey
     state_path.write_bytes(original)
     mtime = state_path.stat().st_mtime_ns
 
-    assert main(["watch", "--from-file", str(PLUS_ONE)]) == 0
+    assert main(["watch", "--from-file", str(PLUS_ONE), "--no-claude"]) == 0
     out = capsys.readouterr().out
 
     assert state_path.read_bytes() == original
@@ -200,7 +202,8 @@ def test_seeded_run_refuses_project_folder_as_root(tmp_path, monkeypatch):
 
     monkeypatch.setattr(cli, "PROJECT_ROOT", tmp_path)
     with pytest.raises(SystemExit):
-        main(["watch", "--from-file", str(PLUS_ONE), "--root", str(tmp_path)])
+        main(["watch", "--from-file", str(PLUS_ONE), "--root", str(tmp_path),
+              "--no-claude"])
     assert not (tmp_path / "state").exists() and not (tmp_path / "data").exists()
 
 

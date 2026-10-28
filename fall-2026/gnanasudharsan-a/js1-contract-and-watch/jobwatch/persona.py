@@ -56,6 +56,9 @@ RESUME_SCHEMA = {
 }
 
 
+DEFAULT_PERSONA = Path(__file__).resolve().parent.parent / "persona" / "ananya-rao.resume.json"
+
+
 class PersonaRefused(ValueError):
     """The résumé failed the schema check or looks like real personal data."""
 

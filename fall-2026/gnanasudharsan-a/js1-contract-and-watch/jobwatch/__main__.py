@@ -1,13 +1,13 @@
-"""CLI: python -m jobwatch watch [--from-file PATH] [--root DIR]"""
+"""CLI: python -m jobwatch watch [--from-file PATH] [--root DIR] [--no-claude] [--prompt PATH]"""
 import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .persona import load_persona
+from . import claude_judge
+from .persona import DEFAULT_PERSONA, load_persona
 from .watch import format_summary, run_watch
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_PERSONA = PROJECT_ROOT / "persona" / "ananya-rao.resume.json"
 
 
 def main(argv=None) -> int:
@@ -20,6 +20,10 @@ def main(argv=None) -> int:
                        help="directory holding state/ and data/ (default: project folder, "
                             "or project seeded/ folder with --from-file)")
     watch.add_argument("--persona", type=Path, default=DEFAULT_PERSONA)
+    watch.add_argument("--no-claude", action="store_true",
+                       help="rule judge only; needs no ANTHROPIC_API_KEY")
+    watch.add_argument("--prompt", type=Path, default=claude_judge.DEFAULT_PROMPT,
+                       help="Claude judge prompt file (model from JOBWATCH_MODEL)")
     args = parser.parse_args(argv)
 
     root = args.root
@@ -33,8 +37,15 @@ def main(argv=None) -> int:
         root = PROJECT_ROOT
 
     # CONTRACT.md: the résumé must pass its checks before anything runs.
-    load_persona(args.persona)
-    report = run_watch(root, datetime.now(timezone.utc), from_file=args.from_file)
+    persona = load_persona(args.persona)
+    judge = None
+    if not args.no_claude:
+        try:
+            judge = claude_judge.make_judge(args.prompt)
+        except claude_judge.ClaudeJudgeUnavailable as exc:
+            parser.error(str(exc))
+    report = run_watch(root, datetime.now(timezone.utc), from_file=args.from_file,
+                       persona=persona, claude_judge=judge)
     print(format_summary(report))
     return 0
 

@@ -2,12 +2,16 @@
 
 First run with no state file is a baseline: 0 new, every id recorded.
 Later runs report postings whose id is not in state, then add them to state.
+Each new posting gets a result record with both judges (CONTRACT.md "Out").
 """
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 
 from . import fetcher
+from .claude_judge import CLAUDE_LABEL
+from .persona import DEFAULT_PERSONA, load_persona
+from .rule import judge_posting
 
 TIMESTAMP_FORMAT = "%Y%m%dT%H%M%SZ"
 
@@ -30,7 +34,28 @@ def load_state(state_path: Path):
         return json.load(f)
 
 
-def run_watch(root: Path, now: datetime, from_file: Path = None, session=None) -> dict:
+def result_record(job: dict, persona: dict, claude_judge=None) -> dict:
+    """One CONTRACT.md "Out" record. claude_judge=None means --no-claude."""
+    rule = judge_posting(job, persona)
+    if claude_judge is None:
+        claude = {"label": CLAUDE_LABEL, "status": "not_run", "model": None,
+                  "output": None, "failed_attempts": [], "reason": "--no-claude"}
+    else:
+        claude = claude_judge(job, persona)
+    return {
+        "id": job["id"],
+        "title": job.get("title"),
+        "location": (job.get("location") or {}).get("name"),
+        "department": "; ".join(d["name"] for d in job.get("departments") or []) or None,
+        "updated_at": job.get("updated_at"),
+        "rule_verdict": {"verdict": rule["verdict"], "label": rule["label"]},
+        "claude_verdict": claude,
+        "justification": rule["justification"],
+    }
+
+
+def run_watch(root: Path, now: datetime, from_file: Path = None, session=None,
+              persona: dict = None, claude_judge=None) -> dict:
     root = Path(root)
     stamp = _utc_stamp(now)
     state_path = root / "state" / "seen_ids.json"
@@ -53,6 +78,11 @@ def run_watch(root: Path, now: datetime, from_file: Path = None, session=None) -
     else:
         new_jobs = [job for job in jobs if job["id"] not in seen]
 
+    if persona is None:
+        persona = load_persona(DEFAULT_PERSONA)
+    # Judging happens before anything is written, so a crash leaves state untouched.
+    results = [result_record(job, persona, claude_judge) for job in new_jobs]
+
     if from_file is not None:
         run_type = "seeded"
     elif is_baseline:
@@ -70,6 +100,8 @@ def run_watch(root: Path, now: datetime, from_file: Path = None, session=None) -
         "total_postings": len(jobs),
         "new_count": len(new_jobs),
         "new_postings": [{"id": job["id"], "title": job["title"]} for job in new_jobs],
+        "claude_enabled": claude_judge is not None,
+        "results": results,
     }
     report_path = root / "data" / "runs" / f"{stamp}.json"
     _write_new_file(report_path, (json.dumps(report, indent=2) + "\n").encode("utf-8"))
@@ -94,5 +126,11 @@ def format_summary(report: dict) -> str:
     ]
     for posting in report["new_postings"]:
         lines.append(f"{prefix}NEW {posting['id']} {posting['title']}")
+    for result in report.get("results", []):
+        claude = result["claude_verdict"]
+        claude_text = claude["output"]["verdict"] if claude["status"] == "ok" else claude["status"]
+        lines.append(f"{prefix}RULE {result['id']} {result['rule_verdict']['verdict']} "
+                     f"[{result['rule_verdict']['label']}]")
+        lines.append(f"{prefix}CLAUDE {result['id']} {claude_text} [{claude['label']}]")
     lines.append(f"{prefix}report={report['report_file']}")
     return "\n".join(lines)
