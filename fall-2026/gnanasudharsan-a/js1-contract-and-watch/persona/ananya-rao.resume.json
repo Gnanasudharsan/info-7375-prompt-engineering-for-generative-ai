@@ -55,5 +55,9 @@
     "database_cloud": ["PostgreSQL", "AWS"],
     "familiar_with_not_shipped": ["Kubernetes", "Ray"],
     "agent_note": "No certification claims - none exist for this persona."
-  }
+  },
+  "_additions": "target_roles, willing_to_relocate_us, and needs_sponsorship were added by Gnanasudharsan on 2026-10-28 and are not in the original persona.",
+  "target_roles": ["Machine Learning Engineer", "AI Engineer", "Applied NLP Engineer", "ML Engineer"],
+  "willing_to_relocate_us": true,
+  "needs_sponsorship": true
 }

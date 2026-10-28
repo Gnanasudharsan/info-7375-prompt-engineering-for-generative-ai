@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-8.4.2, pluggy-1.7.0 -- /Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch
+collecting ... collected 28 items
+
+tests/test_watch.py::test_non_allow_listed_host_raises_and_sends_nothing[https://example.com/v1/boards/anthropic/jobs] PASSED [  3%]
+tests/test_watch.py::test_non_allow_listed_host_raises_and_sends_nothing[https://boards-api.greenhouse.io.evil.example/v1/boards/anthropic/jobs] PASSED [  7%]
+tests/test_watch.py::test_non_allow_listed_host_raises_and_sends_nothing[https://api.greenhouse.io/v1/boards/anthropic/jobs] PASSED [ 10%]
+tests/test_watch.py::test_allow_listed_host_is_requested_once PASSED     [ 14%]
+tests/test_watch.py::test_real_persona_file_loads PASSED                 [ 17%]
+tests/test_watch.py::test_real_looking_email_is_refused[ananya.rao@gmail.com] PASSED [ 21%]
+tests/test_watch.py::test_real_looking_email_is_refused[someone@example.com.evil.org] PASSED [ 25%]
+tests/test_watch.py::test_non_555_phone_is_refused[(617) 253-0171] PASSED [ 28%]
+tests/test_watch.py::test_non_555_phone_is_refused[617-555] PASSED       [ 32%]
+tests/test_watch.py::test_non_555_phone_is_refused[(555) 253-0171] PASSED [ 35%]
+tests/test_watch.py::test_missing_required_field_is_refused[path0] PASSED [ 39%]
+tests/test_watch.py::test_missing_required_field_is_refused[path1] PASSED [ 42%]
+tests/test_watch.py::test_missing_required_field_is_refused[path2] PASSED [ 46%]
+tests/test_watch.py::test_missing_required_field_is_refused[path3] PASSED [ 50%]
+tests/test_watch.py::test_missing_required_field_is_refused[path4] PASSED [ 53%]
+tests/test_watch.py::test_missing_required_field_is_refused[path5] PASSED [ 57%]
+tests/test_watch.py::test_missing_required_field_is_refused[path6] PASSED [ 60%]
+tests/test_watch.py::test_missing_required_field_is_refused[path7] PASSED [ 64%]
+tests/test_watch.py::test_missing_required_field_is_refused[path8] PASSED [ 67%]
+tests/test_watch.py::test_first_run_reports_zero_new_and_writes_state PASSED [ 71%]
+tests/test_watch.py::test_live_run_saves_raw_body_unmodified PASSED      [ 75%]
+tests/test_watch.py::test_second_run_with_one_added_id_reports_exactly_that_id PASSED [ 78%]
+tests/test_watch.py::test_second_run_with_no_changes_reports_zero_new PASSED [ 82%]
+tests/test_watch.py::test_run_report_file_matches_contract_fields PASSED [ 85%]
+tests/test_watch.py::test_seeded_run_is_labeled_seeded_in_report_and_output PASSED [ 89%]
+tests/test_watch.py::test_seeded_run_without_root_leaves_project_state_untouched PASSED [ 92%]
+tests/test_watch.py::test_seeded_run_refuses_project_folder_as_root PASSED [ 96%]
+tests/test_watch.py::test_seeded_first_run_is_still_a_baseline PASSED    [100%]
+
+============================== 28 passed in 0.13s ==============================
