@@ -202,6 +202,28 @@ def test_missing_api_key_refuses_to_build_client():
         claude_judge.make_client()
 
 
+def test_client_for_api_anthropic_com_is_allowed(monkeypatch):
+    # Building the client sends no request; the dummy key never leaves the process.
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key-not-real")
+    monkeypatch.delenv("ANTHROPIC_BASE_URL", raising=False)
+    client = claude_judge.make_client()
+    assert client.base_url.host == "api.anthropic.com"
+
+
+@pytest.mark.parametrize("base_url", [
+    "https://example.com",
+    "https://api.anthropic.com.evil.example",
+    "https://boards-api.greenhouse.io",
+    "http://api.anthropic.com",
+])
+def test_anthropic_base_url_off_allow_list_is_refused(monkeypatch, base_url):
+    # Amendment 1: the Claude judge may only contact api.anthropic.com.
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key-not-real")
+    monkeypatch.setenv("ANTHROPIC_BASE_URL", base_url)
+    with pytest.raises(ValueError, match="refusing"):
+        claude_judge.make_client()
+
+
 def test_missing_prompt_file_refuses(tmp_path):
     with pytest.raises(claude_judge.ClaudeJudgeUnavailable, match="prompt file"):
         claude_judge.make_judge(tmp_path / "absent.md", client=MockClient())
@@ -251,9 +273,9 @@ def test_location_parts(name, verdict):
 
 def test_skill_mentioned_many_times_counts_once():
     p = copy.deepcopy(POSTING)
-    p["content"] = "Python python PYTHON and PyTorch"
+    p["content"] = "Python python PYTHON"
     skills = judge_posting(p, PERSONA)["justification"]["skills"]
-    assert skills["distinct_count"] == 2 and not skills["passed"]
+    assert skills["distinct_count"] == 1 and not skills["passed"]
 
 
 # --- wiring into the watch --------------------------------------------------

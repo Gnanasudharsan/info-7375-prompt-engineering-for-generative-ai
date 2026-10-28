@@ -20,7 +20,7 @@ US_STATE_CODES = (
 US_SUFFIXES = tuple(f", {code}" for code in ("dc",) + US_STATE_CODES)
 REMOTE_PREFIXES = ("remote-friendly", "remote")
 NEGATIVE_SPONSORSHIP = "not currently able to sponsor"
-MIN_SKILLS = 3
+MIN_SKILLS = 2  # CONTRACT.md Amendment 1 (was 3)
 # skills.* keys that never count as shipped skills (CONTRACT.md condition 5).
 IGNORED_SKILL_KEYS = ("familiar_with_not_shipped", "agent_note")
 

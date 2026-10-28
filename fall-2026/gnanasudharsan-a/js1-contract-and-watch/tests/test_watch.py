@@ -67,7 +67,8 @@ def test_allow_listed_host_is_requested_once():
 def test_real_persona_file_loads():
     resume = load_persona(Path(__file__).parent.parent / "persona" / "ananya-rao.resume.json")
     assert resume["target_roles"] == [
-        "Machine Learning Engineer", "AI Engineer", "Applied NLP Engineer", "ML Engineer"]
+        "Machine Learning Engineer", "AI Engineer", "Applied NLP Engineer", "ML Engineer",
+        "Research Engineer"]  # CONTRACT.md Amendment 1
 
 
 @pytest.mark.parametrize("email", ["ananya.rao@gmail.com", "someone@example.com.evil.org"])

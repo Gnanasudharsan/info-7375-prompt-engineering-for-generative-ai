@@ -55,4 +55,4 @@ Changes:
    - The `"Remote"` location prefix passes remote postings regardless of country code or region if no specific domestic restriction is parsed.
    - Anthropic “Research Engineer” roles may expect research depth beyond a new-grad profile; the rule doesn’t check this.
 
-Tests changed: No existing test changed; all still pass at threshold 2. Added `test_amendment1_research_engineer_title_is_a_role_match` and `test_amendment1_two_skills_is_enough`, written before implementing this amendment.
+Tests changed: No test in tests/test_rule_contract.py was changed; all original tests still pass at threshold 2. Added test_amendment1_research_engineer_title_is_a_role_match and test_amendment1_two_skills_is_enough before implementation. Implementing the amendment broke two of Claude Code's own tests, which were updated: test_skill_mentioned_many_times_counts_once (now uses one repeated skill, so it tests dedup independent of the threshold) and test_real_persona_file_loads (expected target_roles now includes "Research Engineer").

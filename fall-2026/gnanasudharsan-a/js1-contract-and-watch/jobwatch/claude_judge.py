@@ -13,6 +13,7 @@ The reply must pass jobwatch.validator. One retry, then judgment_unavailable
 import json
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from . import validator
 from .rule import html_to_text
@@ -23,6 +24,7 @@ DEFAULT_PROMPT = PROJECT_ROOT / "prompts" / "judge_baseline.md"
 DEFAULT_MODEL = "claude-opus-5-5"
 MAX_ATTEMPTS = 2  # the first try plus 1 retry
 MAX_TOKENS = 16000
+ALLOWED_API_HOST = "api.anthropic.com"  # CONTRACT.md Amendment 1 allow-list
 
 
 class ClaudeJudgeUnavailable(RuntimeError):
@@ -41,7 +43,20 @@ def make_client():
     import anthropic
 
     # An explicit api_key stops the SDK from consulting any other credential source.
-    return anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key)
+    # ANTHROPIC_BASE_URL could point the SDK elsewhere; check before any request.
+    check_client_host(client)
+    return client
+
+
+def check_client_host(client) -> None:
+    """CONTRACT.md Amendment 1: the Claude judge may only contact api.anthropic.com."""
+    base_url = str(getattr(client, "base_url", ""))
+    parts = urlsplit(base_url)
+    if parts.scheme != "https":
+        raise ValueError(f"refusing non-https Anthropic base URL: {base_url!r}")
+    if parts.hostname != ALLOWED_API_HOST:
+        raise ValueError(f"refusing Anthropic base URL host not on allow-list: {parts.hostname!r}")
 
 
 def load_prompt(prompt_path: Path) -> str:

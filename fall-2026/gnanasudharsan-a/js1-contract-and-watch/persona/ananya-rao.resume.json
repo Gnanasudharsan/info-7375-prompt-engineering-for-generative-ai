@@ -56,8 +56,8 @@
     "familiar_with_not_shipped": ["Kubernetes", "Ray"],
     "agent_note": "No certification claims - none exist for this persona."
   },
-  "_additions": "target_roles, willing_to_relocate_us, and needs_sponsorship were added by Gnanasudharsan on 2026-10-28 and are not in the original persona.",
-  "target_roles": ["Machine Learning Engineer", "AI Engineer", "Applied NLP Engineer", "ML Engineer"],
+  "_additions": "target_roles, willing_to_relocate_us, and needs_sponsorship were added by Gnanasudharsan on 2026-10-28 and are not in the original persona. \"Research Engineer\" was added to target_roles on 2026-10-28 under CONTRACT.md Amendment 1 as a persona extension reflecting Anthropic's primary ML engineering nomenclature.",
+  "target_roles": ["Machine Learning Engineer", "AI Engineer", "Applied NLP Engineer", "ML Engineer", "Research Engineer"],
   "willing_to_relocate_us": true,
   "needs_sponsorship": true
 }
