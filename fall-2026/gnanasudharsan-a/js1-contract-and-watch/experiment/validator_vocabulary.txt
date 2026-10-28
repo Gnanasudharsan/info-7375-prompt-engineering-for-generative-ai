@@ -1,0 +1,4 @@
+REQUIRED_KEYS = ['id', 'posting_fields_cited', 'reasoning', 'resume_fields_cited', 'verdict']
+VERDICTS = ['NOT_RELEVANT', 'RELEVANT']
+RESUME_FIELD_PATHS = ['education', 'experience', 'needs_sponsorship', 'personal.location', 'personal.name', 'projects', 'skills.backend_automation', 'skills.database_cloud', 'skills.familiar_with_not_shipped', 'skills.languages', 'skills.ml_nlp', 'target_roles', 'willing_to_relocate_us']
+POSTING_FIELD_PATHS = ['content', 'departments.name', 'first_published', 'location.name', 'metadata.value', 'offices.location', 'offices.name', 'title', 'updated_at']
