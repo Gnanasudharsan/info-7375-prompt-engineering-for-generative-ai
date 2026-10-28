@@ -1,0 +1,19 @@
+21:32:18  Running with dbt=1.12.5
+21:32:18  Registered adapter: duckdb=1.11.0
+21:32:18  Unable to do partial parsing because config vars, config profile, or config target have changed
+21:32:19  Found 1 model, 2 data tests, 500 macros
+21:32:19  
+21:32:19  Concurrency: 1 threads (target='dev')
+21:32:19  
+21:32:19  1 of 3 START sql view model main.trips ......................................... [RUN]
+21:32:19  1 of 3 OK created sql view model main.trips .................................... [OK in 0.14s]
+21:32:19  2 of 3 START test accepted_values_trips_payment_type__False__0__1__2__3__4__5__6  [RUN]
+21:32:19  2 of 3 PASS accepted_values_trips_payment_type__False__0__1__2__3__4__5__6 ..... [PASS in 0.13s]
+21:32:19  3 of 3 START test not_null_trips_passenger_count ............................... [RUN]
+21:32:19  3 of 3 PASS not_null_trips_passenger_count ..................................... [PASS in 0.12s]
+21:32:19  
+21:32:19  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 0.45 seconds (0.45s).
+21:32:19  
+21:32:19  Completed successfully
+21:32:19  
+21:32:19  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3

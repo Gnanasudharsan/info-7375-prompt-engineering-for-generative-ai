@@ -1,0 +1,98 @@
+[1mInstalling core Python deps…[0m
+WARNING: There was an error checking the latest version of pip.
+ERROR: Exception:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/cli/base_command.py", line 109, in _run_wrapper
+    status = _inner_run()
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/cli/base_command.py", line 102, in _inner_run
+    return self.run(options, args)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/cli/req_command.py", line 106, in wrapper
+    return func(self, options, args)
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/commands/install.py", line 431, in run
+    session = self.get_default_session(options)
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/cli/index_command.py", line 80, in get_default_session
+    self._session = self.enter_context(self._build_session(options))
+                                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/cli/index_command.py", line 99, in _build_session
+    ssl_context = _create_truststore_ssl_context()
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_internal/cli/index_command.py", line 44, in _create_truststore_ssl_context
+    from pip._vendor import truststore
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_vendor/truststore/__init__.py", line 31, in <module>
+    from ._api import SSLContext, extract_from_ssl, inject_into_ssl  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_vendor/truststore/_api.py", line 22, in <module>
+    from ._macos import _configure_context, _verify_peercerts_impl
+  File "/opt/homebrew/lib/python3.14/site-packages/pip/_vendor/truststore/_macos.py", line 22, in <module>
+    _mac_version_info = tuple(map(int, _mac_version.split(".")))
+ValueError: invalid literal for int() with base 10: ''
+WARNING: There was an error checking the latest version of pip.
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> To install Python packages system-wide, try brew install
+    xyz, where xyz is the package you are trying to
+    install.
+    
+    If you wish to install a Python library that isn't in Homebrew,
+    use a virtual environment:
+    
+    python3 -m venv path/to/venv
+    source path/to/venv/bin/activate
+    python3 -m pip install xyz
+    
+    If you wish to install a Python application that isn't in Homebrew,
+    it may be easiest to use 'pipx install xyz', which will manage a
+    virtual environment for you. You can install pipx with
+    
+    brew install pipx
+    
+    You may restore the old behavior of pip by passing
+    the '--break-system-packages' flag to pip, or by adding
+    'break-system-packages = true' to your pip.conf file. The latter
+    will permanently disable this error.
+    
+    If you disable this error, we STRONGLY recommend that you additionally
+    pass the '--user' flag to pip, or set 'user = true' in your pip.conf
+    file. Failure to do this can result in a broken Homebrew installation.
+    
+    Read more about this behavior here: <https://peps.python.org/pep-0668/>
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+[31mPython dependency install FAILED — see pip output above.[0m
+
+[1mInstalling Remotion node deps…[0m
+
+up to date, audited 190 packages in 967ms
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+7 vulnerabilities (2 moderate, 5 high)
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+npm notice
+npm notice New major version of npm available! 11.19.1 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
+
+[1mInstalling fonts (bundled families + Oswald) into /Users/anishagaikar/Library/Fonts…[0m
+
+
+[31mElevenLabs reference found — this toolkit is Kokoro-only for narration.[0m
+  Files with hits:
+    ./youtube/brutalist/claude-liam-brutalist-command-setup/SCRIPT.md
+    ./youtube/brutalist/claude-liam-brutalist-command-setup/beat_sheet.json
+    ./youtube/brutalist/claude-liam-brutalist-command-setup/PROMPTS.md
+    ./youtube/brutalist/claude-liam-brutalist-command-setup/vertical/beat_sheet.json
+    ./youtube/brutalist/claude-liam-brutalist-command-setup/vertical/PROMPTS.md
+    ./youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/canonical/beat_sheet.json
+    ./youtube/brutalist/claude-liam-brutalist-runtime-brand-variant/demo/book-example/lectures/chap01-lecture/beat_sheet.json
+    ./youtube/brutalist/shorts/claude-liam-brutalist-command-setup-short/PROMPTS.md
+    ./youtube/brutalist/claude-liam-brutalist-skill-your-turn/demo/fixture-beat_sheet.applied.json
+    ./youtube/brutalist/claude-liam-brutalist-skill-your-turn/demo/fixture-beat_sheet.json

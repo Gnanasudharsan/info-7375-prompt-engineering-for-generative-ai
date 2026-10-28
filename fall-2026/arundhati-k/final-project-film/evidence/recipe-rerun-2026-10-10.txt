@@ -1,0 +1,16 @@
+# re-run 2026-10-10 at 03784b0
+$ python3 scripts/contrib/2026fa/arundhatik26-coop-sponsor-swe-15-1252/coop_sponsor_check.py
+[grad-dec-2027] ✓ scored 7 roles → Apply 1 · Consider 2 · Skip 4 (skip 57%)
+[grad-apr-2028] ✓ scored 7 roles → Apply 2 · Consider 2 · Skip 3 (skip 43%)
+  bny-fullstack-coop           matched                liveness=unchecked  → NETWORK, DON'T APPLY YET: strong software sponsor, but no confirmed live posting
+  databricks-swe-intern-winter matched                liveness=active     → TAILOR APPLICATION
+  databricks-fake-posting      matched                liveness=uncertain  → NETWORK, DON'T APPLY YET: strong software sponsor, but no confirmed live posting
+  jpmc-swe-coop                not-in-dataset         liveness=manual-active → NETWORK: sponsorship for software roles is unverified here — ask an alum or recruiter directly
+  visa-swe-coop                no-sponsorship-record  liveness=manual-active → NETWORK: sponsorship for software roles is unverified here — ask an alum or recruiter directly
+  sofi-swe-coop                ambiguous              liveness=manual-active → HUMAN CHECK (G2): pick the right CSV row before trusting anything below
+  stripe-late-coop             matched                liveness=manual-active → DEPENDS ON GRADUATION DATE: Skip if grad-dec-2027, Apply if grad-apr-2028 — settle your co-op/graduation plan before tailoring
+✓ wrote course/2026fa/submissions/arundhatik26/runs/sample/run-log.json + report.md
+$ python3 -m unittest discover -s scripts/contrib/2026fa/arundhatik26-coop-sponsor-swe-15-1252/tests
+Ran 17 tests in 0.095s
+
+OK

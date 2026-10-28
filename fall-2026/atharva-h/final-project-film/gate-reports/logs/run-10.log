@@ -1,0 +1,83 @@
+[run] skip B04_Alternatives — B04 already filled
+[run] skip B05_FirstMinute — B05 already filled
+[run] skip B06_FourSkills — B06 already filled
+[run] skip B07_InOutFirst — B07 already filled
+[run] skip B08_NameVariants — B08 already filled
+[run] skip B09_HaveAndNew — B09 already filled
+[run] skip B10_TodayAndWill — B10 already filled
+[run] skip B12_Outro — B12 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B03_ThePipeline clean
+[run] rendering B03_ThePipeline
+Manim Community v0.18.1
+
+
+                             peline/1552269881_10395636                         
+                             73_223132457.mp4'                                  
+                             peline/2724347209_41979820                         
+                             95_1512729186.mp4'                                 
+
+                             peline/2724347209_29693889                         
+                             27_734003463.mp4'                                  
+                             peline/2724347209_18731582                         
+                             06_2512013894.mp4'                                 
+
+                             peline/2724347209_87105206                         
+                             8_494999387.mp4'                                   
+                             peline/2724347209_25137524                         
+                             31_422833198.mp4'                                  
+
+                             peline/2724347209_39491096                         
+                             69_2216995417.mp4'                                 
+                             peline/2724347209_28924785                         
+                             79_2076945529.mp4'                                 
+
+                             peline/2724347209_17550858                         
+                             85_2230967623.mp4'                                 
+
+                             peline/2724347209_28844700                         
+                             92_4000094541.mp4'                                 
+                             peline/2724347209_21427518                         
+                             38_2156145147.mp4'                                 
+
+                             peline/2724347209_27301511                         
+                             71_4068770191.mp4'                                 
+                             peline/2724347209_73717624                         
+                             6_60168076.mp4'                                    
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _ThePipeline.mp4'                                  
+                    INFO     Rendered B03_ThePipeline               scene.py:247
+                             Played 13 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+[audit] scenes: 19 snapshots → CLEAN
+[remotion] B00: filled already (skip)
+[remotion] B01: filled already (skip)
+[remotion] B11: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled B01  VIDEO    12.8s  ← B01.mp4
+[art] compiled B03  MANIM    15.0s  ← B03.mp4
+[art] motion histogram: graphic:10  remotion:3
+[art] WARNING: 'graphic' carries 10/13 beats (76%) — over the ~40% pantry cap; convert the excess to another language (MOTION.md)
+[art] SKIN LINT: B12: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (13/13 filled)
+[art] slots: 13/13 filled — B00:VIDEO B01:VIDEO B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:VIDEO B12:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.

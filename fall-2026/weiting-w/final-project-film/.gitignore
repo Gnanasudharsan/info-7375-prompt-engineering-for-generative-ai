@@ -1,0 +1,29 @@
+# Build caches and intermediates — the assignment asks for no caches in the submission.
+media/
+manim/
+media_*/
+clips/
+mp4/
+pantry/
+images/
+_superseded/
+__pycache__/
+.DS_Store
+
+# Machine state the toolkit rewrites on every run — not part of the submission.
+build-state.json
+todo.json
+
+# The review cut carries a debug label in every corner; only the clean master ships.
+*-slate.mp4
+
+# Kokoro writes the narration here. Keep the mp3s — they are the film's clock — but
+# never the scratch wavs.
+*.wav
+
+# The repository root ignores *.mp3 and *.mp4 at any depth. The assignment requires the
+# rendered film to be in this folder, and the narration mp3s are the film's clock, so both
+# are re-included here — the same two exceptions my week-01 reel committed. A deeper
+# .gitignore wins, and the review cut stays ignored because nothing re-includes it.
+!Wang_Weiting_INFO7375_FinalProjectFilm.mp4
+!mp3/*.mp3

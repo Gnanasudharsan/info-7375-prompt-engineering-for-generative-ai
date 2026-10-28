@@ -1,0 +1,977 @@
+{
+  "metadata": {
+    "slug": "cite-the-line-pitch",
+    "title": "Cite-the-Line",
+    "topic": "INFO7375 · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "pavan-majji",
+    "channel_title": "Pavan Majji",
+    "persona": "Pavan Majji (first person; synthetic Kokoro am_onyx voice reading his script)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "English (Hi)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "show-tell opens on the hesitant writer + terms card, so no composer cold open; no verdict card. Your Turn dropped: this is a project pitch, not a tutorial, and every body beat answers one of the assignment's seven questions. Outro kept, with the author's own handle (assignment: no instructor name, persona, or credit line).",
+    "audience": "hiring managers and senior engineers for backend software engineering roles",
+    "source_doc": "PROJECT-BRIEF.md (2026-10-10); Datadog Bits AI SRE documentation (read 2026-10-09)",
+    "playlist": "INFO7375 Final Project",
+    "chapter_number": 0,
+    "tags": [
+      "INFO7375",
+      "final project pitch",
+      "log triage",
+      "root cause analysis",
+      "source grounding",
+      "LLM evaluation",
+      "Claude Code",
+      "FastAPI",
+      "Postgres"
+    ],
+    "build": {
+      "at": "2026-10-13T18:19:52",
+      "cut": "master",
+      "filled": 20,
+      "of": 20,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi, I'm Pavan Majji, a backend software engineer. When an error shows up, the habit is to paste it into a chatbot and ask how to fix it. The better question is which log lines prove the cause.",
+      "estimated_duration_s": 15.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'What caused this error,'"
+          },
+          {
+            "at": 0.6,
+            "event": "backspaces 'how do I fix it' → 'which log lines prove it' on the spoken correction"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "What caused this error,\nand how do I fix it?",
+            "triggerWords": "how do I fix it",
+            "replacementWords": "which log lines prove it",
+            "fontSize": 70,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "cite-the-line-pitch",
+            "banner": ""
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer types the naive fix-it question and corrects it to the real one: which log lines prove the cause.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 11.29,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 11.291666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "terms",
+      "lane": "bookend",
+      "proof_gate": "CARD",
+      "narration_text": "Three terms. Root cause: the failure that started the problem. Source grounding: every claim points to the exact text it came from. A prompt contract: a fixed answer format a program can check.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.12,
+            "event": "'root cause' lands"
+          },
+          {
+            "at": 0.45,
+            "event": "'source grounding' lands"
+          },
+          {
+            "at": 0.75,
+            "event": "'prompt contract' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "root cause",
+                "meaning": "the failure that started the problem"
+              },
+              {
+                "term": "source grounding",
+                "meaning": "every claim points to the exact text it came from"
+              },
+              {
+                "term": "prompt contract",
+                "meaning": "a fixed answer format a program can check"
+              }
+            ],
+            "folderLabel": "Pavan Majji"
+          },
+          "rendered": {
+            "out": "media/BDEFS.mp4",
+            "at": "2026-10-13T21:34:41.857398+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "TERMS card: three prerequisites, one line each."
+      },
+      "actual_duration_s": 11.2,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 11.208333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "remotion:ClaudeDefinitions",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "This is my final project, Cite the Line. Nothing in it is built yet. This film is the plan.",
+      "estimated_duration_s": 7.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A page of log lines drops onto the stage and settles with a floor shadow; the label 'log' beside it; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "log page drops in"
+          },
+          {
+            "at": 0.4,
+            "event": "label + tag"
+          }
+        ],
+        "manim": {
+          "class": "B00_LogPage"
+        },
+        "motion_claim": "A page of log lines drops onto the stage and settles with a floor shadow; the label 'log' beside it; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 5.85,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 5.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It will be a command-line tool. You give it the logs from a failing backend service, and it names the likely cause, pointing at the exact lines that support it.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A lens slides over the log page; two lines highlight with terracotta dots; a slip labelled 'cause' lands beside the page, a leader line pointing at the two lines; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "lens slides over page"
+          },
+          {
+            "at": 0.4,
+            "event": "two lines highlight"
+          },
+          {
+            "at": 0.75,
+            "event": "cause slip lands"
+          }
+        ],
+        "manim": {
+          "class": "B01_LensCites"
+        },
+        "motion_claim": "A lens slides over the log page; two lines highlight with terracotta dots; a slip labelled 'cause' lands beside the page, a leader line pointing at the two lines; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.83,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 8.833333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "And when the logs don't show enough, it will say so, instead of guessing.",
+      "estimated_duration_s": 5.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The lens sweeps a sparse log page and finds nothing; a slip labelled 'not enough' lands instead of a cause; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "lens sweeps"
+          },
+          {
+            "at": 0.65,
+            "event": "'not enough' slip lands"
+          }
+        ],
+        "manim": {
+          "class": "B02_NotEnough"
+        },
+        "motion_claim": "The lens sweeps a sparse log page and finds nothing; a slip labelled 'not enough' lands instead of a cause; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 4.18,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 4.208333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "To test it, I'll build a small service with FastAPI and Postgres in Docker, and break it on purpose: a slowed database, a bad config, a failing dependency. Each break gives real logs with a known cause.",
+      "estimated_duration_s": 14.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A server stack labelled 'service'; three of its lights turn red one by one, and under each a log page drops out with a small known-cause tag; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "server stack"
+          },
+          {
+            "at": 0.4,
+            "event": "light 1 red, page drops"
+          },
+          {
+            "at": 0.6,
+            "event": "light 2"
+          },
+          {
+            "at": 0.8,
+            "event": "light 3"
+          }
+        ],
+        "manim": {
+          "class": "B03_BreakService"
+        },
+        "motion_claim": "A server stack labelled 'service'; three of its lights turn red one by one, and under each a log page drops out with a small known-cause tag; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.65,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 12.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Claude Code, run from a script, will read each incident and answer in a fixed format: one cause from a short list, plus the line numbers it relied on. That format is the prompt contract.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Log pages slide into an open box labelled 'Claude Code'; a slip comes out with a cause pill and line-number marks, labelled 'contract'; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "pages feed in"
+          },
+          {
+            "at": 0.55,
+            "event": "slip comes out"
+          },
+          {
+            "at": 0.8,
+            "event": "'contract' label"
+          }
+        ],
+        "manim": {
+          "class": "B04_Contract"
+        },
+        "motion_claim": "Log pages slide into an open box labelled 'Claude Code'; a slip comes out with a cause pill and line-number marks, labelled 'contract'; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.56,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 10.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then a plain checker, with no AI in it, will test every answer. Do the cited lines exist? Is the cause the known one? Each incident will run three times, to see if the answer holds.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The slip passes under a scan line labelled 'checker'; a check appears; the pass repeats so three slips sit in a row, each with its own mark; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "scan line"
+          },
+          {
+            "at": 0.45,
+            "event": "first check"
+          },
+          {
+            "at": 0.8,
+            "event": "three slips in a row"
+          }
+        ],
+        "manim": {
+          "class": "B05_Checker"
+        },
+        "motion_claim": "The slip passes under a scan line labelled 'checker'; a check appears; the pass repeats so three slips sit in a row, each with its own mark; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.2,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 10.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Tools like this already exist. I read the documentation for Datadog's Bits AI SRE, which proposes root causes inside Datadog's paid platform. Its accuracy is reported by Datadog, and I can't re-check it myself.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A closed, dark-plinthed box labelled 'vendor platform'; a log page goes in, a slip comes out, but the box never opens; a small 'constructed sketch' tag in the lower-right corner. No logos.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "closed box"
+          },
+          {
+            "at": 0.5,
+            "event": "page in, slip out"
+          },
+          {
+            "at": 0.8,
+            "event": "box stays shut"
+          }
+        ],
+        "manim": {
+          "class": "B06_ClosedBox"
+        },
+        "motion_claim": "A closed, dark-plinthed box labelled 'vendor platform'; a log page goes in, a slip comes out, but the box never opens; a small 'constructed sketch' tag in the lower-right corner. No logos."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.87,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 13.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Mine will be small and open: plain log files, incidents with known answers, and a public record of where it was wrong. It's not a competitor. It's a test bench anyone can re-check.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An open crate labelled 'test bench'; its pages are visible inside; one slip with a check and one with a cross sit beside it, both in plain view; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "open crate"
+          },
+          {
+            "at": 0.45,
+            "event": "pages visible"
+          },
+          {
+            "at": 0.75,
+            "event": "check and cross both shown"
+          }
+        ],
+        "manim": {
+          "class": "B07_OpenCrate"
+        },
+        "motion_claim": "An open crate labelled 'test bench'; its pages are visible inside; one slip with a check and one with a cross sit beside it, both in plain view; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.26,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 10.291666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The reader is a hiring manager for backend roles. In the first minute, they'll open the README and see a results table. Those numbers don't exist yet. They'll come from real runs.",
+      "estimated_duration_s": 12.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A README card drops in; a three-row results table draws on it with '?' in every value cell (no numbers); label 'README'; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "README card"
+          },
+          {
+            "at": 0.4,
+            "event": "table draws"
+          },
+          {
+            "at": 0.7,
+            "event": "'?' cells"
+          }
+        ],
+        "manim": {
+          "class": "B08_Readme"
+        },
+        "motion_claim": "A README card drops in; a three-row results table draws on it with '?' in every value cell (no numbers); label 'README'; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.15,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then they click one incident and see the log, the diagnosis, and the checker's verdict, side by side, with no setup needed.",
+      "estimated_duration_s": 8.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A cursor clicks one table row; three panels slide out in a row: the log page, the result slip, and a check; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "click"
+          },
+          {
+            "at": 0.4,
+            "event": "three panels in a row"
+          }
+        ],
+        "manim": {
+          "class": "B09_ThreePanels"
+        },
+        "motion_claim": "A cursor clicks one table row; three panels slide out in a row: the log page, the result slip, and a check; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.1,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 7.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "If it works, a reviewer could fairly conclude that I test model output instead of trusting it. They shouldn't conclude it works on real production logs. It will only be tested on incidents I made.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A balance with two pans labelled 'test' and 'trust'; the result slip drops onto 'test' and that pan sinks; then a fence draws around the small incident pile; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "balance"
+          },
+          {
+            "at": 0.4,
+            "event": "slip tips to 'test'"
+          },
+          {
+            "at": 0.75,
+            "event": "fence around own incidents"
+          }
+        ],
+        "manim": {
+          "class": "B10_TestNotTrust"
+        },
+        "motion_claim": "A balance with two pans labelled 'test' and 'trust'; the result slip drops onto 'test' and that pan sinks; then a fence draws around the small incident pile; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.86,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 10.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "One thing it will never do is act. No restarts, no rollbacks. It only diagnoses and cites.",
+      "estimated_duration_s": 6.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A big 'restart' button appears beside the server stack and is crossed out in ink; the result slip stays beside the log page; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "restart button"
+          },
+          {
+            "at": 0.45,
+            "event": "crossed out"
+          }
+        ],
+        "manim": {
+          "class": "B11_NeverActs"
+        },
+        "motion_claim": "A big 'restart' button appears beside the server stack and is crossed out in ink; the result slip stays beside the log page; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 5.93,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 5.958333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The first piece I'll make run is a single slowed-database incident, end to end. Its log, diagnosis and verdict will be committed with a date, so anyone can see it ran.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One database cylinder with a slow clock; a single log page, slip and check line up beside it; a date stamp lands on the row, labelled 'first run'; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "slowed database"
+          },
+          {
+            "at": 0.45,
+            "event": "page, slip, check line up"
+          },
+          {
+            "at": 0.75,
+            "event": "date stamp"
+          }
+        ],
+        "manim": {
+          "class": "B12_FirstRun"
+        },
+        "motion_claim": "One database cylinder with a slow clock; a single log page, slip and check line up beside it; a date stamp lands on the row, labelled 'first run'; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.01,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 10.041666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The biggest risk is that I write every incident, so the test could be too easy. If the logs announce the answer, a high score means nothing.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A tall, loud stack of error pages labelled 'API errors' sits on top of a small, quiet database cylinder labelled 'real cause'; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "loud error stack"
+          },
+          {
+            "at": 0.55,
+            "event": "quiet cause underneath"
+          }
+        ],
+        "manim": {
+          "class": "B13_TooEasy"
+        },
+        "motion_claim": "A tall, loud stack of error pages labelled 'API errors' sits on top of a small, quiet database cylinder labelled 'real cause'; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.96,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So I'll add cases where the loudest error is not the real cause, and cases with no clear answer. If scores still look too good, I'll try a simple keyword script, and say so if it does as well.",
+      "estimated_duration_s": 15.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Hard-case pages slide into the test bench crate; off to the side, a small grey box labelled 'plan B' appears, outlined dashed; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "hard cases slide in"
+          },
+          {
+            "at": 0.7,
+            "event": "plan B box"
+          }
+        ],
+        "manim": {
+          "class": "B14_HardCases"
+        },
+        "motion_claim": "Hard-case pages slide into the test bench crate; off to the side, a small grey box labelled 'plan B' appears, outlined dashed; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.99,
+      "audio_file": "mp3/beat-B14.mp3",
+      "render_duration_s": 11.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I already work with FastAPI, Postgres and Docker, from my engineering experience and my coursework. What's new for me is fault injection, prompt contracts, and evaluating model output against known answers.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two piles of blocks: a solid pile labelled 'have' and an outlined pile labelled 'learning'; the outlined blocks draw in one by one; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "solid pile"
+          },
+          {
+            "at": 0.55,
+            "event": "outlined pile draws in"
+          }
+        ],
+        "manim": {
+          "class": "B15_TwoPiles"
+        },
+        "motion_claim": "Two piles of blocks: a solid pile labelled 'have' and an outlined pile labelled 'learning'; the outlined blocks draw in one by one; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.42,
+      "audio_file": "mp3/beat-B15.mp3",
+      "render_duration_s": 12.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Today, what exists is this plan and my notes. Everything else in this film is what I will build.",
+      "estimated_duration_s": 7.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A tiny solid pile labelled 'exists' beside a large ghost-outlined pile labelled 'will exist'; a small 'constructed sketch' tag in the lower-right corner.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "tiny 'exists' pile"
+          },
+          {
+            "at": 0.5,
+            "event": "large ghost pile"
+          }
+        ],
+        "manim": {
+          "class": "B16_ExistsVsWill"
+        },
+        "motion_claim": "A tiny solid pile labelled 'exists' beside a large ghost-outlined pile labelled 'will exist'; a small 'constructed sketch' tag in the lower-right corner."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 5.78,
+      "audio_file": "mp3/beat-B16.mp3",
+      "render_duration_s": 5.791666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B16.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:19:52"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Cite the Line. I'm Pavan Majji.",
+      "estimated_duration_s": 4.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Cite-the-Line",
+            "slug": "cite-the-line-pitch",
+            "handle": "Pavan Majji",
+            "subline": "",
+            "hideMascot": true
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-13T21:35:14.707185+00:00"
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 3.67,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 3.7083333333333335,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-13T18:19:52"
+      }
+    }
+  ]
+}

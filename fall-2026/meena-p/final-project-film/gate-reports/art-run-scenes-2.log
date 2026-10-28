@@ -1,0 +1,284 @@
+[run] skip BIDEA_Intro — BIDEA already filled
+[run] skip B00_WhatItIs — B00 already filled
+[run] skip B01_Hypothesis — B01 already filled
+[run] skip B02_Checkable — B02 already filled
+[run] skip B03_Data — B03 already filled
+[run] skip B04_Retrieve — B04 already filled
+[run] skip B05_Answer — B05 already filled
+[run] skip B06_Abstain — B06 already filled
+[run] skip B07_Skills — B07 already filled
+[run] skip B07B_Conclude — B07B already filled
+[run] skip B08_Order — B08 already filled
+[run] skip B09_Alternative — B09 already filled
+[run] skip B09B_Instead — B09B already filled
+[run] skip B10_Reader — B10 already filled
+[run] skip B11_Scope — B11 already filled
+[run] skip B12_First — B12 already filled
+[run] skip B13_Risk — B13 already filled
+[run] skip B14_Built — B14 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B15_WillBuild clean
+[gateW] B16_Why clean
+[gateW] NOTICE Scene class(es) NOT analysed (name must look like B07_Foo / B18A_Foo): BOUT_Close
+[run] rendering B15_WillBuild
+Manim Community v0.20.1
+
+Animation 0: FadeIn(Text('Will build')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                              [10/12/26 20:36:53] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B15_Wil                         
+                             lBuild/1697911619_34938927                         
+                             79_2542333767.mp4'                                 
+Animation 1: Create(Rectangle), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                                                INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B15_Wil                         
+                             lBuild/1167814662_56792968                         
+                             5_902976943.mp4'                                   
+Animation 2: Create(Rectangle), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                            [10/12/26 20:36:54] INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B15_Wil                         
+                             lBuild/1167814662_11664872                         
+                             30_1775841088.mp4'                                 
+Animation 3: Create(Rectangle), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                                                INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B15_Wil                         
+                             lBuild/1167814662_66820589                         
+                             3_1891319259.mp4'                                  
+Animation 4: Create(Rectangle), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                            [10/12/26 20:36:55] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B15_Wil                         
+                             lBuild/1167814662_22079158                         
+                             18_2696955950.mp4'                                 
+[10/12/26 20:36:56] INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B15_Wil                         
+                             lBuild/1167814662_13131946                         
+                             56_2225086325.mp4'                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/B                         
+                             15_WillBuild.mp4'                                  
+                                                                                
+                    INFO     Rendered B15_WillBuild                 scene.py:278
+                             Played 6 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Text('Will build')):   0%|          | 0/5 [00:00<?, ?it/s]                                                                              Animation 1: Create(Rectangle), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                           Animation 2: Create(Rectangle), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                           Animation 3: Create(Rectangle), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                           Animation 4: Create(Rectangle), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                           /Users/meenu/Downloads/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+[audit] scenes: 7 snapshots → CLEAN
+[audit] report: /Users/meenu/Downloads/cite-and-seek-pitch/film/layout_audit.md
+[run] rendering B16_Why
+Manim Community v0.20.1
+
+Animation 0: FadeIn(Rectangle), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                            [10/12/26 20:36:58] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1697911619_3782382334_295                         
+                             5864468.mp4'                                       
+Animation 1: FadeIn(Rectangle):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                          INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_266911261_4041                         
+                             214084.mp4'                                        
+Animation 2: FadeIn(Text('evaluation')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                                  INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_1229643623_806                         
+                             392741.mp4'                                        
+Animation 3: FadeIn(Rectangle), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                            [10/12/26 20:36:59] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_2455492498_323                         
+                             3341179.mp4'                                       
+Animation 4: FadeIn(Rectangle):   0%|          | 0/10 [00:00<?, ?it/s]                                                                                          INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_3541938243_334                         
+                             0922577.mp4'                                       
+Animation 5: FadeIn(Rectangle):   0%|          | 0/10 [00:00<?, ?it/s]                                                                                          INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_1516447135_282                         
+                             5711166.mp4'                                       
+Animation 6: FadeIn(Rectangle):   0%|          | 0/10 [00:00<?, ?it/s]                                                                                          INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_774617288_2779                         
+                             14026.mp4'                                         
+Animation 7: FadeIn(Text('retrieval')), etc.:   0%|          | 0/10 [00:00<?, ?it/s]                                                                                    [10/12/26 20:37:00] INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_1628309821_725                         
+                             269073.mp4'                                        
+[10/12/26 20:37:02] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/B16_Why                         
+                             /1167814662_883080029_1203                         
+                             621327.mp4'                                        
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/B                         
+                             16_Why.mp4'                                        
+                                                                                
+                    INFO     Rendered B16_Why                       scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Rectangle), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                           Animation 1: FadeIn(Rectangle):   0%|          | 0/8 [00:00<?, ?it/s]                                                                     Animation 2: FadeIn(Text('evaluation')):   0%|          | 0/5 [00:00<?, ?it/s]                                                                              Animation 3: FadeIn(Rectangle), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                           Animation 4: FadeIn(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]                                                                     Animation 5: FadeIn(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]                                                                     Animation 6: FadeIn(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]                                                                     Animation 7: FadeIn(Text('retrieval')), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   /Users/meenu/Downloads/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+[audit] scenes: 10 snapshots → CLEAN
+[audit] report: /Users/meenu/Downloads/cite-and-seek-pitch/film/layout_audit.md
+[run] rendering BOUT_Close
+Manim Community v0.20.1
+
+Animation 0: FadeIn(Text('Cite & Seek')):   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: FadeIn(Text('Cite & Seek')):  93%|█████████▎| 14/15 [00:00<00:00, 135.49it/s]                                                                                          [10/12/26 20:37:04] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/BOUT_Cl                         
+                             ose/1697911619_3794837395_                         
+                             223132457.mp4'                                     
+Animation 1: GrowFromEdge(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                               INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/BOUT_Cl                         
+                             ose/1167814662_350218269_4                         
+                             019096779.mp4'                                     
+Animation 2: GrowFromEdge(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                               INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/BOUT_Cl                         
+                             ose/1167814662_3906464657_                         
+                             426576508.mp4'                                     
+Animation 3: FadeIn(Text('@meenuviji')):   0%|          | 0/12 [00:00<?, ?it/s]                                                                               [10/12/26 20:37:05] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/BOUT_Cl                         
+                             ose/1167814662_1178856045_                         
+                             1724041695.mp4'                                    
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/p                         
+                             artial_movie_files/BOUT_Cl                         
+                             ose/1167814662_3326713768_                         
+                             157997593.mp4'                                     
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/meenu/Downloads/ci                         
+                             te-and-seek-pitch/film/med                         
+                             ia/videos/scenes/2160p24/B                         
+                             OUT_Close.mp4'                                     
+                                                                                
+                    INFO     Rendered BOUT_Close                    scene.py:278
+                             Played 5 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Text('Cite & Seek')):   0%|          | 0/9 [00:00<?, ?it/s]                                                                               Animation 1: GrowFromEdge(Rectangle):   0%|          | 0/4 [00:00<?, ?it/s]                                                                           Animation 2: GrowFromEdge(Rectangle):   0%|          | 0/4 [00:00<?, ?it/s]                                                                           Animation 3: FadeIn(Text('@meenuviji')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                              /Users/meenu/Downloads/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+[audit] scenes: 6 snapshots → CLEAN
+[audit] report: /Users/meenu/Downloads/cite-and-seek-pitch/film/layout_audit.md
+[remotion] BDEFS: filled already (skip)
+[remotion] BHTF: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled BIDEA  MANIM    11.5s  ← BIDEA.mp4
+[art] compiled B00  MANIM     8.2s  ← B00.mp4
+[art] compiled B03  MANIM    13.9s  ← B03.mp4
+[art] compiled B01  MANIM    10.8s  ← B01.mp4
+[art] compiled B02  MANIM     5.0s  ← B02.mp4
+[art] compiled B10  MANIM    13.4s  ← B10.mp4
+[art] compiled B04  MANIM    12.6s  ← B04.mp4
+[art] compiled B05  MANIM     9.6s  ← B05.mp4
+[art] compiled B06  MANIM     7.1s  ← B06.mp4
+[art] compiled B07  MANIM    17.4s  ← B07.mp4
+[art] compiled B07B  MANIM     4.8s  ← B07B.mp4
+[art] compiled B08  MANIM    11.8s  ← B08.mp4
+[art] compiled B09  MANIM    11.4s  ← B09.mp4
+[art] compiled B09B  MANIM     7.0s  ← B09B.mp4
+[art] compiled B11  MANIM    12.7s  ← B11.mp4
+[art] compiled B12  MANIM    12.2s  ← B12.mp4
+[art] compiled B13  MANIM    15.7s  ← B13.mp4
+[art] compiled B16  MANIM    13.2s  ← B16.mp4
+[art] compiled B14  MANIM    12.0s  ← B14.mp4
+[art] compiled B15  MANIM     7.2s  ← B15.mp4
+[art] compiled BOUT  MANIM     4.2s  ← BOUT.mp4
+[art] motion histogram: graphic:21  remotion:2
+[art] build stamp → beat_sheet.json (23/23 filled)
+[art] QC contact sheet → /Users/meenu/Downloads/cite-and-seek-pitch/film/qc-sheet.png
+[art] wrote /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4  (239.3s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 23/23 filled — BIDEA:MANIM B00:MANIM BDEFS:VIDEO B03:MANIM B01:MANIM B02:MANIM B10:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B07B:MANIM B08:MANIM B09:MANIM B09B:MANIM B11:MANIM B12:MANIM B13:MANIM B16:MANIM B14:MANIM B15:MANIM BHTF:VIDEO BOUT:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=46 BLOCKER=0 MAJOR=0 → /Users/meenu/Downloads/cite-and-seek-pitch/film/_qc/REPORT.md
+[run] done → /Users/meenu/Downloads/cite-and-seek-pitch/film  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see /Users/meenu/Downloads/cite-and-seek-pitch/film/SHOTLIST.md

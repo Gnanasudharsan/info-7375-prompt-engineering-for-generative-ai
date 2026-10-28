@@ -1,0 +1,31 @@
+$ python3 -m pytest -v   # 2026-10-25, Python 3.9.6
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /Library/Developer/CommandLineTools/usr/bin/python3
+rootdir: ~/Desktop/AgenticAI/Assignment_5/final-project-film/slice
+configfile: pytest.ini
+plugins: anyio-4.12.1
+collecting ... collected 21 items
+
+tests/test_checker.py::test_air_canada_shape_holds PASSED                [  4%]
+tests/test_checker.py::test_within_90_days_vs_90_days_after_holds PASSED [  9%]
+tests/test_checker.py::test_within_24h_of_booking_vs_24h_before_departure_holds PASSED [ 14%]
+tests/test_checker.py::test_matching_answer_passes_and_logs_version PASSED [ 19%]
+tests/test_checker.py::test_outdated_version_holds PASSED                [ 23%]
+tests/test_checker.py::test_no_source_holds PASSED                       [ 28%]
+tests/test_checker.py::test_broken_contract_holds PASSED                 [ 33%]
+tests/test_checker.py::test_no_claims_holds PASSED                       [ 38%]
+tests/test_checker.py::test_extra_field_breaks_the_contract PASSED       [ 42%]
+tests/test_checker.py::test_future_policy_is_ignored_until_its_date PASSED [ 47%]
+tests/test_checker.py::test_future_policy_applies_once_effective PASSED  [ 52%]
+tests/test_checker.py::test_topic_with_only_a_future_version_holds PASSED [ 57%]
+tests/test_checker.py::test_every_case_matches_its_label[air_canada_shape] PASSED [ 61%]
+tests/test_checker.py::test_every_case_matches_its_label[booking_vs_departure] PASSED [ 66%]
+tests/test_checker.py::test_every_case_matches_its_label[broken_contract] PASSED [ 71%]
+tests/test_checker.py::test_every_case_matches_its_label[extra_field] PASSED [ 76%]
+tests/test_checker.py::test_every_case_matches_its_label[future_policy] PASSED [ 80%]
+tests/test_checker.py::test_every_case_matches_its_label[matching_refund] PASSED [ 85%]
+tests/test_checker.py::test_every_case_matches_its_label[no_source] PASSED [ 90%]
+tests/test_checker.py::test_every_case_matches_its_label[outdated_refund] PASSED [ 95%]
+tests/test_checker.py::test_every_case_matches_its_label[within_vs_after] PASSED [100%]
+
+============================== 21 passed in 0.02s ==============================

@@ -1,0 +1,74 @@
+faster-whisper small.en transcript per beat (machine transcript; not a human listen)
+
+BIDEA  (7.66 s)
+  script: Hi, I'm Aditya Raj. This is DayThread, my proposed final project. You're hearing a synthesized voice reading my script.
+  heard:  Hi, I'm Aditya Raj. This is Daythread, my proposed final project. You're hearing a synthesized voice reading my script.
+
+B00  (10.73 s)
+  script: Nothing is built yet. DayThread would be a check-in assistant that remembers conversations across days, and turns concerning changes into evidence a home care coordinator can review.
+  heard:  Nothing is built yet. Day thread would be a check -in assistant that remembers conversations across days and turns concerning changes into evidence a home care coordinator can review.
+
+B01  (8.19 s)
+  script: Here's the main story, with a fictional client. On day one, they mention just a little tumble. The raw transcript is kept apart from any summary.
+  heard:  Here's the main story with a fictional client. On day one they mention just a little tumble. The raw transcript is kept apart from any summary.
+
+B02  (8.75 s)
+  script: Here's the failure that could sink it: the summary drops the tumble, so every later step relying on it misses it. I'll predict that, then trigger it on purpose.
+  heard:  Here's the failure that could sync it. The summary drops the tumble, so every later step relying on it misses it. I'll predict that, then trigger it on purpose.
+
+B03  (10.07 s)
+  script: When the check-in ends, a separate check reads the original words and creates an internal review item. It could miss unfamiliar wording or raise false alarms, so I'll test both.
+  heard:  When the check -in ends, a separate check reads the original words and creates an internal review item. It could miss unfamiliar wording or raise false alarms, so I'll test both.
+
+B04  (8.85 s)
+  script: On day two, the assistant asks about the tumble without the client repeating it, linked to the day-one words. That two-day replay is the first thing I'll make run.
+  heard:  On day two, the assistant asks about the tumble without the client repeating it, linked to the day one words. That two day replay is the first thing I'll make run.
+
+B05  (14.34 s)
+  script: A coordinator opens a simple local review page showing the concern, its excerpts, and the proposed action, then approves, refuses, or defers. A separate executor acts only if that approval still matches; for the course, delivery is simulated.
+  heard:  A coordinator opens a simple local review page showing the concern it's excerpts and the proposed action then approves, refuses, or defers. A separate executor acts only if that approval still matches for the course delivery is simulated.
+
+B06  (11.5 s)
+  script: The assistant can read check-in history, add source-linked observations, and create review items. It can't silently overwrite past records, change agency-owned information, or contact anyone.
+  heard:  The assistant can read check -in history, add source -linked observations, and create review items. It can't silently overwrite past records, change agency -owned information, or contact anyone.
+
+B07  (12.2 s)
+  script: Fall detection and AI calls already exist. I read their documentation: Lifeline says its fall detection doesn't catch every fall, and DailyCall describes daily AI calls with summaries for families.
+  heard:  Fall detection and AI calls already exist. I read their documentation. Lifeline says its fall detection doesn't catch every fall, and Daily Call describes daily AI calls with summaries for families.
+
+B08  (14.02 s)
+  script: I'm not claiming they lack anything. DayThread's proposed focus is source-linked concerns, an independent transcript check, and a coordinator's decision, meant to help a coordinator understand changes without manually rebuilding several conversations.
+  heard:  I'm not claiming they lack anything. Daythread's proposed focus is source -linked concerns, an independent transcript check, and a coordinator's decision meant to help a coordinator understand changes without manually rebuilding several conversations.
+
+B09  (10.99 s)
+  script: I'm aiming for roles as an AI engineer, so a hiring reviewer should be able to run a labelled replay from the README within a minute, and inspect the two-day memory and one approval decision.
+  heard:  I'm aiming for roles as an AI engineer, so a hiring reviewer should be able to run a labeled replay from the readme within a minute and inspect the two -day memory and one approval decision.
+
+B10  (8.21 s)
+  script: I'm designing it to demonstrate prompt contracts, a budgeted loop with clear stops, permissions in code, source-linked memory, and evaluation.
+  heard:  I'm designing it to demonstrate prompt contracts, a budgeted loop with clear stops, permissions in code, source -linked memory, and evaluation.
+
+B11  (13.61 s)
+  script: Evaluation compares the workflow with and without memory, on held-out cases set aside before tuning, plus at least five deliberate failures. These tests could demonstrate a controlled prototype, but wouldn't establish readiness for real care.
+  heard:  Evaluation compares the workflow with and without memory on held -out cases set aside before tuning, plus at least five deliberate failures. These tests could demonstrate a controlled prototype but wouldn't establish readiness for real care.
+
+B12  (13.61 s)
+  script: The core is simulated text check-ins, memory, evidence-linked concerns, and human review, in Python and SQLite. Clinical advice, real patient data, and autonomous outreach are out; voice calls and cloud deployment are extensions.
+  heard:  The core is simulated text check -ins, memory, evidence -linked concerns, and human review in Python and SQLite. Clinical advice, real patient data, and autonomous outreach are out. Voice calls and cloud deployment are extensions.
+
+B13  (9.15 s)
+  script: I chose this because remembering yesterday is only part of the problem; knowing when a person needs to see it, with the evidence, is the part I find interesting.
+  heard:  I chose this because remembering yesterday is only part of the problem, knowing when a person needs to see it with the evidence is the part I find interesting.
+
+B14  (18.56 s)
+  script: For this pitch, AI helped draft the material and check sources; I set requirements, required sources before any comparison, and cut overstated wording. New for me: persistent memory across conversations, permissions enforced in code, human approval tied to the evidence shown, and evaluation on cases kept separate from development.
+  heard:  For this pitch, AI helped draft the material and check sources. I set requirements, required sources before any comparison, and cut overstated wording. New for me, persistent memory across conversations, permissions enforced in code, human approval tied to the evidence shown, and evaluation on cases kept separate from development.
+
+B15  (14.19 s)
+  script: Today there's this plan, this film, and a decision log, but no DayThread prototype or evaluation results yet. I intend to build the repository, the two-day replay, the review page, tests, and an evaluation report that shows where it fails.
+  heard:  Today there's this plan, this film, and a decision log but no day thread prototype or evaluation results yet. I intend to build the repository, the two -day replay, the review page, tests, and an evaluation report that shows where it fails.
+
+BOUT  (3.79 s)
+  script: This was DayThread, by Aditya Raj.
+  heard:  This was Day Thread by addediraj.
+

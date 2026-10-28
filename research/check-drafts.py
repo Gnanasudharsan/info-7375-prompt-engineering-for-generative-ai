@@ -15,15 +15,20 @@ def main():
     root = args.root.resolve()
     weeks = json.loads((root / "course.json").read_text())["weeks"]
     rows, failures, pending = [], [], []
-    expected = {Path(w["path"]).name + ".md" for w in weeks}
-    found = {p.name for p in (root / "chapters").glob("[0-9][0-9]-*.md")}
-    if found - expected:
-        failures.append("Unexpected chapter filenames: " + repr(sorted(found - expected)))
+    found = sorted((root / "chapters").glob("[0-9][0-9]-*.md"))
+    by_number = {}
+    for p in found:
+        by_number.setdefault(int(p.name[:2]), []).append(p)
+    weeks_numbers = {w["week"] for w in weeks}
+    for number, paths in by_number.items():
+        if number not in weeks_numbers or len(paths) > 1:
+            failures.append("Unexpected chapter filenames: " + repr(sorted(x.name for x in paths)))
     for week in weeks:
-        chapter = root / "chapters" / (Path(week["path"]).name + ".md")
-        if not chapter.exists():
-            pending.append(chapter.name)
+        matches = by_number.get(week["week"], [])
+        if not matches:
+            pending.append("%02d-*.md" % week["week"])
             continue
+        chapter = matches[0]
         body = chapter.read_text()
         words = len(body.split())
         if not 5000 <= words <= 9000:

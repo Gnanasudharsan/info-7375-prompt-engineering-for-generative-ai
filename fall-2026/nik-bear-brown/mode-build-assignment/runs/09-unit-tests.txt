@@ -1,0 +1,5 @@
+$ python3 scripts/funding/test_check_awards.py
+----------------------------------------------------------------------
+Ran 17 tests in 0.002s
+
+OK

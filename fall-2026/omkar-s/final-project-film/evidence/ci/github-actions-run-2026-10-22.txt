@@ -1,0 +1,10 @@
+# First GitHub Actions run of the InstaLoan backend CI — 2026-10-22
+# Repo: O7580/instaloan-los (private). Run: https://github.com/O7580/instaloan-los/actions/runs/39843450055
+# Commit: 1a9df4ce893669429479ce105a81dbb8d5acb702. Pushed by Claude Code at Omkar's request.
+# Conclusion: success. Steps: npm ci, npm run typecheck, npm test, npm run test:mutants — all success.
+
+test	Run npm test	2026-10-22T19:49:47.5998824Z # pass 4
+test	Run npm test	2026-10-22T19:49:47.6002530Z # fail 0
+test	Run npm run test:mutants	2026-10-22T19:49:47.9640665Z ✓ KILLED   test/mutants/BROKEN-income-rule.ts (caught by: income exactly at the minimum passes (boundary))
+test	Run npm run test:mutants	2026-10-22T19:49:48.1781235Z ✓ KILLED   test/mutants/BROKEN-income-limit.ts (caught by: income one rupee below the minimum is rejected)
+test	Run npm run test:mutants	2026-10-22T19:49:48.1790556Z Mutants: 2 killed · 0 survived or errored

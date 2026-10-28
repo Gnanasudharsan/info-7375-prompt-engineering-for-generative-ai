@@ -1,0 +1,37 @@
+Q01  How many customers are there?
+     gold -> [(59,)]  (1 rows)
+     equivalent judged PASS  as expected  -- different SQL, same answer
+                cand -> [(59,)]
+Q02  Which 5 countries have the most customers? Show country and count.
+     gold -> [('USA', 13), ('Canada', 8), ('Brazil', 5)] ...  (5 rows)
+     wrong      judged FAIL  as expected  -- wrong table: counts invoices per country, not customers
+                cand -> [('USA', 91), ('Canada', 56), ('Brazil', 35)] ...
+Q03  What is total revenue by country? Show the top 3.
+     gold -> [('USA', 523.06), ('Canada', 303.96), ('France', 195.1)]  (3 rows)
+     equivalent judged PASS  as expected  -- different SQL, same answer
+                cand -> [('USA', 523.06), ('Canada', 303.96), ('France', 195.1)]
+     wrong      judged FAIL  as expected  -- join fan-out: sums the invoice Total once per invoice line
+                cand -> [('USA', 4667.06), ('Canada', 2689.96), ('France', 1722.1)]
+Q04  How many distinct customers bought at least one Rock track?
+     gold -> [(59,)]  (1 rows)
+     wrong      judged FAIL  as expected  -- COUNT instead of COUNT DISTINCT: counts purchases, not customers
+                cand -> [(835,)]
+Q05  Which employee supports the most customers? Show first name, last name, and count.
+     gold -> [('Jane', 'Peacock', 21)]  (1 rows)
+     wrong      judged FAIL  as expected  -- joins on the wrong key (ReportsTo instead of SupportRepId)
+                cand -> []
+Q06  How many tracks are longer than five minutes?
+     gold -> [(1069,)]  (1 rows)
+     wrong      judged FAIL  as expected  -- unit error: treats Milliseconds as seconds
+                cand -> [(3503,)]
+Q07  List the genres that have more than 100 tracks.
+     gold -> [('Rock',), ('Jazz',), ('Metal',)] ...  (5 rows)
+     equivalent judged PASS  as expected  -- different SQL, same answer
+                cand -> [('Rock',), ('Metal',), ('Latin',)] ...
+Q08  What was total revenue in 2013?
+     gold -> [(450.58,)]  (1 rows)
+     wrong      judged FAIL  as expected  -- string comparison on a datetime column misses every row
+                cand -> [(None,)]
+
+execution comparator agreed with the hand label on 9/9 variants
+exact-string comparator agreed on 6/9 variants

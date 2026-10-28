@@ -1,0 +1,231 @@
+[run] skip B03_ThePipeline — B03 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B04_Alternatives clean
+[gateW] B05_FirstMinute clean
+[gateW] B06_FourSkills clean
+[gateW] B07_InOutFirst clean
+[gateW] B08_NameVariants clean
+[gateW] B09_HaveAndNew clean
+[gateW] B10_TodayAndWill clean
+[gateW] B12_Outro clean
+[run] rendering B04_Alternatives
+Manim Community v0.18.1
+
+[10/14/26 10:08:59] INFO     Animation 0 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             1552269881_2499797586_22313245                     
+                             7)                                                 
+
+
+                             natives/2724347209_2917117                         
+                             840_4237997425.mp4'                                
+                             natives/2724347209_8182771                         
+                             4_4214103222.mp4'                                  
+
+                             natives/2724347209_3579659                         
+                             095_529795262.mp4'                                 
+
+                             natives/2724347209_3442636                         
+                             497_298490511.mp4'                                 
+                             natives/2724347209_1228428                         
+                             83_2404055623.mp4'                                 
+
+                             natives/2724347209_1788372                         
+                             625_618915503.mp4'                                 
+
+                             natives/2724347209_1675094                         
+                             205_3403862605.mp4'                                
+                             natives/2724347209_6408049                         
+                             41_3124161195.mp4'                                 
+
+                             natives/2724347209_8036801                         
+                             41_2636229737.mp4'                                 
+                             natives/2724347209_1014412                         
+                             957_2916960416.mp4'                                
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _Alternatives.mp4'                                 
+                    INFO     Rendered B04_Alternatives              scene.py:247
+                             Played 11 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+[audit] scenes: 15 snapshots → CLEAN
+[run] rendering B05_FirstMinute
+Manim Community v0.18.1
+
+
+                             Minute/1552269881_84419281                         
+                             0_223132457.mp4'                                   
+                             Minute/2724347209_24870545                         
+                             44_3525328821.mp4'                                 
+
+                             Minute/2724347209_37722554                         
+                             62_3032061349.mp4'                                 
+                             Minute/2724347209_31244869                         
+                             86_2609999271.mp4'                                 
+
+                             Minute/2724347209_24210917                         
+                             38_3614525157.mp4'                                 
+                             Minute/2724347209_37874284                         
+                             60_963784957.mp4'                                  
+
+                             Minute/2724347209_12550129                         
+                             62_3718403507.mp4'                                 
+                             Minute/2724347209_17212788                         
+                             74_2339873589.mp4'                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _FirstMinute.mp4'                                  
+                    INFO     Rendered B05_FirstMinute               scene.py:247
+                             Played 8 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+[audit] scenes: 12 snapshots → CLEAN
+[run] rendering B06_FourSkills
+Manim Community v0.18.1
+
+
+                             kills/1552269881_107184296                         
+                             5_223132457.mp4'                                   
+                             kills/2724347209_164103143                         
+                             _3713898216.mp4'                                   
+
+                             kills/2724347209_925472049                         
+                             _3735380635.mp4'                                   
+                             kills/2724347209_717409915                         
+                             _1669297942.mp4'                                   
+
+                             kills/2724347209_204630126                         
+                             1_3360637495.mp4'                                  
+                             kills/2724347209_244886655                         
+                             7_4266823903.mp4'                                  
+
+                             kills/2724347209_381879374                         
+                             7_2255268021.mp4'                                  
+                             kills/2724347209_216562974                         
+                             2_3758338312.mp4'                                  
+
+                             kills/2724347209_296834936                         
+                             _1456025225.mp4'                                   
+                             kills/2724347209_726359182                         
+                             _988963695.mp4'                                    
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _FourSkills.mp4'                                   
+                    INFO     Rendered B06_FourSkills                scene.py:247
+                             Played 10 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+[audit] scenes: 15 snapshots → CLEAN
+[run] rendering B07_InOutFirst
+Manim Community v0.18.1
+
+
+                             First/1552269881_15153396_                         
+                             223132457.mp4'                                     
+                             First/2724347209_483730335                         
+                             _2108548539.mp4'                                   
+
+                             First/2724347209_177072406                         
+                             8_3057546956.mp4'                                  
+                             First/2724347209_225457225                         
+                             4_2867142453.mp4'                                  
+
+                             First/2724347209_181282774                         
+                             6_842796085.mp4'                                   
+
+                             First/2724347209_142620579                         
+                             4_1322737261.mp4'                                  
+
+                             First/2724347209_230480420                         
+                             1_568288382.mp4'                                   
+                             First/2724347209_999516738                         
+                             _1136154233.mp4'                                   
+
+                             First/2724347209_223486406                         
+                             _3467202221.mp4'                                   
+                             First/2724347209_506158943                         
+                             _3626344894.mp4'                                   
+
+                             First/2724347209_426877535                         
+                             _3347124082.mp4'                                   
+
+                             First/2724347209_147868717                         
+                             4_2007004745.mp4'                                  
+
+                             First/2724347209_137712626                         
+                             _3129178879.mp4'                                   
+                             First/2724347209_688360274                         
+                             _1444802497.mp4'                                   
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+[10/14/26 10:09:29] INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _InOutFirst.mp4'                                   
+                    INFO     Rendered B07_InOutFirst                scene.py:247
+                             Played 14 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[audit] scenes: 38 snapshots → 3 error(s), 0 warning(s)
+[run] GATE B FAILED: B07_InOutFirst has layout errors — mp4 NOT slotted.

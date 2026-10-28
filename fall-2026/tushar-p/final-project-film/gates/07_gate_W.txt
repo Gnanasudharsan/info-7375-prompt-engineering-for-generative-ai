@@ -1,0 +1,13 @@
+[gateW] B00_ClaimVsTests clean
+[gateW] B01_ThreeBoxes clean
+[gateW] B02_RepoTree clean
+[gateW] B03_ThreeQuestions clean
+[gateW] B04_TwoPieces clean
+[gateW] B05_SixtySeconds clean
+[gateW] B06_FourSkills clean
+[gateW] B07_InAndOut clean
+[gateW] B08_FirstRun clean
+[gateW] B09_DockerFirst clean
+[gateW] B10_HaveAndNew clean
+[gateW] B11_ExistsVsWill clean
+[gateW] B12_ThankYou clean

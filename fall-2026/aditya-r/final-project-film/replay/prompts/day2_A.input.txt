@@ -1,0 +1,5 @@
+Today's date: {day2}
+Client: {client}
+
+Summary of previous check-in ({day1}):
+{summary}

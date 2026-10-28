@@ -1,0 +1,2 @@
+[factcheck] clean — every row resolved, every claim-bearing beat covered
+[factcheck] rows=11 beats_covered=10 claim_bearing_beats=1 uncovered=0

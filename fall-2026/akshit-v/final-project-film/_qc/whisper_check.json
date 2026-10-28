@@ -1,0 +1,247 @@
+[
+ {
+  "beat": "BOPEN",
+  "ratio": 0.865,
+  "heard": "Sponsor Scout. A final project pitched by Akshit Verma. I'll show what already ran and what I will build.",
+  "diffs": [
+   [
+    "sponsorscout",
+    "sponsor scout"
+   ],
+   [
+    "pitch",
+    "pitched"
+   ]
+  ]
+ },
+ {
+  "beat": "BIDEA",
+  "ratio": 1.0,
+  "heard": "The question isn't which companies to apply to, it's which ones to network with.",
+  "diffs": []
+ },
+ {
+  "beat": "B00",
+  "ratio": 0.918,
+  "heard": "Sponsor Scout will be a clawed code workflow that tells an international student. For each company, whether to apply, network, check by hand or skip, with the record behind every answer.",
+  "diffs": [
+   [
+    "sponsorscout",
+    "sponsor scout"
+   ],
+   [
+    "claude",
+    "clawed"
+   ]
+  ]
+ },
+ {
+  "beat": "B01",
+  "ratio": 1.0,
+  "heard": "Done, it will be a repository in Python and Claude code on public data, a recipe, a prototype tests an evaluation log, and a report you can trace row by row.",
+  "diffs": []
+ },
+ {
+  "beat": "B02",
+  "ratio": 0.849,
+  "heard": "Each company gets three checks, has it sponsored data roles in public H1B records, has it raised money recently in SEC form defilings, is an entry-level data job open on its board today.",
+  "diffs": [
+   [
+    "h one b",
+    "h1b"
+   ],
+   [
+    "s e c",
+    "sec"
+   ],
+   [
+    "d filings",
+    "defilings"
+   ]
+  ]
+ },
+ {
+  "beat": "B03",
+  "ratio": 0.907,
+  "heard": "The engine's own score, which I had clawed code run on October 3rd, gives a sponsor with no open job a zero and skips it. Sponsor Scout puts it on a networking list, so a student can stop applying where nothing is open and keep the sponsors worth contacting.",
+  "diffs": [
+   [
+    "scorer",
+    "score"
+   ],
+   [
+    "claude",
+    "clawed"
+   ],
+   [
+    "third",
+    "3rd"
+   ],
+   [
+    "sponsorscout",
+    "sponsor scout"
+   ]
+  ]
+ },
+ {
+  "beat": "B04",
+  "ratio": 1.0,
+  "heard": "I also looked at my visa jobs. It lists sponsors and their past job counts. It doesn't take a sponsor with nothing open and tell you to network there.",
+  "diffs": []
+ },
+ {
+  "beat": "B05",
+  "ratio": 0.943,
+  "heard": "I'm targeting data analysts and data engineer roles, so my reader is a data hiring manager. In 60 seconds, they'll run one offline command, open the report, and trace a networking row to its source.",
+  "diffs": [
+   [
+    "analyst",
+    "analysts"
+   ],
+   [
+    "sixty",
+    "60"
+   ]
+  ]
+ },
+ {
+  "beat": "B06",
+  "ratio": 0.8,
+  "heard": "This already ran. On October 3rd, the prototype fetched 16 job boards and sorted 123 sponsors. Two to apply, one to network, 107 to check by hand, 13 to skip. The job seeker is fictional.",
+  "diffs": [
+   [
+    "third",
+    "3rd"
+   ],
+   [
+    "sixteen",
+    "16"
+   ],
+   [
+    "one hundred twenty three",
+    "123"
+   ],
+   [
+    "one hundred seven",
+    "107"
+   ],
+   [
+    "thirteen",
+    "13"
+   ]
+  ]
+ },
+ {
+  "beat": "B07",
+  "ratio": 0.904,
+  "heard": "Run one got one wrong. Zooks landed in apply on part time contract student worker postings. Claude flagged it. I chose the fix and a test pins it. All 25 tests passed again on October 12th.",
+  "diffs": [
+   [
+    "zoox",
+    "zooks"
+   ],
+   [
+    "twenty five",
+    "25"
+   ],
+   [
+    "twelfth",
+    "12th"
+   ]
+  ]
+ },
+ {
+  "beat": "B08",
+  "ratio": 0.968,
+  "heard": "What can a reviewer conclude? Source grounding. Every number is labeled a record or my own input. Verification. An unconfirmed board never reaches the scorer which would treat it as open.",
+  "diffs": [
+   [
+    "labelled",
+    "labeled"
+   ]
+  ]
+ },
+ {
+  "beat": "B09",
+  "ratio": 0.966,
+  "heard": "Agent Loops, clawed code stops at the human gates for my sign-off. Evaluation is still to come. A hand-checked set of verdicts with the wrong ones logged.",
+  "diffs": [
+   [
+    "claude",
+    "clawed"
+   ]
+  ]
+ },
+ {
+  "beat": "B10",
+  "ratio": 0.875,
+  "heard": "It will never apply, email, or contact anyone. The person decides, and it won't score resume fit so no real resume goes in.",
+  "diffs": [
+   [
+    "r sum",
+    "resume"
+   ],
+   [
+    "r sum",
+    "resume"
+   ]
+  ]
+ },
+ {
+  "beat": "B11",
+  "ratio": 0.917,
+  "heard": "First, I'll build a board resolver. Today, 16 of the 123 companies have a confirmed board. You'll know it ran when that number rises. Each new board saved with its raw response and a test.",
+  "diffs": [
+   [
+    "sixteen",
+    "16"
+   ],
+   [
+    "hundred twenty three",
+    "123"
+   ]
+  ]
+ },
+ {
+  "beat": "B12",
+  "ratio": 1.0,
+  "heard": "What could sink it? Many of the other hundred and seven may have no public board, and I don't know how many. I'll use only public greenhouse, lever and ashby boards, never scrape, and report coverage even if it's low.",
+  "diffs": []
+ },
+ {
+  "beat": "B13",
+  "ratio": 0.873,
+  "heard": "I also don't know if recent funding predicts hiring. I'll find out by rechecking the networking target's boards after 14 days and logging whether a posting appeared.",
+  "diffs": [
+   [
+    "re checking",
+    "rechecking"
+   ],
+   [
+    "targets'",
+    "target's"
+   ],
+   [
+    "fourteen",
+    "14"
+   ]
+  ]
+ },
+ {
+  "beat": "B14",
+  "ratio": 1.0,
+  "heard": "I picked it because I'm job hunting, too, and I wanted a smarter strategy than a hundred plus applications a day. It's a mix. What I can show is judgment, not code. Claude Code wrote most of the prototype. I set its rules like requiring recent funding and signed its human gates. New for me, evaluation and resolving boards at scale.",
+  "diffs": []
+ },
+ {
+  "beat": "BOUT",
+  "ratio": 0.769,
+  "heard": "Sponsor Scout, a pitch by Akshit Verma.",
+  "diffs": [
+   [
+    "sponsorscout",
+    "sponsor scout"
+   ]
+  ]
+ }
+]

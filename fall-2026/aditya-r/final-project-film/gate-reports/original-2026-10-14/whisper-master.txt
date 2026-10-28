@@ -1,0 +1,39 @@
+faster-whisper small.en transcript of exports/daythread-pitch-film.mp4 (machine transcript, not a human listen)
+[  0.00-  5.60] Hi, I'm Aditya Raj. This is Day Thread, my proposed final project. You're hearing a synthesized
+[  5.60- 10.84] voice reading my script. Nothing is built yet. Day Thread would be a check-in assistant
+[ 10.84- 16.10] that remembers conversations across days and turns concerning changes into evidence a home
+[ 16.10- 21.56] care coordinator can review. Here's the main story with a fictional client. On day one they
+[ 21.56- 26.98] mention just a little tumble. The raw transcript is kept apart from any summary. Here's the
+[ 26.98- 31.54] failure that could sync it. The summary drops the tumble, so every later step relying on
+[ 31.54- 36.80] it misses it. I'll predict that, then trigger it on purpose. When the check-in ends, a separate
+[ 36.80- 41.88] check reads the original words and creates an internal review item. It could miss unfamiliar
+[ 41.88- 47.30] wording or raise false alarms, so I'll test both. On day two, the assistant asks about
+[ 47.30- 51.64] the tumble without the client repeating it, linked to the day one words. That two-day
+[ 51.64- 56.46] replay is the first thing I'll make run. A coordinator opens a simple local review
+[ 56.46- 61.50] page showing the concern it's excerpts and the proposed action, then approves, refuses
+[ 61.50- 66.88] or defers. A separate executor acts only if that approval still matches, for the course
+[ 66.88- 72.30] delivery is simulated. The assistant can read check-in history, add source-linked observations
+[ 72.30- 77.66] and create review items. It can't silently overwrite past records, change agency-owned
+[ 77.66- 84.86] information or contact anyone. Full detection and AI calls already exist. I read their documentation.
+[ 84.86- 90.18] Lifeline says its full detection doesn't catch every fall and Daily Call describes daily AI
+[ 90.18- 95.30] calls with summaries for families. I'm not claiming they lack anything. Daythread's proposed
+[ 95.30-100.86] focus is source-linked concerns, an independent transcript check and a coordinator's decision
+[100.86-106.50] meant to help a coordinator understand changes without manually rebuilding several conversations.
+[106.50-110.94] I'm aiming for roles as an AI engineer, so a hiring reviewer should be able to run
+[110.94-115.54] a labeled replay from the readme within a minute and inspect the two-day memory and
+[115.54-120.76] one approval decision. I'm designing it to demonstrate prompt contracts, a budgeted loop
+[120.76-126.78] with clear stops, permissions in code, source-linked memory and evaluation. Evaluation compares
+[126.78-131.46] the workflow with and without memory, on held-out cases set aside before tuning, plus
+[131.46-136.66] at least five deliberate failures. These tests could demonstrate a controlled prototype but
+[136.66-141.82] wouldn't establish readiness for real care. The core is simulated text check-ins, memory,
+[141.82-147.18] evidence-linked concerns and human review in Python and SQLite. Clinical advice, real
+[147.18-152.98] patient data and autonomous outreach are out. Voice calls and cloud deployment are extensions.
+[152.98-157.42] I chose this because remembering yesterday is only part of the problem. Knowing when
+[157.42-162.38] a person needs to see it with the evidence is the part I find interesting. For this
+[162.38-167.30] pitch AI helped draft the material and check sources. I set requirements, required sources
+[167.30-172.46] before any comparison and cut overstated wording. New for me, persistent memory across
+[172.46-177.38] conversations, permissions enforced in code, human approval tied to the evidence shown and
+[177.38-182.62] evaluation on cases kept separate from development. Today there's this plan, this film and
+[182.62-188.14] a decision log, but no day thread prototype or evaluation results yet. I intend to build
+[188.14-193.02] the repository, the two day replay, the review page, tests and an evaluation report that
+[193.02-197.18] shows where it fails. This was day thread by Aditya Raj.

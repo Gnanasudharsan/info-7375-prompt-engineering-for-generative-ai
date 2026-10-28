@@ -1,0 +1,38 @@
+# StrykerJS 8.7.1 on a scratch copy of the InstaLoan backend — run 2026-10-13
+# mutate: src/constants.ts, src/bre.ts · testRunner: command (no tests exist, so every mutant 'survives'; this run only lists what Stryker generates)
+
+## src/bre.ts: 90 mutants
+  ConditionalExpression: 24
+  StringLiteral: 18
+  ObjectLiteral: 13
+  EqualityOperator: 12
+  ArithmeticOperator: 8
+  BlockStatement: 7
+  BooleanLiteral: 6
+  LogicalOperator: 1
+  MethodExpression: 1
+  -- mutants on lines that hold a business rule --
+  L94 ConditionalExpression: if (creditScore < RULES.MIN_CREDIT_SCORE) {  ->  true
+  L94 ConditionalExpression: if (creditScore < RULES.MIN_CREDIT_SCORE) {  ->  false
+  L94 EqualityOperator: if (creditScore < RULES.MIN_CREDIT_SCORE) {  ->  creditScore <= RULES.MIN_CREDIT_SCORE
+  L94 EqualityOperator: if (creditScore < RULES.MIN_CREDIT_SCORE) {  ->  creditScore >= RULES.MIN_CREDIT_SCORE
+  L94 BlockStatement: if (creditScore < RULES.MIN_CREDIT_SCORE) {  ->  {}
+  L95 StringLiteral: return reject(`Credit score ${creditScore} below cutoff ${RU  ->  ``
+  L97 ConditionalExpression: if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {  ->  true
+  L97 ConditionalExpression: if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {  ->  false
+  L97 EqualityOperator: if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {  ->  app.monthlyIncome <= RULES.MIN_MONTHLY_INCOME
+  L97 EqualityOperator: if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {  ->  app.monthlyIncome >= RULES.MIN_MONTHLY_INCOME
+  L97 BlockStatement: if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {  ->  {}
+  L98 StringLiteral: return reject(`Monthly income below minimum ₹${RULES.MIN_MON  ->  ``
+
+## src/constants.ts: 2 mutants
+  ObjectLiteral: 2
+  -- mutants on lines that hold a business rule --
+  L33 ObjectLiteral: export const STAGE_PRECONDITION: Record<string, StatusValue>  ->  {}
+  L44 ObjectLiteral: export const RULES = {  ->  {}
+  L45 (no mutant on this line): MIN_CREDIT_SCORE: 650,
+  L46 (no mutant on this line): MIN_MONTHLY_INCOME: 15000,
+  L47 (no mutant on this line): MAX_LOAN_AMOUNT: 1500000,
+
+TOTAL mutants: 92
+Numeric-literal mutants (e.g. 15000 -> 1500): 0

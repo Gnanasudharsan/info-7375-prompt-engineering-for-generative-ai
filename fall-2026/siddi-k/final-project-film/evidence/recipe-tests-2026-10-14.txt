@@ -1,0 +1,26 @@
+# Re-run of the data-role-sponsor-match tests
+# Run by: Claude Code session for Siddi Kommuri, 2026-10-14T19:16:08Z
+# Repo: https://github.com/kommurisi/the-reallocation-engine.git branch contrib/2026fa-kommurisi-data-role-sponsor-match at 0e33800
+# Node v24.14.0; command below
+$ node --test scripts/contrib/2026fa/kommurisi-data-role-sponsor-match/match.test.mjs
+✔ company names normalize suffixes/punctuation, nothing fuzzy (0.6875ms)
+✔ Python-list titles parse, including apostrophes inside double quotes (0.5224ms)
+✔ "Analytical Chemistry" and "Clinical Data Manager" are not data roles (0.3012ms)
+✔ timeline: runway before OPT start = days to start + unused unemployment days (0.276ms)
+✔ timeline: linear between lag and 2·lag, closed at ≤ lag (0.1439ms)
+✔ timeline: fails clearly on OPT already past / days exhausted / missing date (0.1202ms)
+✔ liveness never defaults open; a Greenhouse 404 beats an "active" page (1.7138ms)
+✔ end-to-end: real scorer, failure cases unresolved (not zero), every value labeled (130.04ms)
+✔ OPT already past → exit 3, nothing scored, no roles.json (54.4853ms)
+✔ a blocked re-run in the same out-dir leaves no stale scores behind (183.1047ms)
+✔ out-dir guard holds even when the repo itself lives under the temp dir (0.3643ms)
+✔ refuses to write outside its namespace (would overwrite tracked files) (43.4279ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 501.5449
+# exit 0

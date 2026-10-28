@@ -1,0 +1,64 @@
+## B01  (20.05 s)
+script: I'm Shubham Baag-way, and this is my final project pitch, written with Claude and spoken by a synthetic voice. Marino Desk Assistant will answer front-desk questions at Northeastern's Marino Recreation Center, like fees, hours and guest rules, from the public recreation website, and quote the page it used.
+heard:  I'm Shubham Bagway, and this is my final project pitch, written with clawed and spoken by a synthetic voice. Merino Desk Assistant will answer front desk questions at Northeastern's Merino Recreation Center, like fees, hours, and guest rules, from the Public Recreation website, and quote the page it used.
+
+## B02  (15.96 s)
+script: When it's done, it will be a public GitHub repository: a Python and FastAPI backend, a Next.js chat window, Claude writing the answers, and an evaluation report. A first version already exists, and its sixty tests passed today.
+heard:  When it's done, it will be a public GitHub repository, a Python and fast API backend, a next, JS chat window, clawed writing the answers and an evaluation report. A first version already exists and its 60 tests passed today.
+
+## B03  (11.67 s)
+script: Here's the problem. A member at the desk asks what an alumni membership costs. The answer is on the website, inside a page of about eight hundred words of fee tables, while the member waits.
+heard:  Here's the problem. A member at the desk asks what an alumni membership costs. The answer is on the website, inside a page of about 800 words of fee tables while the member waits.
+
+## B04  (14.06 s)
+script: I looked at what we use now. The site's own search returns pages, not answers. A search for guest pass today returned five pages, with the home page first. Manual lookup means scrolling until you find the line.
+heard:  I looked at what we use now. The site's own search returns pages, not answers. A search for guest pass today returned five pages with the home page first. Manual lookup means scrolling until you find the line.
+
+## B05  (12.20 s)
+script: Mine will save the desk assistant that scroll. It will give one answer, quote the exact line, and link to it, which the site search doesn't do. And when the website doesn't say, it will answer: I don't know.
+heard:  Mine will save the desk assistant that scroll. It will give one answer, quote the exact line and link to it, which the site search doesn't do. And when the website doesn't say it will answer, I don't know.
+
+## B06  (16.47 s)
+script: My target role is new-grad full-stack engineer, so my reader is a hiring manager or an engineer. In sixty seconds, they'll see the evaluation table in the read-me, run one command, ask a fee question, and watch it refuse an off-topic one.
+heard:  My target role is new grad full-stack engineer, so my reader is a hiring manager or an engineer. In 60 seconds, they'll see the evaluation table in the read me, run one command, ask a fee question, and watch it refuse an off-topic one.
+
+## B07  (14.93 s)
+script: What will it prove? Source grounding: it already retrieves five passages and reranks them to three. Next, a prompt contract: Claude must return the answer, the quoted line, the link and the date, and a quote that isn't in the page fails.
+heard:  What will it prove? Source grounding. It already retrieves five passages and ranks them to three. Next, a prompt contract. Claude must return the answer, the quoted line, the link, and the date, and a quote that isn't in the page fails.
+
+## B08  (12.91 s)
+script: And evaluation: fifty real desk questions with my own answer keys, scored three ways. Did it cite the right page? Was the answer right? Did it refuse when it should? Every miss goes in the report.
+heard:  An evaluation, 50 real desk questions with my own answer keys scored three ways. Did it cite the right page? Was the answer right? Did it refuse when it should? Every miss goes in the report.
+
+## B09  (11.90 s)
+script: A reviewer could fairly conclude that I can specify, ground and evaluate an AI app, and measure where it's wrong. Not that it's always accurate, and not that Marino uses it officially.
+heard:  A reviewer could fairly conclude that I can specify, ground and evaluate an AI app and measure where it's wrong. Not that it's always accurate, and not that Merino uses it officially.
+
+## B10  (14.57 s)
+script: What's in: the public recreation pages, with fees, hours and policies. Deliberately out: internal staff documents. They aren't public, so the finished repo never indexes them. It also won't check live court availability.
+heard:  What's in, the public recreation pages with fees, hours and policies, deliberately out, internal staff documents. They aren't public, so the finished repo never indexes them. It also won't check live court availability.
+
+## B11  (16.04 s)
+script: The first piece I'll make run is a public-only index and a retrieval check: fifty questions, each with its source page, and a script that counts how many find the right page in the top three. You'll know it ran when that report is in the repo, with the crawl date.
+heard:  The first piece I'll make run is a public-only index and a retrieval check, 50 questions, each with its source page, and a script that counts how many find the right page in the top three. You'll know it ran when that report is in the repo with the crawl date.
+
+## B12  (17.86 s)
+script: What could sink it? Prices that depend on the date. Today, the alumni page lists five yearly prices for the same membership, from four hundred eighty dollars in September down to one hundred twenty in June. A model that doesn't know today's date can quote the wrong one, confidently.
+heard:  What could sink it? Prices that depend on the date. Today, the Alumni Page lists five yearly prices for the same membership from $480 in September down to 120 in June. A model that doesn't know today's date can quote the wrong one confidently.
+
+## B13  (14.10 s)
+script: So the contract will pass in today's date and require the quoted row, the evaluation will include date questions, and every answer will show its crawl date. The limit I can't fix: it's only as current as the last crawl.
+heard:  So the contract will pass in today's date and require the quoted row. The evaluation will include date questions, and every answer will show its crawl date. The limit I can't fix, it's only as current as the last crawl.
+
+## B14  (23.57 s)
+script: Why this project? I work the Marino front desk, and these are the questions I get. It's a mix. Backend and cloud I already have: I wrote the EventFlow Engine myself, a Node pipeline on Google Cloud. The Marino repo's current code was mostly AI-generated under my direction, so it isn't my proof. New to me: answer keys, measuring a model's misses, and prompt contracts.
+heard:  Why this project? I work the Merino front desk and these are the questions I get. It's a mix. Backhand and cloud I already have. I wrote the event flow engine myself, a node pipeline on Google Cloud. The Merino Repo's current code was mostly AI generated under my direction, so it isn't my proof. New to me. Answer keys, measuring a model's misses and prompt contracts.
+
+## B15  (16.28 s)
+script: Exists today: the first version, its retrieval and chat code, sixty passing tests, and the checks in this film, all run on October thirteenth. Will exist: the public-only index, Claude under the contract, and the fifty-question evaluation with its report.
+heard:  exists today. The first version, its retrieval and chat code, 60 passing tests and the checks in this film, all run on October 13th. Will exist, the public-only index, clawed under the contract, and the 50-question evaluation with its report.
+
+## BOUT  (4.50 s)
+script: Marino Desk Assistant: a pitch by Shubham Baag-way.
+heard:  Merino desk assistant, a pitch by Shubbin Bagway.
+

@@ -31,7 +31,7 @@
       "Chapter 1"
     ],
     "build": {
-      "at": "2026-09-24T17:37:10",
+      "at": "2026-09-25T11:13:08",
       "cut": "master",
       "filled": 11,
       "of": 11,
@@ -96,7 +96,7 @@
         "status": "VIDEO",
         "src": "media/B00.mp4",
         "filled_by": "remotion:ShiftComposer",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -170,7 +170,7 @@
         "status": "VIDEO",
         "src": "media/B01.mp4",
         "filled_by": "remotion:BrutalistHesitantWriter",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -237,7 +237,7 @@
         "status": "VIDEO",
         "src": "media/B02.mp4",
         "filled_by": "remotion:ShiftOverflow",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -338,7 +338,7 @@
         "status": "VIDEO",
         "src": "media/B03.mp4",
         "filled_by": "remotion:ShiftPipeline",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -397,7 +397,7 @@
         "status": "VIDEO",
         "src": "media/B04.mp4",
         "filled_by": "remotion:ShiftCancellation",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -450,7 +450,7 @@
         "status": "VIDEO",
         "src": "media/B05.mp4",
         "filled_by": "remotion:ShiftComposer",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -466,27 +466,31 @@
         "motion": "stagger",
         "show": [
           {
-            "at": "0.05",
+            "at": "0.02",
             "event": "recorded-run card opens: 'verify_claims.py'"
           },
           {
-            "at": "0.18",
+            "at": "0.08",
             "event": "the shifted-path vector lands, full precision"
           },
           {
-            "at": "0.32",
+            "at": "0.15",
             "event": "the direct-path vector lands directly beneath it, digits aligned"
           },
           {
-            "at": "0.48",
-            "event": "the two differing digits turn terracotta and bold — everything else is identical"
+            "at": "0.25",
+            "event": "on 'Not zero': the two differing digits turn terracotta and bold"
           },
           {
-            "at": "0.64",
-            "event": "the headline figure scales up: 1.1102230246251565e-16"
+            "at": "0.29",
+            "event": "on 'adjacent': every agreeing digit dims and a '1 ULP' marker appears between each differing pair — held through 'indistinguishable' (requested after watching, 2026-09-25)"
           },
           {
-            "at": "0.85",
+            "at": "0.60",
+            "event": "the isolation releases as the headline figure scales up: 1.1102230246251565e-16"
+          },
+          {
+            "at": "0.82",
             "event": "the narrowed claim lands under it"
           }
         ],
@@ -515,11 +519,12 @@
             "diffLabel": "max absolute difference",
             "diffValue": "1.1102230246251565e-16",
             "diffGloss": "exactly 2**-53 — adjacent floats, one step apart. Two digits out of fifty-three.",
-            "verdict": "Identical in algebra. Indistinguishable in floating point. Those are not the same sentence."
+            "verdict": "Identical in algebra. Indistinguishable in floating point. Those are not the same sentence.",
+            "isolateLabel": "1 ULP"
           },
           "rendered": {
             "out": "media/B06.mp4",
-            "at": "2026-09-24T21:34:48.847894+00:00"
+            "at": "2026-09-25T18:10:16.332576+00:00"
           }
         }
       },
@@ -529,7 +534,7 @@
         "status": "VIDEO",
         "src": "media/B06.mp4",
         "filled_by": "remotion:ShiftReceipt",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -623,7 +628,7 @@
         "status": "VIDEO",
         "src": "media/B07.mp4",
         "filled_by": "remotion:ShiftBoundary",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -674,7 +679,7 @@
         "status": "VIDEO",
         "src": "media/B08.mp4",
         "filled_by": "remotion:ClaudeVerdictArtifact",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -727,7 +732,7 @@
         "status": "VIDEO",
         "src": "media/B09.mp4",
         "filled_by": "remotion:ShiftComposer",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     },
     {
@@ -777,7 +782,7 @@
         "status": "VIDEO",
         "src": "media/B10.mp4",
         "filled_by": "remotion:ShiftOutro",
-        "at": "2026-09-24T17:37:10"
+        "at": "2026-09-25T11:13:08"
       }
     }
   ]

@@ -1,0 +1,4 @@
+$ python3 runtime/qc/lane_check.py ../final-project-film
+[lane-check] marino-desk-assistant-pitch  cut=master  known_slates=[]
+[lane-check] PASS — 16 beats checked, no lane violations.
+exit=0

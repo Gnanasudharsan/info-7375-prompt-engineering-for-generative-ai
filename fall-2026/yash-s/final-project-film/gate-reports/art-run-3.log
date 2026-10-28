@@ -1,0 +1,37 @@
+[run] skip B01_Search — B01 already filled
+[run] skip B02_QuoteCheck — B02 already filled
+[run] skip B05_AIAnswers — B05 already filled
+[run] skip B06_Sentence — B06 already filled
+[run] skip B08_Reader — B08 already filled
+[run] skip B10_Out — B10 already filled
+[run] skip B13_Why — B13 already filled
+[run] skip B14_Exists — B14 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[run] rendering B00_Docs
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering B03_Repo
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering B04_KeywordSearch
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering B07_Local
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering B09_Proves
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering B11_FirstPiece
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering B12_Risk
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[run] rendering BOUT_Outro
+[audit] report: final-project-film/youtube/actions-docs-qa-pitch/layout_audit.md
+[remotion] BIDEA: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=34 BLOCKER=0 MAJOR=0 → final-project-film/youtube/actions-docs-qa-pitch/_qc/REPORT.md
+[run] done → final-project-film/youtube/actions-docs-qa-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see final-project-film/youtube/actions-docs-qa-pitch/SHOTLIST.md

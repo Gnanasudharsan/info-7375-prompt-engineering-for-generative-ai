@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "slug": "rithika-reallocation-mode-video",
+    "title": "A Mode for the Reallocation Engine",
+    "topic": "INFO 7375 · REALLOCATION ENGINE MODE",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "info-7375",
+    "channel_title": "",
+    "persona": "Rithika Sankar Rajeswari (first person)",
+    "author": "Rithika Sankar Rajeswari",
+    "course": "INFO 7375",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "kokoro_speed": 0.962,
+    "voice_reason": "Same rule as Rithika's final-project film: Kokoro af_bella, first person, as her. The skill's LIAM BY DEFAULT law (am_onyx, with an instructor greeting) belongs to the instructor's channel; this film carries no instructor identity.",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "caption_reason": "As in the final-project film, no burned-in captions.",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Rithika's script is eight beats, read verbatim, with a hard 4:00 maximum. (1) Runtime: the hesitant writer, key-terms card and Your Turn composer would add narration outside her script and push past 4:00. (2) Branding: those components carry the instructor's identity, which this student film may not show. (3) Beat 1 already introduces the persona and the problem; beat 3 defines the terms (gates, HELD, CLOSED, OVER-LEVEL). The outro is never exempt: beat 8 is BOUT, drawn in Manim with the film title.",
+    "privacy_rule": "On screen: no screenshots, no personal information, no home-folder paths. The persona is fictional (Sasha Jones). Real job URLs appear only as the host and path shown in the repo's own transcripts.",
+    "constructed_rule": "B01 carries an on-screen 'fictional persona' label. All other figures are real output from the Reallocation Engine run files.",
+    "pronunciation": [
+      {
+        "written": "H-1B",
+        "spoken": "H one B"
+      },
+      {
+        "written": "F-1",
+        "spoken": "F one"
+      },
+      {
+        "written": "OPT",
+        "spoken": "O P T"
+      },
+      {
+        "written": "G1",
+        "spoken": "G one"
+      },
+      {
+        "written": "G2",
+        "spoken": "G two"
+      },
+      {
+        "written": "G3",
+        "spoken": "G three"
+      },
+      {
+        "written": "G4",
+        "spoken": "G four"
+      },
+      {
+        "written": "API",
+        "spoken": "A P I"
+      },
+      {
+        "written": "TODOs",
+        "spoken": "to-dooz"
+      },
+      {
+        "written": "DRAFT",
+        "spoken": "draft"
+      },
+      {
+        "written": "Rithika",
+        "spoken": "Ritika"
+      },
+      {
+        "written": "Instacart",
+        "spoken": "Instuh cart"
+      },
+      {
+        "written": "Airbnb",
+        "spoken": "Air B N B"
+      },
+      {
+        "written": "repo's",
+        "spoken": "ree-poh's"
+      }
+    ],
+    "audience": "the INFO 7375 grader; complete beginners to the Reallocation Engine",
+    "source_doc": "the-reallocation-engine, branch mode/rithika-sr-ds-h1b-liveness @ 817801c (read-only): course/2026fa/submissions/rithika-sr/mode/{G4-HUMAN-REVIEW.md, WORKED-RUN.md, worked-run/EVALUATION.md, worked-run/terminal/*.txt}",
+    "playlist": "INFO 7375",
+    "tags": [
+      "job search",
+      "H-1B",
+      "liveness",
+      "Greenhouse",
+      "evaluation"
+    ],
+    "audio_method": "voice_sentences.py: per-sentence Kokoro af_bella at speed 0.96, 1.35 s after each sentence (B04 1.4s, B05 1.4s, B06 1.4s on terminal-text beats), 1.4 s between beats, 1.0 s outro tail",
+    "build": {
+      "at": "2026-10-21T18:37:18",
+      "cut": "master",
+      "filled": 8,
+      "of": 8,
+      "slates": [],
+      "skin_warnings": [
+        "B01: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Hi, I'm Rithika. This is my mode for the Reallocation Engine. It's built for Sasha Jones, a fictional F-1 master's student in data science. She graduates in December 2026, her OPT work permit should start in January 2027, and she's applying for entry-level Data Scientist roles that sponsor an H-1B. Like most students, she finds them on aggregator sites.",
+      "narration_text": "Hi, I'm Ritika. This is my mode for the Reallocation Engine. It's built for Sasha Jones, a fictional F one master's student in data science. She graduates in December 2026, her O P T work permit should start in January 2027, and she's applying for entry-level Data Scientist roles that sponsor an H one B. Like most students, she finds them on aggregator sites.",
+      "estimated_duration_s": 19.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Sasha's identity card slides in, labelled 'fictional persona'; its five fields fill in on the words (F-1, MS Data Science, grad Dec 2026, OPT Jan 2027, SOC 15-2051); three aggregator listing cards fan out behind it.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "identity card + 'fictional persona'"
+          },
+          {
+            "at": 0.45,
+            "event": "fields fill"
+          },
+          {
+            "at": 0.85,
+            "event": "aggregator listings"
+          }
+        ],
+        "manim": {
+          "class": "B01_Persona"
+        },
+        "motion_claim": "Sasha's identity card slides in, labelled 'fictional persona'; its five fields fill in on the words (F-1, MS Data Science, grad Dec 2026, OPT Jan 2027, SOC 15-2051); three aggregator listing cards fan out behind it."
+      },
+      "constructed": true,
+      "constructed_note": "Sasha Jones is a fictional persona; the card carries an on-screen 'fictional persona' label.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 33.07,
+      "audio_file": "mp3/beat-B01.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.35,
+        "tail_s": 1.4,
+        "sentences": 5
+      },
+      "render_duration_s": 33.083333333333336,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Here's what Sasha can't see. A job page can look open long after the employer closed the role. She can't tell whether a company that sponsors visas sponsors this role, or whether a live posting is even her level. And every dead application costs time, because once OPT starts she gets only ninety days of unemployment.",
+      "narration_text": "Here's what Sasha can't see. A job page can look open long after the employer closed the role. She can't tell whether a company that sponsors visas sponsors this role, or whether a live posting is even her level. And every dead application costs time, because once O P T starts she gets only ninety days of unemployment.",
+      "estimated_duration_s": 18.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three 'can't see' cards appear one by one (still open?, sponsors this role?, her level?), each with a closed-eye mark; then a 90-day clock whose hand sweeps.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "card 1"
+          },
+          {
+            "at": 0.35,
+            "event": "card 2"
+          },
+          {
+            "at": 0.55,
+            "event": "card 3"
+          },
+          {
+            "at": 0.8,
+            "event": "90-day clock"
+          }
+        ],
+        "manim": {
+          "class": "B02_CantSee"
+        },
+        "motion_claim": "Three 'can't see' cards appear one by one (still open?, sponsors this role?, her level?), each with a closed-eye mark; then a 90-day clock whose hand sweeps."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 25.35,
+      "audio_file": "mp3/beat-B02.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.35,
+        "tail_s": 1.4,
+        "sentences": 4
+      },
+      "render_duration_s": 25.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "The mode runs gates in order. G1 checks the company in the engine's sponsorship data. G2 checks the job is live, and an aggregator saying \"active\" is never enough on its own. A level check makes sure the title fits an entry-level candidate. G3 checks the visa timeline, and G4 is a human. These are gates, not votes. A role that fails one never gets a score: it's held, closed, or over-level.",
+      "narration_text": "The mode runs gates in order. G one checks the company in the engine's sponsorship data. G two checks the job is live, and an aggregator saying \"active\" is never enough on its own. A level check makes sure the title fits an entry-level candidate. G three checks the visa timeline, and G four is a human. These are gates, not votes. A role that fails one never gets a score: it's held, closed, or over-level.",
+      "estimated_duration_s": 24.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A row of five gates (G1 sponsorship, G2 liveness, Level, G3 timeline, G4 human) lights up one by one; a role card rides through; three exit chutes drop below the row: HELD, CLOSED, OVER-LEVEL; label 'gates, not votes'.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "G1"
+          },
+          {
+            "at": 0.25,
+            "event": "G2"
+          },
+          {
+            "at": 0.45,
+            "event": "Level"
+          },
+          {
+            "at": 0.55,
+            "event": "G3, G4"
+          },
+          {
+            "at": 0.7,
+            "event": "gates, not votes"
+          },
+          {
+            "at": 0.85,
+            "event": "HELD / CLOSED / OVER-LEVEL"
+          }
+        ],
+        "manim": {
+          "class": "B03_Gates"
+        },
+        "motion_claim": "A row of five gates (G1 sponsorship, G2 liveness, Level, G3 timeline, G4 human) lights up one by one; a role card rides through; three exit chutes drop below the row: HELD, CLOSED, OVER-LEVEL; label 'gates, not votes'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 35.55,
+      "audio_file": "mp3/beat-B03.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.35,
+        "tail_s": 1.4,
+        "sentences": 7
+      },
+      "render_duration_s": 35.583333333333336,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "I ran it on thirteen real postings. The key row is a Built In page for an Instacart Data Scientist job. The page says it was removed on June 11, 2025, yet the repo's checker still calls it active, sixteen months later. My first version marked that job Apply. This mode held it.",
+      "narration_text": "I ran it on thirteen real postings. The key row is a Built In page for an Instuh cart Data Scientist job. The page says it was removed on June 11, 2025, yet the ree-poh's checker still calls it active, sixteen months later. My first version marked that job Apply. This mode held it.",
+      "estimated_duration_s": 17.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Left: the Built In page card with its real banner text 'Sorry, this job was removed … Jun 11, 2025'. Right: the checker's real output line '✅ active'. Then a verdict strip: 'v0.1: Apply ✗ → this mode: HELD ✓'.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "13 postings"
+          },
+          {
+            "at": 0.3,
+            "event": "removed banner"
+          },
+          {
+            "at": 0.5,
+            "event": "✅ active"
+          },
+          {
+            "at": 0.8,
+            "event": "Apply ✗ → HELD ✓"
+          }
+        ],
+        "manim": {
+          "class": "B04_Removed"
+        },
+        "motion_claim": "Left: the Built In page card with its real banner text 'Sorry, this job was removed … Jun 11, 2025'. Right: the checker's real output line '✅ active'. Then a verdict strip: 'v0.1: Apply ✗ → this mode: HELD ✓'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 26.24,
+      "audio_file": "mp3/beat-B04.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.4,
+        "tail_s": 1.4,
+        "sentences": 5
+      },
+      "render_duration_s": 26.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Then I opened the pages myself, as the G4 human, and found two bugs in the existing checker. An Airbnb link scored Apply, but it redirected through Greenhouse's own error page to a general job list. And on a Nextdoor page, the checker missed an Apply button I could see.",
+      "narration_text": "Then I opened the pages myself, as the G four human, and found two bugs in the existing checker. An Air B N B link scored Apply, but it redirected through Greenhouse's own error page to a general job list. And on a Nextdoor page, the checker missed an Apply button I could see.",
+      "estimated_duration_s": 16.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The real Airbnb redirect chain draws hop by hop (301 → 302 ?error=true → 302 all-jobs → 200) beside 'checker: ✅ active'; then the Nextdoor card: 'Apply button visible → checker: uncertain'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "G4 human"
+          },
+          {
+            "at": 0.45,
+            "event": "redirect chain hops"
+          },
+          {
+            "at": 0.6,
+            "event": "checker: active"
+          },
+          {
+            "at": 0.85,
+            "event": "Nextdoor: uncertain"
+          }
+        ],
+        "manim": {
+          "class": "B05_Bugs"
+        },
+        "motion_claim": "The real Airbnb redirect chain draws hop by hop (301 → 302 ?error=true → 302 all-jobs → 200) beside 'checker: ✅ active'; then the Nextdoor card: 'Apply button visible → checker: uncertain'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 22.27,
+      "audio_file": "mp3/beat-B05.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.4,
+        "tail_s": 1.4,
+        "sentences": 3
+      },
+      "render_duration_s": 22.291666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "So I fixed both inside my mode. Run 2 asks Greenhouse's job API for the actual job record, follows every redirect, and only trusts known employer and hiring-system sites. Airbnb became Closed, and Nextdoor became live. But that exposed a new problem: two Senior jobs now scored Apply for an entry-level student. Run 3 added a level gate on the title. Against my own decisions on the five postings I reviewed, agreement went three of five, then two, then four.",
+      "narration_text": "So I fixed both inside my mode. Run 2 asks Greenhouse's job A P I for the actual job record, follows every redirect, and only trusts known employer and hiring-system sites. Air B N B became Closed, and Nextdoor became live. But that exposed a new problem: two Senior jobs now scored Apply for an entry-level student. Run 3 added a level gate on the title. Against my own decisions on the five postings I reviewed, agreement went three of five, then two, then four.",
+      "estimated_duration_s": 26.9,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three fix labels drop in (job record API · redirect chain · trusted-site allowlist); Airbnb Apply flips to CLOSED; two Senior cards flip to Apply; the Level gate stamps them OVER-LEVEL; three bars grow to 3/5, 2/5, 4/5.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "three fix labels"
+          },
+          {
+            "at": 0.35,
+            "event": "Airbnb → CLOSED"
+          },
+          {
+            "at": 0.5,
+            "event": "Senior → Apply"
+          },
+          {
+            "at": 0.65,
+            "event": "level gate → OVER-LEVEL"
+          },
+          {
+            "at": 0.85,
+            "event": "bars 3/5, 2/5, 4/5"
+          }
+        ],
+        "manim": {
+          "class": "B06_Fixes"
+        },
+        "motion_claim": "Three fix labels drop in (job record API · redirect chain · trusted-site allowlist); Airbnb Apply flips to CLOSED; two Senior cards flip to Apply; the Level gate stamps them OVER-LEVEL; three bars grow to 3/5, 2/5, 4/5."
+      },
+      "actual_duration_s": 39.76,
+      "audio_file": "mp3/beat-B06.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.4,
+        "tail_s": 1.4,
+        "sentences": 6
+      },
+      "render_duration_s": 39.791666666666664,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Two honest caveats. Those rules were checked on the same five postings I reviewed, so that isn't a held-out test. And some things it still can't see. Figma's title just says \"Data Scientist,\" but the description asks for experience. Sponsorship data is company-wide. And only Greenhouse has a record check so far.",
+      "narration_text": "Two honest caveats. Those rules were checked on the same five postings I reviewed, so that isn't a held-out test. And some things it still can't see. Figma's title just says \"Data Scientist,\" but the description asks for experience. Sponsorship data is company-wide. And only Greenhouse has a record check so far.",
+      "estimated_duration_s": 17.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A caveat card stamps 'Not a held-out test'; then three limit labels appear one by one (title ≠ description, company-wide sponsorship, Greenhouse only).",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "not a held-out test"
+          },
+          {
+            "at": 0.55,
+            "event": "title ≠ description"
+          },
+          {
+            "at": 0.75,
+            "event": "company-wide"
+          },
+          {
+            "at": 0.9,
+            "event": "Greenhouse only"
+          }
+        ],
+        "manim": {
+          "class": "B07_Caveats"
+        },
+        "motion_claim": "A caveat card stamps 'Not a held-out test'; then three limit labels appear one by one (title ≠ description, company-wide sponsorship, Greenhouse only)."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 27.09,
+      "audio_file": "mp3/beat-B07.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.35,
+        "tail_s": 1.4,
+        "sentences": 6
+      },
+      "render_duration_s": 27.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "So the recipe stays DRAFT: it ran live three times, but typed TODOs are still open. My next step is a held-out test: decide on new postings first, then run the mode.",
+      "narration_text": "So the recipe stays draft: it ran live three times, but typed to-dooz are still open. My next step is a held-out test: decide on new postings first, then run the mode.",
+      "estimated_duration_s": 10.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A status board: 'Status: DRAFT · ran live 3× · typed TODOs open'; then 'Next: held-out test' with its two steps (decide first → then run); the film title beneath.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "status line"
+          },
+          {
+            "at": 0.6,
+            "event": "Next: held-out test"
+          },
+          {
+            "at": 0.85,
+            "event": "title"
+          }
+        ],
+        "manim": {
+          "class": "BOUT_Status"
+        },
+        "motion_claim": "A status board: 'Status: DRAFT · ran live 3× · typed TODOs open'; then 'Next: held-out test' with its two steps (decide first → then run); the film title beneath.",
+        "remotion": {
+          "props": {
+            "title": "A Mode for the Reallocation Engine",
+            "handle": "INFO 7375 · Reallocation Engine",
+            "subline": ""
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "outro_note": "As in the final-project film: beat 8 is the outro, drawn in Manim with the film title. The stock ClaudeTitleOutro hard-codes the instructor's channel handle and mascot, which this student film may not carry. No narration was added beyond Rithika's beat 8.",
+      "actual_duration_s": 13.37,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "audio_build": {
+        "method": "voice_sentences.py (per-sentence Kokoro, joined with silence)",
+        "speed": 0.962,
+        "sentence_pause_s": 1.35,
+        "tail_s": 1.0,
+        "sentences": 2
+      },
+      "render_duration_s": 13.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-21T18:37:18"
+      }
+    }
+  ]
+}

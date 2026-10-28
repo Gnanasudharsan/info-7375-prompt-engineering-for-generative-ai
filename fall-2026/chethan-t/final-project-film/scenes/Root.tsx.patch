@@ -1,0 +1,60 @@
+diff --git a/runtime/remotion/src/Root.tsx b/runtime/remotion/src/Root.tsx
+index 7fc25cb..814d721 100644
+--- a/runtime/remotion/src/Root.tsx
++++ b/runtime/remotion/src/Root.tsx
+@@ -1,5 +1,6 @@
+ import React from 'react';
+ import {Composition, Folder} from 'remotion';
++import {AipOpen, AipRenameBreak, AipAltCompare, AipGrepNoise, AipTraceChain, AipPipeline, AipVerifyGate, AipPrComment, AipEvalGrid, AipScope, AipRisk, AipWhy, AipTitleOutro, aipSchema, aipOutroSchema} from './ApiImpactPitch';
+ import {WalkerGodotSetup, walkerGodotSetupSchema} from './scenes/WalkerGodotSetup';
+ import {GodotDevWorkbench, godotDevWorkbenchSchema} from './scenes/GodotDevWorkbench';
+ import {GodotDesignBoard, godotDesignBoardSchema} from './scenes/GodotDesignBoard';
+@@ -4161,6 +4162,48 @@ export const RemotionRoot: React.FC = () => {
+           badgeScale: 0.5,
+         }}
+       />
++          {/* ── api-impact-pitch (Chethan Gowda, INFO 7375) — reel-local compositions ── */}
++      <Folder name="ApiImpactPitch">
++        <Composition id="AipOpen" component={AipOpen} durationInFrames={300} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipRenameBreak" component={AipRenameBreak} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipAltCompare" component={AipAltCompare} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipGrepNoise" component={AipGrepNoise} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipTraceChain" component={AipTraceChain} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipPipeline" component={AipPipeline} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipVerifyGate" component={AipVerifyGate} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipPrComment" component={AipPrComment} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipEvalGrid" component={AipEvalGrid} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipScope" component={AipScope} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipRisk" component={AipRisk} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipWhy" component={AipWhy} durationInFrames={450} fps={30} width={1920} height={1080}
++          schema={aipSchema} defaultProps={aipSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++        <Composition id="AipTitleOutro" component={AipTitleOutro} durationInFrames={150} fps={30} width={1920} height={1080}
++          schema={aipOutroSchema} defaultProps={aipOutroSchema.parse({})}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(props.durationSeconds * 30)})} />
++      </Folder>
+     </>
+   );
+ };

@@ -1,0 +1,245 @@
+{
+  "video": "actions-docs-qa-pitch",
+  "metadata": {
+    "slug": "actions-docs-qa-pitch",
+    "title": "Actions Docs Q&A \u2014 Final Project Pitch",
+    "topic": "FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "yash-saraf",
+    "channel_title": "Yash Saraf",
+    "persona": "Yash Saraf, first person (synthetic Kokoro am_onyx voice reading Yash's own script)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "INFO 7375 assignment rules: narrate as yourself and never use the instructor's name, persona or credit line. So: no 'Liam, in for Bear' greeting, no Claude.ai Your Turn composer (a constructed Claude screen with nothing real to show), no verdict card, and an own outro instead of ClaudeTitleOutro, whose handle is hard-coded to @NikBearBrown. bookend_check.py will report the outro as missing; that is deliberate and recorded in FRICTIONAL.md.",
+    "audience": "INFO 7375 instructor and TAs; hiring managers for AI developer / DevOps / cloud roles",
+    "source_doc": "PROJECT-BRIEF.md (2026-10-11); evidence/ screenshots (2026-10-11); docs.github.com pages checked 2026-10-11",
+    "playlist": "INFO 7375 Final Project",
+    "chapter_number": 0,
+    "tags": [
+      "GitHub Actions",
+      "document Q&A",
+      "source grounding",
+      "evaluation",
+      "local model",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-13T21:37:33",
+      "cut": "review",
+      "filled": 17,
+      "of": 17,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' \u2014 COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' \u2014 OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "source_of_truth": "beat_sheet.json \u2014 edit the sheet, not this file",
+  "beats_total": 17,
+  "beats_open": 0,
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "status": "filled",
+      "on_disk": "media/BIDEA.mp4",
+      "method": "remotion",
+      "who": "pipeline",
+      "scene_hint": null,
+      "prompt": null,
+      "slot": "media/BIDEA.mp4",
+      "label": "Hi, I'm Yash Saraf. This film pitches my final project, and nothing in it is built yet. I first aske"
+    },
+    {
+      "beat_id": "B00",
+      "status": "filled",
+      "on_disk": "manim/B00.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B00.mp4",
+      "label": "Here's what I will build. Actions Docs Q and A will be a command-line tool that answers questions ab"
+    },
+    {
+      "beat_id": "B01",
+      "status": "filled",
+      "on_disk": "manim/B01.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B01.mp4",
+      "label": "It will search the docs for the passage that holds the answer. Then a small model, running free on m"
+    },
+    {
+      "beat_id": "B02",
+      "status": "filled",
+      "on_disk": "manim/B02.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B02.mp4",
+      "label": "Next, a script will check the quote, word for word, against the docs. If it matches, the answer ship"
+    },
+    {
+      "beat_id": "B03",
+      "status": "filled",
+      "on_disk": "manim/B03.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B03.mp4",
+      "label": "When it's done, it will be a public GitHub repository: the tool, a script that fetches one pinned ve"
+    },
+    {
+      "beat_id": "B04",
+      "status": "filled",
+      "on_disk": "manim/B04.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B04.mp4",
+      "label": "Before pitching it, I tried what already exists, on October eleventh, with three questions from my o"
+    },
+    {
+      "beat_id": "B05",
+      "status": "filled",
+      "on_disk": "manim/B05.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B05.mp4",
+      "label": "Ask Copilot, built into that search, and the Claude desktop app both matched the docs on all three. "
+    },
+    {
+      "beat_id": "B06",
+      "status": "filled",
+      "on_disk": "manim/B06.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B06.mp4",
+      "label": "So mine is not meant to give better answers. What it adds is the exact sentence each answer came fro"
+    },
+    {
+      "beat_id": "B07",
+      "status": "filled",
+      "on_disk": "manim/B07.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B07.mp4",
+      "label": "It will also run free, on my own laptop. The docs search notes that GitHub keeps the questions asked"
+    },
+    {
+      "beat_id": "B08",
+      "status": "filled",
+      "on_disk": "manim/B08.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B08.mp4",
+      "label": "Who opens it? I'm aiming for AI developer, DevOps, or cloud engineer roles, so the reader is a hirin"
+    },
+    {
+      "beat_id": "B09",
+      "status": "filled",
+      "on_disk": "manim/B09.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B09.mp4",
+      "label": "What will it prove? That I can ground answers in a source, verify them with a script, hold a model t"
+    },
+    {
+      "beat_id": "B10",
+      "status": "filled",
+      "on_disk": "manim/B10.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B10.mp4",
+      "label": "What's out: agent loops, a web interface, other docs, and any claim that it beats Copilot or Claude."
+    },
+    {
+      "beat_id": "B11",
+      "status": "filled",
+      "on_disk": "manim/B11.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B11.mp4",
+      "label": "The first piece is search alone, with no model: my three questions plus two more, checking whether t"
+    },
+    {
+      "beat_id": "B12",
+      "status": "filled",
+      "on_disk": "manim/B12.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B12.mp4",
+      "label": "The biggest risk is search missing. The docs' keyword search missed two of my three, and mine starts"
+    },
+    {
+      "beat_id": "B13",
+      "status": "filled",
+      "on_disk": "manim/B13.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B13.mp4",
+      "label": "Why this project? It's a mix. I already build C I pipelines: GitHub Actions runs in my three public "
+    },
+    {
+      "beat_id": "B14",
+      "status": "filled",
+      "on_disk": "manim/B14.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/B14.mp4",
+      "label": "So here's what exists today: my three earlier repos, six dated screenshots, and the brief. Everythin"
+    },
+    {
+      "beat_id": "BOUT",
+      "status": "filled",
+      "on_disk": "manim/BOUT.mp4",
+      "method": "manim",
+      "who": "pipeline",
+      "scene_hint": "animated_graphics",
+      "prompt": null,
+      "slot": "manim/BOUT.mp4",
+      "label": "Actions Docs Q and A. A final project pitch, by Yash Saraf."
+    }
+  ]
+}

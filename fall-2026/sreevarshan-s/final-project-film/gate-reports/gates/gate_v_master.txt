@@ -1,0 +1,1 @@
+[gate-v] frames=42 BLOCKER=0 MAJOR=0 → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/_qc/REPORT.md

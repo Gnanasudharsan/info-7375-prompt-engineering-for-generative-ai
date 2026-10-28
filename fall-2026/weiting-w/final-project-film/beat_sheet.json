@@ -1,0 +1,926 @@
+{
+  "metadata": {
+    "slug": "show-tell-the-names-nothing-checks",
+    "title": "The Names Nothing Checks",
+    "topic": "UNITY · VERIFICATION",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "weiting-wang",
+    "channel_title": "@WeitingWang0704",
+    "persona": "Synthetic Kokoro af_bella voice reading Weiting Wang's own words (disclosed in the opening beat, on the end card, and in SOURCES.md)",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "English (Hi)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "show-tell style: opens on the hesitant writer plus the terms card, no verdict card; Your Turn is the Claude.ai composer. The spoken outro stays, but names the author instead of the instructor: the INFO 7375 assignment requires narrating as oneself and forbids the instructor's name, persona or credit line, so the outro handle and narration are the author's. OUTRO-LOCK is expected to flag this; see FRICTIONAL.md.",
+    "audience": "Unity gameplay programmers who write code with an AI assistant, and reviewers looking at tools and AI-engineering work",
+    "honesty_note": "Nothing in this film exists yet except the Unity game referenced in B04 and B08. Every drawing of the proposed tool is labelled 'proposed' on screen. Past tense appears only in B04 and B08, both of which describe work actually done in spring 2026. CORRECTED 2026-10-13: an earlier cut claimed the console says nothing about a wrong animator parameter. Unity does warn about that one. The claim now names the shader property, which Unity's own documentation says has no effect and no message, and B02B states the difference out loud. See FACTCHECK.md rows 3 and 4.",
+    "source_doc": "PROJECT-BRIEF.md (this repository); brutalist.art skills/make/show-tell/SKILL.md",
+    "playlist": "INFO 7375 Fall 2026",
+    "chapter_number": 0,
+    "tags": [
+      "Unity",
+      "C#",
+      "verification",
+      "source grounding",
+      "evaluation",
+      "prompt contracts",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-14T17:52:06",
+      "cut": "master",
+      "filled": 18,
+      "of": 18,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi. These are Weiting Wang's words, read by a synthetic voice. I build games in Unity. When I asked an AI for gameplay code, I used to check whether it compiled. That turned out to be the wrong question.",
+      "estimated_duration_s": 15.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'Can an AI write Unity code'"
+          },
+          {
+            "at": 0.65,
+            "event": "backspaces 'that compiles' -> 'that actually runs' on the spoken correction"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Can an AI write Unity code\nthat compiles",
+            "triggerWords": "that compiles",
+            "replacementWords": "that actually runs",
+            "fontSize": 70,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "show-tell-the-names-nothing-checks",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/BIDEA.mp4",
+            "at": "2026-10-14T20:39:34.835133+00:00"
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer types the naive compile question and corrects it to the real one: whether it runs.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 13.78,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 13.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "terms",
+      "lane": "bookend",
+      "proof_gate": "CARD",
+      "narration_text": "Three terms. A shader property: a name stored in a Unity asset, not in the code. A string reference: code reaching that name as quoted text. And a silent failure: wrong code that compiles, runs, and does nothing.",
+      "estimated_duration_s": 15.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "'shader prop' lands"
+          },
+          {
+            "at": 0.5,
+            "event": "'string ref' lands"
+          },
+          {
+            "at": 0.8,
+            "event": "'silent fail' lands"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "shader prop",
+                "meaning": "a name stored in a Unity asset, not in the code"
+              },
+              {
+                "term": "string ref",
+                "meaning": "code reaching that name as quoted text"
+              },
+              {
+                "term": "silent fail",
+                "meaning": "wrong code that compiles, runs, and does nothing"
+              }
+            ],
+            "folderLabel": "@WeitingWang0704"
+          },
+          "rendered": {
+            "out": "media/BDEFS.mp4",
+            "at": "2026-10-14T20:40:22.862767+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "TERMS card: three prerequisites, one line each."
+      },
+      "actual_duration_s": 14.44,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "remotion:ClaudeDefinitions",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "This is a Unity project. One side holds the C sharp scripts. The other holds the assets, and the assets hold the project's real names.",
+      "estimated_duration_s": 10.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An open isometric crate divided in two: pale pages stack on the left, dark asset blocks rise on the right. Labels beside each half: 'scripts' and 'assets'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "crate lands with floor shadow"
+          },
+          {
+            "at": 0.45,
+            "event": "pages stack on the left, label"
+          },
+          {
+            "at": 0.75,
+            "event": "asset blocks rise on the right, label"
+          }
+        ],
+        "manim": {
+          "class": "B00_Project"
+        },
+        "motion_claim": "An open isometric crate divided in two: pale pages stack on the left, dark asset blocks rise on the right. Labels beside each half: 'scripts' and 'assets'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.98,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 9.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Code can only reach those names as text. A string. Material dot set float, open quote, glow active, close quote. That quoted word is the whole link.",
+      "estimated_duration_s": 10.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A single ink thread draws from a page on the left across to one asset block on the right, ending in a small terracotta dot. One label beside the thread: 'string'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "page lifts forward"
+          },
+          {
+            "at": 0.55,
+            "event": "thread draws across, lands before the midpoint"
+          },
+          {
+            "at": 0.85,
+            "event": "terracotta end dot, label"
+          }
+        ],
+        "manim": {
+          "class": "B01_StringReach"
+        },
+        "motion_claim": "A single ink thread draws from a page on the left across to one asset block on the right, ending in a small terracotta dot. One label beside the thread: 'string'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.33,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.333333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Get that word wrong and nothing stops you. The compiler lets it through. The console stays quiet. The game runs. The glow simply never happens.",
+      "estimated_duration_s": 10.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The thread now ends in empty space. A crate rides between two open gates labelled 'compiler' and 'console'; both stay open; an effect lamp at the end stays dark grey.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "two gates draw, both open"
+          },
+          {
+            "at": 0.5,
+            "event": "crate rides through, fully opaque, lands before the midpoint"
+          },
+          {
+            "at": 0.85,
+            "event": "lamp stays dark; a small ring grows and fades"
+          }
+        ],
+        "manim": {
+          "class": "B02_SilentPass"
+        },
+        "motion_claim": "The thread now ends in empty space. A crate rides between two open gates labelled 'compiler' and 'console'; both stay open; an effect lamp at the end stays dark grey."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.45,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 9.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B02B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Not everything is silent. Unity does warn you about a wrong animator parameter, once that line runs. It says nothing at all about a wrong shader property.",
+      "estimated_duration_s": 10.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two terracotta runners approach the gates. The upper one is stopped by a bar that drops across it; the lower one passes straight through both and reaches the dark lamp. Labels beside: 'warns', 'silent'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "two runners line up"
+          },
+          {
+            "at": 0.45,
+            "event": "bar drops on the upper runner, lands before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "the lower runner reaches the lamp; labels"
+          }
+        ],
+        "manim": {
+          "class": "B02B_WhatWarns"
+        },
+        "motion_claim": "Two terracotta runners approach the gates. The upper one is stopped by a bar that drops across it; the lower one passes straight through both and reaches the dark lamp. Labels beside: 'warns', 'silent'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.83,
+      "audio_file": "mp3/beat-B02B.mp3",
+      "render_duration_s": 9.833333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "An assistant that only reads your C sharp files cannot know the name inside the shader graph. So the name in its answer is a guess, and no gate here catches a guess.",
+      "estimated_duration_s": 13.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A scan line sweeps only the left half of the crate and stops at the divider; the right half sits behind a pale ghost panel. One ink label: 'guess'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "ghost panel covers the right half"
+          },
+          {
+            "at": 0.45,
+            "event": "scan line sweeps the left half only, finishes before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "'guess' label lands beside the thread"
+          }
+        ],
+        "manim": {
+          "class": "B03_HalfRead"
+        },
+        "motion_claim": "A scan line sweeps only the left half of the crate and stops at the divider; the right half sits behind a pale ghost panel. One ink label: 'guess'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.15,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Last spring I tried a tool that puts a model inside the Unity editor. I asked it to lay out a scene. It put things in the wrong places.",
+      "estimated_duration_s": 11.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A mechanical arm swings over the crate and drops three blocks at visibly wrong angles. Labels beside: 'writes', and a small corner stamp 'spring 2026'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "arm swings in, fully opaque"
+          },
+          {
+            "at": 0.5,
+            "event": "blocks drop crooked, settle before the midpoint"
+          },
+          {
+            "at": 0.85,
+            "event": "labels land"
+          }
+        ],
+        "manim": {
+          "class": "B04_WritesIn"
+        },
+        "motion_claim": "A mechanical arm swings over the crate and drops three blocks at visibly wrong angles. Labels beside: 'writes', and a small corner stamp 'spring 2026'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.43,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 8.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B04B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What I got back was not a warning. It was a broken scene to undo. After that I built my scenes by hand.",
+      "estimated_duration_s": 9.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The arm fades to ghost grey; the three crooked blocks lift and a row of correctly seated blocks draws in beneath them. Label beside: 'by hand'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "arm fades to ghost"
+          },
+          {
+            "at": 0.45,
+            "event": "straight block row draws in, complete before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "crooked blocks fade; label lands"
+          }
+        ],
+        "manim": {
+          "class": "B04B_ByHand"
+        },
+        "motion_claim": "The arm fades to ghost grey; the three crooked blocks lift and a row of correctly seated blocks draws in beneath them. Label beside: 'by hand'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 6.83,
+      "audio_file": "mp3/beat-B04B.mp3",
+      "render_duration_s": 6.833333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What I will build does the opposite. It reads the assets and writes down every name that really exists.",
+      "estimated_duration_s": 7.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A paper slip draws itself beside the asset half and fills with ink tick rows, one per asset block. Labels beside: 'checklist', 'proposed'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "slip draws in beside the asset half"
+          },
+          {
+            "at": 0.5,
+            "event": "tick rows fill, complete before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "'proposed' stamp lands"
+          }
+        ],
+        "manim": {
+          "class": "B05_Checklist"
+        },
+        "motion_claim": "A paper slip draws itself beside the asset half and fills with ink tick rows, one per asset block. Labels beside: 'checklist', 'proposed'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 6.1,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 6.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B05B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then it checks each string in the code against that list, and marks what it cannot find. It never writes to your project.",
+      "estimated_duration_s": 9.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The thread from B01 re-routes from the page into the slip; one row turns to an ink cross. A large ink-outlined padlock draws over the crate. Labels beside: 'marked', 'read only'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "thread re-routes into the slip"
+          },
+          {
+            "at": 0.45,
+            "event": "one row turns to a cross, before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "padlock draws over the crate; labels land"
+          }
+        ],
+        "manim": {
+          "class": "B05B_ReadOnly"
+        },
+        "motion_claim": "The thread from B01 re-routes from the page into the slip; one row turns to an ink cross. A large ink-outlined padlock draws over the crate. Labels beside: 'marked', 'read only'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 6.74,
+      "audio_file": "mp3/beat-B05B.mp3",
+      "render_duration_s": 6.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The first piece I will make run is the shader property path. A test project with three wrong names planted in it. It has run when the report names those three, and nothing else.",
+      "estimated_duration_s": 13.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A small crate beside the slip; three rows on the slip turn to ink crosses while the rest stay ticks. Labels: 'test project', 'proposed'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "small crate lands with shadow"
+          },
+          {
+            "at": 0.5,
+            "event": "three crosses land, before the midpoint"
+          },
+          {
+            "at": 0.85,
+            "event": "labels"
+          }
+        ],
+        "manim": {
+          "class": "B06_Fixture"
+        },
+        "motion_claim": "A small crate beside the slip; three rows on the slip turn to ink crosses while the rest stay ticks. Labels: 'test project', 'proposed'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.77,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 10.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What could sink it is false alarms. A string is not always written out in full. Flag good code, and nobody runs the tool twice.",
+      "estimated_duration_s": 10.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A grey bar stack grows on a plinth beside a correct tick row that flips to a cross; gaps between every segment. Labels beside: 'false alarms', 'proposed'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "plinth and axis draw"
+          },
+          {
+            "at": 0.45,
+            "event": "bar stack grows, settles before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "a good row flips to a cross; labels land"
+          }
+        ],
+        "manim": {
+          "class": "B07_FalseAlarm"
+        },
+        "motion_claim": "A grey bar stack grows on a plinth beside a correct tick row that flips to a cross; gaps between every segment. Labels beside: 'false alarms', 'proposed'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.26,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 8.291666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B07B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So version one reads only strings written out in full. Everything else is marked cannot determine. And I publish both numbers, not just the flattering one.",
+      "estimated_duration_s": 10.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A second and third grey bar stack grow beside the first, with gaps: 'caught' and 'cannot tell'. One terracotta dot tops the middle stack. Label beside: 'proposed'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "second stack grows"
+          },
+          {
+            "at": 0.45,
+            "event": "third stack grows, settles before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "terracotta dot lands on the middle stack; labels"
+          }
+        ],
+        "manim": {
+          "class": "B07B_TwoNumbers"
+        },
+        "motion_claim": "A second and third grey bar stack grow beside the first, with gaps: 'caught' and 'cannot tell'. One terracotta dot tops the middle stack. Label beside: 'proposed'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.13,
+      "audio_file": "mp3/beat-B07B.mp3",
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why me. The Unity half I can already do. I shipped a Unity dungeon game last spring, and its glowing sword runs on exactly this kind of string.",
+      "estimated_duration_s": 11.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A shallow tray lands and fills with solid ink objects: a page, an asset block, a small sword with one terracotta spark on its top face. Label beside: 'have'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "tray lands with floor shadow"
+          },
+          {
+            "at": 0.45,
+            "event": "objects land in the tray, before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "terracotta spark on the sword; label lands"
+          }
+        ],
+        "manim": {
+          "class": "B08_HaveTray"
+        },
+        "motion_claim": "A shallow tray lands and fills with solid ink objects: a page, an asset block, a small sword with one terracotta spark on its top face. Label beside: 'have'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.22,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 9.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "B08B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Building an evaluation set and reporting real numbers, I have never done. That is why I picked this project.",
+      "estimated_duration_s": 7.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A second tray draws in beside the first and stays an outline; a ghost-grey slip and a ghost-grey bar stack draw inside it as outlines only. Label beside: 'new'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "second tray outline draws"
+          },
+          {
+            "at": 0.45,
+            "event": "ghost slip and bar outlines draw, complete before the midpoint"
+          },
+          {
+            "at": 0.8,
+            "event": "label lands"
+          }
+        ],
+        "manim": {
+          "class": "B08B_NewTray"
+        },
+        "motion_claim": "A second tray draws in beside the first and stays an outline; a ghost-grey slip and a ghost-grey bar stack draw inside it as outlines only. Label beside: 'new'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, with the voice carrying the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.06,
+      "audio_file": "mp3/beat-B08B.mp3",
+      "render_duration_s": 7.083333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Paste this into Claude. Pick a project you know well and ask your AI assistant for code that uses a name stored outside the source files: an animator parameter, a shader property, a config key. Then open the file that actually defines that name and compare. Tell me whether the assistant read it or guessed it. Then check two things yourself. Did it say out loud that it was unsure? And would anything in your build have caught it if it was wrong?",
+      "estimated_duration_s": 34.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Composer opens — 'Your turn.'"
+          },
+          {
+            "at": 0.1,
+            "event": "the prompt types in full"
+          },
+          {
+            "at": 0.85,
+            "event": "two check lines land"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CLAUDE · YOUR TURN",
+            "segment": "Find One Guessed Name",
+            "command": "Pick a project you know well and ask your AI assistant for code that uses a name stored outside the source files: an animator parameter, a shader property, a config key. Then open the file that actually defines that name and compare. Tell me whether the assistant read it or guessed it.",
+            "runningText": "paste this into Claude…",
+            "output": [
+              "Check: did it say it was unsure?",
+              "Check: would anything in your build have caught it?"
+            ],
+            "folderLabel": "@WeitingWang0704",
+            "modelLabel": "Opus 5",
+            "effortLabel": "High"
+          },
+          "rendered": {
+            "out": "media/BHTF.mp4",
+            "at": "2026-10-14T20:42:01.019390+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 25.58,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "render_duration_s": 25.583333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "remotion:ClaudeComposerAsk",
+        "at": "2026-10-14T17:52:06"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "The Names Nothing Checks. Read by a synthetic voice, for Weiting.",
+      "estimated_duration_s": 4.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; author handle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "The Names Nothing Checks",
+            "slug": "show-tell-the-names-nothing-checks",
+            "handle": "@WeitingWang0704",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-14T21:13:52.959676+00:00"
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 5.12,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 5.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-14T17:52:06"
+      }
+    }
+  ]
+}

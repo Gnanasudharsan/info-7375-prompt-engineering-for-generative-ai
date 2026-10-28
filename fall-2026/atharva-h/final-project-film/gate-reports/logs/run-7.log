@@ -1,0 +1,243 @@
+[run] skip B04_Alternatives — B04 already filled
+[run] skip B06_FourSkills — B06 already filled
+[run] skip B07_InOutFirst — B07 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B03_ThePipeline clean
+[gateW] B05_FirstMinute clean
+[gateW] B08_NameVariants clean
+[gateW] B09_HaveAndNew clean
+[gateW] B10_TodayAndWill clean
+[gateW] B12_Outro clean
+[run] rendering B03_ThePipeline
+Manim Community v0.18.1
+
+[10/14/26 10:16:02] INFO     Animation 0 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             1552269881_3328443851_22313245                     
+                             7)                                                 
+
+                    INFO     Animation 1 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_4197982095_20692212                     
+                             49)                                                
+                    INFO     Animation 2 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_3402919611_22209353                     
+                             22)                                                
+
+                    INFO     Animation 3 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_1873158206_30424437                     
+                             95)                                                
+                    INFO     Animation 4 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_2954989321_22552759                     
+                             58)                                                
+
+[10/14/26 10:16:03] INFO     Animation 5 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_2513752431_32689683                     
+                             28)                                                
+                    INFO     Animation 6 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_865731328_266495872                     
+                             )                                                  
+
+                    INFO     Animation 7 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_2892478579_22038528                     
+                             75)                                                
+                    INFO     Animation 8 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_87805760_2969220472                     
+                             )                                                  
+
+                    INFO     Animation 9 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_1329465286_95611529                     
+                             2)                                                 
+
+                    INFO     Animation 10 : Using cached    cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_3815577108_64359504                     
+                             6)                                                 
+
+                             peline/2724347209_36462048                         
+                             34_250099812.mp4'                                  
+                             peline/2724347209_39147944                         
+                             74_2083120233.mp4'                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _ThePipeline.mp4'                                  
+                    INFO     Rendered B03_ThePipeline               scene.py:247
+                             Played 13 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+[audit] scenes: 19 snapshots → CLEAN
+[run] rendering B05_FirstMinute
+Manim Community v0.18.1
+
+[10/14/26 10:16:05] INFO     Animation 0 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             1552269881_844192810_223132457                     
+                             )                                                  
+
+                    INFO     Animation 1 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_2487054544_35253288                     
+                             21)                                                
+                    INFO     Animation 2 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_3772255462_30320613                     
+                             49)                                                
+
+                    INFO     Animation 3 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_3124486986_26099992                     
+                             71)                                                
+                    INFO     Animation 4 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_2421091738_36145251                     
+                             57)                                                
+
+                    INFO     Animation 5 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_3787428460_96378495                     
+                             7)                                                 
+
+                             Minute/2724347209_12572214                         
+                             67_3718403507.mp4'                                 
+                             Minute/2724347209_17212788                         
+                             74_781207885.mp4'                                  
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _FirstMinute.mp4'                                  
+                    INFO     Rendered B05_FirstMinute               scene.py:247
+                             Played 8 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+[audit] scenes: 12 snapshots → CLEAN
+[run] rendering B08_NameVariants
+Manim Community v0.18.1
+
+
+                             ariants/1552269881_1291625                         
+                             084_2358810818.mp4'                                
+                             ariants/2724347209_5689082                         
+                             37_740474423.mp4'                                  
+
+                             ariants/2724347209_1061931                         
+                             927_2275416782.mp4'                                
+                             ariants/2724347209_3691929                         
+                             303_3329796251.mp4'                                
+
+                             ariants/2724347209_3594048                         
+                             085_3151921666.mp4'                                
+
+                             ariants/2724347209_3517059                         
+                             935_666466330.mp4'                                 
+
+                             ariants/2724347209_1682365                         
+                             393_666466330.mp4'                                 
+                             ariants/2724347209_2408628                         
+                             303_1162453120.mp4'                                
+
+                             ariants/2724347209_2101289                         
+                             699_2919755135.mp4'                                
+                             ariants/2724347209_1426484                         
+                             799_3876005232.mp4'                                
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _NameVariants.mp4'                                 
+                    INFO     Rendered B08_NameVariants              scene.py:247
+                             Played 10 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+[audit] scenes: 14 snapshots → CLEAN
+[run] rendering B09_HaveAndNew
+Manim Community v0.18.1
+
+
+                             ndNew/1552269881_182523965                         
+                             4_223132457.mp4'                                   
+                             ndNew/2724347209_192163557                         
+                             3_794230660.mp4'                                   
+
+                             ndNew/2724347209_979601796                         
+                             _1034313700.mp4'                                   
+
+                             ndNew/2724347209_347355523                         
+                             5_2495779169.mp4'                                  
+                             ndNew/2724347209_332827415                         
+                             0_1607242228.mp4'                                  
+
+                             ndNew/2724347209_189677902                         
+                             9_1646387733.mp4'                                  
+                             ndNew/2724347209_371576713                         
+                             4_3439276502.mp4'                                  
+
+                             ndNew/2724347209_316832786                         
+                             0_1332002262.mp4'                                  
+                             ndNew/2724347209_398396514                         
+                             6_3399155550.mp4'                                  
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _HaveAndNew.mp4'                                   
+                    INFO     Rendered B09_HaveAndNew                scene.py:247
+                             Played 9 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+
+
+
+[audit] scenes: 26 snapshots → 1 error(s), 0 warning(s)
+[run] GATE B FAILED: B09_HaveAndNew has layout errors — mp4 NOT slotted.

@@ -1,0 +1,1495 @@
+[run] skip B01_Count — B01 already filled
+[run] skip B02_Gate — B02 already filled
+[run] skip B03_Rules — B03 already filled
+[run] skip B04_Alternatives — B04 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B05_Report clean
+[gateW] B06_Ladder clean
+[gateW] B07A_Evidence clean
+[gateW] B07B_Plan clean
+[gateW] B08_Tiles clean
+[gateW] B09_Scope clean
+[gateW] B10_Filmstrip clean
+[gateW] B11_Split clean
+[gateW] B12_Lists clean
+[gateW] B13_YourTurn clean
+[run] rendering B05_Report
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(VGroup of 3 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+[10/14/26 19:12:43] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1697911619                         
+                             _479550719_1810123582.mp4'                         
+[10/14/26 19:12:45] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _394412174_3785110686.mp4'                         
+
+Animation 2: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                                          
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _187792339_3172261267.mp4'                         
+[10/14/26 19:12:46] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _2250462227_3389335602.mp4                         
+                             '                                                  
+
+Animation 4: FadeIn(Rectangle):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                      
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _4273843003_1862363221.mp4                         
+                             '                                                  
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _434312675_1557457450.mp4'                         
+
+Animation 6: FadeIn(Dot), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+                                                                      
+[10/14/26 19:12:47] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _3839666307_812501667.mp4'                         
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _1471089851_1933248093.mp4                         
+                             '                                                  
+
+Animation 8: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+                                                                                          
+                    INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _2887018999_2647602076.mp4                         
+                             '                                                  
+[10/14/26 19:12:48] INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _1270442326_1176480312.mp4                         
+                             '                                                  
+
+Animation 10: FadeIn(Rectangle), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+Animation 10: FadeIn(Rectangle), etc.: 100%|██████████| 11/11 [00:00<00:00, 108.57it/s]
+                                                                                       
+                    INFO     Animation 10 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _2012186937_518102998.mp4'                         
+[10/14/26 19:12:49] INFO     Animation 11 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B05_Report/1167814662                         
+                             _1778121749_2003549281.mp4                         
+                             '                                                  
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B05_Report.mp4'                         
+                                                                                
+                    INFO     Rendered B05_Report                    scene.py:278
+                             Played 12 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(VGroup of 3 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 2: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 4: FadeIn(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                     
+
+Animation 6: FadeIn(Dot), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                     
+
+Animation 8: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 10: FadeIn(Rectangle), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                            
+[audit] scenes: 18 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B06_Ladder
+Manim Community v0.20.1
+
+
+Animation 0: Create(Line), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                       
+[10/14/26 19:12:51] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1697911619                         
+                             _3506172333_3468820715.mp4                         
+                             '                                                  
+
+Animation 1: LaggedStart(Group):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: LaggedStart(Group):  93%|█████████▎| 14/15 [00:00<00:00, 132.34it/s]
+                                                                                 
+                    INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _4036526884_1967344039.mp4                         
+                             '                                                  
+
+Animation 2: GrowFromCenter(Dot), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                              
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _3819200528_617422871.mp4'                         
+
+Animation 3: FadeIn(Text('line breaks')), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+Animation 3: FadeIn(Text('line breaks')), etc.: 100%|██████████| 10/10 [00:00<00:00, 93.35it/s]
+                                                                                               
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _800194840_2195813451.mp4'                         
+[10/14/26 19:12:53] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _1083897487_3594037839.mp4                         
+                             '                                                  
+
+Animation 5: _MethodAnimation(Dot):   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 5: _MethodAnimation(Dot):  83%|████████▎ | 10/12 [00:00<00:00, 94.94it/s]
+                                                                                   
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _3548881127_4206438278.mp4                         
+                             '                                                  
+
+Animation 6: _MethodAnimation(Dot):   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 6: _MethodAnimation(Dot):  83%|████████▎ | 10/12 [00:00<00:00, 90.40it/s]
+                                                                                   
+                    INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _1096026376_4206438278.mp4                         
+                             '                                                  
+
+Animation 7: LaggedStart(Group):   0%|          | 0/20 [00:00<?, ?it/s]
+Animation 7: LaggedStart(Group):  60%|██████    | 12/20 [00:00<00:00, 113.43it/s]
+                                                                                 
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _1939201163_1140272764.mp4                         
+                             '                                                  
+[10/14/26 19:12:54] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _3731645678_316435211.mp4'                         
+
+Animation 9: FadeIn(VGroup of 3 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+[10/14/26 19:12:55] INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _1457580988_46414087.mp4'                          
+[10/14/26 19:12:56] INFO     Animation 10 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _582851218_1671612941.mp4'                         
+
+Animation 11: Create(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                     
+                    INFO     Animation 11 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _653725333_369807605.mp4'                          
+                    INFO     Animation 12 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B06_Ladder/1167814662                         
+                             _836989821_3693414604.mp4'                         
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B06_Ladder.mp4'                         
+                                                                                
+                    INFO     Rendered B06_Ladder                    scene.py:278
+                             Played 13 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: Create(Line), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                      
+
+Animation 1: LaggedStart(Group):   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                      
+
+Animation 2: GrowFromCenter(Dot), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                             
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 3: FadeIn(Text('line breaks')), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                     
+
+Animation 5: _MethodAnimation(Dot):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                         
+
+Animation 6: _MethodAnimation(Dot):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                         
+
+Animation 7: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                       
+
+Animation 9: FadeIn(VGroup of 3 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 11: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                    
+[audit] scenes: 15 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B07A_Evidence
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(Text('asked')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('asked')), etc.:  33%|███▎      | 5/15 [00:00<00:00, 39.69it/s]
+Animation 0: FadeIn(Text('asked')), etc.:  67%|██████▋   | 10/15 [00:00<00:00, 39.85it/s]
+Animation 0: FadeIn(Text('asked')), etc.:  93%|█████████▎| 14/15 [00:00<00:00, 39.48it/s]
+                                                                                         
+[10/14/26 19:12:59] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1697911                         
+                             619_832044748_3468820715.m                         
+                             p4'                                                
+[10/14/26 19:13:01] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_2461968203_3667354938.                         
+                             mp4'                                               
+
+Animation 2: Create(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                   
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_3225232681_1115552250.                         
+                             mp4'                                               
+[10/14/26 19:13:03] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_3648704852_1600519710.                         
+                             mp4'                                               
+
+Animation 4: GrowFromEdge(Rectangle), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                                  
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_1220415307_2966823045.                         
+                             mp4'                                               
+
+Animation 5: FadeIn(Text('hedged opinion')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                        
+[10/14/26 19:13:04] INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_1072872411_802855834.m                         
+                             p4'                                                
+[10/14/26 19:13:06] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_344126651_1593319379.m                         
+                             p4'                                                
+
+Animation 7: FadeIn(VGroup of 3 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_3539311238_441661203.m                         
+                             p4'                                                
+[10/14/26 19:13:07] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07A_Evidence/1167814                         
+                             662_2358406633_3441309398.                         
+                             mp4'                                               
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B07A_Evidence.m                         
+                             p4'                                                
+                                                                                
+                    INFO     Rendered B07A_Evidence                 scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(Text('asked')), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('asked')), etc.:  78%|███████▊  | 7/9 [00:00<00:00, 68.96it/s]
+                                                                                       
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 2: Create(VGroup of 2 submobjects):   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 4: GrowFromEdge(Rectangle), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                 
+
+Animation 5: FadeIn(Text('hedged opinion')), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                                        
+
+Animation 7: FadeIn(VGroup of 3 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+[audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B07B_Plan
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  83%|████████▎ | 10/12 [00:00<00:00, 99.50it/s]
+                                                                                                   
+[10/14/26 19:13:09] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1697911619_                         
+                             3936954480_3468820715.mp4'                         
+
+Animation 1: LaggedStart(Group):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 1: LaggedStart(Group):  87%|████████▋ | 13/15 [00:00<00:00, 124.31it/s]
+                                                                                 
+[10/14/26 19:13:10] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             1276257772_233375286.mp4'                          
+
+Animation 2: GrowFromCenter(Dot):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                       
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             3721786890_3303670617.mp4'                         
+[10/14/26 19:13:11] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             2737189773_3646124411.mp4'                         
+
+Animation 4: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 4: FadeIn(VGroup of 3 submobjects), etc.:  92%|█████████▏| 11/12 [00:00<00:00, 101.26it/s]
+                                                                                                    
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             4276679994_1216068071.mp4'                         
+
+Animation 5: _MethodAnimation(Dot):   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 5: _MethodAnimation(Dot):  73%|███████▎  | 11/15 [00:00<00:00, 102.03it/s]
+                                                                                    
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             3717821424_2801169623.mp4'                         
+[10/14/26 19:13:12] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             3541299880_4180205722.mp4'                         
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             4079625248_314825945.mp4'                          
+
+Animation 8: LaggedStart(Group):   0%|          | 0/22 [00:00<?, ?it/s]
+Animation 8: LaggedStart(Group):  50%|█████     | 11/22 [00:00<00:00, 109.10it/s]
+Animation 8: LaggedStart(Group): 100%|██████████| 22/22 [00:00<00:00, 107.24it/s]
+                                                                                 
+                    INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             3242113405_458331520.mp4'                          
+
+Animation 9: FadeIn(Text('100')), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                              
+[10/14/26 19:13:13] INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             2830752626_1370492188.mp4'                         
+[10/14/26 19:13:14] INFO     Animation 10 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             432790695_3702399343.mp4'                          
+
+Animation 11: FadeIn(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                                     
+                    INFO     Animation 11 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             389237140_1964544145.mp4'                          
+[10/14/26 19:13:15] INFO     Animation 12 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B07B_Plan/1167814662_                         
+                             494018817_3781283915.mp4'                          
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B07B_Plan.mp4'                          
+                                                                                
+                    INFO     Rendered B07B_Plan                     scene.py:278
+                             Played 13 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 1: LaggedStart(Group):   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                      
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 2: GrowFromCenter(Dot):   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                       
+
+Animation 4: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 5: _MethodAnimation(Dot):   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                         
+
+Animation 8: LaggedStart(Group):   0%|          | 0/14 [00:00<?, ?it/s]
+                                                                       
+
+Animation 9: FadeIn(Text('100')), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                             
+
+Animation 11: FadeIn(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                    
+[audit] scenes: 18 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B08_Tiles
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  82%|████████▏ | 9/11 [00:00<00:00, 87.22it/s]
+                                                                                                  
+[10/14/26 19:13:17] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1697911619_                         
+                             2330899239_3468820715.mp4'                         
+[10/14/26 19:13:18] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             786490967_2041157671.mp4'                          
+
+Animation 2: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+Animation 2: FadeIn(VGroup of 3 submobjects), etc.:  91%|█████████ | 10/11 [00:00<00:00, 91.13it/s]
+                                                                                                   
+[10/14/26 19:13:19] INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             1055051998_2949996591.mp4'                         
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             4131239404_3119526543.mp4'                         
+
+Animation 4: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+Animation 4: FadeIn(VGroup of 3 submobjects), etc.:  91%|█████████ | 10/11 [00:00<00:00, 95.29it/s]
+                                                                                                   
+[10/14/26 19:13:20] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             1759383014_2428774749.mp4'                         
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             1171304211_1976945141.mp4'                         
+
+Animation 6: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+Animation 6: FadeIn(VGroup of 3 submobjects), etc.:  91%|█████████ | 10/11 [00:00<00:00, 94.42it/s]
+                                                                                                   
+[10/14/26 19:13:21] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             69752699_3329997191.mp4'                           
+[10/14/26 19:13:22] INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             4293895256_3398333630.mp4'                         
+
+Animation 8: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]
+Animation 8: FadeIn(VGroup of 3 submobjects), etc.:  91%|█████████ | 10/11 [00:00<00:00, 97.68it/s]
+                                                                                                   
+                    INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             4287161356_3011262076.mp4'                         
+                    INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             4241824695_21032985.mp4'                           
+
+Animation 10: LaggedStart(Group):   0%|          | 0/20 [00:00<?, ?it/s]
+Animation 10: LaggedStart(Group):  60%|██████    | 12/20 [00:00<00:00, 106.25it/s]
+                                                                                  
+[10/14/26 19:13:23] INFO     Animation 10 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             483827419_1703097548.mp4'                          
+[10/14/26 19:13:24] INFO     Animation 11 : Partial     scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B08_Tiles/1167814662_                         
+                             974784453_2984571956.mp4'                          
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B08_Tiles.mp4'                          
+                                                                                
+                    INFO     Rendered B08_Tiles                     scene.py:278
+                             Played 12 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                                         
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 2: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 4: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 7: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 9: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 11: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                        
+[audit] scenes: 20 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B09_Scope
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(Text('IN')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('IN')), etc.:  67%|██████▋   | 10/15 [00:00<00:00, 91.00it/s]
+                                                                                      
+[10/14/26 19:13:26] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1697911619_                         
+                             1266317425_3468820715.mp4'                         
+
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.: 100%|██████████| 10/10 [00:00<00:00, 98.32it/s]
+                                                                                                   
+[10/14/26 19:13:27] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             147862316_2777848762.mp4'                          
+
+Animation 2: Create(Cross of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                   
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             674250332_2167103371.mp4'                          
+[10/14/26 19:13:28] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             456951986_682008057.mp4'                           
+
+Animation 4: FadeIn(VGroup of 3 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             1256414856_3100672913.mp4'                         
+
+Animation 5: FadeIn(Text('check')):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                         
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             2857748357_821541186.mp4'                          
+[10/14/26 19:13:30] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             1757752173_2178816553.mp4'                         
+
+Animation 7: Create(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             520240525_1763812569.mp4'                          
+[10/14/26 19:13:31] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B09_Scope/1167814662_                         
+                             2573727247_835407781.mp4'                          
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B09_Scope.mp4'                          
+                                                                                
+                    INFO     Rendered B09_Scope                     scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(Text('IN')), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                            
+
+Animation 1: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 2: Create(Cross of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                  
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 4: FadeIn(VGroup of 3 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 5: FadeIn(Text('check')):   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                         
+
+Animation 7: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+[audit] scenes: 12 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B10_Filmstrip
+Manim Community v0.20.1
+
+
+Animation 0: LaggedStart(Group):   0%|          | 0/20 [00:00<?, ?it/s]
+Animation 0: LaggedStart(Group):  55%|█████▌    | 11/20 [00:00<00:00, 107.29it/s]
+                                                                                 
+[10/14/26 19:13:33] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1697911                         
+                             619_1908823423_2115723144.                         
+                             mp4'                                               
+[10/14/26 19:13:34] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_165720419_1611443716.m                         
+                             p4'                                                
+
+Animation 2: LaggedStart(Group), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 2: LaggedStart(Group), etc.:  67%|██████▋   | 10/15 [00:00<00:00, 94.24it/s]
+                                                                                      
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_866821165_2061236800.m                         
+                             p4'                                                
+[10/14/26 19:13:35] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_4064261161_2002337127.                         
+                             mp4'                                               
+
+Animation 4: Create(Line), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                       
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_1611526662_3067673002.                         
+                             mp4'                                               
+[10/14/26 19:13:36] INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_1430522746_2651748335.                         
+                             mp4'                                               
+
+Animation 6: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 6: FadeIn(VGroup of 2 submobjects), etc.:  83%|████████▎ | 10/12 [00:00<00:00, 99.33it/s]
+                                                                                                   
+                    INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_1840167642_2503690104.                         
+                             mp4'                                               
+
+Animation 7: FadeOut(Line), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                       
+[10/14/26 19:13:37] INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_1507933308_3841506466.                         
+                             mp4'                                               
+
+Animation 8: Create(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+                    INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_4020036774_962361934.m                         
+                             p4'                                                
+[10/14/26 19:13:38] INFO     Animation 9 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B10_Filmstrip/1167814                         
+                             662_4265726147_733889683.m                         
+                             p4'                                                
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B10_Filmstrip.m                         
+                             p4'                                                
+                                                                                
+                    INFO     Rendered B10_Filmstrip                 scene.py:278
+                             Played 10 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]
+                                                                       
+
+Animation 2: LaggedStart(Group), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                            
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 4: Create(Line), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                      
+
+Animation 6: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+
+Animation 7: FadeOut(Line), etc.:   0%|          | 0/5 [00:00<?, ?it/s]
+                                                                       
+
+Animation 8: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+[audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B11_Split
+Manim Community v0.20.1
+
+
+Animation 0: Create(Line), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 0: Create(Line), etc.:  75%|███████▌  | 9/12 [00:00<00:00, 86.97it/s]
+                                                                               
+[10/14/26 19:13:40] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1697911619_                         
+                             3634338676_3468820715.mp4'                         
+
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.: 100%|██████████| 12/12 [00:00<00:00, 112.75it/s]
+                                                                                                    
+                    INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             4195113658_3038400435.mp4'                         
+[10/14/26 19:13:43] INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             2760630178_3390879293.mp4'                         
+
+Animation 3: FadeIn(VGroup of 4 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 3: FadeIn(VGroup of 4 submobjects): 100%|██████████| 12/12 [00:00<00:00, 107.07it/s]
+                                                                                              
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             1738719482_102379658.mp4'                          
+[10/14/26 19:13:45] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             1500284351_3942267032.mp4'                         
+
+Animation 5: Create(Rectangle):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                      
+                    INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             1631807113_3049727758.mp4'                         
+[10/14/26 19:13:47] INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             1482380489_3466524483.mp4'                         
+
+Animation 7: LaggedStart(Group):   0%|          | 0/29 [00:00<?, ?it/s]
+Animation 7: LaggedStart(Group):  41%|████▏     | 12/29 [00:00<00:00, 112.04it/s]
+Animation 7: LaggedStart(Group):  83%|████████▎ | 24/29 [00:00<00:00, 99.42it/s] 
+                                                                                
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             3412613630_3180699770.mp4'                         
+[10/14/26 19:13:49] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B11_Split/1167814662_                         
+                             1726735670_3967744150.mp4'                         
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+[10/14/26 19:13:50] INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B11_Split.mp4'                          
+                                                                                
+                    INFO     Rendered B11_Split                     scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: Create(Line), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                      
+
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                         
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 3: FadeIn(VGroup of 4 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 5: Create(Rectangle):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                     
+
+Animation 7: LaggedStart(Group):   0%|          | 0/18 [00:00<?, ?it/s]
+                                                                       
+[audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B12_Lists
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(Text('EXISTS')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('EXISTS')), etc.:  53%|█████▎    | 8/15 [00:00<00:00, 75.81it/s]
+                                                                                         
+[10/14/26 19:13:52] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B12_Lists/1697911619_                         
+                             650305497_3468820715.mp4'                          
+[10/14/26 19:13:53] INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B12_Lists/1167814662_                         
+                             3912424340_2154360446.mp4'                         
+                    INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B12_Lists/1167814662_                         
+                             1984598911_2532670565.mp4'                         
+
+Animation 3: LaggedStart(Group):   0%|          | 0/24 [00:00<?, ?it/s]
+Animation 3: LaggedStart(Group):  58%|█████▊    | 14/24 [00:00<00:00, 130.16it/s]
+                                                                                 
+[10/14/26 19:13:54] INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B12_Lists/1167814662_                         
+                             4056784758_3187568532.mp4'                         
+[10/14/26 19:13:55] INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B12_Lists/1167814662_                         
+                             1478999363_3160750690.mp4'                         
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B12_Lists.mp4'                          
+                                                                                
+                    INFO     Rendered B12_Lists                     scene.py:278
+                             Played 5 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(Text('EXISTS')), etc.:   0%|          | 0/9 [00:00<?, ?it/s]
+                                                                                
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 3: LaggedStart(Group):   0%|          | 0/15 [00:00<?, ?it/s]
+                                                                       
+[audit] scenes: 8 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[run] rendering B13_YourTurn
+Manim Community v0.20.1
+
+
+Animation 0: FadeIn(Text('Your turn')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]
+Animation 0: FadeIn(Text('Your turn')), etc.:  75%|███████▌  | 9/12 [00:00<00:00, 81.20it/s]
+                                                                                            
+[10/14/26 19:13:57] INFO     Animation 0 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/16979116                         
+                             19_3782486729_3468820715.m                         
+                             p4'                                                
+
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                          
+                    INFO     Animation 1 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_1935358402_972445513.mp                         
+                             4'                                                 
+[10/14/26 19:13:58] INFO     Animation 2 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_1998880947_2608953388.m                         
+                             p4'                                                
+                    INFO     Animation 3 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_2703592925_1160022635.m                         
+                             p4'                                                
+
+Animation 4: FadeIn(VGroup of 3 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+                    INFO     Animation 4 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_737662194_3846499182.mp                         
+                             4'                                                 
+
+Animation 5: FadeIn(VGroup of 3 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                                    
+[10/14/26 19:13:59] INFO     Animation 5 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_3534773694_1552219705.m                         
+                             p4'                                                
+                    INFO     Animation 6 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_780067146_1117945265.mp                         
+                             4'                                                 
+
+Animation 7: FadeIn(Text('not')), etc.:   0%|          | 0/10 [00:00<?, ?it/s]
+                                                                              
+                    INFO     Animation 7 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_988080850_1823467281.mp                         
+                             4'                                                 
+[10/14/26 19:14:00] INFO     Animation 8 : Partial      scene_file_writer.py:601
+                             movie file written in                              
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/partial_movie_f                         
+                             iles/B13_YourTurn/11678146                         
+                             62_772313976_2216826009.mp                         
+                             4'                                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:753
+                    INFO                                scene_file_writer.py:904
+                             File ready at                                      
+                             '/Users/deepakzedler/Docum                         
+                             ents/CueGate/youtube/cuega                         
+                             te-pitch/media/videos/scen                         
+                             es/2160p24/B13_YourTurn.mp                         
+                             4'                                                 
+                                                                                
+                    INFO     Rendered B13_YourTurn                  scene.py:278
+                             Played 9 animations                                
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+Animation 0: FadeIn(Text('Your turn')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                         
+/Users/deepakzedler/Documents/CueGate/brutalist.art/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+Animation 4: FadeIn(VGroup of 3 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 5: FadeIn(VGroup of 3 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                                   
+
+Animation 7: FadeIn(Text('not')), etc.:   0%|          | 0/6 [00:00<?, ?it/s]
+                                                                             
+[audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/layout_audit.md
+[remotion] BOUT: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled B00  STILL     9.8s  ← B00.png
+[art] compiled B01  MANIM     5.6s  ← B01.mp4
+[art] compiled B02  MANIM    17.0s  ← B02.mp4
+[art] compiled B03  MANIM    12.2s  ← B03.mp4
+[art] compiled B04  MANIM    19.2s  ← B04.mp4
+[art] compiled B05  MANIM    17.0s  ← B05.mp4
+[art] compiled B06  MANIM    15.4s  ← B06.mp4
+[art] compiled B07A  MANIM    17.5s  ← B07A.mp4
+[art] compiled B07B  MANIM    13.0s  ← B07B.mp4
+[art] compiled B08  MANIM    18.0s  ← B08.mp4
+[art] compiled B09  MANIM    13.4s  ← B09.mp4
+[art] compiled B10  MANIM    12.8s  ← B10.mp4
+[art] compiled B11  MANIM    27.6s  ← B11.mp4
+[art] compiled B12  MANIM     8.4s  ← B12.mp4
+[art] compiled B13  MANIM     8.1s  ← B13.mp4
+[art] compiled BOUT  VIDEO     6.0s  ← BOUT.mp4
+[art] motion histogram: graphic:14  hold:1  remotion:1
+[art] SKIN LINT: B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] build stamp → beat_sheet.json (16/16 filled)
+[art] QC contact sheet → /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/qc-sheet.png
+[art] wrote /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/cuegate-pitch-slate.mp4  (220.9s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 16/16 filled — B00:STILL B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07A:MANIM B07B:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM BOUT:VIDEO
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=32 BLOCKER=0 MAJOR=1 → /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/_qc/REPORT.md
+[gate-v] FAILED — 1 blocking defect(s). Reel not clean; fix and re-render.
+[run] GATE V FAILED: visual defects in the compiled cut —
+[run] see /Users/deepakzedler/Documents/CueGate/youtube/cuegate-pitch/_qc/REPORT.md and _qc/contact_sheet.png.
+[run] Fix the scene source and re-run. (ART_STRICT=0 downgrades MAJOR to warnings.)
+EXIT=2

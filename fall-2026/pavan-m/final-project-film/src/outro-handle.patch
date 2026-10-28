@@ -1,0 +1,56 @@
+diff --git a/runtime/remotion/src/scenes/ClaudeTitleOutro.tsx b/runtime/remotion/src/scenes/ClaudeTitleOutro.tsx
+index d32d5aa..2225a43 100644
+--- a/runtime/remotion/src/scenes/ClaudeTitleOutro.tsx
++++ b/runtime/remotion/src/scenes/ClaudeTitleOutro.tsx
+@@ -14,6 +14,10 @@ import { ANIMATIONS, AnimationName, computeAnimation, MascotSVG } from './Claude
+  *   slug    → reel folder name; seeds mascot and polarity deterministically. Audio is Liam reading the title + "At Nik Bear Brown" (no jingle, OUTRO-LOCK.md §Voice).
+  *
+  * Other channels (HAI, Medhavy, Musinique) use their own outro components — never this one.
++ *
++ * LOCAL PATCH (INFO7375 final-project film, Pavan Majji): optional `handle` and `hideMascot`
++ * props, so a student film can show its author instead of the instructor's credit line.
++ * Unset, both keep the original locked behaviour.
+  */
+ 
+ const HANDLE = '@NikBearBrown';
+@@ -33,6 +37,8 @@ export const claudeTitleOutroSchema = z.object({
+   // mascotAnimation: explicit override for dev/preview; production uses slug seed.
+   mascotAnimation: z.string().optional(),
+   lectureLayout: z.boolean().optional(),
++  handle: z.string().optional(),
++  hideMascot: z.boolean().optional(),
+ });
+ export type ClaudeTitleOutroProps = z.infer<typeof claudeTitleOutroSchema>;
+ 
+@@ -40,7 +46,7 @@ const SERIF = CLAUDE_FONT.serif;
+ 
+ const clamp = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
+ 
+-export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug, mascotAnimation, lectureLayout }) => {
++export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug, mascotAnimation, lectureLayout, handle, hideMascot }) => {
+   const frame = useCurrentFrame();
+   const { fps } = useVideoConfig();
+   const o = clamp(interpolate(frame, [0, 14], [0, 1]), 0, 1);
+@@ -102,18 +108,18 @@ export const ClaudeTitleOutro: React.FC<ClaudeTitleOutroProps> = ({ title, slug,
+         marginTop: 28,
+         opacity: 0.9,
+       }}>
+-        {HANDLE}
++        {handle || HANDLE}
+       </div>
+ 
+-      {/* Mascot — slug-seeded, small, under the handle */}
+-      <div style={{
++      {/* Mascot — slug-seeded, small, under the handle (LOCAL PATCH: hideMascot skips it) */}
++      {!hideMascot && <div style={{
+         width: mascotW,
+         height: mascotH,
+         marginTop: lectureLayout ? 110 : 28,
+         overflow: 'visible',
+       }}>
+         <MascotSVG s={mascotState} scale={1} />
+-      </div>
++      </div>}
+ 
+       {/* NO subline — locked per OUTRO-LOCK.md */}
+     </AbsoluteFill>

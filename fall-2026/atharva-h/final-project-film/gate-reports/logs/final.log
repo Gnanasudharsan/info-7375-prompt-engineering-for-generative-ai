@@ -1,0 +1,18 @@
+[art] compiled B00  VIDEO    10.0s  ← B00.mp4
+[art] compiled B01  VIDEO    12.8s  ← B01.mp4
+[art] compiled B02  MANIM    17.5s  ← B02.mp4
+[art] compiled B03  MANIM    15.0s  ← B03.mp4
+[art] compiled B04  MANIM    19.3s  ← B04.mp4
+[art] compiled B05  MANIM    14.5s  ← B05.mp4
+[art] compiled B06  MANIM    16.1s  ← B06.mp4
+[art] compiled B07  MANIM    17.5s  ← B07.mp4
+[art] compiled B08  MANIM    18.2s  ← B08.mp4
+[art] compiled B09  MANIM    17.7s  ← B09.mp4
+[art] compiled B10  MANIM    15.8s  ← B10.mp4
+[art] compiled B11  VIDEO    15.2s  ← B11.mp4
+[art] compiled B12  MANIM     7.8s  ← B12.mp4
+[art] motion histogram: graphic:10  remotion:3
+[art] WARNING: 'graphic' carries 10/13 beats (76%) — over the ~40% pantry cap; convert the excess to another language (MOTION.md)
+[art] SKIN LINT: B12: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (13/13 filled)
+[art] slots: 13/13 filled — B00:VIDEO B01:VIDEO B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:VIDEO B12:MANIM

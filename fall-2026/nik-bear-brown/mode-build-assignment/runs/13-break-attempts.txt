@@ -1,0 +1,30 @@
+## Break attempt 1: a misspelled organisation name (NIH RePORTER wants the exact name)
+$ python3 scripts/funding/check-awards.py --orgs "NORTHEASTERN UNIV" --terms "single cell" --fy 2026 --window-start 2027-01-01 --sources nih --redact-ids --out-json t.json --out-md t.md
+found 16 awards; 14 research-project awards running into the window; wrote <tmp>/t.json and <tmp>/t.md
+exit 0
+## By institution
+
+| Institution | Name matched in NIH | Awards found | Research awards running into the window | Trainee-only | Ended or ending too soon | NIH annual $ of the passing awards |
+|---|---|---|---|---|---|---|
+| NORTHEASTERN UNIV | yes | 16 | 14 | 1 | 1 | 6,991,910 |
+
+## Provenance
+
+## Break attempt 2: a start date so late that almost every award has ended (G1)
+$ ... --orgs "NORTHEASTERN UNIVERSITY" --terms "single cell" --window-start 2031-01-01 --sources nih
+found 16 awards; 3 research-project awards running into the window; wrote <tmp>/g.json and <tmp>/g.md
+| Institution | Name matched in NIH | Awards found | Research awards running into the window | Trainee-only | Ended or ending too soon | NIH annual $ of the passing awards |
+|---|---|---|---|---|---|---|
+| NORTHEASTERN UNIVERSITY | yes | 16 | 3 | 1 | 13 | 1,354,179 |
+
+## Break attempt 3: write award numbers and names to a path that is not under private/
+$ ... --with-pi --private-file runs/names.json
+STOP: runs/names.json is not under a 'private' directory; refusing to write award numbers or names there.
+exit 2
+ls: runs/names.json: No such file or directory
+
+## Break attempt 4: the database cannot be reached (a dead proxy stands in for an outage)
+$ https_proxy=http://127.0.0.1:9 ... --sources nih
+STOP: a database could not be reached (<urlopen error [Errno 61] Connection refused>). Refusing to report an empty result.
+exit 2
+ls: <tmp>/o.json: No such file or directory

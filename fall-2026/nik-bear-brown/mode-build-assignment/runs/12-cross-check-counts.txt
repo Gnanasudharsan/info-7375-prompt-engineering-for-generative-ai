@@ -1,0 +1,7 @@
+$ independent cross-check of the script's NIH counts: a second, separate RePORTER query per institution (distinct project numbers) vs runs/awards-2026-10-19.json
+  NORTHEASTERN UNIVERSITY                    reporter total  16  distinct project numbers  16  script NIH awards  16  OK
+  BROAD INSTITUTE, INC.                      reporter total  41  distinct project numbers  41  script NIH awards  41  OK
+  WHITEHEAD INSTITUTE FOR BIOMEDICAL RES     reporter total  10  distinct project numbers  10  script NIH awards  10  OK
+  MASSACHUSETTS INSTITUTE OF TECHNOLOGY      reporter total  54  distinct project numbers  48  script NIH awards  48  OK
+  HARVARD MEDICAL SCHOOL                     reporter total  99  distinct project numbers  99  script NIH awards  99  OK
+  BOSTON CHILDREN'S HOSPITAL                 reporter total 130  distinct project numbers 127  script NIH awards 127  OK

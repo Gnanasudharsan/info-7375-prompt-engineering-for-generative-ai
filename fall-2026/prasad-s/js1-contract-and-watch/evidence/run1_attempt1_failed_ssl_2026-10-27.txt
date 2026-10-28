@@ -1,0 +1,1 @@
+FAILED: fetch of https://boards-api.greenhouse.io/v1/boards/stripe/jobs?content=true failed: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>

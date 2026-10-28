@@ -1,0 +1,12 @@
+[run] skip B03_ThePipeline — B03 already filled
+[run] skip B04_Alternatives — B04 already filled
+[run] skip B05_FirstMinute — B05 already filled
+[run] skip B06_FourSkills — B06 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 0 clean · 0 warn · 1 error
+[run] GATE A FAILED: B07_InOutFirst has static errors — fix the scene, nothing rendered

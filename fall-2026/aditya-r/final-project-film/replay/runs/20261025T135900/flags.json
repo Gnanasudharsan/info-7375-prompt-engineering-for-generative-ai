@@ -1,0 +1,612 @@
+{
+  "note": "Keyword pre-flags only. '?' marks a machine guess for human review.",
+  "summaries": {
+    "constrained-1": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "falls"
+        ],
+        "fall_ambiguous": [
+          "incident"
+        ],
+        "effects": [
+          "hip",
+          "pain",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "previous night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "normal-1": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "falls"
+        ],
+        "effects": [
+          "hip",
+          "mobility",
+          "pain",
+          "soreness",
+          "stairs"
+        ],
+        "timing": [
+          "previous evening"
+        ],
+        "place_cause": [
+          "kettle",
+          "kitchen"
+        ],
+        "nothing_broken": [
+          "nothing is broken"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "constrained-2": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "falls"
+        ],
+        "effects": [
+          "hip",
+          "pain",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "previous night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "normal-2": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "mobility",
+          "pain",
+          "soreness",
+          "stairs"
+        ],
+        "timing": [
+          "previous evening"
+        ],
+        "place_cause": [
+          "kettle",
+          "kitchen"
+        ],
+        "nothing_broken": [
+          "nothing is broken"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "constrained-3": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "falls"
+        ],
+        "effects": [
+          "hip",
+          "pain",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "previous night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "normal-3": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "mobility",
+          "pain",
+          "soreness",
+          "stairs"
+        ],
+        "timing": [
+          "last night"
+        ],
+        "place_cause": [
+          "kettle",
+          "kitchen"
+        ],
+        "nothing_broken": [
+          "nothing is broken"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "constrained-4": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "mobility",
+          "pain",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "previous night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "normal-4": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "falls"
+        ],
+        "effects": [
+          "getting around",
+          "hip",
+          "mobility",
+          "pain",
+          "soreness",
+          "stairs"
+        ],
+        "timing": [
+          "previous evening"
+        ],
+        "place_cause": [
+          "kettle",
+          "kitchen"
+        ],
+        "nothing_broken": [
+          "nothing is broken"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "constrained-5": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "fall_ambiguous": [
+          "incident"
+        ],
+        "effects": [
+          "hip",
+          "mobility",
+          "pain",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "last night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    },
+    "normal-5": {
+      "auto_C1": "yes?",
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "mobility",
+          "pain",
+          "soreness",
+          "stairs"
+        ],
+        "timing": [
+          "previous evening",
+          "previous night"
+        ],
+        "place_cause": [
+          "kettle",
+          "kitchen"
+        ],
+        "nothing_broken": [
+          "nothing's broken"
+        ],
+        "daughter": [
+          "daughter"
+        ]
+      }
+    }
+  },
+  "openings": {
+    "constrained-1-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "How are you feeling this morning \u2014 is the hip any easier, and did you manage better sleep last night?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "last night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "constrained-1-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about that tumble you mentioned yesterday: how is your hip feeling this morning, and have the stairs been any easier?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip",
+          "stairs"
+        ]
+      }
+    },
+    "normal-1-A": {
+      "auto_C4": "mention-only?",
+      "incident_questions": [],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "soreness"
+        ]
+      }
+    },
+    "normal-1-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about that tumble you had in the kitchen, so before anything else: how's the hip this morning, and did you manage to get around all right overnight?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "constrained-2-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since yesterday: how is that hip feeling this morning, and did you manage any better sleep last night?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip"
+        ],
+        "timing": [
+          "last night"
+        ]
+      }
+    },
+    "constrained-2-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "Before anything else, how is that hip feeling today after your tumble, and have the stairs been any easier?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "tumble"
+        ],
+        "effects": [
+          "hip",
+          "stairs"
+        ]
+      }
+    },
+    "normal-2-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since yesterday: how is that hip feeling today, and did you manage to get along to the knitting group at the library?"
+      ],
+      "hits": {
+        "effects": [
+          "hip"
+        ]
+      }
+    },
+    "normal-2-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since yesterday: how did the knitting group go, and how's that hip feeling this morning after your tumble on Saturday evening?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall",
+          "tumble"
+        ],
+        "effects": [
+          "hip"
+        ],
+        "timing": [
+          "evening"
+        ]
+      }
+    },
+    "constrained-3-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since we spoke yesterday: how did you sleep, and how is that hip feeling this morning?"
+      ],
+      "hits": {
+        "effects": [
+          "hip"
+        ]
+      }
+    },
+    "constrained-3-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "How did you sleep, and how is that hip feeling this morning after your tumble the other night?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip"
+        ]
+      }
+    },
+    "normal-3-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "How's your hip feeling today, and did you manage to get any better sleep last night?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip"
+        ],
+        "timing": [
+          "last night"
+        ],
+        "place_cause": [
+          "kettle",
+          "kitchen"
+        ]
+      }
+    },
+    "normal-3-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since we spoke yesterday \u2014 how is that hip feeling this morning after your tumble in the kitchen?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "constrained-4-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "Yesterday you mentioned your hip was sore after that fall in the kitchen, so I wanted to start there: how is it feeling today, and have the stairs been any easier?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "sore",
+          "stairs"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "constrained-4-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about that tumble you mentioned yesterday; how is your hip feeling this morning, and are the stairs still giving you trouble?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip",
+          "stairs"
+        ]
+      }
+    },
+    "normal-4-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since we spoke yesterday: how is that hip feeling today, and have you managed the stairs all right?"
+      ],
+      "hits": {
+        "effects": [
+          "hip",
+          "stairs"
+        ]
+      }
+    },
+    "normal-4-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about that tumble you had in the kitchen the other evening; how is your hip feeling this morning, and how are you managing on the stairs?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip",
+          "stairs"
+        ],
+        "timing": [
+          "evening"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "constrained-5-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "Before anything else, I wanted to ask how your hip is feeling today after that fall in the kitchen the other night; is it still sore, and how are the stairs treating you this morning?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip",
+          "sore",
+          "stairs"
+        ],
+        "timing": [
+          "last night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "constrained-5-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "Before anything else \u2014 how is that hip this morning after your tumble by the kettle?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip",
+          "soreness",
+          "stairs"
+        ],
+        "place_cause": [
+          "kettle"
+        ]
+      }
+    },
+    "normal-5-A": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about you since yesterday: how's that hip feeling today after your fall in the kitchen, and did you manage any better sleep last night?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "fall"
+        ],
+        "effects": [
+          "hip"
+        ],
+        "timing": [
+          "last night"
+        ],
+        "place_cause": [
+          "kitchen"
+        ]
+      }
+    },
+    "normal-5-B": {
+      "auto_C4": "explicit?",
+      "incident_questions": [
+        "I've been thinking about that tumble you mentioned yesterday, so I wanted to start there: how's your hip feeling this morning, and are you getting about all right on the stairs?"
+      ],
+      "hits": {
+        "fall_clear": [
+          "tumble"
+        ],
+        "effects": [
+          "hip",
+          "stairs"
+        ]
+      }
+    }
+  }
+}

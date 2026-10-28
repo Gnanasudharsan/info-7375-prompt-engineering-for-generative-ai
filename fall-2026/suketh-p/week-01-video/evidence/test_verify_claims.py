@@ -25,6 +25,7 @@ import json
 import math
 import pathlib
 import re
+import struct
 import sys
 import unittest
 
@@ -135,6 +136,17 @@ class TestB06FloatingPointReceipt(unittest.TestCase):
         shown = re.search(r"2\*\*-(\d+)", gloss)
         self.assertIsNotNone(shown)
         self.assertEqual(2.0 ** -int(shown.group(1)), self.c["max_abs_difference"])
+        # The "1 ULP" markers drawn between each differing pair (REVIEW.md
+        # Round 10, requested after watching) are a claim too: every pair that
+        # differs must be exactly that many representable steps apart.
+        label = b06["shot"]["remotion"]["props"].get("isolateLabel", "")
+        if label:
+            steps = int(label.split()[0])
+            bits = lambda x: struct.unpack("<q", struct.pack("<d", x))[0]
+            gaps = [abs(bits(x) - bits(y)) for x, y in
+                    zip(self.c["shifted_path"], self.c["direct_path"]) if x != y]
+            self.assertEqual(len(gaps), 2)
+            self.assertEqual(set(gaps), {steps})
 
 
 class TestB02Overflow(unittest.TestCase):

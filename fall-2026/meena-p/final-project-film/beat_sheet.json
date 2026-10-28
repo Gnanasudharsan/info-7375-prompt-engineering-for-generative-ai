@@ -1,0 +1,1079 @@
+{
+  "metadata": {
+    "slug": "cite-and-seek-pitch",
+    "title": "Cite & Seek",
+    "topic": "Final project pitch: an evaluation-first, citation-grounded code question-answering tool",
+    "purpose": "INFO 7375 final project pitch film (2-4 min). Honest about what exists and what will.",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "persona": "Meena P.",
+    "engine": "kokoro",
+    "voice_kokoro": "am_michael",
+    "channel_title": "@meenuviji",
+    "clock": "narration",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt"
+    ],
+    "bookend_exempt_reason": "Show-tell opens with the hesitant writer and has no verdict card. Your Turn and an outro are kept; the outro is our own drawn beat (FILM-PLAN.md).",
+    "source_doc": "../PROJECT-BRIEF.md; ../REPO-FACTS.md",
+    "build": {
+      "at": "2026-10-12T20:41:42",
+      "cut": "master",
+      "filled": 23,
+      "of": 23,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "intro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q1",
+      "narration_text": "Hi, I'm Meena. This is my final project for INFO seventy-three seventy-five, Prompt Engineering for Generative AI. It's called Cite and Seek.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "none",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "lead_silence_s": 0.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "'Introduction' large at top left; 'INFO 7375: Prompt Engineering for Generative AI' types out as the course name is spoken; then 'Final Project' appears.",
+        "labels": [
+          "Introduction",
+          "INFO 7375: Prompt Engineering for Generative AI",
+          "Final Project"
+        ],
+        "manim": {
+          "class": "BIDEA_Intro"
+        }
+      },
+      "segment": "Introduction",
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "actual_duration_s": 11.467,
+      "render_duration_s": 11.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BIDEA.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q1",
+      "narration_text": "A tool that answers questions about a codebase with citations to the exact files, and refuses when the code doesn't say.",
+      "estimated_duration_s": 8.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A question card enters a dark box labelled 'Cite & Seek'. An answer card comes out carrying the citation tag [app/api/orders.py:52-84]; a second path ends in a slip labelled 'ABSTAIN'.",
+        "motion_claim": "A question card enters a dark box labelled 'Cite & Seek'. An answer card comes out carrying the citation tag [app/api/orders.py:52-84]; a second path ends in a slip labelled 'ABSTAIN'.",
+        "labels": [
+          "question",
+          "Cite & Seek",
+          "[app/api/orders.py:52-84]",
+          "ABSTAIN"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B00_WhatItIs"
+        },
+        "heading": "What It Is",
+        "subheading": "Answers with citations, or refuses"
+      },
+      "segment": "What It Is",
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 8.149,
+      "render_duration_s": 8.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "terms",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "assignment_question": "terms",
+      "narration_text": "Three terms. Retrieval: finding the code that matters. A citation: the file and lines behind a claim. Abstaining: refusing when the code doesn't say.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "none",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "What It Is · Terms",
+            "terms": [
+              {
+                "term": "Retrieval",
+                "meaning": "finding the code that matters"
+              },
+              {
+                "term": "Citation",
+                "meaning": "the file and lines behind a claim"
+              },
+              {
+                "term": "Abstain",
+                "meaning": "refuse when the code is silent"
+              }
+            ],
+            "folderLabel": "@meenuviji",
+            "durationSeconds": 10.603
+          }
+        }
+      },
+      "segment": "What It Is",
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "actual_duration_s": 10.603,
+      "render_duration_s": 10.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BDEFS.mp4",
+        "filled_by": "media",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5",
+      "narration_text": "It runs on a real open-source e-commerce codebase from GitHub, standing in for a company's code, with fifty-three test questions I wrote and checked against the code, plus ten synthetic incident reports.",
+      "estimated_duration_s": 12.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A repo crate with three file pages, labelled 'e-commerce API' and 'GitHub · MIT'; a binder labelled '53 questions'; a folder labelled '10 synthetic incidents'.",
+        "motion_claim": "A repo crate with three file pages, labelled 'e-commerce API' and 'GitHub · MIT'; a binder labelled '53 questions'; a folder labelled '10 synthetic incidents'.",
+        "labels": [
+          "e-commerce API",
+          "GitHub · MIT",
+          "53 questions",
+          "10 synthetic incidents"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B03_Data"
+        },
+        "heading": "What It Is",
+        "subheading": "A real open-source e-commerce codebase"
+      },
+      "segment": "What It Is",
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 13.867,
+      "render_duration_s": 13.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2",
+      "narration_text": "My hypothesis is that on a real team, this would help a new engineer understand unfamiliar code without pulling a senior engineer away from their work,",
+      "estimated_duration_s": 10.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "none",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two laptops. 'new engineer' sends a question to the Cite & Seek box and gets an answer back; 'senior engineer' keeps a focus light on, undisturbed. Label 'hypothesis'. No drawn people.",
+        "motion_claim": "Two laptops. 'new engineer' sends a question to the Cite & Seek box and gets an answer back; 'senior engineer' keeps a focus light on, undisturbed. Label 'hypothesis'. No drawn people.",
+        "labels": [
+          "hypothesis",
+          "new engineer",
+          "senior engineer",
+          "Cite & Seek"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B01_Hypothesis"
+        },
+        "heading": "The Hypothesis",
+        "subheading": "Help a new engineer understand unfamiliar code"
+      },
+      "segment": "The Hypothesis",
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 10.709,
+      "render_duration_s": 10.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2",
+      "narration_text": "and every answer can be checked. I haven't tested that with real engineers yet.",
+      "estimated_duration_s": 5.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "mixed",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A magnifier beside a source page labelled app/api/orders.py; lines 52-84 are highlighted. Label 'untested'.",
+        "motion_claim": "A magnifier beside a source page labelled app/api/orders.py; lines 52-84 are highlighted. Label 'untested'.",
+        "labels": [
+          "app/api/orders.py",
+          "lines 52-84",
+          "untested"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B02_Checkable"
+        },
+        "heading": "The Hypothesis",
+        "subheading": "Haven't tested with real engineers yet"
+      },
+      "segment": "The Hypothesis",
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 5.035,
+      "render_duration_s": 5.041666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q3",
+      "narration_text": "It's for someone hiring an entry-level AI engineer. Once it's written up, in their first minute, they will open the README, compare the baseline with each experiment, and check any cited line themselves.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "will",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A README page with an empty table; rows labelled 'baseline' and 'experiment 1' (no numbers). A magnifier rests on a citation dot. Label 'entry-level AI engineer'.",
+        "motion_claim": "A README page with an empty table; rows labelled 'baseline' and 'experiment 1' (no numbers). A magnifier rests on a citation dot. Label 'entry-level AI engineer'.",
+        "labels": [
+          "README",
+          "baseline",
+          "experiment 1",
+          "entry-level AI engineer"
+        ],
+        "screen_tag": "constructed · planned",
+        "show": [],
+        "manim": {
+          "class": "B10_Reader"
+        },
+        "heading": "Who It's For",
+        "subheading": "Target reader: hiring manager for an entry-level AI Engineer role"
+      },
+      "segment": "Who It's For",
+      "actual_duration_s": 13.355,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 13.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5",
+      "narration_text": "Here's the pipeline that exists today. A question is embedded with Mini-L-M, a small local model, and compared against every chunk of the codebase, each at most two hundred tokens.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Labelled stages with arrows: question -> MiniLM embed -> search all chunks. Below the search stage, three chunk strips labelled orders.py 52-84, cart.py 27-46, payments.py 1-24, and '≤ 200 tokens'.",
+        "motion_claim": "Labelled stages with arrows: question -> MiniLM embed -> search all chunks. Below the search stage, three chunk strips labelled orders.py 52-84, cart.py 27-46, payments.py 1-24, and '≤ 200 tokens'.",
+        "labels": [
+          "question",
+          "MiniLM embed",
+          "search all chunks",
+          "orders.py 52-84",
+          "cart.py 27-46",
+          "payments.py 1-24",
+          "≤ 200 tokens"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B04_Retrieve"
+        },
+        "heading": "How It Works",
+        "subheading": "Retrieval"
+      },
+      "segment": "How It Works",
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 12.544,
+      "render_duration_s": 12.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5",
+      "narration_text": "The top five chunks go to Claude Haiku four point five, with one rule: use only these chunks, and cite every claim by file and lines.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Stages with arrows: search -> top 5 (five strips) -> Claude Haiku 4.5 -> answer. The answer carries [app/api/orders.py:52-84]; a rule page reads 'only these chunks · cite every claim'.",
+        "motion_claim": "Stages with arrows: search -> top 5 (five strips) -> Claude Haiku 4.5 -> answer. The answer carries [app/api/orders.py:52-84]; a rule page reads 'only these chunks · cite every claim'.",
+        "labels": [
+          "search",
+          "top 5",
+          "Claude Haiku 4.5",
+          "answer",
+          "[app/api/orders.py:52-84]",
+          "only these chunks · cite every claim"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B05_Answer"
+        },
+        "heading": "How It Works",
+        "subheading": "Citation"
+      },
+      "segment": "How It Works",
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 9.579,
+      "render_duration_s": 9.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5",
+      "narration_text": "If the chunks don't contain the answer, it replies with a single ABSTAIN line instead of a partial answer.",
+      "estimated_duration_s": 7.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "From the Claude Haiku 4.5 stage, one arrow reaches a half-written page that is dimmed and labelled 'no partial answers'; the other reaches a slip labelled 'ABSTAIN: what is missing'.",
+        "motion_claim": "From the Claude Haiku 4.5 stage, one arrow reaches a half-written page that is dimmed and labelled 'no partial answers'; the other reaches a slip labelled 'ABSTAIN: what is missing'.",
+        "labels": [
+          "Claude Haiku 4.5",
+          "no partial answers",
+          "ABSTAIN: what is missing"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B06_Abstain"
+        },
+        "heading": "How It Works",
+        "subheading": "Abstention"
+      },
+      "segment": "How It Works",
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 7.125,
+      "render_duration_s": 7.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q4",
+      "narration_text": "So it shows four AI engineering skills: retrieval, citation, abstention, and evaluation. The first three exist in the baseline. Evaluation is what I will build next. In course terms: source grounding, prompt contracts and evaluation.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "mixed",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Four labelled blocks: Retrieval, Citation, Abstention (solid, under 'built') and Evaluation (outlined, under 'will build').",
+        "motion_claim": "Four labelled blocks: Retrieval, Citation, Abstention (solid, under 'built') and Evaluation (outlined, under 'will build').",
+        "labels": [
+          "Retrieval",
+          "Citation",
+          "Abstention",
+          "Evaluation",
+          "built",
+          "will build"
+        ],
+        "screen_tag": "constructed · planned",
+        "show": [],
+        "manim": {
+          "class": "B07_Skills"
+        },
+        "heading": "What It Proves",
+        "subheading": "In course terms: source grounding, prompt contracts, evaluation"
+      },
+      "segment": "What It Proves",
+      "actual_duration_s": 17.408,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 17.416666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B07B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q4",
+      "narration_text": "A reviewer could fairly conclude I can design the test before the system.",
+      "estimated_duration_s": 5.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The locked '53 questions' binder sits before an empty 'system' outline, with a check mark beside 'test before the system'.",
+        "motion_claim": "The locked '53 questions' binder sits before an empty 'system' outline, with a check mark beside 'test before the system'.",
+        "labels": [
+          "53 questions",
+          "system",
+          "test before the system"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B07B_Conclude"
+        },
+        "heading": "What It Proves",
+        "subheading": "What a reviewer could fairly conclude"
+      },
+      "segment": "What It Proves",
+      "actual_duration_s": 4.757,
+      "audio_file": "mp3/beat-B07B.mp3",
+      "render_duration_s": 4.791666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2",
+      "narration_text": "What sets it apart is the order: I wrote and checked the test questions before writing any retrieval code, and eight of them have no answer in the code, so refusing will be tested too.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "mixed",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A locked binder '53 questions' sits before an empty outline 'retrieval code' with an arrow 'first'; eight pages slide out in a row labelled '8 unanswerable'.",
+        "motion_claim": "A locked binder '53 questions' sits before an empty outline 'retrieval code' with an arrow 'first'; eight pages slide out in a row labelled '8 unanswerable'.",
+        "labels": [
+          "53 questions",
+          "first",
+          "retrieval code",
+          "8 unanswerable"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B08_Order"
+        },
+        "heading": "Why It's Different",
+        "subheading": "Test questions before retrieval code"
+      },
+      "segment": "Why It's Different",
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 11.776,
+      "render_duration_s": 11.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2",
+      "narration_text": "The alternative today is reading the code by hand. That's how I checked every answer in my test set. It works, but it's slow, and nothing tells you when you've missed the right file.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A magnifier crawls over five file pages labelled orders.py, cart.py, auth.py, payments.py, models.py; it skips auth.py, which stays dim, labelled 'missed file?'. Label 'by hand'.",
+        "motion_claim": "A magnifier crawls over five file pages labelled orders.py, cart.py, auth.py, payments.py, models.py; it skips auth.py, which stays dim, labelled 'missed file?'. Label 'by hand'.",
+        "labels": [
+          "by hand",
+          "orders.py",
+          "cart.py",
+          "auth.py",
+          "payments.py",
+          "models.py",
+          "missed file?"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B09_Alternative"
+        },
+        "heading": "Why It's Different",
+        "subheading": "The alternative: reading the code by hand"
+      },
+      "segment": "Why It's Different",
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 11.349,
+      "render_duration_s": 11.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B09B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2",
+      "narration_text": "Cite and Seek points to the exact lines, and its tests will measure how often retrieval misses the right file.",
+      "estimated_duration_s": 8.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "mixed",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A question card leads to the source page app/api/orders.py with lines 52-84 marked by the citation tag [app/api/orders.py:52-84]; beside it, an outlined gauge labelled 'misses: will measure'.",
+        "motion_claim": "A question card leads to the source page app/api/orders.py with lines 52-84 marked by the citation tag [app/api/orders.py:52-84]; beside it, an outlined gauge labelled 'misses: will measure'.",
+        "labels": [
+          "app/api/orders.py",
+          "[app/api/orders.py:52-84]",
+          "misses: will measure"
+        ],
+        "screen_tag": "constructed · planned",
+        "show": [],
+        "manim": {
+          "class": "B09B_Instead"
+        },
+        "heading": "Why It's Different",
+        "subheading": "Cite & Seek points to the exact lines"
+      },
+      "segment": "Why It's Different",
+      "actual_duration_s": 6.997,
+      "audio_file": "mp3/beat-B09B.mp3",
+      "render_duration_s": 7.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5",
+      "narration_text": "In scope: one codebase of thirty-seven files, small on purpose, not production scale. Out of scope: agents, fine-tuning, and orchestration frameworks, so every step stays visible.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A crate of pages labelled 'in scope' and '37 files'; three labelled blocks (agents, fine-tuning, frameworks) roll toward a gate labelled 'out of scope' and are turned back.",
+        "motion_claim": "A crate of pages labelled 'in scope' and '37 files'; three labelled blocks (agents, fine-tuning, frameworks) roll toward a gate labelled 'out of scope' and are turned back.",
+        "labels": [
+          "in scope",
+          "37 files",
+          "out of scope",
+          "agents",
+          "fine-tuning",
+          "frameworks"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B11_Scope"
+        },
+        "heading": "Scope: In, Out, First",
+        "subheading": "In scope and out of scope"
+      },
+      "segment": "Scope: In, Out, First",
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 12.629,
+      "render_duration_s": 12.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5",
+      "narration_text": "The first thing I will build is the scoring harness: retrieval hits, and an LLM judge I will check against my own labels. You'll know it ran when its results rebuild with one command.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "will",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Stages with arrows: terminal 'one command' -> 'harness' -> 'results'. Below, a 'judge' row of marks beside a 'my labels' row of dots.",
+        "motion_claim": "Stages with arrows: terminal 'one command' -> 'harness' -> 'results'. Below, a 'judge' row of marks beside a 'my labels' row of dots.",
+        "labels": [
+          "one command",
+          "harness",
+          "results",
+          "judge",
+          "my labels"
+        ],
+        "screen_tag": "constructed · planned",
+        "show": [],
+        "manim": {
+          "class": "B12_First"
+        },
+        "heading": "Scope: In, Out, First",
+        "subheading": "First: the scoring harness"
+      },
+      "segment": "Scope: In, Out, First",
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 12.16,
+      "render_duration_s": 12.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q6",
+      "narration_text": "The risk is sample size. With an eighty-twenty split, only about six unanswerable questions will be left for tuning, so one refusal will move the rate by about seventeen points. I will report raw counts and confidence intervals.",
+      "estimated_duration_s": 15.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "will",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Eight pages split into groups labelled 'about 6' and 'held out'; a gauge needle jumps ('one refusal'), then gets a shaded band labelled 'raw counts'.",
+        "motion_claim": "Eight pages split into groups labelled 'about 6' and 'held out'; a gauge needle jumps ('one refusal'), then gets a shaded band labelled 'raw counts'.",
+        "labels": [
+          "about 6",
+          "held out",
+          "one refusal",
+          "raw counts"
+        ],
+        "screen_tag": "constructed · planned",
+        "show": [],
+        "manim": {
+          "class": "B13_Risk"
+        },
+        "heading": "What Could Sink It",
+        "subheading": "Sample size"
+      },
+      "segment": "What Could Sink It",
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 15.701,
+      "render_duration_s": 15.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q7",
+      "narration_text": "Evaluating models on held-out data isn't new to me; retrieval, embeddings, and using one model to judge another are. This project is how I learn them in a way someone else can check.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "mixed",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A 'have' tray with one block labelled 'evaluation'; a 'new' tray with three blocks labelled 'retrieval', 'embeddings', 'LLM judge'.",
+        "motion_claim": "A 'have' tray with one block labelled 'evaluation'; a 'new' tray with three blocks labelled 'retrieval', 'embeddings', 'LLM judge'.",
+        "labels": [
+          "have",
+          "evaluation",
+          "new",
+          "retrieval",
+          "embeddings",
+          "LLM judge"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B16_Why"
+        },
+        "heading": "Why This Project"
+      },
+      "segment": "Why This Project",
+      "audio_file": "mp3/beat-B16.mp3",
+      "actual_duration_s": 13.184,
+      "render_duration_s": 13.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B16.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "exists vs will",
+      "narration_text": "Built so far: the fifty-three question test set, and a first baseline: retrieval I have run, and a prompt that requires every claim to be cited or the answer to be ABSTAIN.",
+      "estimated_duration_s": 12.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "exists",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Column 'Built so far': solid markers beside '53-question test set', 'retrieval (run)' and 'prompt: cite or ABSTAIN'. The 'Will build' column is not shown yet.",
+        "motion_claim": "Column 'Built so far': solid markers beside '53-question test set', 'retrieval (run)' and 'prompt: cite or ABSTAIN'. The 'Will build' column is not shown yet.",
+        "labels": [
+          "Built so far",
+          "53-question test set",
+          "retrieval (run)",
+          "prompt: cite or ABSTAIN"
+        ],
+        "screen_tag": "constructed",
+        "show": [],
+        "manim": {
+          "class": "B14_Built"
+        },
+        "heading": "Built So Far / Will Build"
+      },
+      "segment": "Built So Far / Will Build",
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 11.925,
+      "render_duration_s": 11.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "exists vs will",
+      "narration_text": "Next, I will build the scoring harness, run the experiments, and write it up in a public GitHub repository.",
+      "estimated_duration_s": 7.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "will",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The 'Built so far' column stays; a 'Will build' column appears with outlined markers beside 'scoring harness', 'experiments', 'write-up' and 'public GitHub repository'.",
+        "motion_claim": "The 'Built so far' column stays; a 'Will build' column appears with outlined markers beside 'scoring harness', 'experiments', 'write-up' and 'public GitHub repository'.",
+        "labels": [
+          "Built so far",
+          "Will build",
+          "scoring harness",
+          "experiments",
+          "write-up",
+          "public GitHub repository"
+        ],
+        "screen_tag": "constructed · planned",
+        "show": [],
+        "manim": {
+          "class": "B15_WillBuild"
+        },
+        "heading": "Built So Far / Will Build"
+      },
+      "segment": "Built So Far / Will Build",
+      "actual_duration_s": 7.147,
+      "audio_file": "mp3/beat-B15.mp3",
+      "render_duration_s": 7.166666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "BHTF",
+      "act": "your turn",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "assignment_question": "your turn",
+      "narration_text": "Your turn. Before you build your next AI tool, write five questions it should answer and two it should refuse.",
+      "estimated_duration_s": 8.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "none",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "ClaudeComposerAsk",
+          "props": {
+            "greeting": "Your turn.",
+            "topic": "CITE & SEEK · YOUR TURN · CONSTRUCTED",
+            "segment": "Test Before You Build · constructed",
+            "command": "Write five questions my tool should answer and two it should refuse, before I build it.",
+            "runningText": "",
+            "folderLabel": "@meenuviji",
+            "modelLabel": "Claude",
+            "effortLabel": "High",
+            "largeText": true
+          }
+        }
+      },
+      "segment": null,
+      "audio_file": "mp3/beat-BHTF.mp3",
+      "actual_duration_s": 7.189,
+      "render_duration_s": 7.208333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BHTF.mp4",
+        "filled_by": "media",
+        "at": "2026-10-12T20:41:42"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "bookend",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "outro",
+      "narration_text": "Cite and Seek. I'm Meena P., at meenuviji.",
+      "estimated_duration_s": 4.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "claim_status": "none",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one drawn diagram with short labels. Only underfill and clustering waived."
+      },
+      "tail_silence_s": 1.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The title 'Cite & Seek' settles centre stage; '@meenuviji' appears beneath it.",
+        "manim": {
+          "class": "BOUT_Close"
+        },
+        "remotion": {
+          "props": {
+            "title": "Cite & Seek",
+            "handle": "@meenuviji",
+            "subline": ""
+          }
+        }
+      },
+      "segment": null,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.243,
+      "render_duration_s": 4.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-12T20:41:42"
+      }
+    }
+  ]
+}

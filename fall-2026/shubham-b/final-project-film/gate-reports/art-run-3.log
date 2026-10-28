@@ -1,0 +1,42 @@
+[run] skip B01_Desk — B01 already filled
+[run] skip B02_Repo — B02 already filled
+[run] skip B03_Scroll — B03 already filled
+[run] skip B04_Search — B04 already filled
+[run] skip B05_Answer — B05 already filled
+[run] skip B06_Reader — B06 already filled
+[run] skip B08_Eval — B08 already filled
+[run] skip B09_Fair — B09 already filled
+[run] skip B10_Scope — B10 already filled
+[run] skip B11_First — B11 already filled
+[run] skip B12_Prices — B12 already filled
+[run] skip B13_Dates — B13 already filled
+[run] skip B14_Why — B14 already filled
+[run] skip B15_Ledger — B15 already filled
+[run] skip BOUT_Close — BOUT already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B07_Contract clean
+[run] rendering B07_Contract
+
+[audit] report: <reel>/layout_audit.md
+[remotion] nothing to do — no shot.remotion.pattern beats
+[art] compiled B07  MANIM    15.0s  ← B07.mp4
+[art] motion histogram: graphic:16
+[art] SKIN LINT: B01: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (16/16 filled)
+[art] QC contact sheet → <reel>/qc-sheet.png
+[art] wrote <reel>/marino-desk-assistant-pitch-slate.mp4  (234.8s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 16/16 filled — B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM B15:MANIM BOUT:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=32 BLOCKER=0 MAJOR=0 → <reel>/_qc/REPORT.md
+[run] done → <reel>  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see <reel>/SHOTLIST.md
+exit=0

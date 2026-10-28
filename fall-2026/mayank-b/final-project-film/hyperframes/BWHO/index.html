@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>BWHO</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#FAF9F5;color:#3D3929;font-family:Inter,Arial,sans-serif}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#FAF9F5}
+.stage{position:absolute;left:120px;top:70px;width:1680px;height:790px;display:flex;flex-direction:column;gap:40px}
+.stage>.h+*{margin-top:auto}.stage>*:last-child{margin-bottom:auto}
+.chip{position:absolute;right:120px;top:66px;font:700 30px Inter,Arial,sans-serif;letter-spacing:1px;padding:10px 24px;border:3px solid #3D3929;border-radius:999px;background:#FFFFFF;color:#3D3929}
+.chip.real{background:#3D3929;color:#FAF9F5}
+.h{font:800 64px/1.1 Inter,Arial,sans-serif;letter-spacing:-1.5px;max-width:1260px}
+.sub{font:500 36px/1.35 Inter,Arial,sans-serif;color:#6B6857}
+.row{display:flex;gap:34px;align-items:stretch}
+.col{display:flex;flex-direction:column;gap:22px}
+.card{background:#FFFFFF;border:3px solid #E5E2D9;border-radius:22px;padding:32px 38px}
+.card.focus{border-color:#D97757}
+.lbl{font:700 30px Inter,Arial,sans-serif;color:#6B6857;letter-spacing:.5px}
+.big{font:600 48px/1.3 Inter,Arial,sans-serif}
+.body{font:500 38px/1.35 Inter,Arial,sans-serif}
+.mark{background:#F6DCCF;border-bottom:6px solid #D97757;padding:0 10px;border-radius:8px}
+.mono{font-family:'JetBrains Mono',Menlo,monospace}
+.stamp{display:inline-block;font:800 40px Inter,Arial,sans-serif;color:#FFFFFF;padding:10px 30px;border-radius:12px;letter-spacing:2px}
+.hold{background:#A3402A}.pass{background:#3E6B4C}
+.term{background:#2B2A25;color:#F3F1EA;border-radius:20px;padding:32px 40px;font:500 33px/1.55 'JetBrains Mono',Menlo,monospace}
+.term .ok{color:#9FD3A8}.term .bad{color:#E8A487}.term .dim{color:#B9B5A6}
+.arrow{flex:0 0 auto;align-self:center;width:90px;height:8px;background:#3D3929;position:relative;border-radius:4px}
+.arrow:after{content:"";position:absolute;right:-6px;top:-13px;border-left:26px solid #3D3929;border-top:17px solid transparent;border-bottom:17px solid transparent}
+.tick{color:#3E6B4C;font-weight:800}.cross{color:#A3402A;font-weight:800}
+
+.nm{font:800 104px/1.05 Inter,Arial,sans-serif;letter-spacing:-3px}.split .card{flex:1}.split li{font:500 36px/1.5 Inter,Arial,sans-serif;list-style:none}.split li:before{content:'— ';color:#D97757}</style></head><body>
+<div id="root" data-composition-id="BWHO" data-start="0" data-duration="9.470" data-width="1920" data-height="1080">
+<div id="scene" class="clip" data-start="0" data-duration="9.470" data-track-index="1">
+
+<div class="stage">
+
+<div class="lbl" id="who">WHO IS DOING IT</div>
+<div class="nm" id="nm">Mayank Bhadrasen</div>
+<div class="big" id="sch">M.S. Information Systems · Northeastern University</div>
+<div class="row split" id="split">
+  <div class="card focus" id="me"><div class="lbl">ME</div><ul><li>decide what to build</li><li>decide what counts as correct</li><li>review every change</li></ul></div>
+  <div class="card" id="cl"><div class="lbl">CLAUDE CODE (ASSISTANT)</div><ul><li>writes code with me</li><li>drafts docs I edit</li><li>the log records who did what</li></ul></div>
+</div>
+</div></div></div>
+<script>
+const C={"name": 0.408, "school": 3.083, "claude": 4.25, "me": 6.375};
+const tl=gsap.timeline({paused:true});
+const IN=(s,t,v)=>tl.from(s,Object.assign({opacity:0,y:28,duration:.55,ease:'power3.out'},v||{}),t);
+IN('#who',C.name-.2);IN('#nm',C.name,{y:40,duration:.7});IN('#sch',C.school-.4);IN('#cl',C.claude,{x:40,y:0});IN('#me',C.me-.3,{x:-40,y:0,ease:'back.out(1.4)'});
+window.__timelines=window.__timelines||{};window.__timelines['BWHO']=tl;
+</script></body></html>

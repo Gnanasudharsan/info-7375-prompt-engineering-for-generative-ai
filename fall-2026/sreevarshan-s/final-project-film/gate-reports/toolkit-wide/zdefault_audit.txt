@@ -1,0 +1,32 @@
+scene files scanned         : 532
+unguarded .default() reads   : 939 across 484 files
+  NESTED (array item)        : 7  -- of these 3 have a NON-falsy default
+  top-level                  : 932
+
+=== NESTED, non-falsy default — renders WRONG when the sheet omits the field ===
+  FinanceSankey.tsx                  color              default='inflow'
+  FinanceSankey.tsx                  color              default='other'
+  FinanceStackedBar.tsx              color              default='other'
+
+=== NESTED, falsy default — undefined behaves like the default; low priority ===
+  FinanceDotPlot.tsx                 estimate           default=false
+  FinanceSankey.tsx                  estimate           default=false
+  FinanceStackedBar.tsx              estimates          default=[]
+  TypesetMath.tsx                    at                 default=0
+
+=== top-level, by file (triage by falsy-equivalence) ===
+  LogoMotion.tsx                           20
+  BrutalistHesitantWriter.tsx              16
+  LookPlate.tsx                            16
+  DoodleScene.tsx                          15
+  SeisQA.tsx                               13
+  ShowTellCard.tsx                         12
+  CCSession.tsx                            11
+  BrowserCapture.tsx                       10
+  FinanceMirroredBar.tsx                   10
+  ClaudeComposerAsk.tsx                    9
+  ClaudeTldrWhat.tsx                       9
+  LogoOutro.tsx                            9
+  QuillWriter.tsx                          9
+  SeisSpotlightOpen.tsx                    9
+  WalkerGodotSetup.tsx                     9

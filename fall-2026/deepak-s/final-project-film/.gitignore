@@ -1,0 +1,18 @@
+# Build output and caches (rebuild.sh recreates them)
+_rebuild/
+reel/scenes.py
+__pycache__/
+*.pyc
+node_modules/
+.venv/
+media/videos/
+mp3/
+clips/
+_superseded/
+# Secrets and course material that stay local
+.env
+inputs/ASSIGNMENT.md
+# macOS
+.DS_Store
+# The class repository's root .gitignore ignores *.mp4 at any depth (line 33); re-include the film.
+!/cuegate-pitch.mp4

@@ -1,0 +1,135 @@
+Sun Oct 11 16:53:14 EDT 2026
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 15496.57it/s]
+[1] 0.3874  docs/architecture.md:1-31
+    # Ecommerce Microservice API — Architecture & Configuration
+    (Source: extracted verbatim from the upstream repository's README.md — Franklindot04/ecommerce-api, MIT licensed)
+    
+    ## Features
+    
+    ### Products API
+    - Create products.
+    - Retrieve all products.
+    - Retrieve a single product.
+    - Pydantic validation.
+    - Seeded demo inventory.
+    - Redis-backed caching for product list and product detail retrieval.
+    
+    ### Shopping Cart API
+    - Add products to cart.
+    - Merge duplicate cart items.
+    - View cart contents.
+    - Remove individual items.
+    - Clear entire cart.
+    - Validate stock availability.
+    
+    ### Orders API
+    - Checkout cart items.
+    - Validate stock during checkout.
+    - Create order records and order items.
+    - Persist order history.
+    - Decrement inventory.
+    - Clear cart after purchase.
+    - Retrieve all orders.
+    - Retrieve individual orders.
+    - Nested serialization using eager loading.
+
+[2] 0.3550  alembic/versions/6f5e3d5e8133_initial_migration.py:64-73
+        sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
+        sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+        sa.PrimaryKeyConstraint('id')
+        )
+        with op.batch_alter_table('orders', schema=None) as batch_op:
+            batch_op.create_index(batch_op.f('ix_orders_id'), ['id'], unique=False)
+    
+        op.create_table('order_items',
+        sa.Column('id', sa.Integer(), nullable=False),
+        sa.Column('order_id', sa.Integer(), nullable=False),
+
+[3] 0.3544  app/api/orders.py:52-84
+                for item in order.items
+            ],
+        )
+    
+        background_tasks.add_task(
+            write_order_notification,
+            order.id,
+            current_user.id,
+            current_user.email,
+            "ORDER_CREATED",
+            f"Order #{order.id} was created successfully with status {order.status.value}."
+        )
+    
+        return order
+    
+    
+    @router.get("/orders", response_model=List[OrderResponse])
+    def get_orders(
+        db: Session = Depends(get_db),
+        current_user: User = Depends(get_current_user)
+    ):
+        return get_user_orders(db, current_user.id)
+    
+    
+    @router.get(
+        "/orders/{order_id}",
+        response_model=OrderResponse,
+        responses={
+            404: {"description": "Order not found"}
+        }
+    )
+    def get_order(
+        order_id: int,
+
+[4] 0.3414  app/models.py:53-73
+        total_price = Column(Float, nullable=False)
+        status = Column(Enum(OrderStatus), nullable=False, default=OrderStatus.PENDING)
+        created_at = Column(DateTime, server_default=func.now())
+    
+        user = relationship("User", back_populates="orders")
+        items = relationship(
+            "OrderItem",
+            back_populates="order",
+            cascade="all, delete-orphan"
+        )
+    
+    
+    class OrderItem(Base):
+        __tablename__ = "order_items"
+    
+        id = Column(Integer, primary_key=True, index=True)
+    
+        order_id = Column(Integer, ForeignKey("orders.id"), nullable=False)
+        product_id = Column(Integer, ForeignKey("products.id"), nullable=False)
+    
+        quantity = Column(Integer, nullable=False)
+
+[5] 0.3313  docs/architecture.md:32-58
+    - Cache invalidation after inventory-changing operations.
+    
+    ### Order Lifecycle API
+    - Order status support.
+    - Status transitions.
+    - Order cancellation rules.
+    - State-machine style workflow validation.
+    - Swagger-visible status fields.
+    
+    ### Payments API
+    - Mock payment creation for orders.
+    - Payment amount tracking.
+    - Payment provider tracking.
+    - Payment status tracking.
+    - Payment-to-user association.
+    - Payment-to-order association.
+    - Order-aware mock payment workflow.
+    - Database-backed payment persistence.
+    - Alembic-managed payments schema evolution.
+    
+    ### Background Tasks
+    - Invoice generation after checkout.
+    - Order-created notification generation.
+    - Order-status-updated notification generation.
+    - Order-cancelled notification generation.
+    - FastAPI `BackgroundTasks` integration for deferred side effects.
+    - Local file-based background task outputs for invoices and notifications.
+

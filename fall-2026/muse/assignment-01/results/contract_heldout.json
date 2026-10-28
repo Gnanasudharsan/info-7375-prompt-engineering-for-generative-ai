@@ -1,0 +1,69 @@
+{
+  "experiment": "B-held-out",
+  "kind": "FIXTURE EVALUATION",
+  "warning": "Responses are hand-written fixtures, NOT Claude outputs. The validator ran for real; the responses did not come from any model.",
+  "n_cases": 5,
+  "format_pass_rate": 0.4,
+  "failures": [
+    {
+      "index": 1,
+      "reason": "type: answer must be a string"
+    },
+    {
+      "index": 2,
+      "reason": "empty: answer must be non-blank"
+    },
+    {
+      "index": 3,
+      "reason": "empty: sources must be non-empty"
+    }
+  ],
+  "per_case": [
+    {
+      "id": "h1",
+      "kind": "FIXTURE",
+      "expected_ok": true,
+      "observed_ok": true,
+      "observed_reason": "ok",
+      "matches_expectation": true,
+      "tests": "paraphrased question; format checks are wording-invariant"
+    },
+    {
+      "id": "h2",
+      "kind": "FIXTURE",
+      "expected_ok": false,
+      "observed_ok": false,
+      "observed_reason": "type: answer must be a string",
+      "matches_expectation": true,
+      "tests": "wrong field type rejected"
+    },
+    {
+      "id": "h3",
+      "kind": "FIXTURE",
+      "expected_ok": false,
+      "observed_ok": false,
+      "observed_reason": "empty: answer must be non-blank",
+      "matches_expectation": true,
+      "tests": "blank answers rejected"
+    },
+    {
+      "id": "h4",
+      "kind": "FIXTURE",
+      "expected_ok": false,
+      "observed_ok": false,
+      "observed_reason": "empty: sources must be non-empty",
+      "matches_expectation": true,
+      "tests": "uncited answers rejected"
+    },
+    {
+      "id": "h5",
+      "kind": "FIXTURE",
+      "expected_ok": true,
+      "observed_ok": true,
+      "observed_reason": "ok",
+      "matches_expectation": true,
+      "tests": "held-out confirmation that format validity does not imply truth"
+    }
+  ],
+  "all_expectations_met": true
+}

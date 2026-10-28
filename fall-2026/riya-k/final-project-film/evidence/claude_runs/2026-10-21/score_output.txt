@@ -1,0 +1,46 @@
+scoring 3 saved runs from 2026-10-21
+
+Q01  How many customers are there?
+     gold      -> [(59,)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+Q02  Which 5 countries have the most customers? Show country and count.
+     gold      -> [('USA', 13), ('Canada', 8), ('Brazil', 5)]
+     run1_raw  rows FAIL  got [('USA', 13), ('Canada', 8), ('France', 5)]
+     run2_raw  rows FAIL  got [('USA', 13), ('Canada', 8), ('France', 5)]
+     run3_raw  rows PASS  
+Q03  What is total revenue by country? Show the top 3.
+     gold      -> [('USA', 523.06), ('Canada', 303.96), ('France', 195.1)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+Q04  How many distinct customers bought at least one Rock track?
+     gold      -> [(59,)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+Q05  Which employee supports the most customers? Show first name, last name, and count.
+     gold      -> [('Jane', 'Peacock', 21)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+Q06  How many tracks are longer than five minutes?
+     gold      -> [(1069,)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+Q07  List the genres that have more than 100 tracks.
+     gold      -> [('Alternative & Punk',), ('Jazz',), ('Latin',)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+Q08  What was total revenue in 2013?
+     gold      -> [(450.58,)]
+     run1_raw  rows PASS  
+     run2_raw  rows PASS  
+     run3_raw  rows PASS  
+
+run1_raw: 7/8 correct by comparing rows, 0/8 by comparing SQL text
+run2_raw: 7/8 correct by comparing rows, 0/8 by comparing SQL text
+run3_raw: 8/8 correct by comparing rows, 0/8 by comparing SQL text

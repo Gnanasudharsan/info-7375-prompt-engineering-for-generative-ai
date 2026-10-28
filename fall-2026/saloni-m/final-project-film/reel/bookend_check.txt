@@ -1,0 +1,4 @@
+[bookend] BLOCKED — 2 failure(s) in opt-countdown-pitch:
+  ✗ OUTRO handle is empty — must be 'Saloni Mathure'
+  ✗ OUTRO title is missing or is the sentinel placeholder — set title='OPT Countdown: Final Project Pitch' in the outro beat props
+exit 2

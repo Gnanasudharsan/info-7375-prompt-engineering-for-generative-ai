@@ -1,0 +1,12 @@
+[bookend] BLOCKED — 2 failure(s) in productlens-ai-pitch:
+  ✗ OUTRO handle is empty — must be 'Aditya Hasija'
+  ✗ OUTRO title is missing or is the sentinel placeholder — set title='ProductLens AI' in the outro beat props
+
+--- Note (Claude Code, 2026-10-25) ---
+These two failures are intentional and expected. bookend_check.py reads the outro's title and handle only from the
+props of the toolkit card `ClaudeTitleOutro`. That card hard-codes the instructor's handle "@NikBearBrown" (see
+ClaudeTitleOutro.tsx, "HARDCODED — no prop, no lookup, no override"), and OUTRO-LOCK.md limits it to the instructor's own
+channel. The assignment says not to use the instructor's name, persona or credit line. So this film's outro (beat BOUT) is
+a drawn Manim card, `BOUT_Title`, showing "ProductLens AI" and "Aditya Hasija" (the same title and name the check wants).
+This checker doesn't run inside `art run` / `art final`. The render gates that do run (L, A, W, B, V, T) all pass.
+I didn't add placeholder props to make the checker pass, because that would misreport what the outro is.

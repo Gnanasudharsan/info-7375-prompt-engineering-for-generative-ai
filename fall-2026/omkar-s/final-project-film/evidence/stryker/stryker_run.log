@@ -1,0 +1,629 @@
+[32m13:45:57 (5485) INFO ProjectReader[39m Found 2 of 12 file(s) to be mutated.
+[32m13:45:57 (5485) INFO Instrumenter[39m Instrumented 2 source file(s) with 92 mutant(s)
+[32m13:45:58 (5485) INFO ConcurrencyTokenProvider[39m Creating 4 test runner process(es).
+[32m13:45:58 (5485) INFO DryRunExecutor[39m Starting initial test run (command test runner with "off" coverage analysis). This may take a while.
+[32m13:45:58 (5485) INFO DryRunExecutor[39m Initial test run succeeded. Ran 1 tests in 0 seconds (net 37 ms, overhead 2 ms).
+
+All tests
+  ✘ All tests (covered 0)
+
+[Survived] BlockStatement
+src/bre.ts:24:3
+-   ) {
+-     await prisma.auditLog.create({
+-       data: {
+-         applicationId,
+-         stage,
+-         vendor: r.vendor ?? null,
+-         status: r.pass ? "PASS" : "FAIL",
+-         message: r.message,
+-         payload: JSON.stringify("data" in r ? r.data : {}),
+-       },
+-     });
+-   }
++   ) {}
+
+[Survived] ObjectLiteral
+src/bre.ts:25:32
+-     await prisma.auditLog.create({
+-       data: {
+-         applicationId,
+-         stage,
+-         vendor: r.vendor ?? null,
+-         status: r.pass ? "PASS" : "FAIL",
+-         message: r.message,
+-         payload: JSON.stringify("data" in r ? r.data : {}),
+-       },
+-     });
++     await prisma.auditLog.create({});
+
+[Survived] LogicalOperator
+src/bre.ts:29:15
+-         vendor: r.vendor ?? null,
++         vendor: r.vendor && null,
+
+[Survived] ObjectLiteral
+src/bre.ts:26:11
+-       data: {
+-         applicationId,
+-         stage,
+-         vendor: r.vendor ?? null,
+-         status: r.pass ? "PASS" : "FAIL",
+-         message: r.message,
+-         payload: JSON.stringify("data" in r ? r.data : {}),
+-       },
++       data: {},
+
+[Survived] StringLiteral
+src/bre.ts:30:33
+-         status: r.pass ? "PASS" : "FAIL",
++         status: r.pass ? "PASS" : "",
+
+[Survived] StringLiteral
+src/bre.ts:32:31
+-         payload: JSON.stringify("data" in r ? r.data : {}),
++         payload: JSON.stringify("" in r ? r.data : {}),
+
+[Survived] BlockStatement
+src/bre.ts:37:47
+-   function riskFromScore(score: number): string {
+-     if (score >= 750) return RiskCategory.LOW;
+-     if (score >= 700) return RiskCategory.MEDIUM;
+-     return RiskCategory.HIGH;
+-   }
++   function riskFromScore(score: number): string {}
+
+[Survived] StringLiteral
+src/bre.ts:30:24
+-         status: r.pass ? "PASS" : "FAIL",
++         status: r.pass ? "" : "FAIL",
+
+[Survived] ConditionalExpression
+src/bre.ts:38:7
+-     if (score >= 750) return RiskCategory.LOW;
++     if (true) return RiskCategory.LOW;
+
+[Survived] EqualityOperator
+src/bre.ts:38:7
+-     if (score >= 750) return RiskCategory.LOW;
++     if (score > 750) return RiskCategory.LOW;
+
+[Survived] EqualityOperator
+src/bre.ts:38:7
+-     if (score >= 750) return RiskCategory.LOW;
++     if (score < 750) return RiskCategory.LOW;
+
+[Survived] ConditionalExpression
+src/bre.ts:38:7
+-     if (score >= 750) return RiskCategory.LOW;
++     if (false) return RiskCategory.LOW;
+
+[Survived] ConditionalExpression
+src/bre.ts:39:7
+-     if (score >= 700) return RiskCategory.MEDIUM;
++     if (true) return RiskCategory.MEDIUM;
+
+[Survived] EqualityOperator
+src/bre.ts:39:7
+-     if (score >= 700) return RiskCategory.MEDIUM;
++     if (score > 700) return RiskCategory.MEDIUM;
+
+[Survived] EqualityOperator
+src/bre.ts:39:7
+-     if (score >= 700) return RiskCategory.MEDIUM;
++     if (score < 700) return RiskCategory.MEDIUM;
+
+[Survived] ConditionalExpression
+src/bre.ts:39:7
+-     if (score >= 700) return RiskCategory.MEDIUM;
++     if (false) return RiskCategory.MEDIUM;
+
+[Survived] BlockStatement
+src/bre.ts:44:84
+-   function calcEmi(principal: number, annualRatePct: number, months: number): number {
+-     const r = annualRatePct / 12 / 100;
+-     const pow = Math.pow(1 + r, months);
+-     return Math.round((principal * r * pow) / (pow - 1));
+-   }
++   function calcEmi(principal: number, annualRatePct: number, months: number): number {}
+
+[Survived] ArithmeticOperator
+src/bre.ts:45:13
+-     const r = annualRatePct / 12 / 100;
++     const r = annualRatePct * 12 / 100;
+
+[Survived] ArithmeticOperator
+src/bre.ts:46:24
+-     const pow = Math.pow(1 + r, months);
++     const pow = Math.pow(1 - r, months);
+
+[Survived] ArithmeticOperator
+src/bre.ts:45:13
+-     const r = annualRatePct / 12 / 100;
++     const r = annualRatePct / 12 * 100;
+
+[Survived] ArithmeticOperator
+src/bre.ts:47:21
+-     return Math.round((principal * r * pow) / (pow - 1));
++     return Math.round(principal * r * pow * (pow - 1));
+
+[Survived] ArithmeticOperator
+src/bre.ts:47:22
+-     return Math.round((principal * r * pow) / (pow - 1));
++     return Math.round((principal * r / pow) / (pow - 1));
+
+[Survived] ArithmeticOperator
+src/bre.ts:47:22
+-     return Math.round((principal * r * pow) / (pow - 1));
++     return Math.round((principal / r * pow) / (pow - 1));
+
+[Survived] ArithmeticOperator
+src/bre.ts:47:46
+-     return Math.round((principal * r * pow) / (pow - 1));
++     return Math.round((principal * r * pow) / (pow + 1));
+
+[Survived] BlockStatement
+src/bre.ts:61:62
+-   export async function runEligibilityAndOffer(app: Applicant) {
+-     const reject = async (reason: string) => {
+-       await prisma.loanApplication.update({
+-         where: { id: app.id },
+-         data: { status: Status.REJECTED, rejectionReason: reason },
+-       });
+-       await audit(app.id, "DECISION", { pass: false, message: `Rejected: ${reason}` });
+-       return prisma.loanApplication.findUnique({ where: { id: app.id } });
+-     };
+-     // 1. Identity + PAN
+-     const identity = await posidexIdentity(app.pan, app.fullName);
+-     await audit(app.id, "ELIGIBILITY", identity);
+-     if (!identity.pass) return reject("Identity / PAN could not be verified");
+-     const panRes = await panValidation(app.pan);
+-     await audit(app.id, "ELIGIBILITY", panRes);
+-     if (!panRes.pass) return reject("PAN validation failed");
+-     // 2. Fraud + AML
+-     const fraud = await fraudCheck(app.pan);
+-     await audit(app.id, "ELIGIBILITY", fraud);
+-     if (!fraud.pass) return reject("Flagged by fraud screening");
+-     const aml = await sanctionsPepCheck(app.fullName);
+-     await audit(app.id, "ELIGIBILITY", aml);
+-     if (!aml.pass) return reject("Failed sanctions / PEP screening");
+-     // 3. Bureau + underwriting rules
+-     const bureau = await creditBureau(app.pan);
+-     await audit(app.id, "ELIGIBILITY", bureau);
+-     const creditScore = bureau.data.creditScore as number;
+-     if (creditScore < RULES.MIN_CREDIT_SCORE) {
+-       return reject(`Credit score ${creditScore} below cutoff ${RULES.MIN_CREDIT_SCORE}`);
+-     }
+-     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {
+-       return reject(`Monthly income below minimum ₹${RULES.MIN_MONTHLY_INCOME}`);
+-     }
+-     // 4. Price the offer
+-     const risk = riskFromScore(creditScore);
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
+-     const eligibleAmount = Math.min(
+-       app.requestedAmount,
+-       Math.round(app.monthlyIncome * multiplier),
+-       RULES.MAX_LOAN_AMOUNT
+-     );
+-     const emi = calcEmi(eligibleAmount, interestRate, app.requestedTenureMonths);
+-     await audit(app.id, "DECISION", {
+-       pass: true,
+-       message: `Approved. Score ${creditScore}, risk ${risk}, offer ₹${eligibleAmount} @ ${interestRate}%`,
+-       data: { creditScore, risk, eligibleAmount, interestRate, emi },
+-     });
+-     return prisma.loanApplication.update({
+-       where: { id: app.id },
+-       data: {
+-         status: Status.OFFER_GENERATED,
+-         creditScore,
+-         riskCategory: risk,
+-         offerAmount: eligibleAmount,
+-         offerTenureMonths: app.requestedTenureMonths,
+-         offerInterestRate: interestRate,
+-         offerEmi: emi,
+-       },
+-     });
+-   }
++   export async function runEligibilityAndOffer(app: Applicant) {}
+
+[Survived] BlockStatement
+src/bre.ts:62:44
+-     const reject = async (reason: string) => {
+-       await prisma.loanApplication.update({
+-         where: { id: app.id },
+-         data: { status: Status.REJECTED, rejectionReason: reason },
+-       });
+-       await audit(app.id, "DECISION", { pass: false, message: `Rejected: ${reason}` });
+-       return prisma.loanApplication.findUnique({ where: { id: app.id } });
+-     };
++     const reject = async (reason: string) => {};
+
+[Survived] ObjectLiteral
+src/bre.ts:63:41
+-       await prisma.loanApplication.update({
+-         where: { id: app.id },
+-         data: { status: Status.REJECTED, rejectionReason: reason },
+-       });
++       await prisma.loanApplication.update({});
+
+[Survived] ObjectLiteral
+src/bre.ts:64:14
+-         where: { id: app.id },
++         where: {},
+
+[Survived] StringLiteral
+src/bre.ts:67:25
+-       await audit(app.id, "DECISION", { pass: false, message: `Rejected: ${reason}` });
++       await audit(app.id, "", { pass: false, message: `Rejected: ${reason}` });
+
+[Survived] ObjectLiteral
+src/bre.ts:67:37
+-       await audit(app.id, "DECISION", { pass: false, message: `Rejected: ${reason}` });
++       await audit(app.id, "DECISION", {});
+
+[Survived] BooleanLiteral
+src/bre.ts:67:45
+-       await audit(app.id, "DECISION", { pass: false, message: `Rejected: ${reason}` });
++       await audit(app.id, "DECISION", { pass: true, message: `Rejected: ${reason}` });
+
+[Survived] ObjectLiteral
+src/bre.ts:65:13
+-         data: { status: Status.REJECTED, rejectionReason: reason },
++         data: {},
+
+[Survived] StringLiteral
+src/bre.ts:67:61
+-       await audit(app.id, "DECISION", { pass: false, message: `Rejected: ${reason}` });
++       await audit(app.id, "DECISION", { pass: false, message: `` });
+
+[Survived] ObjectLiteral
+src/bre.ts:68:55
+-       return prisma.loanApplication.findUnique({ where: { id: app.id } });
++       return prisma.loanApplication.findUnique({ where: {} });
+
+[Survived] StringLiteral
+src/bre.ts:73:23
+-     await audit(app.id, "ELIGIBILITY", identity);
++     await audit(app.id, "", identity);
+
+[Survived] ObjectLiteral
+src/bre.ts:68:46
+-       return prisma.loanApplication.findUnique({ where: { id: app.id } });
++       return prisma.loanApplication.findUnique({});
+
+[Survived] ConditionalExpression
+src/bre.ts:74:7
+-     if (!identity.pass) return reject("Identity / PAN could not be verified");
++     if (true) return reject("Identity / PAN could not be verified");
+
+[Survived] BooleanLiteral
+src/bre.ts:74:7
+-     if (!identity.pass) return reject("Identity / PAN could not be verified");
++     if (identity.pass) return reject("Identity / PAN could not be verified");
+
+[Survived] ConditionalExpression
+src/bre.ts:74:7
+-     if (!identity.pass) return reject("Identity / PAN could not be verified");
++     if (false) return reject("Identity / PAN could not be verified");
+
+[Survived] StringLiteral
+src/bre.ts:74:37
+-     if (!identity.pass) return reject("Identity / PAN could not be verified");
++     if (!identity.pass) return reject("");
+
+[Survived] BooleanLiteral
+src/bre.ts:78:7
+-     if (!panRes.pass) return reject("PAN validation failed");
++     if (panRes.pass) return reject("PAN validation failed");
+
+[Survived] ConditionalExpression
+src/bre.ts:78:7
+-     if (!panRes.pass) return reject("PAN validation failed");
++     if (true) return reject("PAN validation failed");
+
+[Survived] StringLiteral
+src/bre.ts:77:23
+-     await audit(app.id, "ELIGIBILITY", panRes);
++     await audit(app.id, "", panRes);
+
+[Survived] ConditionalExpression
+src/bre.ts:78:7
+-     if (!panRes.pass) return reject("PAN validation failed");
++     if (false) return reject("PAN validation failed");
+
+[Survived] StringLiteral
+src/bre.ts:78:35
+-     if (!panRes.pass) return reject("PAN validation failed");
++     if (!panRes.pass) return reject("");
+
+[Survived] StringLiteral
+src/bre.ts:82:23
+-     await audit(app.id, "ELIGIBILITY", fraud);
++     await audit(app.id, "", fraud);
+
+[Survived] BooleanLiteral
+src/bre.ts:83:7
+-     if (!fraud.pass) return reject("Flagged by fraud screening");
++     if (fraud.pass) return reject("Flagged by fraud screening");
+
+[Survived] ConditionalExpression
+src/bre.ts:83:7
+-     if (!fraud.pass) return reject("Flagged by fraud screening");
++     if (true) return reject("Flagged by fraud screening");
+
+[Survived] ConditionalExpression
+src/bre.ts:83:7
+-     if (!fraud.pass) return reject("Flagged by fraud screening");
++     if (false) return reject("Flagged by fraud screening");
+
+[Survived] StringLiteral
+src/bre.ts:83:34
+-     if (!fraud.pass) return reject("Flagged by fraud screening");
++     if (!fraud.pass) return reject("");
+
+[Survived] StringLiteral
+src/bre.ts:86:23
+-     await audit(app.id, "ELIGIBILITY", aml);
++     await audit(app.id, "", aml);
+
+[Survived] BooleanLiteral
+src/bre.ts:87:7
+-     if (!aml.pass) return reject("Failed sanctions / PEP screening");
++     if (aml.pass) return reject("Failed sanctions / PEP screening");
+
+[Survived] ConditionalExpression
+src/bre.ts:87:7
+-     if (!aml.pass) return reject("Failed sanctions / PEP screening");
++     if (false) return reject("Failed sanctions / PEP screening");
+
+[Survived] StringLiteral
+src/bre.ts:87:32
+-     if (!aml.pass) return reject("Failed sanctions / PEP screening");
++     if (!aml.pass) return reject("");
+
+[Survived] ConditionalExpression
+src/bre.ts:87:7
+-     if (!aml.pass) return reject("Failed sanctions / PEP screening");
++     if (true) return reject("Failed sanctions / PEP screening");
+
+[Survived] StringLiteral
+src/bre.ts:91:23
+-     await audit(app.id, "ELIGIBILITY", bureau);
++     await audit(app.id, "", bureau);
+
+[Survived] ConditionalExpression
+src/bre.ts:94:7
+-     if (creditScore < RULES.MIN_CREDIT_SCORE) {
++     if (true) {
+
+[Survived] ConditionalExpression
+src/bre.ts:94:7
+-     if (creditScore < RULES.MIN_CREDIT_SCORE) {
++     if (false) {
+
+[Survived] EqualityOperator
+src/bre.ts:94:7
+-     if (creditScore < RULES.MIN_CREDIT_SCORE) {
++     if (creditScore <= RULES.MIN_CREDIT_SCORE) {
+
+[Survived] EqualityOperator
+src/bre.ts:94:7
+-     if (creditScore < RULES.MIN_CREDIT_SCORE) {
++     if (creditScore >= RULES.MIN_CREDIT_SCORE) {
+
+[Survived] BlockStatement
+src/bre.ts:94:45
+-     if (creditScore < RULES.MIN_CREDIT_SCORE) {
+-       return reject(`Credit score ${creditScore} below cutoff ${RULES.MIN_CREDIT_SCORE}`);
+-     }
++     if (creditScore < RULES.MIN_CREDIT_SCORE) {}
+
+[Survived] StringLiteral
+src/bre.ts:95:19
+-       return reject(`Credit score ${creditScore} below cutoff ${RULES.MIN_CREDIT_SCORE}`);
++       return reject(``);
+
+[Survived] ConditionalExpression
+src/bre.ts:97:7
+-     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {
++     if (true) {
+
+[Survived] ConditionalExpression
+src/bre.ts:97:7
+-     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {
++     if (false) {
+
+[Survived] EqualityOperator
+src/bre.ts:97:7
+-     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {
++     if (app.monthlyIncome <= RULES.MIN_MONTHLY_INCOME) {
+
+[Survived] EqualityOperator
+src/bre.ts:97:7
+-     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {
++     if (app.monthlyIncome >= RULES.MIN_MONTHLY_INCOME) {
+
+[Survived] BlockStatement
+src/bre.ts:97:53
+-     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {
+-       return reject(`Monthly income below minimum ₹${RULES.MIN_MONTHLY_INCOME}`);
+-     }
++     if (app.monthlyIncome < RULES.MIN_MONTHLY_INCOME) {}
+
+[Survived] StringLiteral
+src/bre.ts:98:19
+-       return reject(`Monthly income below minimum ₹${RULES.MIN_MONTHLY_INCOME}`);
++       return reject(``);
+
+[Survived] ConditionalExpression
+src/bre.ts:103:22
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
++     const multiplier = true ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
+
+[Survived] ConditionalExpression
+src/bre.ts:103:22
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
++     const multiplier = false ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
+
+[Survived] EqualityOperator
+src/bre.ts:103:22
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
++     const multiplier = risk !== RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
+
+[Survived] ConditionalExpression
+src/bre.ts:103:55
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
++     const multiplier = risk === RiskCategory.LOW ? 15 : true ? 10 : 6;
+
+[Survived] ConditionalExpression
+src/bre.ts:103:55
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
++     const multiplier = risk === RiskCategory.LOW ? 15 : false ? 10 : 6;
+
+[Survived] EqualityOperator
+src/bre.ts:103:55
+-     const multiplier = risk === RiskCategory.LOW ? 15 : risk === RiskCategory.MEDIUM ? 10 : 6;
++     const multiplier = risk === RiskCategory.LOW ? 15 : risk !== RiskCategory.MEDIUM ? 10 : 6;
+
+[Survived] ConditionalExpression
+src/bre.ts:104:24
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
++     const interestRate = true ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
+
+[Survived] ConditionalExpression
+src/bre.ts:104:24
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
++     const interestRate = false ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
+
+[Survived] EqualityOperator
+src/bre.ts:104:24
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
++     const interestRate = risk !== RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
+
+[Survived] ConditionalExpression
+src/bre.ts:104:57
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
++     const interestRate = risk === RiskCategory.LOW ? 11 : true ? 14 : 18;
+
+[Survived] ConditionalExpression
+src/bre.ts:104:57
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
++     const interestRate = risk === RiskCategory.LOW ? 11 : false ? 14 : 18;
+
+[Survived] EqualityOperator
+src/bre.ts:104:57
+-     const interestRate = risk === RiskCategory.LOW ? 11 : risk === RiskCategory.MEDIUM ? 14 : 18;
++     const interestRate = risk === RiskCategory.LOW ? 11 : risk !== RiskCategory.MEDIUM ? 14 : 18;
+
+[Survived] MethodExpression
+src/bre.ts:106:26
+-     const eligibleAmount = Math.min(
+-       app.requestedAmount,
+-       Math.round(app.monthlyIncome * multiplier),
+-       RULES.MAX_LOAN_AMOUNT
+-     );
++     const eligibleAmount = Math.max(app.requestedAmount, Math.round(app.monthlyIncome * multiplier), RULES.MAX_LOAN_AMOUNT);
+
+[Survived] ArithmeticOperator
+src/bre.ts:108:16
+-       Math.round(app.monthlyIncome * multiplier),
++       Math.round(app.monthlyIncome / multiplier),
+
+[Survived] StringLiteral
+src/bre.ts:113:23
+-     await audit(app.id, "DECISION", {
++     await audit(app.id, "", {
+
+[Survived] ObjectLiteral
+src/bre.ts:113:35
+-     await audit(app.id, "DECISION", {
+-       pass: true,
+-       message: `Approved. Score ${creditScore}, risk ${risk}, offer ₹${eligibleAmount} @ ${interestRate}%`,
+-       data: { creditScore, risk, eligibleAmount, interestRate, emi },
+-     });
++     await audit(app.id, "DECISION", {});
+
+[Survived] BooleanLiteral
+src/bre.ts:114:11
+-       pass: true,
++       pass: false,
+
+[Survived] StringLiteral
+src/bre.ts:115:14
+-       message: `Approved. Score ${creditScore}, risk ${risk}, offer ₹${eligibleAmount} @ ${interestRate}%`,
++       message: ``,
+
+[Survived] ObjectLiteral
+src/bre.ts:116:11
+-       data: { creditScore, risk, eligibleAmount, interestRate, emi },
++       data: {},
+
+[Survived] ObjectLiteral
+src/bre.ts:119:40
+-     return prisma.loanApplication.update({
+-       where: { id: app.id },
+-       data: {
+-         status: Status.OFFER_GENERATED,
+-         creditScore,
+-         riskCategory: risk,
+-         offerAmount: eligibleAmount,
+-         offerTenureMonths: app.requestedTenureMonths,
+-         offerInterestRate: interestRate,
+-         offerEmi: emi,
+-       },
+-     });
++     return prisma.loanApplication.update({});
+
+[Survived] ObjectLiteral
+src/bre.ts:120:12
+-       where: { id: app.id },
++       where: {},
+
+[Survived] ObjectLiteral
+src/bre.ts:121:11
+-       data: {
+-         status: Status.OFFER_GENERATED,
+-         creditScore,
+-         riskCategory: risk,
+-         offerAmount: eligibleAmount,
+-         offerTenureMonths: app.requestedTenureMonths,
+-         offerInterestRate: interestRate,
+-         offerEmi: emi,
+-       },
++       data: {},
+
+[Survived] ObjectLiteral
+src/constants.ts:33:64
+-   export const STAGE_PRECONDITION: Record<string, StatusValue> = {
+-     "accept-offer": Status.OFFER_GENERATED,
+-     "employment": Status.OFFER_ACCEPTED,
+-     "kyc": Status.EMPLOYMENT_VERIFIED,
+-     "penny-drop": Status.KYC_VERIFIED,
+-     "emandate": Status.BANK_VERIFIED,
+-     "esign": Status.EMANDATE_REGISTERED,
+-     "disburse": Status.ESIGN_COMPLETED,
+-   };
++   export const STAGE_PRECONDITION: Record<string, StatusValue> = {};
+
+[Survived] ObjectLiteral
+src/constants.ts:44:22
+-   export const RULES = {
+-     MIN_CREDIT_SCORE: 650,
+-     MIN_MONTHLY_INCOME: 15000,
+-     MAX_LOAN_AMOUNT: 1500000,
+-   };
++   export const RULES = {};
+
+Ran 1.00 tests per mutant on average.
+--------------|------------------|----------|-----------|------------|----------|----------|
+              | % Mutation score |          |           |            |          |          |
+File          |  total | covered | # killed | # timeout | # survived | # no cov | # errors |
+--------------|--------|---------|----------|-----------|------------|----------|----------|
+All files     |   0.00 |    0.00 |        0 |         0 |         92 |        0 |        0 |
+ bre.ts       |   0.00 |    0.00 |        0 |         0 |         90 |        0 |        0 |
+ constants.ts |   0.00 |    0.00 |        0 |         0 |          2 |        0 |        0 |
+--------------|--------|---------|----------|-----------|------------|----------|----------|
+[32m13:45:59 (5485) INFO JsonReporter[39m Your report can be found at: file:///private/tmp/claude-501/-Users-omkarsalian-Desktop-LOS/88045688-5e8d-4b9d-8ec5-03dd5735b57d/scratchpad/stryker-los/reports/mutation/mutation.json
+[32m13:45:59 (5485) INFO HtmlReporter[39m Your report can be found at: file:///private/tmp/claude-501/-Users-omkarsalian-Desktop-LOS/88045688-5e8d-4b9d-8ec5-03dd5735b57d/scratchpad/stryker-los/reports/mutation/mutation.html
+[32m13:45:59 (5485) INFO MutationTestExecutor[39m Done in 1 second.

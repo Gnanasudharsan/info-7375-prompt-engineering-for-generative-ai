@@ -34,7 +34,7 @@ Python-and-Claude course, not about file extensions.
 ## Where the source actually lives
 
 ```
-<your brutalist.art checkout>/runtime/remotion/src/ShiftedNotChanged.tsx   (1292 lines)
+<your brutalist.art checkout>/runtime/remotion/src/ShiftedNotChanged.tsx   (1382 lines)
 ```
 
 Registered in that checkout's `Root.tsx` under the folder `ShiftedNotChanged`, with seven

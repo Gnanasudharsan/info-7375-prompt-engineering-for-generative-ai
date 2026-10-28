@@ -1,0 +1,17 @@
+[
+  {"topic": "bereavement fare", "version": "BRV-2026-03", "effective": "2026-03-01",
+   "relation": "before", "amount": 0, "unit": "days", "anchor": "travel",
+   "line": "Bereavement fares must be requested before travel. They cannot be claimed after the trip."},
+  {"topic": "refund request", "version": "RFD-2026-01", "effective": "2026-01-15",
+   "relation": "within", "amount": 90, "unit": "days", "anchor": "purchase",
+   "line": "Refunds can be requested within 90 days of purchase."},
+  {"topic": "refund request", "version": "RFD-2027-03", "effective": "2027-03-01",
+   "relation": "within", "amount": 60, "unit": "days", "anchor": "purchase",
+   "line": "From March 2027, refunds can be requested within 60 days of purchase."},
+  {"topic": "refund request", "version": "RFD-2024-06", "effective": "2024-06-01",
+   "relation": "within", "amount": 30, "unit": "days", "anchor": "purchase",
+   "line": "Refunds can be requested within 30 days of purchase."},
+  {"topic": "free cancellation", "version": "CXL-2025-09", "effective": "2025-09-01",
+   "relation": "within", "amount": 24, "unit": "hours", "anchor": "booking",
+   "line": "Cancellation is free within 24 hours of booking."}
+]

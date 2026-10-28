@@ -1,0 +1,806 @@
+{
+  "metadata": {
+    "slug": "varnika-final-project-pitch",
+    "title": "Terraform Docs, Quoted",
+    "topic": "INFO 7375 · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "varnika-m",
+    "channel_title": "Varnika M",
+    "author": "Varnika M",
+    "course": "INFO 7375",
+    "persona": "Varnika M (first person)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "voice_reason": "Varnika chose a computer voice on 2026-10-11, then asked to reuse her Week 01 voice, Kokoro am_onyx. The toolkit also uses am_onyx for the instructor's 'Liam, in for Bear' narrator; this film uses only the stock voice, with no Liam name, greeting, or @NikBearBrown outro.",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "The hesitant writer, terms card and Your Turn composer carry the instructor's narrator and channel identity, which this student film may not show (assignment: narrate as yourself; no instructor name, persona or credit line). B01 is the hook. BOUT is kept, drawn in Manim with the film title and Varnika's name.",
+    "constructed_rule": "Drawings of anything that does not exist yet carry a 'planned' label. Real docs lines carry a source tag. B07A and B07B redraw Varnika's real 2026-10-11 screenshots and say 'redrawn'; the screenshots themselves are in evidence/alternatives/.",
+    "claude_output_rule": "B07B summarises one real claude.ai reply (Sonnet 5.5, 2026-10-11), redrawn and dated on screen. No other Claude reply is shown.",
+    "audience": "a hiring manager or engineer reviewing Varnika's GitHub; the INFO 7375 graders",
+    "source_doc": "PROJECT-BRIEF.md; evidence/",
+    "tags": [
+      "Terraform",
+      "AWS provider",
+      "source grounding",
+      "verification",
+      "Claude",
+      "Python"
+    ],
+    "build": {
+      "at": "2026-10-14T18:59:02",
+      "cut": "master",
+      "filled": 16,
+      "of": 16,
+      "slates": [],
+      "skin_warnings": [
+        "B01: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "1 · What is it",
+      "narration_text": "I'm Varnika. My final project will be a tool that answers questions about Terraform from the official docs, and proves every answer with the exact line it came from.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 8.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A question card slides onto a kraft docs page; one line on the page lights up and a check lands beside it.",
+        "motion_claim": "A question card slides onto a kraft docs page; one line on the page lights up and a check lands beside it.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A question card slides onto a kraft docs page; one line on the page lights up and a check lands beside it."
+          }
+        ],
+        "manim": {
+          "class": "B01_Ask"
+        },
+        "labels": [
+          "question",
+          "docs",
+          "proof"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 9.771,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 9.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "1 · What exists when done",
+      "narration_text": "When it's done, it will be a public GitHub repository: a Python command-line tool, a saved copy of the docs, a test suite, and an evaluation log.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 8.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An open box (the repo) receives four parts one by one: a terminal block, a page stack, a test tray, a logbook.",
+        "motion_claim": "An open box (the repo) receives four parts one by one: a terminal block, a page stack, a test tray, a logbook.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "An open box (the repo) receives four parts one by one: a terminal block, a page stack, a test tray, a logbook."
+          }
+        ],
+        "manim": {
+          "class": "B02_Repo"
+        },
+        "labels": [
+          "GitHub repo",
+          "planned"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 8.832,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 8.833333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "2 · Why care (real example)",
+      "narration_text": "Here's a real example. You might guess that an S3 bucket's name is required. The AWS provider docs say it's optional: if you leave it out, Terraform picks a random, unique name.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 9.7,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The docs page zooms to one line; a 'Required?' tag is crossed out and 'Optional' lands with a check.",
+        "motion_claim": "The docs page zooms to one line; a 'Required?' tag is crossed out and 'Optional' lands with a check.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "The docs page zooms to one line; a 'Required?' tag is crossed out and 'Optional' lands with a check."
+          }
+        ],
+        "manim": {
+          "class": "B03_Optional"
+        },
+        "labels": [
+          "bucket",
+          "Optional",
+          "line 54"
+        ],
+        "constructed": false,
+        "source_tag": "AWS provider v6.68.0 docs · fetched 2026-10-11 · aws_s3_bucket line 54",
+        "evidence": "evidence/aws-provider-docs/s3_bucket.html.markdown:54"
+      },
+      "actual_duration_s": 11.008,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 11.041666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "2 · Why care (things change)",
+      "narration_text": "On the same page, versioning is marked deprecated, with a separate resource to use instead. Facts like these change between versions, so an answer is only useful if you can see which docs it came from.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 10.9,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A second line on the same page gets a grey 'deprecated' stamp; an arrow points to a new small page.",
+        "motion_claim": "A second line on the same page gets a grey 'deprecated' stamp; an arrow points to a new small page.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A second line on the same page gets a grey 'deprecated' stamp; an arrow points to a new small page."
+          }
+        ],
+        "manim": {
+          "class": "B04_Deprecated"
+        },
+        "labels": [
+          "versioning",
+          "Deprecated",
+          "line 70"
+        ],
+        "constructed": false,
+        "source_tag": "AWS provider v6.68.0 docs · fetched 2026-10-11 · aws_s3_bucket line 70",
+        "evidence": "evidence/aws-provider-docs/s3_bucket.html.markdown:70"
+      },
+      "actual_duration_s": 11.349,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 11.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "1 · How it will work",
+      "narration_text": "It will work in three steps. Find the docs lines that match the question. Ask Claude to answer using only those lines, and to quote one. Then my code checks that the quote really exists in the docs before showing the answer.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 12.7,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The question card rides a conveyor through three gates: find, answer, check. A scan line sweeps the quote at the last gate.",
+        "motion_claim": "The question card rides a conveyor through three gates: find, answer, check. A scan line sweeps the quote at the last gate.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "The question card rides a conveyor through three gates: find, answer, check. A scan line sweeps the quote at the last gate."
+          }
+        ],
+        "manim": {
+          "class": "B05_Conveyor"
+        },
+        "labels": [
+          "find",
+          "answer",
+          "check"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 12.352,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 12.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "2 · Why care (says when it doesn't know)",
+      "narration_text": "If no line in the docs supports an answer, the tool will say: not in the docs. That counts as a correct answer, not a failure.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 7.9,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A question card reaches the check gate with no matching line; it is set down in an 'unanswered' tray, which gets a check.",
+        "motion_claim": "A question card reaches the check gate with no matching line; it is set down in an 'unanswered' tray, which gets a check.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A question card reaches the check gate with no matching line; it is set down in an 'unanswered' tray, which gets a check."
+          }
+        ],
+        "manim": {
+          "class": "B06_NotFound"
+        },
+        "labels": [
+          "not in the docs"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 7.509,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 7.541666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B07A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "2 · Alternative 1: the docs site",
+      "narration_text": "On October eleventh I tried two things. On the Terraform docs site, the answer is there. The page menu gets you to it, but searching the page for bucket found two hundred and twenty matches. The right one was number seventy.",
+      "narration_status": "APPROVED by Varnika 2026-10-11",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A long docs page with a find box; the counter climbs to 70 / 220 while a marker steps down the page.",
+        "motion_claim": "A long docs page with a find box; the counter climbs to 70 / 220 while a marker steps down the page.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A long docs page with a find box; the counter climbs to 70 / 220 while a marker steps down the page."
+          }
+        ],
+        "manim": {
+          "class": "B07A_Registry"
+        },
+        "labels": [
+          "docs site",
+          "70 / 220",
+          "redrawn"
+        ],
+        "constructed": "redrawn from Varnika's real screenshots",
+        "source_tag": "redrawn from my screenshot, registry.terraform.io, 2026-10-11",
+        "evidence": "evidence/alternatives/2026-10-11_registry_cmdf-bucket-70-of-220.png"
+      },
+      "actual_duration_s": 12.075,
+      "audio_file": "mp3/beat-B07A.mp3",
+      "render_duration_s": 12.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B07B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "2 · Alternative 2: asking Claude",
+      "narration_text": "Then I asked Claude. It said optional, which is right, but it added two details that aren't on the docs page, and it didn't say which docs it used. My tool will answer from one stated version, and show the line.",
+      "narration_status": "APPROVED by Varnika 2026-10-11",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A reply card: the 'optional' line gets a check; two lines get grey 'not on page' tags; then a planned answer card with one quoted line slides in beside it.",
+        "motion_claim": "A reply card: the 'optional' line gets a check; two lines get grey 'not on page' tags; then a planned answer card with one quoted line slides in beside it.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A reply card: the 'optional' line gets a check; two lines get grey 'not on page' tags; then a planned answer card with one quoted line slides in beside it."
+          }
+        ],
+        "manim": {
+          "class": "B07B_Chat"
+        },
+        "labels": [
+          "Claude reply",
+          "not on page",
+          "redrawn"
+        ],
+        "constructed": "redrawn summary of a real claude.ai reply; planned card constructed",
+        "source_tag": "redrawn from my screenshot, claude.ai Sonnet 5.5, 2026-10-11",
+        "evidence": "evidence/alternatives/2026-10-11_claude-ai_sonnet-5-5_answer_cropped.png"
+      },
+      "actual_duration_s": 11.925,
+      "audio_file": "mp3/beat-B07B.mp3",
+      "render_duration_s": 11.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "3 · Who opens it, first sixty seconds",
+      "narration_text": "The role I'm aiming for is AI software developer, so the person I'm building this for is a hiring manager or engineer looking at my GitHub. In the first minute, they'll run one command with a question, see the answer with its quoted line, and then run the tests.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 11.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The repo box opens, a terminal block prints one answer line, then a test tray fills with checks while a clock hand sweeps one minute.",
+        "motion_claim": "The repo box opens, a terminal block prints one answer line, then a test tray fills with checks while a clock hand sweeps one minute.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "The repo box opens, a terminal block prints one answer line, then a test tray fills with checks while a clock hand sweeps one minute."
+          }
+        ],
+        "manim": {
+          "class": "B08_FirstMinute"
+        },
+        "labels": [
+          "one command",
+          "tests",
+          "planned"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 14.464,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 14.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "4 · What it proves",
+      "narration_text": "It's meant to show what this course teaches: a prompt contract, where Claude must reply in a fixed shape with an answer, a quote and a line number; source grounding; verification in code; and an evaluation that lists every miss. It won't prove the tool works on all of Terraform, only on the questions I test.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 17.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Four evidence binders drop onto a shelf, one per skill; a fence line marks the edge of what was tested.",
+        "motion_claim": "Four evidence binders drop onto a shelf, one per skill; a fence line marks the edge of what was tested.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Four evidence binders drop onto a shelf, one per skill; a fence line marks the edge of what was tested."
+          }
+        ],
+        "manim": {
+          "class": "B09_Proves"
+        },
+        "labels": [
+          "contract",
+          "grounding",
+          "verify",
+          "evaluate"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 16.341,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 16.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "5 · In, out, first",
+      "narration_text": "It covers about ten AWS resource pages at one pinned version. It will not write or run Terraform, and it never touches a cloud account. The first piece is the quote checker, and you'll know it runs when its tests pass offline, including one where a made-up quote is rejected.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 15.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Ten pages stack inside a fence; a run button sits outside with an 'out' tag; the checker block lights first and a fake quote drops into a reject bin.",
+        "motion_claim": "Ten pages stack inside a fence; a run button sits outside with an 'out' tag; the checker block lights first and a fake quote drops into a reject bin.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Ten pages stack inside a fence; a run button sits outside with an 'out' tag; the checker block lights first and a fake quote drops into a reject bin."
+          }
+        ],
+        "manim": {
+          "class": "B10_Scope"
+        },
+        "labels": [
+          "in",
+          "out",
+          "first"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 15.872,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 15.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "6 · Risk",
+      "narration_text": "The risk I can already see: on the same page, bucket is optional at the top, but required inside the replication block. A search for the word bucket could pick the wrong line, and the quote would still be real. So I'll track which section every line belongs to, and put this exact case in my tests.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 17.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The docs page splits into two sections; two 'bucket' lines light up, one tagged Optional at the top, one Required lower down; a divider drops between them.",
+        "motion_claim": "The docs page splits into two sections; two 'bucket' lines light up, one tagged Optional at the top, one Required lower down; a divider drops between them.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "The docs page splits into two sections; two 'bucket' lines light up, one tagged Optional at the top, one Required lower down; a divider drops between them."
+          }
+        ],
+        "manim": {
+          "class": "B11_Risk"
+        },
+        "labels": [
+          "line 54",
+          "line 221"
+        ],
+        "constructed": false,
+        "source_tag": "AWS provider v6.68.0 docs · fetched 2026-10-11 · aws_s3_bucket lines 54 and 221",
+        "evidence": "evidence/aws-provider-docs/s3_bucket.html.markdown:54,221"
+      },
+      "actual_duration_s": 15.979,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 16.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B12A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "7 · Why this project (already have)",
+      "narration_text": "Why this project? It's a mix. I've used Python and Terraform on my co-op, and Terraform in a cloud computing course project. I've also built a small, tested Python tool with Claude Code: my last one, for the Reallocation Engine, has twenty-two offline tests, and I wrote down where it fell short.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 15.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An 'already have' tray receives a Python block, a Terraform page and a test tray tagged 'PR #21 · 22 tests'.",
+        "motion_claim": "An 'already have' tray receives a Python block, a Terraform page and a test tray tagged 'PR #21 · 22 tests'.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "An 'already have' tray receives a Python block, a Terraform page and a test tray tagged 'PR #21 · 22 tests'."
+          }
+        ],
+        "manim": {
+          "class": "B12A_Have"
+        },
+        "labels": [
+          "already have",
+          "PR #21 · 22 tests"
+        ],
+        "constructed": "drawing; PR #21 and its 22 tests are real",
+        "evidence": "https://github.com/nikbearbrown/the-reallocation-engine/pull/21 (open, head 8b79712, checked 2026-10-11)"
+      },
+      "actual_duration_s": 16.469,
+      "audio_file": "mp3/beat-B12A.mp3",
+      "render_duration_s": 16.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B12B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "7 · Why this project (new)",
+      "narration_text": "What's new to me is finding the right section of a long document, and building a test set to score the answers.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 6.7,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A 'new to me' tray receives a long page with one section highlighted and a scored question sheet.",
+        "motion_claim": "A 'new to me' tray receives a long page with one section highlighted and a scored question sheet.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A 'new to me' tray receives a long page with one section highlighted and a scored question sheet."
+          }
+        ],
+        "manim": {
+          "class": "B12B_New"
+        },
+        "labels": [
+          "new to me"
+        ],
+        "constructed": true
+      },
+      "actual_duration_s": 6.336,
+      "audio_file": "mp3/beat-B12B.mp3",
+      "render_duration_s": 6.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "Exists today vs will exist",
+      "narration_text": "What exists today: a licence check, one saved docs page pinned to version six point sixty-eight, and my two tests from October eleventh. The tool itself is still a plan.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 9.1,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two shelves: 'today' holds one page, a licence slip and two test cards; 'will exist' holds the outlined, empty shapes of the repo parts from B02.",
+        "motion_claim": "Two shelves: 'today' holds one page, a licence slip and two test cards; 'will exist' holds the outlined, empty shapes of the repo parts from B02.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Two shelves: 'today' holds one page, a licence slip and two test cards; 'will exist' holds the outlined, empty shapes of the repo parts from B02."
+          }
+        ],
+        "manim": {
+          "class": "B13_Ledger"
+        },
+        "labels": [
+          "today",
+          "will exist"
+        ],
+        "constructed": false,
+        "evidence": "evidence/"
+      },
+      "actual_duration_s": 10.496,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 10.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "question": "Outro",
+      "narration_text": "Terraform Docs, Quoted. Varnika M.",
+      "narration_status": "DRAFT",
+      "estimated_duration_s": 1.5,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn object or scene on a cream stage, minimal labels, the voice carries the explanation; only underfill and clustered are waived."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Title and name on the cream stage, beside the docs page and its check from B01.",
+        "motion_claim": "Title and name on the cream stage, beside the docs page and its check from B01.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Title and name on the cream stage, beside the docs page and its check from B01."
+          }
+        ],
+        "manim": {
+          "class": "BOUT_Title"
+        },
+        "labels": [
+          "Terraform Docs, Quoted",
+          "Varnika M"
+        ],
+        "constructed": false,
+        "remotion": {
+          "props": {
+            "title": "Terraform Docs, Quoted",
+            "handle": "Varnika M",
+            "subline": ""
+          }
+        },
+        "outro_note": "Drawn in Manim (BOUT_Title), not the ClaudeTitleOutro component, which hard-codes the instructor's handle. These props record exactly the title and name the scene shows, so bookend_check.py can verify them."
+      },
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 4.157,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 4.166666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T18:59:02"
+      }
+    }
+  ]
+}

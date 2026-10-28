@@ -1,0 +1,2 @@
+[content-check] show-tell-reallocation-recipe-pitch  beats=21
+[content-check] PASS — 21 beats checked, no violations.

@@ -10,7 +10,7 @@ The [AI policy](../../../prerequisites/ai-policy.md) asks for one thing above al
 *"Iterate: examine the first result, identify weaknesses, revise, test, and improve it."*
 This file is the whole iteration on one page, mapped to the rubric.
 
-**61 refinements across 8 phases.** Each row is an index entry — the full
+**64 refinements across 9 phases.** Each row is an index entry — the full
 account, with evidence, lives in the document in the last column. Nothing here is a
 second copy of a figure that could drift; the counts below are computed from the rows.
 
@@ -44,12 +44,12 @@ second copy of a figure that could drift; the counts below are computed from the
 | Criterion | Refinements |
 |---|---:|
 | **E1** — Concept correctly explained; every claim defensible | 12 |
-| **E2** — Mechanism shown — motion, worked example, real output | 10 |
-| **E3** — Numbers real and reproducible; constructed labelled | 11 |
+| **E2** — Mechanism shown — motion, worked example, real output | 11 |
+| **E3** — Numbers real and reproducible; constructed labelled | 12 |
 | **E4** — Names one thing the explanation does not establish | 4 |
 | **F** — Frictional — honest log | 13 |
 | **G** — GitHub posting matching Canvas | 9 |
-| **RQ** — Relative Quartile — specificity, evidence, honesty, usability | 15 |
+| **RQ** — Relative Quartile — specificity, evidence, honesty, usability | 17 |
 
 ## Build — 12 refinements
 
@@ -152,15 +152,23 @@ second copy of a figure that could drift; the counts below are computed from the
 | 2026-09-24 | BUILD-PROMPT.md would have rebuilt the fabricated answer by following the COLD OPEN LAW | Rule 5 added: no fabricated Claude response; B00's output stays empty | **E3** **G** | BUILD-PROMPT.md |
 | 2026-09-24 | Smaller drifts: 'six rounds', transposed word counts, S5/S6 dates, 'Signed', the model credit, the lane histogram | All corrected from the files and the session log, not from memory | **F** | SOURCES.md §5.20 |
 
+## Review — 3 refinements
+
+| Date | What was wrong or missing | What changed | Rubric | Full account |
+|---|---|---|---|---|
+| 2026-09-25 | After watching, the student found the key difference 'buried in the last digit of two long numbers' (1:46–2:05) | The student's requested change, made: agreeing digits step back, a '1 ULP' marker sits between each differing pair, held ~6 s on the word clock | **E2** **RQ** | REVIEW.md Round 10 |
+| 2026-09-25 | The first version dimmed by opacity and failed Gate V's contrast floor (0.22 < 0.30) | The agreeing digits now step back by colour to SOFT (~5:1), and the frame measures clean | **RQ** | REVIEW.md R10-1 |
+| 2026-09-25 | The on-screen '1 ULP' is a claim | The screen test checks the label against the step count between the recorded vectors' bit patterns | **E3** | FACTCHECK.md row 22 |
+
 ## What is not done
 
 Honest about the gap, because the policy asks for it:
 
-- **The reflective parts of the `[MINE]` sections are not yet written.** `FRICTIONAL.md`
-  now carries a dated record of the student's own actions, compiled by Claude from the
-  student's messages. The student's own checks, post-watch review and understanding —
-  what the Frictional rubric asks for — were deliberately not written by the assistant.
-- **No human has yet watched the full cut with sound and judged whether it teaches.**
-  Every check above verifies correctness and consistency; none of them can verify that.
+- **The `[MINE]` sections are partly done.** The student watched the cut and answered four
+  reflection questions (`FRICTIONAL.md`, placed verbatim); the change they asked for is
+  made (`REVIEW.md` Round 10). Still open: `REVIEW.md`'s three teaching questions, and any
+  personal re-run of the scripts — none is claimed.
+- **Whether the film teaches is only partly judged.** The student has watched it once and
+  asked for one change; every other check above verifies correctness and consistency.
 - **One GATE T warning remains**: terracotta on cream is 2.74:1 and brand-locked. It is
   mitigated (never the sole carrier of meaning, checked by §8.3b), not fixed.

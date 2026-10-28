@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>B08</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#FAF9F5;color:#3D3929;font-family:Inter,Arial,sans-serif}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#FAF9F5}
+.stage{position:absolute;left:120px;top:70px;width:1680px;height:790px;display:flex;flex-direction:column;gap:40px}
+.stage>.h+*{margin-top:auto}.stage>*:last-child{margin-bottom:auto}
+.chip{position:absolute;right:120px;top:66px;font:700 30px Inter,Arial,sans-serif;letter-spacing:1px;padding:10px 24px;border:3px solid #3D3929;border-radius:999px;background:#FFFFFF;color:#3D3929}
+.chip.real{background:#3D3929;color:#FAF9F5}
+.h{font:800 64px/1.1 Inter,Arial,sans-serif;letter-spacing:-1.5px;max-width:1260px}
+.sub{font:500 36px/1.35 Inter,Arial,sans-serif;color:#6B6857}
+.row{display:flex;gap:34px;align-items:stretch}
+.col{display:flex;flex-direction:column;gap:22px}
+.card{background:#FFFFFF;border:3px solid #E5E2D9;border-radius:22px;padding:32px 38px}
+.card.focus{border-color:#D97757}
+.lbl{font:700 30px Inter,Arial,sans-serif;color:#6B6857;letter-spacing:.5px}
+.big{font:600 48px/1.3 Inter,Arial,sans-serif}
+.body{font:500 38px/1.35 Inter,Arial,sans-serif}
+.mark{background:#F6DCCF;border-bottom:6px solid #D97757;padding:0 10px;border-radius:8px}
+.mono{font-family:'JetBrains Mono',Menlo,monospace}
+.stamp{display:inline-block;font:800 40px Inter,Arial,sans-serif;color:#FFFFFF;padding:10px 30px;border-radius:12px;letter-spacing:2px}
+.hold{background:#A3402A}.pass{background:#3E6B4C}
+.term{background:#2B2A25;color:#F3F1EA;border-radius:20px;padding:32px 40px;font:500 33px/1.55 'JetBrains Mono',Menlo,monospace}
+.term .ok{color:#9FD3A8}.term .bad{color:#E8A487}.term .dim{color:#B9B5A6}
+.arrow{flex:0 0 auto;align-self:center;width:90px;height:8px;background:#3D3929;position:relative;border-radius:4px}
+.arrow:after{content:"";position:absolute;right:-6px;top:-13px;border-left:26px solid #3D3929;border-top:17px solid transparent;border-bottom:17px solid transparent}
+.tick{color:#3E6B4C;font-weight:800}.cross{color:#A3402A;font-weight:800}
+
+.alts{display:flex;gap:28px}.alts .card{flex:1;display:flex;flex-direction:column;gap:12px}.alts .big{font-size:40px;font-weight:800}.alts .body{font-size:34px}.gap{border:5px dashed #D97757;border-radius:22px;padding:24px 34px;font:600 36px/1.35 Inter,Arial,sans-serif;background:#FFFFFF}</style></head><body>
+<div id="root" data-composition-id="B08" data-start="0" data-duration="28.670" data-width="1920" data-height="1080">
+<div id="scene" class="clip" data-start="0" data-duration="28.670" data-track-index="1">
+
+<div class="stage">
+
+<div class="h" id="hd">What already exists</div>
+<div class="alts">
+  <div class="card" id="a1"><div class="big">Intercom Fin</div><div class="body">AI agent trained on your policies and procedures</div><div class="body" id="a1b">tests changes in simulations before launch; hands hard cases to people</div><div class="lbl">fin.ai, read 2026-10-25</div></div>
+  <div class="card" id="a2"><div class="big">Zendesk AI agents</div><div class="body">answers from the help-center articles you connect</div><div class="body" id="a2b">escalates to a human when it can't answer</div><div class="lbl">Zendesk help center docs, read 2026-10-25</div></div>
+  <div class="card" id="a3"><div class="big">Manual review</div><div class="body">a lead reads transcripts <span class="mark">after</span> answers are sent</div><div class="lbl">common practice</div></div>
+</div>
+<div class="gap" id="gp">Not found on their public pages: a check of each answer, <span class="mark">at send time</span>, against the current dated policy.</div>
+</div></div></div>
+<script>
+const C={"fin": 1.875, "sim": 8.0, "zen": 12.708, "esc": 16.417, "man": 19.0, "find": 22.625};
+const tl=gsap.timeline({paused:true});
+const IN=(s,t,v)=>tl.from(s,Object.assign({opacity:0,y:28,duration:.55,ease:'power3.out'},v||{}),t);
+IN('#hd',.2);IN('#a1',C.fin-.2,{y:50});IN('#a1b',C.sim-.3);IN('#a2',C.zen-.2,{y:50});IN('#a2b',C.esc-.3);IN('#a3',C.man-.2,{y:50});IN('#gp',C.find-.3,{scale:.9,y:0,ease:'back.out(1.5)'});
+window.__timelines=window.__timelines||{};window.__timelines['B08']=tl;
+</script></body></html>

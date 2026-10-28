@@ -1,0 +1,225 @@
+[run] skip B03_ThePipeline — B03 already filled
+[run] skip B04_Alternatives — B04 already filled
+[run] skip B05_FirstMinute — B05 already filled
+[run] skip B06_FourSkills — B06 already filled
+[run] skip B08_NameVariants — B08 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B07_InOutFirst clean
+[gateW] B09_HaveAndNew clean
+[gateW] B10_TodayAndWill clean
+[gateW] B12_Outro clean
+[run] rendering B07_InOutFirst
+Manim Community v0.18.1
+
+
+                             First/1552269881_250784583                         
+                             7_223132457.mp4'                                   
+                             First/2724347209_483730335                         
+                             _3920608095.mp4'                                   
+
+                             First/2724347209_853725452                         
+                             _2985460131.mp4'                                   
+                             First/2724347209_225457225                         
+                             4_2065993375.mp4'                                  
+
+                             First/2724347209_425147541                         
+                             6_984742068.mp4'                                   
+
+                             First/2724347209_686321515                         
+                             _1361200151.mp4'                                   
+
+                             First/2724347209_285257457                         
+                             0_3039411535.mp4'                                  
+                             First/2724347209_999516738                         
+                             _3811352846.mp4'                                   
+
+                             First/2724347209_223486406                         
+                             _2938806906.mp4'                                   
+                             First/2724347209_506158943                         
+                             _4006451969.mp4'                                   
+
+                             First/2724347209_326300008                         
+                             4_949127223.mp4'                                   
+
+                             First/2724347209_190326313                         
+                             0_2363655423.mp4'                                  
+
+                             First/2724347209_323812006                         
+                             5_1468023361.mp4'                                  
+                             First/2724347209_688360274                         
+                             _2902396727.mp4'                                   
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _InOutFirst.mp4'                                   
+                    INFO     Rendered B07_InOutFirst                scene.py:247
+                             Played 14 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+
+
+[audit] scenes: 19 snapshots → CLEAN
+[run] rendering B09_HaveAndNew
+Manim Community v0.18.1
+
+
+                             ndNew/1552269881_122457273                         
+                             _223132457.mp4'                                    
+                             ndNew/2724347209_192163557                         
+                             3_327767279.mp4'                                   
+
+                             ndNew/2724347209_156116470                         
+                             7_109491697.mp4'                                   
+
+                             ndNew/2724347209_103139868                         
+                             3_2290459595.mp4'                                  
+                             ndNew/2724347209_332827415                         
+                             0_3449961179.mp4'                                  
+
+                             ndNew/2724347209_131365567                         
+                             2_1409097807.mp4'                                  
+                             ndNew/2724347209_371576713                         
+                             4_3092122609.mp4'                                  
+
+                             ndNew/2724347209_347693593                         
+                             2_2055079873.mp4'                                  
+                             ndNew/2724347209_398396514                         
+                             6_3863379801.mp4'                                  
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _HaveAndNew.mp4'                                   
+                    INFO     Rendered B09_HaveAndNew                scene.py:247
+                             Played 9 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+[audit] scenes: 13 snapshots → CLEAN
+[run] rendering B10_TodayAndWill
+Manim Community v0.18.1
+
+
+                             AndWill/1552269881_6130276                         
+                             05_223132457.mp4'                                  
+                             AndWill/2724347209_4051692                         
+                             650_4090101880.mp4'                                
+
+                             AndWill/2724347209_3108233                         
+                             353_179025739.mp4'                                 
+                             AndWill/2724347209_2120432                         
+                             848_331852389.mp4'                                 
+
+                             AndWill/2724347209_3312994                         
+                             755_1212379402.mp4'                                
+                             AndWill/2724347209_2204369                         
+                             379_822852765.mp4'                                 
+
+                             AndWill/2724347209_2850649                         
+                             710_3656743953.mp4'                                
+                             AndWill/2724347209_2340386                         
+                             460_1576754684.mp4'                                
+
+                             AndWill/2724347209_1205631                         
+                             252_3253448169.mp4'                                
+                             AndWill/2724347209_1440229                         
+                             561_143057876.mp4'                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _TodayAndWill.mp4'                                 
+                    INFO     Rendered B10_TodayAndWill              scene.py:247
+                             Played 10 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+[audit] scenes: 15 snapshots → CLEAN
+[run] rendering B12_Outro
+Manim Community v0.18.1
+
+
+                             /1552269881_4152573864_223                         
+                             132457.mp4'                                        
+
+                             /2724347209_2236460389_369                         
+                             4177442.mp4'                                       
+
+                             /2724347209_4101297112_121                         
+                             861243.mp4'                                        
+                             /2724347209_1907618835_367                         
+                             5559132.mp4'                                       
+
+                             /2724347209_873924183_7635                         
+                             4067.mp4'                                          
+                             /2724347209_741076321_7615                         
+                             65308.mp4'                                         
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _Outro.mp4'                                        
+                    INFO     Rendered B12_Outro                     scene.py:247
+                             Played 6 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+[audit] scenes: 8 snapshots → CLEAN
+[remotion] B00: filled already (skip)
+[remotion] B01: filled already (skip)
+[remotion] B11: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled B00  VIDEO    10.0s  ← B00.mp4
+[art] compiled B01  VIDEO    12.8s  ← B01.mp4
+[art] compiled B02  MANIM    17.5s  ← B02.mp4
+[art] compiled B03  MANIM    15.0s  ← B03.mp4
+[art] compiled B04  MANIM    19.3s  ← B04.mp4
+[art] compiled B05  MANIM    14.5s  ← B05.mp4
+[art] compiled B06  MANIM    16.1s  ← B06.mp4
+[art] compiled B07  MANIM    17.5s  ← B07.mp4
+[art] compiled B08  MANIM    18.2s  ← B08.mp4
+[art] compiled B09  MANIM    17.7s  ← B09.mp4
+[art] compiled B10  MANIM    15.8s  ← B10.mp4
+[art] compiled B11  VIDEO    15.2s  ← B11.mp4
+[art] compiled B12  MANIM     7.8s  ← B12.mp4
+[art] motion histogram: graphic:10  remotion:3
+[art] WARNING: 'graphic' carries 10/13 beats (76%) — over the ~40% pantry cap; convert the excess to another language (MOTION.md)
+[art] SKIN LINT: B12: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (13/13 filled)
+[art] slots: 13/13 filled — B00:VIDEO B01:VIDEO B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:VIDEO B12:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] FAILED — 14 blocking defect(s). Reel not clean; fix and re-render.
+[run] GATE V FAILED: visual defects in the compiled cut —
+[run] Fix the scene source and re-run. (ART_STRICT=0 downgrades MAJOR to warnings.)

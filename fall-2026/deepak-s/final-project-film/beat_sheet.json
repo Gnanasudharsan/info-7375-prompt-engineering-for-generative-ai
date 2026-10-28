@@ -1,0 +1,791 @@
+{
+  "metadata": {
+    "slug": "cuegate-pitch",
+    "title": "CueGate",
+    "topic": "CUEGATE · PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "cuegate-pitch",
+    "channel_title": "Deepak Kumaran T S",
+    "persona": "Deepak Kumaran T S (narration written by Deepak, voiced by Kokoro am_onyx)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "srt sidecar (stage_publish.py, local only, after Deepak approves its file list)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "CueGate pitch (Deepak, 2026-10-14): B00 opens on Deepak's real claude.ai screenshot as a still, not the ClaudeComposerAsk mock; no verdict card; Your Turn (B13) is a drawn prompt card because the film shows no Claude UI mock-up. The spoken outro stays.",
+    "audience": "a subtitle QC lead at a localization vendor, and a hiring manager for applied-AI roles",
+    "source_doc": "inputs/NARRATION.md (Deepak); inputs/PROJECT-BRIEF.md; evidence/day-one/FINDINGS.md (2026-10-14)",
+    "audio_ready": true,
+    "playlist": "INFO 7375 final project pitch",
+    "chapter_number": 0,
+    "tags": [
+      "CueGate",
+      "subtitles",
+      "verification",
+      "prompt contracts",
+      "evaluation"
+    ],
+    "build": {
+      "at": "2026-10-14T19:23:25",
+      "cut": "master",
+      "filled": 16,
+      "of": 16,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "cold open",
+      "lane": "pantry",
+      "proof_gate": "SHOW",
+      "narration_text": "I'm Deepak Kumaran. On October fourteenth, 2026, I asked Claude to shorten one subtitle line so a viewer could read it in time. Here's what it gave me.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Real screenshot (evidence) on the cream stage with its date caption."
+      },
+      "shot": {
+        "type": "STILL",
+        "source": "own",
+        "motion": "hold",
+        "visual_intent": "Claude composer showing the real prompt and real reply, date on screen",
+        "still": "media/B00.png, built by make_b00.py from inputs/claude-exchange.png (unaltered) plus a date caption",
+        "exchange_date": "2026-10-14",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Deepak's real claude.ai exchange, dated 2026-10-14"
+          }
+        ]
+      },
+      "actual_duration_s": 9.71,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 9.75,
+      "build": {
+        "status": "STILL",
+        "src": "media/B00.png",
+        "filled_by": "still",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then I counted. It fit. The hard part is knowing it would fit every time, and knowing when it didn't.",
+      "estimated_duration_s": 8.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Same picture, counter stops under the bar",
+        "motion_claim": "Same picture, counter stops under the bar",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "the real reply line and an empty budget bar"
+          },
+          {
+            "at": 0.3,
+            "event": "the count climbs against the 38 mark"
+          },
+          {
+            "at": 0.8,
+            "event": "over: an ink cross at the overflow; fits: an ink check"
+          }
+        ],
+        "manim": {
+          "class": "B01_Count"
+        },
+        "count": {
+          "n": 37,
+          "budget": 38,
+          "rule": "without_quotes",
+          "text": "Not in there tonight, not after that."
+        }
+      },
+      "actual_duration_s": 5.59,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 5.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "CueGate will be a subtitle checker with a repair loop. It will find every line a viewer can't read in time, fix the timing first, shorten text only where it must, and refuse to ship any line it can't prove fits. It will exist as a Python package, a command-line tool, a small web app, and an evaluation report.",
+      "estimated_duration_s": 23.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A subtitle file passing through a turnstile gate, with a side door marked \"escalated\"",
+        "motion_claim": "A subtitle file passing through a turnstile gate, with a side door marked \"escalated\"",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "subtitle file arrives"
+          },
+          {
+            "at": 0.25,
+            "event": "gate and side door draw"
+          },
+          {
+            "at": 0.62,
+            "event": "one line peels off to the escalated door"
+          },
+          {
+            "at": 0.8,
+            "event": "file passes the gate, check lands"
+          }
+        ],
+        "manim": {
+          "class": "B02_Gate"
+        }
+      },
+      "actual_duration_s": 17.0,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 17.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Streaming platforms publish hard, numeric rules for subtitles: how fast a line can be read, the gap between lines, how timing behaves at a cut. Break them, and delivery guides say the file gets rejected.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A subtitle bar running off the edge of a frame; three chips: reading speed, gap, shot change",
+        "motion_claim": "A subtitle bar running off the edge of a frame; three chips: reading speed, gap, shot change",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "film frame, subtitle bar runs past its edge"
+          },
+          {
+            "at": 0.3,
+            "event": "three rule markers land: reading speed, gap, shot change"
+          },
+          {
+            "at": 0.8,
+            "event": "a flag rises on the bar"
+          }
+        ],
+        "manim": {
+          "class": "B03_Rules"
+        }
+      },
+      "actual_duration_s": 12.14,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 12.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I checked what exists. Subtitle Edit and Editsub offer AI that shortens one line when you ask, and EZTitles runs automated QC that flags reading-speed problems. In the tools I checked, shortening is something a person triggers, one line at a time. CueGate will be a gate over the whole file, and it will publish how often its shortened lines changed meaning.",
+      "estimated_duration_s": 24.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Left: one line with a small \"shorten\" button and a finger pressing it. Right: a whole file going through a gate, with \"meaning drift: measured\" under it",
+        "motion_claim": "Left: one line with a small \"shorten\" button and a finger pressing it. Right: a whole file going through a gate, with \"meaning drift: measured\" under it",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "left: one line, a small button, a cursor clicks it"
+          },
+          {
+            "at": 0.6,
+            "event": "right: a whole file rides through the gate"
+          },
+          {
+            "at": 0.85,
+            "event": "drift gauge appears under the gate"
+          }
+        ],
+        "manim": {
+          "class": "B04_Alternatives"
+        }
+      },
+      "actual_duration_s": 19.16,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 19.166666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The person who'll open it is a subtitle QC lead at a localization vendor. In the first sixty seconds, they'll drop in a failing subtitle file along with the film, and they'll get back a table: every broken rule, every line fixed and how, and every line CueGate will refuse to touch, with the reason.",
+      "estimated_duration_s": 22.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Report table mock-up. On screen: CONSTRUCTED",
+        "motion_claim": "Report table mock-up. On screen: CONSTRUCTED",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "CONSTRUCTED label up for the whole beat"
+          },
+          {
+            "at": 0.1,
+            "event": "a subtitle page and a film frame drop into the tray"
+          },
+          {
+            "at": 0.45,
+            "event": "report rows grow: broken, fixed, refused"
+          }
+        ],
+        "manim": {
+          "class": "B05_Report"
+        },
+        "constructed_label": "CONSTRUCTED"
+      },
+      "actual_duration_s": 16.96,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The order matters. First, timing: can the line stay up longer without crossing a cut or crowding the next one? Only if that fails will Claude be asked for shorter versions, with an exact character budget. Then a plain counter will check every one. The model will propose. The counter will decide.",
+      "estimated_duration_s": 20.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A three-rung ladder: timing, line breaks, shorten",
+        "motion_claim": "A three-rung ladder: timing, line breaks, shorten",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "ladder with three rungs: timing, line breaks, shorten"
+          },
+          {
+            "at": 0.3,
+            "event": "a token climbs rung by rung"
+          },
+          {
+            "at": 0.65,
+            "event": "candidate pages appear, the counter checks them"
+          }
+        ],
+        "manim": {
+          "class": "B06_Ladder"
+        }
+      },
+      "actual_duration_s": 15.4,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 15.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B07A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A counter can only know a line is short enough. It can't know if it means the same thing. Look at the reply I got. It fit the budget, and it kept both negatives. But \"I really don't think we should\" became \"Not in there\": a hedged opinion turned into a flat refusal. And \"what happened\" became \"that\". That shift in tone is exactly what a character count can't see.",
+      "estimated_duration_s": 28.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The source line and the real reply side by side, with the shifted phrases highlighted: \"I really don't think we should\" marked hedged opinion, \"Not in there\" marked flat refusal; a check for \"fits\"",
+        "motion_claim": "The source line and the real reply side by side, with the shifted phrases highlighted: \"I really don't think we should\" marked hedged opinion, \"Not in there\" marked flat refusal; a check for \"fits\"",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "source line (asked) and the real reply (got back) side by side"
+          },
+          {
+            "at": 0.25,
+            "event": "a check: it fit the budget"
+          },
+          {
+            "at": 0.45,
+            "event": "grey bars highlight the shifted phrases: hedged opinion, flat refusal"
+          },
+          {
+            "at": 0.8,
+            "event": "the counter block sits below, between them"
+          }
+        ],
+        "manim": {
+          "class": "B07A_Evidence"
+        }
+      },
+      "actual_duration_s": 17.54,
+      "audio_file": "mp3/beat-B07A.mp3",
+      "render_duration_s": 17.541666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B07B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So CueGate will check that numbers, names and every \"not\" survive, then run a second, weaker meaning check. I'll measure how often that check is wrong by labelling a hundred lines myself, and I'll publish the number even if it's bad.",
+      "estimated_duration_s": 16.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three stations: invariants (numbers, names, \"not\"), a weaker meaning check, and a stack of 100 hand-labelled lines",
+        "motion_claim": "Three stations: invariants (numbers, names, \"not\"), a weaker meaning check, and a stack of 100 hand-labelled lines",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "station 1, invariants, with three tags (numbers, names, not)"
+          },
+          {
+            "at": 0.3,
+            "event": "station 2, the weaker meaning check; the token moves on"
+          },
+          {
+            "at": 0.6,
+            "event": "station 3, a stack of 100 hand-labelled lines"
+          },
+          {
+            "at": 0.85,
+            "event": "a small chart: the number that will be published"
+          }
+        ],
+        "manim": {
+          "class": "B07B_Plan"
+        }
+      },
+      "actual_duration_s": 12.93,
+      "audio_file": "mp3/beat-B07B.mp3",
+      "render_duration_s": 12.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "If it works, a reviewer could fairly conclude I can write a prompt contract with a hard budget, build a verifier the model can't argue with, run an agent loop that fails closed, tie every flag to the guideline it comes from, and evaluate it against baselines. The evidence will be the tests, the evaluation report, and the audit labels.",
+      "estimated_duration_s": 24.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Five tiles: prompt contract, verifier, agent loop, source grounding, evaluation",
+        "motion_claim": "Five tiles: prompt contract, verifier, agent loop, source grounding, evaluation",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "five tiles land one by one as each skill is named"
+          },
+          {
+            "at": 0.85,
+            "event": "evidence pages slide under the tiles"
+          }
+        ],
+        "manim": {
+          "class": "B08_Tiles"
+        }
+      },
+      "actual_duration_s": 17.94,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 17.958333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "One thing it won't do is translate. It will work inside one language. The first piece I'll make run is the checker alone, on the English subtitles of an open Blender film. You'll know it ran because its counts will match lines I've checked by hand.",
+      "estimated_duration_s": 18.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three columns: IN, OUT (translation crossed out), FIRST (a terminal showing the word check)",
+        "motion_claim": "Three columns: IN, OUT (translation crossed out), FIRST (a terminal showing the word check)",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "three columns: IN, OUT, FIRST"
+          },
+          {
+            "at": 0.3,
+            "event": "translation icon crossed out under OUT"
+          },
+          {
+            "at": 0.6,
+            "event": "a small terminal with the word check under FIRST"
+          }
+        ],
+        "manim": {
+          "class": "B09_Scope"
+        }
+      },
+      "actual_duration_s": 13.35,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 13.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What could sink it is shot detection. Fades and fast motion can fool cut detectors, and a fake cut means the wrong timing rules. If that happens, I'll accept a cut list instead, and report detector errors separately.",
+      "estimated_duration_s": 15.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A filmstrip where a fast-motion stretch is wrongly marked as a cut",
+        "motion_claim": "A filmstrip where a fast-motion stretch is wrongly marked as a cut",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "filmstrip draws"
+          },
+          {
+            "at": 0.35,
+            "event": "fast motion across three frames is wrongly marked as a cut"
+          },
+          {
+            "at": 0.75,
+            "event": "a cut list page sets the real cut marker"
+          }
+        ],
+        "manim": {
+          "class": "B10_Filmstrip"
+        }
+      },
+      "actual_duration_s": 12.76,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 12.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It's a mix. Evaluation harnesses and prompt regression testing are skills I already have from my co-op, but that work isn't public, so I can't show it here. What I can show is the timeline gate in my Reallocation Engine recipe for this course, which I built with Claude Code. For evaluation specifically, the evidence will be this project's own test suite. What's new to me is frame-accurate timing, shot detection, subtitle standards, and checking meaning with an NLI model.",
+      "estimated_duration_s": 32.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Split panel: \"already have\" and \"new\"",
+        "motion_claim": "Split panel: \"already have\" and \"new\"",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "split panel: already have / new"
+          },
+          {
+            "at": 0.35,
+            "event": "harness page and the timeline gate sit on the left"
+          },
+          {
+            "at": 0.75,
+            "event": "timing, shot, standards and meaning items arrive on the right"
+          }
+        ],
+        "manim": {
+          "class": "B11_Split"
+        }
+      },
+      "actual_duration_s": 27.62,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 27.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Today, what exists is the plan, written October fourteenth, 2026. No code runs yet. Everything else in this film is \"will.\"",
+      "estimated_duration_s": 8.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two lists side by side: EXISTS, dated, and WILL",
+        "motion_claim": "Two lists side by side: EXISTS, dated, and WILL",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "EXISTS list with the dated plan and PDF pages"
+          },
+          {
+            "at": 0.45,
+            "event": "WILL list draws as ghost outlines"
+          }
+        ],
+        "manim": {
+          "class": "B12_Lists"
+        }
+      },
+      "actual_duration_s": 8.38,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 8.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Your turn. Take one subtitle line, ask a model to shorten it, then count the characters yourself. And check whether every \"not\" survived.",
+      "estimated_duration_s": 9.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell: one drawn picture on a cream stage per beat, labels beside the objects, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A prompt card",
+        "motion_claim": "A prompt card",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "a drawn prompt card with one subtitle line"
+          },
+          {
+            "at": 0.45,
+            "event": "a counter block ticks up"
+          },
+          {
+            "at": 0.8,
+            "event": "a check lands beside the kept \"not\""
+          }
+        ],
+        "manim": {
+          "class": "B13_YourTurn"
+        }
+      },
+      "actual_duration_s": 8.09,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 8.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T19:23:25"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "CueGate. Subtitles that fit the frame, or don't ship. I'm Deepak Kumaran.",
+      "estimated_duration_s": 5.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "visual_intent": "Title card: CUEGATE, with the tagline as a subtitle bar",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title CueGate and the narrator's name"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "CueGate",
+            "slug": "cuegate-pitch",
+            "handle": "Deepak Kumaran T S",
+            "showMascot": false,
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-14T23:09:54.937044+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 5.99,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 6.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "remotion:ClaudeTitleOutro",
+        "at": "2026-10-14T19:23:25"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "persona": "ashwin",
+  "voice": "am_michael",
+  "engine": "kokoro",
+  "about": "Voice-only pronunciation fixes for the ProvenDocs pitch narration (Kokoro am_michael). narration_text and captions are unchanged.",
+  "entries": [
+    {
+      "id": "redis",
+      "word": "Redis",
+      "say": "Reddiss",
+      "ignorecase": false,
+      "note": "Kokoro reads Redis as rih-DEEZ; whisper heard 'Ritties', 'Rides', 'Riddies' (2026-10-11). Correct is RED-iss.",
+      "patterns": ["\\b(?P<w>Redis)\\b"],
+      "examples": [{"text": "Redis will skip work that hasn't changed.", "expect": "ɹˈɛdɪs"}]
+    }
+  ]
+}

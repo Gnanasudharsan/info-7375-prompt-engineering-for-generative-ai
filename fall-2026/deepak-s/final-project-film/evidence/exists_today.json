@@ -1,0 +1,8 @@
+[
+  {"item": "CueGate planning README", "evidence": "evidence/CUEGATE-PLAN.md", "date": "2026-10-14", "ran": false, "kind": "document", "note": "Copy of the 2026-10-14 planning README; its day-one items were completed with dated results on 2026-10-14 (section 18)."},
+  {"item": "CueGate planning PDF", "evidence": "evidence/CueGate-Planning.pdf", "date": "2026-10-14", "ran": false, "kind": "document"},
+  {"item": "Claude exchange shown in B00, B01 and B07A (record)", "evidence": "evidence/claude-exchange.md", "date": "2026-10-14", "ran": false, "kind": "record"},
+  {"item": "Screenshot of that Claude exchange", "evidence": "evidence/claude-exchange.png", "date": "2026-10-14", "ran": false, "kind": "record"},
+  {"item": "Day-one findings: competitor, guideline, corpus and name checks", "evidence": "evidence/day-one/FINDINGS.md", "date": "2026-10-14", "ran": false, "kind": "record"},
+  {"item": "Reallocation Engine recipe PR #25 with the timeline gate (lib/gate.mjs lines 55-75)", "evidence": "https://github.com/nikbearbrown/the-reallocation-engine/pull/25", "head_commit": "edbac80604162750743e04a2da7fa85c734c0780", "date": "2026-10-03", "checked": "2026-10-14", "ran": false, "kind": "external repository", "note": "Open, not merged. Every commit is co-authored by DeepakKTS and Claude Opus 5.5. Code not run on 2026-10-14."}
+]

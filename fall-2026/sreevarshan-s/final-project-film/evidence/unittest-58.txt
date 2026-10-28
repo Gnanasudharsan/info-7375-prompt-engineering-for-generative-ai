@@ -1,0 +1,95 @@
+# captured 2026-10-11 11:08 EDT by Claude Code in the-reallocation-engine at ded8454
+$ python3 -m unittest discover -s scripts/contrib/2026fa/Sreevarshann-newgrad-de-ml-optwindow/tests -v
+test_ai_check_is_scored_but_g4_not_cleared_and_run_is_provisional (test_core.CheckedByTest.test_ai_check_is_scored_but_g4_not_cleared_and_run_is_provisional) ... ok
+test_blank_checked_by_is_rejected (test_core.CheckedByTest.test_blank_checked_by_is_rejected) ... ok
+test_human_check_clears_g4 (test_core.CheckedByTest.test_human_check_clears_g4) ... ok
+test_submission_input_file_loads_as_model_judgment (test_core.CheckedByTest.test_submission_input_file_loads_as_model_judgment) ... ok
+test_tool_result_is_record_with_run_source (test_core.CheckedByTest.test_tool_result_is_record_with_run_source) ... ok
+test_tool_result_without_run_date_is_rejected (test_core.CheckedByTest.test_tool_result_without_run_date_is_rejected) ... ok
+test_unknown_column_halts (test_core.CheckedByTest.test_unknown_column_halts) ... ok
+test_agreement_is_not_a_conflict (test_core.ConflictTest.test_agreement_is_not_a_conflict) ... ok
+test_human_open_vs_record_expired_human_governs_and_is_flagged (test_core.ConflictTest.test_human_open_vs_record_expired_human_governs_and_is_flagged) ... ok
+test_model_judgment_not_found_vs_record_active_goes_to_verify_posting (test_core.ConflictTest.test_model_judgment_not_found_vs_record_active_goes_to_verify_posting) ... ok
+test_model_judgment_open_vs_record_expired_goes_to_verify_posting (test_core.ConflictTest.test_model_judgment_open_vs_record_expired_goes_to_verify_posting) ... ok
+test_newer_ai_check_still_beats_older_human_check (test_core.ConflictTest.test_newer_ai_check_still_beats_older_human_check) ... ok
+test_same_date_human_check_beats_ai_check_in_either_order (test_core.ConflictTest.test_same_date_human_check_beats_ai_check_in_either_order)
+R5: newest check wins; on a same-date tie the human check governs, whatever the row order. ... ok
+test_uncertain_never_overrides (test_core.ConflictTest.test_uncertain_never_overrides) ... ok
+test_out_of_range_fit_is_treated_as_missing (test_core.FitTest.test_out_of_range_fit_is_treated_as_missing) ... ok
+test_role_without_fit_is_blocked_not_defaulted (test_core.FitTest.test_role_without_fit_is_blocked_not_defaulted) ... ok
+test_below_floor_and_unparseable_approvals_blocked (test_core.FixturePlanTest.test_below_floor_and_unparseable_approvals_blocked) ... ok
+test_blank_funding_date_stays_missing_not_zero (test_core.FixturePlanTest.test_blank_funding_date_stays_missing_not_zero) ... ok
+test_closed_posting_is_scored_with_gate_zero (test_core.FixturePlanTest.test_closed_posting_is_scored_with_gate_zero) ... ok
+test_company_not_in_csv_is_blocked (test_core.FixturePlanTest.test_company_not_in_csv_is_blocked) ... ok
+test_counts (test_core.FixturePlanTest.test_counts) ... ok
+test_form_d_misses_go_to_cannot_verify (test_core.FixturePlanTest.test_form_d_misses_go_to_cannot_verify) ... ok
+test_irrelevant_title_match_is_visible_for_human_review (test_core.FixturePlanTest.test_irrelevant_title_match_is_visible_for_human_review) ... ok
+test_malformed_check_rejected_and_role_stays_unchecked (test_core.FixturePlanTest.test_malformed_check_rejected_and_role_stays_unchecked) ... ok
+test_senior_only_company_is_network_never_scored (test_core.FixturePlanTest.test_senior_only_company_is_network_never_scored) ... ok
+test_stale_check_goes_back_to_verify_posting (test_core.FixturePlanTest.test_stale_check_goes_back_to_verify_posting) ... ok
+test_suffix_and_punctuation_variants_still_match (test_core.FixturePlanTest.test_suffix_and_punctuation_variants_still_match) ... ok
+test_typo_name_blocked_with_both_names_shown (test_core.FixturePlanTest.test_typo_name_blocked_with_both_names_shown) ... ok
+test_unchecked_role_goes_to_verify_posting (test_core.FixturePlanTest.test_unchecked_role_goes_to_verify_posting) ... ok
+test_unmatched_companies_are_ignored (test_core.FixturePlanTest.test_unmatched_companies_are_ignored) ... ok
+test_assert_scoreable_halts_on_incomplete_role (test_core.G5Test.test_assert_scoreable_halts_on_incomplete_role) ... ok
+test_bad_label_and_range_are_caught (test_core.G5Test.test_bad_label_and_range_are_caught) ... ok
+test_complete_role_passes (test_core.G5Test.test_complete_role_passes) ... ok
+test_each_missing_input_is_caught (test_core.G5Test.test_each_missing_input_is_caught) ... ok
+test_suite_catches_broken_mutant (test_core.G5Test.test_suite_catches_broken_mutant)
+The BROKEN mutant lets a role with no liveness through; this suite's check must expose it. ... ok
+test_every_emitted_value_has_an_allowed_label (test_core.LabelTest.test_every_emitted_value_has_an_allowed_label) ... ok
+test_scorer_record_shape (test_core.LabelTest.test_scorer_record_shape) ... ok
+test_soc_mapping_is_model_judgment_and_wage_is_record (test_core.LabelTest.test_soc_mapping_is_model_judgment_and_wage_is_record) ... ok
+test_v_rejects_unknown_label (test_core.LabelTest.test_v_rejects_unknown_label) ... ok
+test_future_dated_check_is_not_trusted (test_core.LivenessTest.test_future_dated_check_is_not_trusted) ... ok
+test_seven_days_is_current_eight_is_stale (test_core.LivenessTest.test_seven_days_is_current_eight_is_stale) ... ok
+test_status_mapping (test_core.LivenessTest.test_status_mapping) ... ok
+test_fixture_persona_matches_profile_yml (test_core.PersonaAndTimelineTest.test_fixture_persona_matches_profile_yml) ... ok
+test_g1_halts_on_bad_date (test_core.PersonaAndTimelineTest.test_g1_halts_on_bad_date) ... ok
+test_g1_halts_when_window_ends_before_opt_start (test_core.PersonaAndTimelineTest.test_g1_halts_when_window_ends_before_opt_start) ... ok
+test_g2_factor_boundary (test_core.PersonaAndTimelineTest.test_g2_factor_boundary) ... ok
+test_g2_halt_stops_the_whole_plan (test_core.PersonaAndTimelineTest.test_g2_halt_stops_the_whole_plan) ... ok
+test_g2_halts_when_opt_start_already_past (test_core.PersonaAndTimelineTest.test_g2_halts_when_opt_start_already_past) ... ok
+test_g2_halts_when_window_already_past (test_core.PersonaAndTimelineTest.test_g2_halts_when_window_already_past) ... ok
+test_loader_keeps_only_non_personal_columns (test_core.RealDataTest.test_loader_keeps_only_non_personal_columns) ... ok
+test_reproduces_recorded_funnel (test_core.RealDataTest.test_reproduces_recorded_funnel) ... ok
+test_cutoff_boundaries (test_core.SponsorshipTest.test_cutoff_boundaries) ... ok
+test_proven_provenance_string (test_core.SponsorshipTest.test_proven_provenance_string) ... ok
+test_halt_writes_run_log_and_no_report (test_run.RunTest.test_halt_writes_run_log_and_no_report) ... ok
+test_missing_input_file_halts_cleanly (test_run.RunTest.test_missing_input_file_halts_cleanly)
+Break attempt (d): a missing input file is a clean halt with a run log, not a traceback. ... ok
+test_refuses_to_overwrite_existing_run (test_run.RunTest.test_refuses_to_overwrite_existing_run) ... ok
+test_report_opens_with_summary_and_g4_warning_then_sections_in_order (test_run.RunTest.test_report_opens_with_summary_and_g4_warning_then_sections_in_order) ... ok
+test_zero_scoreable_skips_scorer_with_plain_message (test_run.RunTest.test_zero_scoreable_skips_scorer_with_plain_message) ... ok
+
+----------------------------------------------------------------------
+Ran 58 tests in 8.513s
+
+OK
+HALT: G2 timeline: unemployment window ended 2027-04-15; timeline cannot be evaluated
+run-log: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpvsfdsetl/2027-04-16/run-log.json
+HALT: input file not found: posting_checks = /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpiji341z8/does-not-exist.csv
+run-log: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpiji341z8/2026-10-02/run-log.json
+plan: {'scoreable': 0, 'blocked': 0, 'network': 53, 'verify_posting': 64, 'rejected_checks': 0, 'cannot_verify': 64}  provisional=False
+roles.json: 0 role(s) -> /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02/roles.json
+scorer: skipped — zero scoreable roles
+report: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02/report.md
+run-log: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02/run-log.json
+refusing to overwrite existing run outputs in /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02 (use --overwrite)
+plan: {'scoreable': 0, 'blocked': 0, 'network': 53, 'verify_posting': 64, 'rejected_checks': 0, 'cannot_verify': 64}  provisional=False
+roles.json: 0 role(s) -> /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02/roles.json
+scorer: skipped — zero scoreable roles
+report: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02/report.md
+run-log: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmp4ie1y5wu/2026-10-02/run-log.json
+plan: {'scoreable': 1, 'blocked': 0, 'network': 53, 'verify_posting': 63, 'rejected_checks': 0, 'cannot_verify': 66}  provisional=True
+roles.json: 1 role(s) -> /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpeliw_193/2026-10-02/roles.json
+scorer: $ STUB_SCORER (not the real scorer)
+stub scorer
+report: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpeliw_193/2026-10-02/report.md
+run-log: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpeliw_193/2026-10-02/run-log.json
+plan: {'scoreable': 0, 'blocked': 0, 'network': 53, 'verify_posting': 64, 'rejected_checks': 0, 'cannot_verify': 64}  provisional=False
+roles.json: 0 role(s) -> /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpdl_u82_a/2026-10-02/roles.json
+scorer: skipped — zero scoreable roles
+report: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpdl_u82_a/2026-10-02/report.md
+run-log: /var/folders/wm/_606m8_s2mg3713v8816c8_40000gn/T/tmpdl_u82_a/2026-10-02/run-log.json
+[exit 0]

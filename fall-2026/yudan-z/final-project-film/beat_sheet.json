@@ -1,0 +1,744 @@
+{
+  "metadata": {
+    "slug": "is-funded-sponsor-triage-pitch",
+    "title": "A Blank Is Not a No",
+    "topic": "FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "yudanzhou",
+    "channel_title": "@yudanzhou",
+    "persona": "Yudan Zhou",
+    "voice": "af_heart",
+    "voice_kokoro": "af_heart",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 1920,
+    "height": 1080,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Course pitch film narrated by the student as herself: no composer cold open, no verdict card, and no Your Turn prompt — the assignment's seven questions take their place. The outro uses StudentTitleOutro, a local copy of ClaudeTitleOutro that renders the student's own handle, because the stock component hardcodes the instructor's handle and the assignment forbids the instructor's name, persona or credit line.",
+    "source_doc": "SOURCES.md",
+    "tags": [
+      "Final Project Pitch",
+      "Data Analyst",
+      "Evidence",
+      "H-1B",
+      "Provenance"
+    ],
+    "build": {
+      "at": "2026-10-13T23:29:24",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'StudentTitleOutro' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi. I'm Yudan Zhou, an Information Systems master's student, and this is the pitch for my final project — a portfolio piece for data analyst roles. The voice you are hearing is a synthetic voice reading my own script.",
+      "estimated_duration_s": 13.5,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "lead_silence_s": 0.8,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell bookend: one typed line and its correction, nothing else on screen."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "The question types itself and one phrase is corrected"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Which companies\ndon't sponsor visas?",
+            "triggerWords": "don't sponsor visas",
+            "replacementWords": "have no record either way",
+            "fontSize": 78,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "is-funded-sponsor-triage-pitch",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/BIDEA.mp4",
+            "at": "2026-10-14T03:16:36.549410+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 13.78,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 13.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\BIDEA.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-13T23:29:24"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Three terms. Sponsorship means an employer filed paperwork so a foreign worker can stay. O.P.T. is the limited window a student gets to work after graduating. A blank record means the dataset matched no filing to that company — which is not a refusal.",
+      "estimated_duration_s": 12.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell bookend: three terms, one line each."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Three terms appear and settle"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeDefinitions",
+          "props": {
+            "title": "Terms In This Film",
+            "terms": [
+              {
+                "term": "sponsorship",
+                "meaning": "An employer files so you can stay"
+              },
+              {
+                "term": "OPT",
+                "meaning": "A limited window to work after graduating"
+              },
+              {
+                "term": "a blank record",
+                "meaning": "No matched filing — not a refusal"
+              }
+            ],
+            "folderLabel": "@yudanzhou",
+            "durationSeconds": 17.07
+          },
+          "rendered": {
+            "out": "media/BDEFS.mp4",
+            "at": "2026-10-14T03:18:03.926484+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 17.07,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 17.083333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\BDEFS.mp4",
+        "filled_by": "remotion:ClaudeDefinitions",
+        "at": "2026-10-13T23:29:24"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "In one sentence: a job-search triage tool for international students. It sorts postings into apply, consider, or skip using public funding and sponsorship records — and when there is no record, it says so. Finished, it is a repository with a recipe, a Python tool, tests, and an evaluation log.",
+      "estimated_duration_s": 16.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Postings ride a conveyor into three trays, with a fourth tray set apart",
+        "motion_claim": "One posting peels off into a fourth tray marked no record",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Postings enter on the conveyor"
+          },
+          {
+            "at": 0.5,
+            "event": "Three trays fill: apply, consider, skip"
+          },
+          {
+            "at": 0.8,
+            "event": "One posting peels off into a fourth tray set apart"
+          }
+        ],
+        "labels": [
+          "apply",
+          "consider",
+          "skip",
+          "no record"
+        ],
+        "manim": {
+          "class": "B01_Trays"
+        }
+      },
+      "actual_duration_s": 19.18,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 19.208333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: belt, four trays and the repository box on cream; one idea, labels beside objects. Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Twenty-seven thousand, eight hundred seventy-four companies have a funding date. Only one thousand, five hundred thirty-two have any H-1B approval on record. Only one hundred thirty-one of those raised money in the last two years. Funded and sponsoring barely overlap.",
+      "estimated_duration_s": 18.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A tall bar collapses twice, each time to a fraction of itself",
+        "motion_claim": "The bar shrinks from 27,874 to 1,532 to 131",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A full-height bar stands at 27,874"
+          },
+          {
+            "at": 0.45,
+            "event": "It collapses to 1,532"
+          },
+          {
+            "at": 0.75,
+            "event": "It collapses again to 131"
+          }
+        ],
+        "labels": [
+          "27,874",
+          "1,532",
+          "131",
+          "record · run 2026-10-02"
+        ],
+        "manim": {
+          "class": "B02_Funnel"
+        }
+      },
+      "actual_duration_s": 17.02,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 17.041666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The bigger trap is the blank. Twenty-eight thousand, eight hundred twelve rows have no approval number at all. Only five say zero. A blank almost never means does not sponsor. It means nobody matched a record.",
+      "estimated_duration_s": 13.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An enormous stack of blank cards beside five small cards marked zero",
+        "motion_claim": "The blank stack keeps growing while the five stay five",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Five small cards marked 0 sit alone"
+          },
+          {
+            "at": 0.4,
+            "event": "A stack of blank cards rises beside them and keeps rising"
+          }
+        ],
+        "labels": [
+          "blank",
+          "0"
+        ],
+        "manim": {
+          "class": "B03_Blanks"
+        }
+      },
+      "actual_duration_s": 13.27,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 13.291666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: five zero cards against one blank stack; the empty space is the contrast being shown. Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "On October thirteenth I searched h1bdata dot info for Moloco, a company in my run. It returned a long table of filings: job titles, salaries, dates. Then I searched 123 See, a company my data has no record for. No table, no count, and nothing saying it found nothing. That blank is what a student reads as a no.",
+      "estimated_duration_s": 23.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two identical search boxes: one returns a long table, the other returns nothing",
+        "motion_claim": "The right-hand box returns an empty frame where the table should be",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Two identical search boxes appear"
+          },
+          {
+            "at": 0.35,
+            "event": "The left box fills with a long table"
+          },
+          {
+            "at": 0.7,
+            "event": "The right box returns an empty frame"
+          }
+        ],
+        "labels": [
+          "filings",
+          "nothing",
+          "CONSTRUCTED"
+        ],
+        "constructed": true,
+        "manim": {
+          "class": "B04_TwoSearches"
+        }
+      },
+      "actual_duration_s": 21.87,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 21.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "My tool labels that blank, keeps the company out of the ranking, and moves it to my networking list with a question to ask a person. It does not save lookup time. It stops a student throwing away most of the market.",
+      "estimated_duration_s": 14.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A blank card is lifted off the ranking conveyor and set into a separate tray",
+        "motion_claim": "The blank card leaves the ranking and lands under a question mark",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A blank card rides toward the ranking"
+          },
+          {
+            "at": 0.45,
+            "event": "It is lifted clear of the ranking"
+          },
+          {
+            "at": 0.75,
+            "event": "It lands in a tray with a question bubble"
+          }
+        ],
+        "labels": [
+          "network"
+        ],
+        "manim": {
+          "class": "B05_Network"
+        }
+      },
+      "actual_duration_s": 12.61,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 12.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one card leaves the ranking for the network tray. Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The reader I am pitching to is a hiring manager for a data analyst role. In sixty seconds they clone the repository, run one command, and see a shortlist where every number carries a tag. Record means a data file produced it. Your input means I chose it.",
+      "estimated_duration_s": 18.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One command runs and a shortlist appears, each number wearing a small tag",
+        "motion_claim": "Tags attach themselves to each number as the list lands",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A single command runs"
+          },
+          {
+            "at": 0.4,
+            "event": "A shortlist lands"
+          },
+          {
+            "at": 0.7,
+            "event": "A tag attaches to each number"
+          }
+        ],
+        "labels": [
+          "record",
+          "your-input"
+        ],
+        "manim": {
+          "class": "B06_Shortlist"
+        }
+      },
+      "actual_duration_s": 16.83,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 16.833333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one command and one shortlist sheet. Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What it shows is source grounding and verification. Eleven tests exist, and one checks those tags rather than the arithmetic. On October twelfth a teaching assistant reviewing the recipe wrote: you never turn a blank into a no.",
+      "estimated_duration_s": 20.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A magnifier passes over the tags; a check mark lands beside a list of tests",
+        "motion_claim": "The magnifier stops on a tag and a check appears",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A magnifier moves across the tagged numbers"
+          },
+          {
+            "at": 0.5,
+            "event": "It stops on one tag"
+          },
+          {
+            "at": 0.8,
+            "event": "A check lands beside a short list of tests"
+          }
+        ],
+        "labels": [
+          "source grounding",
+          "verification"
+        ],
+        "manim": {
+          "class": "B07_Magnifier"
+        }
+      },
+      "actual_duration_s": 14.1,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 14.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The honest split. Today: a recipe, a Python prototype, eleven tests. Still to come: the corrected status, a written reason for every assumption, a sensitivity check, a test set with known answers, and a failure analysis.",
+      "estimated_duration_s": 19.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two shelves side by side: one holds solid objects, the other holds dashed outlines",
+        "motion_claim": "Solid items land on the left shelf; dashed outlines appear on the right",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Two empty shelves appear"
+          },
+          {
+            "at": 0.4,
+            "event": "Solid objects land on the left shelf"
+          },
+          {
+            "at": 0.75,
+            "event": "Dashed outlines appear on the right shelf"
+          }
+        ],
+        "labels": [
+          "exists",
+          "will"
+        ],
+        "manim": {
+          "class": "B08_Shelves"
+        }
+      },
+      "actual_duration_s": 14.76,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 14.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: two shelves, solid vs dashed items. Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "One thing it will deliberately never do: say a company does not sponsor, except the five whose record shows a zero. First I will make the two review fixes run — status back to draft, and a written reason behind every placeholder number. You will know it ran when the tests pass and no number in the report says placeholder.",
+      "estimated_duration_s": 18.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A gate that opens only for a card carrying a record; a flag drops on two items",
+        "motion_claim": "A blank card is turned back at the gate while a record card passes",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A card carrying a record passes the gate"
+          },
+          {
+            "at": 0.45,
+            "event": "A blank card is turned back"
+          },
+          {
+            "at": 0.8,
+            "event": "A flag drops onto two items on a short list"
+          }
+        ],
+        "labels": [
+          "first"
+        ],
+        "manim": {
+          "class": "B09_Gate"
+        }
+      },
+      "actual_duration_s": 19.16,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 19.166666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The risk is that numbers I choose outweigh the records I look up. In my own run one company had five hundred sixty-four approvals and still scored zero, because of one hand-entered demo value. This pitch's own first draft had four statements that did not match my files — an AI review caught them. So I will add a sensitivity check that moves each assumption and counts how many decisions flip.",
+      "estimated_duration_s": 20.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A balance where one small hand-written tile outweighs a tall stack of record cards",
+        "motion_claim": "The single tile drops and the tall stack lifts",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "A tall stack of record cards sits on one pan"
+          },
+          {
+            "at": 0.5,
+            "event": "One small hand-written tile drops onto the other pan"
+          },
+          {
+            "at": 0.8,
+            "event": "The tall stack lifts"
+          }
+        ],
+        "labels": [
+          "assumption",
+          "records"
+        ],
+        "manim": {
+          "class": "B10_Balance"
+        }
+      },
+      "actual_duration_s": 23.47,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 23.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: one balance with a record stack and one tile; spacing kept so the stacked cards do not read as overlapping text (Gate T). Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why this project? A mix. The domain is mine — I am the person it is built for, and the judgment calls are mine. The code was written with an AI assistant under my direction. New to me: writing and testing code myself, a test set with known answers, and sensitivity analysis.",
+      "estimated_duration_s": 17.0,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two piles build up side by side, one solid and one still being assembled",
+        "motion_claim": "Items sort themselves into the two piles",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Two empty areas appear"
+          },
+          {
+            "at": 0.4,
+            "event": "Items sort into a solid pile"
+          },
+          {
+            "at": 0.75,
+            "event": "Items sort into a half-built pile"
+          }
+        ],
+        "labels": [
+          "have",
+          "learning"
+        ],
+        "manim": {
+          "class": "B11_Piles"
+        }
+      },
+      "actual_duration_s": 17.75,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 17.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim\\B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T23:29:24"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell: two platforms, have vs learning. Only underfill and clustering waived."
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "bookend",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "A Blank Is Not a No. I'm Yudan Zhou. Thanks for watching.",
+      "estimated_duration_s": 3.6,
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "tail_silence_s": 1.0,
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Own end card: title and the student's name only."
+      },
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Title and handle appear and settle"
+          }
+        ],
+        "remotion": {
+          "pattern": "StudentTitleOutro",
+          "props": {
+            "title": "A Blank Is Not a No",
+            "slug": "is-funded-sponsor-triage-pitch",
+            "handle": "@yudanzhou",
+            "subline": ""
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-14T03:18:36.822119+00:00"
+          }
+        }
+      },
+      "actual_duration_s": 4.371,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 4.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media\\BOUT.mp4",
+        "filled_by": "remotion:StudentTitleOutro",
+        "at": "2026-10-13T23:29:24"
+      }
+    }
+  ]
+}

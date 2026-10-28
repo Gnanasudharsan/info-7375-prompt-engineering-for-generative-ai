@@ -1,0 +1,882 @@
+{
+  "metadata": {
+    "title": "Electricity Supplier Check",
+    "slug": "electricity-supplier-check-pitch",
+    "topic": "Final project pitch — INFO 7375",
+    "purpose": "Pitch film for the INFO 7375 final project; answers the assignment's seven questions.",
+    "brand": "hemanth-rayudu-pitch",
+    "channel": "hemanth-rayudu-pitch",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "caption_policy": "none",
+    "fps": 24,
+    "width": 3840,
+    "height": 2160,
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Narrator rules 1, 4 and 8: plain title card instead of a Claude composer cold open (no Claude exchange depicted), no verdict card, no Your Turn composer. The OUTRO check (ClaudeTitleOutro with @NikBearBrown) cannot be exempted and will FAIL by design: rule 1 forbids a channel handle or credit line. bookend_check.py is not wired into art run or art final.",
+    "narrator": "Hemanth Rayudu, first person",
+    "register": "plain first-person pitch",
+    "format": "Assignment's pitch format (show-tell style): one simple drawn picture per beat, minimal on-screen labels, narration carries the explanation.",
+    "renderer": "All beats: Manim scenes in this reel's own scenes.py (show-tell iso kit pasted in). No Remotion beats. No shared toolkit files edited.",
+    "toolkit": "../brutalist.art updated to upstream 519fcbb (2026-10-12) on 2026-10-14 at the narrator's request; show-tell skill.",
+    "engine": "kokoro",
+    "voice_kokoro": "am_onyx",
+    "palette": "cream-ink-terracotta",
+    "palette_note": "Show-tell palette: stage #F2F0E9, ink #3D3929, terracotta #D97757. Does not claim the claude brand bookend contract.",
+    "aspect_ratio": "16:9",
+    "clock": "narration",
+    "source_of_truth": "../../PROJECT-BRIEF.md (verified against the AG report and National Grid tariff, 2026-10-14)",
+    "duration_policy": "Duration is an output. Assignment window 2–4 min; never padded.",
+    "duration_estimate": {
+      "total_words": 669,
+      "estimated_s": 228.7,
+      "basis": "≈3.0 words/s, Kokoro am_onyx pace measured on examples/ai-explainer/claude-debunked; +0.4 s per beat"
+    },
+    "status": "narration approved; build in progress",
+    "decisions": {
+      "past_tense_for_real_events": "approved by narrator 2026-10-14",
+      "name_on_title_card": "approved by narrator 2026-10-14",
+      "sample_bill": "constructed bill printing the real residential basic service rates from meco_basic_service.pdf, as the narrator chose on 2026-10-14 (replacing the earlier 'beside the bill' layout)",
+      "formula_on_mock_screen": "option (a): grey placeholder blocks, no readable formula (narrator 2026-10-14)",
+      "narration": "v2 draft approved by narrator as written, 2026-10-14",
+      "toolkit_update": "approved by narrator 2026-10-14",
+      "tts_respelling": "'pytest' is written 'py-test' in narration_text (B07, B09) because Kokoro reads 'pytest' as 'PIE-dist'; the spoken words are unchanged",
+      "renderer": "reel-local Manim scenes.py (narrator delegated the choice 2026-10-14)",
+      "tts_clarity": "B06 'isn't instant' re-voiced as 'it is not instant' because the first take was heard as 'is an instant' (whisper check 2026-10-14); meaning unchanged",
+      "name_pronunciation": "B00 narration_text spells the narrator's name 'Hey-month Rah-you-doo' (voice only) so Kokoro says HAY-munth RAH-yoo-doo, as the narrator gave it on 2026-10-14 ('Hey- Month Ra- You- do'). On screen the name stays 'Hemanth Rayudu'.",
+      "title_card": "B00 rebuilt as a Manim title card so the title can be larger (narrator request 2026-10-14)",
+      "b08_skills": "B08 skills strip redrawn as five recognizable objects (narrator request 2026-10-14)",
+      "spoken_disclaimers": "Removed 'This bill is a drawing, not mine.' (B01) and 'That screen is a constructed mock-up.' (B04) at the narrator's request 2026-10-14; the on-screen CONSTRUCTED tags stay (assignment: mock-ups labelled constructed on screen)",
+      "claude_code_role": "Claude Code builds the project and is how the agent calls Claude at runtime (headless), per the narrator 2026-10-14; brief updated to match",
+      "visual_cast": "Cardboard boxes replaced with an electricity cast (pole transformer as the tool, plain outlined panels for containers) at the narrator's request 2026-10-14"
+    },
+    "overrides": [
+      "Rule 1: narrator is Hemanth Rayudu in first person. No nbb/hai persona, no IN-FOR-BEAR line, no instructor name, no channel chip, no credit line. metadata.channel_title, folderLabel and keep_review_labels are deliberately unset.",
+      "Rule 2: voice kokoro am_onyx (metadata.voice deliberately unset).",
+      "Rule 4: the narrator's beat order after a plain title card. 'Who it is for' is two beats (end user B04, portfolio reader B05), in the same position. No hesitant writer, key-terms card, Your Turn composer or spoken channel outro.",
+      "Rule 7: constructed visuals tagged on screen: B01, B04, B07, B10 (B03 tagged PROPOSED).",
+      "Rule 5: the B01 tariff numbers (meco_basic_service.pdf) were added at the narrator's request on 2026-10-14; they are not in PROJECT-BRIEF.md.",
+      "Rule 8: no Claude response is depicted anywhere.",
+      "Rule 9: free pipeline only; no API keys; never publish."
+    ],
+    "approvals": {},
+    "build": {
+      "at": "2026-10-14T22:40:01",
+      "cut": "master",
+      "filled": 13,
+      "of": 13,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "TITLE",
+      "brief_ref": "title; Exists today: 'Nothing yet. This is a pitch.'",
+      "narration_text": "I'm Hey-month Rah-you-doo, and this is my pitch for Electricity Supplier Check. Nothing in it is built yet.",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "fade",
+        "classification": "CARD",
+        "visual_intent": "Plain title card (replaces the Claude-composer cold open, rule 8): large title, the narrator's name, and the film's drawn bill. Manim, so the title can be sized up (FormACard's auto-fit kept it small).",
+        "labels": [
+          "Electricity Supplier Check",
+          "Hemanth Rayudu"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Title fades up, large."
+          },
+          {
+            "at": "Hey-month",
+            "event": "'Hemanth Rayudu' beneath it."
+          },
+          {
+            "at": "Nothing in it",
+            "event": "The film's drawn bill rises in below (constructed, no amounts)."
+          }
+        ],
+        "manim": {
+          "class": "B00_Title"
+        }
+      },
+      "lead_silence_s": 0.5,
+      "word_count": 18,
+      "estimated_duration_s": 6.9,
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 6.29,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 6.291666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Plain title card (narrator rules 1 and 8 replace the composer cold open): one title line and the narrator's name on a cream ground. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "lane": "manim",
+      "proof_gate": "CARD"
+    },
+    {
+      "beat_id": "B01",
+      "act": "MY STORY",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§7 overpaid on my bill; §2 'I missed it on mine'",
+      "narration_text": "I was on a competitive electricity supplier and overpaid compared to what basic service would have cost. I didn't catch it by reading the bill.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "The film's hero object: a constructed bill that prints the real residential basic service rates from meco_basic_service.pdf (narrator request 2026-10-14). No amounts for the supplier, no account data, no logo; source caption shown.",
+        "labels": [
+          "Supplier · competitive supplier",
+          "Basic service, fixed · $0.17185 / kWh",
+          "Basic service, Aug 2026 · $0.16074 / kWh"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "A large drawn bill: grey header band, two scribbled rows, tag CONSTRUCTED."
+          },
+          {
+            "at": "competitive electricity supplier",
+            "event": "Row 'Supplier — competitive supplier' prints, with one terracotta dot."
+          },
+          {
+            "at": "overpaid",
+            "event": "A coin slips out past the bill's right edge and drops."
+          },
+          {
+            "at": "basic service would have cost",
+            "event": "Rows 'Basic service, fixed — $0.17185 / kWh' and 'Basic service, Aug 2026 — $0.16074 / kWh' print; the tariff source caption appears."
+          }
+        ],
+        "manim": {
+          "class": "B01_Bill"
+        },
+        "constructed_label": "CONSTRUCTED",
+        "source_on_screen": "National Grid basic service rates, M.D.P.U. No. 1-26-H, effective Aug 1, 2026 · downloaded 2026-10-14"
+      },
+      "word_count": 32,
+      "estimated_duration_s": 11.1,
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 7.96,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 8.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "AG FINDING",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§2 AG finding (verified: AG report p. 2 and p. 4)",
+      "narration_text": "The Massachusetts Attorney General found that residential customers on competitive supply paid seven hundred thirty-eight point seven million dollars more than basic service over the last decade. Suppliers charging ten to thirty percent above basic service account for more than half of those losses. Markups that size are hard to spot on a bill.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "A coin stack grows coin by coin; '$738.7 million' lands; a bracket marks the lower 51.45% of the stack.",
+        "labels": [
+          "$738.7 million",
+          "10–30% above"
+        ],
+        "show": [
+          {
+            "at": "residential customers",
+            "event": "Coins drop onto the stack one by one."
+          },
+          {
+            "at": "seven hundred",
+            "event": "'$738.7 million' fades in."
+          },
+          {
+            "at": "ten to thirty",
+            "event": "A bracket over the lower 51.45% of the stack, labelled '10–30% above'."
+          },
+          {
+            "at": "hard to spot",
+            "event": "The film's bill slides in beside the stack."
+          }
+        ],
+        "manim": {
+          "class": "B02_Losses"
+        },
+        "source_on_screen": "Massachusetts Attorney General, 2026 competitive supply report, pp. 2 & 4 · downloaded 2026-10-14"
+      },
+      "word_count": 54,
+      "estimated_duration_s": 18.4,
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 19.05,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 19.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "WHAT IT IS",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§1 What is it?",
+      "narration_text": "Electricity Supplier Check will read a Massachusetts electric bill and tell you exactly how much more, or less, you paid than basic service, with the math shown. It will be a Python repository with the agent, a dated rate table where every row cites its tariff, constructed test bills with known answers, and an evaluation report.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "The tool is a pole-mounted transformer: the bill goes in, a '$' slip comes out with the math under it; a GitHub-style folder fills with the rate table, test bills and eval report.",
+        "labels": [
+          "rate table",
+          "test bills",
+          "eval report"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "Pole-mounted transformer (the tool); tag PROPOSED."
+          },
+          {
+            "at": "will read",
+            "event": "The bill slides into the transformer."
+          },
+          {
+            "at": "tell you exactly",
+            "event": "A '$' slip comes out."
+          },
+          {
+            "at": "math shown",
+            "event": "Grey formula blocks appear under the slip."
+          },
+          {
+            "at": "repository",
+            "event": "A folder (the repository) appears."
+          },
+          {
+            "at": "dated rate table",
+            "event": "Rate table, then test bills, then eval report fill the folder, labelled."
+          }
+        ],
+        "manim": {
+          "class": "B03_Toolbox"
+        },
+        "constructed_label": "PROPOSED"
+      },
+      "word_count": 56,
+      "estimated_duration_s": 19.1,
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 18.37,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 18.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "WHO: END USER, FIRST SIXTY SECONDS",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§3 End user",
+      "narration_text": "It will be for a Massachusetts household, or an energy coach or legal aid worker checking bills for many families. In the first sixty seconds, they'll upload a bill and see: on this bill, you paid X dollars more than basic service, the formula behind it, and what to do next.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Mock-up of the result screen. '$X' stays a placeholder; nothing is invented.",
+        "labels": [
+          "$X more",
+          "0:60"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "A small house, then a tall stack of many bills beside it (the coach's pile)."
+          },
+          {
+            "at": "first sixty seconds",
+            "event": "A stopwatch '0:60' starts; the B01 bill slides into a laptop screen."
+          },
+          {
+            "at": "on this bill",
+            "event": "The screen shows a slip reading '$X more'."
+          },
+          {
+            "at": "the formula behind it",
+            "event": "Under it, a formula row drawn as grey blocks (no readable formula; the brief doesn't state one)."
+          },
+          {
+            "at": "what to do next",
+            "event": "An arrow row slides in under the formula."
+          }
+        ],
+        "manim": {
+          "class": "B04_FirstMinute"
+        },
+        "constructed_label": "CONSTRUCTED MOCK-UP"
+      },
+      "word_count": 57,
+      "estimated_duration_s": 19.4,
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 15.02,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 15.041666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "WHO: PORTFOLIO READER",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "header 'Target role'; §3 Portfolio reader (GitHub repository, evaluation report, rerun the tests)",
+      "narration_text": "The other reader is a hiring manager for my target role: AI engineer for agentic systems, ideally at an energy company. In their first sixty seconds, they'll open the project's GitHub repository and its evaluation report. For every test bill, it will show whether each number in Claude's explanation matches a number the Python calculator produced, and they can rerun the tests themselves.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "A cursor opens the GitHub folder; the eval report slides out; each row links a number in Claude's explanation to a calculator number and gets a check; a rerun loop appears.",
+        "labels": [
+          "GitHub repo",
+          "eval report"
+        ],
+        "show": [
+          {
+            "at": "hiring manager",
+            "event": "GitHub folder and a cursor; the cursor drifts toward the folder."
+          },
+          {
+            "at": "open the project's",
+            "event": "The cursor clicks the folder (terracotta ring)."
+          },
+          {
+            "at": "evaluation report",
+            "event": "The eval report slides out, labelled."
+          },
+          {
+            "at": "For every test",
+            "event": "Three rows: explanation number (left), calculator number (right)."
+          },
+          {
+            "at": "matches a number",
+            "event": "Each row gets a link line and a check."
+          },
+          {
+            "at": "rerun the tests",
+            "event": "A loop arrow over the folder."
+          }
+        ],
+        "manim": {
+          "class": "B05_Reviewer"
+        }
+      },
+      "word_count": 46,
+      "estimated_duration_s": 15.7,
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 21.1,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 21.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "ALTERNATIVES",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§2 alternatives; 'will save a household the work of…'",
+      "narration_text": "I looked at two real alternatives. Energy Switch Massachusetts helps you shop for a new supplier, but doesn't read your bill or tell you what you've already paid extra. Some towns' energy coaches check whether you're on competitive supply, but that needs a person, and it is not instant. Mine will save a household the work of finding the right published rate, matching it to the billing period, and doing the math.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Three scenes: an offers board (shopping for a supplier) with the bill untouched above it; a clock with a queue of bills; the transformer turning the bill into a '$' slip at once.",
+        "labels": [
+          "Energy Switch MA",
+          "energy coach",
+          "mine"
+        ],
+        "show": [
+          {
+            "at": "Energy Switch Massachusetts",
+            "event": "A shop window of supplier boxes; the B01 bill sits outside it, untouched."
+          },
+          {
+            "at": "energy coaches",
+            "event": "A clock with a queue of bills waiting in front of it."
+          },
+          {
+            "at": "Mine will save",
+            "event": "The bill goes into the B03 box and the '$' slip comes straight out. Three steps tick on the box: rate, period, math."
+          }
+        ],
+        "manim": {
+          "class": "B06_Alternatives"
+        },
+        "source_on_screen": "energyswitchma.gov · greennewton.org (example town energy coach)"
+      },
+      "word_count": 70,
+      "estimated_duration_s": 23.7,
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 20.07,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 20.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "HOW IT WORKS",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§4; Will exist list; Stack header (Claude Code builds it and is how the agent calls Claude; no paid API calls)",
+      "narration_text": "Claude will read the bill into a fixed schema, and code will check it. Python will do all the math: match the billing period to a dated rate table, prorate across rate changes, and compute the difference. Then Claude will explain the result, and a verifier will reject any number that code didn't compute. I'll build it in Python and py-test with Claude Code, and the agent will call Claude through Claude Code too, with no paid API calls.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Proposed architecture. The model steps are outlined; the code steps are filled. No Claude output text is shown.",
+        "labels": [
+          "Claude reads",
+          "Python math",
+          "verifier"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "The B01 bill on a conveyor."
+          },
+          {
+            "at": "Claude will read the bill",
+            "event": "A scan line sweeps it; its lines drop into a grid of empty slots (the schema). Label 'Claude reads'."
+          },
+          {
+            "at": "code will check it",
+            "event": "A check lands on the grid."
+          },
+          {
+            "at": "Python will do all the math",
+            "event": "The grid enters a calculator block beside the dated rate table; a calendar bar splits at a rate change. Label 'Python math'."
+          },
+          {
+            "at": "Claude will explain",
+            "event": "A page of scribbled lines comes out."
+          },
+          {
+            "at": "a verifier will reject",
+            "event": "The page rides through a gate; one stray number is stamped out and sent back. Label 'verifier'."
+          }
+        ],
+        "manim": {
+          "class": "B07_Pipeline"
+        },
+        "constructed_label": "CONSTRUCTED"
+      },
+      "word_count": 63,
+      "estimated_duration_s": 21.4,
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 21.63,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 21.666666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "WHAT IT PROVES",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§4 What does it prove about me?",
+      "narration_text": "Building it will show the skills this course teaches: prompt contracts, verification kept separate from generation, source grounding, a bounded agent loop with retries, and held-out evaluation. The evidence will be my test suite, constructed bills with planted traps, and traces of drafts the verifier rejected. A reviewer could fairly conclude I can pull exact, auditable numbers out of messy documents without letting the model invent any.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Five small objects appear on a rail as each course skill is named; three evidence objects land on the shelf. Skills are spoken, not written.",
+        "labels": [
+          "test suite",
+          "planted traps",
+          "rejected drafts"
+        ],
+        "show": [
+          {
+            "at": "prompt contracts",
+            "event": "A fixed schema grid with a check (prompt contract checked in code)."
+          },
+          {
+            "at": "verification kept",
+            "event": "A draft page and a small gate, set apart (verification separate from generation)."
+          },
+          {
+            "at": "source grounding",
+            "event": "The dated rate table (source grounding)."
+          },
+          {
+            "at": "a bounded agent",
+            "event": "A loop arrow with three retry marks (bounded agent loop with retries)."
+          },
+          {
+            "at": "held-out evaluation",
+            "event": "A stack of cases, a dashed divider, one stack held out (held-out evaluation)."
+          },
+          {
+            "at": "The evidence",
+            "event": "Test checklist, a bill with a planted trap, a stamped-out draft land on the shelf, labelled."
+          },
+          {
+            "at": "fairly conclude",
+            "event": "The '$' slip lands with one terracotta check."
+          }
+        ],
+        "manim": {
+          "class": "B08_Evidence"
+        }
+      },
+      "word_count": 67,
+      "estimated_duration_s": 22.7,
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 23.36,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 23.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "IN / OUT / FIRST",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§5 In, out, and first",
+      "narration_text": "In scope: National Grid residential bills, against basic service. It will deliberately never recommend a specific supplier or sign anyone up. First, I'll make a rate table snapshot, a prorating calculator, and ten constructed bills run in py-test, one crossing August first, twenty twenty-six. You'll know it ran when the tests pass and the prorated amount matches my hand-computed answer.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Three plain panels: in (the bill), out (a supplier sign-up contract, crossed out), first (rate table, calculator, ten small bills, one across a date line); two empty check boxes, 'not run yet'.",
+        "labels": [
+          "in",
+          "out",
+          "first"
+        ],
+        "show": [
+          {
+            "at": "In scope",
+            "event": "Tray 'in': the bill drops in."
+          },
+          {
+            "at": "never recommend",
+            "event": "Tray 'out': a supplier sign-up box, crossed out."
+          },
+          {
+            "at": "First",
+            "event": "Tray 'first': rate table, calculator, and ten small bills fan out; one bill straddles a date line."
+          },
+          {
+            "at": "You'll know it ran",
+            "event": "Two empty check boxes appear under 'first'. They stay empty: nothing has run yet."
+          }
+        ],
+        "manim": {
+          "class": "B09_Scope"
+        }
+      },
+      "word_count": 60,
+      "estimated_duration_s": 20.4,
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 20.8,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 20.833333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "RISK AND FIX",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§6 What could sink it?",
+      "narration_text": "What could sink it is a wrong dollar amount from the wrong rate period or load zone. That would destroy trust. So every rate row will store its source and retrieval date, and an uncertain field will say can't verify instead of guessing. I don't know yet whether bills print the load zone; I'll check a real bill against the tariff sheet.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Constructed example of the failure and the fix. No tariff numbers on screen.",
+        "labels": [
+          "Aug 1, 2026",
+          "can't verify"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "A billing-period bar crosses a date line 'Aug 1, 2026'."
+          },
+          {
+            "at": "wrong rate period",
+            "event": "One rate block wrongly covers the whole bar; the '$' slip cracks."
+          },
+          {
+            "at": "store its source",
+            "event": "Each rate row in the table gets a small date tag."
+          },
+          {
+            "at": "can't verify",
+            "event": "A stamp 'can't verify' lands where a guess would have been."
+          },
+          {
+            "at": "I don't know yet",
+            "event": "A question-mark tag hangs off the bill's corner."
+          }
+        ],
+        "manim": {
+          "class": "B10_Risk"
+        },
+        "constructed_label": "CONSTRUCTED"
+      },
+      "word_count": 62,
+      "estimated_duration_s": 21.1,
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 17.09,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 17.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "WHY THIS PROJECT",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "§7 Why this project?",
+      "narration_text": "I picked this because it happened to me, and I want others to catch it early. It's a mix. I already have Python, backend, and API work from T C S and Tech Mahindra, and evaluation design from my Ask Boston project. New to me: electricity rates and tariffs, extracting fields reliably from bill images, and the verifier design.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "Panel 'have' gets a code page, a server stack, a plug (API) and a checklist (evaluation design); panel 'new' gets a tariff sheet, a bill under a lens and a gate.",
+        "labels": [
+          "have",
+          "new"
+        ],
+        "show": [
+          {
+            "at": 0.0,
+            "event": "The B01 bill returns, with its coin."
+          },
+          {
+            "at": "already have",
+            "event": "A toolbox fills with three tools, one per spoken skill; label 'have'."
+          },
+          {
+            "at": "New to me",
+            "event": "A second, empty box gets three new pieces: a tariff sheet, a bill under a lens, a gate; label 'new'."
+          }
+        ],
+        "manim": {
+          "class": "B11_Why"
+        }
+      },
+      "word_count": 59,
+      "estimated_duration_s": 20.1,
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 18.07,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 18.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "EXISTS VS WILL EXIST",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "brief_ref": "Exists today / Will exist",
+      "narration_text": "So, to be exact: today, nothing exists yet. This is a pitch. Everything I've described, from the rate table to the evaluation report, will exist.",
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Show-tell pitch format (assignment: one simple drawn picture per beat, minimal on-screen text): one drawn scene on a cream stage with at most three short labels. Only underfill and clustering are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "lane": "manim",
+        "motion": "drawon",
+        "classification": "SHOW",
+        "visual_intent": "An empty panel ('exists today') beside dashed outlines of the transformer (the tool) and its parts ('will exist').",
+        "labels": [
+          "exists today",
+          "will exist"
+        ],
+        "show": [
+          {
+            "at": "today, nothing exists yet",
+            "event": "Left: an empty outlined tray, 'exists today'."
+          },
+          {
+            "at": "Everything I've described",
+            "event": "Right: the film's objects (rate table, calculators, test bills, verifier gate, report) drop in one by one as dashed outlines, 'will exist'."
+          }
+        ],
+        "manim": {
+          "class": "B12_Today"
+        }
+      },
+      "word_count": 25,
+      "estimated_duration_s": 8.7,
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 8.55,
+      "narration_status": "APPROVED by narrator 2026-10-14 (drafted by Claude from PROJECT-BRIEF.md)",
+      "render_duration_s": 8.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T22:40:01"
+      }
+    }
+  ]
+}

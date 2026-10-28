@@ -1,0 +1,26 @@
+[typecheck] wrote ~/Desktop/AgenticAI/Assignment_5/final-project-film/TYPECHECK.md
+[typecheck] §8.10 BIDEA: SKIP
+[typecheck] §8.10 BWHO: SKIP
+[typecheck] §8.10 BKID: SKIP
+[typecheck] §8.10 B00: SKIP
+[typecheck] §8.10 B01: SKIP
+[typecheck] §8.10 B02: SKIP
+[typecheck] §8.10 B03: SKIP
+[typecheck] §8.10 B04: SKIP
+[typecheck] §8.10 B05: SKIP
+[typecheck] §8.10 B06: SKIP
+[typecheck] §8.10 B07: SKIP
+[typecheck] §8.10 B08: SKIP
+[typecheck] §8.10 B09: SKIP
+[typecheck] §8.10 B10: SKIP
+[typecheck] §8.10 B11: SKIP
+[typecheck] §8.10 B12: SKIP
+[typecheck] §8.10 BOUT: SKIP
+[typecheck] GATE T: PASS
+[art] compiled B10  VIDEO    12.8s  ← B10.mp4
+[art] motion histogram: hyperframes:15  remotion:2
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'TcTitleOutro' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (17/17 filled)
+[art] wrote ~/Desktop/AgenticAI/Assignment_5/final-project-film/source-check-pitch.mp4  (245.9s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 17/17 filled — BIDEA:VIDEO BWHO:VIDEO BKID:VIDEO B00:VIDEO B01:VIDEO B02:VIDEO B03:VIDEO B04:VIDEO B05:VIDEO B06:VIDEO B07:VIDEO B08:VIDEO B09:VIDEO B10:VIDEO B11:VIDEO B12:VIDEO BOUT:VIDEO

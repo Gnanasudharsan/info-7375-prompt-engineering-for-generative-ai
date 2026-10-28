@@ -1,0 +1,24 @@
+$ node scripts/conformance.mjs recipes/case-part-time-funded-research-lab.md scripts/funding/check-awards.py scripts/funding/test_check_awards.py
+conformance: 3 files (1 md · 2 py)
+✓ all conform (machine half of P4). Adequacy is still the human gate.
+
+$ npm run doctor   (recipe section only)
+RECIPES (34)
+  with lifecycle frontmatter: 34   missing: 0
+  by status: DRAFT 29 · RUNNABLE-SAMPLE 4 · RUNNABLE-LIVE  # DRAFT | SPECIFIED | RUNNABLE-SAMPLE | RUNNABLE-LIVE | VERIFIED 1
+  open TODOs: 324 declared (in frontmatter) · 324 [TODO markers in bodies
+
+SUMMARY
+
+$ npm run verify
+conformance: 161 files (86 md · 38 py · 30 js · 4 sh · 3 json)
+✓ all conform (machine half of P4). Adequacy is still the human gate.
+MANIFEST CHECK — The Reallocation Engine
+==========================================
+
+WARN (3):
+  W1 ignore path not in .gitignore: archive/
+  W2 private path not gitignored (PII/secret risk): private/
+  W2 private path not gitignored (PII/secret risk): data/ats/
+
+✓ manifest check passed (3 warnings)

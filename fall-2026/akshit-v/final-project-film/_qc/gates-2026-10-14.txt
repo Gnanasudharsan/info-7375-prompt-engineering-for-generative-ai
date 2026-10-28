@@ -1,0 +1,94 @@
+# Gate log — SponsorScout — 2026-10-14 22:09 -0400
+# toolkit: brutalist.art 6a8380a + this film's changes (toolkit-changes/)
+# film: sponsorscout-final-project-pitch.mp4  sha256 97219d93681f8949968f44ebb8428d33d70f0a39c514a0feac320ad4b62a05fd
+
+== GATE F paperwork: factcheck_check.py
+[factcheck] clean — every row resolved, every claim-bearing beat covered
+[factcheck] rows=29 beats_covered=18 claim_bearing_beats=3 uncovered=0
+
+== GATE L: beat_lint.py
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+
+== bookend_check.py
+[bookend] PASS — four bookends correct for sponsorscout-final-project-pitch
+
+== GATE A: static_scene_check.py (isolated copy of scenes.py, as run.sh does)
+BOPEN_Title: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+BIDEA_Question: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B00_Company: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B01_Repository: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B02_ThreeGates: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B03_Route: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B04_Compare: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B05_Trace: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B06_RunTwo: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B07_Caught: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B08_Binder: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B09_SignOff: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B10_Never: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B11_Coverage: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B12_Locked: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B13_Experiment: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B14_Stack: [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+== GATE B: manim_layout_audit.py --png --curve-strict (per scene, as run.sh does)
+BOPEN_Title: [audit] scenes: 11 snapshots → CLEAN
+BIDEA_Question: [audit] scenes: 10 snapshots → CLEAN
+B00_Company: [audit] scenes: 24 snapshots → CLEAN
+B01_Repository: [audit] scenes: 28 snapshots → CLEAN
+B02_ThreeGates: [audit] scenes: 24 snapshots → CLEAN
+B03_Route: [audit] scenes: 20 snapshots → CLEAN
+B04_Compare: [audit] scenes: 18 snapshots → CLEAN
+B05_Trace: [audit] scenes: 23 snapshots → CLEAN
+B06_RunTwo: [audit] scenes: 23 snapshots → CLEAN
+B07_Caught: [audit] scenes: 22 snapshots → CLEAN
+B08_Binder: [audit] scenes: 23 snapshots → CLEAN
+B09_SignOff: [audit] scenes: 16 snapshots → CLEAN
+B10_Never: [audit] scenes: 16 snapshots → CLEAN
+B11_Coverage: [audit] scenes: 16 snapshots → CLEAN
+B12_Locked: [audit] scenes: 27 snapshots → CLEAN
+B13_Experiment: [audit] scenes: 16 snapshots → CLEAN
+B14_Stack: [audit] scenes: 29 snapshots → CLEAN
+
+== GATE T: type_check.py — see TYPECHECK.md
+# TYPECHECK.md — GATE T
+| beat | lane | polarity | worst finding | status | fix |
+*None — GATE T PASS.*
+| no-wordy-card §8.5 | 1 | 0 |
+| min-size §8.1 | 18 | 0 |
+| overflow §8.2 | 18 | 0 |
+| contrast §8.3 | 18 | 0 |
+| contrast-local §8.3b | 18 | 0 |
+| bbox-overlap §8.6b | 18 | 0 |
+| card-clip §8.13 | 18 | 0 |
+| kerning §8.4 | 17 | 0 |
+| redundancy §8.10 (advisory) | 0 | 0 (advisory — no exit effect) |
+
+== GATE V: final_frame_check.py on the CAPTIONED master — see _qc/REPORT.md
+# Gate V — visual QC report
+
+Frames sampled: 36  ·  BLOCKER: 0  ·  MAJOR: 0
+
+== Listening check: blind faster-whisper (small) vs script — _qc/whisper_check.json
+WHISPER BOPEN  0.865  [sponsorscout]->[sponsor scout]; [pitch]->[pitched]
+WHISPER BIDEA  1.000  exact
+WHISPER B00    0.918  [sponsorscout]->[sponsor scout]; [claude]->[clawed]
+WHISPER B01    1.000  exact
+WHISPER B02    0.849  [h one b]->[h1b]; [s e c]->[sec]; [d filings]->[defilings]
+WHISPER B03    0.907  [scorer]->[score]; [claude]->[clawed]; [third]->[3rd]; [sponsorscout]->[sponsor scout]
+WHISPER B04    1.000  exact
+WHISPER B05    0.943  [analyst]->[analysts]; [sixty]->[60]
+WHISPER B06    0.800  [third]->[3rd]; [sixteen]->[16]; [one hundred twenty three]->[123]; [one hundred seven]->[107]; [thirteen]->[13]
+WHISPER B07    0.904  [zoox]->[zooks]; [twenty five]->[25]; [twelfth]->[12th]
+WHISPER B08    0.968  [labelled]->[labeled]
+WHISPER B09    0.966  [claude]->[clawed]
+WHISPER B10    0.875  [r sum]->[resume]; [r sum]->[resume]
+WHISPER B11    0.917  [sixteen]->[16]; [hundred twenty three]->[123]
+WHISPER B12    1.000  exact
+WHISPER B13    0.873  [re checking]->[rechecking]; [targets']->[target's]; [fourteen]->[14]
+WHISPER B14    1.000  exact
+WHISPER BOUT   0.769  [sponsorscout]->[sponsor scout]
+
+== re-run 2026-10-14 22:33 -0400, after FACTCHECK.md gained row 29 (on-screen labels)
+[factcheck] clean — every row resolved, every claim-bearing beat covered
+[factcheck] rows=30 beats_covered=18 claim_bearing_beats=3 uncovered=0

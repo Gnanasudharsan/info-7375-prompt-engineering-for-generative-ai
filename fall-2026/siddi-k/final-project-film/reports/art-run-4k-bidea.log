@@ -1,0 +1,34 @@
+[run] skip B00_Triage — B00 already filled
+[run] skip B01_BigCount — B01 already filled
+[run] skip B02_Ghost — B02 already filled
+[run] skip B03_Reader — B03 already filled
+[run] skip B04_Loop — B04 already filled
+[run] skip B05_Fence — B05 already filled
+[run] skip B06_Gate — B06 already filled
+[run] skip B07_Eval — B07 already filled
+[run] skip B08_First — B08 already filled
+[run] skip B09_Risk — B09 already filled
+[run] skip B10_Why — B10 already filled
+[run] skip B11_Honest — B11 already filled
+[run] skip BOUT_Title — BOUT already filled
+[run] nothing to render — recompiling only
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[remotion] BIDEA: ok: BrutalistHesitantWriter -> media/BIDEA.mp4
+[remotion] stamped provenance in beat_sheet.json + updated consumers.json
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled BIDEA  VIDEO    15.5s  ← BIDEA.mp4
+[art] motion histogram: graphic:13  remotion:1
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (14/14 filled)
+[art] QC contact sheet → ~\Documents\GitHub\final-project-film\qc-sheet.png
+[art] wrote ~\Documents\GitHub\final-project-film\sponsor-triage-pitch-slate.mp4  (209.9s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 14/14 filled — BIDEA:VIDEO B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM BOUT:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=28 BLOCKER=0 MAJOR=0 → ~/Documents/GitHub/final-project-film\_qc\REPORT.md
+[run] done → ~/Documents/GitHub/final-project-film  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see ~/Documents/GitHub/final-project-film/SHOTLIST.md

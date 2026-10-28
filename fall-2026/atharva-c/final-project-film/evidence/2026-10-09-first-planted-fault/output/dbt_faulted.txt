@@ -1,0 +1,24 @@
+21:32:20  Running with dbt=1.12.5
+21:32:21  Registered adapter: duckdb=1.11.0
+21:32:21  Unable to do partial parsing because config vars, config profile, or config target have changed
+21:32:21  Found 1 model, 2 data tests, 500 macros
+21:32:21  
+21:32:21  Concurrency: 1 threads (target='dev')
+21:32:21  
+21:32:21  1 of 3 START sql view model main.trips ......................................... [RUN]
+21:32:21  1 of 3 OK created sql view model main.trips .................................... [OK in 0.14s]
+21:32:21  2 of 3 START test accepted_values_trips_payment_type__False__0__1__2__3__4__5__6  [RUN]
+21:32:22  2 of 3 PASS accepted_values_trips_payment_type__False__0__1__2__3__4__5__6 ..... [PASS in 0.12s]
+21:32:22  3 of 3 START test not_null_trips_passenger_count ............................... [RUN]
+21:32:22  3 of 3 FAIL 50 not_null_trips_passenger_count .................................. [FAIL 50 in 0.12s]
+21:32:22  
+21:32:22  Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+21:32:22  
+21:32:22  Completed with 1 error, 0 partial successes, and 0 warnings:
+21:32:22  
+21:32:22  [ERROR]: in test not_null_trips_passenger_count (models/schema.yml)
+21:32:22    Got 50 results, configured to fail if != 0
+21:32:22  
+21:32:22    compiled code at target/compiled/dbt_try/models/schema.yml/not_null_trips_passenger_count.sql
+21:32:22  
+21:32:22  Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3

@@ -1,0 +1,387 @@
+{
+  "csv": "data/80-days-to-stay/80-days-csv/mapped_student_employment_targets_v3.csv",
+  "csv_sha256": "eccdee2addf472b1639269f42eec693b083b7ce251347d5fd0b2856cfdae6270",
+  "rows": [
+    {
+      "company": "PayPal",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "Visa",
+      "status": "no-sponsorship-record",
+      "csv_rows": [
+        {
+          "csv_line": 28865,
+          "csv_name": "VISA INC"
+        }
+      ],
+      "total_approvals": null,
+      "software_titles": [],
+      "tier": null,
+      "audit_names_containing_word": [
+        "ENVISAGENICS INC",
+        "INVISAGE TECHNOLOGIES INC",
+        "VISA INC",
+        "VISAGE SOFTWARE INC",
+        "VISANOWCOM INC"
+      ],
+      "audit_count": 5
+    },
+    {
+      "company": "Goldman Sachs",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "Mastercard",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "BlackRock",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "LSEG",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "JPMorgan Chase",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "Morgan Stanley",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "MORGAN'S SUMMIT FILMS LLC"
+      ],
+      "audit_count": 1
+    },
+    {
+      "company": "Citi",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "AUTHENTICITI INC",
+        "BEACH CITIES ORTHOPEDICS SURGERY CENTER LLC",
+        "CITICASTERS CO",
+        "CITIRO INC",
+        "CITIVEST CAPITAL INC",
+        "CITIXSYS HOLDINGS INC",
+        "CITIZEN MINT RENEWABLE INFRASTRUCTURE FUND I LP",
+        "CITIZEN VC INC",
+        "CITIZENS CAMERA LLC",
+        "CITIZENS PARKING HOLDING INC",
+        "CITIZENS RESERVE INC",
+        "FIRST CITIZENS BANCSHARES INC/TX"
+      ],
+      "audit_count": 13
+    },
+    {
+      "company": "Bank of America",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "ACUITY VARO BANK LLC",
+        "BANK OF NEW YORK MELLON CORP",
+        "BANKFIVE MHC",
+        "BANKRUPTCY MANAGEMENT SOLUTIONS INC",
+        "COMMUNITY BANK HOLDINGS OF TEXAS INC",
+        "CRUSHBANK TECHNOLOGY INC",
+        "FACEBANK GROUP INC",
+        "FANBANK INC",
+        "GLENVILLE BANK HOLDING COMPANY INC",
+        "GLOBAL MORTGAGE BANKING CO",
+        "HORIZON BANKSHARES INC",
+        "LUTHER BURBANK CORP"
+      ],
+      "audit_count": 18
+    },
+    {
+      "company": "Wells Fargo",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "ACOUSTIC WELLS INC",
+        "DIG WELLS INC",
+        "DWELLSY INC",
+        "WELLS GREEN CORP",
+        "WELLSAID LABS INC",
+        "WELLSPRING WORLDWIDE INC"
+      ],
+      "audit_count": 6
+    },
+    {
+      "company": "Capital One",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "112 CAPITAL HH LLC",
+        "1251 CAPITAL GROUP INC",
+        "3T CAPITAL RESERVE LLC",
+        "437 CAPITAL FUND CORP",
+        "5G CAPITAL LLC",
+        "7BLOCKCHAIN VENTURE CAPITAL FUND I LLC",
+        "ABP CAPITAL DEBT FUND I LP",
+        "ABR FIRST CAPITAL LLC",
+        "ACEQUIA CAPITAL CP II LLC",
+        "AFFINITY CAPITAL EXCHANGE INC",
+        "AGM CAPITAL FUND I LLC",
+        "AGM CAPITAL FUND II LLC"
+      ],
+      "audit_count": 471
+    },
+    {
+      "company": "BNY",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "State Street",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "1508 STATE LLC",
+        "1601 STATE STREET HOTEL INVESTORS LP",
+        "ADAPTIVE REAL ESTATE INC",
+        "ANNA REAL ESTATE PARTNERS LLC",
+        "ART OF THE STATE LLC",
+        "ATHLETIC ESTATE INC",
+        "BAYOU HOSPITALITY REAL ESTATE FUND LLC",
+        "BIOSTATE AI INC",
+        "BOWERY REAL ESTATE SYSTEMS INC",
+        "BYRON DEVON LYNCH IV ESTATE",
+        "CAPITAL UNITED REAL ESTATE INVESTMENTS INC",
+        "CATALINA REAL ESTATE PARTNERS LP"
+      ],
+      "audit_count": 70
+    },
+    {
+      "company": "Fidelity",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "HEALTH FIDELITY INC",
+        "HIGH FIDELITY INC"
+      ],
+      "audit_count": 2
+    },
+    {
+      "company": "Charles Schwab",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "FRESENIUS MEDICAL CARE CHARLES COUNTY LLC",
+        "HUDSON & CHARLES SMT LLC",
+        "KING CHARLES III BROADWAY LP",
+        "LAKE CHARLES HOLDINGS LLC",
+        "ST CHARLES SC HOLDINGS LLC",
+        "ST CHARLES SC LLC"
+      ],
+      "audit_count": 6
+    },
+    {
+      "company": "Stripe",
+      "status": "matched",
+      "csv_rows": [
+        {
+          "csv_line": 25633,
+          "csv_name": "STRIPE INC"
+        }
+      ],
+      "total_approvals": 1250.0,
+      "software_titles": [
+        "Software Engineer",
+        "Backend Engineer"
+      ],
+      "tier": "Proven",
+      "audit_names_containing_word": [
+        "ALLSTRIPES RESEARCH INC",
+        "BLUESTRIPE INC",
+        "STRIPE INC"
+      ],
+      "audit_count": 3
+    },
+    {
+      "company": "Plaid",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "PLAID TECHNOLOGIES INC"
+      ],
+      "audit_count": 1
+    },
+    {
+      "company": "Robinhood",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "ROBINHOOD MARKETS INC",
+        "ROBINHOOD VENTURES LLC-FINAUTO VENTURE-1"
+      ],
+      "audit_count": 2
+    },
+    {
+      "company": "Chime",
+      "status": "matched",
+      "csv_rows": [
+        {
+          "csv_line": 5470,
+          "csv_name": "CHIME INC"
+        }
+      ],
+      "total_approvals": 2.0,
+      "software_titles": [],
+      "tier": "Possible",
+      "audit_names_containing_word": [
+        "CHIME FINANCIAL INC",
+        "CHIME INC"
+      ],
+      "audit_count": 2
+    },
+    {
+      "company": "Affirm",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "AFFIRMED NETWORKS INC"
+      ],
+      "audit_count": 1
+    },
+    {
+      "company": "Ramp",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "ON RAMP WIRELESS INC",
+        "ON-RAMP WIRELESS INC",
+        "ONRAMP FUNDS INC",
+        "ONRAMP INVEST INC",
+        "ONRAMP INVEST LLC",
+        "RAMP BUSINESS CORP",
+        "RAMP HOLDINGS INC",
+        "RAMP SERVICES INVESTORS LLC",
+        "WEALTHRAMP INC",
+        "WORKRAMP INC"
+      ],
+      "audit_count": 10
+    },
+    {
+      "company": "Brex",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "ABREXA PHARMACEUTICALS INC"
+      ],
+      "audit_count": 1
+    },
+    {
+      "company": "Coinbase",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "COINBASE GLOBAL INC"
+      ],
+      "audit_count": 1
+    },
+    {
+      "company": "SoFi",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [
+        "CITY SOFIVE SOCCER INC",
+        "SOFI TECHNOLOGIES INC",
+        "SOFIA UNIVERSITY FPC",
+        "SOFIE BIOSCIENCES INC",
+        "SOFIE LABS INC",
+        "SOFIVE INC"
+      ],
+      "audit_count": 6
+    }
+  ]
+}

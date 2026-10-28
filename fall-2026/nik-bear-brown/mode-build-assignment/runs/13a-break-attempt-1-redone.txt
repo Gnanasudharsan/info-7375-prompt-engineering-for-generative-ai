@@ -1,0 +1,17 @@
+## Break attempt 1 (redone): a genuinely wrong organisation name, then a partial one
+$ python3 scripts/funding/check-awards.py --orgs "NORTHEASTERN UNIVERSTY" --terms "single cell" --fy 2026 --window-start 2027-01-01 --sources nih --redact-ids ...   (a typo)
+  NORTHEASTERN UNIVERSTY: NAME NOT MATCHED in NIH RePORTER (control query found nothing); no topic query run
+found 0 awards; 0 research-project awards running into the window; wrote t.json and t.md
+exit 0
+| Institution | Name matched in NIH | Awards found | Research awards running into the window | Trainee-only | Ended or ending too soon | NIH annual $ of the passing awards |
+|---|---|---|---|---|---|---|
+| NORTHEASTERN UNIVERSTY | NO: the name is wrong, not the funding | 0 | 0 | 0 | 0 | 0 |
+
+$ ... --orgs "HARVARD" --terms "single cell"   (a partial name)
+  HARVARD: the database matched 3 different organisation names; a partial name matches loosely
+found 147 awards; 84 research-project awards running into the window; wrote h.json and h.md
+| Institution | Name matched in NIH | Awards found | Research awards running into the window | Trainee-only | Ended or ending too soon | NIH annual $ of the passing awards |
+|---|---|---|---|---|---|---|
+| HARVARD | yes | 147 | 84 | 38 | 25 | 54,787,918 |
+
+**The name matched more than one organisation:** HARVARD returned 3 names (HARVARD MEDICAL SCHOOL, HARVARD UNIVERSITY, HARVARD UNIVERSITY D/B/A HARVARD SCHOOL OF PUBLIC HEALTH). A partial name is accepted loosely; use the exact name.

@@ -1,0 +1,5 @@
+# 2026-10-14T19:31:55Z · Claude Code session for Siddi Kommuri · repo commit 0e33800
+$ python ../final-project-film/evidence/csv_title_coverage.py
+rows: 30369; companies with Total Approvals > 0: 1552
+titles listed per sponsoring company: {1: 862, 2: 281, 3: 113, 4: 68, 5: 186, 6: 14, 7: 5, 8: 4, 9: 3, 10: 11, 11: 2, 12: 1, 13: 1, 14: 1}
+exactly one title: 862 of 1552 (55.5%); five or fewer: 1510 of 1552

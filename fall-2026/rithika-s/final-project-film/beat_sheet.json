@@ -1,0 +1,837 @@
+{
+  "metadata": {
+    "slug": "rithika-final-project-pitch",
+    "title": "Agentic Retrieval Lab",
+    "topic": "INFO 7375 · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "rithika-sr",
+    "channel_title": "Rithika Sankar Rajeswari · github.com/rithika-sr",
+    "persona": "Rithika Sankar Rajeswari (first person)",
+    "author": "Rithika Sankar Rajeswari",
+    "course": "INFO 7375",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "kokoro_speed": 1.04,
+    "voice_reason": "Rithika's rule 4 (2026-10-10): Kokoro af_bella, first person, as her. The skill's LIAM BY DEFAULT law (am_onyx, 'in for Bear') belongs to the instructor's channel; this film carries no instructor identity.",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "caption_reason": "Rithika chose to skip captions; the compiler has no burn-in step.",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Rithika, 2026-10-10: the hesitant writer, key terms card and Your Turn composer are skipped. (1) Runtime: the pitch has a hard 4:00 maximum and her narration alone measures about 3:40, so ~40 s of bookends would push it over. (2) Branding: those components carry the instructor's identity (the instructor's narrator greeting and channel handle on the folder labels), which this student film may not show. (3) Beats 1-3 already do their jobs: beat 1 is the hook/question, beats 2-3 define the terms. The outro is never exempt: beat 14 is BOUT, drawn in Manim with her own title and handle.",
+    "people_rule": "Cartoon people authorised by Rithika (2026-10-11): generic flat figures drawn in Manim (ME/Rithika, keyword librarian = BM25, meaning librarian = embedding, lazy librarian, searcher, reviewer). No portrait, likeness or name of the instructor; the toolkit's portrait house rule does not apply to this student film. The robot stays the AI agent.",
+    "constructed_rule": "Beats flagged constructed=true carry an on-screen CONSTRUCTED label (B03, B06B, B09, B12); real data carries a small source tag.",
+    "pronunciation": [
+      {
+        "written": "BM25",
+        "spoken": "B M twenty-five"
+      },
+      {
+        "written": "MS MARCO",
+        "spoken": "M S Marco"
+      },
+      {
+        "written": "Q2D-Web",
+        "spoken": "Q two D Web"
+      },
+      {
+        "written": "8.8 million",
+        "spoken": "eight point eight million"
+      },
+      {
+        "written": "LLM",
+        "spoken": "L L M"
+      },
+      {
+        "beat": "B04",
+        "written": "agent-written",
+        "spoken": "agent written"
+      },
+      {
+        "beat": "B13",
+        "written": "AI and ML",
+        "spoken": "A-I and M-L"
+      },
+      {
+        "beat": "B13",
+        "written": "RAG",
+        "spoken": "rag"
+      }
+    ],
+    "audience": "complete beginners and the INFO 7375 grader; hiring managers later",
+    "source_doc": "~/agentic-retrieval-lab (README.md, results/foundation/, git log; read-only); Schall et al. 2026 arXiv:2609.08887v2",
+    "playlist": "INFO 7375 final projects",
+    "tags": [
+      "retrieval",
+      "RAG",
+      "BM25",
+      "embeddings",
+      "MS MARCO",
+      "agentic search"
+    ],
+    "build": {
+      "at": "2026-10-11T11:17:29",
+      "cut": "master",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": [
+        "B01: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    },
+    "visual_version": "v2 redesign 2026-10-11: real words, phone-readable labels, keyword pop-ins timed from word_times.json"
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Picture asking a question online. More and more, an AI assistant does the searching for you. But it doesn't type your question. It rewrites it into several searches of its own. My project asks one thing: when the AI writes the search, does the right answer still come back?",
+      "narration_text": "Picture asking a question online. More and more, an AI assistant does the searching for you. But it doesn't type your question. It rewrites it into several searches of its own. My project asks one thing: when the AI writes the search, does the right answer still come back?",
+      "estimated_duration_s": 16.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A search box; a cursor types one question as a speech bubble. The robot rolls in; the bubble splits into four smaller bubbles that fly toward the library shelves.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "search box + one bubble ('one question')"
+          },
+          {
+            "at": 0.4,
+            "event": "robot arrives"
+          },
+          {
+            "at": 0.6,
+            "event": "bubble splits into four ('four searches')"
+          },
+          {
+            "at": 0.85,
+            "event": "bubbles fly to the shelves"
+          }
+        ],
+        "manim": {
+          "class": "B01_Hook"
+        },
+        "motion_claim": "A search box; a cursor types one question as a speech bubble. The robot rolls in; the bubble splits into four smaller bubbles that fly toward the library shelves."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 16.49,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 16.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      },
+      "real_example": "MS MARCO dev query 951820 and its 4 Claude Haiku rewrites; evidence ~/final-project-film/evidence/beat1_example_951820.json"
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "A search step has to find the right page among millions, like a librarian pulling a hundred books off the shelves. If the right book isn't in that pile, the AI never sees it.",
+      "narration_text": "A search step has to find the right page among millions, like a librarian pulling a hundred books off the shelves. If the right book isn't in that pile, the AI never sees it.",
+      "estimated_duration_s": 11.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Endless isometric shelves ('8.8M books'); a librarian cart carries a pile to the desk where the robot waits ('top 100'); the glowing right book is left behind on a shelf.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "shelves stretch back"
+          },
+          {
+            "at": 0.4,
+            "event": "pile lands on the desk"
+          },
+          {
+            "at": 0.75,
+            "event": "the glowing book stays on the shelf"
+          }
+        ],
+        "manim": {
+          "class": "B02_Pile"
+        },
+        "motion_claim": "Endless isometric shelves ('8.8M books'); a librarian cart carries a pile to the desk where the robot waits ('top 100'); the glowing right book is left behind on a shelf."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.37,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 10.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "There are two kinds of librarian. One matches your exact words; it's called BM25. The other matches meaning, using an AI model called an embedding.",
+      "narration_text": "There are two kinds of librarian. One matches your exact words; it's called B M twenty-five. The other matches meaning, using an AI model called an embedding.",
+      "estimated_duration_s": 8.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two librarian carts side by side: the magnifying glass sweeps over a book with the same words; the lightbulb lights a book with different words but the same meaning.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "two carts"
+          },
+          {
+            "at": 0.35,
+            "event": "magnifier matches 'same words'"
+          },
+          {
+            "at": 0.7,
+            "event": "bulb lights 'same meaning'"
+          }
+        ],
+        "manim": {
+          "class": "B03_Librarians"
+        },
+        "motion_claim": "Two librarian carts side by side: the magnifying glass sweeps over a book with the same words; the lightbulb lights a book with different words but the same meaning."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.28,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 10.291666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      },
+      "constructed": true,
+      "constructed_note": "Invented teaching example (car repair cost); carries an on-screen CONSTRUCTED label."
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "I'm Rithika, and this is Agentic Retrieval Lab. When it's done, it will be a public GitHub repository: a Python pipeline, tests, dated result files, and a short write-up of where search fails. \"Agentic\" here means agent-written queries. I'm not building an autonomous agent.",
+      "narration_text": "I'm Rithika, and this is Agentic Retrieval Lab. When it's done, it will be a public GitHub repository: a Python pipeline, tests, dated result files, and a short write-up of where search fails. \"Agentic\" here means agent written queries. I'm not building an autonomous agent.",
+      "estimated_duration_s": 14.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A repository cabinet with three drawers (pipeline, tests, results) that slide open one by one.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "cabinet"
+          },
+          {
+            "at": 0.4,
+            "event": "drawers open one by one"
+          }
+        ],
+        "manim": {
+          "class": "B04_Repo"
+        },
+        "motion_claim": "A repository cabinet with three drawers (pipeline, tests, results) that slide open one by one."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 17.92,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 17.958333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Some of it already exists. This week I took 300 real search questions from the public MS MARCO dataset, had Claude Haiku rewrite each into four agent-style searches, indexed all 8.8 million passages, and built a 200,000-passage test set. 103 tests pass.",
+      "narration_text": "Some of it already exists. This week I took 300 real search questions from the public M S Marco dataset, had Claude Haiku rewrite each into four agent-style searches, indexed all eight point eight million passages, and built a 200,000-passage test set. 103 tests pass.",
+      "estimated_duration_s": 14.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Four blocks drop in and stack (300 questions, 1,200 rewrites, 8.8M passages, 103 tests); a check lands on '103 tests'; small label 'built Oct 5–9, 2026'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "300 questions"
+          },
+          {
+            "at": 0.35,
+            "event": "1,200 rewrites"
+          },
+          {
+            "at": 0.6,
+            "event": "8.8M passages"
+          },
+          {
+            "at": 0.85,
+            "event": "103 tests + check"
+          }
+        ],
+        "manim": {
+          "class": "B05_Built"
+        },
+        "motion_claim": "Four blocks drop in and stack (300 questions, 1,200 rewrites, 8.8M passages, 103 tests); a check lands on '103 tests'; small label 'built Oct 5–9, 2026'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 19.84,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 19.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B06A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "My first result: the keyword librarian found the right passage in its top 100 for 64 percent of human questions and 60 percent of main rewrites, but only 42 percent of support searches.",
+      "narration_text": "My first result: the keyword librarian found the right passage in its top 100 for 64 percent of human questions and 60 percent of main rewrites, but only 42 percent of support searches.",
+      "estimated_duration_s": 11.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three bars grow to 64%, 60% and 42% (human, main rewrite, support); a question mark pops over the 42% bar.",
+        "show": [
+          {
+            "at": 0.25,
+            "event": "64%"
+          },
+          {
+            "at": 0.5,
+            "event": "60%"
+          },
+          {
+            "at": 0.75,
+            "event": "42% + question mark"
+          }
+        ],
+        "manim": {
+          "class": "B06A_Bars"
+        },
+        "motion_claim": "Three bars grow to 64%, 60% and 42% (human, main rewrite, support); a question mark pops over the 42% bar."
+      },
+      "actual_duration_s": 12.99,
+      "audio_file": "mp3/beat-B06A.mp3",
+      "render_duration_s": 13.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B06B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "I don't trust that drop yet. The answer key usually lists just one correct book per original question, so a support search can find a good book and still be marked wrong.",
+      "narration_text": "I don't trust that drop yet. The answer key usually lists just one correct book per original question, so a support search can find a good book and still be marked wrong.",
+      "estimated_duration_s": 10.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The robot hands over a good book; the answer-key clipboard has one tick per question and marks this book with a question mark instead of a check.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "answer key, one tick per question"
+          },
+          {
+            "at": 0.55,
+            "event": "robot hands over a good book"
+          },
+          {
+            "at": 0.85,
+            "event": "marked: question mark"
+          }
+        ],
+        "manim": {
+          "class": "B06B_AnswerKey"
+        },
+        "motion_claim": "The robot hands over a good book; the answer-key clipboard has one tick per question and marks this book with a question mark instead of a check."
+      },
+      "constructed": true,
+      "constructed_note": "Shows something that does not exist yet, or an invented example; carries an on-screen CONSTRUCTED label.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.88,
+      "audio_file": "mp3/beat-B06B.mp3",
+      "render_duration_s": 9.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "I looked at two alternatives. Perplexity's Q2D-Web paper studies agent searches over 190 million documents, but its data is private; the public gets a leaderboard, not the data. MS MARCO is public, but its questions are written by humans, with about one answer each.",
+      "narration_text": "I looked at two alternatives. Perplexity's Q two D Web paper studies agent searches over 190 million documents, but its data is private; the public gets a leaderboard, not the data. M S Marco is public, but its questions are written by humans, with about one answer each.",
+      "estimated_duration_s": 14.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A big vault labelled Q2D-Web whose locking bar slides shut ('private'); a small open box labelled MS MARCO whose lid opens to handwritten question slips ('human-written').",
+        "show": [
+          {
+            "at": 0.25,
+            "event": "vault locks"
+          },
+          {
+            "at": 0.7,
+            "event": "box opens, handwritten slips"
+          }
+        ],
+        "manim": {
+          "class": "B07_Alternatives"
+        },
+        "motion_claim": "A big vault labelled Q2D-Web whose locking bar slides shut ('private'); a small open box labelled MS MARCO whose lid opens to handwritten question slips ('human-written')."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 18.79,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 18.791666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "That paper found something surprising: on its main measure, the keyword librarian scores lowest, yet finds the most books no one else finds. It suggests testing whether the two work better as a team. My project will run that test at small scale, on public data, on one laptop, with every number traceable to a file.",
+      "narration_text": "That paper found something surprising: on its main measure, the keyword librarian scores lowest, yet finds the most books no one else finds. It suggests testing whether the two work better as a team. My project will run that test at small scale, on public data, on one laptop, with every number traceable to a file.",
+      "estimated_duration_s": 18.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The two carts side by side; the keyword cart adds books the other missed to a shared pile ('team up?'). Then a laptop: an arrow traces from a number to a file ('traceable').",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "keyword cart adds unique books"
+          },
+          {
+            "at": 0.4,
+            "event": "team up?"
+          },
+          {
+            "at": 0.75,
+            "event": "laptop: number → file"
+          }
+        ],
+        "manim": {
+          "class": "B08_Team"
+        },
+        "motion_claim": "The two carts side by side; the keyword cart adds books the other missed to a shared pile ('team up?'). Then a laptop: an arrow traces from a number to a file ('traceable')."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 19.73,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 19.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "The person opening it is a hiring manager for ML or AI engineering roles. In the first minute, they'll read the results table, click one number through to its source file, and see one command that reruns the tests. Today that table is still empty.",
+      "narration_text": "The person opening it is a hiring manager for ML or AI engineering roles. In the first minute, they'll read the results table, click one number through to its source file, and see one command that reruns the tests. Today that table is still empty.",
+      "estimated_duration_s": 15.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A README window seen from the reader's side with a 60-second timer; three steps light up in turn (table, number → file, one command); the table is still empty.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "window + timer starts"
+          },
+          {
+            "at": 0.45,
+            "event": "step 1 table"
+          },
+          {
+            "at": 0.6,
+            "event": "step 2 number → file"
+          },
+          {
+            "at": 0.75,
+            "event": "step 3 command"
+          },
+          {
+            "at": 0.9,
+            "event": "the table is empty"
+          }
+        ],
+        "manim": {
+          "class": "B09_Reader"
+        },
+        "motion_claim": "A README window seen from the reader's side with a 60-second timer; three steps light up in turn (table, number → file, one command); the table is still empty."
+      },
+      "constructed": true,
+      "constructed_note": "Shows something that does not exist yet, or an invented example; carries an on-screen CONSTRUCTED label.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 15.96,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 16.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "A reviewer should conclude that I can design a fair test, ground every number in a file, and check a pipeline with tests. Not that I've shipped a production system.",
+      "narration_text": "A reviewer should conclude that I can design a fair test, ground every number in a file, and check a pipeline with tests. Not that I've shipped a production system.",
+      "estimated_duration_s": 10.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three badges stamp on (fair test, sourced numbers, checked code); a fourth, 'production RAG', fades and is struck through.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "fair test"
+          },
+          {
+            "at": 0.35,
+            "event": "sourced numbers"
+          },
+          {
+            "at": 0.55,
+            "event": "checked code"
+          },
+          {
+            "at": 0.8,
+            "event": "production RAG struck"
+          }
+        ],
+        "manim": {
+          "class": "B10_Badges"
+        },
+        "motion_claim": "Three badges stamp on (fair test, sourced numbers, checked code); a fourth, 'production RAG', fades and is struck through."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.56,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 9.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "In scope: meaning models versus keyword search, human versus agent searches, the team-up test, and a hand-written failure analysis. Out: a chatbot, or writing answers. First, I'll race one meaning model against the keyword librarian. I'll know it ran when a new dated results folder appears and the keyword score matches its earlier run.",
+      "narration_text": "In scope: meaning models versus keyword search, human versus agent searches, the team-up test, and a hand-written failure analysis. Out: a chatbot, or writing answers. First, I'll race one meaning model against the keyword librarian. I'll know it ran when a new dated results folder appears and the keyword score matches its earlier run.",
+      "estimated_duration_s": 18.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An 'in' tray and an 'out' tray; items sort into them; then an arrow marked 'first' points at the meaning cart racing the keyword cart, and a dated results folder appears.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "in-tray items"
+          },
+          {
+            "at": 0.35,
+            "event": "out-tray items"
+          },
+          {
+            "at": 0.5,
+            "event": "race (first)"
+          },
+          {
+            "at": 0.8,
+            "event": "dated folder"
+          }
+        ],
+        "manim": {
+          "class": "B11_Scope"
+        },
+        "motion_claim": "An 'in' tray and an 'out' tray; items sort into them; then an arrow marked 'first' points at the meaning cart racing the keyword cart, and a dated results folder appears."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 21.5,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 21.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "What could sink it: in my test set, the decoys the keyword librarian picked average about 65 words, and the correct passages about 54. A librarian who simply grabs short books could look smarter than it is. So first, I'll test a lazy librarian that only picks short passages. If it beats random, I'll fix the test set before trusting any ranking.",
+      "narration_text": "What could sink it: in my test set, the decoys the keyword librarian picked average about 65 words, and the correct passages about 54. A librarian who simply grabs short books could look smarter than it is. So first, I'll test a lazy librarian that only picks short passages. If it beats random, I'll fix the test set before trusting any ranking.",
+      "estimated_duration_s": 20.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A balance scale: a thick grey decoy book (65 words) against a thin correct book (54 words); the scale tips. A lazy cart grabs only thin books; its score bar rises suspiciously; a check stamp lands: test it first.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "scale tips"
+          },
+          {
+            "at": 0.45,
+            "event": "lazy cart grabs thin books"
+          },
+          {
+            "at": 0.65,
+            "event": "suspicious bar"
+          },
+          {
+            "at": 0.85,
+            "event": "test-first stamp"
+          }
+        ],
+        "manim": {
+          "class": "B12_Decoys"
+        },
+        "motion_claim": "A balance scale: a thick grey decoy book (65 words) against a thin correct book (54 words); the scale tips. A lazy cart grabs only thin books; its score bar rises suspiciously; a check stamp lands: test it first."
+      },
+      "constructed": true,
+      "constructed_note": "Shows something that does not exist yet, or an invented example; carries an on-screen CONSTRUCTED label.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 22.29,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 22.291666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Why this project? I'm aiming for AI and ML engineering or data science roles, and I'm especially interested in RAG systems: retrieval, generation, and evaluation. It's mostly learning, built on data-engineering skills I already use. New to me: retrieval metrics, embedding models, and using an LLM as a judge.",
+      "narration_text": "Why this project? I'm aiming for A-I and M-L engineering or data science roles, and I'm especially interested in rag systems: retrieval, generation, and evaluation. It's mostly learning, built on data-engineering skills I already use. New to me: retrieval metrics, embedding models, and using an L L M as a judge.",
+      "estimated_duration_s": 16.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two piles, 'already have' and 'learning'; blocks move from 'learning' toward 'already have' as a progress bar fills.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "two piles"
+          },
+          {
+            "at": 0.6,
+            "event": "blocks move across"
+          },
+          {
+            "at": 0.8,
+            "event": "progress fills"
+          }
+        ],
+        "manim": {
+          "class": "B13_Learning"
+        },
+        "motion_claim": "Two piles, 'already have' and 'learning'; blocks move from 'learning' toward 'already have' as a progress bar fills."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 21.06,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 21.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "script_text": "Everything I said in the past tense, you can open today. Everything else is a plan, and I'll log every change as I go.",
+      "narration_text": "Everything I said in the past tense, you can open today. Everything else is a plan, and I'll log every change as I go.",
+      "estimated_duration_s": 8.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two columns: solid checks under 'exists', dotted outlines under 'will' that pulse gently; the title and Rithika's handle sit beneath.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "exists column"
+          },
+          {
+            "at": 0.5,
+            "event": "will column pulses"
+          },
+          {
+            "at": 0.7,
+            "event": "title + handle"
+          }
+        ],
+        "manim": {
+          "class": "BOUT_Close"
+        },
+        "motion_claim": "Two columns: solid checks under 'exists', dotted outlines under 'will' that pulse gently; the title and Rithika's handle sit beneath.",
+        "remotion": {
+          "props": {
+            "title": "Agentic Retrieval Lab",
+            "handle": "Rithika Sankar Rajeswari · github.com/rithika-sr",
+            "subline": ""
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, labels only, the voice carries the explanation. The negative space is the style, so only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "tail_silence_s": 1.0,
+      "outro_note": "Rithika, 2026-10-10 (option B): beat 14 is the outro, drawn in Manim with her own title and handle. The stock ClaudeTitleOutro hard-codes the instructor's channel handle and the Claude mascot, which this student film may not carry. No narration was added; the 1.0 s silent tail is padded onto the mp3 after generation.",
+      "actual_duration_s": 8.4,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 8.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-11T11:17:29"
+      }
+    }
+  ]
+}

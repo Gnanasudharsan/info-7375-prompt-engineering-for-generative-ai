@@ -1,0 +1,8 @@
+[typecheck] wrote final-project-film/youtube/actions-docs-qa-pitch/TYPECHECK.md
+[typecheck] GATE T: PASS
+[art] motion histogram: graphic:16  remotion:1
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (17/17 filled)
+[art] wrote final-project-film/actions-docs-qa-pitch.mp4  (179.5s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 17/17 filled — BIDEA:VIDEO B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM BOUT:MANIM

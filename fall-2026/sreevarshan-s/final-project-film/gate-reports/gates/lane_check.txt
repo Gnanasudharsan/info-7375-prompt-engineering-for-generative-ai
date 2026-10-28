@@ -1,0 +1,2 @@
+[lane-check] show-tell-reallocation-recipe-pitch  cut=master  known_slates=[]
+[lane-check] PASS — 21 beats checked, no lane violations.

@@ -1,0 +1,747 @@
+{
+  "metadata": {
+    "slug": "gistgap-pitch",
+    "title": "GistGap: What You See Is What You Sign",
+    "topic": "GISTGAP · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "gistgap",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "clock": "narration",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Course pitch film, not a channel episode: it opens on the problem (B01) instead of a composer cold open, has no verdict card and no Your Turn composer, and carries no channel handle or persona. It also has no BOUT outro, which bookend_check.py cannot exempt; that script is not called by art run or art final.",
+    "audience": "a hiring manager or an engineer reviewing a product-management portfolio project",
+    "source_doc": "PROJECT-BRIEF.md (this folder); sources in FACTCHECK.md",
+    "build": {
+      "at": "2026-10-10T22:07:59",
+      "cut": "master",
+      "filled": 14,
+      "of": 14,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Imagine an AI agent about to spend your money. You tap Approve. But what, exactly, are you approving?",
+      "estimated_duration_s": 7.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A robot holding a shopping bag stands beside a phone; a cursor taps the Approve button; a question mark appears.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "robot with bag"
+          },
+          {
+            "at": 0.2,
+            "event": "phone with Approve"
+          },
+          {
+            "at": 0.5,
+            "event": "cursor taps Approve"
+          },
+          {
+            "at": 0.8,
+            "event": "?"
+          }
+        ],
+        "manim": {
+          "class": "B01_Agent",
+          "tag": "CONSTRUCTED · drawn to explain"
+        },
+        "motion_claim": "A robot holding a shopping bag stands beside a phone; a cursor taps the Approve button; a question mark appears."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 6.49,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 6.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Two things matter here. What you're shown: the plain-English text on the screen. And what you sign: the exact terms, called a mandate. They should match.",
+      "estimated_duration_s": 10.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A box labelled SHOWN appears, then a taped box labelled SIGNED; a question mark lands between them.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "SHOWN box"
+          },
+          {
+            "at": 0.5,
+            "event": "SIGNED box"
+          },
+          {
+            "at": 0.9,
+            "event": "?"
+          }
+        ],
+        "manim": {
+          "class": "B02_ShownSigned",
+          "tag": "CONSTRUCTED · drawn to explain"
+        },
+        "motion_claim": "A box labelled SHOWN appears, then a taped box labelled SIGNED; a question mark lands between them."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 8.9,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 8.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Here's an invented example. The cover page says fifty dollars, but page twelve says five hundred a month. That's the gap between the gist and the signed terms.",
+      "estimated_duration_s": 11.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A contract stack on a dark base with the cover on top, labelled 'cover: $50'; page 12 slides out from just under the cover along a short curve onto a second dark base; a terracotta scan line sweeps it and 'page 12: $500 / month' fades in as the scan ends; an ink curve joins the two pages, ending in a dot.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "stack with the cover on top; empty right-hand base"
+          },
+          {
+            "at": 0.3,
+            "event": "label 'cover: $50'"
+          },
+          {
+            "at": 0.42,
+            "event": "page 12 slides out from under the cover onto the right-hand base"
+          },
+          {
+            "at": 0.55,
+            "event": "scan line sweeps page 12; 'page 12: $500 / month' fades in"
+          },
+          {
+            "at": 0.66,
+            "event": "ink curve joins the pages; dot at its end"
+          }
+        ],
+        "manim": {
+          "class": "B03_Contract",
+          "tag": "CONSTRUCTED · invented example"
+        },
+        "motion_claim": "A contract stack on a dark base with the cover on top, labelled 'cover: $50'; page 12 slides out from just under the cover along a short curve onto a second dark base; a terracotta scan line sweeps it and 'page 12: $500 / month' fades in as the scan ends; an ink curve joins the two pages, ending in a dot."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.92,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 9.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "GistGap will be a web demo that tests whether the text shown to someone approving an agent's payment matches the signed terms. It will be a public GitHub repository with a demo page, a test set, and a results table.",
+      "estimated_duration_s": 16.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A browser window with five rows per panel (mandate left, shown text right) and the field names amount, merchant, cap, expiry and recurring outside the window; the cap row is shorter on the text side. A highlight box steps row to row: checks on rows 1-2, a cross and a terracotta dot on row 3 (cap), checks on rows 4-5; the box returns to the cap row and holds. A constructed example of a flagged mismatch.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "window, five rows per panel, field names"
+          },
+          {
+            "at": 0.12,
+            "event": "highlight box on row 1"
+          },
+          {
+            "at": 0.15,
+            "event": "check, amount"
+          },
+          {
+            "at": 0.25,
+            "event": "check, merchant"
+          },
+          {
+            "at": 0.33,
+            "event": "cross and terracotta dot, cap"
+          },
+          {
+            "at": 0.6,
+            "event": "check, expiry"
+          },
+          {
+            "at": 0.7,
+            "event": "check, recurring"
+          },
+          {
+            "at": 0.72,
+            "event": "box returns to the cap row; still to the end"
+          }
+        ],
+        "manim": {
+          "class": "B04_Browser",
+          "tag": "CONSTRUCTED · mock-up, not built"
+        },
+        "motion_claim": "A browser window with five rows per panel (mandate left, shown text right) and the field names amount, merchant, cap, expiry and recurring outside the window; the cap row is shorter on the text side. A highlight box steps row to row: checks on rows 1-2, a cross and a terracotta dot on row 3 (cap), checks on rows 4-5; the box returns to the cap row and holds. A constructed example of a flagged mismatch."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.76,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 13.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It's for whoever owns an agent-payment approval screen. Before launch, they will be able to test, with synthetic data, whether the text drops or changes a cap, an amount, an expiry, or a recurrence.",
+      "estimated_duration_s": 13.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A launch checklist: two rows get checks; the third box, 'approval text tested?', stays empty and a dot marks it.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "checklist"
+          },
+          {
+            "at": 0.3,
+            "event": "two checks"
+          },
+          {
+            "at": 0.55,
+            "event": "approval text tested?"
+          }
+        ],
+        "manim": {
+          "class": "B05_Checklist",
+          "tag": "CONSTRUCTED · drawn to explain"
+        },
+        "motion_claim": "A launch checklist: two rows get checks; the third box, 'approval text tested?', stays empty and a dot marks it."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.65,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 12.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I looked at two existing things. Google's AP2: I read the announcement post and the main spec page. And a buildathon repo: I read its README only. AP2 defines how mandates are signed and checked, and the repo checks payments against its own mandates. In what I read, neither tests the text a person is shown. GistGap will.",
+      "estimated_duration_s": 23.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two small boxes on dark bases, named beneath them: 'Google AP2' (subtitle 'Agent Payments Protocol') and 'Razorpay buildathon repo' (subtitle 'Mandate Mirror'); a taped GistGap box appears, and arrows grow from both to it.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Google AP2 · Agent Payments Protocol"
+          },
+          {
+            "at": 0.35,
+            "event": "Razorpay buildathon repo · Mandate Mirror"
+          },
+          {
+            "at": 0.78,
+            "event": "GistGap box"
+          },
+          {
+            "at": 0.95,
+            "event": "arrows to GistGap"
+          }
+        ],
+        "manim": {
+          "class": "B06_Landscape",
+          "tag": "CONSTRUCTED · drawn to explain"
+        },
+        "motion_claim": "Two small boxes on dark bases, named beneath them: 'Google AP2' (subtitle 'Agent Payments Protocol') and 'Razorpay buildathon repo' (subtitle 'Mandate Mirror'); a taped GistGap box appears, and arrows grow from both to it."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 20.99,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 21.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The target role is product manager for AI agent products. The reader is a hiring manager or an engineer. In the first sixty seconds, they will click three constructed examples and read the results table.",
+      "estimated_duration_s": 14.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three example cards; a cursor clicks; a check lands on 'clean' and crosses on 'hidden cap' and 'changed amount'.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "three cards"
+          },
+          {
+            "at": 0.75,
+            "event": "check, cross, cross"
+          }
+        ],
+        "manim": {
+          "class": "B07_Examples",
+          "tag": "CONSTRUCTED · mock-up, not built"
+        },
+        "motion_claim": "Three example cards; a cursor clicks; a check lands on 'clean' and crosses on 'hidden cap' and 'changed amount'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.46,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 13.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It will show four skills from this course: prompt contracts, verification, evaluation, and source grounding. The evidence will be the test set, the results table, dated Claude outputs, and predictions I commit before each run. It will not show that this works on real payments.",
+      "estimated_duration_s": 18.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Four icons arrive one by one: prompt contracts (a page), verification (a check), evaluation (bars), source grounding (a linked page and field).",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "prompt contracts"
+          },
+          {
+            "at": 0.22,
+            "event": "verification"
+          },
+          {
+            "at": 0.28,
+            "event": "evaluation"
+          },
+          {
+            "at": 0.35,
+            "event": "source grounding"
+          }
+        ],
+        "manim": {
+          "class": "B08_Skills",
+          "tag": "WILL EXIST · not built yet"
+        },
+        "motion_claim": "Four icons arrive one by one: prompt contracts (a page), verification (a check), evaluation (bars), source grounding (a linked page and field)."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 17.47,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 17.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "In scope: five fields. Amount, merchant, spending cap, expiry date, and one-time versus recurring.",
+      "estimated_duration_s": 5.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Five dark bases; a box drops onto each as its field is named: amount, merchant, cap, expiry, recurring.",
+        "show": [
+          {
+            "at": 0.25,
+            "event": "amount"
+          },
+          {
+            "at": 0.4,
+            "event": "merchant"
+          },
+          {
+            "at": 0.55,
+            "event": "cap"
+          },
+          {
+            "at": 0.7,
+            "event": "expiry"
+          },
+          {
+            "at": 0.9,
+            "event": "recurring"
+          }
+        ],
+        "manim": {
+          "class": "B09_Fields",
+          "tag": "WILL EXIST · not built yet"
+        },
+        "motion_claim": "Five dark bases; a box drops onto each as its field is named: amount, merchant, cap, expiry, recurring."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.0,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 7.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Out of scope: real signing, real payments, protocol compliance, and checking what the user originally asked for. First, I will run ten constructed mandates, three with planted errors. I will know it ran if it flags exactly those three. I'll commit my prediction first.",
+      "estimated_duration_s": 17.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Left: four out-of-scope items, each with a cross beside it. Right: ten dots labelled 'ten mandates'; three turn terracotta; rings mark exactly those three. An illustration of the planned first test, not a result.",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "out-of-scope items crossed"
+          },
+          {
+            "at": 0.4,
+            "event": "ten dots"
+          },
+          {
+            "at": 0.5,
+            "event": "three terracotta"
+          },
+          {
+            "at": 0.75,
+            "event": "rings on those three"
+          }
+        ],
+        "manim": {
+          "class": "B10_ScopeTest",
+          "tag": "CONSTRUCTED · planned test, no results yet"
+        },
+        "motion_claim": "Left: four out-of-scope items, each with a cross beside it. Right: ten dots labelled 'ten mandates'; three turn terracotta; rings mark exactly those three. An illustration of the planned first test, not a result."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 17.62,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 17.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The biggest risk: AP2 requires the display to be non-agentic, so the problem may be smaller than I think. I haven't examined any implementation. If so, I'll narrow the project. A second risk: matching text is brittle, because the same amount can be written several ways.",
+      "estimated_duration_s": 18.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A large box shrinks inside the outline of its old size; 'smaller problem?' appears beside it.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "box"
+          },
+          {
+            "at": 0.3,
+            "event": "box shrinks, outline stays"
+          },
+          {
+            "at": 0.3,
+            "event": "smaller problem?"
+          }
+        ],
+        "manim": {
+          "class": "B11_Shrink",
+          "tag": "CONSTRUCTED · drawn to explain"
+        },
+        "motion_claim": "A large box shrinks inside the outline of its old size; 'smaller problem?' appears beside it."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 18.03,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 18.041666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "This is a mix, mainly learning. Payments and agent-payment protocols are new to me. What I already have is the Assignment 1 film and the commit trail you can see here. I want to learn fintech and break into fintech product management.",
+      "estimated_duration_s": 16.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A drawn timeline, oldest to newest left to right: an ink line, then four terracotta nodes appearing one at a time, named '1 · environment', '2 · evidence', '3 · video built' and 'close-out' (paraphrasing the commit subjects), each with its short hash (fe9c16c, 2a1f40f, 2eb73eb, 1a6aa5b) beneath it.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "timeline line draws"
+          },
+          {
+            "at": 0.6,
+            "event": "node 1 · environment (fe9c16c)"
+          },
+          {
+            "at": 0.65,
+            "event": "node 2 · evidence (2a1f40f)"
+          },
+          {
+            "at": 0.7,
+            "event": "node 3 · video built (2eb73eb)"
+          },
+          {
+            "at": 0.75,
+            "event": "node close-out (1a6aa5b)"
+          }
+        ],
+        "manim": {
+          "class": "B12_GitLog",
+          "tag": "REDRAWN from my git log, Oct 9"
+        },
+        "motion_claim": "A drawn timeline, oldest to newest left to right: an ink line, then four terracotta nodes appearing one at a time, named '1 · environment', '2 · evidence', '3 · video built' and 'close-out' (paraphrasing the commit subjects), each with its short hash (fe9c16c, 2a1f40f, 2eb73eb, 1a6aa5b) beneath it."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 14.36,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 14.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Today, what exists is the brief, the beat sheet, and this film. The project itself does not exist yet. It will be the generator, the checker, the test set, the demo page, and the results table.",
+      "estimated_duration_s": 14.4,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two columns: EXISTS TODAY (the brief, the beat sheet, this film) and WILL EXIST (the generator, the checker, the test set, the demo page, the results table), each item arriving as it is spoken.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "EXISTS TODAY items"
+          },
+          {
+            "at": 0.6,
+            "event": "WILL EXIST items, one per phrase"
+          }
+        ],
+        "manim": {
+          "class": "B13_Columns",
+          "tag": "EXISTS TODAY · WILL EXIST (column headers)"
+        },
+        "motion_claim": "Two columns: EXISTS TODAY (the brief, the beat sheet, this film) and WILL EXIST (the generator, the checker, the test set, the demo page, the results table), each item arriving as it is spoken."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.25,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 12.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "GistGap: what you see is what you sign.",
+      "estimated_duration_s": 3.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A drawn title: 'GistGap' in the film's serif rises into place, then an ink rule with a terracotta dot draws under it and 'What you see is what you sign' fades in; everything is still from about 30% to the end. No provenance label.",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "GistGap rises in"
+          },
+          {
+            "at": 0.15,
+            "event": "rule, dot and 'What you see is what you sign'"
+          },
+          {
+            "at": 0.3,
+            "event": "still to the end"
+          }
+        ],
+        "manim": {
+          "class": "B14_Title",
+          "tag": ""
+        },
+        "motion_claim": "A drawn title: 'GistGap' in the film's serif rises into place, then an ink rule with a terracotta dot draws under it and 'What you see is what you sign' fades in; everything is still from about 30% to the end. No provenance label."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage with minimal labels; the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 2.33,
+      "audio_file": "mp3/beat-B14.mp3",
+      "render_duration_s": 2.3333333333333335,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-10T22:07:59"
+      }
+    }
+  ]
+}

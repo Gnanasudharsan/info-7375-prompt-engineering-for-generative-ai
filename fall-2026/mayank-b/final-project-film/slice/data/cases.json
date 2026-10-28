@@ -1,0 +1,48 @@
+{
+  "_note": "Synthetic cases for a fictional airline. Claims are written by hand in the claim contract; Claude extraction is not built yet.",
+  "air_canada_shape": {
+    "answer": "You can claim the bereavement fare after your trip, within 90 days.",
+    "claims": [{"topic": "bereavement fare", "relation": "after", "amount": 0, "unit": "days", "anchor": "travel"}],
+    "expect": "HOLD"
+  },
+  "within_vs_after": {
+    "answer": "You can ask for a refund up to 90 days after your flight.",
+    "claims": [{"topic": "refund request", "relation": "after", "amount": 90, "unit": "days", "anchor": "travel"}],
+    "expect": "HOLD"
+  },
+  "booking_vs_departure": {
+    "answer": "Cancelling is free up to 24 hours before departure.",
+    "claims": [{"topic": "free cancellation", "relation": "before", "amount": 24, "unit": "hours", "anchor": "departure"}],
+    "expect": "HOLD"
+  },
+  "matching_refund": {
+    "answer": "You can request a refund within 90 days of buying your ticket.",
+    "claims": [{"topic": "refund request", "relation": "within", "amount": 90, "unit": "days", "anchor": "purchase"}],
+    "expect": "PASS"
+  },
+  "outdated_refund": {
+    "answer": "Refunds are available within 30 days of purchase.",
+    "claims": [{"topic": "refund request", "relation": "within", "amount": 30, "unit": "days", "anchor": "purchase"}],
+    "expect": "HOLD"
+  },
+  "no_source": {
+    "answer": "Pets fly free on all routes.",
+    "claims": [{"topic": "pet fee", "relation": "within", "amount": 0, "unit": "days", "anchor": "booking"}],
+    "expect": "HOLD"
+  },
+  "extra_field": {
+    "answer": "You can request a refund within 90 days of purchase, and we'll waive the change fee too.",
+    "claims": [{"topic": "refund request", "relation": "within", "amount": 90, "unit": "days", "anchor": "purchase", "fee_waived": true}],
+    "expect": "HOLD"
+  },
+  "future_policy": {
+    "answer": "Refunds can be requested within 60 days of purchase.",
+    "claims": [{"topic": "refund request", "relation": "within", "amount": 60, "unit": "days", "anchor": "purchase"}],
+    "expect": "HOLD"
+  },
+  "broken_contract": {
+    "answer": "Refunds are easy, just ask.",
+    "claims": [{"topic": "refund request", "relation": "soon"}],
+    "expect": "HOLD"
+  }
+}

@@ -1,0 +1,25 @@
+$ python3 -m pytest -v   # 2026-10-22, Python 3.9.6
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0 -- /Library/Developer/CommandLineTools/usr/bin/python3
+rootdir: ~/Desktop/AgenticAI/Assignment_5/final-project-film/slice
+configfile: pytest.ini
+plugins: anyio-4.12.1
+collecting ... collected 15 items
+
+tests/test_checker.py::test_air_canada_shape_holds PASSED                [  6%]
+tests/test_checker.py::test_within_90_days_vs_90_days_after_holds PASSED [ 13%]
+tests/test_checker.py::test_within_24h_of_booking_vs_24h_before_departure_holds PASSED [ 20%]
+tests/test_checker.py::test_matching_answer_passes_and_logs_version PASSED [ 26%]
+tests/test_checker.py::test_outdated_version_holds PASSED                [ 33%]
+tests/test_checker.py::test_no_source_holds PASSED                       [ 40%]
+tests/test_checker.py::test_broken_contract_holds PASSED                 [ 46%]
+tests/test_checker.py::test_no_claims_holds PASSED                       [ 53%]
+tests/test_checker.py::test_every_case_matches_its_label[air_canada_shape] PASSED [ 60%]
+tests/test_checker.py::test_every_case_matches_its_label[booking_vs_departure] PASSED [ 66%]
+tests/test_checker.py::test_every_case_matches_its_label[broken_contract] PASSED [ 73%]
+tests/test_checker.py::test_every_case_matches_its_label[matching_refund] PASSED [ 80%]
+tests/test_checker.py::test_every_case_matches_its_label[no_source] PASSED [ 86%]
+tests/test_checker.py::test_every_case_matches_its_label[outdated_refund] PASSED [ 93%]
+tests/test_checker.py::test_every_case_matches_its_label[within_vs_after] PASSED [100%]
+
+============================== 15 passed in 0.02s ==============================

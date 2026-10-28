@@ -62,6 +62,7 @@ Every figure the film renders is supplied as a **prop** from `beat_sheet.json`. 
 | B03 | `[-2, -1, 0]`; `0.1353352832`, `0.3678794412`, `1.0`; total `1.5032147244` | the intermediates the shift rewrites |
 | B03 | `0.0900305732`, `0.2447284711`, `0.6652409558` | matches the chapter's published T = 1.0 table to 10 dp |
 | B06 | both 62-character vectors, differing at indices 19 and 60 | shifted path vs direct exponentiation, full precision |
+| B06 | `1 ULP` between each differing pair (added 2026-09-25, `REVIEW.md` Round 10) | each differing pair is two adjacent floats — `math.nextafter`, and their IEEE-754 integer patterns differ by exactly 1 |
 | B06 | `1.1102230246251565e-16` | measured max absolute difference between the two paths — exactly `2**-53`, half of `sys.float_info.epsilon`; each differing pair is two adjacent floats (`math.nextafter`) |
 | B07 | `9.85967654375977e-305`, `5e-324`, `0.0`, `0.0` | `probabilities([0, n])` for n = −700, −745, −746, −800 |
 | B08 | `~1e-348` | the true share of the outcome that returns a hard `0.0` |
@@ -142,7 +143,7 @@ is the `[MINE]` checklist under the table, and only I fill it in.
 | `components/ShiftedNotChanged.tsx` (7 scenes) | Written by Claude | Parameterized scenes that take every figure as a prop; `ShiftComposer` (2026-09-24) wraps the toolkit composer with a disclosure pill | Read the props contract; confirmed the beat sheet supplies and overrides every figure-bearing default — and corrected an over-broad claim in the paperwork, §5.8 |
 | Visual QC (5 rounds on the first build; re-run on every re-render since) | Run by Claude | Reads the sampled frames, not just the gate report | Reviewed the contact sheets; two defects were found this way that no gate reported |
 | This file, `FACTCHECK.md`, `SHOTLIST.md`, `CHECKS-REPORT.md`, `BUILD-PROMPT.md`, `PROMPTS.md`, `README.md`, `REFINEMENTS.md`, and the dated entries of `FRICTIONAL.md` and `REVIEW.md` | Drafted by Claude | Paperwork keyed to the specific laws in the SKILL.md and the brief | Checked against the artifact — imperfectly: §5.16–§5.20 are errors in these files that survived earlier checks |
-| `[MINE]` sections of `FRICTIONAL.md`, `REVIEW.md` and this file | The dated record of my own actions was compiled by Claude from my messages; the reflection is **not AI** and **not yet written** | — | Mine to write; the assistant does not write it |
+| `[MINE]` sections of `FRICTIONAL.md`, `REVIEW.md` and this file | The dated record of my own actions was compiled by Claude from my messages. The reflection is **my own four answers of 2026-09-25**, placed with the wording unchanged — Claude converted only the math notation | — | My review request (answer 1) was carried out by Claude as `REVIEW.md` Round 10 |
 
 **What I decided — these are mine:** the concept (max-subtraction, the option Claude
 recommended from its shortlist of three); the video going to Canvas only, with everything
@@ -151,11 +152,9 @@ no push access; asking for the audit that found §5.16–§5.20 before submittin
 access was granted, having the stale copies deleted and the corrected version posted
 straight to `main`; and the decision to submit.
 
-**`[MINE]` — what I personally re-ran or read.** Nothing is listed here yet, so **no
-personal re-run or read-through is claimed**: every check in the table above was run by
-Claude in the session. Only what I actually do myself goes here — for example, running
-`verify_claims.py` and comparing it with `run-output.txt`, running the 29 tests, watching
-the cut with sound, or reading `beat_sheet.json`.
+**`[MINE]` — what I personally re-ran or read.** I watched the cut (my answer of 2026-09-25,
+in `FRICTIONAL.md`). No script re-runs are claimed: every check in the table above was run
+by Claude in the session.
 
 ## 5. Corrections applied (DOUBLE-CHECK LAW)
 

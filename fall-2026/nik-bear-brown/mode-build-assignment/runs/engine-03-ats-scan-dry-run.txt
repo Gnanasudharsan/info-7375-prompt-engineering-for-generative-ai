@@ -1,0 +1,29 @@
+$ npm run ats:scan -- --dry-run
+npm notice run the-reallocation-engine@1.0.0 ats:scan
+npm notice run node scripts/ats/scan.mjs --dry-run
+Scanning 4 companies via providers (0 local parser; 0 skipped — no provider matched)
+(dry run — no files will be written)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Portal Scan — 2026-10-19
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Companies scanned:     4
+Total jobs found:      937
+Filtered by title:     813 removed
+Filtered by location:  117 removed
+Duplicates:            0 skipped
+New offers added:      7
+
+New offers:
+  + Figma | Account Executive, Enterprise | San Francisco, CA • New York, NY • United States
+  + Figma | Account Executive, Strategic | San Francisco, CA • New York, NY • United States
+  + Figma | Director, Technical Revenue Accounting | San Francisco, CA • New York, NY • United States
+  + Figma | Manager, Distribution Partnerships | San Francisco, CA • New York, NY • United States
+  + Figma | Manager, Tech & Ecosystem Partnerships | San Francisco, CA • New York, NY • United States
+  + Figma | Senior Account Executive, SMB | San Francisco, CA • New York, NY • United States
+  + Figma | Technical Account Manager | San Francisco, CA • New York, NY • United States
+
+(dry run — run without --dry-run to save results)
+
+Review new offers in data/ats/pipeline.md.

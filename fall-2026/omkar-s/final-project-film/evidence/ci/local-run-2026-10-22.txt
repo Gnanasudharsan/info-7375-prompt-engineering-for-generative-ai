@@ -1,0 +1,13 @@
+# Local mutant run — 2026-10-22 15:45 — node v22.16.0
+# Omkar's mutant (BROKEN-income-limit.ts, limit 15,000 → 1,500) added to Claude's existing one.
+$ npm test
+ok 1 - income one rupee below the minimum is rejected
+ok 2 - income exactly at the minimum passes (boundary)
+ok 3 - income well above the minimum passes
+ok 4 - zero income is rejected
+# pass 4
+# fail 0
+$ npm run test:mutants
+✓ KILLED   test/mutants/BROKEN-income-rule.ts (caught by: income exactly at the minimum passes (boundary))
+✓ KILLED   test/mutants/BROKEN-income-limit.ts (caught by: income one rupee below the minimum is rejected)
+Mutants: 2 killed · 0 survived or errored

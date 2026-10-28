@@ -1,0 +1,1032 @@
+{
+  "metadata": {
+    "slug": "coop-sponsor-check-pitch",
+    "title": "Co-op Sponsor Check",
+    "topic": "INFO 7375 · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "info7375-student",
+    "channel_title": "Arundhati Kandelkar",
+    "persona": "Arundhati Kandelkar",
+    "voice": "bf_emma",
+    "voice_kokoro": "bf_emma",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Your Turn cut for concision (TA feedback 2026-10-21: concise pitch). show-tell style: opens on the hesitant writer + terms card, no verdict card; Your Turn is the composer; spoken outro stays (with the student's name, per the assignment).",
+    "audience": "INFO 7375 instructor and TAs; later, hiring managers for software developer roles",
+    "source_doc": "PROJECT-BRIEF.md; the-reallocation-engine fork at 03784b0; evidence/recipe-rerun-2026-10-10.txt",
+    "playlist": "INFO 7375 Final Project",
+    "chapter_number": 0,
+    "tags": [
+      "INFO 7375",
+      "final project",
+      "pitch",
+      "H-1B",
+      "co-op",
+      "evaluation"
+    ],
+    "build": {
+      "at": "2026-10-25T20:59:49",
+      "cut": "master",
+      "filled": 22,
+      "of": 22,
+      "slates": [],
+      "skin_warnings": [
+        "BNAME: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BNAME",
+      "act": "who",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hello. I'm Arundhati Kandelkar, a master's student at Northeastern.",
+      "estimated_duration_s": 3.6,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "my name types"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Arundhati Kandelkar\nMSIS, Northeastern University",
+            "triggerWords": "",
+            "replacementWords": "",
+            "fontSize": 72,
+            "charMs": 22,
+            "hesitateBetween": 2,
+            "hesitateWithin": 0,
+            "mistakeRate": 0,
+            "jitter": 10,
+            "seed": "coop-sponsor-check-pitch-name",
+            "banner": "",
+            "durationSeconds": 3.84
+          }
+        }
+      },
+      "lead_silence_s": 0.5,
+      "motion_claim": "My name and programme type in while I say them.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Name card: the name is the whole picture."
+      },
+      "actual_duration_s": 3.84,
+      "audio_file": "mp3/beat-BNAME.mp3",
+      "render_duration_s": 3.875,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BNAME.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "BBUILD",
+      "act": "what",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "I'm building Co-op Sponsor Check: a tool that tells international students whether a company has ever sponsored someone for a software job.",
+      "estimated_duration_s": 8.8,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'I'm building Co-op Sponsor Check' as it is spoken"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "I'm building Co-op Sponsor Check",
+            "triggerWords": "",
+            "replacementWords": "",
+            "fontSize": 72,
+            "charMs": 18,
+            "hesitateBetween": 0,
+            "hesitateWithin": 0,
+            "mistakeRate": 0,
+            "jitter": 8,
+            "seed": "coop-sponsor-check-pitch-build",
+            "banner": "",
+            "durationSeconds": 7.55
+          },
+          "rendered": {
+            "out": "media/BBUILD.mp4",
+            "at": "2026-10-26T00:56:25.549836+00:00"
+          }
+        }
+      },
+      "motion_claim": "The one-sentence summary types in as it is spoken.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One-sentence summary card."
+      },
+      "actual_duration_s": 7.552,
+      "audio_file": "mp3/beat-BBUILD.mp3",
+      "render_duration_s": 7.583333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BBUILD.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "When international students like me pick an internship, we need to know one thing: has this company ever sponsored someone for a software job? Today we guess, and a missing record looks like a no. My tool says I don't know, instead of guessing no.",
+      "estimated_duration_s": 18.0,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types the naive question"
+          },
+          {
+            "at": 0.5,
+            "event": "corrects 'sponsor visas' to the narrower question"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Does this company sponsor visas",
+            "triggerWords": "sponsor visas",
+            "replacementWords": "have a record of sponsoring software jobs",
+            "fontSize": 64,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "coop-sponsor-check-pitch",
+            "banner": "",
+            "durationSeconds": 13.23
+          }
+        }
+      },
+      "motion_claim": "The naive question is corrected to the one a tool can answer.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 13.227,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 13.25,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "BWHAT",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "When it's done, it will be a public GitHub repository: the tool, a twenty-five company evaluation set, and a log of where it fails.",
+      "estimated_duration_s": 9.6,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A repository folder tray holding three things: the company box (the tool), a small grid (the evaluation set), a page (the failure log); tag 'PLANNED · finished form'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "repo tray"
+          },
+          {
+            "at": 0.3,
+            "event": "three parts drop in"
+          },
+          {
+            "at": 0.62,
+            "event": "folder tab"
+          }
+        ],
+        "manim": {
+          "class": "BWHAT_Repo"
+        },
+        "motion_claim": "A repository folder tray holding three things: the company box (the tool), a small grid (the evaluation set), a page (the failure log); tag 'PLANNED · finished form'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.403,
+      "audio_file": "mp3/beat-BWHAT.mp3",
+      "render_duration_s": 7.416666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BWHAT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Here is what exists today. On October third I pushed a recipe to my fork of the Reallocation Engine. It takes a company and the job I want, software or full-stack development.",
+      "estimated_duration_s": 12.8,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A kraft company box drops onto the stage beside a flat data page; tag 'EXISTS · 03784b0'.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "box drops in"
+          },
+          {
+            "at": 0.6,
+            "event": "tag"
+          }
+        ],
+        "manim": {
+          "class": "B00_Arrives"
+        },
+        "motion_claim": "A kraft company box drops onto the stage beside a flat data page; tag 'EXISTS · 03784b0'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.453,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 10.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "For each company it checks three things. Is there a record of sponsoring software titles? Does the co-op start before graduation? And is the job posting still live?",
+      "estimated_duration_s": 11.2,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The box opens; a record page, a calendar block and a check rise out of it, one per question.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "record page"
+          },
+          {
+            "at": 0.35,
+            "event": "calendar"
+          },
+          {
+            "at": 0.62,
+            "event": "live check"
+          }
+        ],
+        "manim": {
+          "class": "B01_Three"
+        },
+        "motion_claim": "The box opens; a record page, a calendar block and a check rise out of it, one per question."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.493,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 9.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "When a company is missing from the data, it does not treat that as zero. It says unknown, and tells you to ask a person.",
+      "estimated_duration_s": 10.0,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A box rides up to a gate; the gate shows a question mark, never a zero.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "box rides to gate"
+          },
+          {
+            "at": 0.62,
+            "event": "question mark"
+          }
+        ],
+        "manim": {
+          "class": "B02_Unknown"
+        },
+        "motion_claim": "A box rides up to a gate; the gate shows a question mark, never a zero."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 6.443,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 6.458333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Building it, I found its biggest limit. The big banks were not in the dataset at all, because it was built from a list of funded startups taken from S E C filings.",
+      "estimated_duration_s": 13.2,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A data page with a gap; three bank boxes drop toward it and pass through the gap.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "page with gap"
+          },
+          {
+            "at": 0.35,
+            "event": "three boxes fall through"
+          }
+        ],
+        "manim": {
+          "class": "B03_Gap"
+        },
+        "motion_claim": "A data page with a gap; three bank boxes drop toward it and pass through the gap."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.045,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 9.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Eighteen tests pass today: six failure cases, plus a new test for a bug the evaluation found.",
+      "estimated_duration_s": 6.8,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A tray of eighteen small slots; each gets a check; tag 'EXISTS · 18 / 18 · 2026-10-24'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "checks land"
+          },
+          {
+            "at": 0.62,
+            "event": "tag"
+          }
+        ],
+        "manim": {
+          "class": "B04_Tests"
+        },
+        "motion_claim": "A tray of eighteen small slots; each gets a check; tag 'EXISTS · 18 / 18 · 2026-10-24'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 5.824,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 5.833333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The real alternative is the official U S C I S, H-1B Employer Data Hub. Searched on October twelfth, it does list JPMorgan Chase, which my dataset is missing. But it is searched one employer at a time, by name, place or industry, not by job title.",
+      "estimated_duration_s": 18.8,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A search window with a query bar and one result row; beside it a 'job title' filter pill gets crossed out; tag 'SEARCHED · uscis.gov · 2026-10-12'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "search window + one row"
+          },
+          {
+            "at": 0.62,
+            "event": "job-title pill crossed out"
+          }
+        ],
+        "manim": {
+          "class": "B05_Hub"
+        },
+        "motion_claim": "A search window with a query bar and one result row; beside it a 'job title' filter pill gets crossed out; tag 'SEARCHED · uscis.gov · 2026-10-12'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 16.021,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 16.041666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B05A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "And a search for Mellon returned four employers: three B N Y companies, and Carnegie Mellon University. My tool will check a whole list for software titles and co-op dates, and it already has a test that refuses a match on part of a name.",
+      "estimated_duration_s": 18.0,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The four names the hub returned for 'Mellon', in its order; the three BNY rows get kraft markers, Carnegie Mellon gets a cross.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "four names"
+          },
+          {
+            "at": 0.62,
+            "event": "markers and cross"
+          }
+        ],
+        "manim": {
+          "class": "B05A_Mellon"
+        },
+        "motion_claim": "The four names the hub returned for 'Mellon', in its order; the three BNY rows get kraft markers, Carnegie Mellon gets a cross."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.675,
+      "audio_file": "mp3/beat-B05A.mp3",
+      "render_duration_s": 13.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Now, what will exist. A second public data source, to fill that gap, so a missing bank becomes a real answer or an honest unknown.",
+      "estimated_duration_s": 10.0,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A second page slides under the gapped page and fills the hole; tag 'PLANNED'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "second page slides in"
+          },
+          {
+            "at": 0.62,
+            "event": "gap filled"
+          }
+        ],
+        "manim": {
+          "class": "B06_Second"
+        },
+        "motion_claim": "A second page slides under the gapped page and fills the hole; tag 'PLANNED'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.488,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 7.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then I tested it on twenty-five companies. Every company I looked up in the official hub was there. My tool found a record for only two. It never guessed no. But that number told me something was wrong.",
+      "estimated_duration_s": 15.2,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A grid of twenty-five company squares; the first six fill grey and their rows land in the results table; the rest stay empty; tag '6 RAN · 2026-10-12 · 19 PLANNED'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "grid"
+          },
+          {
+            "at": 0.3,
+            "event": "six squares fill, six rows land"
+          },
+          {
+            "at": 0.62,
+            "event": "magnifier moves to square seven"
+          }
+        ],
+        "manim": {
+          "class": "B07_Eval"
+        },
+        "motion_claim": "A grid of twenty-five company squares; the first six fill grey and their rows land in the results table; the rest stay empty; tag '6 RAN · 2026-10-12 · 19 PLANNED'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 11.435,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 11.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B07A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Two real problems. First, my matcher turned Goldman Sachs and Co, L L C, into Goldman Sachs and. It is fixed now, with a test that failed before the fix and passes after.",
+      "estimated_duration_s": 13.2,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The hub's name 'GOLDMAN SACHS AND CO LLC', an arrow, and the matcher's output 'GOLDMAN SACHS' with a tick; tag 'FIXED · 2026-10-24'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "hub name"
+          },
+          {
+            "at": 0.3,
+            "event": "arrow and fixed output"
+          },
+          {
+            "at": 0.62,
+            "event": "tick"
+          }
+        ],
+        "manim": {
+          "class": "B07A_Bug"
+        },
+        "motion_claim": "The hub's name 'GOLDMAN SACHS AND CO LLC', an arrow, and the matcher's output 'GOLDMAN SACHS' with a tick; tag 'FIXED · 2026-10-24'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.176,
+      "audio_file": "mp3/beat-B07A.mp3",
+      "render_duration_s": 10.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B07B",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Second, brand names. Typing Robinhood found nothing, but my data holds Robinhood Markets, with eight hundred and twenty-four approvals. Chime, and So Fi, failed the same way. That is the next fix.",
+      "estimated_duration_s": 12.8,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A typed name 'Robinhood' leads to a question mark; beside it, the dataset row 'ROBINHOOD MARKETS INC · 824' it missed; tag 'FOUND · 2026-10-25'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "typed name and question mark"
+          },
+          {
+            "at": 0.62,
+            "event": "the missed row lights up"
+          }
+        ],
+        "manim": {
+          "class": "B07B_Brand"
+        },
+        "motion_claim": "A typed name 'Robinhood' leads to a question mark; beside it, the dataset row 'ROBINHOOD MARKETS INC · 824' it missed; tag 'FOUND · 2026-10-25'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 11.563,
+      "audio_file": "mp3/beat-B07B.mp3",
+      "render_duration_s": 11.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07B.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So the risk that could sink this is names, and my test proved it. B N Y Mellon, and The Bank of New York Mellon, may be one employer or two. The tool will not guess. It will show the likely legal names to a person, who decides.",
+      "estimated_duration_s": 19.2,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One box with two name tags pulling in different directions; a 'human check' stamp lands between them.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "two tags"
+          },
+          {
+            "at": 0.62,
+            "event": "human check stamp"
+          }
+        ],
+        "manim": {
+          "class": "B08_Names"
+        },
+        "motion_claim": "One box with two name tags pulling in different directions; a 'human check' stamp lands between them."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.736,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 12.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "One thing it will deliberately not do: give immigration advice, or predict whether anyone gets a visa. It reports history.",
+      "estimated_duration_s": 8.0,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A stop sign beside the box; three small label tags clip onto the box.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "stop sign"
+          },
+          {
+            "at": 0.62,
+            "event": "three label tags"
+          }
+        ],
+        "manim": {
+          "class": "B09_Out"
+        },
+        "motion_claim": "A stop sign beside the box; three small label tags clip onto the box."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 7.061,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 7.083333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B09P",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What does it prove? Verification: every answer is labelled as a record, a judgment, or your input. Evaluation: twenty-five answers were checked against the official hub. Source grounding: every sponsor record in the run log cites its C S V line.",
+      "estimated_duration_s": 16.4,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three trays in a row, labelled verification, evaluation, source grounding: label tags on a box; a ticked six-row table; a page with a line pointer; tag 'WHAT IT PROVES'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "three trays and labels"
+          },
+          {
+            "at": 0.62,
+            "event": "a terracotta dot lands on each"
+          }
+        ],
+        "manim": {
+          "class": "B09P_Proves"
+        },
+        "motion_claim": "Three trays in a row, labelled verification, evaluation, source grounding: label tags on a box; a ticked six-row table; a page with a line pointer; tag 'WHAT IT PROVES'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 14.485,
+      "audio_file": "mp3/beat-B09P.mp3",
+      "render_duration_s": 14.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09P.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Who opens it? A hiring manager or engineer hiring software developers. In the first minute, they will run one command, and see a report that says unknown where the data is silent, next to a table of where the tool was right and wrong.",
+      "estimated_duration_s": 17.6,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A laptop window: a terminal line, then a report with a question mark row and a small right/wrong table; tag 'CONSTRUCTED'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "window"
+          },
+          {
+            "at": 0.35,
+            "event": "report rows"
+          },
+          {
+            "at": 0.62,
+            "event": "right/wrong table"
+          }
+        ],
+        "manim": {
+          "class": "B10_Reader"
+        },
+        "motion_claim": "A laptop window: a terminal line, then a report with a question mark row and a small right/wrong table; tag 'CONSTRUCTED'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.397,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 13.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why this project? It's my own question. I'm an international student, and this is what I face when choosing a co-op.",
+      "estimated_duration_s": 8.4,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The company box beside a calendar block, with a large question mark above the box; tag 'WHY THIS PROJECT'.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "box and calendar"
+          },
+          {
+            "at": 0.62,
+            "event": "question mark lands"
+          }
+        ],
+        "manim": {
+          "class": "B11_Why"
+        },
+        "motion_claim": "The company box beside a calendar block, with a large question mark above the box; tag 'WHY THIS PROJECT'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 6.677,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 6.708333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "B11A",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So it's a mix. I already build Java and Spring Boot services. I did it for three years as a software developer at G plus D, but this project doesn't show that. What's new for me is joining a second public data source into a small Python tool.",
+      "estimated_duration_s": 19.2,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two trays: 'already have' with greyed blocks, labelled Giesecke+Devrient; 'new' with the second data page sliding in.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "two trays"
+          },
+          {
+            "at": 0.62,
+            "event": "second page into the new tray"
+          }
+        ],
+        "manim": {
+          "class": "B11A_Skills"
+        },
+        "motion_claim": "Two trays: 'already have' with greyed blocks, labelled Giesecke+Devrient; 'new' with the second data page sliding in."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carrying the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 14.187,
+      "audio_file": "mp3/beat-B11A.mp3",
+      "render_duration_s": 14.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11A.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:59:49"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Co-op Sponsor Check. Pitched by Arundhati Kandelkar.",
+      "estimated_duration_s": 4.0,
+      "voice": "bf_emma",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title; my name"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "Co-op Sponsor Check",
+            "slug": "coop-sponsor-check-pitch",
+            "handle": "Arundhati Kandelkar",
+            "subline": "",
+            "durationSeconds": 4.26
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 4.264,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 4.291666666666667,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T20:59:49"
+      }
+    }
+  ]
+}

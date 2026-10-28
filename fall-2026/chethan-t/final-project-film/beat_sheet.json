@@ -1,0 +1,795 @@
+{
+  "metadata": {
+    "title": "API Impact — The Pitch",
+    "slug": "api-impact-pitch",
+    "topic": "FINAL PROJECT PITCH · INFO 7375",
+    "author": "Chethan Gowda",
+    "register": "Teardown (plain, first person)",
+    "audience": "hiring managers and engineers hiring for AI software engineering roles",
+    "brand": "chethan-pitch",
+    "engine": "kokoro",
+    "voice_kokoro": "am_michael",
+    "palette": "claude",
+    "style_preset": "claude",
+    "greeting": "",
+    "greeting_note": "Dropped 2026-10-14 at the author's request.",
+    "overrides": [
+      "No Liam / 'in for Bear' persona, no @NikBearBrown chip, no NBB logo bug, no ClaudeTitleOutro (hardcodes @NikBearBrown): the assignment says narrate as yourself, without the instructor's name, persona or credit line.",
+      "Voice am_michael instead of the toolkit default am_onyx, so the film is not voiced like the instructor's channel.",
+      "Recruiter-facing cut (2026-10-14): no Claude composer cold open and no 'Your turn' handoff. The film is a project pitch for a recruiter, not a Claude walkthrough. Claude appears only as a component of the planned tool.",
+      "Scope change (2026-10-14): the tool will also open draft fix PRs in frontend repos (confirmed lines only, must pass tsc + tests, human merges; removed fields reported, not fixed). Problem-first order: B02 opens the film."
+    ],
+    "honesty": "Past tense only for what exists (the plan, this film, the grep run). Every tool behavior is 'will'. Constructed visuals are labelled on screen.",
+    "build": {
+      "at": "2026-10-25T20:44:52",
+      "cut": "master",
+      "filled": 15,
+      "of": 15,
+      "slates": [],
+      "skin_warnings": [
+        "B02: palette=claude but the cold open is 'AipRenameBreak' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'AipTitleOutro' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B02",
+      "act": "PROBLEM",
+      "narration_text": "A backend developer renames one field, username to handle. Tests pass. The pull request merges and ships. Then a profile page in another team's repo goes blank, because it still reads username. Nothing in that pull request could have warned them.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.12,
+            "event": "backend repo card: diff line 'username' struck, 'handle' added"
+          },
+          {
+            "at": 0.3,
+            "event": "status chips tick: tests pass · merged · deployed"
+          },
+          {
+            "at": 0.62,
+            "event": "frontend repo card lights: '{{ p.username }}' still reads the old field"
+          },
+          {
+            "at": 0.8,
+            "event": "profile page mock goes blank — terracotta break mark"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipRenameBreak",
+          "props": {
+            "sparkLine": "Green CI, blank page.",
+            "durationSeconds": 16.75
+          },
+          "rendered": {
+            "out": "media/B02.mp4",
+            "at": "2026-10-14T15:35:51.001989+00:00"
+          }
+        },
+        "honesty_label": "CONSTRUCTED example"
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 16.75,
+      "render_duration_s": 16.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "remotion:AipRenameBreak",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "OPEN",
+      "narration_text": "I'm Chethan. I'm working toward AI software engineering roles, and this is the project I want to build to get there: API Impact.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "'API Impact.' title with 'Find the frontend lines your API change breaks, and fix them before you merge.'"
+          },
+          {
+            "at": 0.2,
+            "event": "fact row lands: By · Target role · Status (planned)"
+          },
+          {
+            "at": 0.5,
+            "event": "synthetic-voice disclosure, bottom right"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipOpen",
+          "props": {
+            "durationSeconds": 9.54
+          },
+          "rendered": {
+            "out": "media/B00.mp4",
+            "at": "2026-10-26T00:39:37.362184+00:00"
+          }
+        },
+        "honesty_label": "Status shown as Planned; synthetic narration disclosed on screen"
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 9.54,
+      "render_duration_s": 9.541666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "remotion:AipOpen",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "BLUF",
+      "narration_text": "Think of a city renaming a street. Every map still showing the old name now sends people nowhere. API Impact will find those maps and fix them first. In code: before you merge, it will find the frontend lines your change breaks, and open a fix pull request in each frontend repo.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "bookend",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "writer types 'Before you merge, API Impact will find and fix the specs that break.'"
+          },
+          {
+            "at": 0.55,
+            "event": "'specs' turns terracotta, is deleted, 'frontend lines' types in"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Before you merge,\nAPI Impact will find\nand fix the specs that break.",
+            "triggerWords": "specs",
+            "replacementWords": "frontend lines",
+            "seed": "api-impact-pitch-2026-10-13",
+            "fontSize": 84,
+            "mistakeRate": 3,
+            "hesitateBetween": 8,
+            "charMs": 38,
+            "banner": "",
+            "contextTitle": "API Impact",
+            "contextItems": [
+              {
+                "label": "Exists today",
+                "detail": "this plan and this video"
+              },
+              {
+                "label": "Will exist",
+                "detail": "detector · draft fix PRs · eval report"
+              }
+            ],
+            "brandLabel": "Chethan Gowda",
+            "durationSeconds": 19.46
+          },
+          "rendered": {
+            "out": "media/B01.mp4",
+            "at": "2026-10-26T00:24:44.492355+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 19.46,
+      "lead_silence_s": 0.8,
+      "render_duration_s": 19.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "ALTERNATIVES",
+      "narration_text": "Half of this is solved. Tools like OAS diff and Optic flag breaking changes in an OpenAPI spec, in C I. They tell you the spec broke. They don't find the frontend lines or fix them, and that's the part that breaks the release.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "three columns: oasdiff · Optic · API Impact (planned)"
+          },
+          {
+            "at": 0.3,
+            "event": "row 1 'flags breaking spec changes' ticks for all three"
+          },
+          {
+            "at": 0.5,
+            "event": "row 2 'runs in CI' ticks for all three"
+          },
+          {
+            "at": 0.75,
+            "event": "row 3 'names the frontend file:line' — dash, dash, 'will' in terracotta box"
+          },
+          {
+            "at": 0.78,
+            "event": "row 4 'opens a fix PR in the frontend repo' — dash, dash, 'will'"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipAltCompare",
+          "props": {
+            "sparkLine": "Spec half: solved.",
+            "durationSeconds": 16.51
+          },
+          "rendered": {
+            "out": "media/B03.mp4",
+            "at": "2026-10-26T00:40:20.353063+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 16.51,
+      "render_duration_s": 16.541666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "remotion:AipAltCompare",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "NAME SEARCH",
+      "narration_text": "Why not just search and replace? A plain search of the public Angular RealWorld frontend for username returns a hundred seventy-one matches, a hundred twenty-four of them in tests. Replace those blindly and you break more than you fix.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "the command types: grep -rnw username src (ts, html)"
+          },
+          {
+            "at": 0.35,
+            "event": "counter runs to 171 matches · 23 files"
+          },
+          {
+            "at": 0.6,
+            "event": "bar splits: 124 in *.spec.ts vs 47 elsewhere"
+          },
+          {
+            "at": 0.8,
+            "event": "real sample lines: formControlName, route param, comment, {{ p.username }}"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipGrepNoise",
+          "props": {
+            "sparkLine": "Search finds words.",
+            "durationSeconds": 16.02
+          },
+          "rendered": {
+            "out": "media/B04.mp4",
+            "at": "2026-10-14T16:26:35.657043+00:00"
+          }
+        },
+        "honesty_label": "REAL — run 2026-10-13 on gothinkster/angular-realworld-example-app @ dd99ed2"
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 16.02,
+      "render_duration_s": 16.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "remotion:AipGrepNoise",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "TRACE",
+      "narration_text": "The service fetches a profile, the component stores it, and the template reads p dot username. The object changes names three times before the field is read. API Impact will follow that chain, and touch only those lines.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "profile.service.ts:19-20 — http.get('/profiles/') + map(data => data.profile)"
+          },
+          {
+            "at": 0.35,
+            "event": "profile.component.ts:54-55 — subscribe(([profile, user]) …) · profile.set(profile)"
+          },
+          {
+            "at": 0.6,
+            "event": "profile.component.html:11,17 — @if (profile(); as p) · {{ p.username }}"
+          },
+          {
+            "at": 0.8,
+            "event": "terracotta link draws through all three: call → response → variable → property"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipTraceChain",
+          "props": {
+            "sparkLine": "Follow the data.",
+            "durationSeconds": 16.02
+          },
+          "rendered": {
+            "out": "media/B05.mp4",
+            "at": "2026-10-14T16:27:52.151332+00:00"
+          }
+        },
+        "honesty_label": "REAL code — angular-realworld-example-app @ dd99ed2 (MIT)"
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 16.02,
+      "render_duration_s": 16.041666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "remotion:AipTraceChain",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "PIPELINE",
+      "narration_text": "How it will work: OAS diff will find the break, tree-sitter will trace each field to where it's read, and Claude will handle what static analysis can't settle, in a fixed format, and draft the edits. Then it will open draft pull requests.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.08,
+            "event": "stage 1 oasdiff lights"
+          },
+          {
+            "at": 0.2,
+            "event": "stage 2 tree-sitter trace lights"
+          },
+          {
+            "at": 0.38,
+            "event": "stage 3 Claude (hard cases only) lights, 'fixed JSON contract' tag"
+          },
+          {
+            "at": 0.56,
+            "event": "stage 4 verify lights"
+          },
+          {
+            "at": 0.7,
+            "event": "stage 5 Draft PRs lights"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipPipeline",
+          "props": {
+            "sparkLine": "Planned, not built.",
+            "durationSeconds": 15.74
+          },
+          "rendered": {
+            "out": "media/B06.mp4",
+            "at": "2026-10-26T00:41:02.220309+00:00"
+          }
+        },
+        "honesty_label": "PLANNED"
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 15.74,
+      "render_duration_s": 15.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "remotion:AipPipeline",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "VERIFY",
+      "narration_text": "The part I care about most: nothing is trusted on the model's word. Every line Claude points to will be re-checked, and every fix must pass that frontend's own tests before a pull request opens. The model suggests; the code decides.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "three citations enter, tagged confirmed / possible / cited"
+          },
+          {
+            "at": 0.4,
+            "event": "confirmed line: has field ✓, fix passes tsc + tests ✓ → FIX PR"
+          },
+          {
+            "at": 0.55,
+            "event": "possible line: has field ✓, no fix attempted → LIST ONLY"
+          },
+          {
+            "at": 0.68,
+            "event": "line without 'username' → struck, DROPPED"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipVerifyGate",
+          "props": {
+            "sparkLine": "The code decides.",
+            "durationSeconds": 16.17
+          },
+          "rendered": {
+            "out": "media/B07.mp4",
+            "at": "2026-10-14T16:30:37.500414+00:00"
+          }
+        },
+        "honesty_label": "CONSTRUCTED illustration of planned behavior"
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 16.17,
+      "render_duration_s": 16.208333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "remotion:AipVerifyGate",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "FIX PR MOCK-UP",
+      "narration_text": "Here's what that will look like, as a mock-up: a draft pull request in the frontend repo, linked to the backend change, with the edit and its checks. Possible matches will be listed, not edited.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "draft PR card: 'Rename username → handle', opened from the backend PR"
+          },
+          {
+            "at": 0.2,
+            "event": "diff: − {{ p.username }} / + {{ p.handle }}"
+          },
+          {
+            "at": 0.35,
+            "event": "checks: tsc ✓ tests ✓ · waiting for human review"
+          },
+          {
+            "at": 0.55,
+            "event": "'Listed, not edited: follow-button.component.ts:34 (possible)'"
+          },
+          {
+            "at": 0.75,
+            "event": "Merge card: nothing auto-merges"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipPrComment",
+          "props": {
+            "sparkLine": "Draft PRs, human merge.",
+            "durationSeconds": 13.08
+          },
+          "rendered": {
+            "out": "media/B08.mp4",
+            "at": "2026-10-26T00:26:45.392741+00:00"
+          }
+        },
+        "honesty_label": "CONSTRUCTED — mock-up of a v1 draft fix PR"
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 13.08,
+      "render_duration_s": 13.083333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "remotion:AipPrComment",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "EVAL · PROOF",
+      "narration_text": "I'll test it on forked RealWorld repos with about twenty planted breaks, measuring catches, false alarms, citation accuracy and fixes that pass tests, against plain search and a type-check baseline. No results yet, so no numbers here. If they hold up, they'll show I can ground a model in real code, verify its output, and evaluate it.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.06,
+            "event": "test bed card"
+          },
+          {
+            "at": 0.25,
+            "event": "grid: 3 metrics × 3 systems, every cell 'no result yet'"
+          },
+          {
+            "at": 0.5,
+            "event": "row 4 'fixes passing tests' — n/a for baselines"
+          },
+          {
+            "at": 0.68,
+            "event": "skill chips: source grounding · verification · prompt contracts · evaluation · agent loops — not claimed"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipEvalGrid",
+          "props": {
+            "sparkLine": "Empty until real.",
+            "durationSeconds": 22.93
+          },
+          "rendered": {
+            "out": "media/B09.mp4",
+            "at": "2026-10-26T00:27:47.010703+00:00"
+          }
+        },
+        "honesty_label": "PLANNED — no results exist"
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 22.93,
+      "render_duration_s": 22.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "remotion:AipEvalGrid",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "SCOPE",
+      "narration_text": "Version one stays narrow: renamed or retyped fields, in TypeScript frontends. It will never merge its own fixes, and it won't guess at deleted fields. It will flag those instead. The first thing I'll get running is one planted rename. You'll know it worked when it prints the exact line, and its draft fix passes C I.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.04,
+            "event": "WILL HANDLE: renamed fields · retyped fields · TypeScript frontends"
+          },
+          {
+            "at": 0.24,
+            "event": "WILL NEVER: merge its own fixes · guess at deleted fields (flags them) · GraphQL (v1)"
+          },
+          {
+            "at": 0.55,
+            "event": "RUNS FIRST: one planted rename → exact file:line → draft fix passes CI"
+          },
+          {
+            "at": 0.82,
+            "event": "'That's how you'll know it ran' check"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipScope",
+          "props": {
+            "sparkLine": "Narrow on purpose.",
+            "durationSeconds": 21.35
+          },
+          "rendered": {
+            "out": "media/B10.mp4",
+            "at": "2026-10-14T16:36:48.818683+00:00"
+          }
+        },
+        "honesty_label": "PLANNED"
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 21.35,
+      "render_duration_s": 21.375,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "remotion:AipScope",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "RISK",
+      "narration_text": "The real risk is a fix that compiles but is wrong, like a username from a different endpoint. So only confirmed lines get edited, and a human merges every fix. If tracing doesn't hold up on real Angular code, I'll narrow the scope and say so.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.06,
+            "event": "risk card: a fix that compiles but is wrong"
+          },
+          {
+            "at": 0.3,
+            "event": "guardrails list ticks in"
+          },
+          {
+            "at": 0.66,
+            "event": "fallback card: narrow v1 if tracing doesn't hold up"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipRisk",
+          "props": {
+            "sparkLine": "Only confirmed lines change.",
+            "durationSeconds": 17.15
+          },
+          "rendered": {
+            "out": "media/B11.mp4",
+            "at": "2026-10-26T00:28:32.867029+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 17.15,
+      "render_duration_s": 17.166666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "remotion:AipRisk",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "WHY",
+      "narration_text": "Why this project? It's mostly learning. I come from Angular and TypeScript, so I know the code on the receiving end, and some of that work is on my GitHub. New to me: tree-sitter, OAS diff, GitHub Actions, Claude's structured output, and evaluating an AI that edits code.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "remotion",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "left: ALREADY HAVE — Angular · TypeScript (tag: experience · on GitHub)"
+          },
+          {
+            "at": 0.45,
+            "event": "right: NEW TO ME — six chips land one by one"
+          },
+          {
+            "at": 0.72,
+            "event": "bridge arrow frontend → backend"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipWhy",
+          "props": {
+            "sparkLine": "Learning, mostly.",
+            "durationSeconds": 18.73
+          },
+          "rendered": {
+            "out": "media/B12.mp4",
+            "at": "2026-10-26T00:41:50.851049+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 18.73,
+      "render_duration_s": 18.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "remotion:AipWhy",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "BVDT",
+      "act": "VERDICT",
+      "narration_text": "Today, there's this plan and this video. When it's built, it will be a public repo with a GitHub Action and a command-line tool. In the first minute, a hiring manager will see a real draft fix from the test bed, then the eval report.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "bookend",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "artifact page: Exists today / Will exist lines land in order"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeVerdictArtifact",
+          "props": {
+            "artifactTitle": "API Impact — status, 2026-10-14",
+            "artifactHeading": "Exists today vs. will exist",
+            "brandLabel": "Chethan Gowda",
+            "artifactLines": [
+              "Exists today: this plan (PROJECT-BRIEF.md)",
+              "Exists today: this video",
+              "Will exist: a public repo — GitHub Action + CLI",
+              "Will exist: draft fix PRs, merged only by a person",
+              "Will exist: the test bed and an eval report"
+            ],
+            "durationSeconds": 15.68
+          },
+          "rendered": {
+            "out": "media/BVDT.mp4",
+            "at": "2026-10-14T16:42:53.396183+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BVDT.mp3",
+      "actual_duration_s": 15.68,
+      "render_duration_s": 15.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BVDT.mp4",
+        "filled_by": "remotion:ClaudeVerdictArtifact",
+        "at": "2026-10-25T20:44:52"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "OUTRO",
+      "narration_text": "API Impact. I'm Chethan Gowda. Thanks for watching.",
+      "engine": "kokoro",
+      "voice": "am_michael",
+      "shot": {
+        "type": "REMOTION",
+        "source": "remotion",
+        "lane": "bookend",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restate 'API Impact.' with terracotta period, name beneath"
+          }
+        ],
+        "remotion": {
+          "pattern": "AipTitleOutro",
+          "props": {
+            "title": "API Impact.",
+            "name": "Chethan Gowda",
+            "subline": "Narration: synthetic voice (Kokoro) · script by Chethan Gowda",
+            "durationSeconds": 4.18
+          },
+          "rendered": {
+            "out": "media/BOUT.mp4",
+            "at": "2026-10-14T16:07:06.223941+00:00"
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.18,
+      "render_duration_s": 4.208333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "remotion:AipTitleOutro",
+        "at": "2026-10-25T20:44:52"
+      }
+    }
+  ]
+}

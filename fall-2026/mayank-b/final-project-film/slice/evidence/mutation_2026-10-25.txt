@@ -1,0 +1,20 @@
+Break: ignore the condition words (relation and anchor)
+  6 failed, 15 passed in 0.04s
+    FAILED tests/test_checker.py::test_air_canada_shape_holds
+    FAILED tests/test_checker.py::test_within_90_days_vs_90_days_after_holds
+    FAILED tests/test_checker.py::test_within_24h_of_booking_vs_24h_before_departure_holds
+    FAILED tests/test_checker.py::test_every_case_matches_its_label[air_canada_shape]
+    FAILED tests/test_checker.py::test_every_case_matches_its_label[booking_vs_departure]
+    FAILED tests/test_checker.py::test_every_case_matches_its_label[within_vs_after]
+Break: ignore effective dates (treat future policies as current)
+  6 failed, 15 passed in 0.04s
+    FAILED tests/test_checker.py::test_within_90_days_vs_90_days_after_holds
+    FAILED tests/test_checker.py::test_matching_answer_passes_and_logs_version
+    FAILED tests/test_checker.py::test_future_policy_is_ignored_until_its_date
+    FAILED tests/test_checker.py::test_topic_with_only_a_future_version_holds
+    FAILED tests/test_checker.py::test_every_case_matches_its_label[future_policy]
+    FAILED tests/test_checker.py::test_every_case_matches_its_label[matching_refund]
+Break: allow extra fields in a claim
+  2 failed, 19 passed in 0.03s
+    FAILED tests/test_checker.py::test_extra_field_breaks_the_contract
+    FAILED tests/test_checker.py::test_every_case_matches_its_label[extra_field]

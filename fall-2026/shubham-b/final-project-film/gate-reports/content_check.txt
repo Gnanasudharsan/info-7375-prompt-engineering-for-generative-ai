@@ -1,0 +1,4 @@
+$ python3 runtime/qc/content_check.py ../final-project-film
+[content-check] marino-desk-assistant-pitch  beats=16
+[content-check] PASS — 16 beats checked, no violations.
+exit=0

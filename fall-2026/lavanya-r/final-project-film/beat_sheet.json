@@ -1,0 +1,915 @@
+{
+  "metadata": {
+    "slug": "readme-checker-film",
+    "title": "README Checker: Does the README Actually Work?",
+    "topic": "README CHECKER · PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "lavanya-r",
+    "channel_title": "Lavanya R",
+    "persona": "Lavanya R",
+    "voice": "af_bella",
+    "voice_kokoro": "af_bella",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Opens on my own intro, then the hesitant writer; terms card drawn in Manim; no verdict card or Your Turn (cut for the 2-4 minute limit). The locked ClaudeTitleOutro is replaced by an own drawn outro (B14) because it hard-codes @NikBearBrown, and the assignment forbids the instructor's credit line.",
+    "audience": "hiring managers and engineers reviewing a Software Engineer candidate",
+    "source_doc": "PROJECT-BRIEF.md; two manual README runs on 2026-10-13 (github.com/LavanyaRajesh24/webapp, github.com/heroku/node-js-getting-started)",
+    "playlist": "INFO 7375 Final Project Pitch",
+    "chapter_number": 0,
+    "tags": [
+      "README",
+      "developer tools",
+      "agent loop",
+      "evaluation",
+      "Docker",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-14T16:29:08",
+      "cut": "master",
+      "filled": 20,
+      "of": 20,
+      "slates": [],
+      "skin_warnings": [
+        "BHELLO: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "B14: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BHELLO",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi, I'm Luh-vun-ya. This is a pitch for my final project, the README Checker. Nothing is built yet.",
+      "estimated_duration_s": 6.9,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Title picture: the README Checker name, 'final project pitch · Lavanya', and 'nothing is built yet', beside a README page and an open box.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "title"
+          },
+          {
+            "at": 0.7,
+            "event": "'nothing is built yet'"
+          }
+        ],
+        "manim": {
+          "class": "BHELLO_Intro"
+        },
+        "motion_claim": "Title picture: the README Checker name, 'final project pitch · Lavanya', and 'nothing is built yet', beside a README page and an open box."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 6.42,
+      "audio_file": "mp3/beat-BHELLO.mp3",
+      "render_duration_s": 6.458333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BHELLO.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "The question isn't how to fix a broken README. It's how to find out if it works.",
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'How do I fix a broken README'"
+          },
+          {
+            "at": 0.5,
+            "event": "corrects 'fix' to 'find' as the voice says it"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "How do I fix a broken README",
+            "triggerWords": "fix",
+            "replacementWords": "find",
+            "fontSize": 110,
+            "charMs": 60,
+            "hesitateBetween": 4,
+            "hesitateWithin": 1,
+            "mistakeRate": 0,
+            "jitter": 10,
+            "seed": "readme-checker-film",
+            "banner": ""
+          },
+          "rendered": {
+            "out": "media/BIDEA.mp4",
+            "at": "2026-10-14T19:34:22.163293+00:00"
+          }
+        }
+      },
+      "motion_claim": "The writer types the naive question (fix) and corrects it to the real one (find).",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "estimated_duration_s": 6.5,
+      "actual_duration_s": 4.57,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 4.583333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "remotion:BrutalistHesitantWriter",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "BDEFS",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Three terms. A README: a project's setup instructions. A container: a throwaway sandbox where commands run without touching my laptop. And an agent loop: run a step, read the result, decide the next one.",
+      "estimated_duration_s": 13.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Terms card drawn in Manim: README, container, agent loop, one line each.",
+        "show": [
+          {
+            "at": 0.05,
+            "event": "README"
+          },
+          {
+            "at": 0.25,
+            "event": "container"
+          },
+          {
+            "at": 0.6,
+            "event": "agent loop"
+          }
+        ],
+        "manim": {
+          "class": "BDEFS_Terms"
+        },
+        "motion_claim": "Terms card drawn in Manim: README, container, agent loop, one line each."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 14.19,
+      "audio_file": "mp3/beat-BDEFS.mp3",
+      "render_duration_s": 14.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BDEFS.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A new engineer opens a README and follows the setup steps. A step fails, and they can't tell if the problem is them, or the instructions.",
+      "estimated_duration_s": 10.0,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A README page with readable steps (clone, install, migrate, start); a cursor walks down and an X lands on migrate. Key line: 'Is it me, or the instructions?'",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "README page"
+          },
+          {
+            "at": 0.4,
+            "event": "cursor walks"
+          },
+          {
+            "at": 0.7,
+            "event": "X lands"
+          }
+        ],
+        "manim": {
+          "class": "B00_Problem"
+        },
+        "motion_claim": "A README page with readable steps (clone, install, migrate, start); a cursor walks down and an X lands on migrate. Key line: 'Is it me, or the instructions?'"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 8.94,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 8.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "On October thirteenth, I followed my own web app's README exactly as written, in a fresh copy. Here are its seven steps, and what happened at each one.",
+      "estimated_duration_s": 10.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "My webapp README's seven real steps as readable rows; a mark lands beside each: placeholder warning, pass, fail, skipped, placeholder warning, fail, fail.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "seven steps"
+          },
+          {
+            "at": 0.6,
+            "event": "marks land"
+          }
+        ],
+        "manim": {
+          "class": "B01_MyRun"
+        },
+        "motion_claim": "My webapp README's seven real steps as readable rows; a mark lands beside each: placeholder warning, pass, fail, skipped, placeholder warning, fail, fail."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 9.79,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 9.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B01T",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The clone step had a placeholder instead of a real link. The database step failed on a missing config file. And the health check returned five oh three. I wrote that README, and it didn't work.",
+      "estimated_duration_s": 13.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A terminal panel with my real output from 2026-10-13: the migrate error and the 503 response.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "migrate error"
+          },
+          {
+            "at": 0.65,
+            "event": "503"
+          }
+        ],
+        "manim": {
+          "class": "B01T_Terminal"
+        },
+        "motion_claim": "A terminal panel with my real output from 2026-10-13: the migrate error and the 503 response."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 11.8,
+      "audio_file": "mp3/beat-B01T.mp3",
+      "render_duration_s": 11.833333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01T.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then I tried Heroku's open source starter app, following its README the same way. It worked. The server started and the page loaded.",
+      "estimated_duration_s": 8.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The Heroku starter README's steps as readable rows; checks land on all of them.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "steps"
+          },
+          {
+            "at": 0.6,
+            "event": "checks"
+          }
+        ],
+        "manim": {
+          "class": "B02_HerokuRun"
+        },
+        "motion_claim": "The Heroku starter README's steps as readable rows; checks land on all of them."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 8.64,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 8.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B02T",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "But its README asked for the Heroku tool, which I didn't need, and never mentioned the npm version it wanted. So a good checker has to tell broken apart from mostly fine.",
+      "estimated_duration_s": 12.3,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A terminal panel with my real Heroku output: command not found, the npm engine warning, Listening on 5006, 200 OK.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "warnings"
+          },
+          {
+            "at": 0.65,
+            "event": "200 OK"
+          }
+        ],
+        "manim": {
+          "class": "B02T_Terminal"
+        },
+        "motion_claim": "A terminal panel with my real Heroku output: command not found, the npm engine warning, Listening on 5006, 200 OK."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 11.22,
+      "audio_file": "mp3/beat-B02T.mp3",
+      "render_duration_s": 11.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02T.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So, the README Checker. A command line tool, in a public GitHub repo, that will run every README step inside a throwaway container.",
+      "estimated_duration_s": 8.8,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Open box (the container); the README drops in. Key line: 'Runs every README step in a throwaway container.'",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "box"
+          },
+          {
+            "at": 0.6,
+            "event": "README drops in"
+          }
+        ],
+        "manim": {
+          "class": "B03_WhatItIs"
+        },
+        "motion_claim": "Open box (the container); the README drops in. Key line: 'Runs every README step in a throwaway container.'"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 8.51,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 8.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It will run one step, read the real output, and decide what's next: continue, stop, or mark the step unclear. The AI picks the move, but every result comes from a command that actually ran.",
+      "estimated_duration_s": 13.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Run → read → decide loop beside the box; a dot travels the loop.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "loop"
+          },
+          {
+            "at": 0.6,
+            "event": "dot travels"
+          }
+        ],
+        "manim": {
+          "class": "B04_Loop"
+        },
+        "motion_claim": "Run → read → decide loop beside the box; a dot travels the loop."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 12.35,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 12.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Then it will write a report: pass, warning, or fail for each step, with the README line and the real error. This one is a mock up. It isn't built yet.",
+      "estimated_duration_s": 11.9,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A readable report mock-up for my webapp README with README line numbers, stamped 'constructed mock-up'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "report"
+          },
+          {
+            "at": 0.6,
+            "event": "rows"
+          }
+        ],
+        "manim": {
+          "class": "B05_Report"
+        },
+        "motion_claim": "A readable report mock-up for my webapp README with README line numbers, stamped 'constructed mock-up'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 9.56,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 9.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Isn't that what CI does? My project's CI installs Node and the database with its own steps, separate from the README. CI tests the code, not the instructions a person reads.",
+      "estimated_duration_s": 11.9,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "My real CI steps on one side, the README steps on the other; the CI run passes, the README is never touched.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "CI steps"
+          },
+          {
+            "at": 0.6,
+            "event": "CI passes, README untouched"
+          }
+        ],
+        "manim": {
+          "class": "B06_NotCI"
+        },
+        "motion_claim": "My real CI steps on one side, the README steps on the other; the CI run passes, the README is never touched."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 12.16,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 12.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I'm aiming for software engineer roles. A hiring manager will run one command on a sample project, and within a minute, see a report they can check against the README.",
+      "estimated_duration_s": 11.5,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A terminal window with the planned command (constructed); a report appears. Key line: one command, one minute.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "command"
+          },
+          {
+            "at": 0.6,
+            "event": "report"
+          }
+        ],
+        "manim": {
+          "class": "B07_Reader"
+        },
+        "motion_claim": "A terminal window with the planned command (constructed); a report appears. Key line: one command, one minute."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 10.2,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 10.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "To prove it works, I'll build about ten sample projects, some with problems I plant, and some that work. I'll score how many problems it catches, and how many false alarms it raises. Those numbers don't exist yet.",
+      "estimated_duration_s": 14.6,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Ten sample boxes, planted bugs marked, a scan, and two empty score slots: caught ? / planted, false alarms ?.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "boxes"
+          },
+          {
+            "at": 0.6,
+            "event": "score slots"
+          }
+        ],
+        "manim": {
+          "class": "B08_Eval"
+        },
+        "motion_claim": "Ten sample boxes, planted bugs marked, a scan, and two empty score slots: caught ? / planted, false alarms ?."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 13.48,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 13.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "That will show five course skills: an agent loop, verification with real output, evaluation with a score, source grounding to README lines, and a prompt contract my code checks.",
+      "estimated_duration_s": 11.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Five labelled skills listed beside the box, each landing as it is named.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "skills land one by one"
+          }
+        ],
+        "manim": {
+          "class": "B09_Skills"
+        },
+        "motion_claim": "Five labelled skills listed beside the box, each landing as it is named."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 11.71,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 11.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It won't fix READMEs. It only reports. First, one sample README runs in a container and writes report dot md. If that file appears with a real exit code for every step, it ran.",
+      "estimated_duration_s": 13.1,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Out: a crossed-out pen ('won't fix'). First: README → box → report.md with exit codes.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "won't fix"
+          },
+          {
+            "at": 0.6,
+            "event": "report.md"
+          }
+        ],
+        "manim": {
+          "class": "B10_First"
+        },
+        "motion_claim": "Out: a crossed-out pen ('won't fix'). First: README → box → report.md with exit codes."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 12.84,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 12.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The risk: a README can contain any command. So every step will run in a disposable container, with no secrets, deleted after each run. Vague steps get marked unclear, not guessed.",
+      "estimated_duration_s": 11.9,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A locked box swapped for a fresh one; a vague step marked 'unclear'.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "lock"
+          },
+          {
+            "at": 0.6,
+            "event": "fresh box, unclear"
+          }
+        ],
+        "manim": {
+          "class": "B11_Risk"
+        },
+        "motion_claim": "A locked box swapped for a fresh one; a vague step marked 'unclear'."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 12.22,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 12.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why this project? It's a mix. My public web app repo shows CI and cloud work: GitHub Actions, and AWS and GCP machine images. Docker I've used, but with no public proof yet. The agent loop, evaluation, grounding, and prompt contracts are new to me.",
+      "estimated_duration_s": 17.3,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two labelled columns: skills I have (with the repo as proof), and skills that are new to me.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "have"
+          },
+          {
+            "at": 0.6,
+            "event": "new"
+          }
+        ],
+        "manim": {
+          "class": "B12_Why"
+        },
+        "motion_claim": "Two labelled columns: skills I have (with the repo as proof), and skills that are new to me."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 18.5,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 18.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What exists today: this pitch, my two README tests, and that repo. The tool, the samples, and the scores are what I will build.",
+      "estimated_duration_s": 9.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two labelled shelves: exists today (solid) and will exist (dashed).",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "exists"
+          },
+          {
+            "at": 0.6,
+            "event": "will exist"
+          }
+        ],
+        "manim": {
+          "class": "B13_Exists"
+        },
+        "motion_claim": "Two labelled shelves: exists today (solid) and will exist (dashed)."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "actual_duration_s": 7.87,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 7.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "README Checker. Does the README actually work?",
+      "estimated_duration_s": 4.2,
+      "voice": "af_bella",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Own outro: box and title. Replaces the locked @NikBearBrown card.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "title"
+          },
+          {
+            "at": 0.6,
+            "event": "name"
+          }
+        ],
+        "manim": {
+          "class": "B14_Outro"
+        },
+        "motion_claim": "Own outro: box and title. Replaces the locked @NikBearBrown card."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn picture per beat on a cream stage; the voice carries the explanation. Only underfill and clustered are waived."
+      },
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 3.75,
+      "audio_file": "mp3/beat-B14.mp3",
+      "render_duration_s": 3.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T16:29:08"
+      }
+    }
+  ]
+}

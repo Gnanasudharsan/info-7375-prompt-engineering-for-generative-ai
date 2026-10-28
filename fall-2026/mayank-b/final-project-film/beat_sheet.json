@@ -1,0 +1,706 @@
+{
+  "metadata": {
+    "slug": "source-check-pitch",
+    "title": "Source Check for Support AI",
+    "topic": "FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "mayank",
+    "persona": "Mayank (narrating as myself)",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "caption_policy": "burned (HyperFrames edit pass)",
+    "greeting_language": "Spanish (Hola)",
+    "handle": "@Mayank",
+    "folderLabel": "@Mayank",
+    "in_for_bear": false,
+    "version": "v3 (resubmission)",
+    "bookend_exempt": [
+      "cold-open",
+      "terms",
+      "bvdt",
+      "handoff"
+    ],
+    "bookend_exempt_reason": "Pitch film (INFO 7375 Final Project Pitch): hesitant-writer open; the terms card is replaced by BKID, a plain explanation for non-technical viewers (TA feedback); no verdict card and no Your Turn prompt; narrated as myself, so no instructor persona or credit line; outro is TcTitleOutro (@Mayank).",
+    "audience": "a non-technical viewer first; hiring managers for AI automation engineers; INFO 7375 reviewers",
+    "source_doc": "PROJECT-BRIEF.md; Moffatt v. Air Canada (BC CRT, 2024); fin.ai public page (read 2026-10-14); slice/evidence/",
+    "honesty": "the slice in slice/ ran (past tense, real output shown); everything else is a plan said with 'will' and chipped 'proposed design'",
+    "tags": [
+      "AI automation",
+      "n8n",
+      "Claude",
+      "support AI",
+      "source grounding",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-25T16:53:58",
+      "cut": "master",
+      "filled": 17,
+      "of": 17,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'TcTitleOutro' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hola, I'm Mayank Bhadrasen, and this is my final project pitch. It starts with one question: can a support bot answer policy questions from a current source?",
+      "estimated_duration_s": 9.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Can a support bot answer\npolicy questions safely",
+            "triggerWords": "safely",
+            "replacementWords": "from a current source",
+            "fontSize": 70,
+            "charMs": 24,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "source-check-pitch",
+            "banner": ""
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer corrects a vague goal (safely) into the checkable one (from a current source).",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 10.59,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 10.625,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "BWHO",
+      "act": "who",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Who's doing it? I'm a master's student in Information Systems at Northeastern. Claude Code is my assistant, but I decide what to build and what counts as correct.",
+      "estimated_duration_s": 9.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Name card: Mayank Bhadrasen, M.S. Information Systems, Northeastern; solo project; me vs Claude split.",
+        "hyperframes": {
+          "composition": "hyperframes/BWHO",
+          "chip": "",
+          "rendered": {
+            "out": "media/BWHO.mp4",
+            "seconds": 9.5,
+            "quality": "high",
+            "at": "2026-10-25T20:21:52.299409+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 9.47,
+      "audio_file": "mp3/beat-BWHO.mp3",
+      "render_duration_s": 9.5,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BWHO.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "BKID",
+      "act": "the idea, simply",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Here's the idea, simply. A company has a robot helper that answers customers. Sometimes it sounds very sure and is still wrong. My project is a checker at the door: before an answer goes out, it looks it up in the company's rule book. If the book agrees, it goes out. If not, a person looks first.",
+      "estimated_duration_s": 19.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Robot speech bubble -> a checker at a door holding a rule book -> 'goes out' or 'a person looks first'.",
+        "hyperframes": {
+          "composition": "hyperframes/BKID",
+          "chip": "",
+          "rendered": {
+            "out": "media/BKID.mp4",
+            "seconds": 15.708,
+            "quality": "high",
+            "at": "2026-10-25T20:22:09.410772+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 15.7,
+      "audio_file": "mp3/beat-BKID.mp3",
+      "render_duration_s": 15.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BKID.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "why it is a problem",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Why is this a problem? It already happened. In 2024, Air Canada's chatbot told a grieving customer he could claim a bereavement fare after his trip. The policy said the request had to come before. One word was flipped, and a Canadian tribunal held the airline responsible for what its chatbot said.",
+      "estimated_duration_s": 17.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "The chatbot's claim beside the policy line; 'after' and 'before' marked; the ruling caption.",
+        "hyperframes": {
+          "composition": "hyperframes/B00",
+          "chip": "real case",
+          "rendered": {
+            "out": "media/B00.mp4",
+            "seconds": 16.958,
+            "quality": "high",
+            "at": "2026-10-25T20:22:25.011674+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 16.94,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 16.958333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B00.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "why it matters at scale",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "And it isn't one customer. A bot gives the same answer to everyone who asks, just as confidently, so one wrong rule becomes a wrong promise to all of them. Today's safety net is usually someone reading transcripts later, after customers were told.",
+      "estimated_duration_s": 14.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "One wrong bubble copies into a wall of identical bubbles; a 'reviewed later' clock sits after the send arrow.",
+        "hyperframes": {
+          "composition": "hyperframes/B01",
+          "chip": "",
+          "rendered": {
+            "out": "media/B01.mp4",
+            "seconds": 14.458,
+            "quality": "high",
+            "at": "2026-10-25T20:22:40.029878+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 14.44,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B01.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "what I am building",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "So here's what I'm building. Source Check sits between any support bot and the customer, checks each policy answer against the current, dated policy, and holds it for a person when the policy doesn't back it up. It catches the mistake before the customer sees it.",
+      "estimated_duration_s": 15.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Bot -> Source Check -> customer; the check sits before the send, transcript review after it.",
+        "hyperframes": {
+          "composition": "hyperframes/B02",
+          "chip": "proposed design",
+          "rendered": {
+            "out": "media/B02.mp4",
+            "seconds": 14.125,
+            "quality": "high",
+            "at": "2026-10-25T20:22:55.098679+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 14.12,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 14.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B02.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "how it works",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Under the hood, five steps. The bot's draft arrives at an n8n webhook. Claude splits it into claims. Python checks each claim against the policy store. The answer passes, or waits in Slack for a support lead. Every decision is logged with its policy version.",
+      "estimated_duration_s": 15.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Five-box architecture lighting up in order: n8n webhook, Claude extract, Python check, pass/hold, log.",
+        "hyperframes": {
+          "composition": "hyperframes/B03",
+          "chip": "proposed design",
+          "rendered": {
+            "out": "media/B03.mp4",
+            "seconds": 14.708,
+            "quality": "high",
+            "at": "2026-10-25T20:23:11.657181+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 14.68,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 14.708333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B03.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "step one: the contract",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Step one is a prompt contract. Claude returns each claim as JSON with five fields: topic, condition word, amount, unit, and what it's measured from, like travel or purchase. My code validates the JSON, and if a field is missing or extra, the answer is held.",
+      "estimated_duration_s": 15.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "The bot's sentence turns into a JSON claim, field by field, with the condition word marked.",
+        "hyperframes": {
+          "composition": "hyperframes/B04",
+          "chip": "proposed design",
+          "rendered": {
+            "out": "media/B04.mp4",
+            "seconds": 15.417,
+            "quality": "high",
+            "at": "2026-10-25T20:23:29.861809+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 15.4,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 15.416666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B04.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "step two: the check",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Step two is the check. Python code, not the model, finds the current policy and compares the claim field by field. The claim says after travel; the policy says before travel. That's a mismatch, so the answer is held, and the reason quotes the policy line. Claude only extracts. Plain code decides, because a model can be confidently wrong.",
+      "estimated_duration_s": 19.7,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Claim row beside policy row; after vs before marked; HOLD with the quoted policy line (real checker output).",
+        "hyperframes": {
+          "composition": "hyperframes/B05",
+          "chip": "real output",
+          "rendered": {
+            "out": "media/B05.mp4",
+            "seconds": 17.917,
+            "quality": "high",
+            "at": "2026-10-25T20:23:48.411624+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 17.9,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B05.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "pass or hold",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "If every claim matches, the answer goes out and the log records the policy version. If a claim has no source, is outdated, or contradicts the policy, it's held, and a support lead sees the reason in Slack, then approves, edits, or rejects it.",
+      "estimated_duration_s": 14.7,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Two lanes: PASS to the customer with a log line; HOLD to a Slack card mock-up with approve / edit / reject.",
+        "hyperframes": {
+          "composition": "hyperframes/B06",
+          "chip": "proposed design",
+          "rendered": {
+            "out": "media/B06.mp4",
+            "seconds": 13.792,
+            "quality": "high",
+            "at": "2026-10-25T20:24:04.815944+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 13.78,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 13.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B06.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "what runs today",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "And the core already runs. Since the first pitch, the checker and the tests the TA asked for are built. The Air Canada case: held. Within ninety days against ninety days after: held. A matching answer: passes. All twenty-one tests pass, and when the check is broken on purpose, tests fail, so they can say no. The claims are written by hand for now.",
+      "estimated_duration_s": 21.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Real pytest output, then the real mutation run: 6 failed.",
+        "hyperframes": {
+          "composition": "hyperframes/B07",
+          "chip": "real output",
+          "rendered": {
+            "out": "media/B07.mp4",
+            "seconds": 17.917,
+            "quality": "high",
+            "at": "2026-10-25T20:24:24.400129+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 17.88,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 17.916666666666668,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "alternatives",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "How do today's tools handle this? Intercom Fin is an AI agent trained on a company's policies and procedures. Teams test changes in simulations before going live, and it hands hard cases to people. Zendesk's AI agents answer from the help-center articles you connect, and escalate to a human when they can't answer. Manual review reads transcripts after answers are sent. What I didn't find on their public pages is a check of each answer, at send time, against the current dated policy.",
+      "estimated_duration_s": 27.7,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Three cards (Fin, Zendesk, manual review) on a before/after-send timeline; the empty slot before send.",
+        "hyperframes": {
+          "composition": "hyperframes/B08",
+          "chip": "",
+          "rendered": {
+            "out": "media/B08.mp4",
+            "seconds": 28.708,
+            "quality": "high",
+            "at": "2026-10-25T20:24:42.871038+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 28.67,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 28.708333333333332,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B08.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "who opens it",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "Who opens it? A support lead, or a hiring manager. In their first minute, one command shows the Air Canada answer held, with the reason and the policy line, and that command works today.",
+      "estimated_duration_s": 11.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "A terminal: python3 -m source_check.demo and its real output.",
+        "hyperframes": {
+          "composition": "hyperframes/B09",
+          "chip": "real output",
+          "rendered": {
+            "out": "media/B09.mp4",
+            "seconds": 10.75,
+            "quality": "high",
+            "at": "2026-10-25T20:24:58.493474+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 10.75,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 10.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B09.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "what it will prove",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "It will prove prompt contracts, source grounding, deterministic checks, approval gates, and evaluation. I'll measure how many wrong answers slip through and how many good ones get held, and report no numbers until I've measured them.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Five skill tiles; a labelled test set splitting into correct / outdated / invented; two empty meters.",
+        "hyperframes": {
+          "composition": "hyperframes/B10",
+          "chip": "proposed design",
+          "rendered": {
+            "out": "media/B10.mp4",
+            "seconds": 12.833,
+            "quality": "high",
+            "at": "2026-10-25T20:52:36.315042+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 12.82,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 12.833333333333334,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B10.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "scope and risk",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "The scope: refunds, fees, and eligibility for one fictional airline, on synthetic data. It won't write answers or replace the bot. The biggest risk is Claude dropping a condition word. So uncertain claims default to hold, and the test set will be full of condition flips.",
+      "estimated_duration_s": 15.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "In / out lists; the risk drawn as 'before' sliding out of a claim; default HOLD.",
+        "hyperframes": {
+          "composition": "hyperframes/B11",
+          "chip": "proposed design",
+          "rendered": {
+            "out": "media/B11.mp4",
+            "seconds": 15.125,
+            "quality": "high",
+            "at": "2026-10-25T20:25:32.547654+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 15.1,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 15.125,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B11.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "what is new for me, and what is next",
+      "lane": "hyperframes",
+      "proof_gate": "SHOW",
+      "narration_text": "What's new for me is building an evaluation set and measuring the misses. Next: Claude extraction, the n8n workflow, the Slack hold queue, and the labelled test set.",
+      "estimated_duration_s": 9.3,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "HYPERFRAMES",
+        "source": "own",
+        "visual_intent": "Exists today vs will exist, two columns, with the slice now in 'exists'.",
+        "hyperframes": {
+          "composition": "hyperframes/B12",
+          "chip": "",
+          "rendered": {
+            "out": "media/B12.mp4",
+            "seconds": 9.75,
+            "quality": "high",
+            "at": "2026-10-25T20:25:41.210187+00:00"
+          }
+        }
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "One picture per beat with a caption band kept clear at the bottom."
+      },
+      "actual_duration_s": 9.75,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 9.75,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B12.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Source Check for Support AI: check the answer before the customer sees it. I'm Mayank. Thank you for watching.",
+      "estimated_duration_s": 7.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "remotion": {
+          "pattern": "TcTitleOutro",
+          "props": {
+            "title": "Source Check for Support AI.",
+            "slug": "source-check-pitch-film",
+            "handle": "@Mayank",
+            "showMascot": false,
+            "inkPeriod": true
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 7.57,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 7.583333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T16:53:58"
+      }
+    }
+  ]
+}

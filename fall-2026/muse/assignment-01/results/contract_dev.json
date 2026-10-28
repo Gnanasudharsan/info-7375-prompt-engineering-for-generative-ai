@@ -1,0 +1,69 @@
+{
+  "experiment": "B-dev",
+  "kind": "FIXTURE EVALUATION",
+  "warning": "Responses are hand-written fixtures, NOT Claude outputs. The validator ran for real; the responses did not come from any model.",
+  "n_cases": 5,
+  "format_pass_rate": 0.4,
+  "failures": [
+    {
+      "index": 1,
+      "reason": "not-json"
+    },
+    {
+      "index": 2,
+      "reason": "schema: keys must be exactly ['answer', 'sources']"
+    },
+    {
+      "index": 3,
+      "reason": "source: unknown source id 'e99'"
+    }
+  ],
+  "per_case": [
+    {
+      "id": "d1",
+      "kind": "FIXTURE",
+      "expected_ok": true,
+      "observed_ok": true,
+      "observed_reason": "ok",
+      "matches_expectation": true,
+      "tests": "baseline valid response passes"
+    },
+    {
+      "id": "d2",
+      "kind": "FIXTURE",
+      "expected_ok": false,
+      "observed_ok": false,
+      "observed_reason": "not-json",
+      "matches_expectation": true,
+      "tests": "malformed JSON is rejected with a named reason"
+    },
+    {
+      "id": "d3",
+      "kind": "FIXTURE",
+      "expected_ok": false,
+      "observed_ok": false,
+      "observed_reason": "schema: keys must be exactly ['answer', 'sources']",
+      "matches_expectation": true,
+      "tests": "extra fields rejected; contract keys are exact"
+    },
+    {
+      "id": "d4",
+      "kind": "FIXTURE",
+      "expected_ok": false,
+      "observed_ok": false,
+      "observed_reason": "source: unknown source id 'e99'",
+      "matches_expectation": true,
+      "tests": "citations restricted to the supplied evidence map"
+    },
+    {
+      "id": "d5",
+      "kind": "FIXTURE",
+      "expected_ok": true,
+      "observed_ok": true,
+      "observed_reason": "ok",
+      "matches_expectation": true,
+      "tests": "format validity does not imply truth; motivates the human evidence check"
+    }
+  ],
+  "all_expectations_met": true
+}

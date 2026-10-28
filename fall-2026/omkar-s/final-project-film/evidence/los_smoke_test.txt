@@ -1,0 +1,7 @@
+# LOS smoke test, 2026-10-12 11:48 EDT, synthetic applicant, local backend at commit-less working copy
+## income 14999 (rule: MIN_MONTHLY_INCOME 15000)
+{'status': 'REJECTED', 'rejectionReason': 'Monthly income below minimum ₹15000', 'decisionReason': None}
+## income 15000
+{'id': '65514000-08f1-4d2d-ac57-04a5853744eb', 'status': 'OFFER_GENERATED', 'riskCategory': 'LOW', 'sanctionedAmount': None, 'interestRate': None}
+## out-of-order: POST disburse on a fresh OFFER_GENERATED application
+{"error":"Cannot run 'disburse'. Application status is 'OFFER_GENERATED', expected 'ESIGN_COMPLETED'."} HTTP 409

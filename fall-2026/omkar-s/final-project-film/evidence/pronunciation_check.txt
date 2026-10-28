@@ -1,0 +1,48 @@
+# Pronunciation check, v2, 2026-10-22: Whisper-tiny (mlx-community/whisper-tiny) transcript of each beat's Kokoro audio vs. the script.
+# Digits vs. words (15 000 / fifteen thousand) are Whisper formatting; 'clawed'/'striker'/'bite check' are tiny-model spellings of names.
+B00 match=0.89
+    script:'omkar salian'                             heard:'amcar salien'
+    script:'bitecheck'                                heard:'by check'
+B01 match=1.00
+B02 match=0.94
+    script:'claude'                                   heard:'cloud'
+    script:'bitecheck'                                heard:'bite check'
+B03 match=0.96
+    script:'bitecheck'                                heard:'byte check'
+B04 match=0.81
+    script:'loan'                                     heard:'lone'
+    script:'typescript'                               heard:'type script'
+    script:'twelfth'                                  heard:'12'
+    script:'fourteen thousand nine hundred and ninety nine' heard:'14 999'
+    script:'fifteen thousand'                         heard:'15 000'
+B05 match=0.92
+    script:'one'                                      heard:'1'
+    script:'write'                                    heard:'ride'
+    script:'fifteen hundred'                          heard:'1500'
+    script:'two'                                      heard:'2'
+B06 match=0.98
+    script:'three'                                    heard:'3'
+B07 match=0.80
+    script:'postbot'                                  heard:'post bot'
+    script:'schemathesis'                             heard:'schema thesis'
+    script:'thirteenth'                               heard:'13'
+    script:'stryker'                                  heard:'striker'
+    script:'ninety two'                               heard:'92'
+    script:'fifteen thousand'                         heard:'15 000'
+    script:'bitecheck adds'                           heard:'right check ads'
+B08 match=0.98
+    script:'passed'                                   heard:'past'
+B09 match=0.94
+    script:'claude edits'                             heard:'clawed at its'
+B10 match=0.94
+    script:'twenty second'                            heard:'22nd'
+    script:'claude s'                                 heard:'clawed'
+B11 match=1.00
+B12 match=0.98
+    script:'claude'                                   heard:'clawed'
+B13 match=0.89
+    script:'loan'                                     heard:'lone'
+    script:'stryker'                                  heard:'striker'
+    script:'github'                                   heard:'get hub'
+    script:'salian'                                   heard:'salium'
+    script:'bitecheck'                                heard:'bite check'

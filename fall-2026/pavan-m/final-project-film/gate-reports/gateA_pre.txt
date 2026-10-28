@@ -1,0 +1,68 @@
+--- B00_LogPage
+[OK   ]   [3 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B01_LensCites
+[OK   ]   [4 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B02_NotEnough
+[OK   ]   [3 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B03_BreakService
+[OK   ]   [8 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B04_Contract
+[OK   ]   [4 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B05_Checker
+[OK   ]   [6 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B06_ClosedBox
+[OK   ]   [4 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B07_OpenCrate
+[OK   ]   [5 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B08_Readme
+[OK   ]   [3 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B09_ThreePanels
+[OK   ]   [5 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B10_TestNotTrust
+[OK   ]   [4 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B11_NeverActs
+[OK   ]   [3 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B12_FirstRun
+[OK   ]   [5 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B13_TooEasy
+[OK   ]   [2 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B14_HardCases
+[OK   ]   [3 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B15_TwoPiles
+[OK   ]   [4 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+--- B16_ExistsVsWill
+[OK   ]   [3 distinct / None beats]
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error

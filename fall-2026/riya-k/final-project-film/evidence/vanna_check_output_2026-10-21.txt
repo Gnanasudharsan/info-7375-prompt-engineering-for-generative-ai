@@ -1,0 +1,8 @@
+# vanna_check.py, run by Riya Kapadnis on her Mac, 2026-10-21 17:41 (Vanna 2.0.2). Same output as Claude's run earlier that day.
+Q03  What is total revenue by country? Show the top 3.
+gold rows   : [['USA', 523.06], ['Canada', 303.96], ['France', 195.1]]
+fan-out rows: [['USA', 4667.06], ['Canada', 2689.96], ['France', 1722.1]]
+
+Vanna OutputEvaluator on gold    : PASS  -- Output evaluation: All expected content present, no forbidden content
+Vanna OutputEvaluator on fan-out : PASS  -- Output evaluation: All expected content present, no forbidden content
+Row-by-row comparison on fan-out : FAIL  -- revenue values differ from the gold rows

@@ -1,0 +1,47 @@
+[run] no Manim beats in this reel's beat sheet — skipping Manim stage
+[run] nothing to render — recompiling only
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[remotion] BEHIND: 4.0.535 installed, 4.0.538 is latest. Bear's rule: use the latest Remotion. Run `./art remotion-upgrade`, then re-render and re-gate.
+[remotion] BIDEA: filled already (skip)
+[remotion] BOUT: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[hyperframes] BWHO: media/BWHO.mp4 exists (use --force to re-render)
+[hyperframes] BKID: media/BKID.mp4 exists (use --force to re-render)
+[hyperframes] B00: media/B00.mp4 exists (use --force to re-render)
+[hyperframes] B01: media/B01.mp4 exists (use --force to re-render)
+[hyperframes] B02: media/B02.mp4 exists (use --force to re-render)
+[hyperframes] B03: media/B03.mp4 exists (use --force to re-render)
+[hyperframes] B04: media/B04.mp4 exists (use --force to re-render)
+[hyperframes] B05: media/B05.mp4 exists (use --force to re-render)
+[hyperframes] B06: media/B06.mp4 exists (use --force to re-render)
+[hyperframes] B07: media/B07.mp4 exists (use --force to re-render)
+[hyperframes] B08: media/B08.mp4 exists (use --force to re-render)
+[hyperframes] B09: media/B09.mp4 exists (use --force to re-render)
+[hyperframes] B10: media/B10.mp4 exists (use --force to re-render)
+[hyperframes] B11: media/B11.mp4 exists (use --force to re-render)
+[hyperframes] B12: media/B12.mp4 exists (use --force to re-render)
+[art] compiled BWHO  VIDEO     9.5s  ← BWHO.mp4
+[art] compiled BKID  VIDEO    15.7s  ← BKID.mp4
+[art] compiled B01  VIDEO    14.5s  ← B01.mp4
+[art] compiled B02  VIDEO    14.1s  ← B02.mp4
+[art] compiled B04  VIDEO    15.4s  ← B04.mp4
+[art] compiled B06  VIDEO    13.8s  ← B06.mp4
+[art] compiled B07  VIDEO    17.9s  ← B07.mp4
+[art] compiled B08  VIDEO    28.7s  ← B08.mp4
+[art] compiled B10  VIDEO    12.8s  ← B10.mp4
+[art] compiled B12  VIDEO     9.8s  ← B12.mp4
+[art] motion histogram: hyperframes:15  remotion:2
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'TcTitleOutro' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (17/17 filled)
+[art] QC contact sheet → ~/Desktop/AgenticAI/Assignment_5/final-project-film/qc-sheet.png
+[art] wrote ~/Desktop/AgenticAI/Assignment_5/final-project-film/source-check-pitch-slate.mp4  (245.9s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 17/17 filled — BIDEA:VIDEO BWHO:VIDEO BKID:VIDEO B00:VIDEO B01:VIDEO B02:VIDEO B03:VIDEO B04:VIDEO B05:VIDEO B06:VIDEO B07:VIDEO B08:VIDEO B09:VIDEO B10:VIDEO B11:VIDEO B12:VIDEO BOUT:VIDEO
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=34 BLOCKER=0 MAJOR=0 → ~/Desktop/AgenticAI/Assignment_5/final-project-film/_qc/REPORT.md
+[run] done → ~/Desktop/AgenticAI/Assignment_5/final-project-film  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see ~/Desktop/AgenticAI/Assignment_5/final-project-film/SHOTLIST.md

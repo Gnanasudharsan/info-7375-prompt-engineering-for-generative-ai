@@ -1,0 +1,9 @@
+Fri Oct  9 17:32:13 EDT 2026
+Name: great_expectations
+Version: 1.24.0
+Name: dbt-core
+Version: 1.12.5
+Name: dbt-duckdb
+Version: 1.11.0
+Name: pandas
+Version: 3.0.6

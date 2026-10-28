@@ -11,7 +11,7 @@
 | **Runtime** | **3:16** (195.72 s of narration; the file probes at 196.0 s), 11 beats, 1920×1080 |
 | **Final file** | `Produtoor_Suketh_INFO7375_Week01_Video.zip` → **Canvas**. The MP4 is not committed here — see *Where the video is*. |
 | **Audience** | A classmate who has read Chapter 1 Part 1 and can follow arithmetic, but has not run the code yet |
-| **Status** | Local final — **not published**; no YouTube upload, per the brief. Reviewed by Claude frame by frame (`REVIEW.md`); **my own watch-through is still to be written** (`[MINE]`). |
+| **Status** | Local final — **not published**; no YouTube upload, per the brief. Reviewed by Claude frame by frame, and **watched by me on 2026-09-25** — the one change I asked for is in (`REVIEW.md` Round 10). |
 | **Who did what** | Claude (Claude Code) wrote the scripts, scenes, beat sheet and these documents; I directed it and made the decisions listed in [`SOURCES.md`](SOURCES.md) §4. |
 | **Narration** | **Synthetic** — Kokoro `am_onyx`, generated locally. Not my voice, not the instructor's. See [`SOURCES.md`](SOURCES.md) §1. |
 | **Cost** | $0.00 — free pipeline only, no API key, no paid service |
@@ -21,7 +21,7 @@
 ## Where the video is
 
 **The MP4 is not in this repository.** It is submitted on Canvas as
-`Produtoor_Suketh_INFO7375_Week01_Video.zip` (1920×1080, h264+aac, 3:16, 9.0 MB).
+`Produtoor_Suketh_INFO7375_Week01_Video.zip` (1920×1080, h264+aac, 3:16, 9.1 MB).
 
 This folder carries everything else — beat sheet, evidence scripts and their recorded
 runs, fact-check, build prompt, review log, Frictional log, and a description of the
@@ -52,8 +52,9 @@ sentence, then refuses the slogan usually attached to it.
 4. **B06 — the honest receipt.** I expected the shifted and direct paths to return
    identical floats. They differ by `1.1102230246251565e-16` — exactly 2⁻⁵³, **half** of
    Python's `sys.float_info.epsilon`: the two answers are adjacent floats, one step apart,
-   in two digit positions out of fifty-three. Identical in algebra; in floating point merely
-   indistinguishable.
+   in two digit positions out of fifty-three. Those two digits are then isolated on screen
+   with a `1 ULP` marker between each pair, and held. Identical in algebra; in floating point
+   merely indistinguishable.
 5. **B07 — what this does *not* establish.** `probabilities([0, -800])` returns
    `[1.0, 0.0]` — an **exact zero** for an outcome whose true share is ≈ `1e-348`. The
    subtraction protects the large end and does nothing for the small one. And the cliff

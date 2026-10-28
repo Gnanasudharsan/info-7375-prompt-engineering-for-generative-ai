@@ -1,0 +1,4 @@
+$ python3 runtime/qc/factcheck_check.py ../final-project-film
+[factcheck] clean — every row resolved, every claim-bearing beat covered
+[factcheck] rows=27 beats_covered=16 claim_bearing_beats=3 uncovered=0
+exit=0

@@ -1,0 +1,13 @@
+diff --git a/runtime/scripts/compile.py b/runtime/scripts/compile.py
+index 80ed0eb..b788c48 100644
+--- a/runtime/scripts/compile.py
++++ b/runtime/scripts/compile.py
+@@ -788,7 +788,7 @@ def compile_reel(a):
+             prev = nxt
+         if title_png:
+             fc.append(f"[{prev}][{n_label_inputs}:v]"
+-                      f"overlay=(W-w)/2:H-h-40"
++                      f"overlay=(W-w)/2:H-h-{int(h * 0.07)}"   # inside title-safe (5% inset) + margin
+                       f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
+             prev = "vtitle"
+         if a.review and drawtext:

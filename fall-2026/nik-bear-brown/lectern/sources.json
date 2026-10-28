@@ -1,0 +1,217 @@
+{
+  "_comment": "Lectern's watch list. Every company here is checked on every run REGARDLESS of whether it has an education, education-advocate, or AI-advocate role today. Professor Bear's rule, 2026-09-26: 'AI grows so fast that the agent should check the company regardless if they have explicit educational roles or educational advocate roles or AI advocate roles. Because it's likely these companies are going to create those roles if they don't have them now. So the agent should check.' A company with zero matches is a company being watched, not a company to drop. Counts below are from the 2026-09-26 probe and are a snapshot, not a contract. Companies under 'unreachable' have no ATS recorded: the probe found no board on the three APIs Lectern reads, and the ATS they actually use has not been verified. Nothing is guessed — see ATS.md. 2026-09-26 (second pass): added Stripe, GitLab, Twilio, Netlify (Greenhouse) and Supabase (Ashby) from Professor Bear's list of companies that hire designer/developer/creator advocates. IMPORTANT: a company in 'unreachable' is NOT a company with no demand — it is a company Lectern cannot read. Google is the clearest case and is documented with a manual check.",
+  "schema_version": "0.1.0",
+  "probed": "2026-09-26",
+  "sources": [
+    {
+      "provider": "greenhouse",
+      "api": "https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true",
+      "calls_per_board": 1,
+      "boards": [
+        {
+          "company": "Anthropic",
+          "slug": "anthropic",
+          "tier": 1,
+          "postings_2026_09_26": 618,
+          "matched_2026_09_26": 23,
+          "why_watched": "Beneficial Deployments is hiring education roles now: Developer Education Lead (Claude Platform), Lead Technical Instructor, Head of Technical Training, Full Stack Engineer (Education Labs). Claude for Education launched with Northeastern."
+        },
+        {
+          "company": "Figma",
+          "slug": "figma",
+          "tier": 1,
+          "postings_2026_09_26": 163,
+          "matched_2026_09_26": 9,
+          "why_watched": "Figma Education is an acquisition funnel; Designer Advocate is the Assignment 2 dream job."
+        },
+        {
+          "company": "Miro",
+          "slug": "realtimeboardglobal",
+          "tier": 2,
+          "postings_2026_09_26": 28,
+          "matched_2026_09_26": 0,
+          "why_watched": "Adjacent audience, no education push yet. Zero matches today. NOTE: the slug is their old company name, RealtimeBoard."
+        }
+      ]
+    },
+    {
+      "provider": "ashby",
+      "api": "https://api.ashbyhq.com/posting-api/job-board/{slug}?includeCompensation=true",
+      "calls_per_board": 1,
+      "note": "Board names may contain spaces and capitals and must be URL-encoded.",
+      "boards": [
+        {
+          "company": "OpenAI",
+          "slug": "openai",
+          "tier": 1,
+          "postings_2026_09_26": 830,
+          "matched_2026_09_26": 17,
+          "why_watched": "A dedicated ChatGPT Education & Learning product team; Tech Lead Manager (Education), Account Director (Higher Education), Academic Research Partnerships. ChatGPT Edu is the university-license wedge. Largest board in the set."
+        },
+        {
+          "company": "Notion",
+          "slug": "notion",
+          "tier": 2,
+          "postings_2026_09_26": 128,
+          "matched_2026_09_26": 5,
+          "why_watched": "Notion for Education is a student-magnet freemium play and Notion AI already ships. Technical Education Specialist and Developer Advocate both open."
+        }
+      ]
+    },
+    {
+      "provider": "smartrecruiters",
+      "api": "https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=100&offset={n}",
+      "calls_per_board": "1 listing page per 100 postings, PLUS one detail call per posting (the listing carries no ad text)",
+      "boards": [
+        {
+          "company": "Canva",
+          "slug": "Canva",
+          "tier": 1,
+          "postings_2026_09_19": 248,
+          "matched_2026_09_19": 0,
+          "why_watched": "Canva for Education has huge classroom penetration. Every education role on the board is APAC, several on 12-month contracts — the engagement shape wanted, wrong geography so far. The most expensive board to fetch (248 detail calls, about 3.5 minutes)."
+        }
+      ]
+    }
+  ],
+  "unreachable": [
+    {
+      "company": "Adobe",
+      "ats": "unknown — not found on the three APIs Lectern can read",
+      "tier": 1,
+      "why_watched": "The longest-running education playbook there is — Adobe Education Exchange, Creative Cloud for Education, deepest K-12 and higher-ed relationships.",
+      "blocker": "Tried Greenhouse and Ashby slugs 'adobe' and 'Adobe' and SmartRecruiters 'adobe' on 2026-09-26: no board. Which ATS Adobe actually uses has not been established, so it is not recorded here. See ATS.md.",
+      "status": "TODO: DATA SOURCE"
+    },
+    {
+      "company": "Salesforce",
+      "ats": "unknown — not found on the three APIs Lectern can read",
+      "tier": 1,
+      "why_watched": "Trailhead is arguably the largest corporate education platform in existence and is already Einstein-infused.",
+      "blocker": "Tried Greenhouse/Ashby/SmartRecruiters slugs 'salesforce', 'Salesforce', 'salesforceinc', 'slack' on 2026-09-26: no board. Which ATS Salesforce uses has not been established. See ATS.md.",
+      "status": "TODO: DATA SOURCE"
+    },
+    {
+      "company": "GitHub",
+      "ats": "unknown — not found on the three APIs Lectern can read",
+      "tier": 1,
+      "why_watched": "GitHub Education and the Student Developer Pack are decades deep; Copilot in classrooms is the obvious AI-era extension.",
+      "blocker": "Tried 'github', 'GitHub', 'githubinc', 'github-inc' on all three on 2026-09-26: no board. See ATS.md.",
+      "status": "TODO: DATA SOURCE"
+    },
+    {
+      "company": "Google",
+      "ats": "own careers site — no public JSON feed found; the site IS human-readable and searchable",
+      "tier": 1,
+      "why_watched": "Google for Education and Classroom are the incumbent K-12 infrastructure; Gemini for Education is the AI-era extension. The largest school footprint of anyone on this list.",
+      "blocker": "Tried careers.google.com/api/v3/search, .../api/jobs/jobs-v1/search and the www.google.com/about/careers/applications equivalents on 2026-09-26: all 404. Stopped rather than guess further endpoints. Lectern cannot automate this board.",
+      "status": "TODO: DATA SOURCE — automate or keep checking by hand",
+      "manual_check": {
+        "how": "https://www.google.com/about/careers/applications/jobs/results?q=%22education%22&location=United%20States",
+        "checked": "2026-09-26, read in a browser",
+        "found": "20 education roles on the first page alone — Google for Education product managers and engineers, Head of Industry Education, Product Marketing Manager Google Classroom, TWO Brand Marketing Manager (AI Education) posts, Brand Marketing Manager (Educator Social), Senior Strategy Manager Education, plus higher-ed sales and forward-deployed engineering.",
+        "notebooklm": "A search for \"NotebookLM\" returns 6 postings, including Senior UX Researcher, LEARNING FRONTIERS, LearnX — a Google learning organisation not otherwise visible from outside.",
+        "reading": "BUILDS and SELLS are both unmistakable, and there is a dedicated AI-Education marketing function. On the demand measure Google belongs at the top of the table; it is absent only because it cannot be read."
+      }
+    },
+    {
+      "company": "Shopify",
+      "ats": "unknown — not found on the three APIs Lectern can read",
+      "tier": 2,
+      "why_watched": "Shopify Academy exists; entrepreneurship education is marketing-adjacent rather than core.",
+      "blocker": "Tried 'shopify', 'Shopify', 'shopifyinc' on all three on 2026-09-26: no board. See ATS.md.",
+      "status": "TODO: DATA SOURCE"
+    }
+  ],
+  "totals_2026_09_26": {
+    "boards_reachable": 13,
+    "postings_scanned": 2150,
+    "postings_matched": 59,
+    "note": "Canva's 248 are excluded from the scan total — its detail calls were not re-run on 2026-09-26. Five Tier 1 companies are unreachable, so the watch list is incomplete by design and says so."
+  },
+  "removed": {
+    "_comment": "Removed from the watch list on 2026-10-18 at Professor Bear's word ('we can remove Stripe and Writer for now'). The 2026-09-26 rule was to watch every company whatever it posts; this is a deliberate exception. His reason, corrected the same day: not that these companies or their products are bad or not useful, but that he does not see them as directly applicable to transformative, AI-driven improvement of education. Not a finding about either company. Their last counts are kept so the removal is visible. 2026-10-19: Replit removed at his word (\"let's remove Replit from the job search\"; \"it's not really educational AI, it's just AI\"), the same kind of deliberate exception. 2026-10-20: Vercel, Webflow, Airtable, GitLab, Twilio, Netlify, Jasper AI and Supabase removed at his word, for the same kind of reason as Replit: software products, not educational AI for institutions or universities. 2026-10-20: HubSpot removed at his word. Miro was considered the same day and kept for now: he wants to research it first.",
+    "Stripe": {
+      "slug": "stripe",
+      "provider": "greenhouse",
+      "reason": "not directly applicable to transformative, AI-driven improvement of education (not a judgment that it is not useful)",
+      "postings_2026_10_18": 731
+    },
+    "Writer": {
+      "slug": "writer",
+      "provider": "ashby",
+      "reason": "not directly applicable to transformative, AI-driven improvement of education (not a judgment that it is a bad tool; he first said he did not think writing-AI tools were good, then clarified)",
+      "postings_2026_10_18": 47
+    },
+    "Replit": {
+      "slug": "replit",
+      "provider": "ashby",
+      "reason": "not really educational AI, just AI: in Professor Bear's words, not educational software in the sense that Claude for University, NotebookLM and Claude for Life Sciences are, but more of a low-level app, and the role he read there (Learning Experiences Creator) an entry-level, low-level job. Not a finding about the company beyond that judgment.",
+      "removed_on": "2026-10-19",
+      "postings_2026_09_26": 75
+    },
+    "Vercel": {
+      "slug": "vercel",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 88
+    },
+    "Webflow": {
+      "slug": "webflow",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 27
+    },
+    "Airtable": {
+      "slug": "airtable",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 3
+    },
+    "GitLab": {
+      "slug": "gitlab",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 199
+    },
+    "Twilio": {
+      "slug": "twilio",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 138
+    },
+    "Netlify": {
+      "slug": "netlify",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 4
+    },
+    "Jasper AI": {
+      "slug": "Jasper AI",
+      "provider": "ashby",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 6
+    },
+    "Supabase": {
+      "slug": "supabase",
+      "provider": "ashby",
+      "removed_on": "2026-10-20",
+      "reason": "not really educational AI: institutional or university AI. More a software product than a true educational tool, and not a tool that could be the central part of a course unless the course is on that tool (Professor Bear's words, paraphrased only to name the company).",
+      "postings_2026_09_26": 56
+    },
+    "HubSpot": {
+      "slug": "hubspotjobs",
+      "provider": "greenhouse",
+      "removed_on": "2026-10-20",
+      "reason": "education is marketing for its own product (HubSpot Academy teaches people to use HubSpot), not educational AI for institutions or universities; not relevant to the search in his words. Its Greenhouse board had also returned 404 since 2026-10-18, so nothing was being read.",
+      "postings_2026_09_26": 133
+    }
+  }
+}

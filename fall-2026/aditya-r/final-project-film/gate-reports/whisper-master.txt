@@ -1,0 +1,40 @@
+faster-whisper small.en transcript of exports/daythread-pitch-film.mp4 (machine transcript, not a human listen)
+[  0.00-  5.60] Hi, I'm Aditya Raj. This is Day Thread, my proposed final project. You're hearing a synthesized
+[  5.60- 10.84] voice reading my script. Nothing is built yet. Day Thread would be a check-in assistant
+[ 10.84- 16.10] that remembers conversations across days and turns concerning changes into evidence a home
+[ 16.10- 21.56] care coordinator can review. Here's the main story with a fictional client. On day one they
+[ 21.56- 26.98] mention just a little tumble. The raw transcript is kept apart from any summary. Here's the
+[ 26.98- 31.54] failure that could sync it. The summary drops the tumble, so every later step relying on
+[ 31.54- 36.80] it misses it. I'll predict that, then trigger it on purpose. When the check-in ends, a separate
+[ 36.80- 41.88] check reads the original words and creates an internal review item. It could miss unfamiliar
+[ 41.88- 47.30] wording or raise false alarms, so I'll test both. On day two, the assistant asks about
+[ 47.30- 52.34] the tumble without the client repeating it, linked to the day one words. A first, minimal
+[ 52.34- 57.66] version of that two-day replay ran during my revision. A coordinator opens a simple local
+[ 57.66- 63.00] review page showing the concern it's excerpts and the proposed action, then approves, refuses
+[ 63.00- 68.38] or defers. A separate executor acts only if that approval still matches, for the course
+[ 68.38- 72.94] delivery is simulated. The assistant can read check-in history, add source-linked
+[ 72.94- 78.46] observations and create review items. It can't silently overwrite past records, change
+[ 78.46- 84.50] agency-owned information, or contact anyone. Fall detection and AI calls already exist.
+[ 84.50- 89.70] I read their documentation. Lifeline says its fall detection doesn't catch every fall,
+[ 89.70- 94.66] and Daily Call describes daily AI calls with summaries for families. I'm not claiming they
+[ 94.66- 99.62] lack anything. Daythread's proposed focus is source-linked concerns, an independent
+[ 99.62-104.62] transcript check, and a coordinator's decision meant to help a coordinator understand changes
+[104.62-110.58] without manually rebuilding several conversations. I'm aiming for roles as an AI engineer, so
+[110.58-115.30] a hiring reviewer should be able to run a labeled replay from the readme within a minute and
+[115.30-120.70] inspect the two-day memory and one approval decision. I'm designing it to demonstrate prompt
+[120.70-125.78] contracts, a budgeted loop with clear stops, permissions in code, source-linked memory,
+[125.78-131.18] and evaluation. Evaluation compares the workflow with and without memory, on held-out cases
+[131.18-136.66] set aside before tuning, plus at least five deliberate failures. These tests could demonstrate
+[136.66-141.74] a controlled prototype but wouldn't establish readiness for real care. The core is simulated
+[141.74-147.90] text check-ins, memory, evidence-linked concerns, and human review in Python and SQLite. Clinical
+[147.90-152.90] advice, real patient data, and autonomous outreach are out. Voice calls and cloud deployment
+[152.90-158.78] are extensions. I chose this because remembering yesterday is only part of the problem, knowing
+[158.78-164.14] when a person needs to see it with the evidence is the part I find interesting. For this pitch,
+[164.14-169.22] AI helped draft the material and check sources. I set requirements, required sources before any
+[169.22-174.70] comparison, and cut overstated wording. New for me, persistent memory across conversations,
+[174.70-179.66] permissions enforced in code, human approval tied to the evidence shown, and evaluation on
+[179.66-184.62] cases kept separate from development. Today there's this plan, this film, a decision log,
+[184.62-189.54] and that minimal replay run with a fictional client. I predicted a summary told to focus on
+[189.54-194.30] mood. Meals and activities would drop the tumble. In five trials, it never did, but most summaries
+[194.30-198.90] changed what she meant about her daughter. I still intend to build the repository, the review page,
+[198.90-204.26] the separate check, tests, and an evaluation report. This was Day Thread by Aditya Raj.

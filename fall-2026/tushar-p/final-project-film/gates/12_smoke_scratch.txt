@@ -1,0 +1,19 @@
+Gate 12 (smoke test), run 2 — against a scratch copy of the fixture: NOT RUN
+
+Scratch copy: <tmp>/smoke-copy
+  copied from examples/_smoke/; only change: metadata.slug "_smoke" -> "smoke"
+  (diff vs original: beat_sheet.json slug line only)
+
+Why it could not run without editing the toolkit:
+  runtime/scripts/smoke_test.sh:24-26
+    ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+    REPO="$(dirname "$ROOT")"
+    FIXTURE="$REPO/examples/_smoke"
+  The fixture path is hardcoded relative to the script's own location. The
+  script reads no argument and no environment variable for it, and
+  './art smoke' passes "$@" through but smoke_test.sh never reads it.
+  Pointing it at the scratch copy requires editing the script (or the
+  examples/ fixture), which was ruled out. No workaround was attempted.
+
+Toolkit files changed: none (git status of examples/ and runtime/ unchanged).
+Film changed: no.

@@ -1,0 +1,17 @@
+B01_Desk: errors: **0**  ·  warnings: **0**
+B02_Repo: errors: **0**  ·  warnings: **0**
+B03_Scroll: errors: **0**  ·  warnings: **0**
+B04_Search: errors: **0**  ·  warnings: **0**
+B05_Answer: errors: **0**  ·  warnings: **0**
+B06_Reader: errors: **0**  ·  warnings: **0**
+B07_Contract: errors: **0**  ·  warnings: **0**
+B08_Eval: errors: **0**  ·  warnings: **0**
+B09_Fair: errors: **0**  ·  warnings: **0**
+B10_Scope: errors: **0**  ·  warnings: **0**
+B11_First: errors: **0**  ·  warnings: **0**
+B12_Prices: errors: **0**  ·  warnings: **0**
+B13_Dates: errors: **0**  ·  warnings: **0**
+B14_Why: errors: **0**  ·  warnings: **0**
+B15_Ledger: errors: **0**  ·  warnings: **0**
+BOUT_Close: errors: **0**  ·  warnings: **1**
+- **WARN** · t≈0.93s · outside safe area: `MarinoDeskAssistant:APitch`  box=[-6.35, -0.93, 6.35, -0.17]

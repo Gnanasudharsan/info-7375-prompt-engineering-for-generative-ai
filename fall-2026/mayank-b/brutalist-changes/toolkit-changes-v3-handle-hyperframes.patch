@@ -1,0 +1,282 @@
+diff --git a/runtime/scripts/beat_plan.py b/runtime/scripts/beat_plan.py
+index 9bb14e5..4c03c4c 100644
+--- a/runtime/scripts/beat_plan.py
++++ b/runtime/scripts/beat_plan.py
+@@ -64,6 +64,11 @@ def fill_plan(beat: dict) -> dict:
+                 "prompt": _prompt_from(beat),
+                 "slot": f"media/{bid}.mp4"}
+ 
++    # 4a. a HyperFrames composition (HTML + GSAP) → hyperframes_scenes.py renders it
++    if (shot.get("hyperframes") or {}).get("composition") or typ == "HYPERFRAMES":
++        return {"method": "hyperframes", "responsible": "pipeline",
++                "prompt": None, "slot": f"media/{bid}.mp4"}
++
+     # 4. a named Manim scene, or a drawable spec → the pipeline animates it
+     if g.get("manim") or shot.get("manim") or engine == "manim" or src == "manim":
+         return {"method": "manim", "responsible": "pipeline",
+diff --git a/runtime/scripts/compile.py b/runtime/scripts/compile.py
+index 80ed0eb..959130e 100644
+--- a/runtime/scripts/compile.py
++++ b/runtime/scripts/compile.py
+@@ -175,6 +175,38 @@ def make_channel_title_png(out, text, font_path, size):
+                              fill=(*INK_RGB, 255))
+     img.save(out)
+ 
++PROFILE = Path.home() / ".config" / "brutalist" / "profile.json"
++
++def resolve_handle(meta):
++    """The author's on-screen handle, shown on every frame of every cut.
++    metadata.handle wins ("none" turns it off for one reel); then $ART_HANDLE;
++    then ~/.config/brutalist/profile.json {"handle": "@Name"}, so every video
++    an author makes carries their name without touching each beat sheet."""
++    h = meta.get("handle")
++    if h is None:
++        h = os.environ.get("ART_HANDLE", "").strip() or None
++    if h is None and PROFILE.is_file():
++        try:
++            h = json.loads(PROFILE.read_text()).get("handle")
++        except (OSError, ValueError):
++            h = None
++    h = (h or "").strip()
++    return "" if h.lower() == "none" else h
++
++def make_handle_png(out, text, font_path, size):
++    """Cream text on an ink pill: readable on cream, dark and photographic
++    beats alike (12:1 contrast), so one chip works across the whole reel."""
++    from PIL import Image, ImageDraw
++    f = _pil_font(font_path, size)
++    tw = ImageDraw.Draw(Image.new("RGBA", (4, 4))).textbbox((0, 0), text, font=f)
++    pad_x, pad_y = int(size * 0.62), int(size * 0.38)
++    img_w, img_h = tw[2] - tw[0] + pad_x * 2, tw[3] - tw[1] + pad_y * 2
++    img = Image.new("RGBA", (img_w, img_h), (0, 0, 0, 0))
++    d = ImageDraw.Draw(img)
++    d.rounded_rectangle((0, 0, img_w - 1, img_h - 1), radius=img_h // 2, fill=(*INK_RGB, 235))
++    d.text((pad_x - tw[0], pad_y - tw[1]), text, font=f, fill=(*CREAM_RGB, 255))
++    img.save(out)
++
+ # ------------------------------------------------------------- slots
+ 
+ def resolve_slot(folder, bid):
+@@ -769,6 +801,13 @@ def compile_reel(a):
+         title_png = work / "channel_title.png"
+         make_channel_title_png(title_png, channel_title, font, int(h * 0.030))
+ 
++    # --- author handle: on EVERY frame of every cut, bottom-right inside title-safe.
++    handle = resolve_handle(meta_flags)
++    handle_png = None
++    if handle and font:
++        handle_png = work / "handle.png"
++        make_handle_png(handle_png, handle, font, int(h * 0.032))
++
+     cmd = [FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", lst]
+     cmd += (["-i", str(audio)] if audio else
+             ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"])
+@@ -776,10 +815,13 @@ def compile_reel(a):
+         cmd += ["-i", str(png)]
+     if title_png:
+         cmd += ["-i", str(title_png)]
++    if handle_png:
++        # looped: a single-frame PNG stopped overlaying at the first concat boundary
++        cmd += ["-loop", "1", "-framerate", str(fps), "-i", str(handle_png)]
+ 
+     fc = []
+     n_label_inputs = 2 + len(label_pngs)   # 0=video, 1=audio, 2..=labels
+-    if label_pngs or title_png:
++    if label_pngs or title_png or handle_png:
+         prev = "0:v"
+         for i, (png, ts, dur) in enumerate(label_pngs):
+             nxt = f"v{i}"
+@@ -791,6 +833,10 @@ def compile_reel(a):
+                       f"overlay=(W-w)/2:H-h-40"
+                       f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
+             prev = "vtitle"
++        if handle_png:
++            fc.append(f"[{prev}][{n_label_inputs + (1 if title_png else 0)}:v]"
++                      f"overlay=W-w-{int(w * 0.05)}:H-h-{int(h * 0.05)}:shortest=1[vhandle]")
++            prev = "vhandle"
+         if a.review and drawtext:
+             fc.append(f"[{prev}]drawtext=fontfile={font}:text='%{{pts\\:hms}}'"
+                       f":fontcolor=white:fontsize={int(h*0.04)}:box=1"
+diff --git a/runtime/scripts/run.sh b/runtime/scripts/run.sh
+index b464858..04a7f4e 100644
+--- a/runtime/scripts/run.sh
++++ b/runtime/scripts/run.sh
+@@ -233,6 +233,10 @@ cd "$ROOT"
+ # run.sh renders Manim above; without this pass Remotion beats never rendered.
+ python3 scripts/remotion_scenes.py "$REEL_DIR"
+ 
++# ---- HyperFrames fill-in: beats with shot.hyperframes.composition -> media/<BID>.mp4
++# (skips beats already rendered; re-render with scripts/hyperframes_scenes.py --force).
++python3 scripts/hyperframes_scenes.py "$REEL_DIR" || echo "[run] HyperFrames: some beats failed, see above"
++
+ # (mascot outro stage removed in the brutalist toolkit — the outro is the
+ #  ClaudeTitleOutro Remotion beat, rendered by remotion_scenes.py above)
+ 
+diff --git a/runtime/scripts/hyperframes_scenes.py b/runtime/scripts/hyperframes_scenes.py
+new file mode 100644
+index 0000000..5bd4dfd
+--- /dev/null
++++ b/runtime/scripts/hyperframes_scenes.py
+@@ -0,0 +1,114 @@
++#!/usr/bin/env python3
++"""hyperframes_scenes.py — fill beats with HyperFrames (HTML + GSAP) compositions.
++
++A beat opts in with `shot.hyperframes.composition`: a folder (relative to the reel) holding a
++HyperFrames project (index.html with data-composition-id, assets/gsap.min.js). Each is rendered
++to `media/<BID>.mp4`, the slot compile.py already reads, and its duration is checked against the
++beat's actual_duration_s (the narration is the clock). Provenance goes to shot.hyperframes.rendered.
++
++Usage:
++  python3 scripts/hyperframes_scenes.py <REEL> [--only B04] [--force] [--quality draft|standard|high]
++
++CLI: $HYPERFRAMES_BIN, else ~/Desktop/Nate_Herk/herk-edit-kit/node_modules/.bin/hyperframes,
++else `npx hyperframes` (needs Node >= 22 and FFmpeg; `hyperframes doctor` checks both).
++"""
++import argparse, json, os, shutil, subprocess, sys
++from datetime import datetime, timezone
++from pathlib import Path
++
++KIT_BIN = Path.home() / "Desktop/Nate_Herk/herk-edit-kit/node_modules/.bin/hyperframes"
++FRAME_TOLERANCE = 2
++
++
++def hf_cmd():
++    env = os.environ.get("HYPERFRAMES_BIN", "").strip()
++    if env:
++        return [env]
++    if KIT_BIN.exists():
++        return [str(KIT_BIN)]
++    if shutil.which("hyperframes"):
++        return ["hyperframes"]
++    return ["npx", "--yes", "hyperframes"]
++
++
++def probe(path):
++    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
++                          "-of", "csv=p=0", str(path)], capture_output=True, text=True).stdout.strip()
++    return float(out) if out else 0.0
++
++
++def hf_beats(sheet):
++    return [b for b in sheet.get("beats", []) if ((b.get("shot") or {}).get("hyperframes") or {}).get("composition")]
++
++
++def main():
++    ap = argparse.ArgumentParser()
++    ap.add_argument("reel", type=Path)
++    ap.add_argument("--only")
++    ap.add_argument("--force", action="store_true")
++    ap.add_argument("--quality", default="high", choices=("draft", "standard", "high"))
++    ap.add_argument("--sheet", default="beat_sheet.json")
++    a = ap.parse_args()
++
++    reel = a.reel.resolve()
++    sheet_path = reel / a.sheet
++    sheet = json.loads(sheet_path.read_text())
++    fps = int(sheet.get("metadata", {}).get("fps", 24))
++    beats = hf_beats(sheet)
++    if a.only:
++        beats = [b for b in beats if b["beat_id"] in a.only.split(",")]
++    if not beats:
++        print("[hyperframes] no beats with shot.hyperframes.composition")
++        return 0
++
++    (reel / "media").mkdir(exist_ok=True)
++    failed, stamps = [], {}
++    for b in beats:
++        bid = b["beat_id"]
++        comp = reel / b["shot"]["hyperframes"]["composition"]
++        out = reel / "media" / f"{bid}.mp4"
++        if out.exists() and not a.force:
++            print(f"[hyperframes] {bid}: media/{bid}.mp4 exists (use --force to re-render)")
++            continue
++        if not (comp / "index.html").exists():
++            print(f"[hyperframes] {bid}: missing {comp}/index.html", file=sys.stderr)
++            failed.append(bid)
++            continue
++        lint = subprocess.run(hf_cmd() + ["lint", str(comp)], capture_output=True, text=True)
++        if lint.returncode != 0 or " 0 errors" not in lint.stdout:
++            print(f"[hyperframes] {bid}: lint failed\n{lint.stdout[-1500:]}", file=sys.stderr)
++            failed.append(bid)
++            continue
++        tmp = out.with_suffix(".tmp.mp4")
++        r = subprocess.run(hf_cmd() + ["render", str(comp), "--output", str(tmp), "--fps", str(fps),
++                                       "--quality", a.quality], capture_output=True, text=True)
++        if r.returncode != 0 or not tmp.exists():
++            print(f"[hyperframes] {bid}: render failed\n{(r.stdout + r.stderr)[-1500:]}", file=sys.stderr)
++            failed.append(bid)
++            continue
++        got, want = probe(tmp), float(b.get("actual_duration_s") or b.get("estimated_duration_s") or 0)
++        if want and abs(got - want) * fps > FRAME_TOLERANCE:
++            print(f"[hyperframes] {bid}: rendered {got:.2f}s but the narration is {want:.2f}s; "
++                  f"set data-duration to actual_duration_s", file=sys.stderr)
++            tmp.unlink()
++            failed.append(bid)
++            continue
++        os.replace(tmp, out)
++        stamps[bid] = {"out": f"media/{bid}.mp4", "seconds": round(got, 3), "quality": a.quality,
++                       "at": datetime.now(timezone.utc).isoformat()}
++        print(f"[hyperframes] {bid}: media/{bid}.mp4 {got:.2f}s")
++
++    # Re-read before writing: other renderers (remotion_scenes.py) stamp the same sheet.
++    latest = json.loads(sheet_path.read_text())
++    for lb in latest.get("beats", []):
++        if lb["beat_id"] in stamps:
++            lb["shot"]["hyperframes"]["rendered"] = stamps[lb["beat_id"]]
++    sheet_path.write_text(json.dumps(latest, indent=2, ensure_ascii=False) + "\n")
++    if failed:
++        print(f"[hyperframes] FAILED: {', '.join(failed)}", file=sys.stderr)
++        return 2
++    return 0
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/runtime/pronunciation/mayank.json b/runtime/pronunciation/mayank.json
+new file mode 100644
+index 0000000..957353c
+--- /dev/null
++++ b/runtime/pronunciation/mayank.json
+@@ -0,0 +1,42 @@
++{
++  "persona": "Mayank",
++  "voice": "am_onyx",
++  "engine": "kokoro",
++  "about": "Voice-only respellings for Mayank Bhadrasen's reels narrated with am_onyx. Narration text and captions keep the real spelling.",
++  "how_to_add": "Add an entry with a narrow regex capturing the word as (?P<w>...).",
++  "entries": [
++    {
++      "id": "mayank-name",
++      "word": "Mayank",
++      "say": "Muh-yunk",
++      "ignorecase": false,
++      "note": "Kokoro reads Mayank as May-ink; the Temperature film used the same respelling.",
++      "patterns": [
++        "\\b(?P<w>Mayank)\\b"
++      ],
++      "examples": []
++    },
++    {
++      "id": "swe-bench",
++      "word": "SWE",
++      "say": "swee",
++      "ignorecase": false,
++      "note": "SWE-bench and SWE-Search are said swee-bench, swee-search.",
++      "patterns": [
++        "\\b(?P<w>SWE)(?=-)"
++      ],
++      "examples": []
++    },
++    {
++      "id": "bhadrasen",
++      "word": "Bhadrasen",
++      "say": "Buh-druh-sen",
++      "ignorecase": false,
++      "note": "Kokoro reads Bhadrasen as Bad-ray-sun.",
++      "patterns": [
++        "\\b(?P<w>Bhadrasen)\\b"
++      ],
++      "examples": []
++    }
++  ]
++}

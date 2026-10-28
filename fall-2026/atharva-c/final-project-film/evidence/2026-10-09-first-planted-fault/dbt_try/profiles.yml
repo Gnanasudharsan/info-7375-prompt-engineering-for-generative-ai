@@ -1,0 +1,6 @@
+dbt_try:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: dbt_try.duckdb

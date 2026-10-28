@@ -1,0 +1,3119 @@
+{
+  "metadata": {
+    "slug": "daythread-pitch-film",
+    "title": "DayThread — Final Project Pitch",
+    "topic": "DAYTHREAD · PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "aditya-raj-info7375",
+    "persona": "synthesized voice (Kokoro am_onyx) reading Aditya Raj's script",
+    "author": "Aditya Raj",
+    "voice": "am_onyx",
+    "voice_kokoro": "am_onyx",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Teardown",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "burned-in disclosure + constructed-workflow captions (scene-drawn)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Assignment identity over template defaults (Aditya, 2026-10-14): drawn Manim title instead of the hesitant writer; no key-terms card, no Your Turn, no verdict card; the outro is a drawn card (DayThread · Aditya Raj · github.com/aditya-raj-sde) instead of ClaudeTitleOutro, which hardcodes @NikBearBrown + mascot. bookend_check's outro rule fails by design and is recorded in gate-reports/.",
+    "audience": "INFO 7375 instructor/TAs and engineering hiring reviewers",
+    "source_doc": "../SCRIPT.md (v4, 2026-10-25); ../SOURCES.md (S1–S4 read by Aditya 2026-10-14)",
+    "playlist": "INFO 7375 final project pitch",
+    "chapter_number": 0,
+    "tags": [
+      "DayThread",
+      "agentic AI",
+      "human-in-the-loop",
+      "INFO 7375",
+      "pitch"
+    ],
+    "build": {
+      "at": "2026-10-25T15:13:57",
+      "cut": "master",
+      "filled": 18,
+      "of": 18,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "opening",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi, I'm Aditya Raj. This is DayThread, my proposed final project. You're hearing a synthesized voice reading my script.",
+      "estimated_duration_s": 7.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "the title `DayThread`, then \"a proposed final project\" and \"Aditya Raj\". A thread draws under the title and three small pages hang from it.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the title `DayThread`, then \"a proposed final project\" and \"Aditya Raj\". A thread draws under the title and three small pages hang from it."
+          }
+        ],
+        "manim": {
+          "class": "BIDEA_Title"
+        },
+        "motion_claim": "the title `DayThread`, then \"a proposed final project\" and \"Aditya Raj\". A thread draws under the title and three small pages hang from it."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "actual_duration_s": 7.66,
+      "words": [
+        [
+          "Hi,",
+          0.0
+        ],
+        [
+          "I'm",
+          0.42
+        ],
+        [
+          "Aditya",
+          0.62
+        ],
+        [
+          "Raj.",
+          1.04
+        ],
+        [
+          "This",
+          1.62
+        ],
+        [
+          "is",
+          1.74
+        ],
+        [
+          "Daythread,",
+          1.92
+        ],
+        [
+          "my",
+          2.58
+        ],
+        [
+          "proposed",
+          2.72
+        ],
+        [
+          "final",
+          3.06
+        ],
+        [
+          "project.",
+          3.46
+        ],
+        [
+          "You're",
+          4.5
+        ],
+        [
+          "hearing",
+          4.62
+        ],
+        [
+          "a",
+          4.8
+        ],
+        [
+          "synthesized",
+          4.98
+        ],
+        [
+          "voice",
+          5.62
+        ],
+        [
+          "reading",
+          5.9
+        ],
+        [
+          "my",
+          6.26
+        ],
+        [
+          "script.",
+          6.54
+        ]
+      ],
+      "speech_s": 7.659,
+      "render_duration_s": 7.666666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BIDEA.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "what it is",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Nothing is built yet. DayThread would be a check-in assistant that remembers conversations across days, and turns concerning changes into evidence a home care coordinator can review.",
+      "estimated_duration_s": 10.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Day 1 and Day 2 check-in pages drop onto a thread. The thread runs on to a review desk. Labels: `Day 1` · `Day 2` · `coordinator`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "Day 1 and Day 2 check-in pages drop onto a thread. The thread runs on to a review desk. Labels: `Day 1` · `Day 2` · `coordinator`."
+          }
+        ],
+        "manim": {
+          "class": "B00_WhatItIs"
+        },
+        "motion_claim": "Day 1 and Day 2 check-in pages drop onto a thread. The thread runs on to a review desk. Labels: `Day 1` · `Day 2` · `coordinator`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 10.73,
+      "words": [
+        [
+          "Nothing",
+          0.0
+        ],
+        [
+          "is",
+          0.26
+        ],
+        [
+          "built",
+          0.5
+        ],
+        [
+          "yet.",
+          0.72
+        ],
+        [
+          "Day",
+          1.44
+        ],
+        [
+          "thread",
+          1.52
+        ],
+        [
+          "would",
+          1.74
+        ],
+        [
+          "be",
+          1.96
+        ],
+        [
+          "a",
+          2.1
+        ],
+        [
+          "check",
+          2.22
+        ],
+        [
+          "-in",
+          2.42
+        ],
+        [
+          "assistant",
+          2.58
+        ],
+        [
+          "that",
+          3.0
+        ],
+        [
+          "remembers",
+          3.32
+        ],
+        [
+          "conversations",
+          3.76
+        ],
+        [
+          "across",
+          4.46
+        ],
+        [
+          "days",
+          4.9
+        ],
+        [
+          "and",
+          5.3
+        ],
+        [
+          "turns",
+          5.92
+        ],
+        [
+          "concerning",
+          6.26
+        ],
+        [
+          "changes",
+          6.72
+        ],
+        [
+          "into",
+          7.22
+        ],
+        [
+          "evidence",
+          7.56
+        ],
+        [
+          "a",
+          7.98
+        ],
+        [
+          "home",
+          8.26
+        ],
+        [
+          "care",
+          8.46
+        ],
+        [
+          "coordinator",
+          8.74
+        ],
+        [
+          "can",
+          9.28
+        ],
+        [
+          "review.",
+          9.62
+        ]
+      ],
+      "speech_s": 10.731,
+      "render_duration_s": 10.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "day one",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Here's the main story, with a fictional client. On day one, they mention just a little tumble. The raw transcript is kept apart from any summary.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "the check-in page draws its handwriting lines. A terracotta dot and \"a little tumble\" land on one line. Memory drawers open, and a copy of the page slides into its own drawer. Labels: `check-in` · `\"a little tumble\"` · `raw transcript`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the check-in page draws its handwriting lines. A terracotta dot and \"a little tumble\" land on one line. Memory drawers open, and a copy of the page slides into its own drawer. Labels: `check-in` · `\"a little tumble\"` · `raw transcript`."
+          }
+        ],
+        "manim": {
+          "class": "B01_DayOne"
+        },
+        "motion_claim": "the check-in page draws its handwriting lines. A terracotta dot and \"a little tumble\" land on one line. Memory drawers open, and a copy of the page slides into its own drawer. Labels: `check-in` · `\"a little tumble\"` · `raw transcript`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 8.19,
+      "words": [
+        [
+          "Here's",
+          0.0
+        ],
+        [
+          "the",
+          0.28
+        ],
+        [
+          "main",
+          0.4
+        ],
+        [
+          "story",
+          0.58
+        ],
+        [
+          "with",
+          0.98
+        ],
+        [
+          "a",
+          1.22
+        ],
+        [
+          "fictional",
+          1.32
+        ],
+        [
+          "client.",
+          1.58
+        ],
+        [
+          "On",
+          2.4
+        ],
+        [
+          "day",
+          2.54
+        ],
+        [
+          "one",
+          2.68
+        ],
+        [
+          "they",
+          2.98
+        ],
+        [
+          "mention",
+          3.18
+        ],
+        [
+          "just",
+          3.46
+        ],
+        [
+          "a",
+          3.8
+        ],
+        [
+          "little",
+          3.94
+        ],
+        [
+          "tumble.",
+          4.1
+        ],
+        [
+          "The",
+          4.88
+        ],
+        [
+          "raw",
+          4.98
+        ],
+        [
+          "transcript",
+          5.18
+        ],
+        [
+          "is",
+          5.62
+        ],
+        [
+          "kept",
+          5.94
+        ],
+        [
+          "apart",
+          6.16
+        ],
+        [
+          "from",
+          6.58
+        ],
+        [
+          "any",
+          6.86
+        ],
+        [
+          "summary.",
+          7.02
+        ]
+      ],
+      "speech_s": 8.192,
+      "render_duration_s": 8.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "the failure that could sink it",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Here's the failure that could sink it: the summary drops the tumble, so every later step relying on it misses it. I'll predict that, then trigger it on purpose.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "a summary page arrives with a dashed empty row. Two later-step cards copy it, gap and all. Labels: `summary` · `missed` · `later steps`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "a summary page arrives with a dashed empty row. Two later-step cards copy it, gap and all. Labels: `summary` · `missed` · `later steps`."
+          }
+        ],
+        "manim": {
+          "class": "B02_Failure"
+        },
+        "motion_claim": "a summary page arrives with a dashed empty row. Two later-step cards copy it, gap and all. Labels: `summary` · `missed` · `later steps`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 8.75,
+      "words": [
+        [
+          "Here's",
+          0.0
+        ],
+        [
+          "the",
+          0.28
+        ],
+        [
+          "failure",
+          0.42
+        ],
+        [
+          "that",
+          0.68
+        ],
+        [
+          "could",
+          0.96
+        ],
+        [
+          "sync",
+          1.12
+        ],
+        [
+          "it.",
+          1.4
+        ],
+        [
+          "The",
+          1.92
+        ],
+        [
+          "summary",
+          1.96
+        ],
+        [
+          "drops",
+          2.28
+        ],
+        [
+          "the",
+          2.64
+        ],
+        [
+          "tumble,",
+          2.86
+        ],
+        [
+          "so",
+          3.34
+        ],
+        [
+          "every",
+          3.5
+        ],
+        [
+          "later",
+          3.78
+        ],
+        [
+          "step",
+          3.98
+        ],
+        [
+          "relying",
+          4.3
+        ],
+        [
+          "on",
+          4.66
+        ],
+        [
+          "it",
+          4.92
+        ],
+        [
+          "misses",
+          5.08
+        ],
+        [
+          "it.",
+          5.28
+        ],
+        [
+          "I'll",
+          6.02
+        ],
+        [
+          "predict",
+          6.2
+        ],
+        [
+          "that,",
+          6.42
+        ],
+        [
+          "then",
+          6.88
+        ],
+        [
+          "trigger",
+          6.98
+        ],
+        [
+          "it",
+          7.2
+        ],
+        [
+          "on",
+          7.42
+        ],
+        [
+          "purpose.",
+          7.56
+        ]
+      ],
+      "speech_s": 8.747,
+      "render_duration_s": 8.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "the separate check, when the check-in ends",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "When the check-in ends, a separate check reads the original words and creates an internal review item. It could miss unfamiliar wording or raise false alarms, so I'll test both.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "a terracotta scan line sweeps the ORIGINAL page and stops on the tumble line. A review item drops into the review queue. Labels: `separate check` · `review item`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "a terracotta scan line sweeps the ORIGINAL page and stops on the tumble line. A review item drops into the review queue. Labels: `separate check` · `review item`."
+          }
+        ],
+        "manim": {
+          "class": "B03_Check"
+        },
+        "motion_claim": "a terracotta scan line sweeps the ORIGINAL page and stops on the tumble line. A review item drops into the review queue. Labels: `separate check` · `review item`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 10.07,
+      "words": [
+        [
+          "When",
+          0.0
+        ],
+        [
+          "the",
+          0.14
+        ],
+        [
+          "check",
+          0.26
+        ],
+        [
+          "-in",
+          0.42
+        ],
+        [
+          "ends,",
+          0.56
+        ],
+        [
+          "a",
+          1.0
+        ],
+        [
+          "separate",
+          1.14
+        ],
+        [
+          "check",
+          1.38
+        ],
+        [
+          "reads",
+          1.64
+        ],
+        [
+          "the",
+          1.9
+        ],
+        [
+          "original",
+          2.12
+        ],
+        [
+          "words",
+          2.38
+        ],
+        [
+          "and",
+          2.76
+        ],
+        [
+          "creates",
+          3.12
+        ],
+        [
+          "an",
+          3.44
+        ],
+        [
+          "internal",
+          3.68
+        ],
+        [
+          "review",
+          4.12
+        ],
+        [
+          "item.",
+          4.46
+        ],
+        [
+          "It",
+          5.44
+        ],
+        [
+          "could",
+          5.54
+        ],
+        [
+          "miss",
+          5.66
+        ],
+        [
+          "unfamiliar",
+          5.86
+        ],
+        [
+          "wording",
+          6.38
+        ],
+        [
+          "or",
+          6.86
+        ],
+        [
+          "raise",
+          7.14
+        ],
+        [
+          "false",
+          7.4
+        ],
+        [
+          "alarms,",
+          7.68
+        ],
+        [
+          "so",
+          8.52
+        ],
+        [
+          "I'll",
+          8.62
+        ],
+        [
+          "test",
+          8.78
+        ],
+        [
+          "both.",
+          9.0
+        ]
+      ],
+      "speech_s": 10.069,
+      "render_duration_s": 10.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "day two: memory, and the first thing that runs",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "On day two, the assistant asks about the tumble without the client repeating it, linked to the day-one words. A first, minimal version of that two-day replay ran during my revision.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "the Day 2 page writes a question line; both pages carry the tumble dot, and a short ink link draws in the gap between them. A replay button appears. Labels: `Day 1` · `Day 2` · `first to run`. (v4: the link was a dot-to-dot arc; it was moved into the gap after it failed GATE T at the new clip midpoint. See FRICTIONAL.md, 2026-10-25.)",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the Day 2 page writes a question line; both pages carry the tumble dot, and a short ink link draws in the gap between them. A replay button appears. Labels: `Day 1` · `Day 2` · `first to run`. (v4: the link was a dot-to-dot arc; it was moved into the gap after it failed GATE T at the new clip midpoint. See FRICTIONAL.md, 2026-10-25.)"
+          }
+        ],
+        "manim": {
+          "class": "B04_DayTwo"
+        },
+        "motion_claim": "the Day 2 page writes a question line; both pages carry the tumble dot, and a short ink link draws in the gap between them. A replay button appears. Labels: `Day 1` · `Day 2` · `first to run`. (v4: the link was a dot-to-dot arc; it was moved into the gap after it failed GATE T at the new clip midpoint. See FRICTIONAL.md, 2026-10-25.)"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.37,
+      "audio_file": "mp3/beat-B04.mp3",
+      "speech_s": 10.368,
+      "words": [
+        [
+          "On",
+          0.0
+        ],
+        [
+          "day",
+          0.2
+        ],
+        [
+          "two,",
+          0.32
+        ],
+        [
+          "the",
+          0.82
+        ],
+        [
+          "assistant",
+          0.84
+        ],
+        [
+          "asks",
+          1.16
+        ],
+        [
+          "about",
+          1.54
+        ],
+        [
+          "the",
+          1.82
+        ],
+        [
+          "tumble",
+          1.98
+        ],
+        [
+          "without",
+          2.22
+        ],
+        [
+          "the",
+          2.54
+        ],
+        [
+          "client",
+          2.72
+        ],
+        [
+          "repeating",
+          3.0
+        ],
+        [
+          "it,",
+          3.38
+        ],
+        [
+          "linked",
+          3.92
+        ],
+        [
+          "to",
+          4.1
+        ],
+        [
+          "the",
+          4.36
+        ],
+        [
+          "day",
+          4.44
+        ],
+        [
+          "one",
+          4.58
+        ],
+        [
+          "words.",
+          4.8
+        ],
+        [
+          "A",
+          5.86
+        ],
+        [
+          "first,",
+          6.0
+        ],
+        [
+          "minimal",
+          6.62
+        ],
+        [
+          "version",
+          6.78
+        ],
+        [
+          "of",
+          7.24
+        ],
+        [
+          "that",
+          7.44
+        ],
+        [
+          "two",
+          7.6
+        ],
+        [
+          "-day",
+          7.84
+        ],
+        [
+          "replay",
+          8.0
+        ],
+        [
+          "ran",
+          8.38
+        ],
+        [
+          "during",
+          8.74
+        ],
+        [
+          "my",
+          9.04
+        ],
+        [
+          "revision.",
+          9.26
+        ]
+      ],
+      "render_duration_s": 10.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "the coordinator's gate and the executor",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A coordinator opens a simple local review page showing the concern, its excerpts, and the proposed action, then approves, refuses, or defers. A separate executor acts only if that approval still matches; for the course, delivery is simulated.",
+      "estimated_duration_s": 15.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "a local web page, drawn as an illustration, shows excerpts. Beside it are three options: approve, refuse, defer. The gate is closed (barrier down, stop light lit). The approve box gets a check, the executor's match check turns on, the barrier lifts, and the parcel passes to \"simulated\". Labels: `approve` · `refuse` · `defer` · `simulated`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "a local web page, drawn as an illustration, shows excerpts. Beside it are three options: approve, refuse, defer. The gate is closed (barrier down, stop light lit). The approve box gets a check, the executor's match check turns on, the barrier lifts, and the parcel passes to \"simulated\". Labels: `approve` · `refuse` · `defer` · `simulated`."
+          }
+        ],
+        "manim": {
+          "class": "B05_Gate"
+        },
+        "motion_claim": "a local web page, drawn as an illustration, shows excerpts. Beside it are three options: approve, refuse, defer. The gate is closed (barrier down, stop light lit). The approve box gets a check, the executor's match check turns on, the barrier lifts, and the parcel passes to \"simulated\". Labels: `approve` · `refuse` · `defer` · `simulated`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 14.34,
+      "words": [
+        [
+          "A",
+          0.0
+        ],
+        [
+          "coordinator",
+          0.14
+        ],
+        [
+          "opens",
+          0.5
+        ],
+        [
+          "a",
+          0.96
+        ],
+        [
+          "simple",
+          1.16
+        ],
+        [
+          "local",
+          1.46
+        ],
+        [
+          "review",
+          1.82
+        ],
+        [
+          "page",
+          2.12
+        ],
+        [
+          "showing",
+          2.5
+        ],
+        [
+          "the",
+          2.78
+        ],
+        [
+          "concern",
+          2.98
+        ],
+        [
+          "it's",
+          3.4
+        ],
+        [
+          "excerpts",
+          3.8
+        ],
+        [
+          "and",
+          4.14
+        ],
+        [
+          "the",
+          4.44
+        ],
+        [
+          "proposed",
+          4.54
+        ],
+        [
+          "action",
+          4.88
+        ],
+        [
+          "then",
+          5.36
+        ],
+        [
+          "approves,",
+          5.8
+        ],
+        [
+          "refuses,",
+          6.48
+        ],
+        [
+          "or",
+          7.24
+        ],
+        [
+          "defers.",
+          7.3
+        ],
+        [
+          "A",
+          8.46
+        ],
+        [
+          "separate",
+          8.62
+        ],
+        [
+          "executor",
+          8.92
+        ],
+        [
+          "acts",
+          9.44
+        ],
+        [
+          "only",
+          9.68
+        ],
+        [
+          "if",
+          10.02
+        ],
+        [
+          "that",
+          10.26
+        ],
+        [
+          "approval",
+          10.42
+        ],
+        [
+          "still",
+          10.74
+        ],
+        [
+          "matches",
+          11.1
+        ],
+        [
+          "for",
+          11.56
+        ],
+        [
+          "the",
+          11.96
+        ],
+        [
+          "course",
+          12.08
+        ],
+        [
+          "delivery",
+          12.38
+        ],
+        [
+          "is",
+          12.82
+        ],
+        [
+          "simulated.",
+          13.16
+        ]
+      ],
+      "speech_s": 14.336,
+      "render_duration_s": 14.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "permissions",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The assistant can read check-in history, add source-linked observations, and create review items. It can't silently overwrite past records, change agency-owned information, or contact anyone.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "the record binder takes new pages on top, each with a check. An overwrite attempt bounces off the binder. An envelope bounces off the closed gate. Labels: `append only` · `no outreach`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "the record binder takes new pages on top, each with a check. An overwrite attempt bounces off the binder. An envelope bounces off the closed gate. Labels: `append only` · `no outreach`."
+          }
+        ],
+        "manim": {
+          "class": "B06_Permissions"
+        },
+        "motion_claim": "the record binder takes new pages on top, each with a check. An overwrite attempt bounces off the binder. An envelope bounces off the closed gate. Labels: `append only` · `no outreach`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 11.5,
+      "words": [
+        [
+          "The",
+          0.0
+        ],
+        [
+          "assistant",
+          0.14
+        ],
+        [
+          "can",
+          0.42
+        ],
+        [
+          "read",
+          0.7
+        ],
+        [
+          "check",
+          0.9
+        ],
+        [
+          "-in",
+          1.14
+        ],
+        [
+          "history,",
+          1.3
+        ],
+        [
+          "add",
+          2.04
+        ],
+        [
+          "source",
+          2.12
+        ],
+        [
+          "-linked",
+          2.42
+        ],
+        [
+          "observations,",
+          2.66
+        ],
+        [
+          "and",
+          3.64
+        ],
+        [
+          "create",
+          3.7
+        ],
+        [
+          "review",
+          3.98
+        ],
+        [
+          "items.",
+          4.3
+        ],
+        [
+          "It",
+          5.46
+        ],
+        [
+          "can't",
+          5.58
+        ],
+        [
+          "silently",
+          5.94
+        ],
+        [
+          "overwrite",
+          6.28
+        ],
+        [
+          "past",
+          6.74
+        ],
+        [
+          "records,",
+          7.1
+        ],
+        [
+          "change",
+          7.94
+        ],
+        [
+          "agency",
+          8.22
+        ],
+        [
+          "-owned",
+          8.68
+        ],
+        [
+          "information,",
+          8.92
+        ],
+        [
+          "or",
+          9.7
+        ],
+        [
+          "contact",
+          9.86
+        ],
+        [
+          "anyone.",
+          10.3
+        ]
+      ],
+      "speech_s": 11.499,
+      "render_duration_s": 11.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "real alternatives",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Fall detection and AI calls already exist. I read their documentation: Lifeline says its fall detection doesn't catch every fall, and DailyCall describes daily AI calls with summaries for families.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "two plinths. One holds a pendant whose signal reaches a response tower. The other holds a phone and a summary page. Labels: `Lifeline` · `DailyCall`. No logos.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "two plinths. One holds a pendant whose signal reaches a response tower. The other holds a phone and a summary page. Labels: `Lifeline` · `DailyCall`. No logos."
+          }
+        ],
+        "manim": {
+          "class": "B07_Alternatives"
+        },
+        "motion_claim": "two plinths. One holds a pendant whose signal reaches a response tower. The other holds a phone and a summary page. Labels: `Lifeline` · `DailyCall`. No logos."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 12.2,
+      "words": [
+        [
+          "Fall",
+          0.0
+        ],
+        [
+          "detection",
+          0.22
+        ],
+        [
+          "and",
+          0.64
+        ],
+        [
+          "AI",
+          0.94
+        ],
+        [
+          "calls",
+          1.24
+        ],
+        [
+          "already",
+          1.58
+        ],
+        [
+          "exist.",
+          1.92
+        ],
+        [
+          "I",
+          2.9
+        ],
+        [
+          "read",
+          2.92
+        ],
+        [
+          "their",
+          3.12
+        ],
+        [
+          "documentation.",
+          3.32
+        ],
+        [
+          "Lifeline",
+          4.74
+        ],
+        [
+          "says",
+          5.12
+        ],
+        [
+          "its",
+          5.38
+        ],
+        [
+          "fall",
+          5.62
+        ],
+        [
+          "detection",
+          5.84
+        ],
+        [
+          "doesn't",
+          6.28
+        ],
+        [
+          "catch",
+          6.72
+        ],
+        [
+          "every",
+          6.94
+        ],
+        [
+          "fall,",
+          7.28
+        ],
+        [
+          "and",
+          7.98
+        ],
+        [
+          "Daily",
+          8.06
+        ],
+        [
+          "Call",
+          8.22
+        ],
+        [
+          "describes",
+          8.5
+        ],
+        [
+          "daily",
+          9.04
+        ],
+        [
+          "AI",
+          9.34
+        ],
+        [
+          "calls",
+          9.72
+        ],
+        [
+          "with",
+          10.12
+        ],
+        [
+          "summaries",
+          10.32
+        ],
+        [
+          "for",
+          10.76
+        ],
+        [
+          "families.",
+          11.02
+        ]
+      ],
+      "speech_s": 12.203,
+      "render_duration_s": 12.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "DayThread's proposed focus",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I'm not claiming they lack anything. DayThread's proposed focus is source-linked concerns, an independent transcript check, and a coordinator's decision, meant to help a coordinator understand changes without manually rebuilding several conversations.",
+      "estimated_duration_s": 12.8,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "a third plinth, `DayThread · proposed`, slides in. Three check-in pages link to one concern by a thread, and the concern goes to the gate. Labels: `Lifeline` · `DailyCall` · `DayThread · proposed`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "a third plinth, `DayThread · proposed`, slides in. Three check-in pages link to one concern by a thread, and the concern goes to the gate. Labels: `Lifeline` · `DailyCall` · `DayThread · proposed`."
+          }
+        ],
+        "manim": {
+          "class": "B08_Focus"
+        },
+        "motion_claim": "a third plinth, `DayThread · proposed`, slides in. Three check-in pages link to one concern by a thread, and the concern goes to the gate. Labels: `Lifeline` · `DailyCall` · `DayThread · proposed`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 14.02,
+      "words": [
+        [
+          "I'm",
+          0.0
+        ],
+        [
+          "not",
+          0.16
+        ],
+        [
+          "claiming",
+          0.32
+        ],
+        [
+          "they",
+          0.56
+        ],
+        [
+          "lack",
+          0.8
+        ],
+        [
+          "anything.",
+          1.02
+        ],
+        [
+          "Daythread's",
+          2.1
+        ],
+        [
+          "proposed",
+          2.48
+        ],
+        [
+          "focus",
+          2.8
+        ],
+        [
+          "is",
+          3.26
+        ],
+        [
+          "source",
+          3.54
+        ],
+        [
+          "-linked",
+          3.82
+        ],
+        [
+          "concerns,",
+          4.1
+        ],
+        [
+          "an",
+          5.1
+        ],
+        [
+          "independent",
+          5.16
+        ],
+        [
+          "transcript",
+          5.62
+        ],
+        [
+          "check,",
+          6.16
+        ],
+        [
+          "and",
+          6.82
+        ],
+        [
+          "a",
+          6.88
+        ],
+        [
+          "coordinator's",
+          7.02
+        ],
+        [
+          "decision",
+          7.66
+        ],
+        [
+          "meant",
+          8.08
+        ],
+        [
+          "to",
+          8.6
+        ],
+        [
+          "help",
+          8.74
+        ],
+        [
+          "a",
+          8.86
+        ],
+        [
+          "coordinator",
+          9.02
+        ],
+        [
+          "understand",
+          9.44
+        ],
+        [
+          "changes",
+          10.04
+        ],
+        [
+          "without",
+          10.64
+        ],
+        [
+          "manually",
+          11.06
+        ],
+        [
+          "rebuilding",
+          11.54
+        ],
+        [
+          "several",
+          12.02
+        ],
+        [
+          "conversations.",
+          12.48
+        ]
+      ],
+      "speech_s": 14.016,
+      "render_duration_s": 14.041666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "who opens it, first minute",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I'm aiming for roles as an AI engineer, so a hiring reviewer should be able to run a labelled replay from the README within a minute, and inspect the two-day memory and one approval decision.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "a README page, then a terminal replay, then the Day 1 → Day 2 link, then a stamp, with a one-minute dial sweeping. Labels: `README` · `replay` · `one minute`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "a README page, then a terminal replay, then the Day 1 → Day 2 link, then a stamp, with a one-minute dial sweeping. Labels: `README` · `replay` · `one minute`."
+          }
+        ],
+        "manim": {
+          "class": "B09_FirstMinute"
+        },
+        "motion_claim": "a README page, then a terminal replay, then the Day 1 → Day 2 link, then a stamp, with a one-minute dial sweeping. Labels: `README` · `replay` · `one minute`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 10.99,
+      "words": [
+        [
+          "I'm",
+          0.0
+        ],
+        [
+          "aiming",
+          0.24
+        ],
+        [
+          "for",
+          0.44
+        ],
+        [
+          "roles",
+          0.7
+        ],
+        [
+          "as",
+          0.96
+        ],
+        [
+          "an",
+          1.22
+        ],
+        [
+          "AI",
+          1.36
+        ],
+        [
+          "engineer,",
+          1.68
+        ],
+        [
+          "so",
+          2.44
+        ],
+        [
+          "a",
+          2.64
+        ],
+        [
+          "hiring",
+          2.78
+        ],
+        [
+          "reviewer",
+          3.14
+        ],
+        [
+          "should",
+          3.58
+        ],
+        [
+          "be",
+          3.84
+        ],
+        [
+          "able",
+          3.98
+        ],
+        [
+          "to",
+          4.12
+        ],
+        [
+          "run",
+          4.3
+        ],
+        [
+          "a",
+          4.48
+        ],
+        [
+          "labeled",
+          4.64
+        ],
+        [
+          "replay",
+          4.94
+        ],
+        [
+          "from",
+          5.4
+        ],
+        [
+          "the",
+          5.68
+        ],
+        [
+          "readme",
+          5.82
+        ],
+        [
+          "within",
+          6.22
+        ],
+        [
+          "a",
+          6.46
+        ],
+        [
+          "minute",
+          6.62
+        ],
+        [
+          "and",
+          6.82
+        ],
+        [
+          "inspect",
+          7.36
+        ],
+        [
+          "the",
+          7.7
+        ],
+        [
+          "two",
+          7.96
+        ],
+        [
+          "-day",
+          8.16
+        ],
+        [
+          "memory",
+          8.34
+        ],
+        [
+          "and",
+          8.7
+        ],
+        [
+          "one",
+          9.08
+        ],
+        [
+          "approval",
+          9.28
+        ],
+        [
+          "decision.",
+          9.64
+        ]
+      ],
+      "speech_s": 10.987,
+      "render_duration_s": 11.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "course skills",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I'm designing it to demonstrate prompt contracts, a budgeted loop with clear stops, permissions in code, source-linked memory, and evaluation.",
+      "estimated_duration_s": 8.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "a contract page, then a loop ring that drains its budget slots and stops. Labels: `contract` · `budget` · `stop`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "a contract page, then a loop ring that drains its budget slots and stops. Labels: `contract` · `budget` · `stop`."
+          }
+        ],
+        "manim": {
+          "class": "B10_Skills"
+        },
+        "motion_claim": "a contract page, then a loop ring that drains its budget slots and stops. Labels: `contract` · `budget` · `stop`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 8.21,
+      "words": [
+        [
+          "I'm",
+          0.0
+        ],
+        [
+          "designing",
+          0.22
+        ],
+        [
+          "it",
+          0.5
+        ],
+        [
+          "to",
+          0.76
+        ],
+        [
+          "demonstrate",
+          0.9
+        ],
+        [
+          "prompt",
+          1.36
+        ],
+        [
+          "contracts,",
+          1.66
+        ],
+        [
+          "a",
+          2.68
+        ],
+        [
+          "budgeted",
+          2.68
+        ],
+        [
+          "loop",
+          3.1
+        ],
+        [
+          "with",
+          3.28
+        ],
+        [
+          "clear",
+          3.52
+        ],
+        [
+          "stops,",
+          3.72
+        ],
+        [
+          "permissions",
+          4.46
+        ],
+        [
+          "in",
+          4.72
+        ],
+        [
+          "code,",
+          4.98
+        ],
+        [
+          "source",
+          5.8
+        ],
+        [
+          "-linked",
+          5.8
+        ],
+        [
+          "memory,",
+          6.08
+        ],
+        [
+          "and",
+          6.8
+        ],
+        [
+          "evaluation.",
+          6.86
+        ]
+      ],
+      "speech_s": 8.213,
+      "render_duration_s": 8.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "planned evidence",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Evaluation compares the workflow with and without memory, on held-out cases set aside before tuning, plus at least five deliberate failures. These tests could demonstrate a controlled prototype, but wouldn't establish readiness for real care.",
+      "estimated_duration_s": 14.0,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "two trays (with and without memory), a sealed vault of held-out cases, and five failure cards in a row. Labels: `with / without memory` · `held-out` · `5 failures`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "two trays (with and without memory), a sealed vault of held-out cases, and five failure cards in a row. Labels: `with / without memory` · `held-out` · `5 failures`."
+          }
+        ],
+        "manim": {
+          "class": "B11_Evidence"
+        },
+        "motion_claim": "two trays (with and without memory), a sealed vault of held-out cases, and five failure cards in a row. Labels: `with / without memory` · `held-out` · `5 failures`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 13.61,
+      "words": [
+        [
+          "Evaluation",
+          0.0
+        ],
+        [
+          "compares",
+          0.44
+        ],
+        [
+          "the",
+          1.0
+        ],
+        [
+          "workflow",
+          1.2
+        ],
+        [
+          "with",
+          1.58
+        ],
+        [
+          "and",
+          1.84
+        ],
+        [
+          "without",
+          1.98
+        ],
+        [
+          "memory",
+          2.26
+        ],
+        [
+          "on",
+          2.68
+        ],
+        [
+          "held",
+          3.1
+        ],
+        [
+          "-out",
+          3.3
+        ],
+        [
+          "cases",
+          3.5
+        ],
+        [
+          "set",
+          3.94
+        ],
+        [
+          "aside",
+          4.24
+        ],
+        [
+          "before",
+          4.54
+        ],
+        [
+          "tuning,",
+          4.82
+        ],
+        [
+          "plus",
+          5.54
+        ],
+        [
+          "at",
+          5.76
+        ],
+        [
+          "least",
+          5.92
+        ],
+        [
+          "five",
+          6.1
+        ],
+        [
+          "deliberate",
+          6.48
+        ],
+        [
+          "failures.",
+          6.88
+        ],
+        [
+          "These",
+          8.2
+        ],
+        [
+          "tests",
+          8.36
+        ],
+        [
+          "could",
+          8.66
+        ],
+        [
+          "demonstrate",
+          8.92
+        ],
+        [
+          "a",
+          9.38
+        ],
+        [
+          "controlled",
+          9.54
+        ],
+        [
+          "prototype",
+          9.92
+        ],
+        [
+          "but",
+          10.58
+        ],
+        [
+          "wouldn't",
+          10.98
+        ],
+        [
+          "establish",
+          11.2
+        ],
+        [
+          "readiness",
+          11.58
+        ],
+        [
+          "for",
+          12.08
+        ],
+        [
+          "real",
+          12.34
+        ],
+        [
+          "care.",
+          12.56
+        ]
+      ],
+      "speech_s": 13.611,
+      "render_duration_s": 13.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "scope",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The core is simulated text check-ins, memory, evidence-linked concerns, and human review, in Python and SQLite. Clinical advice, real patient data, and autonomous outreach are out; voice calls and cloud deployment are extensions.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": true,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "an open crate takes a page, a drawer and a check. Three items sit beyond a dashed line: a medical cross, a locked file, an envelope. A shelf holds a cloud and a phone. Labels: `in` · `out` · `later`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "an open crate takes a page, a drawer and a check. Three items sit beyond a dashed line: a medical cross, a locked file, an envelope. A shelf holds a cloud and a phone. Labels: `in` · `out` · `later`."
+          }
+        ],
+        "manim": {
+          "class": "B12_Scope"
+        },
+        "motion_claim": "an open crate takes a page, a drawer and a check. Three items sit beyond a dashed line: a medical cross, a locked file, an envelope. A shelf holds a cloud and a phone. Labels: `in` · `out` · `later`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 13.61,
+      "words": [
+        [
+          "The",
+          0.0
+        ],
+        [
+          "core",
+          0.12
+        ],
+        [
+          "is",
+          0.32
+        ],
+        [
+          "simulated",
+          0.44
+        ],
+        [
+          "text",
+          0.78
+        ],
+        [
+          "check",
+          1.16
+        ],
+        [
+          "-ins,",
+          1.48
+        ],
+        [
+          "memory,",
+          2.28
+        ],
+        [
+          "evidence",
+          2.56
+        ],
+        [
+          "-linked",
+          2.84
+        ],
+        [
+          "concerns,",
+          3.1
+        ],
+        [
+          "and",
+          3.88
+        ],
+        [
+          "human",
+          3.9
+        ],
+        [
+          "review",
+          4.14
+        ],
+        [
+          "in",
+          4.56
+        ],
+        [
+          "Python",
+          4.9
+        ],
+        [
+          "and",
+          5.26
+        ],
+        [
+          "SQLite.",
+          5.48
+        ],
+        [
+          "Clinical",
+          6.76
+        ],
+        [
+          "advice,",
+          6.98
+        ],
+        [
+          "real",
+          7.72
+        ],
+        [
+          "patient",
+          7.88
+        ],
+        [
+          "data,",
+          8.28
+        ],
+        [
+          "and",
+          8.82
+        ],
+        [
+          "autonomous",
+          8.88
+        ],
+        [
+          "outreach",
+          9.3
+        ],
+        [
+          "are",
+          9.76
+        ],
+        [
+          "out.",
+          9.98
+        ],
+        [
+          "Voice",
+          10.68
+        ],
+        [
+          "calls",
+          10.68
+        ],
+        [
+          "and",
+          10.98
+        ],
+        [
+          "cloud",
+          11.28
+        ],
+        [
+          "deployment",
+          11.52
+        ],
+        [
+          "are",
+          11.94
+        ],
+        [
+          "extensions.",
+          12.2
+        ]
+      ],
+      "speech_s": 13.611,
+      "render_duration_s": 13.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "why this project",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I chose this because remembering yesterday is only part of the problem; knowing when a person needs to see it, with the evidence, is the part I find interesting.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "one page becomes a thread of pages. One page lifts out and travels to the review desk. Label: `beyond one conversation`.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "one page becomes a thread of pages. One page lifts out and travels to the review desk. Label: `beyond one conversation`."
+          }
+        ],
+        "manim": {
+          "class": "B13_Why"
+        },
+        "motion_claim": "one page becomes a thread of pages. One page lifts out and travels to the review desk. Label: `beyond one conversation`."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 9.15,
+      "words": [
+        [
+          "I",
+          0.0
+        ],
+        [
+          "chose",
+          0.16
+        ],
+        [
+          "this",
+          0.38
+        ],
+        [
+          "because",
+          0.68
+        ],
+        [
+          "remembering",
+          1.0
+        ],
+        [
+          "yesterday",
+          1.5
+        ],
+        [
+          "is",
+          2.02
+        ],
+        [
+          "only",
+          2.36
+        ],
+        [
+          "part",
+          2.6
+        ],
+        [
+          "of",
+          2.88
+        ],
+        [
+          "the",
+          3.02
+        ],
+        [
+          "problem,",
+          3.14
+        ],
+        [
+          "knowing",
+          4.04
+        ],
+        [
+          "when",
+          4.24
+        ],
+        [
+          "a",
+          4.44
+        ],
+        [
+          "person",
+          4.56
+        ],
+        [
+          "needs",
+          4.82
+        ],
+        [
+          "to",
+          5.12
+        ],
+        [
+          "see",
+          5.38
+        ],
+        [
+          "it",
+          5.58
+        ],
+        [
+          "with",
+          5.74
+        ],
+        [
+          "the",
+          5.96
+        ],
+        [
+          "evidence",
+          6.12
+        ],
+        [
+          "is",
+          6.5
+        ],
+        [
+          "the",
+          6.92
+        ],
+        [
+          "part",
+          7.08
+        ],
+        [
+          "I",
+          7.26
+        ],
+        [
+          "find",
+          7.5
+        ],
+        [
+          "interesting.",
+          7.8
+        ]
+      ],
+      "speech_s": 9.152,
+      "render_duration_s": 9.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "existing versus new skills",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "For this pitch, AI helped draft the material and check sources; I set requirements, required sources before any comparison, and cut overstated wording. New for me: persistent memory across conversations, permissions enforced in code, human approval tied to the evidence shown, and evaluation on cases kept separate from development.",
+      "estimated_duration_s": 19.6,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "two shelves. `practised` holds a requirements page, a source page, and a struck line. `new` has four empty slots that fill with a drawer, a gate, a check, and a vault.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "two shelves. `practised` holds a requirements page, a source page, and a struck line. `new` has four empty slots that fill with a drawer, a gate, a check, and a vault."
+          }
+        ],
+        "manim": {
+          "class": "B14_SkillsNewOld"
+        },
+        "motion_claim": "two shelves. `practised` holds a requirements page, a source page, and a struck line. `new` has four empty slots that fill with a drawer, a gate, a check, and a vault."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 18.56,
+      "words": [
+        [
+          "For",
+          0.0
+        ],
+        [
+          "this",
+          0.12
+        ],
+        [
+          "pitch,",
+          0.3
+        ],
+        [
+          "AI",
+          0.76
+        ],
+        [
+          "helped",
+          0.82
+        ],
+        [
+          "draft",
+          1.12
+        ],
+        [
+          "the",
+          1.46
+        ],
+        [
+          "material",
+          1.64
+        ],
+        [
+          "and",
+          2.0
+        ],
+        [
+          "check",
+          2.22
+        ],
+        [
+          "sources.",
+          2.42
+        ],
+        [
+          "I",
+          3.24
+        ],
+        [
+          "set",
+          3.3
+        ],
+        [
+          "requirements,",
+          3.48
+        ],
+        [
+          "required",
+          4.32
+        ],
+        [
+          "sources",
+          4.62
+        ],
+        [
+          "before",
+          5.14
+        ],
+        [
+          "any",
+          5.44
+        ],
+        [
+          "comparison,",
+          5.64
+        ],
+        [
+          "and",
+          6.36
+        ],
+        [
+          "cut",
+          6.48
+        ],
+        [
+          "overstated",
+          6.64
+        ],
+        [
+          "wording.",
+          7.18
+        ],
+        [
+          "New",
+          8.4
+        ],
+        [
+          "for",
+          8.64
+        ],
+        [
+          "me,",
+          8.8
+        ],
+        [
+          "persistent",
+          9.16
+        ],
+        [
+          "memory",
+          9.42
+        ],
+        [
+          "across",
+          9.92
+        ],
+        [
+          "conversations,",
+          10.24
+        ],
+        [
+          "permissions",
+          11.38
+        ],
+        [
+          "enforced",
+          11.64
+        ],
+        [
+          "in",
+          12.16
+        ],
+        [
+          "code,",
+          12.4
+        ],
+        [
+          "human",
+          12.98
+        ],
+        [
+          "approval",
+          13.16
+        ],
+        [
+          "tied",
+          13.52
+        ],
+        [
+          "to",
+          13.84
+        ],
+        [
+          "the",
+          14.04
+        ],
+        [
+          "evidence",
+          14.14
+        ],
+        [
+          "shown,",
+          14.44
+        ],
+        [
+          "and",
+          15.14
+        ],
+        [
+          "evaluation",
+          15.26
+        ],
+        [
+          "on",
+          15.6
+        ],
+        [
+          "cases",
+          16.02
+        ],
+        [
+          "kept",
+          16.4
+        ],
+        [
+          "separate",
+          16.76
+        ],
+        [
+          "from",
+          17.16
+        ],
+        [
+          "development.",
+          17.38
+        ]
+      ],
+      "speech_s": 18.56,
+      "render_duration_s": 18.583333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "what exists today vs. what I intend to build",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Today there's this plan, this film, a decision log, and that minimal replay, run with a fictional client. I predicted a summary told to focus on mood, meals and activities would drop the tumble; in five trials it never did, but most summaries changed what she meant about her daughter. I still intend to build the repository, the review page, the separate check, tests, and an evaluation report.",
+      "estimated_duration_s": 27.2,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "two plinths. `today` holds four solid pages (plan, film, log, and the replay page with the tumble dot), then the label `prediction: wrong`. `to build` holds five dashed ghost outlines (repository, review page, separate check, tests, evaluation). Bottom caption: *Replay run 2026-10-25 · synthetic data · fictional client*.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "two plinths. `today` holds four solid pages (plan, film, log, and the replay page with the tumble dot), then the label `prediction: wrong`. `to build` holds five dashed ghost outlines (repository, review page, separate check, tests, evaluation). Bottom caption: *Replay run 2026-10-25 · synthetic data · fictional client*."
+          }
+        ],
+        "manim": {
+          "class": "B15_TodayVsBuild"
+        },
+        "motion_claim": "two plinths. `today` holds four solid pages (plan, film, log, and the replay page with the tumble dot), then the label `prediction: wrong`. `to build` holds five dashed ghost outlines (repository, review page, separate check, tests, evaluation). Bottom caption: *Replay run 2026-10-25 · synthetic data · fictional client*."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 20.14,
+      "audio_file": "mp3/beat-B15.mp3",
+      "speech_s": 20.139,
+      "words": [
+        [
+          "Today",
+          0.0
+        ],
+        [
+          "there's",
+          0.22
+        ],
+        [
+          "this",
+          0.54
+        ],
+        [
+          "plan,",
+          0.7
+        ],
+        [
+          "this",
+          1.18
+        ],
+        [
+          "film,",
+          1.3
+        ],
+        [
+          "a",
+          1.76
+        ],
+        [
+          "decision",
+          1.82
+        ],
+        [
+          "log,",
+          2.08
+        ],
+        [
+          "and",
+          2.6
+        ],
+        [
+          "that",
+          2.64
+        ],
+        [
+          "minimal",
+          2.78
+        ],
+        [
+          "replay",
+          3.06
+        ],
+        [
+          "run",
+          3.58
+        ],
+        [
+          "with",
+          3.94
+        ],
+        [
+          "a",
+          4.12
+        ],
+        [
+          "fictional",
+          4.24
+        ],
+        [
+          "client.",
+          4.48
+        ],
+        [
+          "I",
+          5.6
+        ],
+        [
+          "predicted",
+          5.72
+        ],
+        [
+          "a",
+          5.98
+        ],
+        [
+          "summary",
+          6.22
+        ],
+        [
+          "told",
+          6.5
+        ],
+        [
+          "to",
+          6.7
+        ],
+        [
+          "focus",
+          6.86
+        ],
+        [
+          "on",
+          7.08
+        ],
+        [
+          "mood,",
+          7.34
+        ],
+        [
+          "meals",
+          7.8
+        ],
+        [
+          "and",
+          7.96
+        ],
+        [
+          "activities",
+          8.2
+        ],
+        [
+          "would",
+          8.64
+        ],
+        [
+          "drop",
+          8.9
+        ],
+        [
+          "the",
+          9.1
+        ],
+        [
+          "tumble.",
+          9.26
+        ],
+        [
+          "In",
+          9.84
+        ],
+        [
+          "five",
+          9.96
+        ],
+        [
+          "trials",
+          10.22
+        ],
+        [
+          "it",
+          10.64
+        ],
+        [
+          "never",
+          10.8
+        ],
+        [
+          "did,",
+          10.98
+        ],
+        [
+          "but",
+          11.38
+        ],
+        [
+          "most",
+          11.5
+        ],
+        [
+          "summaries",
+          11.66
+        ],
+        [
+          "changed",
+          12.06
+        ],
+        [
+          "what",
+          12.42
+        ],
+        [
+          "she",
+          12.66
+        ],
+        [
+          "meant",
+          12.8
+        ],
+        [
+          "about",
+          12.94
+        ],
+        [
+          "her",
+          13.2
+        ],
+        [
+          "daughter.",
+          13.36
+        ],
+        [
+          "I",
+          14.12
+        ],
+        [
+          "still",
+          14.28
+        ],
+        [
+          "intend",
+          14.5
+        ],
+        [
+          "to",
+          14.74
+        ],
+        [
+          "build",
+          14.96
+        ],
+        [
+          "the",
+          15.12
+        ],
+        [
+          "repository,",
+          15.26
+        ],
+        [
+          "the",
+          16.14
+        ],
+        [
+          "review",
+          16.2
+        ],
+        [
+          "page,",
+          16.42
+        ],
+        [
+          "the",
+          17.0
+        ],
+        [
+          "separate",
+          17.08
+        ],
+        [
+          "check,",
+          17.36
+        ],
+        [
+          "tests,",
+          17.9
+        ],
+        [
+          "and",
+          18.38
+        ],
+        [
+          "an",
+          18.44
+        ],
+        [
+          "evaluation",
+          18.52
+        ],
+        [
+          "report.",
+          18.96
+        ]
+      ],
+      "render_duration_s": 20.166666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "This was DayThread, by Aditya Raj.",
+      "estimated_duration_s": 2.4,
+      "voice": "am_onyx",
+      "engine": "kokoro",
+      "constructed_caption": false,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "`DayThread`, `Aditya Raj`, `github.com/aditya-raj-sde`, and the thread, then a 1.0 s silent hold. No mascot, no channel handle.",
+        "show": [
+          {
+            "at": 0.1,
+            "event": "`DayThread`, `Aditya Raj`, `github.com/aditya-raj-sde`, and the thread, then a 1.0 s silent hold. No mascot, no channel handle."
+          }
+        ],
+        "manim": {
+          "class": "BOUT_Outro"
+        },
+        "motion_claim": "`DayThread`, `Aditya Raj`, `github.com/aditya-raj-sde`, and the thread, then a 1.0 s silent hold. No mascot, no channel handle."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 3.79,
+      "words": [
+        [
+          "This",
+          0.0
+        ],
+        [
+          "was",
+          0.18
+        ],
+        [
+          "Day",
+          0.34
+        ],
+        [
+          "Thread",
+          0.6
+        ],
+        [
+          "by",
+          0.92
+        ],
+        [
+          "addediraj.",
+          1.22
+        ]
+      ],
+      "speech_s": 2.795,
+      "render_duration_s": 3.7916666666666665,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T15:13:57"
+      }
+    }
+  ]
+}

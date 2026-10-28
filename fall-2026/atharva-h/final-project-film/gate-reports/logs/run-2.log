@@ -1,0 +1,68 @@
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B03_ThePipeline clean
+[gateW] B04_Alternatives clean
+[gateW] B05_FirstMinute clean
+[gateW] B06_FourSkills clean
+[gateW] B07_InOutFirst clean
+[gateW] B08_NameVariants clean
+[gateW] B09_HaveAndNew clean
+[gateW] B10_TodayAndWill clean
+[gateW] B12_Outro clean
+Manim Community v0.18.1
+
+
+                             72593_223132457.mp4'                               
+                             19435_3694374656.mp4'                              
+
+                             21245_3521471467.mp4'                              
+                             0067_3481580719.mp4'                               
+
+                             56965_25937272.mp4'                                
+
+                             98546_1975643335.mp4'                              
+                             17054_4152948211.mp4'                              
+
+                             56173_3297178826.mp4'                              
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             Played 8 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+
+
+
+[audit] scenes: 22 snapshots → 1 error(s), 2 warning(s)

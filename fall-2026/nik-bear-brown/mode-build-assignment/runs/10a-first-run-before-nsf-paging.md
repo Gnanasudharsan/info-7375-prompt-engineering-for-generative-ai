@@ -1,0 +1,45 @@
+# Funded-research award check
+
+## Executive summary
+
+This report asks two public federal award databases which of 6 Boston-area institutions hold active research money on the topic "single cell". It exists because a lab's own web page never says whether the lab can pay anyone; the money is on record elsewhere. For work starting 2027-01-01, it found 409 awards, of which 221 are research-project awards still running at least 6 months into the window. A zero for an institution means either no money or a misspelled name; the table says which. This is a list of funded projects, not of labs that want a collaborator: whose project each one is, and whether they would talk, is the next, human step.
+
+## What the numbers mean
+
+- NIH amounts are one fiscal year's award; NSF amounts are an estimated total over the whole award. They are never added together.
+- *Trainee-only* awards (fellowships, career and training grants) pay one named person's training; they are not a source of pay for anyone else.
+- No person's name is in this report. Looking up who holds an award is a separate, local step.
+
+## By institution
+
+| Institution | Name matched in NIH | Awards found | Research awards running into the window | Trainee-only | Ended or ending too soon | NIH annual $ of the passing awards |
+|---|---|---|---|---|---|---|
+| NORTHEASTERN UNIVERSITY | yes | 16 | 14 | 1 | 1 | 6,991,910 |
+| BROAD INSTITUTE, INC. | yes | 41 | 29 | 5 | 6 | 36,462,770 |
+| WHITEHEAD INSTITUTE FOR BIOMEDICAL RES | yes | 10 | 4 | 4 | 2 | 2,187,900 |
+| MASSACHUSETTS INSTITUTE OF TECHNOLOGY | yes | 52 | 35 | 5 | 9 | 32,148,097 |
+| HARVARD MEDICAL SCHOOL | yes | 99 | 54 | 29 | 15 | 28,115,387 |
+| BOSTON CHILDREN'S HOSPITAL | yes | 127 | 85 | 24 | 22 | 68,334,896 |
+
+## Provenance
+
+- nih_reporter · NORTHEASTERN UNIVERSITY · (control, no topic) · reported total 103 · fetched 
+- nih_reporter · NORTHEASTERN UNIVERSITY · single cell · reported total 16 · fetched 16
+- nsf_award_search · NORTHEASTERN UNIVERSITY · single cell · reported total  · fetched 25
+- nih_reporter · BROAD INSTITUTE, INC. · (control, no topic) · reported total 113 · fetched 
+- nih_reporter · BROAD INSTITUTE, INC. · single cell · reported total 41 · fetched 41
+- nsf_award_search · BROAD INSTITUTE, INC. · single cell · reported total  · fetched 25
+- nih_reporter · WHITEHEAD INSTITUTE FOR BIOMEDICAL RES · (control, no topic) · reported total 20 · fetched 
+- nih_reporter · WHITEHEAD INSTITUTE FOR BIOMEDICAL RES · single cell · reported total 10 · fetched 10
+- nsf_award_search · WHITEHEAD INSTITUTE FOR BIOMEDICAL RES · single cell · reported total  · fetched 20
+- nih_reporter · MASSACHUSETTS INSTITUTE OF TECHNOLOGY · (control, no topic) · reported total 211 · fetched 
+- nih_reporter · MASSACHUSETTS INSTITUTE OF TECHNOLOGY · single cell · reported total 54 · fetched 54
+- nsf_award_search · MASSACHUSETTS INSTITUTE OF TECHNOLOGY · single cell · reported total  · fetched 25
+- nih_reporter · HARVARD MEDICAL SCHOOL · (control, no topic) · reported total 308 · fetched 
+- nih_reporter · HARVARD MEDICAL SCHOOL · single cell · reported total 99 · fetched 99
+- nsf_award_search · HARVARD MEDICAL SCHOOL · single cell · reported total  · fetched 5
+- nih_reporter · BOSTON CHILDREN'S HOSPITAL · (control, no topic) · reported total 451 · fetched 
+- nih_reporter · BOSTON CHILDREN'S HOSPITAL · single cell · reported total 130 · fetched 130
+- nsf_award_search · BOSTON CHILDREN'S HOSPITAL · single cell · reported total  · fetched 3
+
+Retrieved 2026-10-19T19:12:32+00:00. Window start 2027-01-01; minimum months left 6.

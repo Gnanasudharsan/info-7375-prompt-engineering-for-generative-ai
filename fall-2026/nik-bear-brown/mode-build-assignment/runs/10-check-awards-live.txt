@@ -1,0 +1,3 @@
+$ python3 scripts/funding/check-awards.py --orgs "NORTHEASTERN UNIVERSITY" "BROAD INSTITUTE, INC." "WHITEHEAD INSTITUTE FOR BIOMEDICAL RES" "MASSACHUSETTS INSTITUTE OF TECHNOLOGY" "HARVARD MEDICAL SCHOOL" "BOSTON CHILDREN'S HOSPITAL" --terms "single cell" --fy 2026 --window-start 2027-01-01 --redact-ids --with-pi --private-file private/awards-with-names.json --out-json runs/awards-2026-10-19.json --out-md runs/awards-2026-10-19.md
+found 349 awards; 223 research-project awards running into the window; wrote runs/awards-2026-10-19.json and runs/awards-2026-10-19.md
+exit 0

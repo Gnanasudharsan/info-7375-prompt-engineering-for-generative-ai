@@ -2,6 +2,14 @@
 
 This folder is the instructor's public example work for INFO 7375, Fall 2026. It keeps the same process record students keep. **Every substantive change here is logged in `FRICTIONAL.md`, and every push adds a line to it.** The repo-root `AGENTS.md` still governs everything else.
 
+## Rule 0 — this folder is NOT the master
+
+The job-search tool here is live-coded in three classes at once, and the canonical copy is in **`info-7375-computational-skepticism-for-ai/fall-2026/nik-bear-brown/`**. Read [`SYNC.md`](SYNC.md) first.
+
+- `collect.py`, `sources.json`, `keywords.json`, `ATS.md`, `facts/professor-bear-cv.json`, `figma/`, and `greenhouse-watch-demo/` are **copies**. Edit them in the master and run its `./lectern/sync.sh`.
+- `FRICTIONAL.md`, `README.md`, `CLAUDE.md`, the `assignment-*/` folders, and the dated run outputs belong to this class alone and are never copied in either direction.
+- If a shared file was edited here anyway, do not copy it back blindly — follow the recovery steps in `SYNC.md`, and log the drift.
+
 ## Rule 1 — log every substantive change in FRICTIONAL.md
 
 Before you report a task in this folder as done, update `FRICTIONAL.md` in the same change set.

@@ -1,0 +1,4 @@
+$ python3 runtime/qc/factcheck_check.py <reel>
+[factcheck] clean — every row resolved, every claim-bearing beat covered
+[factcheck] rows=41 beats_covered=8 claim_bearing_beats=5 uncovered=0
+[exit 0]

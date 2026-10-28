@@ -1,0 +1,8 @@
+Mutation: _condition() ignores the relation word and the anchor (before/after/within, travel/purchase).
+FAILED tests/test_checker.py::test_air_canada_shape_holds - AssertionError: a...
+FAILED tests/test_checker.py::test_within_90_days_vs_90_days_after_holds - As...
+FAILED tests/test_checker.py::test_within_24h_of_booking_vs_24h_before_departure_holds
+FAILED tests/test_checker.py::test_every_case_matches_its_label[air_canada_shape]
+FAILED tests/test_checker.py::test_every_case_matches_its_label[booking_vs_departure]
+FAILED tests/test_checker.py::test_every_case_matches_its_label[within_vs_after]
+6 failed, 9 passed in 0.03s

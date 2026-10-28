@@ -1,0 +1,32 @@
+[run] skip B01_Trays — B01 already filled
+[run] skip B02_Funnel — B02 already filled
+[run] skip B03_Blanks — B03 already filled
+[run] skip B04_TwoSearches — B04 already filled
+[run] skip B05_Network — B05 already filled
+[run] skip B06_Shortlist — B06 already filled
+[run] skip B07_Magnifier — B07 already filled
+[run] skip B08_Shelves — B08 already filled
+[run] skip B09_Gate — B09 already filled
+[run] skip B10_Balance — B10 already filled
+[run] skip B11_Piles — B11 already filled
+[run] nothing to render — recompiling only
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[remotion] BIDEA: filled already (skip)
+[remotion] BDEFS: filled already (skip)
+[remotion] BOUT: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] motion histogram: graphic:11  remotion:3
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'StudentTitleOutro' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (14/14 filled)
+[art] QC contact sheet → C:\Users\zyud0\brutalist-film\youtube\is-funded-sponsor-triage-pitch\qc-sheet.png
+[art] wrote C:\Users\zyud0\brutalist-film\youtube\is-funded-sponsor-triage-pitch\is-funded-sponsor-triage-pitch-slate.mp4  (225.5s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 14/14 filled — BIDEA:VIDEO BDEFS:VIDEO B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM BOUT:VIDEO
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=28 BLOCKER=0 MAJOR=0 → C:/Users/zyud0/brutalist-film/youtube/is-funded-sponsor-triage-pitch\_qc\REPORT.md
+[run] done → /c/Users/zyud0/brutalist-film/youtube/is-funded-sponsor-triage-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see /c/Users/zyud0/brutalist-film/youtube/is-funded-sponsor-triage-pitch/SHOTLIST.md

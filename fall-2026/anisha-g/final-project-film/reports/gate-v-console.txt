@@ -1,0 +1,3 @@
+[gate-v] frames=20 BLOCKER=0 MAJOR=0 → ./_qc/REPORT.md
+Toolkit commit: 6a8380a
+Run on: 2026-10-21 16:13

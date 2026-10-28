@@ -1,0 +1,23 @@
+# Licence check, run 2026-10-11T18:45:46Z via api.github.com (license.spdx_id field)
+hashicorp/terraform	NOASSERTION
+hashicorp/terraform-provider-aws	MPL-2.0
+hashicorp/web-unified-docs	NOASSERTION
+opentofu/opentofu	MPL-2.0
+
+# hashicorp/terraform LICENSE, first 8 lines (main branch)
+License text copyright (c) 2020 MariaDB Corporation Ab, All Rights Reserved.
+"Business Source License" is a trademark of MariaDB Corporation Ab.
+
+Parameters
+
+Licensor:             International Business Machines Corporation (IBM)
+Licensed Work:        Terraform Version 1.6.0 or later. The Licensed Work is (c) 2024
+                      IBM Corp.
+
+# hashicorp/terraform-provider-aws LICENSE at f4a1d213000a2032755ac7f05bbfd46f8b909255, first 3 lines
+Copyright IBM Corp. 2014, 2026
+
+Mozilla Public License Version 2.0
+
+# terraform-provider-aws latest release
+v6.68.0 2026-10-07T20:10:19Z

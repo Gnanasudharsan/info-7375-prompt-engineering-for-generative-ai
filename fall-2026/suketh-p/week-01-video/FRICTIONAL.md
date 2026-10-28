@@ -43,8 +43,8 @@ describes a step of the build session, **not** something I personally did, belie
 checked. The **What this showed** paragraphs are observations about the work, not claims
 about my understanding. What I personally attempted, checked, decided and understood
 appears **only** in the `[MINE]` sections. There, the dated record of my own actions was
-compiled by Claude from my messages; the reflection is mine to write, and the assistant
-does not write it. Nothing in this file claims an approval, a test result, or an understanding that did
+compiled by Claude from my messages, and the reflection is my own answers, placed with the
+wording unchanged; the assistant does not write it. Nothing in this file claims an approval, a test result, or an understanding that did
 not occur.
 
 ---
@@ -692,19 +692,52 @@ reflection, and not a claim about anything I did outside the sessions.
 | 2026-09-24 11:26 | Asked for a list of every refinement made since the start — now `REFINEMENTS.md` |
 | 2026-09-24 17:13 | Sent the instructor's push-permission announcements and asked for a deeper look at whether the assignment had been done and submitted right. That request found the errors in `SOURCES.md` §5.16–§5.20 |
 | 2026-09-24 18:00 | Had the stale pre-fix copies deleted and the corrected version posted to git, and asked for the final Canvas submission |
+| 2026-09-25 13:56 | Watched the cut and answered four reflection questions — below, as I wrote them. Answer 1 asked for the B06 change that became `REVIEW.md` Round 10 |
 
-### Still to be written by me — not yet done
+### My reflection — my own answers, 2026-09-25
 
-The rest is reflection, and the course AI policy is explicit that the assistant must not
-invent it: *"do not ask AI to invent your struggle or understanding."* **None of it has
-been written yet.** As posted, this log contains no account of my own understanding:
+On 2026-09-25 at 13:56 EDT I answered four questions Claude sent me. The answers below
+are **as I wrote them**. Claude only converted the math notation to GitHub's `$…$` syntax
+and placed them here. Answer 1 is also my review request: it is logged in
+[`REVIEW.md`](REVIEW.md), and Claude re-rendered B06 to carry it out (Round 10).
 
-- **What I personally re-ran or checked**, as opposed to what Claude ran in the session
-  (`SOURCES.md` §4 has the matching checklist, also still empty).
-- **The change I would request after watching the cut with sound**, with its timestamp —
-  the timestamped version goes in [`REVIEW.md`](REVIEW.md).
-- **My unaided explanation of why the cancellation is exact but the floats still differ.**
-- **What changed in my understanding, in my own words** — not a paraphrase of the "What
-  this showed" notes above, which are Claude's.
-- **What I still cannot defend.** Claude wrote the Remotion components and every evidence
-  script (`SOURCES.md` §4). Which parts can I explain to a TA without notes?
+#### 1. Did you watch the video? One thing you'd change.
+
+Yes. One thing I would change is the floating-point comparison around 1:46–2:05. The video shows both full-precision probability vectors and then the 1.1102230246251565e-16 difference, but the important change is buried in the last digit of two long numbers. I would hold that frame slightly longer and isolate only the two differing digits, with a small “1 ULP apart” marker between them. The narration explains the idea correctly, but making that last-place difference visually obvious would make the distinction between algebraic equality and floating-point equality land faster.
+
+#### 2. In your words: why does subtracting the max change nothing in algebra, yet the last digit still differs?
+
+Subtracting the max does not change the softmax probability because it introduces the same multiplicative factor everywhere. If I subtract $m$ from every score, then
+
+$$
+e^{(z_i-m)/T}=e^{-m/T}e^{z_i/T}.
+$$
+
+That $e^{-m/T}$ appears in both the numerator and every term of the denominator, so it cancels exactly. In real-number algebra, the shifted and unshifted formulas are therefore identical.
+
+The computer is doing something slightly different. Python uses finite binary64 floating-point numbers, not exact real numbers. The direct path and shifted path exponentiate different values, create different intermediate approximations, sum them, and round at different stages. Those rounding paths eventually land on adjacent representable floats. In the video, the maximum difference is only 1.1102230246251565e-16, or $2^{-53}$. So the mathematics did not change; the representation and rounding path did. That is why the formulas are exactly equal algebraically while two returned values can still disagree in their final digit.
+
+#### 3. One thing you learned or that surprised you.
+
+What surprised me most was that subtracting the max only protects one side of the numeric range. I initially associated the trick with making softmax generally “stable,” but the [0, -800] example makes that wording too broad. After shifting, the largest exponent becomes exp(0) = 1, so overflow at the large end disappears. But exp(-800) is so small that binary64 rounds it all the way to 0.0, even though the mathematical probability is still nonzero, around $10^{-348}$.
+
+The part that made this concrete for me was that the cutoff is not an arbitrary experimental value. It comes from approximately
+
+$$
+-1075\ln(2)=-745.133219102.
+$$
+
+That is why -745 can still produce the smallest subnormal value while -746 becomes a hard zero. It changed how I think about the claim: overflow-safe is something the code demonstrates; numerically stable is a much stronger statement.
+
+#### 4. One part you couldn't yet explain to a TA.
+
+I could explain the overflow argument, the common-factor cancellation, and why [0, -800] underflows. The part I could not yet defend to a TA without working it out on paper is the exact IEEE-754 boundary at $-1075\ln 2$, especially why the derivation uses 1075 rather than 1074.
+
+I understand the outline: binary64's smallest positive subnormal is $2^{-1074}$, and round-to-nearest introduces the halfway threshold $2^{-1075}$. Taking the natural log gives the cutoff where exp(z) starts rounding to zero. But I would want to re-derive the subnormal spacing and rounding behavior carefully before trying to explain the boundary conditions or tie case from memory. That is the part I understand conceptually but cannot yet teach cleanly without notes.
+
+### Still open
+
+- **What I personally re-ran or checked.** I watched the cut (answer 1). No script re-runs
+  are claimed; every check in `SOURCES.md` §4 was run by Claude.
+- **`REVIEW.md`'s three teaching questions** — does the narration get ahead of the screen,
+  is B03 legible at a glance, could a classmate state both halves — are not answered yet.

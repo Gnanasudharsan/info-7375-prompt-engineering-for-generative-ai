@@ -1,0 +1,2 @@
+[frame-check] show-tell-reallocation-recipe-pitch  canvas=3840×2160  beats=21
+[frame-check] PASS — 21 beats checked, no violations.

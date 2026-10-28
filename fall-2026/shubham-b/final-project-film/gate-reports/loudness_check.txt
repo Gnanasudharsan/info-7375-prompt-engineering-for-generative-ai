@@ -1,0 +1,4 @@
+$ python3 runtime/scripts/loudness_check.py ../final-project-film --mp4 ../final-project-film/final/marino-desk-assistant-pitch.mp4
+[loud] checking 16 beats for per-beat silence …
+[loud] PASS  -24.00 LUFS  tp=-5.10 dBTP
+exit=0

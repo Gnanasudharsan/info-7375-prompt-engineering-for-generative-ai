@@ -1,0 +1,19 @@
+# Submit only the deliverables; everything else is Brutalist build output or cache.
+/*
+!/.gitignore
+!/README.md
+!/PROJECT-BRIEF.md
+!/BUILD-PROMPT.md
+!/SOURCES.md
+!/FRICTIONAL.md
+!/FACTCHECK.md
+!/SHOTLIST.md
+!/PROMPTS.md
+!/beat_sheet.json
+!/make_sheet.py
+!/scenes.py
+!/evidence/
+!/gate-reports/
+!/final/
+/final/*
+!/final/varnika-final-project-pitch.mp4

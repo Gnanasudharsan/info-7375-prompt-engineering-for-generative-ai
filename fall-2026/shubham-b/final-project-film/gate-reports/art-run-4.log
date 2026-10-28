@@ -1,0 +1,58 @@
+[run] skip B03_Scroll — B03 already filled
+[run] skip B04_Search — B04 already filled
+[run] skip B06_Reader — B06 already filled
+[run] skip B07_Contract — B07 already filled
+[run] skip B08_Eval — B08 already filled
+[run] skip B10_Scope — B10 already filled
+[run] skip B11_First — B11 already filled
+[run] skip B15_Ledger — B15 already filled
+[run] skip BOUT_Close — BOUT already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B01_Desk clean
+[gateW] B02_Repo clean
+[gateW] B05_Answer clean
+[gateW] B09_Fair clean
+[gateW] B12_Prices clean
+[gateW] B13_Dates clean
+[gateW] B14_Why clean
+[run] rendering B01_Desk
+
+[audit] report: <reel>/layout_audit.md
+[run] rendering B02_Repo
+
+[audit] report: <reel>/layout_audit.md
+[run] rendering B05_Answer
+
+[audit] report: <reel>/layout_audit.md
+[run] rendering B09_Fair
+
+[audit] report: <reel>/layout_audit.md
+[run] rendering B12_Prices
+
+[audit] report: <reel>/layout_audit.md
+[run] rendering B13_Dates
+
+[audit] scenes: 30 snapshots → 1 error(s), 0 warning(s)
+[audit] report: <reel>/layout_audit.md
+[run] GATE B FAILED: B13_Dates has layout errors — mp4 NOT slotted.
+[run] see <reel>/layout_audit.md and the annotated PNGs beside it.
+exit=2

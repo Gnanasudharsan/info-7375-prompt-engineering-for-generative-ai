@@ -1,0 +1,79 @@
+[run] skip B00_LogPage — B00 already filled
+[run] skip B01_LensCites — B01 already filled
+[run] skip B02_NotEnough — B02 already filled
+[run] skip B03_BreakService — B03 already filled
+[run] skip B04_Contract — B04 already filled
+[run] skip B05_Checker — B05 already filled
+[run] skip B06_ClosedBox — B06 already filled
+[run] skip B07_OpenCrate — B07 already filled
+[run] skip B08_Readme — B08 already filled
+[run] skip B09_ThreePanels — B09 already filled
+[run] skip B11_NeverActs — B11 already filled
+[run] skip B12_FirstRun — B12 already filled
+[run] skip B13_TooEasy — B13 already filled
+[run] skip B14_HardCases — B14 already filled
+[run] skip B15_TwoPiles — B15 already filled
+[run] skip B16_ExistsVsWill — B16 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B10_TestNotTrust clean
+[run] rendering B10_TestNotTrust
+Manim Community v0.18.1
+
+Animation 0: FadeIn(Polygon), etc.:   0%|          | 0/27 [00:00<?, ?it/s]Animation 0: FadeIn(Polygon), etc.:  11%|█         | 3/27 [00:00<00:00, 24.19it/s]Animation 0: FadeIn(Polygon), etc.:  26%|██▌       | 7/27 [00:00<00:00, 29.05it/s]Animation 0: FadeIn(Polygon), etc.:  37%|███▋      | 10/27 [00:00<00:00, 29.41it/s]Animation 0: FadeIn(Polygon), etc.:  52%|█████▏    | 14/27 [00:00<00:00, 32.54it/s]Animation 0: FadeIn(Polygon), etc.:  67%|██████▋   | 18/27 [00:00<00:00, 34.91it/s]Animation 0: FadeIn(Polygon), etc.:  81%|████████▏ | 22/27 [00:00<00:00, 36.20it/s]Animation 0: FadeIn(Polygon), etc.:  96%|█████████▋| 26/27 [00:00<00:00, 36.94it/s]                                                                                   [10/13/26 18:01:15] INFO     Animation 0 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/3429491395_2235834576_587135326.mp4'                              
+Animation 1: FadeIn(VGroup of 3 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]Animation 1: FadeIn(VGroup of 3 submobjects):  45%|████▌     | 5/11 [00:00<00:00, 47.12it/s]Animation 1: FadeIn(VGroup of 3 submobjects): 100%|██████████| 11/11 [00:00<00:00, 49.60it/s]                                                                                                                 INFO     Animation 1 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/1606801221_1664846989_4146654356.mp4'                             
+Animation 2: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/21 [00:00<?, ?it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  24%|██▍       | 5/21 [00:00<00:00, 46.24it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  52%|█████▏    | 11/21 [00:00<00:00, 49.87it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  81%|████████  | 17/21 [00:00<00:00, 51.06it/s]                                                                                                       [10/13/26 18:01:16] INFO     Animation 2 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/1606801221_3620582609_643320552.mp4'                              
+Animation 3: _MethodAnimation(Line), etc.:   0%|          | 0/27 [00:00<?, ?it/s]Animation 3: _MethodAnimation(Line), etc.:  19%|█▊        | 5/27 [00:00<00:00, 43.71it/s]Animation 3: _MethodAnimation(Line), etc.:  37%|███▋      | 10/27 [00:00<00:00, 45.38it/s]Animation 3: _MethodAnimation(Line), etc.:  56%|█████▌    | 15/27 [00:00<00:00, 45.91it/s]Animation 3: _MethodAnimation(Line), etc.:  74%|███████▍  | 20/27 [00:00<00:00, 45.69it/s]Animation 3: _MethodAnimation(Line), etc.:  93%|█████████▎| 25/27 [00:00<00:00, 43.36it/s]                                                                                          [10/13/26 18:01:18] INFO     Animation 3 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/1606801221_1317279348_2712287671.mp4'                             
+[10/13/26 18:01:20] INFO     Animation 4 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/1606801221_2638305959_101876428.mp4'                              
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/37 [00:00<?, ?it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  14%|█▎        | 5/37 [00:00<00:00, 46.27it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  27%|██▋       | 10/37 [00:00<00:00, 46.58it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  41%|████      | 15/37 [00:00<00:00, 47.32it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  54%|█████▍    | 20/37 [00:00<00:00, 48.10it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  68%|██████▊   | 25/37 [00:00<00:00, 48.17it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  81%|████████  | 30/37 [00:00<00:00, 47.82it/s]Animation 5: FadeIn(VGroup of 3 submobjects), etc.:  95%|█████████▍| 35/37 [00:00<00:00, 47.30it/s]                                                                                                   [10/13/26 18:01:22] INFO     Animation 5 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/1606801221_2961981230_3854910149.mp4'                             
+[10/13/26 18:01:24] INFO     Animation 6 : Partial movie file written in                                                  scene_file_writer.py:527
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/partial_movie_files/B10_TestNotTrust/1606801221_1592093623_729747302.mp4'                              
+                    INFO     Combining to Movie file.                                                                     scene_file_writer.py:617
+                    INFO                                                                                                  scene_file_writer.py:737
+                             File ready at                                                                                                        
+                             '/Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/media/videos/s                         
+                             cenes/2160p24/B10_TestNotTrust.mp4'                                                                                  
+                                                                                                                                                  
+                    INFO     Rendered B10_TestNotTrust                                                                                scene.py:247
+                             Played 7 animations                                                                                                  
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Polygon), etc.:   0%|          | 0/17 [00:00<?, ?it/s]                                                                          Animation 1: FadeIn(VGroup of 3 submobjects):   0%|          | 0/7 [00:00<?, ?it/s]                                                                                   Animation 2: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              Animation 3: _MethodAnimation(Line), etc.:   0%|          | 0/17 [00:00<?, ?it/s]                                                                                 /Users/jayantmajji/Desktop/Prompt2/brutalist-final/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 5: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/23 [00:00<?, ?it/s]                                                                                          [audit] scenes: 9 snapshots → CLEAN
+[audit] report: /Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/layout_audit.md
+[remotion] BIDEA: filled already (skip)
+[remotion] BDEFS: filled already (skip)
+[remotion] BOUT: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled B10  MANIM    10.9s  ← B10.mp4
+[art] motion histogram: graphic:17  remotion:3
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] build stamp → beat_sheet.json (20/20 filled)
+[art] QC contact sheet → /Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/qc-sheet.png
+[art] wrote /Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/cite-the-line-pitch-slate.mp4  (184.2s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 20/20 filled — BIDEA:VIDEO BDEFS:VIDEO B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM B15:MANIM B16:MANIM BOUT:VIDEO
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=40 BLOCKER=0 MAJOR=0 → /Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/_qc/REPORT.md
+[run] done → /Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see /Users/jayantmajji/Desktop/Prompt2/cite-the-line/youtube/cite-the-line-pitch/SHOTLIST.md

@@ -1,0 +1,12 @@
+{
+ "voice": "af_heart",
+ "about": "Reel-local pronunciation fixes for this film, in the toolkit's runtime/pronunciation format. Applied only to the text sent to Kokoro by voice.py. narration_text, the word clock and FACTCHECK are unchanged. Checked with Kokoro's phonemizer on 2026-10-14.",
+ "entries": [
+  {"id": "rag-word", "word": "RAG", "say": "rag", "patterns": ["\\b(?P<w>RAG)\\b"],
+   "note": "In 'an NBA RAG app' Kokoro spelled R-A-G; lowercase 'rag' is the word (retrieval-augmented generation is said 'rag').",
+   "examples": [{"text": "an NBA RAG app", "expect": "ɹˈæɡ"}]},
+  {"id": "kommuri", "word": "Kommuri", "say": "Kommu-ree", "patterns": ["\\b(?P<w>Kommuri)\\b"],
+   "note": "Default G2P said KAHM-yur-ee; 'Kommu-ree' gives KAHM-oo-ree. Siddi listened and confirmed it sounds right, 2026-10-14.",
+   "examples": [{"text": "Siddi Kommuri", "expect": "kˈɑːmuːɹˈiː"}]}
+ ]
+}

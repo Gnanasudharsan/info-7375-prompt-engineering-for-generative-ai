@@ -1,0 +1,50 @@
+{
+  "provenance": "Aditya Raj's review, given 2026-10-25 after reading the results and excerpts Claude presented (results tables, quoted excerpts, provisional scores). Aditya gave aggregate judgments (A1-A4) and rule-level judgments on named examples (R1-R5). Claude applied each judgment only to the items it covers, quoting the rule. '—' in the sheet means Aditya did not individually review that cell, and Claude's provisional reading stands unreviewed.",
+  "aggregate": {
+    "A1": "My original prediction was wrong for this fixture: all five constrained summaries retained the tumble. The normal summaries retained the fall in all five trials.",
+    "A2": "Both A and B produced follow-ups in every trial, so these results do not show that raw-transcript access improved follow-up frequency. B's use of 'tumble' is a wording difference, not necessarily better performance.",
+    "A3": "The constrained outputs violated the one-sentence requirement. Day two therefore did not receive strictly one-sentence memory. Record this as a limitation; do not remove the notes or rerun.",
+    "A4": "P3 (what happens after omission) was not tested, because omission never occurred."
+  },
+  "rules": {
+    "R1": "'I'd like to hear how that hip is doing' counts as an explicit follow-up: it requests information, and a question mark is not necessary.",
+    "R2": "'No suspected fractures' adds an assessment the transcript does not establish: an unsupported change in certainty, not an adequate paraphrase of the client's claim.",
+    "R3": "Wording such as 'asked that her daughter not be told' changes the meaning of 'I don't want my daughter fussing about it'. Reluctance about someone's reaction does not establish a disclosure prohibition.",
+    "R4": "'Saturday evening' is a temporal error: the simulated Monday check-in places 'last night' on Sunday.",
+    "R5": "Statements such as 'unwitnessed', 'living alone' and 'has not sought medical assessment' are unsupported unless the fixture explicitly establishes them (it does not)."
+  },
+  "summaries": {
+    "normal-1": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "C3": "'has not sought medical assessment': unsupported (R5)"},
+    "normal-2": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "C3": "'unwitnessed fall': unsupported (R5)"},
+    "normal-3": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)"},
+    "normal-4": {"C1": "Yes (A1)", "C3": "'unwitnessed falls': unsupported (R5)"},
+    "normal-5": {"C1": "Yes (A1)", "D5 nothing broken": "Changed: unsupported change in certainty, 'No suspected fractures' (R2)", "D6 daughter": "Changed (R3)"},
+    "constrained-1": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "Format": "One-sentence limit violated (A3)"},
+    "constrained-2": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "Format": "One-sentence limit violated (A3)"},
+    "constrained-3": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "Format": "One-sentence limit violated (A3)"},
+    "constrained-4": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "C3": "'unwitnessed fall': unsupported (R5)", "Format": "One-sentence limit violated (A3)"},
+    "constrained-5": {"C1": "Yes (A1)", "D6 daughter": "Changed (R3)", "C3": "'someone living alone': unsupported (R5)", "Format": "One-sentence limit violated (A3)"}
+  },
+  "openings": {
+    "normal-1-A": {"C4": "Explicit (R1, A2)"},
+    "normal-1-B": {"C4": "Explicit (A2)"},
+    "normal-2-A": {"C4": "Explicit (A2)"},
+    "normal-2-B": {"C4": "Explicit (A2)", "C3": "'Saturday evening': temporal error (R4)"},
+    "normal-3-A": {"C4": "Explicit (A2)"},
+    "normal-3-B": {"C4": "Explicit (A2)"},
+    "normal-4-A": {"C4": "Explicit (A2)"},
+    "normal-4-B": {"C4": "Explicit (A2)"},
+    "normal-5-A": {"C4": "Explicit (A2)"},
+    "normal-5-B": {"C4": "Explicit (A2)"},
+    "constrained-1-A": {"C4": "Explicit (A2)"},
+    "constrained-1-B": {"C4": "Explicit (A2)"},
+    "constrained-2-A": {"C4": "Explicit (A2)"},
+    "constrained-2-B": {"C4": "Explicit (A2)"},
+    "constrained-3-A": {"C4": "Explicit (A2)"},
+    "constrained-3-B": {"C4": "Explicit (A2)"},
+    "constrained-4-A": {"C4": "Explicit (A2)"},
+    "constrained-4-B": {"C4": "Explicit (A2)"},
+    "constrained-5-A": {"C4": "Explicit (A2)"},
+    "constrained-5-B": {"C4": "Explicit (A2)"}
+  }
+}

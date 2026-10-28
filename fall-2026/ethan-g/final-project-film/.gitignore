@@ -1,0 +1,17 @@
+# build caches and intermediate renders — rebuildable from film-v3/ sources (see BUILD-PROMPT.md)
+film-v3/manim/
+film-v3/media/
+film-v3/clips/
+film-v3/mp4/
+film-v3/mp3/
+film-v3/pantry/
+film-v3/images/
+film-v3/exports/
+film-v3/_superseded/
+film-v3/_qc/
+film-v3/*-slate.mp4
+film-v3/build-state.json
+film-v3/consumers.json
+film-v3/recorded_block.py
+__pycache__/
+.DS_Store

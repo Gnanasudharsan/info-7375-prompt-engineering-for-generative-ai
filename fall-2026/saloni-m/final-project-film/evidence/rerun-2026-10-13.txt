@@ -1,0 +1,52 @@
+# Re-run of the opt-countdown prototype
+# date: 2026-10-13 20:22 EDT  node: v20.20.2  commit: 81d0161d01c72f02d413d103ae5df1b73127edec
+
+$ node --test scripts/contrib/2026fa/salonimathure20-opt-countdown/
+# Subtest: CSV parser keeps quoted commas inside one field
+ok 1 - CSV parser keeps quoted commas inside one field
+# Subtest: sponsorship: record row → p from the documented formula, tier Proven
+ok 2 - sponsorship: record row → p from the documented formula, tier Proven
+# Subtest: sponsorship: blank H-1B columns → missing/Unknown, never p = 0
+ok 3 - sponsorship: blank H-1B columns → missing/Unknown, never p = 0
+# Subtest: sponsorship: company absent from CSV → no-company-row
+ok 4 - sponsorship: company absent from CSV → no-company-row
+# Subtest: runway: binds on the tighter of OPT end date and unemployment clock
+ok 5 - runway: binds on the tighter of OPT end date and unemployment clock
+# Subtest: runway: OPT end date already past → halt
+ok 6 - runway: OPT end date already past → halt
+# Subtest: timeline: negative slack closes the gate; ≥30 days slack is full credit
+ok 7 - timeline: negative slack closes the gate; ≥30 days slack is full credit
+# Subtest: liveness: checker "active" + Greenhouse API 404 → closed gate (redirect false positive)
+ok 8 - liveness: checker "active" + Greenhouse API 404 → closed gate (redirect false positive)
+# Subtest: liveness: uncertain with no API record → missing, not a guessed factor
+ok 9 - liveness: uncertain with no API record → missing, not a guessed factor
+# Subtest: end to end: real scorer runs, every term labeled, blocked roles never reach it
+ok 10 - end to end: real scorer runs, every term labeled, blocked roles never reach it
+# Subtest: end to end: OPT end date in the past halts with exit 3 and scores nothing
+ok 11 - end to end: OPT end date in the past halts with exit 3 and scores nothing
+# Subtest: end to end: an unlabeled fit value is rejected as bad input (exit 2)
+ok 12 - end to end: an unlabeled fit value is rejected as bad input (exit 2)
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 254.849166
+
+$ node scripts/contrib/2026fa/salonimathure20-opt-countdown/opt-countdown.mjs
+✓ opt-countdown: runway 53 days (start by 2026-11-25, bound by unemployment-clock)
+  8 roles → scored 6 (Apply 1 · Consider 2 · Skip 3) · blocked for a human 2
+  scorer: ✓ scored 6 roles → Apply 1 · Consider 2 · Skip 3 (skip 50%)
+  course/2026fa/submissions/salonimathure20/runs/opt-countdown/opt-countdown-log.json  +  course/2026fa/submissions/salonimathure20/runs/opt-countdown/opt-countdown-report.md
+
+$ git diff --stat   (what the run changed in the committed outputs)
+ .../salonimathure20/runs/opt-countdown/opt-countdown-log.json           | 2 +-
+ .../salonimathure20/runs/opt-countdown/opt-countdown-report.md          | 2 +-
+ .../submissions/salonimathure20/runs/opt-countdown/role-scores.json     | 2 +-
+ .../submissions/salonimathure20/runs/opt-countdown/role-scores.md       | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+# Each changed file differs by exactly one line: the run timestamp / date stamp
+# (checked with `git diff` on 2026-10-13, then restored with `git checkout -- course/`).

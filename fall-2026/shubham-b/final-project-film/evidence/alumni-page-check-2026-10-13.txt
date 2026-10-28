@@ -1,0 +1,13 @@
+# Alumni page check, run 2026-10-13 15:19 EDT by Claude Code: live https://recreation.northeastern.edu/alumni/ through marino-rag's own parser (ingest/parsers.py parse_html → trafilatura) at commit dd3205e
+extracted words: 782
+annual alumni membership prices on the page, by start date:
+  $480.00  September 1, 2026 - August 31, 2027
+  $360.00  December 1, 2026 - August 31, 2027
+  $240.00  March 1, 2027 - August 31, 2027
+  $220.00  April 1, 2027 - August 31, 2027
+  $120.00  June 1, 2027 - August 31, 2027
+  $150.00  September 1, 2026 - November 30, 2026
+  $150.00  December 1, 2026 - February 28, 2027
+  $150.00  March 1, 2027 - May 31, 2027
+raw HTML contains commented-out 2023-24 prices: True
+parser output contains them: False

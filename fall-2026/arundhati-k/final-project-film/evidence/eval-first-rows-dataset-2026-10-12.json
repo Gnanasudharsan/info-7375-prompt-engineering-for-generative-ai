@@ -1,0 +1,77 @@
+{
+  "csv": "data/80-days-to-stay/80-days-csv/mapped_student_employment_targets_v3.csv",
+  "csv_sha256": "eccdee2addf472b1639269f42eec693b083b7ce251347d5fd0b2856cfdae6270",
+  "rows": [
+    {
+      "company": "PayPal",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "Visa",
+      "status": "no-sponsorship-record",
+      "csv_rows": [
+        {
+          "csv_line": 28865,
+          "csv_name": "VISA INC"
+        }
+      ],
+      "total_approvals": null,
+      "software_titles": [],
+      "tier": null,
+      "audit_names_containing_word": [
+        "ENVISAGENICS INC",
+        "INVISAGE TECHNOLOGIES INC",
+        "VISA INC",
+        "VISAGE SOFTWARE INC",
+        "VISANOWCOM INC"
+      ],
+      "audit_count": 5
+    },
+    {
+      "company": "Goldman Sachs",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "Mastercard",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "BlackRock",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    },
+    {
+      "company": "LSEG",
+      "status": "not-in-dataset",
+      "csv_rows": [],
+      "total_approvals": null,
+      "software_titles": null,
+      "tier": null,
+      "audit_names_containing_word": [],
+      "audit_count": 0
+    }
+  ]
+}

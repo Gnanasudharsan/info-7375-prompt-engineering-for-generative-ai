@@ -1,0 +1,87 @@
+## ffprobe
+index=0
+codec_name=h264
+codec_type=video
+width=3840
+height=2160
+pix_fmt=yuv420p
+r_frame_rate=24/1
+duration=198.666667
+nb_frames=4768
+index=1
+codec_name=aac
+codec_type=audio
+sample_rate=48000
+channels=2
+r_frame_rate=0/0
+duration=198.708000
+nb_frames=9316
+duration=198.708000
+size=22087344
+bit_rate=889238
+
+## sha256
+be9d096cca7525d938707551a6652d9434a7a1d13de467c81a89e4cd57a5e8eb  exports/daythread-pitch-film.mp4
+
+## volumedetect
+[Parsed_volumedetect_0 @ 0x74b004fc0] mean_volume: -26.9 dB
+[Parsed_volumedetect_0 @ 0x74b004fc0] max_volume: -2.9 dB
+
+## loudness (EBU R128 summary)
+    I:         -24.2 LUFS
+    Threshold: -34.6 LUFS
+    LRA:         5.6 LU
+    Threshold: -44.7 LUFS
+
+## silencedetect (-40 dB, >=0.6 s)
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 6.895125
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 7.692958 | silence_duration: 0.797833
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 17.759062
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 18.487104 | silence_duration: 0.728042
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 25.930563
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 26.692271 | silence_duration: 0.761708
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 34.771979
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 35.422667 | silence_duration: 0.650687
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 44.717104
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 45.503937 | silence_duration: 0.786833
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 53.728562
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 54.374125 | silence_duration: 0.645562
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 62.156167
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 62.864812 | silence_duration: 0.708646
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 68.122563
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 68.764021 | silence_duration: 0.641458
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 73.555917
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 74.183917 | silence_duration: 0.628
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 79.60375
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 80.287729 | silence_duration: 0.683979
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 91.758062
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 92.44875 | silence_duration: 0.690688
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 105.72775
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 106.511396 | silence_duration: 0.783646
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 116.753958
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 117.509875 | silence_duration: 0.755917
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 125.066708
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 125.751083 | silence_duration: 0.684375
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 133.25675
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 133.910229 | silence_duration: 0.653479
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 138.716604
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 139.377396 | silence_duration: 0.660792
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 145.392937
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 146.043312 | silence_duration: 0.650375
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 152.305708
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 153.007229 | silence_duration: 0.701521
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 161.457958
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 162.198167 | silence_duration: 0.740208
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 169.870688
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 170.665208 | silence_duration: 0.794521
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 180.060583
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 180.734187 | silence_duration: 0.673604
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 186.626854
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 187.439042 | silence_duration: 0.812187
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 194.302583
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 194.969 | silence_duration: 0.666417
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_start: 197.129687
+[Parsed_silencedetect_0 @ 0x8bec60a80] silence_end: 198.708 | silence_duration: 1.578313
+
+## decode check (errors only)
+decoded with no errors

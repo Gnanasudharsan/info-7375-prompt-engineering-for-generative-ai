@@ -1,0 +1,4 @@
+# marino-rag test suite, re-run 2026-10-13 15:18 EDT by Claude Code at commit dd3205e (repo: github.com/bagwe-shubham1727/marino-rag)
+$ uv run --frozen pytest -q
+............................................................             [100%]
+60 passed in 11.92s

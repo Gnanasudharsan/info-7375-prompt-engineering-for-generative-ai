@@ -494,6 +494,59 @@ h264+aac, **196.0 s** as probed (195.72 s of narration); **113** caption cues; G
 
 ---
 
+## Round 10 — the change the submitter asked for after watching, 2026-09-25
+
+The first change requested by a person who watched the cut rather than by a gate. The
+submitter's words are quoted in full in the `[MINE]` section below: the floating-point
+comparison at 1:46–2:05 left the point *"buried in the last digit of two long numbers"*.
+They asked for the frame to be held longer, the two differing digits isolated, and a small
+"1 ULP apart" marker between them. Implemented by Claude.
+
+### R10-1 · B06 — isolate the two differing digits, mark them, hold the view
+
+**What changed.** `ShiftReceipt` gained an `isolateLabel` prop (`"1 ULP"` in the beat
+sheet). The beat is re-timed to its own word clock, and the audio is untouched, so the
+runtime is too:
+
+| Beat fraction | Narration | On screen |
+|---|---|---|
+| ≈ 0.26 | "…minus sixteen." | both vectors in place |
+| 0.25–0.30 | "Not zero" | the four differing digits turn terracotta and bold |
+| 0.29–0.34 | "adjacent floats…" | every agreeing digit steps back; a `1 ULP` marker appears between each differing pair |
+| to 0.60 | "…merely indistinguishable." | held — about six seconds on the one comparison that matters |
+| 0.60–0.66 | "Both match the chapter's…" | the view releases as the headline figure scales up |
+
+**How the markers stay on their digits.** They ride on a transparent copy of the upper
+row's text in the same monospace face, so each one is centred on its digit by the font
+itself — no measured character widths.
+
+**Two defects found before shipping, both fixed.**
+
+1. *Found by looking.* On the first render, the lower row's label faded out while the left
+   marker faded in, and for about a second they overlapped ("…the raw 1 ULP scores"). The
+   crossfade is now sequential: the label is gone before the markers arrive, and back only
+   after they leave. Checked at 6.2, 6.5, 6.8, 12.5, 12.9 and 13.3 s.
+2. *Found by Gate V.* The first version dimmed the agreeing digits to 22 % opacity, and the
+   compile failed: **MAJOR `low-contrast` on B06 at 50 %, luminance separation 0.22 < 0.30.**
+   Fading text by opacity mostly adds faint anti-aliased pixels. The agreeing digits now
+   step back by *colour* instead — ink to the reel's secondary grey (`SOFT`, about 5:1 on
+   the white card, still readable) — and the frame measures clean.
+
+**The claim on screen is checked against the record.** "1 ULP" is a factual claim: each
+differing pair must be exactly one representable step apart. The screen test in
+`evidence/test_verify_claims.py` now reads the label from `beat_sheet.json`, and checks it
+against the step count between the two recorded vectors' IEEE-754 bit patterns.
+`FACTCHECK.md` row 22.
+
+**Result, measured after the fix:** Gate V **BLOCKER 0 · MAJOR 0** across 22 frames. GATE T
+**0 FAIL · 1 WARN · 29 PASS** — with one §8.3b FAIL on the way: a refactor had moved the
+`markIn > 0.2` condition into a variable, so the bold was still there but the literal
+expression the gate checks was not. The expression was restored rather than the gate
+loosened. All 29 tests pass, the mutation check still catches 4 of 4, and the final master
+is 196.0 s at 1920×1080 — the same runtime, since the audio did not change.
+
+---
+
 ## `[MINE — the part a gate cannot do]`
 
 Frame inspection found four defects that compiled cleanly, which is the argument for doing
@@ -509,8 +562,11 @@ cut with sound and answer, in my own words:
 - One change I request after watching, and how it improved **understanding** rather than
   appearance — logged here with its timestamp, then re-rendered and re-checked.
 
-Until that pass is written here, the honest status of this film is **reviewed for defects,
-not yet reviewed for teaching**.
+**My watch-through, 2026-09-25 (13:56 EDT).** I watched the cut. The change I asked for,
+as I wrote it (all four of my answers are in `FRICTIONAL.md`, `[MINE]`):
 
-**As posted (2026-09-24): not yet written.** No human watch-through with sound is recorded,
-so the status above stands.
+> Yes. One thing I would change is the floating-point comparison around 1:46–2:05. The video shows both full-precision probability vectors and then the 1.1102230246251565e-16 difference, but the important change is buried in the last digit of two long numbers. I would hold that frame slightly longer and isolate only the two differing digits, with a small “1 ULP apart” marker between them. The narration explains the idea correctly, but making that last-place difference visually obvious would make the distinction between algebraic equality and floating-point equality land faster.
+
+Claude carried it out and re-checked it — Round 10 above. The first three questions in this
+list are not answered yet, so the honest status is: **reviewed for defects, watched once by
+me with one change made; the teaching questions are still open.**

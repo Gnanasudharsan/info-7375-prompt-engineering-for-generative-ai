@@ -23,7 +23,7 @@ is renderable in this environment.
 | B03 | THE MOVE | SHOW | Four-stage table; score → shifted → weight → probability | 19.61 s |
 | B04 | THE PROOF | SHOW | The shared `exp(−m/T)` factor struck through on both lines | 18.69 s |
 | B05 | ASK | SHOW | Reconstructed composer, labelled; the two-path question, **already typed** (inner beat) | 9.56 s |
-| B06 | THE RECEIPT | SHOW | Two output vectors aligned; the 2 differing digits marked; `exactly 2**-53` | 20.63 s |
+| B06 | THE RECEIPT | SHOW | Two output vectors aligned; the differing digits marked, then isolated with `1 ULP` markers and held; `exactly 2**-53` | 20.63 s |
 | B07 | THE BOUNDARY | SHOW | Descending score rail; hard-zero cliff, then the closed form `−1075·ln 2` | 20.57 s |
 | B08 | VERDICT | SHOW | Claude artifact page; four verdict lines stagger | 21.40 s |
 | B09 | HANDOFF | SHOW | Composer labelled SUGGESTED PROMPT · NOT YET RUN; greeting `Your turn.`; prompt read aloud | 18.92 s |

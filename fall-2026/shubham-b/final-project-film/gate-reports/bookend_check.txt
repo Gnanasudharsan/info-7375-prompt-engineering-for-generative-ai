@@ -1,0 +1,4 @@
+$ python3 runtime/scripts/bookend_check.py ../final-project-film
+[bookend] BLOCKED — 1 failure(s) in marino-desk-assistant-pitch:
+  ✗ OUTRO handle 'github.com/bagwe-shubham1727/marino-rag' != expected '@NikBearBrown' (set metadata.channel_title or pass handle explicitly)
+exit=2

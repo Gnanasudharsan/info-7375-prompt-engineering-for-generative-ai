@@ -1,0 +1,2 @@
+[bookend] BLOCKED — 1 failure(s) in readme-checker-film:
+  ✗ OUTRO (BOUT): no ClaudeTitleOutro beat — add beat_id=BOUT

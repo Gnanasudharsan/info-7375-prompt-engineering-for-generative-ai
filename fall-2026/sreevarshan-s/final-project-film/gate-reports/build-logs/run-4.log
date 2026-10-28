@@ -1,0 +1,1756 @@
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B00_Pipeline clean
+[gateW] B02_CrossCheck clean
+[gateW] B03_FirstMinute clean
+[gateW] B04_Funnel clean
+[gateW] B05_Conflict clean
+[gateW] B06_Labels clean
+[gateW] B07_Rules clean
+[gateW] B08_Evidence clean
+[gateW] B09_NotTraining clean
+[gateW] B10_Out clean
+[gateW] B11_EvalLog clean
+[gateW] B12_EntityRes clean
+[gateW] B13_Confirm clean
+[gateW] B14_WhyProject clean
+[gateW] B15_HandCheck clean
+[gateW] B16_Decisions clean
+[gateW] B17_Status clean
+[gateW] B18_WhyNow clean
+[run] rendering B00_Pipeline
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/20 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  30%|███       | 6/20 [00:00<00:00, 59.74it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  80%|████████  | 16/20 [00:00<00:00, 78.79it/s]                                                                                             [10/11/26 11:50:21] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/3429491395_4260                         
+                             993836_579706064.mp4'                              
+Animation 1: FadeIn(Text('record')):   0%|          | 0/12 [00:00<?, ?it/s]Animation 1: FadeIn(Text('record')):  83%|████████▎ | 10/12 [00:00<00:00, 98.01it/s]                                                                                                        INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_1112                         
+                             732032_3073602341.mp4'                             
+Animation 2: FadeIn(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 2: FadeIn(VGroup of 3 submobjects):  83%|████████▎ | 10/12 [00:00<00:00, 97.84it/s]                                                                                                                 INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_3661                         
+                             761711_207479105.mp4'                              
+Animation 3: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/48 [00:00<?, ?it/s]Animation 3: _MethodAnimation(VGroup of 3 submobjects):  19%|█▉        | 9/48 [00:00<00:00, 87.92it/s]Animation 3: _MethodAnimation(VGroup of 3 submobjects):  40%|███▉      | 19/48 [00:00<00:00, 91.36it/s]Animation 3: _MethodAnimation(VGroup of 3 submobjects):  60%|██████    | 29/48 [00:00<00:00, 90.33it/s]Animation 3: _MethodAnimation(VGroup of 3 submobjects):  81%|████████▏ | 39/48 [00:00<00:00, 88.42it/s]Animation 3: _MethodAnimation(VGroup of 3 submobjects): 100%|██████████| 48/48 [00:00<00:00, 87.60it/s]                                                                                                       [10/11/26 11:50:22] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_3992                         
+                             681217_2921727168.mp4'                             
+[10/11/26 11:50:25] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_3651                         
+                             921206_2942576811.mp4'                             
+Animation 5: GrowFromCenter(Dot):   0%|          | 0/12 [00:00<?, ?it/s]Animation 5: GrowFromCenter(Dot):  83%|████████▎ | 10/12 [00:00<00:00, 94.49it/s]                                                                                                     INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_9021                         
+                             4117_3795459553.mp4'                               
+Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 6: Create(VGroup of 2 submobjects):  92%|█████████▏| 11/12 [00:00<00:00, 103.01it/s]                                                                                                                  INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_9717                         
+                             23894_4024313059.mp4'                              
+[10/11/26 11:50:26] INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_3783                         
+                             663919_720624181.mp4'                              
+Animation 8: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 8: FadeIn(VGroup of 2 submobjects), etc.:  53%|█████▎    | 8/15 [00:00<00:00, 77.68it/s]                                                                                                                      INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_3481                         
+                             62078_1699370139.mp4'                              
+[10/11/26 11:50:28] INFO     Animation 9 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             0_Pipeline/1606801221_2802                         
+                             512098_3127273261.mp4'                             
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B00_Pipeline.mp4'                              
+                                                                                
+                    INFO     Rendered B00_Pipeline                  scene.py:247
+                             Played 10 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]                                                                                    Animation 1: FadeIn(Text('record')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                          Animation 2: FadeIn(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 3: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/30 [00:00<?, ?it/s]                                                                                              /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 5: GrowFromCenter(Dot):   0%|          | 0/8 [00:00<?, ?it/s]                                                                       Animation 6: Create(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 8: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B02_CrossCheck
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/17 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  53%|█████▎    | 9/17 [00:00<00:00, 83.78it/s]                                                                                                  [10/11/26 11:50:30] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/3429491395_27                         
+                             39717120_2111171333.mp4'                           
+[10/11/26 11:50:31] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_24                         
+                             39241403_2493535730.mp4'                           
+Animation 2: Create(DashedLine):   0%|          | 0/24 [00:00<?, ?it/s]Animation 2: Create(DashedLine):  42%|████▏     | 10/24 [00:00<00:00, 93.59it/s]Animation 2: Create(DashedLine):  83%|████████▎ | 20/24 [00:00<00:00, 96.26it/s]                                                                                [10/11/26 11:50:32] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_18                         
+                             30322907_2960973549.mp4'                           
+[10/11/26 11:50:33] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_25                         
+                             45254368_1670934461.mp4'                           
+Animation 4: GrowFromCenter(Circle):   0%|          | 0/12 [00:00<?, ?it/s]Animation 4: GrowFromCenter(Circle):  83%|████████▎ | 10/12 [00:00<00:00, 98.34it/s]                                                                                                        INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_25                         
+                             59409816_166512002.mp4'                            
+Animation 5: GrowFromCenter(Dot):   0%|          | 0/10 [00:00<?, ?it/s]Animation 5: GrowFromCenter(Dot): 100%|██████████| 10/10 [00:00<00:00, 99.22it/s]                                                                                                     INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_77                         
+                             2798039_4235242991.mp4'                            
+[10/11/26 11:50:34] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_13                         
+                             28458699_2775852862.mp4'                           
+Animation 7: FadeIn(Text('occupation + level')):   0%|          | 0/12 [00:00<?, ?it/s]Animation 7: FadeIn(Text('occupation + level')):  75%|███████▌  | 9/12 [00:00<00:00, 83.46it/s]                                                                                               [10/11/26 11:50:35] INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_10                         
+                             24968616_3182258256.mp4'                           
+                    INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             2_CrossCheck/1606801221_36                         
+                             66212402_1427764120.mp4'                           
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B02_CrossCheck.mp4'                            
+                                                                                
+                    INFO     Rendered B02_CrossCheck                scene.py:247
+                             Played 9 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]                                                                                          /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: Create(DashedLine):   0%|          | 0/15 [00:00<?, ?it/s]                                                                       Animation 4: GrowFromCenter(Circle):   0%|          | 0/8 [00:00<?, ?it/s]                                                                          Animation 5: GrowFromCenter(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                       Animation 7: FadeIn(Text('occupation + level')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                      [audit] scenes: 13 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B03_FirstMinute
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  60%|██████    | 9/15 [00:00<00:00, 79.68it/s]                                                                                            [10/11/26 11:50:37] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/3429491395_4                         
+                             102603421_1127816702.mp4'                          
+Animation 1: FadeIn(Text('meera-krishnan')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 1: FadeIn(Text('meera-krishnan')), etc.:  67%|██████▋   | 8/12 [00:00<00:00, 71.46it/s]                                                                                                                     INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_5                         
+                             74403597_1982793010.mp4'                           
+[10/11/26 11:50:38] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_1                         
+                             073808725_568148371.mp4'                           
+[10/11/26 11:50:39] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_2                         
+                             354353147_868737206.mp4'                           
+Animation 4: FadeIn(Text('$ python3 run.py')):   0%|          | 0/12 [00:00<?, ?it/s]Animation 4: FadeIn(Text('$ python3 run.py')):  67%|██████▋   | 8/12 [00:00<00:00, 75.16it/s]                                                                                                                 INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_2                         
+                             208658890_1443153798.mp4'                          
+[10/11/26 11:50:40] INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_1                         
+                             774723016_1325574713.mp4'                          
+Animation 6: FadeIn(VGroup of 3 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 6: FadeIn(VGroup of 3 submobjects):  47%|████▋     | 8/17 [00:00<00:00, 73.88it/s]Animation 6: FadeIn(VGroup of 3 submobjects): 100%|██████████| 17/17 [00:00<00:00, 81.75it/s]                                                                                             [10/11/26 11:50:41] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_2                         
+                             354851831_526441404.mp4'                           
+                    INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             3_FirstMinute/1606801221_1                         
+                             080956639_1330994620.mp4'                          
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B03_FirstMinute.mp4'                           
+                                                                                
+                    INFO     Rendered B03_FirstMinute               scene.py:247
+                             Played 8 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   Animation 1: FadeIn(Text('meera-krishnan')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                        /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 4: FadeIn(Text('$ python3 run.py')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                    Animation 6: FadeIn(VGroup of 3 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]                                                                                    [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B04_Funnel
+Manim Community v0.18.1
+
+Animation 0: GrowFromCenter(Dot):   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: GrowFromCenter(Dot):  67%|██████▋   | 8/12 [00:00<00:00, 75.68it/s]                                                                                [10/11/26 11:50:43] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/3429491395_859874                         
+                             758_1171540564.mp4'                                
+                    INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_354513                         
+                             9560_2871707255.mp4'                               
+Animation 2: GrowFromEdge(Rectangle):   0%|          | 0/17 [00:00<?, ?it/s]Animation 2: GrowFromEdge(Rectangle):  53%|█████▎    | 9/17 [00:00<00:00, 85.05it/s]                                                                                    [10/11/26 11:50:44] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_331186                         
+                             1491_2708026382.mp4'                               
+Animation 3: FadeIn(Text('30,369')):   0%|          | 0/10 [00:00<?, ?it/s]Animation 3: FadeIn(Text('30,369')):  90%|█████████ | 9/10 [00:00<00:00, 80.67it/s]                                                                                                       INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_361474                         
+                             8666_221413090.mp4'                                
+[10/11/26 11:50:46] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_670477                         
+                             383_2049045269.mp4'                                
+Animation 5: GrowFromEdge(Rectangle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 5: GrowFromEdge(Rectangle), etc.:  60%|██████    | 9/15 [00:00<00:00, 84.78it/s]                                                                                                              INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_411398                         
+                             7692_995314898.mp4'                                
+[10/11/26 11:50:47] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_910427                         
+                             115_4125891761.mp4'                                
+Animation 7: GrowFromEdge(Rectangle), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 7: GrowFromEdge(Rectangle), etc.:  53%|█████▎    | 8/15 [00:00<00:00, 75.21it/s]                                                                                                              INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_231730                         
+                             5345_3843965056.mp4'                               
+[10/11/26 11:50:48] INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             4_Funnel/1606801221_136408                         
+                             6747_2356320494.mp4'                               
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B04_Funnel.mp4'                                
+                                                                                
+                    INFO     Rendered B04_Funnel                    scene.py:247
+                             Played 9 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: GrowFromCenter(Dot):   0%|          | 0/8 [00:00<?, ?it/s]                                                                       Animation 2: GrowFromEdge(Rectangle):   0%|          | 0/11 [00:00<?, ?it/s]                                                                            Animation 3: FadeIn(Text('30,369')):   0%|          | 0/6 [00:00<?, ?it/s]                                                                          /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 5: GrowFromEdge(Rectangle), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                 Animation 7: GrowFromEdge(Rectangle), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                 [audit] scenes: 9 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B05_Conflict
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  53%|█████▎    | 8/15 [00:00<00:00, 77.22it/s]                                                                                            [10/11/26 11:50:50] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/3429491395_1857                         
+                             453326_4266245577.mp4'                             
+[10/11/26 11:50:51] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_3140                         
+                             126361_2029726352.mp4'                             
+Animation 2: Create(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                [10/11/26 11:50:52] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_4333                         
+                             90021_2342350444.mp4'                              
+Animation 3: _MethodAnimation(Line):   0%|          | 0/24 [00:00<?, ?it/s]Animation 3: _MethodAnimation(Line):  46%|████▌     | 11/24 [00:00<00:00, 101.96it/s]Animation 3: _MethodAnimation(Line):  92%|█████████▏| 22/24 [00:00<00:00, 103.49it/s]                                                                                                         INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_1595                         
+                             422826_1261414060.mp4'                             
+                    INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_3956                         
+                             613351_890678067.mp4'                              
+Animation 5: FadeOut(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                 [10/11/26 11:50:53] INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_1184                         
+                             510568_3509284106.mp4'                             
+Animation 6: FadeIn(Text('HTTP 404')):   0%|          | 0/10 [00:00<?, ?it/s]Animation 6: FadeIn(Text('HTTP 404')):  90%|█████████ | 9/10 [00:00<00:00, 89.15it/s]                                                                                                         INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_3170                         
+                             488050_2500375256.mp4'                             
+[10/11/26 11:50:54] INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_3013                         
+                             128193_4167180142.mp4'                             
+Animation 8: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 8: FadeIn(VGroup of 2 submobjects), etc.:  60%|██████    | 9/15 [00:00<00:00, 84.85it/s]                                                                                                                      INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_1204                         
+                             491391_4010364761.mp4'                             
+Animation 9: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/24 [00:00<?, ?it/s]Animation 9: _MethodAnimation(VGroup of 2 submobjects), etc.:  29%|██▉       | 7/24 [00:00<00:00, 64.27it/s]Animation 9: _MethodAnimation(VGroup of 2 submobjects), etc.:  58%|█████▊    | 14/24 [00:00<00:00, 63.01it/s]Animation 9: _MethodAnimation(VGroup of 2 submobjects), etc.:  88%|████████▊ | 21/24 [00:00<00:00, 63.05it/s]                                                                                                             [10/11/26 11:50:55] INFO     Animation 9 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_2286                         
+                             202327_2143977147.mp4'                             
+                    INFO     Animation 10 : Partial     scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             5_Conflict/1606801221_2928                         
+                             743354_179323261.mp4'                              
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B05_Conflict.mp4'                              
+                                                                                
+                    INFO     Rendered B05_Conflict                  scene.py:247
+                             Played 11 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: Create(Line):   0%|          | 0/5 [00:00<?, ?it/s]                                                                Animation 3: _MethodAnimation(Line):   0%|          | 0/15 [00:00<?, ?it/s]                                                                           Animation 5: FadeOut(Line):   0%|          | 0/5 [00:00<?, ?it/s]                                                                 Animation 6: FadeIn(Text('HTTP 404')):   0%|          | 0/6 [00:00<?, ?it/s]                                                                            Animation 8: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         Animation 9: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]                                                                                                    [audit] scenes: 15 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B06_Labels
+Manim Community v0.18.1
+
+Animation 0: FadeIn(Text('record')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: FadeIn(Text('record')), etc.:  53%|█████▎    | 8/15 [00:00<00:00, 73.47it/s]                                                                                         [10/11/26 11:50:57] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             6_Labels/3429491395_221023                         
+                             969_1964680702.mp4'                                
+Animation 1: LaggedStart(Group):   0%|          | 0/15 [00:00<?, ?it/s]Animation 1: LaggedStart(Group):  73%|███████▎  | 11/15 [00:00<00:00, 104.44it/s]                                                                                 [10/11/26 11:50:58] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             6_Labels/1606801221_359070                         
+                             0931_2363806955.mp4'                               
+[10/11/26 11:50:59] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             6_Labels/1606801221_384843                         
+                             74_2147768118.mp4'                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B06_Labels.mp4'                                
+                                                                                
+                    INFO     Rendered B06_Labels                    scene.py:247
+                             Played 3 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Text('record')), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                Animation 1: LaggedStart(Group):   0%|          | 0/9 [00:00<?, ?it/s]                                                                      /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+[audit] scenes: 4 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B07_Rules
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/17 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects), etc.:  53%|█████▎    | 9/17 [00:00<00:00, 83.99it/s]                                                                                                  [10/11/26 11:51:00] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/3429491395_3867445                         
+                             442_1925205190.mp4'                                
+[10/11/26 11:51:02] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_3425205                         
+                             700_1002349301.mp4'                                
+                    INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_3596720                         
+                             576_4158471484.mp4'                                
+Animation 3: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/29 [00:00<?, ?it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  34%|███▍      | 10/29 [00:00<00:00, 95.97it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  72%|███████▏  | 21/29 [00:00<00:00, 99.53it/s]                                                                                                       [10/11/26 11:51:03] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_3933150                         
+                             229_1058183648.mp4'                                
+Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  59%|█████▉    | 10/17 [00:00<00:00, 96.49it/s]                                                                                                                           INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_1163279                         
+                             679_430120897.mp4'                                 
+Animation 5: FadeIn(Text('record wins')):   0%|          | 0/10 [00:00<?, ?it/s]Animation 5: FadeIn(Text('record wins')):  90%|█████████ | 9/10 [00:00<00:00, 88.76it/s]                                                                                                            INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_8415096                         
+                             5_1474394380.mp4'                                  
+Animation 6: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 6: FadeIn(VGroup of 3 submobjects), etc.:  75%|███████▌  | 9/12 [00:00<00:00, 89.42it/s]                                                                                                  [10/11/26 11:51:04] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_3917190                         
+                             495_3739738366.mp4'                                
+Animation 7: GrowFromCenter(Dot):   0%|          | 0/10 [00:00<?, ?it/s]Animation 7: GrowFromCenter(Dot): 100%|██████████| 10/10 [00:00<00:00, 90.26it/s]                                                                                                     INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_2138325                         
+                             818_2127685627.mp4'                                
+[10/11/26 11:51:05] INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             7_Rules/1606801221_1471962                         
+                             654_2546450667.mp4'                                
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B07_Rules.mp4'                                 
+                                                                                
+                    INFO     Rendered B07_Rules                     scene.py:247
+                             Played 9 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]                                                                                          /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 3: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/18 [00:00<?, ?it/s]                                                                                              Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]                                                                                              Animation 5: FadeIn(Text('record wins')):   0%|          | 0/6 [00:00<?, ?it/s]                                                                               Animation 6: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                         Animation 7: GrowFromCenter(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                       [audit] scenes: 12 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B08_Evidence
+Manim Community v0.18.1
+
+Animation 0: LaggedStart(Group):   0%|          | 0/20 [00:00<?, ?it/s]Animation 0: LaggedStart(Group):  50%|█████     | 10/20 [00:00<00:00, 99.81it/s]                                                                                [10/11/26 11:51:06] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/3429491395_5686                         
+                             08390_3752299293.mp4'                              
+[10/11/26 11:51:07] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/1606801221_3309                         
+                             607595_3138228487.mp4'                             
+Animation 2: LaggedStart(Group), etc.:   0%|          | 0/17 [00:00<?, ?it/s]Animation 2: LaggedStart(Group), etc.:  59%|█████▉    | 10/17 [00:00<00:00, 93.87it/s]                                                                                                          INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/1606801221_1161                         
+                             486371_1580456712.mp4'                             
+Animation 3: FadeIn(Text('Ran 58 tests — OK')):   0%|          | 0/10 [00:00<?, ?it/s]Animation 3: FadeIn(Text('Ran 58 tests — OK')):  90%|█████████ | 9/10 [00:00<00:00, 81.81it/s]                                                                                                                  INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/1606801221_1698                         
+                             10976_3356350552.mp4'                              
+[10/11/26 11:51:10] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/1606801221_2558                         
+                             003867_2461384115.mp4'                             
+Animation 5: FadeIn(Text('HALT: input file not found')):   0%|          | 0/12 [00:00<?, ?it/s]Animation 5: FadeIn(Text('HALT: input file not found')):  67%|██████▋   | 8/12 [00:00<00:00, 78.72it/s]                                                                                                                           INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/1606801221_1759                         
+                             168764_2647298511.mp4'                             
+[10/11/26 11:51:11] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             8_Evidence/1606801221_2583                         
+                             926452_61314730.mp4'                               
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B08_Evidence.mp4'                              
+                                                                                
+                    INFO     Rendered B08_Evidence                  scene.py:247
+                             Played 7 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]                                                                       /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: LaggedStart(Group), etc.:   0%|          | 0/11 [00:00<?, ?it/s]                                                                             Animation 3: FadeIn(Text('Ran 58 tests — OK')):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                     Animation 5: FadeIn(Text('HALT: input file not found')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                              [audit] scenes: 10 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B09_NotTraining
+Manim Community v0.18.1
+
+Animation 0: Create(DashedVMobject):   0%|          | 0/22 [00:00<?, ?it/s]Animation 0: Create(DashedVMobject):  41%|████      | 9/22 [00:00<00:00, 87.33it/s]Animation 0: Create(DashedVMobject):  86%|████████▋ | 19/22 [00:00<00:00, 92.26it/s]                                                                                    [10/11/26 11:51:12] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             9_NotTraining/3429491395_3                         
+                             344798556_2664306458.mp4'                          
+[10/11/26 11:51:13] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B0                         
+                             9_NotTraining/1606801221_3                         
+                             921021378_2041732807.mp4'                          
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B09_NotTraining.mp4'                           
+                                                                                
+                    INFO     Rendered B09_NotTraining               scene.py:247
+                             Played 2 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: Create(DashedVMobject):   0%|          | 0/14 [00:00<?, ?it/s]                                                                           /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+[audit] scenes: 3 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B10_Out
+Manim Community v0.18.1
+
+Animation 0: FadeIn(RoundedRectangle), etc.:   0%|          | 0/20 [00:00<?, ?it/s]Animation 0: FadeIn(RoundedRectangle), etc.:  45%|████▌     | 9/20 [00:00<00:00, 80.12it/s]Animation 0: FadeIn(RoundedRectangle), etc.:  90%|█████████ | 18/20 [00:00<00:00, 82.09it/s]                                                                                            [10/11/26 11:51:15] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             0_Out/3429491395_265925540                         
+                             0_1672552969.mp4'                                  
+Animation 1: FadeIn(Text('auto-apply')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 1: FadeIn(Text('auto-apply')), etc.:  58%|█████▊    | 7/12 [00:00<00:00, 66.77it/s]                                                                                                                 INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             0_Out/1606801221_103888144                         
+                             0_2011195978.mp4'                                  
+[10/11/26 11:51:17] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             0_Out/1606801221_572930604                         
+                             _4066510365.mp4'                                   
+Animation 3: GrowFromCenter(Dot):   0%|          | 0/10 [00:00<?, ?it/s]Animation 3: GrowFromCenter(Dot):  90%|█████████ | 9/10 [00:00<00:00, 89.76it/s]                                                                                                    INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             0_Out/1606801221_426522007                         
+                             1_3627361089.mp4'                                  
+[10/11/26 11:51:18] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             0_Out/1606801221_388051304                         
+                             5_2596324661.mp4'                                  
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B10_Out.mp4'                                   
+                                                                                
+                    INFO     Rendered B10_Out                       scene.py:247
+                             Played 5 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(RoundedRectangle), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                                   Animation 1: FadeIn(Text('auto-apply')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                    /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 3: GrowFromCenter(Dot):   0%|          | 0/6 [00:00<?, ?it/s]                                                                       [audit] scenes: 6 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B11_EvalLog
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 3 submobjects), etc.:  53%|█████▎    | 8/15 [00:00<00:00, 77.61it/s]                                                                                                  [10/11/26 11:51:19] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/3429491395_36795                         
+                             16972_268990699.mp4'                               
+Animation 1: Create(DashedLine):   0%|          | 0/15 [00:00<?, ?it/s]Animation 1: Create(DashedLine):  60%|██████    | 9/15 [00:00<00:00, 89.18it/s]                                                                                                   INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/1606801221_29072                         
+                             96831_3072783904.mp4'                              
+Animation 2: Create(DashedVMobject), etc.:   0%|          | 0/20 [00:00<?, ?it/s]Animation 2: Create(DashedVMobject), etc.:  40%|████      | 8/20 [00:00<00:00, 76.95it/s]Animation 2: Create(DashedVMobject), etc.:  85%|████████▌ | 17/20 [00:00<00:00, 79.45it/s]                                                                                          [10/11/26 11:51:20] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/1606801221_32821                         
+                             47998_2939745532.mp4'                              
+[10/11/26 11:51:22] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/1606801221_37136                         
+                             02101_3686767132.mp4'                              
+Animation 4: LaggedStart(Group):   0%|          | 0/15 [00:00<?, ?it/s]Animation 4: LaggedStart(Group):  67%|██████▋   | 10/15 [00:00<00:00, 90.52it/s]                                                                                [10/11/26 11:51:23] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/1606801221_58129                         
+                             1489_654765387.mp4'                                
+Animation 5: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]Animation 5: LaggedStart(Group):  75%|███████▌  | 9/12 [00:00<00:00, 89.84it/s]                                                                                                   INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/1606801221_27832                         
+                             69385_2632197337.mp4'                              
+[10/11/26 11:51:24] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             1_EvalLog/1606801221_40771                         
+                             06548_578304736.mp4'                               
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B11_EvalLog.mp4'                               
+                                                                                
+                    INFO     Rendered B11_EvalLog                   scene.py:247
+                             Played 7 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 3 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         Animation 1: Create(DashedLine):   0%|          | 0/9 [00:00<?, ?it/s]                                                                      Animation 2: Create(DashedVMobject), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                                 /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 4: LaggedStart(Group):   0%|          | 0/9 [00:00<?, ?it/s]                                                                      Animation 5: LaggedStart(Group):   0%|          | 0/8 [00:00<?, ?it/s]                                                                      [audit] scenes: 9 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B12_EntityRes
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 3 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 3 submobjects):  53%|█████▎    | 9/17 [00:00<00:00, 81.45it/s]                                                                                            [10/11/26 11:51:25] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/3429491395_107                         
+                             2783203_2636970356.mp4'                            
+Animation 1: FadeIn(Text('HUMAN Security')):   0%|          | 0/12 [00:00<?, ?it/s]Animation 1: FadeIn(Text('HUMAN Security')):  75%|███████▌  | 9/12 [00:00<00:00, 83.04it/s]                                                                                           [10/11/26 11:51:26] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/1606801221_297                         
+                             4962296_2150424148.mp4'                            
+[10/11/26 11:51:27] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/1606801221_166                         
+                             7918475_2330994292.mp4'                            
+[10/11/26 11:51:28] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/1606801221_148                         
+                             754194_633994534.mp4'                              
+Animation 4: Create(Line):   0%|          | 0/24 [00:00<?, ?it/s]Animation 4: Create(Line):  42%|████▏     | 10/24 [00:00<00:00, 97.66it/s]Animation 4: Create(Line):  83%|████████▎ | 20/24 [00:00<00:00, 98.35it/s]                                                                                              INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/1606801221_293                         
+                             9706333_1476174091.mp4'                            
+Animation 5: FadeIn(Text('?')):   0%|          | 0/10 [00:00<?, ?it/s]Animation 5: FadeIn(Text('?')): 100%|██████████| 10/10 [00:00<00:00, 96.59it/s]                                                                                                   INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/1606801221_175                         
+                             0658331_2251818226.mp4'                            
+[10/11/26 11:51:30] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             2_EntityRes/1606801221_136                         
+                             8966127_1324441853.mp4'                            
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B12_EntityRes.mp4'                             
+                                                                                
+                    INFO     Rendered B12_EntityRes                 scene.py:247
+                             Played 7 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 3 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]                                                                                    Animation 1: FadeIn(Text('HUMAN Security')):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                  /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 4: Create(Line):   0%|          | 0/15 [00:00<?, ?it/s]                                                                 Animation 5: FadeIn(Text('?')):   0%|          | 0/6 [00:00<?, ?it/s]                                                                     [audit] scenes: 10 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B13_Confirm
+Manim Community v0.18.1
+
+Animation 0: FadeIn(Text('model-judgment')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: FadeIn(Text('model-judgment')), etc.:  75%|███████▌  | 9/12 [00:00<00:00, 86.16it/s]                                                                                                 [10/11/26 11:51:31] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             3_Confirm/3429491395_35256                         
+                             9687_1479768581.mp4'                               
+[10/11/26 11:51:32] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             3_Confirm/1606801221_14635                         
+                             14450_3774707767.mp4'                              
+Animation 2: Create(DashedVMobject), etc.:   0%|          | 0/20 [00:00<?, ?it/s]Animation 2: Create(DashedVMobject), etc.:  40%|████      | 8/20 [00:00<00:00, 79.22it/s]Animation 2: Create(DashedVMobject), etc.:  85%|████████▌ | 17/20 [00:00<00:00, 81.60it/s]                                                                                          [10/11/26 11:51:33] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             3_Confirm/1606801221_19142                         
+                             38788_4175873312.mp4'                              
+[10/11/26 11:51:34] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             3_Confirm/1606801221_85390                         
+                             637_3295530262.mp4'                                
+Animation 4: Create(DashedVMobject), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 4: Create(DashedVMobject), etc.:  47%|████▋     | 7/15 [00:00<00:00, 68.70it/s]                                                                                                             INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             3_Confirm/1606801221_23352                         
+                             4332_428954785.mp4'                                
+[10/11/26 11:51:35] INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             3_Confirm/1606801221_20123                         
+                             56996_1508897231.mp4'                              
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B13_Confirm.mp4'                               
+                                                                                
+                    INFO     Rendered B13_Confirm                   scene.py:247
+                             Played 6 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(Text('model-judgment')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                        /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: Create(DashedVMobject), etc.:   0%|          | 0/12 [00:00<?, ?it/s]                                                                                 Animation 4: Create(DashedVMobject), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                [audit] scenes: 9 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B14_WhyProject
+Manim Community v0.18.1
+
+Animation 0: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: _MethodAnimation(VGroup of 2 submobjects), etc.:  53%|█████▎    | 8/15 [00:00<00:00, 72.29it/s]                                                                                                            [10/11/26 11:51:37] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/3429491395_28                         
+                             69967533_650574360.mp4'                            
+[10/11/26 11:51:38] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_64                         
+                             3485841_2024499879.mp4'                            
+Animation 2: FadeOut(VGroup of 4 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 2: FadeOut(VGroup of 4 submobjects), etc.:  47%|████▋     | 7/15 [00:00<00:00, 69.40it/s]Animation 2: FadeOut(VGroup of 4 submobjects), etc.: 100%|██████████| 15/15 [00:00<00:00, 72.29it/s]                                                                                                    [10/11/26 11:51:39] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_39                         
+                             51257374_8804853.mp4'                              
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 3: FadeIn(VGroup of 2 submobjects), etc.:  60%|██████    | 9/15 [00:00<00:00, 87.98it/s]                                                                                                                      INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_20                         
+                             76461021_4131132508.mp4'                           
+[10/11/26 11:51:40] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_22                         
+                             45460977_944956089.mp4'                            
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B14_WhyProject.mp4'                            
+                                                                                
+                    INFO     Rendered B14_WhyProject                scene.py:247
+                             Played 5 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                                   /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: FadeOut(VGroup of 4 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                          Animation 3: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         [audit] scenes: 6 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B15_HandCheck
+Manim Community v0.18.1
+
+Animation 0: LaggedStart(Group), etc.:   0%|          | 0/22 [00:00<?, ?it/s]Animation 0: LaggedStart(Group), etc.:  45%|████▌     | 10/22 [00:00<00:00, 91.85it/s]Animation 0: LaggedStart(Group), etc.:  91%|█████████ | 20/22 [00:00<00:00, 91.74it/s]                                                                                      [10/11/26 11:51:41] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/3429491395_247                         
+                             0056670_2358810818.mp4'                            
+[10/11/26 11:51:43] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/1606801221_275                         
+                             7304784_977064075.mp4'                             
+                    INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/1606801221_212                         
+                             600462_860570259.mp4'                              
+Animation 3: FadeOut(Text('new to me')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 3: FadeOut(Text('new to me')), etc.:  67%|██████▋   | 10/15 [00:00<00:00, 90.30it/s]                                                                                                                  INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/1606801221_385                         
+                             0115944_1011521503.mp4'                            
+Animation 4: FadeIn(Text('AMGEN INC 1882.0')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 4: FadeIn(Text('AMGEN INC 1882.0')), etc.:  58%|█████▊    | 7/12 [00:00<00:00, 61.36it/s]                                                                                                   [10/11/26 11:51:44] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/1606801221_341                         
+                             8838728_1572787017.mp4'                            
+Animation 5: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]Animation 5: Create(VGroup of 2 submobjects), etc.: 100%|██████████| 11/11 [00:00<00:00, 102.62it/s]                                                                                                                        INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/1606801221_975                         
+                             265835_1011755800.mp4'                             
+[10/11/26 11:51:45] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             5_HandCheck/1606801221_290                         
+                             1521252_1589289507.mp4'                            
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B15_HandCheck.mp4'                             
+                                                                                
+                    INFO     Rendered B15_HandCheck                 scene.py:247
+                             Played 7 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: LaggedStart(Group), etc.:   0%|          | 0/14 [00:00<?, ?it/s]                                                                             /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 3: FadeOut(Text('new to me')), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                    Animation 4: FadeIn(Text('AMGEN INC 1882.0')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                          Animation 5: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]                                                                                         [audit] scenes: 9 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B16_Decisions
+Manim Community v0.18.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/17 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects), etc.:  53%|█████▎    | 9/17 [00:00<00:00, 82.18it/s]                                                                                                  [10/11/26 11:51:47] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/3429491395_192                         
+                             6668307_3288295056.mp4'                            
+[10/11/26 11:51:48] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_364                         
+                             0521594_3279809615.mp4'                            
+Animation 2: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/24 [00:00<?, ?it/s]Animation 2: _MethodAnimation(VGroup of 2 submobjects), etc.:  38%|███▊      | 9/24 [00:00<00:00, 88.90it/s]Animation 2: _MethodAnimation(VGroup of 2 submobjects), etc.:  79%|███████▉  | 19/24 [00:00<00:00, 90.44it/s]                                                                                                                                 INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_151                         
+                             6529376_3586862120.mp4'                            
+Animation 3: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 3: Create(VGroup of 2 submobjects), etc.:  83%|████████▎ | 10/12 [00:00<00:00, 92.14it/s]                                                                                                   [10/11/26 11:51:49] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_394                         
+                             2195610_2150450232.mp4'                            
+                    INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_242                         
+                             3963266_2525409128.mp4'                            
+                    INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_269                         
+                             2369264_709686176.mp4'                             
+Animation 6: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 6: FadeIn(VGroup of 2 submobjects), etc.:  60%|██████    | 9/15 [00:00<00:00, 84.37it/s]                                                                                                                      INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_357                         
+                             3222217_2994646086.mp4'                            
+[10/11/26 11:51:51] INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             6_Decisions/1606801221_398                         
+                             6424442_2037559700.mp4'                            
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B16_Decisions.mp4'                             
+                                                                                
+                    INFO     Rendered B16_Decisions                 scene.py:247
+                             Played 8 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]                                                                                          /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: _MethodAnimation(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]                                                                                                    Animation 3: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                         Animation 6: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         [audit] scenes: 11 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B17_Status
+Manim Community v0.18.1
+
+Animation 0: LaggedStart(Group):   0%|          | 0/20 [00:00<?, ?it/s]Animation 0: LaggedStart(Group):  50%|█████     | 10/20 [00:00<00:00, 93.38it/s]Animation 0: LaggedStart(Group): 100%|██████████| 20/20 [00:00<00:00, 84.77it/s]                                                                                [10/11/26 11:51:52] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             7_Status/3429491395_123605                         
+                             9542_3557791495.mp4'                               
+[10/11/26 11:51:53] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             7_Status/1606801221_171182                         
+                             2059_2598240672.mp4'                               
+Animation 2: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 2: FadeIn(VGroup of 2 submobjects), etc.:  67%|██████▋   | 10/15 [00:00<00:00, 91.21it/s]                                                                                                   [10/11/26 11:51:54] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             7_Status/1606801221_113499                         
+                             6584_3405977259.mp4'                               
+[10/11/26 11:51:55] INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             7_Status/1606801221_239665                         
+                             9141_3545394524.mp4'                               
+Animation 4: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 4: FadeIn(VGroup of 2 submobjects), etc.:  60%|██████    | 9/15 [00:00<00:00, 84.70it/s]                                                                                                                      INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             7_Status/1606801221_778984                         
+                             636_1119065167.mp4'                                
+[10/11/26 11:51:56] INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             7_Status/1606801221_565391                         
+                             788_2568881401.mp4'                                
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B17_Status.mp4'                                
+                                                                                
+                    INFO     Rendered B17_Status                    scene.py:247
+                             Played 6 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: LaggedStart(Group):   0%|          | 0/12 [00:00<?, ?it/s]                                                                       /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         Animation 4: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         [audit] scenes: 9 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[run] rendering B18_WhyNow
+Manim Community v0.18.1
+
+Animation 0: GrowFromCenter(Dot), etc.:   0%|          | 0/10 [00:00<?, ?it/s]Animation 0: GrowFromCenter(Dot), etc.: 100%|██████████| 10/10 [00:00<00:00, 97.75it/s]                                                                                       [10/11/26 11:51:57] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/3429491395_336856                         
+                             3454_3121381338.mp4'                               
+[10/11/26 11:51:58] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_214912                         
+                             0621_2494163174.mp4'                               
+Animation 2: Create(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                    INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_332800                         
+                             6533_809876594.mp4'                                
+Animation 3: _MethodAnimation(Line):   0%|          | 0/24 [00:00<?, ?it/s]Animation 3: _MethodAnimation(Line):  42%|████▏     | 10/24 [00:00<00:00, 96.07it/s]Animation 3: _MethodAnimation(Line):  88%|████████▊ | 21/24 [00:00<00:00, 100.07it/s]                                                                                                         INFO     Animation 3 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_316812                         
+                             3929_1539673332.mp4'                               
+Animation 4: FadeOut(Line):   0%|          | 0/8 [00:00<?, ?it/s]                                                                 [10/11/26 11:51:59] INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_165308                         
+                             8721_1539673332.mp4'                               
+Animation 5: FadeIn(Text('2 of 2')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 5: FadeIn(Text('2 of 2')), etc.:  67%|██████▋   | 8/12 [00:00<00:00, 71.99it/s]                                                                                                             INFO     Animation 5 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_492793                         
+                             294_2821545402.mp4'                                
+[10/11/26 11:52:00] INFO     Animation 6 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_362935                         
+                             9524_3352227049.mp4'                               
+Animation 7: Create(DashedVMobject):   0%|          | 0/17 [00:00<?, ?it/s]Animation 7: Create(DashedVMobject):  59%|█████▉    | 10/17 [00:00<00:00, 98.73it/s]                                                                                    [10/11/26 11:52:01] INFO     Animation 7 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_418982                         
+                             4562_3286594512.mp4'                               
+                    INFO     Animation 8 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             8_WhyNow/1606801221_253640                         
+                             1712_1148567340.mp4'                               
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B18_WhyNow.mp4'                                
+                                                                                
+                    INFO     Rendered B18_WhyNow                    scene.py:247
+                             Played 9 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: GrowFromCenter(Dot), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                             /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: Create(Line):   0%|          | 0/5 [00:00<?, ?it/s]                                                                Animation 3: _MethodAnimation(Line):   0%|          | 0/15 [00:00<?, ?it/s]                                                                           Animation 4: FadeOut(Line):   0%|          | 0/5 [00:00<?, ?it/s]                                                                 Animation 5: FadeIn(Text('2 of 2')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                Animation 7: Create(DashedVMobject):   0%|          | 0/11 [00:00<?, ?it/s]                                                                           [audit] scenes: 12 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[remotion] BIDEA: ok: BrutalistHesitantWriter -> media/BIDEA.mp4
+[remotion] BDEFS: ok: ClaudeDefinitions -> media/BDEFS.mp4
+[remotion] BOUT: ok: ShowTellCard -> media/BOUT.mp4
+[remotion] stamped provenance in beat_sheet.json + updated consumers.json
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled BIDEA  VIDEO    11.6s  ← BIDEA.mp4
+[art] compiled BDEFS  VIDEO    12.0s  ← BDEFS.mp4
+[art] compiled B00  MANIM    21.5s  ← B00.mp4
+[art] compiled B02  MANIM    15.0s  ← B02.mp4
+[art] compiled B03  MANIM     8.8s  ← B03.mp4
+[art] compiled B04  MANIM    14.0s  ← B04.mp4
+[art] compiled B05  MANIM    12.8s  ← B05.mp4
+[art] compiled B06  MANIM     5.2s  ← B06.mp4
+[art] compiled B07  MANIM    12.3s  ← B07.mp4
+[art] compiled B08  MANIM    12.3s  ← B08.mp4
+[art] compiled B09  MANIM     3.5s  ← B09.mp4
+[art] compiled B10  MANIM     7.6s  ← B10.mp4
+[art] compiled B11  MANIM    13.5s  ← B11.mp4
+[art] compiled B12  MANIM    13.5s  ← B12.mp4
+[art] compiled B13  MANIM     8.7s  ← B13.mp4
+[art] compiled B14  MANIM     8.8s  ← B14.mp4
+[art] compiled B15  MANIM    11.2s  ← B15.mp4
+[art] compiled B16  MANIM    12.3s  ← B16.mp4
+[art] compiled B17  MANIM     9.9s  ← B17.mp4
+[art] compiled B18  MANIM    12.8s  ← B18.mp4
+[art] compiled BOUT  VIDEO     9.5s  ← BOUT.mp4
+[art] motion histogram: graphic:18  remotion:3
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'ShowTellCard' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (21/21 filled)
+[art] QC contact sheet → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/qc-sheet.png
+[art] wrote /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/show-tell-reallocation-recipe-pitch-slate.mp4  (236.8s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 21/21 filled — BIDEA:VIDEO BDEFS:VIDEO B00:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM B15:MANIM B16:MANIM B17:MANIM B18:MANIM BOUT:VIDEO
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=42 BLOCKER=0 MAJOR=0 → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/_qc/REPORT.md
+[run] done → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/SHOTLIST.md

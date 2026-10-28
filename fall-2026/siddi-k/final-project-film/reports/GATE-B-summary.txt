@@ -1,0 +1,34 @@
+# Gate B (manim_layout_audit.py --png --curve-strict, inside art run, ART_STRICT=1), one line per rendered scene
+## art-run-4k.log
+[run] rendering B00_Triage
+[audit] scenes: 20 snapshots → CLEAN
+[run] rendering B01_BigCount
+[audit] scenes: 17 snapshots → CLEAN
+[run] rendering B02_Ghost
+[audit] scenes: 15 snapshots → CLEAN
+[run] rendering B03_Reader
+[audit] scenes: 12 snapshots → CLEAN
+[run] rendering B04_Loop
+[audit] scenes: 20 snapshots → CLEAN
+[run] rendering B05_Fence
+[audit] scenes: 13 snapshots → CLEAN
+[run] rendering B06_Gate
+[audit] scenes: 11 snapshots → CLEAN
+[run] rendering B07_Eval
+[audit] scenes: 12 snapshots → CLEAN
+[run] rendering B08_First
+[audit] scenes: 7 snapshots → CLEAN
+[run] rendering B09_Risk
+[audit] scenes: 14 snapshots → CLEAN
+[run] rendering B10_Why
+[audit] scenes: 11 snapshots → CLEAN
+[run] rendering B11_Honest
+## art-run-4k-resume.log
+[run] rendering B11_Honest
+[audit] scenes: 9 snapshots → CLEAN
+[run] rendering BOUT_Title
+[audit] scenes: 4 snapshots → CLEAN
+## art-run-4k-b09.log
+[run] rendering B09_Risk
+[audit] scenes: 14 snapshots → CLEAN
+# notes: the first art run was interrupted while rendering B11_Honest (no audit line); the resumed run rendered B11 and BOUT. B09 was re-rendered after its honesty tag was corrected (art-run-4k-b09.log); the final master uses that B09.

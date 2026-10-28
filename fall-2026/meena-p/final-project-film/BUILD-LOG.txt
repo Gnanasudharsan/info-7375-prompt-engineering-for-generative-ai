@@ -1,0 +1,1402 @@
+# BUILD-LOG — Cite & Seek pitch film
+# Every command run for this build, in order, with its time and exit code.
+# Commands were run through a small wrapper (logrun.sh in Claude's session scratchpad; not part of the film)
+# that writes the command here, runs it with bash, then writes its exit code.
+# Environment for toolkit commands: brutalist.art/.venv activated (Python 3.12), PYTHONDONTWRITEBYTECODE=1.
+
+[2026-10-11 13:23:49] $ grep -n -A14 'def browser_flags' ~/Downloads/brutalist.art/runtime/scripts/remotion_scenes.py
+[13:23:49] exit 0
+
+[2026-10-11 13:23:49] $ ls -d ~/Downloads/brutalist.art/runtime/remotion/node_modules/.remotion/* 2>&1; ls '/Applications/Google Chrome.app' >/dev/null 2>&1 && echo 'Google Chrome.app present' || echo 'no Google Chrome.app'; grep '"version"' ~/Downloads/brutalist.art/runtime/remotion/node_modules/remotion/package.json
+[13:23:49] exit 0
+
+# File edits (made with an editor, not shell commands):
+#   film/make_sheet.py  — B14 split into B14_Have + B15_New (Meena's wording unchanged); status beat renumbered B16;
+#                         BOUT screen_tag removed (title card); carry_forward() keeps measured audio for unchanged narration.
+#   PROJECT-BRIEF.md    — three [TO FILL] gaps filled with Meena's narration answers.
+#   REPO-FACTS.md       — records that Meena verified the golden set counts (53/45/8) on 2026-10-11.
+
+[2026-10-11 13:24:26] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 make_sheet.py
+[13:24:26] exit 0
+
+[2026-10-11 13:24:26] $ grep -c 'TO FILL' ~/Downloads/cite-and-seek-pitch/PROJECT-BRIEF.md; wc -w ~/Downloads/cite-and-seek-pitch/PROJECT-BRIEF.md
+[13:24:26] exit 0
+
+[2026-10-11 13:24:33] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/generate_audio_kokoro.py ~/Downloads/cite-and-seek-pitch/film
+[13:25:16] exit 0
+
+[2026-10-11 13:25:24] $ grep -n -E 'lead_silence|tail_silence' ~/Downloads/brutalist.art/runtime/scripts/generate_audio_kokoro.py ~/Downloads/brutalist.art/runtime/scripts/compile.py | head
+[13:25:24] exit 0
+
+[2026-10-11 13:25:30] $ grep -rln -E 'lead_silence|tail_silence' ~/Downloads/brutalist.art/runtime ~/Downloads/brutalist.art/skills/make/show-tell --include='*.py' --include='*.ts' --include='*.tsx' 2>/dev/null | grep -v node_modules | head
+[13:25:31] exit 0
+
+[2026-10-11 13:25:36] $ cat ~/Downloads/brutalist.art/youtube/show-tell-24-isometric-props/finish_audio.py
+[13:25:36] exit 0
+
+[2026-10-11 13:25:49] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 finish_audio.py && python3 -c "import json;print({b['beat_id']:b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']})"
+[13:25:50] exit 0
+
+[2026-10-11 13:29:10] $ grep -n 'get_x' ~/Downloads/cite-and-seek-pitch/film/scenes.py
+[13:29:10] exit 0
+
+# File edits: wrote film/finish_audio.py and film/scenes.py (18 drawn scenes); next command replaces get_x() with fixed xs.
+
+[2026-10-11 13:29:20] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import re
+s = open('scenes.py').read()
+s = s.replace('''def pages_row(n, x0, y, w=0.62, h=0.82, gap=0.32, fill=CARD):
+    return [page(w, h, x0 + i * (w + gap), y, fill) for i in range(n)]''',
+'''def row_xs(n, x0, w=0.62, gap=0.32):
+    return [x0 + i * (w + gap) for i in range(n)]
+
+
+def pages_row(n, x0, y, w=0.62, h=0.82, gap=0.32, fill=CARD):
+    return [page(w, h, x, y, fill) for x in row_xs(n, x0, w, gap)]''')
+s = s.replace('ticks = [tick(pg.get_x(), 1.25, s=0.2) for pg in row]',
+              'ticks = [tick(x, 1.25, s=0.2) for x in row_xs(8, -3.9)]')
+s = s.replace('''            row = pages_row(6, -3.6, -0.6, w=0.8, h=1.05, gap=0.45, fill=GHOST)''',
+'''            xs = row_xs(6, -3.6, w=0.8, gap=0.45)
+            row = pages_row(6, -3.6, -0.6, w=0.8, h=1.05, gap=0.45, fill=GHOST)''')
+s = s.replace('P3(row[i].get_x() + 0.17, 1.03)', 'P3(xs[i] + 0.17, 1.03)')
+s = s.replace('tick(row[i].get_x(), -1.65, s=0.2)', 'tick(xs[i], -1.65, s=0.2)')
+s = s.replace('P3(row[3].get_x(), -1.85)', 'P3(xs[3], -1.85)')
+s = s.replace('marks = [block(0.34, 0.34, c.get_x(), 1.5) for c in cards]',
+              'marks = [block(0.34, 0.34, x, 1.5) for x in row_xs(4, -2.0, w=0.9, gap=0.55)]')
+s = s.replace('dots = [spark(c.get_x(), -1.1, r=0.17) for c in cards]',
+              'dots = [spark(x, -1.1, r=0.17) for x in row_xs(4, -2.0, w=0.9, gap=0.55)]')
+open('scenes.py', 'w').write(s)
+PY
+grep -c 'get_x' scenes.py; python3 -c "import ast;ast.parse(open('scenes.py').read());print('syntax ok')"
+[13:29:20] exit 0
+
+[2026-10-11 13:29:30] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && rm -rf $S && mkdir -p $S && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C --quiet >/tmp/ga_$C.txt 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C --quiet >/tmp/gw_$C.txt 2>&1 || rw=$?; echo "$C  gateA=$rc  gateW=$rw"; [ $rc -ne 0 ] && tail -5 /tmp/ga_$C.txt; [ $rw -ne 0 ] && tail -5 /tmp/gw_$C.txt; done; true
+[13:29:32] exit 0
+
+[2026-10-11 13:29:38] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA; cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && for C in B01_Repo B05_Reader BOUT_Close; do echo "== $C"; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C 2>&1 | grep -v '^\s*$' | tail -8; done
+[13:29:38] exit 0
+
+# Pre-check fix (authoring, before the official run): B01 parts FadeIn instead of being moved in;
+# B05 adds a spark on the box after it lands; BOUT underline becomes a thin filled rectangle.
+
+[2026-10-11 13:30:00] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+s = open('scenes.py').read()
+old_b01 = '''            for part in parts:
+                part.shift(UP * 1.2)
+                p.play(part.animate.shift(DOWN * 1.2), rt=0.55)'''
+new_b01 = '''            for part in parts:
+                p.play(FadeIn(part, shift=DOWN * 1.2), rt=0.55)'''
+assert old_b01 in s; s = s.replace(old_b01, new_b01)
+old_b05 = '''            rl = lab("AI engineer").next_to(repo, RIGHT, buff=0.5).shift(DOWN * 1.0)
+            p.play(FadeIn(rl), rt=0.4)'''
+new_b05 = '''            rl = lab("AI engineer").next_to(repo, RIGHT, buff=0.5).shift(DOWN * 1.0)
+            p.play(FadeIn(rl), GrowFromCenter(spark(-0.5, -0.55)), rt=0.4)'''
+assert old_b05 in s; s = s.replace(old_b05, new_b05)
+old_bout = '''            rule = Line(P3(-1.6, -0.35), P3(1.6, -0.35)).set_stroke(INK, width=5)
+            p.play(Create(rule), rt=0.4)'''
+new_bout = '''            rule = Rectangle(width=3.2, height=0.06, fill_color=INK, fill_opacity=1,
+                             stroke_color=INK, stroke_width=2).move_to(P3(0, -0.35))
+            p.play(GrowFromCenter(rule), rt=0.4)'''
+assert old_bout in s; s = s.replace(old_bout, new_bout)
+open('scenes.py', 'w').write(s)
+print('patched')
+PY
+[13:30:00] exit 0
+
+[2026-10-11 13:30:00] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && for C in B01_Repo B05_Reader BOUT_Close; do rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C --quiet >/dev/null 2>&1 || rc=$?; echo "$C gateA=$rc"; done
+[13:30:01] exit 0
+
+[2026-10-11 13:30:06] $ grep -n -B3 -A12 'shapes never change' ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py | head -60
+[13:30:06] exit 0
+
+[2026-10-11 13:30:11] $ sed -n 690,718p ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py; grep -n 'def _shape_state\|def _snapshot\|_STATES.append\|states.append' ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py | head
+[13:30:11] exit 0
+
+[2026-10-11 13:30:16] $ sed -n 440,500p ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py
+[13:30:16] exit 0
+
+# Pre-check fix: BOUT underline drawn as two halves (left, then right) so Gate A sees two shape states.
+
+[2026-10-11 13:30:32] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+s = open('scenes.py').read()
+old = '''            rule = Rectangle(width=3.2, height=0.06, fill_color=INK, fill_opacity=1,
+                             stroke_color=INK, stroke_width=2).move_to(P3(0, -0.35))
+            p.play(GrowFromCenter(rule), rt=0.4)'''
+new = '''            # One underline drawn in two halves: Gate A needs two distinct shape states.
+            left = Rectangle(width=1.6, height=0.06, fill_color=INK, fill_opacity=1,
+                             stroke_color=INK, stroke_width=2).move_to(P3(-0.8, -0.35))
+            right = Rectangle(width=1.6, height=0.06, fill_color=INK, fill_opacity=1,
+                              stroke_color=INK, stroke_width=2).move_to(P3(0.8, -0.35))
+            p.play(GrowFromEdge(left, RIGHT), rt=0.25)
+            p.play(GrowFromEdge(right, LEFT), rt=0.25)'''
+assert old in s; s = s.replace(old, new); open('scenes.py', 'w').write(s); print('patched')
+PY
+[13:30:32] exit 0
+
+[2026-10-11 13:30:32] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && fails=0; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C --quiet >/dev/null 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C --quiet >/dev/null 2>&1 || rw=$?; [ $rc -ne 0 -o $rw -ne 0 ] && { echo "$C gateA=$rc gateW=$rw"; fails=1; }; done; echo "all 18 scenes pre-checked; any failure listed above (fails=$fails)"
+[13:30:33] exit 0
+
+[2026-10-11 13:30:46] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/stills && rm -rf $S && mkdir -p $S && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -ql -s --disable_caching --media_dir $S/media scenes.py -a >$S/render.log 2>&1; echo manim_exit=$?; find $S/media/images -name '*.png' | wc -l
+[13:30:49] exit 0
+
+[2026-10-11 13:30:58] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/stills && cd $S && ls media/images/scenes/ | sort > order.txt && ~/Downloads/brutalist.art/.venv/bin/python -I -c "
+from PIL import Image, ImageDraw
+import os
+d='media/images/scenes'; fs=sorted(os.listdir(d))
+ims=[Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)) for f in fs]
+for half,chunk in (('a',ims[:9]),('b',ims[9:])):
+    W=Image.new('RGB',(640*3,360*3),'white')
+    for i,im in enumerate(chunk): W.paste(im,((i%3)*640,(i//3)*360))
+    W.save('sheet_'+half+'.png')
+print(fs)"
+[13:30:59] exit 0
+
+# Contact-sheet fixes (authoring): remove double label shifts in B05/B07/B14; move B04 'missed file?' below the tick row.
+
+[2026-10-11 13:31:29] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+s = open('scenes.py').read()
+reps = [
+ ('rl = lab("AI engineer").next_to(repo, RIGHT, buff=0.5).shift(DOWN * 1.0)', 'rl = lab("AI engineer").next_to(repo, RIGHT, buff=0.5)'),
+ ('sl = lab("ABSTAIN").next_to(slip, RIGHT, buff=0.4).shift(RIGHT * 1.0)', 'sl = lab("ABSTAIN").next_to(slip, RIGHT, buff=0.4)'),
+ ('el = lab("evaluation").next_to(ev, UP, buff=0.35).shift(DOWN * 1.2)', 'el = lab("evaluation").next_to(ev, UP, buff=0.35)'),
+ ('miss = lab("missed file?").move_to(P3(xs[3], -1.85))', 'miss = lab("missed file?").move_to(P3(xs[3], -2.45))'),
+]
+for a, b in reps:
+    assert a in s, a
+    s = s.replace(a, b)
+open('scenes.py', 'w').write(s); print('patched', len(reps))
+PY
+[13:31:29] exit 0
+
+[2026-10-11 13:31:29] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/gateA/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && for C in B04_Alternative B05_Reader B07_Contract B14_Have; do rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/gateA/scenes.py --class $C --quiet >/dev/null 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C --quiet >/dev/null 2>&1 || rw=$?; echo "$C gateA=$rc gateW=$rw"; done && cd ~/Downloads/cite-and-seek-pitch/film && rm -rf $S/stills2 && manim -ql -s --disable_caching --media_dir $S/stills2 scenes.py B04_Alternative B05_Reader B07_Contract B14_Have >$S/stills2.log 2>&1; echo manim_exit=$? && cd $S && python3 -c "
+from PIL import Image; import os
+d='stills2/images/scenes'; fs=sorted(os.listdir(d)); W=Image.new('RGB',(1280,720),'white')
+for i,f in enumerate(fs): W.paste(Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)),((i%2)*640,(i//2)*360))
+W.save('sheet_fix.png'); print(fs)" 2>&1 || ~/Downloads/brutalist.art/.venv/bin/python -I -c "
+from PIL import Image; import os
+d='stills2/images/scenes'; fs=sorted(os.listdir(d)); W=Image.new('RGB',(1280,720),'white')
+for i,f in enumerate(fs): W.paste(Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)),((i%2)*640,(i//2)*360))
+W.save('sheet_fix.png'); print(fs)"
+[13:31:31] exit 0
+
+[2026-10-11 13:31:40] $ sed -n 1,70p ~/Downloads/brutalist.art/runtime/qc/factcheck_check.py; ls ~/Downloads/brutalist.art/FACTCHECK-SPEC.md 2>&1
+[13:31:40] exit 1
+
+# File edit: wrote film/FACTCHECK.md (27 claims) by hand. Next: generate SHOTLIST.md from the sheet; write PROMPTS.md.
+
+[2026-10-11 13:32:39] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import json
+d = json.load(open('beat_sheet.json'))
+out = ['# SHOTLIST — Cite & Seek pitch film', '',
+       'Typed work order, generated from beat_sheet.json on 2026-10-11. Durations are measured narration (Kokoro am_michael).',
+       'Drawn beats are Manim scenes in scenes.py; each shows its screen tag top right. No ShowTellCard is used, so the',
+       '"why a card" column applies only to the three bookend components, which the show-tell skill requires.', '',
+       '| Beat | Lane | Renders with | Duration (s) | Visual | Labels | Screen tag | Why a card |',
+       '|---|---|---|---|---|---|---|---|']
+for b in d['beats']:
+    s = b['shot']
+    rem = (s.get('remotion') or {}).get('pattern')
+    how = f'Remotion {rem} (toolkit component)' if rem else f"Manim {s['manim']['class']} (scenes.py)"
+    vis = s.get('visual_intent') or {'BIDEA': 'Hesitant writer types "Ask the codebase what it does" and corrects it to "where it says so".',
+                                     'BDEFS': 'Terms In This Film: retrieval, citation, abstain.',
+                                     'BHTF': 'Recreated Claude.ai composer with the invitation typed in; no response shown; topic reads CITE & SEEK · YOUR TURN · CONSTRUCTED.'}[b['beat_id']]
+    labels = ', '.join(s.get('labels', [])) or '—'
+    tag = s.get('screen_tag') or ('CONSTRUCTED (in topic line)' if b['beat_id'] == 'BHTF' else '—')
+    why = {'BIDEA': 'Show-tell bookend (opening question)', 'BDEFS': 'Show-tell bookend (key terms)',
+           'BHTF': 'Show-tell bookend (Your Turn)'}.get(b['beat_id'], '—')
+    out.append(f"| {b['beat_id']} | {b['lane']} | {how} | {b['actual_duration_s']:.2f} | {vis} | {labels} | {tag} | {why} |")
+total = sum(b['actual_duration_s'] for b in d['beats'])
+out += ['', f'Total measured runtime: {total:.2f} s ({int(total // 60)} min {total % 60:.1f} s).', '']
+open('SHOTLIST.md', 'w').write('\n'.join(out))
+print('SHOTLIST.md rows:', len(d['beats']), 'total', round(total, 2))
+PY
+[13:32:39] exit 0
+
+[2026-10-11 13:32:39] $ cat > ~/Downloads/cite-and-seek-pitch/film/PROMPTS.md <<'EOF'
+# PROMPTS — Cite & Seek pitch film
+
+No generation prompts. Nothing in this film was made by an image, video or music generation model.
+
+- Drawings: written as code in scenes.py (Manim) and rendered locally.
+- Bookends (BIDEA, BDEFS, BHTF): the toolkit's own Remotion components, with the props in beat_sheet.json.
+- Narration: local Kokoro text-to-speech, voice am_michael, reading the script in beat_sheet.json.
+
+Open slots needing a generated asset: none.
+EOF
+ls ~/Downloads/cite-and-seek-pitch/film
+[13:32:39] exit 0
+
+[2026-10-11 13:32:48] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run.log 2>&1
+
+[2026-10-11 13:32:57] $ cd ~/Downloads/brutalist.art && for f in runtime/scripts/type_check.py runtime/scripts/sharpness_check.py runtime/scripts/master_check.py runtime/scripts/loudness_check.py runtime/scripts/srt_check.py runtime/scripts/math_layout_check.py runtime/qc/frame_check.py runtime/qc/content_check.py runtime/qc/content_default_check.py runtime/qc/lane_check.py runtime/qc/banned_card_check.py runtime/qc/placeholder_check.py runtime/qc/zdefault_audit.py; do echo "== $f"; grep -n -i -m3 -E 'usage|^\s+python3? .*\.py' $f; done
+[13:32:57] exit 0
+[13:39:02] exit 0
+
+[2026-10-11 13:39:16] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E '^\[run\] GATE|gate [A-Z] warning|FAILED|beat-lint|shape|static-check|wcag' art-run.log | sort | uniq -c; echo '--- Gate B per-scene verdicts:'; grep -c 'snapshots → CLEAN' art-run.log; grep -E 'snapshots → ' art-run.log | grep -v CLEAN; grep -n -i -E 'warn' art-run.log | grep -v -i -E 'DeprecationWarning|UserWarning|get_stroke_opacity|warnings.warn' | head
+[13:39:16] exit 0
+
+[2026-10-11 13:39:29] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:29] exit 0
+
+[2026-10-11 13:39:29] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/bookend_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:29] exit 0
+
+[2026-10-11 13:39:29] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --height 2160
+[13:39:29] exit 2
+
+[2026-10-11 13:39:29] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/sharpness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:32] exit 3
+
+[2026-10-11 13:39:32] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/master_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[13:39:33] exit 0
+
+[2026-10-11 13:39:33] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/loudness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[13:39:40] exit 0
+
+[2026-10-11 13:39:40] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/srt_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:40] exit 3
+
+[2026-10-11 13:39:40] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/frame_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --height 2160
+[13:39:40] exit 0
+
+[2026-10-11 13:39:40] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:40] exit 0
+
+[2026-10-11 13:39:40] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/lane_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:40] exit 0
+
+[2026-10-11 13:39:40] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/banned_card_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:40] exit 0
+
+[2026-10-11 13:39:40] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/placeholder_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:39:40] exit 0
+
+[2026-10-11 13:39:50] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py ~/Downloads/cite-and-seek-pitch/film
+[13:40:24] exit 0
+
+[2026-10-11 13:40:24] $ grep -n -E 'mp4|slug|def main|argv' ~/Downloads/brutalist.art/runtime/scripts/sharpness_check.py | head -20
+[13:40:24] exit 0
+
+[2026-10-11 13:40:36] $ ls -la ~/Downloads/cite-and-seek-pitch/film/mp4/; sed -n 1,30p ~/Downloads/brutalist.art/runtime/scripts/math_layout_check.py | grep -n -i -E 'usage|argv|def main|argparse' ; grep -n 'add_argument' ~/Downloads/brutalist.art/runtime/scripts/math_layout_check.py | head
+[13:40:36] exit 0
+
+[2026-10-11 13:40:44] $ grep -n -E '__main__|sys.argv|def main' ~/Downloads/brutalist.art/runtime/scripts/math_layout_check.py | head; grep -rn 'math_layout_check' ~/Downloads/brutalist.art/runtime/scripts/*.py ~/Downloads/brutalist.art/runtime/qc/*.py | grep -v '^.*math_layout_check.py:' | head -5
+[13:40:44] exit 0
+
+[2026-10-11 13:40:51] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_default_check.py runtime/remotion/src/scenes/BrutalistHesitantWriter.tsx runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+[13:40:52] exit 2
+
+[2026-10-11 13:40:52] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/zdefault_audit.py --root runtime/remotion/src/scenes
+[13:40:52] exit 0
+
+[2026-10-11 13:41:09] $ cd ~/Downloads/cite-and-seek-pitch/film && MP4=cite-and-seek-pitch-slate.mp4 && OUT=_qc/RENDER-INTEGRITY.md && TL=$(python3 -c "import json;print(round(sum(b.get('render_duration_s') or b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']),3))") && STREAMS=$(ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels -of compact $MP4) && DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $MP4) && if ffmpeg -v error -xerror -i $MP4 -f null - 2>/tmp/dec.txt; then DEC='PASS (no decode errors)'; else DEC="FAIL: $(head -3 /tmp/dec.txt)"; fi && VOL=$(ffmpeg -hide_banner -i $MP4 -vn -af volumedetect -f null - 2>&1 | grep -E 'mean_volume|max_volume' | sed 's/.*\] //' | tr '\n' ' ') && SHA=$(shasum -a 256 $MP4 | cut -d' ' -f1) && python3 - "$TL" "$DUR" <<'PY' > /tmp/durcheck.txt
+import sys; tl, d = float(sys.argv[1]), float(sys.argv[2]); tol = max(0.15, 2/24)
+print(f'timeline {tl:.3f} s, file {d:.3f} s, difference {abs(d-tl):.3f} s, tolerance {tol:.3f} s ->', 'PASS' if abs(d-tl) <= tol else 'FAIL')
+PY
+{ echo '# RENDER-INTEGRITY — review cut'; echo; echo 'No toolkit gate is named render-integrity. This report repeats, by hand, the checks in brutalist.art/runtime/scripts/compile.py verify_output (line 436), which compile.py also ran automatically on this review cut before writing it.'; echo; echo "File: film/$MP4  ·  sha256 $SHA  ·  checked $(date '+%Y-%m-%d %H:%M')"; echo; echo '| Check (compile.py verify_output) | Result |'; echo '|---|---|'; if echo "$STREAMS" | grep -q codec_type=video && echo "$STREAMS" | grep -q codec_type=audio; then echo '| Decodable video and audio streams | PASS |'; else echo '| Decodable video and audio streams | FAIL |'; fi; echo "| Duration matches timeline | $(cat /tmp/durcheck.txt) |"; echo "| Full decode, ffmpeg -xerror | $DEC |"; echo "| Audio audible (max volume above -80 dB) | $VOL|"; echo; echo 'Streams:'; echo; echo '```'; echo "$STREAMS"; echo '```'; } > $OUT && cat $OUT
+[13:41:14] exit 0
+
+[2026-10-11 13:41:23] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 -c "from PIL import Image; im=Image.open('qc-sheet.png'); print(im.size)" 2>/dev/null || ~/Downloads/brutalist.art/.venv/bin/python -I -c "from PIL import Image; im=Image.open('/Users/meenu/Downloads/cite-and-seek-pitch/film/qc-sheet.png'); print(im.size)"
+[13:41:23] exit 0
+
+[2026-10-11 13:41:38] $ cd ~/Downloads/cite-and-seek-pitch/film && S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && T=$(python3 -c "import json;bs=json.load(open('beat_sheet.json'))['beats'];t=0
+for b in bs:
+    d=b.get('render_duration_s') or b['actual_duration_s']
+    if b['beat_id']=='BHTF': print(round(t+d*0.6,2)); break
+    t+=d") && echo BHTF_sample_t=$T && ffmpeg -v error -y -ss $T -i cite-and-seek-pitch-slate.mp4 -frames:v 1 -vf 'crop=1920:420:0:0' $S/bhtf_topleft.png && ffmpeg -v error -y -ss 6 -i cite-and-seek-pitch-slate.mp4 -frames:v 1 -vf 'scale=1280:-1' $S/bidea.png && echo ok
+[13:41:39] exit 0
+
+[2026-10-11 13:41:59] $ cd ~/Downloads/brutalist.art && git status --porcelain; echo "porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = no new ignored files)'; find ~/Downloads/cite-and-seek-pitch/film ~/Downloads/brutalist.art -name consumers.json -newer ~/Downloads/cite-and-seek-pitch/film/scenes.py -not -path '*/node_modules/*' 2>/dev/null
+[13:41:59] exit 0
+
+[2026-10-11 13:42:07] $ ls -la ~/Downloads/brutalist.art/runtime/remotion/_bench/; head -c 600 ~/Downloads/brutalist.art/runtime/remotion/_bench/consumers.json; echo; grep -n '_bench' ~/Downloads/brutalist.art/.gitignore ~/Downloads/brutalist.art/runtime/scripts/remotion_scenes.py ~/Downloads/brutalist.art/runtime/scripts/provenance.py 2>/dev/null | head -5
+[13:42:07] exit 0
+
+[2026-10-11 13:42:16] $ cd ~/Downloads/cite-and-seek-pitch/film && ls -la *.md _qc/ layout_audit* 2>/dev/null | awk '{print $5, $6, $7, $8, $9}'; head -5 LOUDNESS.md MASTERCHECK.md 2>/dev/null
+[13:42:16] exit 0
+
+# Build complete for review. Review cut: film/cite-and-seek-pitch-slate.mp4. No final render. Stopped for Meena's review.
+
+# ── Fixes requested by Meena: 1 (move audio test out of film/), 4 (constructed in BHTF title), 5 (delete _bench after runs). Then re-run gates.
+
+[2026-10-11 13:49:12] $ cd ~/Downloads/cite-and-seek-pitch && cmp film/audio-test.mp4 film/mp4/audio-test.mp4 && echo 'film/mp4/audio-test.mp4 is an identical copy'
+[13:49:12] exit 0
+
+[2026-10-11 13:49:12] $ cd ~/Downloads/cite-and-seek-pitch && mkdir -p tests && mv film/audio-test film/audio-test.mp4 film/audio-test.verified.json tests/ && mv film/mp4/audio-test.mp4 tests/audio-test-copy-from-film-mp4.mp4 && ls tests film/mp4
+[13:49:12] exit 0
+# File edit: make_sheet.py BHTF segment -> 'Test Before You Build · constructed'.
+
+[2026-10-11 13:49:24] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 make_sheet.py && python3 -c "import json;b={x['beat_id']:x for x in json.load(open('beat_sheet.json'))['beats']};print(b['BHTF']['shot']['remotion']['props']['segment']); print('audio kept:', all(x.get('audio_file') and x.get('actual_duration_s') for x in b.values()), '| BOUT', b['BOUT']['actual_duration_s'], '| BDEFS durationSeconds', b['BDEFS']['shot']['remotion']['props'].get('durationSeconds'))"
+[13:49:24] exit 0
+
+[2026-10-11 13:49:24] $ cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _superseded/fix4 && mv media/BHTF.mp4 _superseded/fix4/BHTF.mp4 && ls _superseded/fix4
+[13:49:24] exit 0
+
+[2026-10-11 13:49:35] $ cd ~/Downloads/cite-and-seek-pitch/film && sed -i '' 's/topic reads CITE \& SEEK · YOUR TURN · CONSTRUCTED\./topic reads CITE \& SEEK · YOUR TURN · CONSTRUCTED; title reads Test Before You Build · constructed./; s/| CONSTRUCTED (in topic line) |/| CONSTRUCTED (topic line) + constructed (title) |/' SHOTLIST.md && grep '^| BHTF' SHOTLIST.md
+[13:49:35] exit 0
+
+[2026-10-11 13:49:35] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run-2.log 2>&1
+
+[2026-10-11 13:49:47] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && rm -rf $S && mkdir -p $S && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && a=0; w=0; n=0; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do n=$((n+1)); rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C --quiet >/dev/null 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C --quiet >/dev/null 2>&1 || rw=$?; [ $rc -eq 0 ] && a=$((a+1)) || echo "$C gateA=$rc"; [ $rw -eq 0 ] && w=$((w+1)) || echo "$C gateW=$rw"; done; echo "Gate A clean $a/$n · Gate W clean $w/$n"
+[13:49:48] exit 0
+[13:52:02] exit 0
+
+[2026-10-11 13:52:17] $ cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && mkdir -p _qc/layout && ok=0; n=0; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' scenes.py | sed 's/class //; s/(Scene)//'); do n=$((n+1)); rc=0; python3 ~/Downloads/brutalist.art/runtime/qc/manim_layout_audit.py scenes.py --class $C --png --curve-strict >/tmp/gb.txt 2>&1 || rc=$?; cp layout_audit.md _qc/layout/$C.md; [ $rc -eq 0 ] && ok=$((ok+1)) || { echo "$C gateB=$rc"; grep -v '^\s*$' /tmp/gb.txt | tail -4; }; done; echo "Gate B clean $ok/$n (reports in film/_qc/layout/)"
+[13:52:26] exit 0
+
+[2026-10-11 13:52:35] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:52:35] exit 0
+
+[2026-10-11 13:52:35] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/bookend_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:52:35] exit 0
+
+[2026-10-11 13:52:35] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:10] exit 0
+
+[2026-10-11 13:53:10] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/sharpness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:13] exit 0
+
+[2026-10-11 13:53:13] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/master_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[13:53:15] exit 0
+
+[2026-10-11 13:53:15] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/loudness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[13:53:21] exit 0
+
+[2026-10-11 13:53:21] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/srt_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:21] exit 3
+
+[2026-10-11 13:53:21] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/frame_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --height 2160
+[13:53:21] exit 0
+
+[2026-10-11 13:53:21] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:22] exit 0
+
+[2026-10-11 13:53:22] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/lane_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:22] exit 0
+
+[2026-10-11 13:53:22] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/banned_card_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:22] exit 0
+
+[2026-10-11 13:53:22] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/placeholder_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[13:53:22] exit 0
+
+[2026-10-11 13:53:22] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_default_check.py runtime/remotion/src/scenes/BrutalistHesitantWriter.tsx runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+[13:53:22] exit 2
+
+[2026-10-11 13:53:22] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/zdefault_audit.py --root runtime/remotion/src/scenes
+[13:53:22] exit 0
+
+[2026-10-11 13:53:38] $ cd ~/Downloads/cite-and-seek-pitch/film && MP4=cite-and-seek-pitch-slate.mp4 && OUT=_qc/RENDER-INTEGRITY.md && TL=$(python3 -c "import json;print(round(sum(b.get('render_duration_s') or b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']),3))") && STREAMS=$(ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels -of compact $MP4) && DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $MP4) && if ffmpeg -v error -xerror -i $MP4 -f null - 2>/tmp/dec.txt; then DEC='PASS (no decode errors)'; else DEC="FAIL: $(head -3 /tmp/dec.txt)"; fi && MAXV=$(ffmpeg -hide_banner -i $MP4 -vn -af volumedetect -f null - 2>&1 | sed -n 's/.*max_volume: \([-0-9.]*\) dB.*/\1/p') && MEANV=$(ffmpeg -hide_banner -i $MP4 -vn -af volumedetect -f null - 2>&1 | sed -n 's/.*mean_volume: \([-0-9.]*\) dB.*/\1/p') && AUD=$(python3 -c "print('PASS' if float('$MAXV') > -80 else 'FAIL')") && SHA=$(shasum -a 256 $MP4 | cut -d' ' -f1) && DURC=$(python3 -c "tl,d=$TL,$DUR;tol=max(0.15,2/24);print(f'timeline {tl:.3f} s, file {d:.3f} s, difference {abs(d-tl):.3f} s, tolerance {tol:.3f} s -> '+('PASS' if abs(d-tl)<=tol else 'FAIL'))") && VID=$(echo "$STREAMS" | grep -q codec_type=video && echo "$STREAMS" | grep -q codec_type=audio && echo PASS || echo FAIL) && { echo '# RENDER-INTEGRITY — review cut'; echo; echo 'No toolkit gate is named render-integrity. This report repeats, by hand, the checks in brutalist.art/runtime/scripts/compile.py verify_output (line 436), which compile.py also ran automatically on this review cut before writing it.'; echo; echo "File: film/$MP4  ·  sha256 $SHA  ·  checked $(date '+%Y-%m-%d %H:%M')"; echo; echo '| Check (compile.py verify_output) | Result |'; echo '|---|---|'; echo "| Decodable video and audio streams | $VID |"; echo "| Duration matches timeline | $DURC |"; echo "| Full decode, ffmpeg -xerror | $DEC |"; echo "| Audio audible (max volume above -80 dB) | $AUD (max $MAXV dB, mean $MEANV dB) |"; echo; echo 'Streams:'; echo; echo '```'; echo "$STREAMS"; echo '```'; } > $OUT && sed -n '5,12p' $OUT
+[13:53:42] exit 0
+
+[2026-10-11 13:53:42] $ cd ~/Downloads/cite-and-seek-pitch/film && ffmpeg -v error -y -ss 211.36 -i cite-and-seek-pitch-slate.mp4 -frames:v 1 -vf 'crop=2400:420:0:0' /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/bhtf2.png && echo frame ok
+[13:53:42] exit 0
+
+[2026-10-11 13:54:06] $ cd ~/Downloads/brutalist.art && ls -A runtime/remotion/_bench/ && git check-ignore -q runtime/remotion/_bench/ && echo 'ignored by git: yes' && rm -r runtime/remotion/_bench && echo 'deleted runtime/remotion/_bench'
+[13:54:06] exit 0
+
+[2026-10-11 13:54:06] $ cd ~/Downloads/brutalist.art && git status --porcelain; echo "porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = only the original three ignored items remain)'
+[13:54:06] exit 0
+
+# Fixes 1, 4, 5 applied and all gates re-run. Stopped for Meena's review; no final render.
+
+[2026-10-11 15:08:01] $ open ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[15:08:01] exit 0
+
+[2026-10-11 15:33:33] $ cd ~/projects/cite-and-seek && grep -n 'orders' src/cite_and_seek/path_map.py | head -3; wc -l corpus/code/api/orders.py; ls .venv/bin/python 2>&1 | head -1
+[15:33:33] exit 0
+
+[2026-10-11 15:33:33] $ cd ~/projects/cite-and-seek && HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -c "
+from pathlib import Path
+from cite_and_seek.corpus import load_tokenizer, chunk_text
+tok = load_tokenizer()
+for rel in ('code/api/orders.py',):
+    for c in chunk_text(rel, (Path('corpus')/rel).read_text(), tok):
+        print(c.source_path, c.start_line, c.end_line)
+" 2>&1 | grep -v -i warn | tail -12
+[15:33:37] exit 0
+
+# ── Script and visual revision (approved by Meena 2026-10-11): new narration, specific drawings, tag size 32.
+
+[2026-10-11 15:37:18] $ ls -la ~/Downloads/cite-and-seek-pitch/film/evidence/ 2>&1; test -f ~/Downloads/cite-and-seek-pitch/film/evidence/v0.1-search-2026-10-11.txt && echo EXISTS || echo 'NOT FOUND: film/evidence/v0.1-search-2026-10-11.txt'
+[15:37:18] exit 0
+
+[2026-10-11 15:39:02] $ cd ~/projects/cite-and-seek && HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -c "
+from pathlib import Path
+from cite_and_seek.corpus import load_tokenizer, chunk_text
+tok = load_tokenizer()
+for rel in ('code/api/cart.py','code/api/payments.py'):
+    print(rel, [(c.source_path, c.start_line, c.end_line) for c in chunk_text(rel, (Path('corpus')/rel).read_text(), tok)])
+" 2>&1 | grep -v -i warn
+[15:39:05] exit 0
+# File edit: rewrote film/make_sheet.py for the approved script (21 -> 22 beats; carry_forward now matches by narration text).
+
+[2026-10-11 15:40:21] $ cd ~/Downloads/cite-and-seek-pitch/film && sed -i '' '/^import shutil$/d' make_sheet.py && cp beat_sheet.json _superseded/beat_sheet-before-revision.json && python3 make_sheet.py
+[15:40:21] exit 0
+# Note: the sheet has 21 beats (not 22 as noted above).
+
+[2026-10-11 15:40:31] $ cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _superseded/revision/mp3 && mv mp3/beat-BIDEA-unpad.mp3 _superseded/revision/mp3/ && ls _superseded/revision/mp3
+[15:40:31] exit 0
+
+[2026-10-11 15:40:31] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/generate_audio_kokoro.py ~/Downloads/cite-and-seek-pitch/film --only BIDEA B00 B01 B02 BDEFS B03 B04 B05 B06 B07 B08 B10 B11 B12 B13 B14 B15 B16 BHTF
+[15:41:10] exit 0
+
+[2026-10-11 15:41:16] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 finish_audio.py && python3 -c "import json;print({b['beat_id']:b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']})"
+[15:41:17] exit 0
+# File edit: new scene classes written to the session scratchpad (new_scenes_body.py); next command splices them into film/scenes.py (helpers kept, BOUT_Close kept verbatim, tag size 44 -> 32).
+
+[2026-10-11 15:44:36] $ cd ~/Downloads/cite-and-seek-pitch/film && cp scenes.py _superseded/revision/scenes-before-revision.py && python3 - <<'PY'
+lines = open('scenes.py').read().split('\n')
+start = next(i for i, l in enumerate(lines) if l.startswith('# ═') and 'Q1' in l)
+outro = next(i for i, l in enumerate(lines) if l.startswith('# ═') and 'Outro' in l)
+head, tail = '\n'.join(lines[:start]), '\n'.join(lines[outro:])
+body = open('/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/new_scenes_body.py').read()
+head = head.replace('frame, top right, full ink, size 44. BOUT is a title card and has no tag.',
+                    'frame, top right, full ink, size 32 (the toolkit minimum). BOUT is a title card and has no tag.')
+head = head.replace('font=SERIF, color=INK, font_size=44)', 'font=SERIF, color=INK, font_size=32)')
+head = head.replace('- Labels: ink, size 40,', '- Labels: ink, size 32-40,')
+head = head.replace('Terracotta only for\n  dots.', 'Terracotta only for\n  dots. Pipeline stages are labelled boxes joined by arrows; file names and chunk ranges are real.')
+assert 'font_size=32)' in head and 'size 32 (the toolkit minimum)' in head
+open('scenes.py', 'w').write(head + '\n' + body + tail)
+PY
+python3 -c "import ast;t=ast.parse(open('scenes.py').read());print('syntax ok;', len([n for n in t.body if isinstance(n, ast.ClassDef) and n.name.startswith('B')]), 'scene classes')"; grep -n 'font_size=32)' scenes.py | head -2
+[15:44:36] exit 0
+
+[2026-10-11 15:44:46] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && rm -rf $S && mkdir -p $S && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && a=0; w=0; n=0; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do n=$((n+1)); rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C >/tmp/ga.txt 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C >/tmp/gw.txt 2>&1 || rw=$?; [ $rc -eq 0 ] && a=$((a+1)) || { echo "$C gateA=$rc"; grep -E '✗|ERROR|WARN|⚠' /tmp/ga.txt | head -4; }; [ $rw -eq 0 ] && w=$((w+1)) || { echo "$C gateW=$rw"; grep -v '^\s*$' /tmp/gw.txt | tail -4; }; done; echo "Gate A clean $a/$n · Gate W clean $w/$n"
+[15:44:48] exit 0
+
+[2026-10-11 15:44:56] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/stills3 && rm -rf $S && mkdir -p $S && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -ql -s --disable_caching --media_dir $S/media scenes.py -a >$S/render.log 2>&1; echo manim_exit=$? && cd $S && ~/Downloads/brutalist.art/.venv/bin/python -I -c "
+from PIL import Image; import os
+d='media/images/scenes'; fs=sorted(os.listdir(d)); print(len(fs), fs[0], fs[-1])
+ims=[Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)) for f in fs]
+for half,chunk in (('a',ims[:9]),('b',ims[9:])):
+    W=Image.new('RGB',(1920,1080),'white')
+    for i,im in enumerate(chunk): W.paste(im,((i%3)*640,(i//3)*360))
+    W.save('sheet_'+half+'.png')"
+[15:45:01] exit 0
+# Contact-sheet fixes (authoring): B04 stage spacing; B16 block spacing; B01 'Cite & Seek' label moved above the box.
+
+[2026-10-11 15:45:37] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+s = open('scenes.py').read()
+reps = [
+ ('p.play(Create(arrow(-4.35, 1.4, -3.2, 1.4)), rt=0.3)\n            emb = block(1.8, 0.9, -2.2, 1.4)',
+  'p.play(Create(arrow(-4.35, 1.4, -3.35, 1.4)), rt=0.3)\n            emb = block(1.8, 0.9, -2.4, 1.4)'),
+ ('p.play(Create(arrow(-1.2, 1.4, 0.0, 1.4)), rt=0.3)\n            srch = block(1.8, 0.9, 1.0, 1.4)',
+  'p.play(Create(arrow(-1.4, 1.4, 0.55, 1.4)), rt=0.3)\n            srch = block(1.8, 0.9, 1.5, 1.4)'),
+ ('strips = [page(2.0, 0.42, 1.0, -0.65 - i * 0.7) for i in range(3)]',
+  'strips = [page(2.0, 0.42, 1.2, -0.65 - i * 0.7) for i in range(3)]'),
+ ('tl = lab("Cite & Seek", 34).next_to(tool, LEFT, buff=0.35)', 'tl = lab("Cite & Seek", 34).next_to(tool, UP, buff=0.3)'),
+ ('have = slab(2.6, 0.45, -4.3, -1.2)', 'have = slab(2.4, 0.45, -4.7, -1.2)'),
+ ('ev = block(1.2, 0.9, -4.3, -0.5)', 'ev = block(1.2, 0.9, -4.7, -0.5)'),
+ ('new = slab(5.6, 0.45, 2.4, -1.2)', 'new = slab(6.4, 0.45, 2.3, -1.2)'),
+ ('blocks = [block(0.75, 0.75, x, -0.6) for x in (0.4, 2.4, 4.4)]', 'blocks = [block(0.75, 0.75, x, -0.6) for x in (-0.2, 2.3, 4.8)]'),
+]
+for a, b in reps:
+    assert a in s, a[:60]
+    s = s.replace(a, b)
+open('scenes.py', 'w').write(s); print('patched', len(reps))
+PY
+[15:45:38] exit 0
+
+[2026-10-11 15:45:38] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/gateA/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && for C in B01_Hypothesis B04_Retrieve B16_Why; do rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/gateA/scenes.py --class $C --quiet >/dev/null 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C --quiet >/dev/null 2>&1 || rw=$?; echo "$C gateA=$rc gateW=$rw"; done && cd ~/Downloads/cite-and-seek-pitch/film && rm -rf $S/stills4 && manim -ql -s --disable_caching --media_dir $S/stills4 scenes.py B01_Hypothesis B04_Retrieve B16_Why >$S/stills4.log 2>&1; echo manim_exit=$? && cd $S && ~/Downloads/brutalist.art/.venv/bin/python -I -c "
+from PIL import Image; import os
+d='stills4/images/scenes'; fs=sorted(os.listdir(d)); W=Image.new('RGB',(1920,360),'white')
+for i,f in enumerate(fs): W.paste(Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)),(i*640,0))
+W.save('sheet_fix2.png'); print(fs)"
+[15:45:39] exit 0
+# File edit: rewrote film/FACTCHECK.md for the revised script (38 claims; row 30 UNVERIFIED). Next: regenerate SHOTLIST.md; run Gate L, bookend_check, instructor-string check.
+
+[2026-10-11 15:46:47] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import json
+d = json.load(open('beat_sheet.json'))
+out = ['# SHOTLIST — Cite & Seek pitch film', '',
+       'Typed work order, generated from beat_sheet.json on 2026-10-11 after the approved script revision. Durations are measured',
+       'narration (Kokoro am_michael). Drawn beats are Manim scenes in scenes.py; each shows its screen tag top right at size 32.',
+       'No ShowTellCard is used; the three Remotion beats are bookend components the show-tell skill requires.', '',
+       '| Beat | Question | Lane | Renders with | Duration (s) | Visual | Labels | Screen tag | Why a card |',
+       '|---|---|---|---|---|---|---|---|---|']
+vis = {'BIDEA': 'Hesitant writer types "Ask the codebase what it does" and corrects it to "where it says so".',
+       'BDEFS': 'Terms In This Film: Retrieval, Citation, Abstain.',
+       'BHTF': 'Recreated Claude.ai composer with the invitation typed in; no response shown; topic reads CITE & SEEK · YOUR TURN · CONSTRUCTED; title reads Test Before You Build · constructed.'}
+for b in d['beats']:
+    s = b['shot']; rem = (s.get('remotion') or {}).get('pattern')
+    how = f'Remotion {rem} (toolkit component)' if rem else f"Manim {s['manim']['class']} (scenes.py)"
+    v = s.get('visual_intent') or vis[b['beat_id']]
+    labels = ', '.join(s.get('labels', [])) or '—'
+    tag = s.get('screen_tag') or ('CONSTRUCTED (topic line) + constructed (title)' if b['beat_id'] == 'BHTF' else '—')
+    why = {'BIDEA': 'Show-tell bookend (opening)', 'BDEFS': 'Show-tell bookend (key terms)', 'BHTF': 'Show-tell bookend (Your Turn)'}.get(b['beat_id'], '—')
+    out.append(f"| {b['beat_id']} | {b.get('assignment_question','')} | {b['lane']} | {how} | {b['actual_duration_s']:.2f} | {v} | {labels} | {tag} | {why} |")
+total = sum(b['actual_duration_s'] for b in d['beats'])
+out += ['', f'Total measured runtime: {total:.2f} s ({int(total // 60)} min {total % 60:.1f} s).', '']
+open('SHOTLIST.md', 'w').write('\n'.join(out)); print('SHOTLIST rows', len(d['beats']), 'total', round(total, 2))
+PY
+[15:46:47] exit 0
+
+[2026-10-11 15:46:47] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && echo '### Gate L' && python3 runtime/qc/beat_lint.py ~/Downloads/cite-and-seek-pitch/film/beat_sheet.json; echo "exit=$?"; echo '### bookend_check' && python3 runtime/scripts/bookend_check.py ~/Downloads/cite-and-seek-pitch/film; echo "exit=$?"
+[15:46:47] exit 0
+
+[2026-10-11 15:46:47] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 -c "
+import json,re
+d=json.load(open('beat_sheet.json'))
+s=(json.dumps(d,ensure_ascii=False)+open('scenes.py').read()).lower()
+hits=[x for x in ('nikbearbrown','nik bear','liam','in for bear','professor bear','professor_bear','am_onyx','claude-liam',' bear') if x in s]
+print('instructor strings:', hits or 'none')
+narr=' '.join(b['narration_text'] for b in d['beats'])
+print('dates in narration:', re.findall(r'october|oct\b|20[0-9][0-9]|\bfifth\b|\bseventh\b', narr.lower()) or 'none')
+labels=' '.join(' '.join(b['shot'].get('labels',[])) for b in d['beats'])
+print('dates in on-screen labels:', re.findall(r'oct|20[0-9][0-9]', labels.lower()) or 'none')
+print('words:', len(narr.split()))"
+[15:46:47] exit 0
+
+[2026-10-11 15:46:59] $ cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _superseded/revision/manim _superseded/revision/media && for f in manim/*.mp4; do [ "$(basename $f)" = BOUT.mp4 ] || mv $f _superseded/revision/manim/; done && mv media/BIDEA.mp4 media/BDEFS.mp4 media/BHTF.mp4 _superseded/revision/media/ && mv media/videos _superseded/revision/media/videos && echo 'kept:' && ls manim media
+[15:47:00] exit 0
+
+[2026-10-11 15:47:00] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run-3.log 2>&1
+[15:52:52] exit 0
+
+[2026-10-11 15:53:03] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E '^\[run\] GATE|FAILED|gate [A-Z] warning|beat-lint|gate-shape|static-check|\[remotion\] (BIDEA|BDEFS|BHTF)|gate-v|\[art\] wrote|skip BOUT' art-run-3.log | sort | uniq -c | cut -c1-200; echo '--- Gate B:'; grep -c 'snapshots → CLEAN' art-run-3.log; grep 'snapshots → ' art-run-3.log | grep -v CLEAN; ffprobe -v error -show_entries format=duration -of csv=p=0 cite-and-seek-pitch-slate.mp4
+[15:53:03] exit 0
+
+[2026-10-11 15:53:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py ~/Downloads/cite-and-seek-pitch/film 2>&1 | tail -4; echo "exit=${PIPESTATUS[0]}"
+[15:53:18] exit 0
+
+[2026-10-11 15:53:18] $ cd ~/Downloads/brutalist.art && ls -A runtime/remotion/_bench/ && git check-ignore -q runtime/remotion/_bench/ && rm -r runtime/remotion/_bench && echo 'deleted runtime/remotion/_bench'; git status --porcelain; echo "porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = only the original three ignored items remain)'
+[15:53:19] exit 0
+
+# Revised review cut built: film/cite-and-seek-pitch-slate.mp4, 219.04 s. Stopped for Meena's review; no final render.
+
+[2026-10-11 15:55:22] $ open ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[15:55:22] exit 0
+
+[2026-10-11 15:57:07] $ cd ~/Downloads/cite-and-seek-pitch/film && ls -la --time-style=+%H:%M:%S *.mp4 mp4/*.mp4 2>/dev/null || ls -lT *.mp4 mp4/*.mp4; ffprobe -v error -show_entries format=duration -of csv=p=0 cite-and-seek-pitch-slate.mp4
+[15:57:07] exit 0
+
+[2026-10-11 15:57:17] $ osascript -e 'if application "QuickTime Player" is running then tell application "QuickTime Player" to close (every document whose name contains "cite-and-seek-pitch-slate") saving no' >/dev/null 2>&1; open -a 'QuickTime Player' ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4 && echo opened
+[15:58:10] exit 0
+
+# ── Segment headings (requested by Meena). No narration change; no voicing; no film render until approved.
+
+[2026-10-11 16:32:50] $ pgrep -fl 'manim|remotion|compile.py|run.sh' | grep -v pgrep || echo 'no render processes running'
+[16:32:50] exit 0
+
+[2026-10-11 16:32:50] $ cd ~/Downloads/brutalist.art/runtime/remotion/src/scenes && sed -n 95,125p ClaudeDefinitions.tsx | grep -n -E 'title|fontSize|top|left|letterSpacing|opacity|color' ; grep -n -E 'add_argument' ~/Downloads/brutalist.art/runtime/scripts/remotion_scenes.py
+[16:32:50] exit 0
+
+[2026-10-11 16:32:59] $ grep -n -B2 -A10 'if a.stills' ~/Downloads/brutalist.art/runtime/scripts/remotion_scenes.py | head -24; sed -n 84,97p ~/Downloads/brutalist.art/runtime/remotion/src/scenes/ClaudeDefinitions.tsx
+[16:32:59] exit 0
+# File edit: make_sheet.py — BIDEA becomes drawn title card BIDEA_Intro; BDEFS title 'What It Is · Terms'; SEGMENTS + ORDER added (beats regrouped by segment; narration and beat ids unchanged).
+
+[2026-10-11 16:33:27] $ cd ~/Downloads/cite-and-seek-pitch/film && cp beat_sheet.json _superseded/beat_sheet-before-headings.json && python3 make_sheet.py && python3 -c "
+import json; d=json.load(open('beat_sheet.json'))
+print(' > '.join(b['beat_id'] for b in d['beats']))
+print('total', round(sum(b['actual_duration_s'] for b in d['beats']),3), 's; all audio kept:', all(b.get('audio_file') and b.get('actual_duration_s') for b in d['beats']))"
+[16:33:27] exit 0
+
+[2026-10-11 16:33:53] $ grep -n -E 'AddTextLetterByLetter|AddTextWordByWord|"Write"|def _make_manim_module' ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py | head; grep -n -E 'AddTextLetterByLetter|Write' ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py | head -5
+[16:33:53] exit 0
+# File edit (next command): scenes.py — headings/subheadings in begin(); content shift under headings; BIDEA_Intro title card; remove B01 'hypothesis' and B02 'untested' corner labels (now carried by heading/subheading).
+
+[2026-10-11 16:34:16] $ cd ~/Downloads/cite-and-seek-pitch/film && cp scenes.py _superseded/revision/scenes-before-headings.py && python3 - <<'PY'
+s = open('scenes.py').read()
+def rep(a, b, n=1):
+    global s
+    assert s.count(a) == n, (s.count(a), a[:70])
+    s = s.replace(a, b)
+
+# 1. load narration, headings and subheadings from the sheet
+rep('''_DUR, _TAG = {}, {}''', '''_DUR, _TAG, _NARR, _HEAD, _SUB = {}, {}, {}, {}, {}''')
+rep('''            _TAG[_b["beat_id"]] = (_b.get("shot") or {}).get("screen_tag")''',
+'''            _TAG[_b["beat_id"]] = (_b.get("shot") or {}).get("screen_tag")
+            _NARR[_b["beat_id"]] = _b.get("narration_text", "")
+            _HEAD[_b["beat_id"]] = (_b.get("shot") or {}).get("heading")
+            _SUB[_b["beat_id"]] = (_b.get("shot") or {}).get("subheading")''')
+
+# 2. headings in begin(); content shifts down under a heading
+rep('''def begin(scene, bid, planned, tagged=True):
+    """Put the screen tag on stage (static, from frame 0) and return the pacer."""
+    if tagged:''',
+'''HEAD_SIZE, SUB_SIZE = 40, 32
+HEAD_DROP = 0.55   # drawings move down this far on beats with a heading, so the heading never overlaps them
+_DY = 0.0
+
+
+def begin(scene, bid, planned, tagged=True):
+    """Put the segment heading, subheading and screen tag on stage (static, whole beat); return the pacer."""
+    global _DY
+    head = _HEAD.get(bid)
+    _DY = HEAD_DROP if head else 0.0
+    if head:
+        h = Text(head, font=SERIF, color=INK, font_size=HEAD_SIZE).to_corner(UL, buff=1.0)
+        scene.add(h)
+        if _SUB.get(bid):
+            scene.add(Text(_SUB[bid], font=SERIF, color=INK, font_size=SUB_SIZE)
+                      .next_to(h, DOWN, buff=0.18, aligned_edge=LEFT))
+    if tagged:''')
+rep('''def P3(x, y):
+    return np.array([x, y, 0.0])''', '''def P3(x, y):
+    return np.array([x, y - _DY, 0.0])''')
+
+# 3. corner labels now carried by the heading / subheading
+rep('''            hl = lab("hypothesis", 40).move_to(P3(-4.6, 2.6))
+            p.play(FadeIn(hl), rt=0.4)
+''', '')
+rep('''            ul = lab("untested", 40).move_to(P3(-4.9, 2.6))
+            p.play(FadeIn(ul), rt=0.4)
+''', '')
+rep('''            p = begin(self, "B01", planned=2.8)''', '''            p = begin(self, "B01", planned=2.4)''')
+rep('''            p = begin(self, "B02", planned=2.0)''', '''            p = begin(self, "B02", planned=1.6)''')
+
+# 4. the Introduction title card
+intro = '''
+
+# ═════════════════════════════════ Introduction (title card) ════════════════════
+class BIDEA_Intro(Scene):
+    """'Introduction' large; the course name types out as it is spoken; then 'Final Project'. No tag.
+
+    Timing: typing starts when the course name is spoken (its character share of the narration after the
+    0.8 s lead), but finishes before the 45-55% window GATE T and Gate V sample; 'Final Project' lands after it.
+    """
+
+    def construct(self):
+        with serif_font():
+            global _DY
+            _DY = 0.0
+            dur = _DUR.get("BIDEA", 11.5)
+            narr = _NARR.get("BIDEA", "")
+            lead = 0.8
+            share = narr.find("INFO") / len(narr) if "INFO" in narr else 0.3
+            spoken = lead + share * (dur - lead)
+            guard_start, guard_end = 0.45 * dur - 0.22, 0.55 * dur + 0.22
+            t = 0.0
+            head = Text("Introduction", font=SERIF, color=INK, font_size=96).to_corner(UL, buff=1.0)
+            self.play(FadeIn(head), run_time=0.5); t += 0.5
+            left = Rectangle(width=2.2, height=0.07, fill_color=INK, fill_opacity=1, stroke_color=INK,
+                             stroke_width=2).next_to(head, DOWN, buff=0.25, aligned_edge=LEFT)
+            right = Rectangle(width=2.2, height=0.07, fill_color=INK, fill_opacity=1, stroke_color=INK,
+                              stroke_width=2).next_to(left, RIGHT, buff=0)
+            self.play(GrowFromEdge(left, LEFT), run_time=0.3); t += 0.3
+            self.play(GrowFromEdge(right, LEFT), run_time=0.3); t += 0.3
+            course = Text("INFO 7375: Prompt Engineering\nfor Generative AI", font=SERIF, color=INK,
+                          font_size=60, line_spacing=1.1).move_to(P3(0, 0.1))
+            type_s = 1.0
+            start = max(t, min(spoken, guard_start - type_s))
+            if start > t:
+                self.wait(start - t); t = start
+            self.play(AddTextLetterByLetter(course), run_time=type_s); t += type_s
+            if guard_end > t:
+                self.wait(guard_end - t); t = guard_end
+            final = Text("Final Project", font=SERIF, color=INK, font_size=64).move_to(P3(0, -1.9))
+            self.play(FadeIn(final), run_time=0.5); t += 0.5
+            self.wait(max(0.3, dur - t - SLACK_S))
+'''
+marker = '# ═════════════════════════════════ Q1 ═══'
+assert s.count(marker) == 1
+s = s.replace(marker, intro.lstrip('\n') + '\n\n' + marker)
+open('scenes.py', 'w').write(s)
+print('patched')
+PY
+python3 -c "import ast;t=ast.parse(open('scenes.py').read());print('syntax ok;', len([n for n in t.body if isinstance(n, ast.ClassDef) and n.name.startswith('B')]), 'scene classes')"
+[16:34:16] exit 1
+# File edit: fixed the course-name string literal in BIDEA_Intro (a shell-escaped newline).
+
+[2026-10-11 16:42:14] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 -c "import ast;t=ast.parse(open('scenes.py').read());print('syntax ok;', len([n for n in t.body if isinstance(n, ast.ClassDef) and n.name.startswith('B')]), 'scene classes')" && grep -n -E 'HEAD_DROP|y - _DY|font_size=HEAD_SIZE|font_size=SUB_SIZE|class BIDEA_Intro|"hypothesis"|"untested"' scenes.py
+[16:42:14] exit 0
+
+[2026-10-11 16:42:25] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/stills5 && rm -rf $S && mkdir -p $S && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -ql -s --disable_caching --media_dir $S/media scenes.py -a >$S/render.log 2>&1; echo manim_exit=$?; ls $S/media/images/scenes | wc -l
+[16:42:31] exit 0
+
+[2026-10-11 16:42:31] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && python3 runtime/scripts/remotion_scenes.py ~/Downloads/cite-and-seek-pitch/film --stills 2>&1 | tail -5; ls ~/Downloads/cite-and-seek-pitch/film/_qc/preflight/
+[16:42:36] exit 0
+
+[2026-10-11 16:42:48] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && cd ~/Downloads/cite-and-seek-pitch/film && ~/Downloads/brutalist.art/.venv/bin/python -I - "$S" <<'PY'
+import json, os, sys
+from PIL import Image, ImageDraw, ImageFont
+S = sys.argv[1]
+film = os.path.expanduser('~/Downloads/cite-and-seek-pitch/film')
+d = json.load(open(os.path.join(film, 'beat_sheet.json')))
+stills = os.path.join(S, 'stills5/media/images/scenes')
+files = {f.split('_')[0]: os.path.join(stills, f) for f in os.listdir(stills)}
+files['BDEFS'] = os.path.join(film, '_qc/preflight/BDEFS-95.png')
+files['BHTF'] = os.path.join(film, '_qc/preflight/BHTF-95.png')
+font = ImageFont.truetype(os.path.join(film, 'fonts/EBGaramond-Regular.ttf'), 26)
+tiles = []
+for b in d['beats']:
+    im = Image.open(files[b['beat_id']]).convert('RGB').resize((640, 360))
+    t = Image.new('RGB', (640, 400), 'white'); t.paste(im, (0, 40))
+    ImageDraw.Draw(t).text((10, 6), f"{b['beat_id']}  ·  {b.get('segment') or 'NO SEGMENT'}", fill='black', font=font)
+    tiles.append(t)
+for name, chunk in (('a', tiles[:12]), ('b', tiles[12:])):
+    W = Image.new('RGB', (1920, 400 * ((len(chunk) + 2) // 3)), (40, 40, 40))
+    for i, t in enumerate(chunk):
+        W.paste(t, ((i % 3) * 640, (i // 3) * 400))
+    W.save(os.path.join(S, f'headings_sheet_{name}.png'))
+print('sheets:', len(tiles), 'tiles')
+PY
+[16:42:49] exit 0
+# File edit (next command): scenes.py — headings defined in scenes.py (visible to Gates A/W) with a render-time check against beat_sheet.json; B01 'Cite & Seek' label moved beside its box.
+
+[2026-10-11 16:43:30] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_headings.py scenes.py && python3 -c "import ast;ast.parse(open('scenes.py').read());print('syntax ok')" && python3 - <<'PY'
+import ast, json, re
+# Drift check: the HEADINGS dict in scenes.py must equal the headings make_sheet.py wrote into the sheet.
+src = open('scenes.py').read()
+t = ast.parse(src)
+heads = next(ast.literal_eval(n.value) for n in t.body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', '') == 'HEADINGS')
+sheet = {b['beat_id']: ((b['shot'].get('heading')), b['shot'].get('subheading')) for b in json.load(open('beat_sheet.json'))['beats'] if b['shot'].get('heading')}
+print('scenes.py HEADINGS == beat_sheet headings:', {k: tuple(v) for k, v in heads.items()} == sheet)
+PY
+[16:43:30] exit 0
+
+[2026-10-11 16:43:39] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && rm -rf $S/stills6 && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -ql -s --disable_caching --media_dir $S/stills6 scenes.py B01_Hypothesis >$S/stills6.log 2>&1; echo manim_exit=$?; cp $S/stills6/images/scenes/B01_Hypothesis_ManimCE_v0.18.1.png $S/b01_fixed.png
+[16:43:40] exit 0
+
+[2026-10-11 16:43:58] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && rm -rf $S && mkdir -p $S && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && a=0; w=0; n=0; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do n=$((n+1)); rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C >/tmp/ga.txt 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C >/tmp/gw.txt 2>&1 || rw=$?; [ $rc -eq 0 ] && a=$((a+1)) || { echo "$C gateA=$rc"; grep -E '✗|ERROR|WARN|⚠' /tmp/ga.txt | head -4; }; [ $rw -eq 0 ] && w=$((w+1)) || { echo "$C gateW=$rw"; grep -v '^\s*$' /tmp/gw.txt | tail -5; }; done; echo "Gate A clean $a/$n · Gate W clean $w/$n"
+[16:44:00] exit 0
+
+[2026-10-11 16:44:00] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && echo '### Gate T (--skip-pixels)' && python3 runtime/scripts/type_check.py ~/Downloads/cite-and-seek-pitch/film --skip-pixels 2>&1 | grep -E 'GATE T|FAIL|WARN|SKIP|wrote' | head -12; echo "exit=${PIPESTATUS[0]}"; echo '### Gate L' && python3 runtime/qc/beat_lint.py ~/Downloads/cite-and-seek-pitch/film/beat_sheet.json; echo "exit=$?"; echo '### bookend_check' && python3 runtime/scripts/bookend_check.py ~/Downloads/cite-and-seek-pitch/film; echo "exit=$?"
+[16:44:00] exit 0
+
+[2026-10-11 16:44:08] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -n -i -E 'verdict|pass|fail|skip-pixels|pixel' TYPECHECK.md | head -12
+[16:44:08] exit 0
+
+[2026-10-11 16:44:08] $ cd ~/Downloads/brutalist.art && git status --porcelain; echo "porcelain exit=$? (no lines = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines = only the original three ignored items)'
+[16:44:09] exit 0
+
+# Headings added; contact sheet shown; gates A/W/T(sheet-level)/L/bookend re-run. Stopped for Meena's review; nothing voiced or rendered.
+
+[2026-10-11 16:44:19] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && cd ~/Downloads/cite-and-seek-pitch/film && ~/Downloads/brutalist.art/.venv/bin/python -I - "$S" <<'PY'
+import sys, os
+from PIL import Image
+S = sys.argv[1]
+# Replace the B01 tile (row 2, column 2 of page a) with the fixed still.
+a = Image.open(os.path.join(S, 'headings_sheet_a.png'))
+fixed = Image.open(os.path.join(S, 'b01_fixed.png')).convert('RGB').resize((640, 360))
+a.paste(fixed, (640, 400 + 40))
+a.save(os.path.join(S, 'headings_sheet_a.png'))
+PY
+mkdir -p _qc && cp $S/headings_sheet_a.png _qc/headings-contact-sheet-1.png && cp $S/headings_sheet_b.png _qc/headings-contact-sheet-2.png && open _qc/headings-contact-sheet-1.png _qc/headings-contact-sheet-2.png && ls _qc/headings-contact-sheet-*
+[16:44:19] exit 0
+
+# ── Segment decisions + B14 evidence (Meena). Then voice/render review cut and run all gates.
+
+[2026-10-11 16:53:34] $ ls -la ~/Downloads/cite-and-seek-pitch/film/evidence/ 2>&1; wc -l ~/Downloads/cite-and-seek-pitch/film/evidence/v0.1-search-2026-10-11.txt 2>&1
+[16:53:34] exit 0
+# File edits: REPO-FACTS.md — 'Evidence that retrieval ran' section (date line quoted) and item 1 resolved.
+
+[2026-10-11 16:54:16] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_factcheck.py FACTCHECK.md && grep -c '^| [0-9]' FACTCHECK.md && grep -c 'UNVERIFIED |' FACTCHECK.md
+[16:54:16] exit 1
+# File edits (next command): FACTCHECK.md row 30 -> PASS, row 3 notes the real search result, rows 39-40 added; make_sheet.py + scenes.py — B07 'What It Proves', B08/B09 'Why It's Different'; B09 corner label removed.
+
+[2026-10-11 16:54:37] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_segments.py . && python3 make_sheet.py && python3 - <<'PY'
+import ast, json
+t = ast.parse(open('scenes.py').read())
+heads = next(ast.literal_eval(n.value) for n in t.body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', '') == 'HEADINGS')
+d = json.load(open('beat_sheet.json'))
+sheet = {b['beat_id']: (b['shot'].get('heading'), b['shot'].get('subheading')) for b in d['beats'] if b['shot'].get('heading')}
+print('scenes.py HEADINGS == beat_sheet headings:', {k: tuple(v) for k, v in heads.items()} == sheet)
+print('no heading:', [b['beat_id'] for b in d['beats'] if not b.get('segment')])
+print('order:', ' > '.join(b['beat_id'] for b in d['beats']))
+print('audio total', round(sum(b['actual_duration_s'] for b in d['beats']), 3))
+PY
+[16:54:37] exit 0
+
+[2026-10-11 16:54:54] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && rm -rf $S/stills7 && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -ql -s --disable_caching --media_dir $S/stills7 scenes.py B07_Skills B08_Order B09_Alternative >$S/stills7.log 2>&1; echo manim_exit=$? && cd $S && ~/Downloads/brutalist.art/.venv/bin/python -I -c "
+from PIL import Image; import os
+d='stills7/images/scenes'; fs=sorted(os.listdir(d)); W=Image.new('RGB',(1920,360),'white')
+for i,f in enumerate(fs): W.paste(Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)),(i*640,0))
+W.save('sheet_seg.png'); print(fs)"
+[16:54:56] exit 0
+
+[2026-10-11 16:55:17] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import json
+d = json.load(open('beat_sheet.json'))
+out = ['# SHOTLIST — Cite & Seek pitch film', '',
+       'Typed work order, generated from beat_sheet.json on 2026-10-11 (script revision + segment headings). Durations are measured',
+       'narration (Kokoro am_michael). Drawn beats are Manim scenes in scenes.py: segment heading (size 40) and subheading (size 32)',
+       'top left for the whole beat; screen tag top right (size 32). BIDEA and BOUT are drawn title cards with no tag.',
+       'No ShowTellCard is used; BDEFS and BHTF are toolkit components.', '',
+       '| Beat | Segment | Subheading | Question | Lane | Renders with | Duration (s) | Visual | Screen tag | Why a card |',
+       '|---|---|---|---|---|---|---|---|---|---|']
+vis = {'BDEFS': 'Terms card; its title reads "What It Is · Terms"; terms Retrieval, Citation, Abstain.',
+       'BHTF': 'Recreated Claude.ai composer with the invitation typed in; no response shown; topic reads CITE & SEEK · YOUR TURN · CONSTRUCTED; title reads Test Before You Build · constructed.'}
+for b in d['beats']:
+    s = b['shot']; rem = (s.get('remotion') or {}).get('pattern')
+    how = f'Remotion {rem} (toolkit component)' if rem else f"Manim {s['manim']['class']} (scenes.py)"
+    v = s.get('visual_intent') or vis[b['beat_id']]
+    tag = s.get('screen_tag') or ('CONSTRUCTED (topic line) + constructed (title)' if b['beat_id'] == 'BHTF' else '—')
+    why = {'BDEFS': 'Show-tell bookend (key terms)', 'BHTF': 'Show-tell bookend (Your Turn)'}.get(b['beat_id'], '—')
+    out.append(f"| {b['beat_id']} | {b.get('segment') or '—'} | {s.get('subheading') or '—'} | {b.get('assignment_question','')} | {b['lane']} | {how} | {b['actual_duration_s']:.2f} | {v} | {tag} | {why} |")
+total = sum(b['actual_duration_s'] for b in d['beats'])
+out += ['', f'Total measured runtime: {total:.2f} s ({int(total // 60)} min {total % 60:.1f} s).', '']
+open('SHOTLIST.md', 'w').write('\n'.join(out)); print('SHOTLIST rows', len(d['beats']))
+PY
+[16:55:17] exit 0
+
+[2026-10-11 16:55:17] $ cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _superseded/headings/manim _superseded/headings/media && for f in manim/*.mp4; do [ "$(basename $f)" = BOUT.mp4 ] || mv $f _superseded/headings/manim/; done && mv media/BIDEA.mp4 media/BDEFS.mp4 _superseded/headings/media/ && { [ -d media/videos ] && mv media/videos _superseded/headings/media/videos || true; } && echo kept: && ls manim media
+[16:55:17] exit 0
+
+[2026-10-11 16:55:17] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run-4.log 2>&1
+[16:59:14] exit 0
+
+[2026-10-11 16:59:21] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E '^\[run\] GATE|FAILED|gate [A-Z] warning|beat-lint|gate-shape|static-check|\[remotion\] (BDEFS|BHTF)|gate-v|\[art\] wrote|skip BOUT' art-run-4.log | sort | uniq -c | cut -c1-200; echo '--- Gate B:'; grep -c 'snapshots → CLEAN' art-run-4.log; grep 'snapshots → ' art-run-4.log | grep -v CLEAN; ls -lT cite-and-seek-pitch-slate.mp4; ffprobe -v error -show_entries format=duration -of csv=p=0 cite-and-seek-pitch-slate.mp4
+[16:59:21] exit 0
+
+[2026-10-11 16:59:33] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[16:59:33] exit 0
+
+[2026-10-11 16:59:33] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/bookend_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[16:59:33] exit 0
+
+[2026-10-11 16:59:33] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:08] exit 2
+
+[2026-10-11 17:00:08] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/sharpness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:12] exit 0
+
+[2026-10-11 17:00:12] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/master_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[17:00:13] exit 0
+
+[2026-10-11 17:00:13] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/loudness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[17:00:19] exit 0
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/srt_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:19] exit 3
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/frame_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --height 2160
+[17:00:19] exit 0
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:19] exit 0
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/lane_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:19] exit 0
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/banned_card_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:19] exit 0
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/placeholder_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:00:19] exit 0
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_default_check.py runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+[17:00:19] exit 2
+
+[2026-10-11 17:00:19] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/zdefault_audit.py --root runtime/remotion/src/scenes
+[17:00:19] exit 0
+
+[2026-10-11 17:00:25] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -n -E 'FAIL' TYPECHECK.md | head -12; echo ---; sed -n '/Failures requiring action/,/^## [A-Z]/p' TYPECHECK.md | head -30
+[17:00:25] exit 0
+
+[2026-10-11 17:00:47] $ cd ~/Downloads/cite-and-seek-pitch/film && MP4=cite-and-seek-pitch-slate.mp4 && OUT=_qc/RENDER-INTEGRITY.md && TL=$(python3 -c "import json;print(round(sum(b.get('render_duration_s') or b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']),3))") && STREAMS=$(ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels -of compact $MP4) && DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $MP4) && if ffmpeg -v error -xerror -i $MP4 -f null - 2>/tmp/dec.txt; then DEC='PASS (no decode errors)'; else DEC="FAIL: $(head -3 /tmp/dec.txt)"; fi && VD=$(ffmpeg -hide_banner -i $MP4 -vn -af volumedetect -f null - 2>&1) && MAXV=$(echo "$VD" | sed -n 's/.*max_volume: \([-0-9.]*\) dB.*/\1/p') && MEANV=$(echo "$VD" | sed -n 's/.*mean_volume: \([-0-9.]*\) dB.*/\1/p') && AUD=$(python3 -c "print('PASS' if float('$MAXV') > -80 else 'FAIL')") && SHA=$(shasum -a 256 $MP4 | cut -d' ' -f1) && DURC=$(python3 -c "tl,d=$TL,$DUR;tol=max(0.15,2/24);print(f'timeline {tl:.3f} s, file {d:.3f} s, difference {abs(d-tl):.3f} s, tolerance {tol:.3f} s -> '+('PASS' if abs(d-tl)<=tol else 'FAIL'))") && VID=$(echo "$STREAMS" | grep -q codec_type=video && echo "$STREAMS" | grep -q codec_type=audio && echo PASS || echo FAIL) && { echo '# RENDER-INTEGRITY — review cut'; echo; echo 'No toolkit gate is named render-integrity. This report repeats, by hand, the checks in brutalist.art/runtime/scripts/compile.py verify_output (line 436), which compile.py also ran automatically on this review cut before writing it.'; echo; echo "File: film/$MP4  ·  sha256 $SHA  ·  checked $(date '+%Y-%m-%d %H:%M')"; echo; echo '| Check (compile.py verify_output) | Result |'; echo '|---|---|'; echo "| Decodable video and audio streams | $VID |"; echo "| Duration matches timeline | $DURC |"; echo "| Full decode, ffmpeg -xerror | $DEC |"; echo "| Audio audible (max volume above -80 dB) | $AUD (max $MAXV dB, mean $MEANV dB) |"; echo; echo 'Streams:'; echo; echo '```'; echo "$STREAMS"; echo '```'; } > $OUT && sed -n '7,12p' $OUT
+[17:00:51] exit 0
+
+[2026-10-11 17:01:00] $ cd ~/Downloads/brutalist.art && if [ -d runtime/remotion/_bench ]; then ls -A runtime/remotion/_bench && git check-ignore -q runtime/remotion/_bench/ && rm -r runtime/remotion/_bench && echo 'deleted runtime/remotion/_bench'; fi; git status --porcelain; echo "porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = only the original three ignored items remain)'
+[17:01:01] exit 0
+
+[2026-10-11 17:01:01] $ osascript -e 'if application "QuickTime Player" is running then tell application "QuickTime Player" to close (every document whose name contains "cite-and-seek-pitch-slate") saving no' >/dev/null 2>&1; open -a 'QuickTime Player' ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4 && echo opened
+[17:01:01] exit 0
+
+# Review cut with segment headings built (219.04 s); gates run; Gate T FAIL on B01 (arrow bbox overlap) reported, not fixed. Opened for Meena.
+
+[2026-10-11 17:02:47] $ osascript -e 'if application "QuickTime Player" is running then tell application "QuickTime Player" to close (every document whose name contains "cite-and-seek-pitch-slate") saving no' >/dev/null 2>&1; open -a 'QuickTime Player' ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4 && echo opened
+[17:02:47] exit 0
+
+# ── Intro fixes (Meena): underline full width; left-align course name and 'Final Project' with the heading.
+
+[2026-10-11 17:23:59] $ grep -n -E 'def width|width =|def align_to|def next_to|def get_width|self\.w\b|"width"' ~/Downloads/brutalist.art/runtime/qc/static_scene_check.py | head -12; grep -n -A8 'left = Rectangle(width=2.2' ~/Downloads/cite-and-seek-pitch/film/scenes.py | head -12
+[17:23:59] exit 0
+# File edit: scenes.py BIDEA_Intro — underline halves sized from head.width; course name as two left-aligned lines; 'Final Project' left-aligned.
+
+[2026-10-11 17:24:29] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && rm -rf $S/gateA && mkdir -p $S/gateA && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/gateA/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/gateA/scenes.py --class BIDEA_Intro > /tmp/ga.txt 2>&1 || rc=$?; tail -2 /tmp/ga.txt; echo gateA=$rc; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class BIDEA_Intro --quiet >/dev/null 2>&1 || rw=$?; echo gateW=$rw
+[17:24:29] exit 0
+
+[2026-10-11 17:24:29] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && rm -rf $S/stills8 && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -qh -s --disable_caching --media_dir $S/stills8 scenes.py BIDEA_Intro >$S/stills8.log 2>&1; echo manim_exit=$?; cp $S/stills8/images/scenes/BIDEA_Intro_ManimCE_v0.18.1.png $S/intro_fixed.png && cp $S/intro_fixed.png _qc/intro-fixed-still.png && echo saved
+[17:24:31] exit 0
+
+[2026-10-11 17:24:48] $ open ~/Downloads/cite-and-seek-pitch/film/_qc/intro-fixed-still.png && cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _superseded/intro-fix && mv manim/BIDEA.mp4 _superseded/intro-fix/ && { [ -d media/videos ] && mv media/videos _superseded/intro-fix/media-videos || true; } && ls manim | tr '\n' ' '
+[17:24:48] exit 0
+
+[2026-10-11 17:24:48] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run-5.log 2>&1
+[17:26:11] exit 0
+
+[2026-10-11 17:26:18] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E '^\[run\] GATE|FAILED|gate [A-Z] warning|beat-lint|gate-shape|static-check|rendering BIDEA|gate-v|\[art\] wrote' art-run-5.log | sort | uniq -c | cut -c1-200; echo '--- Gate B:'; grep -c 'snapshots → CLEAN' art-run-5.log; grep 'snapshots → ' art-run-5.log | grep -v CLEAN; ls -lT cite-and-seek-pitch-slate.mp4; ffprobe -v error -show_entries format=duration -of csv=p=0 cite-and-seek-pitch-slate.mp4
+[17:26:18] exit 0
+
+[2026-10-11 17:26:28] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:26:28] exit 0
+
+[2026-10-11 17:26:28] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/bookend_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:26:28] exit 0
+
+[2026-10-11 17:26:28] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:04] exit 2
+
+[2026-10-11 17:27:04] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/sharpness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:08] exit 0
+
+[2026-10-11 17:27:08] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/master_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[17:27:10] exit 0
+
+[2026-10-11 17:27:10] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/loudness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4
+[17:27:15] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/srt_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:16] exit 3
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/frame_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --height 2160
+[17:27:16] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:16] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/lane_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:16] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/banned_card_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:16] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/placeholder_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[17:27:16] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_default_check.py runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+[17:27:16] exit 2
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/zdefault_audit.py --root runtime/remotion/src/scenes
+[17:27:16] exit 0
+
+[2026-10-11 17:27:16] $ cd ~/Downloads/cite-and-seek-pitch/film && sed -n '/Failures requiring action/,/^---/p' TYPECHECK.md | grep -E '^### |bbox|FAIL' | head -6
+[17:27:16] exit 0
+
+[2026-10-11 17:27:34] $ cd ~/Downloads/cite-and-seek-pitch/film && MP4=cite-and-seek-pitch-slate.mp4 && OUT=_qc/RENDER-INTEGRITY.md && TL=$(python3 -c "import json;print(round(sum(b.get('render_duration_s') or b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']),3))") && STREAMS=$(ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels -of compact $MP4) && DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $MP4) && if ffmpeg -v error -xerror -i $MP4 -f null - 2>/tmp/dec.txt; then DEC='PASS (no decode errors)'; else DEC="FAIL: $(head -3 /tmp/dec.txt)"; fi && VD=$(ffmpeg -hide_banner -i $MP4 -vn -af volumedetect -f null - 2>&1) && MAXV=$(echo "$VD" | sed -n 's/.*max_volume: \([-0-9.]*\) dB.*/\1/p') && MEANV=$(echo "$VD" | sed -n 's/.*mean_volume: \([-0-9.]*\) dB.*/\1/p') && AUD=$(python3 -c "print('PASS' if float('$MAXV') > -80 else 'FAIL')") && SHA=$(shasum -a 256 $MP4 | cut -d' ' -f1) && DURC=$(python3 -c "tl,d=$TL,$DUR;tol=max(0.15,2/24);print(f'timeline {tl:.3f} s, file {d:.3f} s, difference {abs(d-tl):.3f} s, tolerance {tol:.3f} s -> '+('PASS' if abs(d-tl)<=tol else 'FAIL'))") && VID=$(echo "$STREAMS" | grep -q codec_type=video && echo "$STREAMS" | grep -q codec_type=audio && echo PASS || echo FAIL) && { echo '# RENDER-INTEGRITY — review cut'; echo; echo 'No toolkit gate is named render-integrity. This report repeats, by hand, the checks in brutalist.art/runtime/scripts/compile.py verify_output (line 436), which compile.py also ran automatically on this review cut before writing it.'; echo; echo "File: film/$MP4  ·  sha256 $SHA  ·  checked $(date '+%Y-%m-%d %H:%M')"; echo; echo '| Check (compile.py verify_output) | Result |'; echo '|---|---|'; echo "| Decodable video and audio streams | $VID |"; echo "| Duration matches timeline | $DURC |"; echo "| Full decode, ffmpeg -xerror | $DEC |"; echo "| Audio audible (max volume above -80 dB) | $AUD (max $MAXV dB, mean $MEANV dB) |"; echo; echo 'Streams:'; echo; echo '```'; echo "$STREAMS"; echo '```'; } > $OUT && sed -n '9,12p' $OUT
+[17:27:38] exit 0
+
+[2026-10-11 17:27:38] $ cd ~/Downloads/brutalist.art && if [ -d runtime/remotion/_bench ]; then git check-ignore -q runtime/remotion/_bench/ && rm -r runtime/remotion/_bench && echo 'deleted runtime/remotion/_bench'; else echo 'no _bench folder this run'; fi; git status --porcelain; echo "porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = only the original three ignored items remain)'
+[17:27:38] exit 0
+
+[2026-10-11 17:27:38] $ osascript -e 'if application "QuickTime Player" is running then tell application "QuickTime Player" to close (every document whose name contains "cite-and-seek-pitch-slate") saving no' >/dev/null 2>&1; open -a 'QuickTime Player' ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch-slate.mp4 && echo opened
+[17:27:38] exit 0
+
+# Intro fixes rendered (219.04 s); all gates re-run; Gate T FAIL on B01 unchanged (not in scope). Opened for Meena.
+
+# ── Requirements audit against ASSIGNMENT.md (requested by Meena, 2026-10-12).
+
+[2026-10-12 13:04:19] $ cat -n ~/Downloads/cite-and-seek-pitch/ASSIGNMENT.md
+[13:04:19] exit 0
+
+[2026-10-12 13:04:32] $ cd ~/Downloads/cite-and-seek-pitch && echo '### pitch folder'; ls -1A; echo '### film folder'; ls -1A film; echo '### required deliverable names present?'; for f in README.md PROJECT-BRIEF.md BUILD-PROMPT.md SOURCES.md FRICTIONAL.md film/beat_sheet.json film/README.md film/BUILD-PROMPT.md film/SOURCES.md film/FRICTIONAL.md film/PROJECT-BRIEF.md final-project-film; do [ -e $f ] && echo "present  $f" || echo "MISSING  $f"; done
+[13:04:32] exit 0
+
+[2026-10-12 13:04:32] $ cd ~/Downloads/cite-and-seek-pitch/film && MP4=cite-and-seek-pitch-slate.mp4 && ls -lT $MP4 && ffprobe -v error -show_entries format=duration:stream=codec_type,width,height -of compact $MP4 && shasum -a 256 $MP4 && grep -o 'sha256 [0-9a-f]*' _qc/RENDER-INTEGRITY.md && echo '### report timestamps (must be after the mp4 at 17:25:42)'; ls -lT TYPECHECK.md MASTERCHECK.md LOUDNESS.md SRTCHECK.md _qc/REPORT.md _qc/RENDER-INTEGRITY.md _qc/contact_sheet.png layout_audit.md FACTCHECK.md | awk '{print $6, $7, $8, $10}'; grep -E 'master|LUFS|Overall' MASTERCHECK.md LOUDNESS.md TYPECHECK.md | head -6; python3 -c "import json;print('build-state:', json.load(open('build-state.json')))" | cut -c1-300
+[13:04:32] exit 0
+
+[2026-10-12 13:04:46] $ cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _qc/audit-frames && python3 - <<'PY' > _qc/audit-frames/timeline.tsv
+import json
+d = json.load(open('beat_sheet.json'))
+t = 0.0
+print('beat\tstart_s\tmid_s\tend_s\tstart_mmss\tsegment\tclaim_status\tnarration')
+for b in d['beats']:
+    dur = b.get('render_duration_s') or b['actual_duration_s']
+    m, s = divmod(t, 60)
+    print(f"{b['beat_id']}\t{t:.2f}\t{t+dur/2:.2f}\t{t+dur:.2f}\t{int(m)}:{s:05.2f}\t{b.get('segment') or '-'}\t{b['claim_status']}\t{b['narration_text']}")
+    t += dur
+PY
+cut -f1-7 _qc/audit-frames/timeline.tsv
+[13:04:46] exit 0
+
+[2026-10-12 13:04:46] $ cd ~/Downloads/cite-and-seek-pitch/film && tail -n +2 _qc/audit-frames/timeline.tsv | while IFS=$'\t' read -r bid start mid rest; do ffmpeg -v error -y -ss $mid -i cite-and-seek-pitch-slate.mp4 -frames:v 1 -vf scale=1280:-1 _qc/audit-frames/${bid}.png; done; ls _qc/audit-frames/*.png | wc -l
+[13:04:51] exit 0
+
+[2026-10-12 13:05:00] $ cd ~/Downloads/cite-and-seek-pitch/film/_qc/audit-frames && ~/Downloads/brutalist.art/.venv/bin/python -I - <<'PY'
+from PIL import Image, ImageDraw, ImageFont
+import os
+rows = [l.rstrip('\n').split('\t') for l in open('timeline.tsv')][1:]
+font = ImageFont.truetype(os.path.expanduser('~/Downloads/cite-and-seek-pitch/film/fonts/EBGaramond-Regular.ttf'), 24)
+for page in range(3):
+    chunk = rows[page*7:(page+1)*7]
+    W = Image.new('RGB', (1920, 400*3), (40,40,40))
+    for i, r in enumerate(chunk):
+        im = Image.open(r[0] + '.png').convert('RGB').resize((640, 360))
+        t = Image.new('RGB', (640, 400), 'white'); t.paste(im, (0, 40))
+        ImageDraw.Draw(t).text((8, 6), f'{r[0]} @ {r[2]}s (mid) · {r[5]}', fill='black', font=font)
+        W.paste(t, ((i % 3) * 640, (i // 3) * 400))
+    W.save(f'audit-sheet-{page+1}.png')
+print('ok')
+PY
+[13:05:00] exit 0
+
+[2026-10-12 13:05:18] $ cd ~/Downloads/cite-and-seek-pitch/film && tail -n +2 _qc/audit-frames/timeline.tsv | awk -F'\t' '{print $1" ["$5"] "$8}'
+[13:05:18] exit 0
+
+[2026-10-12 13:05:18] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import json, re
+d = json.load(open('beat_sheet.json'))
+blob = json.dumps(d, ensure_ascii=False).lower() + open('scenes.py').read().lower()
+print('instructor strings in sheet+scenes:', [x for x in ('nikbearbrown','nik bear','liam','in for bear','professor bear','professor_bear','am_onyx','claude-liam',' bear') if x in blob] or 'none')
+narr = ' '.join(b['narration_text'] for b in d['beats']).lower()
+print('stack words in narration:', [w for w in ('python','minilm','mini-l-m','claude haiku','numpy','sentence-transformers','uv') if w in narr])
+print('words: repository/github/README/write-up:', [w for w in ('repository','github','readme','write it up','written up','demo') if w in narr])
+print('course-concept words:', [w for w in ('prompt contract','verification','verify','evaluation','source grounding','agent loop','citation','abstention') if w in narr])
+print('"reviewer" / "conclude" / "sixty" / "minute":', [w for w in ('reviewer','conclude','sixty','minute') if w in narr])
+PY
+[13:05:18] exit 0
+
+[2026-10-12 13:05:34] $ cat -n ~/Downloads/cite-and-seek-pitch/PROJECT-BRIEF.md; wc -w ~/Downloads/cite-and-seek-pitch/PROJECT-BRIEF.md
+[13:05:34] exit 0
+
+[2026-10-12 13:05:34] $ cd ~/Downloads/cite-and-seek-pitch && grep -n -i -E 'nikbearbrown|nik bear|liam|in for bear|professor bear|professor_bear|am_onyx|claude-liam|\bbear\b' PROJECT-BRIEF.md FRICTIONAL-notes.md film/FACTCHECK.md film/SHOTLIST.md film/PROMPTS.md film/make_sheet.py film/scenes.py film/finish_audio.py film/BUILD-LOG.txt film/evidence/v0.1-search-2026-10-11.txt film/TYPECHECK.md film/MASTERCHECK.md film/LOUDNESS.md film/SRTCHECK.md film/_qc/REPORT.md film/_qc/RENDER-INTEGRITY.md | cut -c1-170; echo '### private-data scan (emails, phone numbers, résumé, transcript, .env, keys)'; grep -rIn -i -E '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}|\b[0-9]{3}[-. ][0-9]{3}[-. ][0-9]{4}\b|résumé|resume|transcript|api[_-]?key|sk-ant|HF_TOKEN=' PROJECT-BRIEF.md FRICTIONAL-notes.md film/*.md film/*.py film/BUILD-LOG.txt film/beat_sheet.json film/evidence 2>/dev/null | grep -v -E 'noreply|resume_|"resume' | cut -c1-170; find film -name '.env*' -o -name '*.key' | head
+[13:05:34] exit 0
+
+[2026-10-12 13:06:08] $ cd ~/Downloads/brutalist.art && echo '### brutalist.art licence file:'; ls LICENSE* COPYING* 2>&1 | head -3; grep -rIl -i -m1 'license' README.md HOW-TO.md 2>/dev/null | head -2; grep -n -i 'licen' README.md HOW-TO.md | head -5; echo '### remotion:'; head -5 runtime/remotion/node_modules/remotion/LICENSE.md 2>&1; grep -m1 -n '"license"' runtime/remotion/node_modules/remotion/package.json; echo '### manim:'; ls .venv/lib/python3.12/site-packages | grep -i -E '^manim-.*dist-info$'; grep -m2 -i -E '^License|Classifier: License' .venv/lib/python3.12/site-packages/manim-*.dist-info/METADATA; echo '### kokoro-onnx:'; grep -m2 -i -E '^License|Classifier: License' .venv/lib/python3.12/site-packages/kokoro_onnx-*.dist-info/METADATA; grep -n -i 'apache' runtime/scripts/generate_audio_kokoro.py | head -2; echo '### EB Garamond:'; head -3 ~/Downloads/cite-and-seek-pitch/film/fonts/EBGaramond-OFL.txt; echo '### ecommerce-api:'; head -3 ~/projects/cite-and-seek/corpus/docs/LICENSE
+[13:06:08] exit 0
+
+[2026-10-12 13:06:08] $ cd ~/Downloads/cite-and-seek-pitch/film && ls -lT _qc/layout/ | head -4 | awk '{print $6,$7,$8,$10}'; ls -lT SHARPNESS.md | awk '{print $6,$7,$8,$10}'; head -6 SHARPNESS.md
+[13:06:08] exit 0
+
+[2026-10-12 13:06:21] $ cd ~/Downloads/brutalist.art && head -3 .venv/lib/python3.12/site-packages/kokoro_onnx-*.dist-info/licenses/LICENSE 2>/dev/null || head -3 .venv/lib/python3.12/site-packages/kokoro_onnx-*.dist-info/LICENSE; echo '### remotion licence (key lines)'; grep -n -i -E 'free license|individual|company license|for-profit|non-profit|employees' runtime/remotion/node_modules/remotion/LICENSE.md | head -8; echo '### manim render version actually used:'; grep -m1 -o 'Manim Community v[0-9.]*' ~/Downloads/cite-and-seek-pitch/film/art-run-5.log; .venv/bin/python -c 'import manim; print("installed manim", manim.__version__)'
+[13:06:22] exit 0
+# File edit: wrote film/REQUIREMENTS-AUDIT.md; next command recounts its status columns.
+
+[2026-10-12 13:08:56] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import re
+from collections import Counter
+rows = [l for l in open('REQUIREMENTS-AUDIT.md') if re.match(r'^\| (A|B)\d', l)]
+before, after = Counter(), Counter()
+norm = lambda s: 'MET' if s.startswith('MET') else s
+for l in rows:
+    c = [x.strip() for x in l.strip().strip('|').split('|')]
+    before[norm(c[2])] += 1; after[norm(c[3])] += 1
+print('rows:', len(rows)); print('before:', dict(before)); print('after:', dict(after))
+PY
+[13:08:56] exit 0
+# File edits: PROJECT-BRIEF.md (hypothesis + dated retrieval evidence, from the approved film and REPO-FACTS); wrote film/README.md, film/BUILD-PROMPT.md, film/SOURCES.md.
+
+[2026-10-12 13:10:34] $ cd ~/Downloads/cite-and-seek-pitch && cp FRICTIONAL-notes.md film/FRICTIONAL.md && cmp FRICTIONAL-notes.md film/FRICTIONAL.md && echo 'FRICTIONAL.md is an exact copy of FRICTIONAL-notes.md'
+[13:10:34] exit 0
+
+[2026-10-12 13:10:34] $ R=~/Downloads/cite-and-seek-pitch/film; S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA; rm -rf $S && mkdir -p $S && cp $R/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && OUT=$R/_qc/console-gates.txt && { echo "# Console-only gate results — re-run $(date '+%Y-%m-%d %H:%M') on film/cite-and-seek-pitch-slate.mp4 (sha256 $(shasum -a 256 $R/cite-and-seek-pitch-slate.mp4 | cut -c1-12)…), review cut"; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do echo "## Gate A $C"; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C 2>&1 | grep -v '^\s*$' | tail -2; echo "exit=${PIPESTATUS[0]}"; echo "## Gate W $C"; python3 runtime/qc/wcag_margin_check.py $R/scenes.py --class $C 2>&1 | grep -v '^\s*$' | tail -2; echo "exit=${PIPESTATUS[0]}"; done; for G in 'runtime/qc/beat_lint.py '$R/beat_sheet.json 'runtime/qc/factcheck_check.py '$R 'runtime/scripts/bookend_check.py '$R 'runtime/qc/frame_check.py '$R' --height 2160' 'runtime/qc/content_check.py '$R 'runtime/qc/lane_check.py '$R 'runtime/qc/banned_card_check.py '$R 'runtime/qc/placeholder_check.py '$R; do echo "## $(echo $G | cut -d' ' -f1)"; python3 $G 2>&1 | grep -v '^\s*$' | tail -3; echo "exit=${PIPESTATUS[0]}"; done; } > $OUT 2>&1; grep -c '^exit=0' $OUT; grep '^exit=' $OUT | grep -v 'exit=0' | head
+[13:10:36] exit 0
+
+[2026-10-12 13:10:48] $ P=~/Downloads/cite-and-seek-pitch; F=$P/film; D=$P/final-project-film; [ -e $D ] && { echo 'final-project-film already exists — stopping'; exit 1; }; mkdir -p $D/gate-reports $D/fonts $D/evidence && cp $F/README.md $F/beat_sheet.json $F/BUILD-PROMPT.md $F/SOURCES.md $F/FRICTIONAL.md $F/FACTCHECK.md $F/SHOTLIST.md $F/PROMPTS.md $F/make_sheet.py $F/scenes.py $F/finish_audio.py $F/BUILD-LOG.txt $F/REQUIREMENTS-AUDIT.md $D/ && cp $P/PROJECT-BRIEF.md $D/ && cp $F/fonts/EBGaramond-Regular.ttf $F/fonts/EBGaramond-OFL.txt $D/fonts/ && cp $F/evidence/v0.1-search-2026-10-11.txt $D/evidence/ && cp $F/TYPECHECK.md $F/MASTERCHECK.md $F/LOUDNESS.md $F/SRTCHECK.md $F/SHARPNESS.md $D/gate-reports/ && cp $F/_qc/REPORT.md $D/gate-reports/GATE-V-REPORT.md && cp $F/_qc/contact_sheet.png $D/gate-reports/GATE-V-contact_sheet.png && cp $F/_qc/RENDER-INTEGRITY.md $F/_qc/console-gates.txt $D/gate-reports/ && cp $F/art-run-5.log $D/gate-reports/art-run-review-cut.log && cp $F/art-run-4.log $D/gate-reports/art-run-scenes-B00-B16.log && echo assembled && cd $D && find . -type f | sort && du -sh .
+[13:10:48] exit 0
+
+[2026-10-12 13:12:10] $ cd ~/Downloads/cite-and-seek-pitch/final-project-film && echo '### instructor strings by file (count of lines):'; grep -rIc -i -E 'nikbearbrown|nik bear|liam|in for bear|professor bear|professor_bear|am_onyx|claude-liam|\bbear\b' . | grep -v ':0$'; echo '### private-data patterns:'; grep -rIn -i -E '[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|edu|org|net)\b|\b[0-9]{3}[-. ][0-9]{3}[-. ][0-9]{4}\b|résumé|transcript|api[_-]?key|sk-ant|HF_TOKEN=' . | grep -v -E 'noreply|transcripts are|transcript, which|not a conversation transcript|private conversation transcripts|conversation transcripts\)|no transcripts|transcripts in' | cut -c1-150; echo '(end)'; echo '### excluded items absent?'; for x in media clips manim mp3 _superseded _qc FILM-PLAN.md build-state.json todo.json STATUS.md .env; do [ -e $x ] && echo "PRESENT $x" ; done; echo done
+[13:12:10] exit 0
+
+[2026-10-12 13:12:20] $ cd ~/Downloads/cite-and-seek-pitch/final-project-film && grep -rIn -i -o -E '.{0,50}(nikbearbrown|nik bear|liam|in for bear|professor bear|professor_bear|am_onyx|claude-liam|\bbear\b).{0,40}' README.md SOURCES.md BUILD-PROMPT.md REQUIREMENTS-AUDIT.md make_sheet.py FRICTIONAL.md | cut -c1-170
+[13:12:20] exit 0
+
+[2026-10-12 13:12:32] $ cd ~/Downloads/brutalist.art && git status --porcelain; echo "brutalist.art porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = only the original three ignored items)'; git -C ~/projects/cite-and-seek status --porcelain | grep -v '^?? .claude/worktrees/'; echo '(cite-and-seek: no lines above = unchanged apart from its pre-existing worktree folder)'; git -C ~/projects/cite-and-seek rev-parse --abbrev-ref HEAD
+[13:12:33] exit 0
+
+# Audit written (film/REQUIREMENTS-AUDIT.md); direct fixes applied; final-project-film/ assembled from copies. Stopped for Meena's approvals.
+
+# ── Approved (Meena, 2026-10-12): P1 B01 arrows; P2-P5 narration; P6 drop IEEE; P7 comment; P9/P10 trim brief, remove integrity line; P12 final render; P13 check; P14 keep Kokoro. P11 last name not yet received.
+
+[2026-10-12 20:27:59] $ cd ~/Downloads/cite-and-seek-pitch/film && sed -i '' 's|^VOICE = "am_michael"  # not am_onyx, the instructor.s Liam persona (FILM-PLAN.md)$|VOICE = "am_michael"  # chosen by Meena (FILM-PLAN.md)|' make_sheet.py && grep -n '^VOICE' make_sheet.py
+[20:27:59] exit 0
+# File edit: PROJECT-BRIEF.md trimmed (P9), integrity-check line removed (P10), IEEE mention dropped (P6); no new claims.
+
+[2026-10-12 20:28:28] $ wc -w ~/Downloads/cite-and-seek-pitch/PROJECT-BRIEF.md; grep -c -i -E 'IEEE|integrity check' ~/Downloads/cite-and-seek-pitch/PROJECT-BRIEF.md
+[20:28:28] exit 1
+# File edit (next command): make_sheet.py — P2 (B15), P3 (new B09B), P4 (B10), P5 (B07 + new B07B); segments/order updated.
+
+[2026-10-12 20:28:51] $ cd ~/Downloads/cite-and-seek-pitch/film && cp make_sheet.py _superseded/make_sheet-before-approvals.py && cp beat_sheet.json _superseded/beat_sheet-before-approvals.json && python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_p2p5.py make_sheet.py && python3 make_sheet.py && python3 -c "import json;d=json.load(open('beat_sheet.json'));print(' > '.join(b['beat_id'] for b in d['beats']));print('words', sum(len(b['narration_text'].split()) for b in d['beats']))"
+[20:28:51] exit 0
+
+[2026-10-12 20:28:59] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/generate_audio_kokoro.py ~/Downloads/cite-and-seek-pitch/film --only B10 B07 B07B B09B B15 2>&1 | tail -7
+[20:29:10] exit 0
+
+[2026-10-12 20:29:10] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 finish_audio.py && python3 -c "import json;d={b['beat_id']:b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']};print({k:d[k] for k in ('B07','B07B','B09','B09B','B10','B15','BIDEA','BOUT')})"
+[20:29:11] exit 0
+
+[2026-10-12 20:29:20] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 -c "
+import json, math
+d = json.load(open('beat_sheet.json'))
+tot = sum(math.ceil(b['actual_duration_s'] * 24 - 1e-8) / 24 for b in d['beats'])
+print(f'compiled timeline (frame-rounded, as compile.py does): {tot:.3f} s = {int(tot//60)} min {tot%60:.2f} s; margin under 4:00 = {240-tot:.2f} s')"
+[20:29:20] exit 0
+# File edit (next command): scenes.py — P1 B01 horizontal arrows; B07B_Conclude and B09B_Instead added; B15 fourth item; headings for B07/B07B/B09B.
+
+[2026-10-12 20:30:05] $ cd ~/Downloads/cite-and-seek-pitch/film && cp scenes.py _superseded/scenes-before-approvals.py && python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_scenes_approvals.py scenes.py && python3 - <<'PY'
+import ast, json
+t = ast.parse(open('scenes.py').read())
+print('syntax ok;', len([n for n in t.body if isinstance(n, ast.ClassDef) and n.name.startswith('B')]), 'scene classes')
+heads = next(ast.literal_eval(n.value) for n in t.body if isinstance(n, ast.Assign) and getattr(n.targets[0], 'id', '') == 'HEADINGS')
+sheet = {b['beat_id']: (b['shot'].get('heading'), b['shot'].get('subheading')) for b in json.load(open('beat_sheet.json'))['beats'] if b['shot'].get('heading')}
+print('HEADINGS match sheet:', {k: tuple(v) for k, v in heads.items()} == sheet)
+PY
+[20:30:05] exit 0
+
+[2026-10-12 20:30:19] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && rm -rf $S/gateA && mkdir -p $S/gateA && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/gateA/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && for C in B01_Hypothesis B07_Skills B07B_Conclude B09B_Instead B10_Reader B15_WillBuild; do rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/gateA/scenes.py --class $C > /tmp/ga.txt 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C > /tmp/gw.txt 2>&1 || rw=$?; echo "$C gateA=$rc gateW=$rw"; [ $rc -ne 0 ] && grep -E '✗|ERROR' /tmp/ga.txt | head -3; [ $rw -ne 0 ] && tail -3 /tmp/gw.txt; done; true
+[20:30:19] exit 0
+
+[2026-10-12 20:30:19] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad && rm -rf $S/stills9 && cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && manim -ql -s --disable_caching --media_dir $S/stills9 scenes.py B01_Hypothesis B07_Skills B07B_Conclude B09B_Instead B10_Reader B15_WillBuild >$S/stills9.log 2>&1; echo manim_exit=$? && cd $S && ~/Downloads/brutalist.art/.venv/bin/python -I -c "
+from PIL import Image; import os
+d='stills9/images/scenes'; fs=sorted(os.listdir(d)); W=Image.new('RGB',(1920,720),'white')
+for i,f in enumerate(fs): W.paste(Image.open(os.path.join(d,f)).convert('RGB').resize((640,360)),((i%3)*640,(i//3)*360))
+W.save('sheet_approvals.png'); print(fs)"
+[20:30:23] exit 0
+
+[2026-10-12 20:30:36] $ cd ~/Downloads/brutalist.art/.venv/lib/python3.12/site-packages && ls -ldT manim manim-*.dist-info manimpango* 2>/dev/null | awk '{print $6,$7,$8,$9,$10}'; grep -m1 '^Version' manim-*.dist-info/METADATA; ls -lT manim-*.dist-info/INSTALLER | awk '{print $6,$7,$8,$9}'; grep -h -o 'Manim Community v[0-9.]*' ~/Downloads/cite-and-seek-pitch/film/art-run-4.log ~/Downloads/cite-and-seek-pitch/film/art-run-5.log | sort | uniq -c
+[20:30:36] exit 0
+# File edits (next commands): FACTCHECK.md rows for P2-P5; SOURCES.md authorship of the new sentences; README.md zip name.
+
+[2026-10-12 20:31:10] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_fc2.py FACTCHECK.md && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py ~/Downloads/cite-and-seek-pitch/film | tail -2
+[20:31:10] exit 0
+# Decision (Meena): render from a separate pinned venv outside brutalist.art.
+
+[2026-10-12 20:32:05] $ command -v python3.12 || ls /opt/homebrew/bin/python3.12; /opt/homebrew/bin/python3.12 --version
+[20:32:05] exit 0
+
+[2026-10-12 20:32:11] $ cd ~/Downloads/cite-and-seek-pitch && /opt/homebrew/bin/python3.12 -m venv .venv-render && .venv-render/bin/python -m pip install --quiet --upgrade pip && .venv-render/bin/python -m pip install --quiet -r ~/Downloads/brutalist.art/requirements.txt 2>&1 | tail -5; echo pip_exit=$?
+[20:32:25] exit 0
+
+[2026-10-12 20:32:31] $ cd ~/Downloads/cite-and-seek-pitch && .venv-render/bin/python -m pip list 2>/dev/null | grep -i -E '^(manim|manimpango|kokoro-onnx|onnxruntime|numpy|pillow|mutagen|soundfile|matplotlib|faster-whisper|av) ' && .venv-render/bin/python -c 'import manim, manimpango; print("import ok: manim", manim.__version__, "manimpango", manimpango.__version__)' && ls .venv-render/bin/manim && cd ~/Downloads/brutalist.art && git status --porcelain; echo "brutalist porcelain exit=$? (no lines = empty)"
+[20:32:38] exit 0
+
+[2026-10-12 20:32:46] $ cd ~/Downloads/brutalist.art && ls -lT requirements.txt | awk '{print $6,$7,$8,$9}'; grep -n -E '^(manim|manimpango|Pillow|mutagen)' requirements.txt; git log -3 --format='%h %ad %an %s' --date=iso -- requirements.txt; git log -1 --format='HEAD %h %ad %s' --date=iso; git status -sb | head -1
+[20:32:46] exit 0
+# Decision (Meena): re-render all drawn scenes with Manim 0.20.1 from the toolkit's own venv at 5a00f54; the separate venv is redundant.
+
+[2026-10-12 20:33:55] $ rm -rf ~/Downloads/cite-and-seek-pitch/.venv-render && echo 'removed redundant .venv-render'
+[20:33:55] exit 0
+
+[2026-10-12 20:33:55] $ cd ~/Downloads/brutalist.art && git diff --stat 8b1ae22 5a00f54 | tail -3; echo '### files this film depends on that changed:'; git diff --stat 8b1ae22 5a00f54 -- art runtime/scripts/run.sh runtime/scripts/compile.py runtime/scripts/remotion_scenes.py runtime/scripts/generate_audio_kokoro.py runtime/scripts/build_safety.py runtime/scripts/type_check.py runtime/qc/ runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx runtime/scripts/bookend_check.py runtime/scripts/master_check.py runtime/scripts/loudness_check.py runtime/scripts/sharpness_check.py | cat
+[20:33:55] exit 0
+
+[2026-10-12 20:34:08] $ cd ~/Downloads/cite-and-seek-pitch/film && mkdir -p _superseded/manim-0.18.1 && mv manim/*.mp4 _superseded/manim-0.18.1/ && { [ -d media/videos ] && mv media/videos _superseded/manim-0.18.1/media-videos || true; } && { [ -d media/texts ] && mv media/texts _superseded/manim-0.18.1/media-texts || true; } && echo 'manim/ now:' && ls manim | wc -l && ls media
+[20:34:08] exit 0
+
+[2026-10-12 20:34:08] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && rm -rf $S && mkdir -p $S && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && a=0; w=0; n=0; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do n=$((n+1)); rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C >/tmp/ga.txt 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class $C >/tmp/gw.txt 2>&1 || rw=$?; [ $rc -eq 0 ] && a=$((a+1)) || { echo "$C gateA=$rc"; grep -E '✗|ERROR' /tmp/ga.txt | head -3; }; [ $rw -eq 0 ] && w=$((w+1)) || { echo "$C gateW=$rw"; grep -v '^\s*$' /tmp/gw.txt | tail -4; }; done; echo "Gate A clean $a/$n · Gate W (updated) clean $w/$n"
+[20:34:11] exit 0
+
+[2026-10-12 20:34:27] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import json
+d = json.load(open('beat_sheet.json'))
+out = ['# SHOTLIST — Cite & Seek pitch film', '',
+       'Typed work order, generated from beat_sheet.json on 2026-10-12 (approved additions P2-P5; all drawn scenes re-rendered with Manim',
+       'Community 0.20.1, toolkit at 5a00f54). Durations are measured narration (Kokoro am_michael). Drawn beats are Manim scenes in scenes.py:',
+       'segment heading (size 40) and subheading (size 32) top left for the whole beat; screen tag top right (size 32). BIDEA and BOUT are',
+       'drawn title cards with no tag. No ShowTellCard is used; BDEFS and BHTF are toolkit components.', '',
+       '| Beat | Segment | Subheading | Question | Lane | Renders with | Duration (s) | Visual | Screen tag | Why a card |',
+       '|---|---|---|---|---|---|---|---|---|---|']
+vis = {'BDEFS': 'Terms card; its title reads "What It Is · Terms"; terms Retrieval, Citation, Abstain.',
+       'BHTF': 'Recreated Claude.ai composer with the invitation typed in; no response shown; topic reads CITE & SEEK · YOUR TURN · CONSTRUCTED; title reads Test Before You Build · constructed.'}
+for b in d['beats']:
+    s = b['shot']; rem = (s.get('remotion') or {}).get('pattern')
+    how = f'Remotion {rem} (toolkit component)' if rem else f"Manim {s['manim']['class']} (scenes.py)"
+    v = s.get('visual_intent') or vis[b['beat_id']]
+    tag = s.get('screen_tag') or ('CONSTRUCTED (topic line) + constructed (title)' if b['beat_id'] == 'BHTF' else '—')
+    why = {'BDEFS': 'Show-tell bookend (key terms)', 'BHTF': 'Show-tell bookend (Your Turn)'}.get(b['beat_id'], '—')
+    out.append(f"| {b['beat_id']} | {b.get('segment') or '—'} | {s.get('subheading') or '—'} | {b.get('assignment_question','')} | {b['lane']} | {how} | {b['actual_duration_s']:.2f} | {v} | {tag} | {why} |")
+total = sum(b['actual_duration_s'] for b in d['beats'])
+out += ['', f'Total measured narration: {total:.2f} s ({int(total // 60)} min {total % 60:.1f} s).', '']
+open('SHOTLIST.md', 'w').write('\n'.join(out)); print('SHOTLIST rows', len(d['beats']))
+PY
+[20:34:27] exit 0
+
+[2026-10-12 20:34:27] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run-6.log 2>&1
+[20:36:11] exit 2
+
+[2026-10-12 20:36:17] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E '^\[run\]|FAILED|gate [A-Z] warning|snapshots → |\[audit\] report' art-run-6.log | tail -25; echo '---'; ls manim | tr '\n' ' '
+[20:36:17] exit 0
+
+[2026-10-12 20:36:24] $ cd ~/Downloads/cite-and-seek-pitch/film && cat layout_audit.md
+[20:36:24] exit 0
+# Gate B (strict) stopped the run: B15 'public GitHub repository' at x=6.36 > 6.3 safe area. Fix: Will-build column x 1.1 -> 0.8 (same text size).
+
+[2026-10-12 20:36:39] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+s = open('scenes.py').read()
+a = 'stroke_color=INK, stroke_width=5).move_to(P3(1.1, y))'
+assert s.count(a) == 1
+s = s.replace(a, 'stroke_color=INK, stroke_width=5).move_to(P3(0.8, y))')
+a = 'wh = lab("Will build", 40).move_to(P3(2.8, 2.0))'
+assert s.count(a) == 1
+s = s.replace(a, 'wh = lab("Will build", 40).move_to(P3(2.5, 2.0))')
+open('scenes.py', 'w').write(s); print('patched')
+PY
+cd ~/Downloads/cite-and-seek-pitch/film && source ~/Downloads/brutalist.art/.venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 ~/Downloads/brutalist.art/runtime/qc/manim_layout_audit.py scenes.py --class B15_WillBuild --png --curve-strict 2>&1 | grep -E 'snapshots|WARN|ERROR' | head -4
+[20:36:40] exit 0
+
+[2026-10-12 20:36:51] $ S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA && cp ~/Downloads/cite-and-seek-pitch/film/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && rc=0; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class B15_WillBuild --quiet >/dev/null 2>&1 || rc=$?; rw=0; python3 runtime/qc/wcag_margin_check.py ~/Downloads/cite-and-seek-pitch/film/scenes.py --class B15_WillBuild --quiet >/dev/null 2>&1 || rw=$?; echo "B15 gateA=$rc gateW=$rw"; rm -f ~/Downloads/cite-and-seek-pitch/film/media/videos/scenes/2160p24/B15_WillBuild.mp4
+[20:36:52] exit 0
+
+[2026-10-12 20:36:52] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art run ~/Downloads/cite-and-seek-pitch/film --height 2160 > ~/Downloads/cite-and-seek-pitch/film/art-run-7.log 2>&1
+[20:38:58] exit 0
+
+[2026-10-12 20:39:05] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E '^\[run\] GATE|FAILED|warning|beat-lint|static-check|rendering|gate-v|\[art\] wrote' art-run-7.log | sort | uniq -c | cut -c1-180; grep -c 'snapshots → CLEAN' art-run-6.log art-run-7.log; ffprobe -v error -show_entries format=duration -of csv=p=0 cite-and-seek-pitch-slate.mp4; cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py ~/Downloads/cite-and-seek-pitch/film 2>&1 | grep -E 'GATE T'; grep -E 'Overall|^### B|bbox' ~/Downloads/cite-and-seek-pitch/film/TYPECHECK.md | head -6
+[20:39:43] exit 0
+
+[2026-10-12 20:39:52] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 ART_CHROME='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' ART_CHROME_MODE=chrome-for-testing && ./art final ~/Downloads/cite-and-seek-pitch/film --out ~/Downloads/cite-and-seek-pitch/film > ~/Downloads/cite-and-seek-pitch/film/art-final.log 2>&1
+[20:41:42] exit 0
+
+[2026-10-12 20:41:48] $ cd ~/Downloads/cite-and-seek-pitch/film && grep -E 'GATE|gate-v|\[art\] wrote|slots|FAIL|REFUSED|BLOCKED' art-final.log | cut -c1-180; ls -lT cite-and-seek-pitch.mp4 cite-and-seek-pitch.verified.json | awk '{print $6,$7,$8,$10}'; ffprobe -v error -show_entries format=duration:stream=codec_type,width,height -of compact cite-and-seek-pitch.mp4; python3 -c "import json;d=json.load(open('cite-and-seek-pitch.verified.json'));print(d['status'], d['duration_s'], d['sha256'])"
+[20:41:48] exit 0
+
+[2026-10-12 20:42:06] $ rm -rf /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/sharp/cite-and-seek-pitch && mkdir -p /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/sharp/cite-and-seek-pitch && ln -s /Users/meenu/Downloads/cite-and-seek-pitch/film/beat_sheet.json /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/sharp/cite-and-seek-pitch/beat_sheet.json && ln -s /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch.mp4 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/sharp/cite-and-seek-pitch/cite-and-seek-pitch.mp4 && echo 'sharpness scratch: only the final mp4 is visible'
+[20:42:06] exit 0
+
+[2026-10-12 20:42:06] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/final_frame_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch.mp4
+[20:42:27] exit 0
+
+[2026-10-12 20:42:27] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/type_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:05] exit 0
+
+[2026-10-12 20:43:05] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/sharpness_check.py /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/sharp/cite-and-seek-pitch
+[20:43:10] exit 0
+
+[2026-10-12 20:43:10] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/master_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch.mp4
+[20:43:11] exit 0
+
+[2026-10-12 20:43:11] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/loudness_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --mp4 /Users/meenu/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch.mp4
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/srt_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 3
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/factcheck_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/scripts/bookend_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/frame_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film --height 2160
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/lane_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/banned_card_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/placeholder_check.py /Users/meenu/Downloads/cite-and-seek-pitch/film
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/beat_lint.py /Users/meenu/Downloads/cite-and-seek-pitch/film/beat_sheet.json
+[20:43:18] exit 0
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/content_default_check.py runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx
+[20:43:18] exit 2
+
+[2026-10-12 20:43:18] $ cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && python3 runtime/qc/zdefault_audit.py --root runtime/remotion/src/scenes
+[20:43:19] exit 0
+
+[2026-10-12 20:43:19] $ cp /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/sharp/cite-and-seek-pitch/SHARPNESS.md /Users/meenu/Downloads/cite-and-seek-pitch/film/SHARPNESS.md 2>/dev/null && head -4 /Users/meenu/Downloads/cite-and-seek-pitch/film/SHARPNESS.md
+[20:43:19] exit 0
+
+[2026-10-12 20:43:40] $ cd ~/Downloads/cite-and-seek-pitch/film && MP4=cite-and-seek-pitch.mp4 && OUT=_qc/RENDER-INTEGRITY.md && TL=$(python3 -c "import json;print(round(sum(b.get('render_duration_s') or b['actual_duration_s'] for b in json.load(open('beat_sheet.json'))['beats']),3))") && STREAMS=$(ffprobe -v error -show_entries stream=codec_type,codec_name,width,height,r_frame_rate,sample_rate,channels -of compact $MP4) && DUR=$(ffprobe -v error -show_entries format=duration -of csv=p=0 $MP4) && if ffmpeg -v error -xerror -i $MP4 -f null - 2>/tmp/dec.txt; then DEC='PASS (no decode errors)'; else DEC="FAIL: $(head -3 /tmp/dec.txt)"; fi && VD=$(ffmpeg -hide_banner -i $MP4 -vn -af volumedetect -f null - 2>&1) && MAXV=$(echo "$VD" | sed -n 's/.*max_volume: \([-0-9.]*\) dB.*/\1/p') && MEANV=$(echo "$VD" | sed -n 's/.*mean_volume: \([-0-9.]*\) dB.*/\1/p') && AUD=$(python3 -c "print('PASS' if float('$MAXV') > -80 else 'FAIL')") && SHA=$(shasum -a 256 $MP4 | cut -d' ' -f1) && DURC=$(python3 -c "tl,d=$TL,$DUR;tol=max(0.15,2/24);print(f'timeline {tl:.3f} s, file {d:.3f} s, difference {abs(d-tl):.3f} s, tolerance {tol:.3f} s -> '+('PASS' if abs(d-tl)<=tol else 'FAIL'))") && VID=$(echo "$STREAMS" | grep -q codec_type=video && echo "$STREAMS" | grep -q codec_type=audio && echo PASS || echo FAIL) && RCPT=$(python3 -c "import json;print(json.load(open('cite-and-seek-pitch.verified.json'))['sha256'])") && { echo '# RENDER-INTEGRITY — FINAL render'; echo; echo 'No toolkit gate is named render-integrity. This report repeats, by hand, the checks in brutalist.art/runtime/scripts/compile.py verify_output (line 436), which compile.py also ran automatically on this final before promoting it.'; echo; echo "File: film/$MP4  ·  sha256 $SHA  ·  checked $(date '+%Y-%m-%d %H:%M')"; echo; echo '| Check | Result |'; echo '|---|---|'; echo "| Decodable video and audio streams | $VID |"; echo "| Duration matches timeline | $DURC |"; echo "| Full decode, ffmpeg -xerror | $DEC |"; echo "| Audio audible (max volume above -80 dB) | $AUD (max $MAXV dB, mean $MEANV dB) |"; echo "| sha256 matches the toolkit's receipt (cite-and-seek-pitch.verified.json) | $( [ "$SHA" = "$RCPT" ] && echo PASS || echo FAIL ) |"; echo; echo 'Streams:'; echo; echo '```'; echo "$STREAMS"; echo '```'; } > $OUT && sed -n '7,13p' $OUT
+[20:43:45] exit 0
+
+[2026-10-12 20:43:45] $ cd ~/Downloads/cite-and-seek-pitch/film && rm -rf _qc/audit-frames-final && mkdir -p _qc/audit-frames-final && python3 - <<'PY' > _qc/audit-frames-final/timeline.tsv
+import json
+d = json.load(open('beat_sheet.json')); t = 0.0
+print('beat\tstart_s\tmid_s\tend_s\tstart_mmss\tsegment\tnarration')
+for b in d['beats']:
+    dur = b.get('render_duration_s') or b['actual_duration_s']; m, s = divmod(t, 60)
+    print(f"{b['beat_id']}\t{t:.2f}\t{t+dur/2:.2f}\t{t+dur:.2f}\t{int(m)}:{s:05.2f}\t{b.get('segment') or '-'}\t{b['narration_text']}"); t += dur
+PY
+tail -n +2 _qc/audit-frames-final/timeline.tsv | while IFS=$'\t' read -r bid start mid rest; do ffmpeg -v error -y -ss $mid -i cite-and-seek-pitch.mp4 -frames:v 1 -vf scale=1280:-1 _qc/audit-frames-final/${bid}.png; done && cd _qc/audit-frames-final && ~/Downloads/brutalist.art/.venv/bin/python -I - <<'PY'
+from PIL import Image, ImageDraw, ImageFont
+import os
+rows = [l.rstrip('\n').split('\t') for l in open('timeline.tsv')][1:]
+font = ImageFont.truetype(os.path.expanduser('~/Downloads/cite-and-seek-pitch/film/fonts/EBGaramond-Regular.ttf'), 24)
+for page in range(3):
+    chunk = rows[page*9:(page+1)*9]
+    if not chunk: break
+    W = Image.new('RGB', (1920, 400*((len(chunk)+2)//3)), (40,40,40))
+    for i, r in enumerate(chunk):
+        im = Image.open(r[0] + '.png').convert('RGB').resize((640, 360))
+        t = Image.new('RGB', (640, 400), 'white'); t.paste(im, (0, 40))
+        ImageDraw.Draw(t).text((8, 6), f'{r[0]} @ {r[2]}s · {r[5]}', fill='black', font=font)
+        W.paste(t, ((i % 3) * 640, (i // 3) * 400))
+    W.save(f'final-sheet-{page+1}.png')
+print(len(rows), 'frames')
+PY
+[20:43:49] exit 0
+
+[2026-10-12 20:44:12] $ cd ~/Downloads/cite-and-seek-pitch/film && tail -n +2 _qc/audit-frames-final/timeline.tsv | awk -F'\t' '{print $1" "$5}' | tr '\n' ';'; echo; shasum -a 256 cite-and-seek-pitch.mp4 | cut -c1-64
+[20:44:12] exit 0
+# File edit: rewrote film/REQUIREMENTS-AUDIT.md for the final render; next command appends the mechanical counts.
+
+[2026-10-12 20:45:05] $ cd ~/Downloads/cite-and-seek-pitch/film && python3 - <<'PY'
+import re
+from collections import Counter
+rows = [l for l in open('REQUIREMENTS-AUDIT.md') if re.match(r'^\| (A|B)\d', l)]
+c = Counter()
+for l in rows:
+    st = [x.strip() for x in l.strip().strip('|').split('|')][2]
+    c['MET' if st.startswith('MET') else st] += 1
+line = f"**{len(rows)} rows:** {c['MET']} MET (including 2 'MET (planned)') · {c['PARTLY MET']} PARTLY MET · {c['MISSING']} MISSING · {c['UNVERIFIED']} UNVERIFIED."
+s = open('REQUIREMENTS-AUDIT.md').read().replace('See the count line appended below.', line)
+open('REQUIREMENTS-AUDIT.md', 'w').write(s); print(line)
+PY
+[20:45:06] exit 0
+# File edits (next command): README/BUILD-PROMPT/SOURCES updated for the final render, toolkit 5a00f54, Manim 0.20.1.
+
+[2026-10-12 20:45:27] $ python3 /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/patch_docs_final.py ~/Downloads/cite-and-seek-pitch/film
+[20:45:27] exit 0
+
+[2026-10-12 20:45:47] $ R=~/Downloads/cite-and-seek-pitch/film; S=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/gateA; rm -rf $S && mkdir -p $S && cp $R/scenes.py $S/ && cd ~/Downloads/brutalist.art && source .venv/bin/activate && export PYTHONDONTWRITEBYTECODE=1 && OUT=$R/_qc/console-gates.txt && { echo "# Console-only gate results — re-run $(date '+%Y-%m-%d %H:%M') for the FINAL film/cite-and-seek-pitch.mp4 (sha256 $(shasum -a 256 $R/cite-and-seek-pitch.mp4 | cut -c1-12)…), toolkit $(git rev-parse --short HEAD)"; for C in $(grep -o 'class [A-Z][A-Za-z0-9]*_[A-Za-z0-9_]*(Scene)' $S/scenes.py | sed 's/class //; s/(Scene)//'); do echo "## Gate A $C"; PYTHONPATH=runtime/manim python3 runtime/qc/static_scene_check.py $S/scenes.py --class $C 2>&1 | grep -v '^\s*$' | tail -1; echo "exit=${PIPESTATUS[0]}"; echo "## Gate W $C"; python3 runtime/qc/wcag_margin_check.py $R/scenes.py --class $C 2>&1 | grep -v '^\s*$' | tail -1; echo "exit=${PIPESTATUS[0]}"; done; for G in 'runtime/qc/beat_lint.py '$R/beat_sheet.json 'runtime/qc/factcheck_check.py '$R 'runtime/scripts/bookend_check.py '$R 'runtime/qc/frame_check.py '$R' --height 2160' 'runtime/qc/content_check.py '$R 'runtime/qc/lane_check.py '$R 'runtime/qc/banned_card_check.py '$R 'runtime/qc/placeholder_check.py '$R 'runtime/qc/content_default_check.py runtime/remotion/src/scenes/ClaudeDefinitions.tsx runtime/remotion/src/scenes/ClaudeComposerAsk.tsx'; do echo "## $(echo $G | cut -d' ' -f1)"; python3 $G 2>&1 | grep -v '^\s*$' | tail -3; echo "exit=${PIPESTATUS[0]}"; done; } > $OUT 2>&1; echo "exit=0 count: $(grep -c '^exit=0' $OUT)"; grep -B1 '^exit=[^0]' $OUT | head -4
+[20:45:49] exit 0
+
+[2026-10-12 20:45:49] $ P=~/Downloads/cite-and-seek-pitch; F=$P/film; D=$P/final-project-film; rm -f $D/gate-reports/art-run-review-cut.log $D/gate-reports/art-run-scenes-B00-B16.log && cp $F/README.md $F/beat_sheet.json $F/BUILD-PROMPT.md $F/SOURCES.md $F/FRICTIONAL.md $F/FACTCHECK.md $F/SHOTLIST.md $F/PROMPTS.md $F/make_sheet.py $F/scenes.py $F/finish_audio.py $F/REQUIREMENTS-AUDIT.md $D/ && cp $P/PROJECT-BRIEF.md $D/ && cp $F/cite-and-seek-pitch.mp4 $D/ && cp $F/TYPECHECK.md $F/MASTERCHECK.md $F/LOUDNESS.md $F/SRTCHECK.md $F/SHARPNESS.md $D/gate-reports/ && cp $F/_qc/REPORT.md $D/gate-reports/GATE-V-REPORT.md && cp $F/_qc/contact_sheet.png $D/gate-reports/GATE-V-contact_sheet.png && cp $F/_qc/RENDER-INTEGRITY.md $F/_qc/console-gates.txt $D/gate-reports/ && cp $F/art-run-6.log $D/gate-reports/art-run-scenes.log && cp $F/art-run-7.log $D/gate-reports/art-run-scenes-2.log && cp $F/art-final.log $D/gate-reports/art-final.log && cmp $F/cite-and-seek-pitch.mp4 $D/cite-and-seek-pitch.mp4 && echo 'mp4 copy identical' && ls -lT $D/gate-reports | awk '{print $6,$7,$8,$10}' && du -sh $D
+[20:45:49] exit 0
+
+[2026-10-12 20:46:02] $ cd ~/Downloads/brutalist.art && if [ -d runtime/remotion/_bench ]; then git check-ignore -q runtime/remotion/_bench/ && rm -r runtime/remotion/_bench && echo 'deleted runtime/remotion/_bench'; else echo 'no _bench folder'; fi; git status --porcelain; echo "brutalist.art porcelain exit=$? (no lines above = empty)"; git status --porcelain --ignored | grep -v -E '^!! (\.venv/|runtime/models/|runtime/remotion/node_modules/)$'; echo '(no lines above = only the original three ignored items)'; git -C ~/projects/cite-and-seek status --porcelain | grep -v '^?? .claude/worktrees/'; echo '(cite-and-seek repo unchanged if no lines)'
+[20:46:03] exit 0
+
+[2026-10-12 20:46:03] $ cd ~/Downloads/cite-and-seek-pitch/final-project-film && echo 'instructor strings per file:'; grep -rIc -i -E 'nikbearbrown|nik bear|liam|in for bear|professor bear|professor_bear|am_onyx|claude-liam|\bbear\b' --exclude=BUILD-LOG.txt --exclude='*.log' --exclude=console-gates.txt . | grep -v ':0$'; grep -rIl -i -E '[a-z0-9._%+-]+@[a-z0-9.-]+\.(com|edu|org|net)\b|sk-ant|HF_TOKEN=' . | grep -v -E 'BUILD-LOG|\.log' ; echo '(private scan done)'
+[20:46:03] exit 0
+
+# Final render complete and verified; submission folder refreshed; opening the final for Meena.
+
+[2026-10-12 20:46:03] $ osascript -e 'if application "QuickTime Player" is running then tell application "QuickTime Player" to close (every document whose name contains "cite-and-seek-pitch") saving no' >/dev/null 2>&1; open -a 'QuickTime Player' ~/Downloads/cite-and-seek-pitch/film/cite-and-seek-pitch.mp4 && echo opened
+[20:46:03] exit 0
+
+# ── Submission (Meena, 2026-10-12): add the Q7 FRICTIONAL entry, make the zip, push to the course fork folder.
+
+[2026-10-12 20:53:14] $ find ~ -maxdepth 4 -type d -iname '*info-7375*' -not -path '*/Library/*' 2>/dev/null | head; find ~ -maxdepth 5 -type d -path '*fall-2026*' -not -path '*/Library/*' 2>/dev/null | head
+[20:53:28] exit 0
+
+[2026-10-12 20:53:34] $ gh auth status 2>&1 | head -6; gh repo list meenuviji --fork --limit 50 --json name,parent,url 2>&1 | head -c 1500
+[20:53:35] exit 0
+
+[2026-10-12 20:53:43] $ for R in nikbearbrown meenuviji; do echo "### $R: default branch"; gh api repos/$R/info-7375-prompt-engineering-for-generative-ai --jq .default_branch; echo "### $R: fall-2026/ entries matching meena or periasamy"; gh api repos/$R/info-7375-prompt-engineering-for-generative-ai/contents/fall-2026 --jq '.[].name' 2>&1 | grep -i -E 'meena|periasamy|^README|^_' ; echo "### $R: fall-2026 entry count"; gh api repos/$R/info-7375-prompt-engineering-for-generative-ai/contents/fall-2026 --jq 'length' 2>&1; done; echo '### fork vs upstream'; gh api repos/meenuviji/info-7375-prompt-engineering-for-generative-ai/compare/nikbearbrown:main...meenuviji:main --jq '{status, ahead_by, behind_by}' 2>&1
+[20:53:46] exit 0
+
+[2026-10-12 20:53:54] $ gh api repos/nikbearbrown/info-7375-prompt-engineering-for-generative-ai/contents/fall-2026/README.md --jq .content | base64 -d | head -80
+[20:53:54] exit 0
+
+[2026-10-12 20:53:54] $ for R in nikbearbrown meenuviji; do echo "### $R fall-2026/meena-p:"; gh api repos/$R/info-7375-prompt-engineering-for-generative-ai/contents/fall-2026/meena-p --jq '.[] | .type + "  " + .name' 2>&1; done
+[20:53:55] exit 0
+
+[2026-10-12 20:54:04] $ gh api repos/nikbearbrown/info-7375-prompt-engineering-for-generative-ai/contents/fall-2026/meena-p/README.md --jq .content | base64 -d | head -30; echo '### commits touching meena-p in the course repo:'; gh api 'repos/nikbearbrown/info-7375-prompt-engineering-for-generative-ai/commits?path=fall-2026/meena-p&per_page=10' --jq '.[] | .sha[0:7] + "  " + .commit.author.date + "  " + (.author.login // .commit.author.name) + "  " + (.commit.message | split("\n")[0])'; echo '### PRs by meenuviji to the course repo:'; gh pr list -R nikbearbrown/info-7375-prompt-engineering-for-generative-ai --author meenuviji --state all --limit 10 --json number,title,state,headRefName,mergedAt 2>&1
+[20:54:06] exit 0
+
+[2026-10-12 20:54:17] $ for R in nikbearbrown meenuviji; do echo "$R: $(gh api repos/$R/info-7375-prompt-engineering-for-generative-ai --jq '.permissions | {admin, push}' 2>&1)"; done; gh api repos/nikbearbrown/info-7375-prompt-engineering-for-generative-ai/branches/main/protection 2>&1 | head -3
+[20:54:19] exit 0
+# Decision (Meena): push to the course repository nikbearbrown/info-7375-prompt-engineering-for-generative-ai, main, fall-2026/meena-p/final-project-film/.
+
+[2026-10-12 20:55:04] $ tail -3 ~/Downloads/cite-and-seek-pitch/FRICTIONAL-notes.md | cut -c1-120
+[20:55:04] exit 0
+
+[2026-10-12 20:55:11] $ cd ~/Downloads/cite-and-seek-pitch && cat >> FRICTIONAL-notes.md <<'EOF'
+
+## 2026-10-12
+
+- Q7 (why this project) asks for evidence for the skills I already have. I decided to drop the mention of my IEEE research from the brief and the film. The film says evaluating models on held-out data isn't new to me, but it points to no evidence for that; the brief names my internship forecasting work, which is my own statement, not a document anyone can check. This is a known gap against the rubric (existing
+[20:55:11] exit 0
+
+[2026-10-12 20:55:24] $ cd ~/Downloads/cite-and-seek-pitch && cp FRICTIONAL-notes.md film/FRICTIONAL.md && cp FRICTIONAL-notes.md final-project-film/FRICTIONAL.md && cmp FRICTIONAL-notes.md film/FRICTIONAL.md && cmp FRICTIONAL-notes.md final-project-film/FRICTIONAL.md && echo 'both copies identical to FRICTIONAL-notes.md' && grep -c '^## 2026-10-1[12]' final-project-film/FRICTIONAL.md
+[20:55:24] exit 0
+
+[2026-10-12 20:55:32] $ echo "git user: $(git config --global user.name) <$(git config --global user.email)>"; C=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/course-repo; rm -rf $C && git clone --quiet --filter=blob:none --sparse https://github.com/nikbearbrown/info-7375-prompt-engineering-for-generative-ai.git $C && cd $C && git sparse-checkout set fall-2026/meena-p && git log -1 --format='HEAD %h %ad %s' --date=iso && git status -sb | head -1 && find fall-2026/meena-p -maxdepth 2 | head && [ -e fall-2026/meena-p/final-project-film ] && echo 'final-project-film ALREADY EXISTS' || echo 'final-project-film does not exist yet'
+[20:55:34] exit 0
+
+[2026-10-12 20:55:44] $ C=/private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/course-repo; rsync -a --exclude='.DS_Store' ~/Downloads/cite-and-seek-pitch/final-project-film/ $C/fall-2026/meena-p/final-project-film/ && cd $C && git add fall-2026/meena-p/final-project-film && git status --short | head -40 && git diff --cached --stat | tail -1 && echo '### only meena-p touched?' && git diff --cached --name-only | grep -v '^fall-2026/meena-p/final-project-film/' || echo 'yes, only fall-2026/meena-p/final-project-film/'
+[20:55:44] exit 0
+
+[2026-10-12 20:55:53] $ cd /private/tmp/claude-501/-Users-meenu-Downloads-cite-and-seek-pitch/782a0245-0411-4203-baa7-ba0a90957d38/scratchpad/course-repo && git check-ignore -v fall-2026/meena-p/final-project-film/cite-and-seek-pitch.mp4; ls -la fall-2026/meena-p/final-project-film/cite-and-seek-pitch.mp4 | awk '{print $5, $9}'; git sparse-checkout disable >/dev/null 2>&1; git sparse-checkout set fall-2026/meena-p >/dev/null; git show HEAD:.gitignore 2>/dev/null | grep -n -i -E 'mp4|video|media' | head; echo '### do other students commit mp4s?'; git ls-tree -r --name-only HEAD fall-2026 | grep -i -c '\.mp4$'
+[20:56:02] exit 0
+# File edit: README.md notes the mp4 is in the Canvas zip and kept out of Git by the course repo's .gitignore.

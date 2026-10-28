@@ -1,0 +1,112 @@
+{
+  "database": "data/Chinook_Sqlite.sqlite",
+  "note": "Gold set, v0, 2026-10-09, drafted by Claude and checked by Riya. Every gold query was executed against Chinook v1.4.5 by run_slice.py. The 'variants' were drafted with Claude and checked by Riya, NOT model output: 'equivalent' variants are different SQL that should be judged correct; 'wrong' variants are plausible text-to-SQL mistakes that should be judged wrong. v1 (2026-10-09): Q08 originally asked about 2023, a year with no invoices; its gold returned NULL and a broken query 'matched' it. Fixed to 2013 and the runner now rejects any gold whose result is all NULL. Q02's wrong variant replaced because it changed two things at once. 2026-10-21: Q02 is order-sensitive but sets no tie order (France and Brazil both have 5 customers), so it failed two valid Claude answers; to be fixed before the full set.",
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "How many customers are there?",
+      "ordered": false,
+      "gold": "SELECT COUNT(*) FROM Customer",
+      "variants": [
+        {
+          "kind": "equivalent",
+          "sql": "SELECT COUNT(CustomerId) AS n FROM Customer"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "question": "Which 5 countries have the most customers? Show country and count.",
+      "ordered": true,
+      "gold": "SELECT Country, COUNT(*) AS n FROM Customer GROUP BY Country ORDER BY n DESC, Country LIMIT 5",
+      "variants": [
+        {
+          "kind": "wrong",
+          "label": "wrong table: counts invoices per country, not customers",
+          "sql": "SELECT BillingCountry, COUNT(*) AS n FROM Invoice GROUP BY BillingCountry ORDER BY n DESC, BillingCountry LIMIT 5"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "question": "What is total revenue by country? Show the top 3.",
+      "ordered": true,
+      "gold": "SELECT BillingCountry, ROUND(SUM(Total), 2) AS revenue FROM Invoice GROUP BY BillingCountry ORDER BY revenue DESC LIMIT 3",
+      "variants": [
+        {
+          "kind": "equivalent",
+          "sql": "SELECT i.BillingCountry, ROUND(SUM(il.UnitPrice * il.Quantity), 2) FROM Invoice i JOIN InvoiceLine il ON il.InvoiceId = i.InvoiceId GROUP BY i.BillingCountry ORDER BY 2 DESC LIMIT 3"
+        },
+        {
+          "kind": "wrong",
+          "label": "join fan-out: sums the invoice Total once per invoice line",
+          "sql": "SELECT i.BillingCountry, ROUND(SUM(i.Total), 2) FROM Invoice i JOIN InvoiceLine il ON il.InvoiceId = i.InvoiceId GROUP BY i.BillingCountry ORDER BY 2 DESC LIMIT 3"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "question": "How many distinct customers bought at least one Rock track?",
+      "ordered": false,
+      "gold": "SELECT COUNT(DISTINCT i.CustomerId) FROM Invoice i JOIN InvoiceLine il ON il.InvoiceId = i.InvoiceId JOIN Track t ON t.TrackId = il.TrackId JOIN Genre g ON g.GenreId = t.GenreId WHERE g.Name = 'Rock'",
+      "variants": [
+        {
+          "kind": "wrong",
+          "label": "COUNT instead of COUNT DISTINCT: counts purchases, not customers",
+          "sql": "SELECT COUNT(i.CustomerId) FROM Invoice i JOIN InvoiceLine il ON il.InvoiceId = i.InvoiceId JOIN Track t ON t.TrackId = il.TrackId JOIN Genre g ON g.GenreId = t.GenreId WHERE g.Name = 'Rock'"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "question": "Which employee supports the most customers? Show first name, last name, and count.",
+      "ordered": true,
+      "gold": "SELECT e.FirstName, e.LastName, COUNT(c.CustomerId) AS n FROM Employee e JOIN Customer c ON c.SupportRepId = e.EmployeeId GROUP BY e.EmployeeId ORDER BY n DESC LIMIT 1",
+      "variants": [
+        {
+          "kind": "wrong",
+          "label": "joins on the wrong key (ReportsTo instead of SupportRepId)",
+          "sql": "SELECT e.FirstName, e.LastName, COUNT(c.CustomerId) AS n FROM Employee e JOIN Customer c ON c.SupportRepId = e.ReportsTo GROUP BY e.EmployeeId ORDER BY n DESC LIMIT 1"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "question": "How many tracks are longer than five minutes?",
+      "ordered": false,
+      "gold": "SELECT COUNT(*) FROM Track WHERE Milliseconds > 300000",
+      "variants": [
+        {
+          "kind": "wrong",
+          "label": "unit error: treats Milliseconds as seconds",
+          "sql": "SELECT COUNT(*) FROM Track WHERE Milliseconds > 300"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "question": "List the genres that have more than 100 tracks.",
+      "ordered": false,
+      "gold": "SELECT g.Name FROM Genre g JOIN Track t ON t.GenreId = g.GenreId GROUP BY g.GenreId HAVING COUNT(*) > 100",
+      "variants": [
+        {
+          "kind": "equivalent",
+          "sql": "SELECT Name FROM Genre WHERE GenreId IN (SELECT GenreId FROM Track GROUP BY GenreId HAVING COUNT(*) > 100) ORDER BY Name DESC"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "question": "What was total revenue in 2013?",
+      "ordered": false,
+      "gold": "SELECT ROUND(SUM(Total), 2) FROM Invoice WHERE strftime('%Y', InvoiceDate) = '2013'",
+      "variants": [
+        {
+          "kind": "wrong",
+          "label": "string comparison on a datetime column misses every row",
+          "sql": "SELECT ROUND(SUM(Total), 2) FROM Invoice WHERE InvoiceDate = '2013'"
+        }
+      ]
+    }
+  ]
+}

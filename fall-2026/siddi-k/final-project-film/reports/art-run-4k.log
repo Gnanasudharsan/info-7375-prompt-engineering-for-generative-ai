@@ -1,0 +1,1224 @@
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B00_Triage clean
+[gateW] B01_BigCount clean
+[gateW] B02_Ghost clean
+[gateW] B03_Reader clean
+[gateW] B04_Loop clean
+[gateW] B05_Fence clean
+[gateW] B06_Gate clean
+[gateW] B07_Eval clean
+[gateW] B08_First clean
+[gateW] B09_Risk clean
+[gateW] B10_Why clean
+[gateW] B11_Honest clean
+[gateW] NOTICE Scene class(es) NOT analysed (name must look like B07_Foo / B18A_Foo): BOUT_Title
+[run] rendering B00_Triage
+Manim Community v0.20.1
+
+[10/14/26 16:22:25] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1697911619_807188262_3                         
+                             898651978.mp4'                                    
+Animation 1: _MethodAnimation(VGroup of 10 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  12%|#1        | 2/17 [00:00<00:00, 15.06it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  24%|##3       | 4/17 [00:00<00:00, 13.91it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  35%|###5      | 6/17 [00:00<00:00, 14.33it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  47%|####7     | 8/17 [00:00<00:00, 14.58it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  59%|#####8    | 10/17 [00:00<00:00, 14.29it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  71%|#######   | 12/17 [00:00<00:00, 14.52it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  82%|########2 | 14/17 [00:00<00:00, 14.27it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  94%|#########4| 16/17 [00:01<00:00, 13.92it/s]                                                                                                        [10/14/26 16:22:27] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_415299299_2                         
+                             321881029.mp4'                                    
+Animation 2: FadeIn(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 2: FadeIn(VGroup of 2 submobjects):  17%|#6        | 2/12 [00:00<00:00, 18.04it/s]Animation 2: FadeIn(VGroup of 2 submobjects):  33%|###3      | 4/12 [00:00<00:00, 14.01it/s]Animation 2: FadeIn(VGroup of 2 submobjects):  50%|#####     | 6/12 [00:00<00:00, 14.71it/s]Animation 2: FadeIn(VGroup of 2 submobjects):  67%|######6   | 8/12 [00:00<00:00, 14.73it/s]Animation 2: FadeIn(VGroup of 2 submobjects):  83%|########3 | 10/12 [00:00<00:00, 15.01it/s]Animation 2: FadeIn(VGroup of 2 submobjects): 100%|##########| 12/12 [00:00<00:00, 15.12it/s]                                                                                             [10/14/26 16:22:29] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_925522406_5                         
+                             64353203.mp4'                                     
+[10/14/26 16:22:38] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_2416551702_                         
+                             2857823952.mp4'                                   
+Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 19.87it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  33%|###3      | 5/15 [00:00<00:00, 17.00it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  47%|####6     | 7/15 [00:00<00:00, 15.16it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 14.66it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  73%|#######3  | 11/15 [00:00<00:00, 13.32it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects):  87%|########6 | 13/15 [00:00<00:00, 11.71it/s]Animation 4: _MethodAnimation(VGroup of 2 submobjects): 100%|##########| 15/15 [00:01<00:00, 11.62it/s]                                                                                                       [10/14/26 16:22:40] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_3270451836_                         
+                             217741038.mp4'                                    
+Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]Animation 5: Create(VGroup of 2 submobjects):  33%|###3      | 3/9 [00:00<00:00, 18.76it/s]Animation 5: Create(VGroup of 2 submobjects):  56%|#####5    | 5/9 [00:00<00:00, 17.96it/s]Animation 5: Create(VGroup of 2 submobjects):  78%|#######7  | 7/9 [00:00<00:00, 17.85it/s]Animation 5: Create(VGroup of 2 submobjects): 100%|##########| 9/9 [00:00<00:00, 16.39it/s]                                                                                           [10/14/26 16:22:41] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_2396854937_                         
+                             488469696.mp4'                                    
+[10/14/26 16:22:43] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_656951142_1                         
+                             866976925.mp4'                                    
+Animation 7: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  21%|##1       | 3/14 [00:00<00:00, 17.83it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  36%|###5      | 5/14 [00:00<00:00, 16.81it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  50%|#####     | 7/14 [00:00<00:00, 16.97it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  64%|######4   | 9/14 [00:00<00:00, 17.40it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  79%|#######8  | 11/14 [00:00<00:00, 17.07it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  93%|#########2| 13/14 [00:00<00:00, 17.13it/s]                                                                                                       [10/14/26 16:22:45] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_2820675291_                         
+                             3052157403.mp4'                                   
+[10/14/26 16:22:46] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_31466400_33                         
+                             10229193.mp4'                                     
+Animation 9: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]Animation 9: Create(VGroup of 2 submobjects):  33%|###3      | 3/9 [00:00<00:00, 22.67it/s]Animation 9: Create(VGroup of 2 submobjects):  67%|######6   | 6/9 [00:00<00:00, 21.13it/s]Animation 9: Create(VGroup of 2 submobjects): 100%|##########| 9/9 [00:00<00:00, 20.85it/s]                                                                                           [10/14/26 16:22:47] INFO     Animation 9 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_621102561_3                         
+                             752112044.mp4'                                    
+                    INFO     Animation 10 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_1829851632_                         
+                             574264312.mp4'                                    
+Animation 11: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 11: _MethodAnimation(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 24.75it/s]Animation 11: _MethodAnimation(VGroup of 2 submobjects):  40%|####      | 6/15 [00:00<00:00, 22.01it/s]Animation 11: _MethodAnimation(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 21.74it/s]Animation 11: _MethodAnimation(VGroup of 2 submobjects):  80%|########  | 12/15 [00:00<00:00, 21.53it/s]Animation 11: _MethodAnimation(VGroup of 2 submobjects): 100%|##########| 15/15 [00:00<00:00, 21.30it/s]                                                                                                        [10/14/26 16:22:48] INFO     Animation 11 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_3925790513_                         
+                             1844319808.mp4'                                   
+Animation 12: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]Animation 12: Create(VGroup of 2 submobjects):  33%|###3      | 3/9 [00:00<00:00, 24.99it/s]Animation 12: Create(VGroup of 2 submobjects):  67%|######6   | 6/9 [00:00<00:00, 19.15it/s]Animation 12: Create(VGroup of 2 submobjects):  89%|########8 | 8/9 [00:00<00:00, 19.17it/s]                                                                                            [10/14/26 16:22:49] INFO     Animation 12 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_3103989245_                         
+                             2837499641.mp4'                                   
+[10/14/26 16:22:58] INFO     Animation 13 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B00_Tria                         
+                             ge\1167814662_2989980945_                         
+                             3414803944.mp4'                                   
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+[10/14/26 16:22:59] INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B00                         
+                             _Triage.mp4'                                      
+                                                                               
+                    INFO     Rendered B00_Triage                   scene.py:278
+                             Played 14 animations                              
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: _MethodAnimation(VGroup of 10 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]Animation 1: _MethodAnimation(VGroup of 10 submobjects):  73%|#######2  | 8/11 [00:00<00:00, 77.44it/s]                                                                                                       Animation 2: FadeIn(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   Animation 4: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             Animation 5: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 7: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             Animation 9: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 11: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                              Animation 12: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                    [audit] scenes: 20 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B01_BigCount
+Manim Community v0.20.1
+
+Animation 0: Create(Line):   0%|          | 0/10 [00:00<?, ?it/s]Animation 0: Create(Line):  30%|###       | 3/10 [00:00<00:00, 21.29it/s]Animation 0: Create(Line):  60%|######    | 6/10 [00:00<00:00, 16.81it/s]Animation 0: Create(Line):  80%|########  | 8/10 [00:00<00:00, 15.98it/s]Animation 0: Create(Line): 100%|##########| 10/10 [00:00<00:00, 15.91it/s]                                                                          [10/14/26 16:23:12] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1697911619_282258845                         
+                             8_3218720958.mp4'                                 
+[10/14/26 16:23:16] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_200820615                         
+                             _1440023637.mp4'                                  
+Animation 2: GrowFromEdge(Rectangle):   0%|          | 0/24 [00:00<?, ?it/s]Animation 2: GrowFromEdge(Rectangle):   8%|8         | 2/24 [00:00<00:01, 13.29it/s]Animation 2: GrowFromEdge(Rectangle):  17%|#6        | 4/24 [00:00<00:01, 10.45it/s]Animation 2: GrowFromEdge(Rectangle):  25%|##5       | 6/24 [00:00<00:01, 10.79it/s]Animation 2: GrowFromEdge(Rectangle):  33%|###3      | 8/24 [00:00<00:01, 11.25it/s]Animation 2: GrowFromEdge(Rectangle):  42%|####1     | 10/24 [00:00<00:01, 11.83it/s]Animation 2: GrowFromEdge(Rectangle):  50%|#####     | 12/24 [00:01<00:01, 11.92it/s]Animation 2: GrowFromEdge(Rectangle):  58%|#####8    | 14/24 [00:01<00:00, 12.76it/s]Animation 2: GrowFromEdge(Rectangle):  67%|######6   | 16/24 [00:01<00:00, 13.97it/s]Animation 2: GrowFromEdge(Rectangle):  75%|#######5  | 18/24 [00:01<00:00, 14.32it/s]Animation 2: GrowFromEdge(Rectangle):  83%|########3 | 20/24 [00:01<00:00, 15.56it/s]Animation 2: GrowFromEdge(Rectangle):  92%|#########1| 22/24 [00:01<00:00, 16.64it/s]Animation 2: GrowFromEdge(Rectangle): 100%|##########| 24/24 [00:01<00:00, 15.29it/s]                                                                                     [10/14/26 16:23:19] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_253043633                         
+                             _413533601.mp4'                                   
+[10/14/26 16:23:29] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_300834665                         
+                             5_4197319772.mp4'                                 
+Animation 4: FadeIn(Text('1,640')), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 4: FadeIn(Text('1,640')), etc.:  25%|##5       | 3/12 [00:00<00:00, 18.79it/s]Animation 4: FadeIn(Text('1,640')), etc.:  42%|####1     | 5/12 [00:00<00:00, 17.28it/s]Animation 4: FadeIn(Text('1,640')), etc.:  58%|#####8    | 7/12 [00:00<00:00, 16.56it/s]Animation 4: FadeIn(Text('1,640')), etc.:  75%|#######5  | 9/12 [00:00<00:00, 17.12it/s]Animation 4: FadeIn(Text('1,640')), etc.:  92%|#########1| 11/12 [00:00<00:00, 17.07it/s]                                                                                         [10/14/26 16:23:33] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_260607524                         
+                             5_1467275935.mp4'                                 
+[10/14/26 16:23:36] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_467691922                         
+                             _1413439362.mp4'                                  
+Animation 6: FadeIn(Line):   0%|          | 0/5 [00:00<?, ?it/s]Animation 6: FadeIn(Line):  60%|######    | 3/5 [00:00<00:00, 29.04it/s]                                                                        [10/14/26 16:23:37] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_189975458                         
+                             9_3738340539.mp4'                                 
+Animation 7: _MethodAnimation(Line):   0%|          | 0/24 [00:00<?, ?it/s]Animation 7: _MethodAnimation(Line):  12%|#2        | 3/24 [00:00<00:00, 25.85it/s]Animation 7: _MethodAnimation(Line):  25%|##5       | 6/24 [00:00<00:00, 22.94it/s]Animation 7: _MethodAnimation(Line):  38%|###7      | 9/24 [00:00<00:00, 21.97it/s]Animation 7: _MethodAnimation(Line):  50%|#####     | 12/24 [00:00<00:00, 21.83it/s]Animation 7: _MethodAnimation(Line):  62%|######2   | 15/24 [00:00<00:00, 21.64it/s]Animation 7: _MethodAnimation(Line):  75%|#######5  | 18/24 [00:00<00:00, 21.68it/s]Animation 7: _MethodAnimation(Line):  88%|########7 | 21/24 [00:00<00:00, 20.66it/s]Animation 7: _MethodAnimation(Line): 100%|##########| 24/24 [00:01<00:00, 20.61it/s]                                                                                    [10/14/26 16:23:38] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_129318482                         
+                             3_1420397150.mp4'                                 
+Animation 8: FadeOut(Line):   0%|          | 0/5 [00:00<?, ?it/s]Animation 8: FadeOut(Line):  60%|######    | 3/5 [00:00<00:00, 26.64it/s]                                                                         [10/14/26 16:23:39] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_152458152                         
+                             8_1420397150.mp4'                                 
+[10/14/26 16:23:43] INFO     Animation 9 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_905329915                         
+                             _3912823146.mp4'                                  
+Animation 10: FadeIn(Text('data titles: 0')):   0%|          | 0/10 [00:00<?, ?it/s]Animation 10: FadeIn(Text('data titles: 0')):  30%|###       | 3/10 [00:00<00:00, 19.92it/s]Animation 10: FadeIn(Text('data titles: 0')):  50%|#####     | 5/10 [00:00<00:00, 19.09it/s]Animation 10: FadeIn(Text('data titles: 0')):  70%|#######   | 7/10 [00:00<00:00, 18.76it/s]Animation 10: FadeIn(Text('data titles: 0')):  90%|######### | 9/10 [00:00<00:00, 17.80it/s]                                                                                            [10/14/26 16:23:46] INFO     Animation 10 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_188081695                         
+                             7_415752540.mp4'                                  
+[10/14/26 16:23:48] INFO     Animation 11 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B01_BigC                         
+                             ount\1167814662_256451230                         
+                             3_3045605020.mp4'                                 
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B01                         
+                             _BigCount.mp4'                                    
+                                                                               
+                    INFO     Rendered B01_BigCount                 scene.py:278
+                             Played 12 animations                              
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: Create(Line):   0%|          | 0/6 [00:00<?, ?it/s]                                                                ~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: GrowFromEdge(Rectangle):   0%|          | 0/15 [00:00<?, ?it/s]                                                                            Animation 4: FadeIn(Text('1,640')), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                               Animation 6: FadeIn(Line):   0%|          | 0/3 [00:00<?, ?it/s]                                                                Animation 7: _MethodAnimation(Line):   0%|          | 0/15 [00:00<?, ?it/s]                                                                           Animation 8: FadeOut(Line):   0%|          | 0/3 [00:00<?, ?it/s]                                                                 Animation 10: FadeIn(Text('data titles: 0')):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   [audit] scenes: 17 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B02_Ghost
+Manim Community v0.20.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  25%|##5       | 3/12 [00:00<00:00, 24.33it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  50%|#####     | 6/12 [00:00<00:00, 21.32it/s]Animation 0: FadeIn(VGroup of 2 submobjects):  75%|#######5  | 9/12 [00:00<00:00, 21.04it/s]Animation 0: FadeIn(VGroup of 2 submobjects): 100%|##########| 12/12 [00:00<00:00, 21.07it/s]                                                                                             [10/14/26 16:24:00] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1697911619_2883397933_1                         
+                             14825092.mp4'                                     
+[10/14/26 16:24:09] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_2681145143_3                         
+                             663282572.mp4'                                    
+[10/14/26 16:24:11] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_1820737257_1                         
+                             382604067.mp4'                                    
+Animation 3: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/11 [00:00<?, ?it/s]Animation 3: Create(VGroup of 2 submobjects), etc.:  27%|##7       | 3/11 [00:00<00:00, 23.08it/s]Animation 3: Create(VGroup of 2 submobjects), etc.:  55%|#####4    | 6/11 [00:00<00:00, 19.85it/s]Animation 3: Create(VGroup of 2 submobjects), etc.:  82%|########1 | 9/11 [00:00<00:00, 19.90it/s]                                                                                                  [10/14/26 16:24:12] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_1788883226_3                         
+                             21699417.mp4'                                     
+[10/14/26 16:24:16] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_192990231_15                         
+                             58050344.mp4'                                     
+Animation 5: FadeIn(Text('404')):   0%|          | 0/11 [00:00<?, ?it/s]Animation 5: FadeIn(Text('404')):  27%|##7       | 3/11 [00:00<00:00, 22.04it/s]Animation 5: FadeIn(Text('404')):  55%|#####4    | 6/11 [00:00<00:00, 19.55it/s]Animation 5: FadeIn(Text('404')):  82%|########1 | 9/11 [00:00<00:00, 20.10it/s]                                                                                [10/14/26 16:24:17] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_4092505619_2                         
+                             22533077.mp4'                                     
+[10/14/26 16:24:20] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_2033808195_1                         
+                             578980987.mp4'                                    
+Animation 7: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]Animation 7: Create(VGroup of 2 submobjects):  33%|###3      | 3/9 [00:00<00:00, 23.62it/s]Animation 7: Create(VGroup of 2 submobjects):  67%|######6   | 6/9 [00:00<00:00, 21.91it/s]Animation 7: Create(VGroup of 2 submobjects): 100%|##########| 9/9 [00:00<00:00, 21.11it/s]                                                                                           [10/14/26 16:24:21] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_2154843246_1                         
+                             263286311.mp4'                                    
+Animation 8: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 25.62it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  40%|####      | 6/15 [00:00<00:00, 21.38it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 20.81it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  80%|########  | 12/15 [00:00<00:00, 19.93it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects): 100%|##########| 15/15 [00:00<00:00, 20.53it/s]                                                                                                       [10/14/26 16:24:23] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_3305116904_1                         
+                             138827302.mp4'                                    
+[10/14/26 16:24:24] INFO     Animation 9 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B02_Ghos                         
+                             t\1167814662_3407649939_2                         
+                             983855055.mp4'                                    
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+[10/14/26 16:24:25] INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B02                         
+                             _Ghost.mp4'                                       
+                                                                               
+                    INFO     Rendered B02_Ghost                    scene.py:278
+                             Played 10 animations                              
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                   ~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 3: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/7 [00:00<?, ?it/s]                                                                                         Animation 5: FadeIn(Text('404')):   0%|          | 0/7 [00:00<?, ?it/s]                                                                       Animation 7: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 8: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             [audit] scenes: 15 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B03_Reader
+Manim Community v0.20.1
+
+[10/14/26 16:24:40] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1697911619_1915216271_                         
+                             969373335.mp4'                                    
+Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 24.70it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  40%|####      | 6/15 [00:00<00:00, 21.52it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 21.10it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  80%|########  | 12/15 [00:00<00:00, 20.40it/s]Animation 1: FadeIn(VGroup of 2 submobjects): 100%|##########| 15/15 [00:00<00:00, 20.80it/s]                                                                                             [10/14/26 16:24:42] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_1407624911_                         
+                             250898672.mp4'                                    
+[10/14/26 16:24:43] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_999702203_2                         
+                             962264043.mp4'                                    
+Animation 3: LaggedStart(Group):   0%|          | 0/22 [00:00<?, ?it/s]Animation 3: LaggedStart(Group):  14%|#3        | 3/22 [00:00<00:00, 25.26it/s]Animation 3: LaggedStart(Group):  27%|##7       | 6/22 [00:00<00:00, 21.67it/s]Animation 3: LaggedStart(Group):  41%|####      | 9/22 [00:00<00:00, 20.52it/s]Animation 3: LaggedStart(Group):  55%|#####4    | 12/22 [00:00<00:00, 20.80it/s]Animation 3: LaggedStart(Group):  68%|######8   | 15/22 [00:00<00:00, 20.79it/s]Animation 3: LaggedStart(Group):  82%|########1 | 18/22 [00:00<00:00, 20.46it/s]Animation 3: LaggedStart(Group):  95%|#########5| 21/22 [00:01<00:00, 19.84it/s]                                                                                [10/14/26 16:24:45] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_2063396659_                         
+                             3273654142.mp4'                                   
+[10/14/26 16:24:47] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_3652307325_                         
+                             2253740198.mp4'                                   
+Animation 5: Create(Line), etc.:   0%|          | 0/10 [00:00<?, ?it/s]Animation 5: Create(Line), etc.:  30%|###       | 3/10 [00:00<00:00, 28.43it/s]Animation 5: Create(Line), etc.:  60%|######    | 6/10 [00:00<00:00, 22.08it/s]Animation 5: Create(Line), etc.:  90%|######### | 9/10 [00:00<00:00, 21.47it/s]                                                                               [10/14/26 16:24:48] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_2517870992_                         
+                             424863598.mp4'                                    
+Animation 6: FadeIn(Text('file:line')):   0%|          | 0/8 [00:00<?, ?it/s]Animation 6: FadeIn(Text('file:line')):  38%|###7      | 3/8 [00:00<00:00, 24.11it/s]Animation 6: FadeIn(Text('file:line')):  75%|#######5  | 6/8 [00:00<00:00, 21.85it/s]                                                                                     [10/14/26 16:24:50] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_162451330_2                         
+                             087906484.mp4'                                    
+[10/14/26 16:24:51] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B03_Read                         
+                             er\1167814662_1967880052_                         
+                             4168512245.mp4'                                   
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+[10/14/26 16:24:52] INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B03                         
+                             _Reader.mp4'                                      
+                                                                               
+                    INFO     Rendered B03_Reader                   scene.py:278
+                             Played 8 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                   Animation 3: LaggedStart(Group):   0%|          | 0/14 [00:00<?, ?it/s]                                                                       Animation 5: Create(Line), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                      Animation 6: FadeIn(Text('file:line')):   0%|          | 0/5 [00:00<?, ?it/s]                                                                             [audit] scenes: 12 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B04_Loop
+Manim Community v0.20.1
+
+Animation 0: Create(Arrow), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: Create(Arrow), etc.:  25%|##5       | 3/12 [00:00<00:00, 19.93it/s]Animation 0: Create(Arrow), etc.:  42%|####1     | 5/12 [00:00<00:00, 15.03it/s]Animation 0: Create(Arrow), etc.:  58%|#####8    | 7/12 [00:00<00:00, 14.11it/s]Animation 0: Create(Arrow), etc.:  75%|#######5  | 9/12 [00:00<00:00, 15.12it/s]Animation 0: Create(Arrow), etc.:  92%|#########1| 11/12 [00:00<00:00, 15.81it/s]                                                                                 [10/14/26 16:25:01] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1697911619_2329607637_17                         
+                             90005792.mp4'                                     
+Animation 1: Create(ArcBetweenPoints):   0%|          | 0/15 [00:00<?, ?it/s]Animation 1: Create(ArcBetweenPoints):  20%|##        | 3/15 [00:00<00:00, 25.85it/s]Animation 1: Create(ArcBetweenPoints):  40%|####      | 6/15 [00:00<00:00, 20.71it/s]Animation 1: Create(ArcBetweenPoints):  60%|######    | 9/15 [00:00<00:00, 20.48it/s]Animation 1: Create(ArcBetweenPoints):  80%|########  | 12/15 [00:00<00:00, 19.33it/s]Animation 1: Create(ArcBetweenPoints):  93%|#########3| 14/15 [00:00<00:00, 18.93it/s]                                                                                      [10/14/26 16:25:02] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_3042398377_43                         
+                             3471403.mp4'                                      
+[10/14/26 16:25:06] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_1424193780_88                         
+                             9094169.mp4'                                      
+Animation 3: FadeIn(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]Animation 3: FadeIn(VGroup of 2 submobjects):  38%|###7      | 3/8 [00:00<00:00, 23.46it/s]Animation 3: FadeIn(VGroup of 2 submobjects):  75%|#######5  | 6/8 [00:00<00:00, 19.04it/s]Animation 3: FadeIn(VGroup of 2 submobjects): 100%|##########| 8/8 [00:00<00:00, 18.91it/s]                                                                                           [10/14/26 16:25:07] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_4198723612_76                         
+                             5654551.mp4'                                      
+[10/14/26 16:25:10] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_2649232327_31                         
+                             86929786.mp4'                                     
+Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 23.03it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  40%|####      | 6/15 [00:00<00:00, 20.94it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 20.82it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  80%|########  | 12/15 [00:00<00:00, 20.23it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects): 100%|##########| 15/15 [00:00<00:00, 20.40it/s]                                                                                                       [10/14/26 16:25:11] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_3056776131_83                         
+                             8726722.mp4'                                      
+[10/14/26 16:25:13] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_8043491_48242                         
+                             9375.mp4'                                         
+Animation 7: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 7: _MethodAnimation(VGroup of 3 submobjects):  25%|##5       | 3/12 [00:00<00:00, 18.24it/s]Animation 7: _MethodAnimation(VGroup of 3 submobjects):  42%|####1     | 5/12 [00:00<00:00, 17.36it/s]Animation 7: _MethodAnimation(VGroup of 3 submobjects):  58%|#####8    | 7/12 [00:00<00:00, 16.73it/s]Animation 7: _MethodAnimation(VGroup of 3 submobjects):  75%|#######5  | 9/12 [00:00<00:00, 16.93it/s]Animation 7: _MethodAnimation(VGroup of 3 submobjects):  92%|#########1| 11/12 [00:00<00:00, 16.70it/s]                                                                                                       [10/14/26 16:25:14] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_1750277848_25                         
+                             4511581.mp4'                                      
+Animation 8: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 24.93it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  40%|####      | 6/15 [00:00<00:00, 22.09it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 21.80it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects):  80%|########  | 12/15 [00:00<00:00, 21.34it/s]Animation 8: _MethodAnimation(VGroup of 2 submobjects): 100%|##########| 15/15 [00:00<00:00, 21.31it/s]                                                                                                       [10/14/26 16:25:15] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_2637220203_23                         
+                             1158601.mp4'                                      
+[10/14/26 16:25:17] INFO     Animation 9 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_4188841818_44                         
+                             9058575.mp4'                                      
+Animation 10: FadeOut(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]Animation 10: FadeOut(VGroup of 2 submobjects):  38%|###7      | 3/8 [00:00<00:00, 24.58it/s]Animation 10: FadeOut(VGroup of 2 submobjects):  75%|#######5  | 6/8 [00:00<00:00, 21.27it/s]                                                                                                                 INFO     Animation 10 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_4108763038_41                         
+                             42428612.mp4'                                     
+[10/14/26 16:25:20] INFO     Animation 11 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_4253467065_13                         
+                             16065094.mp4'                                     
+Animation 12: Create(Line), etc.:   0%|          | 0/10 [00:00<?, ?it/s]Animation 12: Create(Line), etc.:  30%|###       | 3/10 [00:00<00:00, 26.71it/s]Animation 12: Create(Line), etc.:  60%|######    | 6/10 [00:00<00:00, 20.37it/s]Animation 12: Create(Line), etc.:  90%|######### | 9/10 [00:00<00:00, 20.77it/s]                                                                                [10/14/26 16:25:22] INFO     Animation 12 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_708772424_338                         
+                             1748529.mp4'                                      
+[10/14/26 16:25:25] INFO     Animation 13 : Partial    scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B04_Loop                         
+                             \1167814662_1168564119_40                         
+                             45163409.mp4'                                     
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+[10/14/26 16:25:26] INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B04                         
+                             _Loop.mp4'                                        
+                                                                               
+                    INFO     Rendered B04_Loop                     scene.py:278
+                             Played 14 animations                              
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: Create(Arrow), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                       Animation 1: Create(ArcBetweenPoints):   0%|          | 0/9 [00:00<?, ?it/s]                                                                            ~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 3: FadeIn(VGroup of 2 submobjects):   0%|          | 0/5 [00:00<?, ?it/s]                                                                                   Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             Animation 7: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                             Animation 8: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             Animation 10: FadeOut(VGroup of 2 submobjects):   0%|          | 0/5 [00:00<?, ?it/s]                                                                                     Animation 12: Create(Line), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                       [audit] scenes: 20 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B05_Fence
+Manim Community v0.20.1
+
+Animation 0: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/12 [00:00<?, ?it/s]Animation 0: FadeIn(VGroup of 2 submobjects), etc.:  25%|##5       | 3/12 [00:00<00:00, 23.41it/s]Animation 0: FadeIn(VGroup of 2 submobjects), etc.:  50%|#####     | 6/12 [00:00<00:00, 19.39it/s]Animation 0: FadeIn(VGroup of 2 submobjects), etc.:  67%|######6   | 8/12 [00:00<00:00, 19.03it/s]Animation 0: FadeIn(VGroup of 2 submobjects), etc.:  92%|#########1| 11/12 [00:00<00:00, 19.62it/s]                                                                                                   [10/14/26 16:25:34] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1697911619_3459871285_2                         
+                             687136980.mp4'                                    
+[10/14/26 16:25:38] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_2508104656_1                         
+                             941285387.mp4'                                    
+Animation 2: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  17%|#6        | 2/12 [00:00<00:00, 18.24it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  33%|###3      | 4/12 [00:00<00:00, 15.80it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  50%|#####     | 6/12 [00:00<00:00, 14.86it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  67%|######6   | 8/12 [00:00<00:00, 14.71it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects):  83%|########3 | 10/12 [00:00<00:00, 14.35it/s]Animation 2: _MethodAnimation(VGroup of 3 submobjects): 100%|##########| 12/12 [00:00<00:00, 14.58it/s]                                                                                                       [10/14/26 16:25:39] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_1052431971_4                         
+                             17284312.mp4'                                     
+Animation 3: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/22 [00:00<?, ?it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  14%|#3        | 3/22 [00:00<00:00, 24.74it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  27%|##7       | 6/22 [00:00<00:00, 21.01it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  41%|####      | 9/22 [00:00<00:00, 20.09it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  55%|#####4    | 12/22 [00:00<00:00, 20.25it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  68%|######8   | 15/22 [00:00<00:00, 20.68it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  82%|########1 | 18/22 [00:00<00:00, 20.42it/s]Animation 3: _MethodAnimation(VGroup of 2 submobjects):  95%|#########5| 21/22 [00:01<00:00, 20.67it/s]                                                                                                       [10/14/26 16:25:41] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_1177452687_3                         
+                             324696719.mp4'                                    
+Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  17%|#6        | 2/12 [00:00<00:00, 18.88it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  33%|###3      | 4/12 [00:00<00:00, 16.06it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  50%|#####     | 6/12 [00:00<00:00, 15.92it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  67%|######6   | 8/12 [00:00<00:00, 14.83it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects):  83%|########3 | 10/12 [00:00<00:00, 14.65it/s]Animation 4: _MethodAnimation(VGroup of 3 submobjects): 100%|##########| 12/12 [00:00<00:00, 14.41it/s]                                                                                                       [10/14/26 16:25:42] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_1673989181_4                         
+                             213900080.mp4'                                    
+Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  20%|##        | 3/15 [00:00<00:00, 23.52it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  40%|####      | 6/15 [00:00<00:00, 21.42it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  60%|######    | 9/15 [00:00<00:00, 18.18it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  73%|#######3  | 11/15 [00:00<00:00, 18.47it/s]Animation 5: _MethodAnimation(VGroup of 2 submobjects):  93%|#########3| 14/15 [00:00<00:00, 19.26it/s]                                                                                                       [10/14/26 16:25:44] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_1427452234_9                         
+                             14453219.mp4'                                     
+[10/14/26 16:25:45] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_3081734813_3                         
+                             75109428.mp4'                                     
+Animation 7: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  25%|##5       | 3/12 [00:00<00:00, 23.18it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  50%|#####     | 6/12 [00:00<00:00, 20.25it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects):  75%|#######5  | 9/12 [00:00<00:00, 20.44it/s]Animation 7: _MethodAnimation(VGroup of 2 submobjects): 100%|##########| 12/12 [00:00<00:00, 21.00it/s]                                                                                                       [10/14/26 16:25:46] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_1101734872_1                         
+                             292698050.mp4'                                    
+Animation 8: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/10 [00:00<?, ?it/s]Animation 8: Create(VGroup of 2 submobjects), etc.:  30%|###       | 3/10 [00:00<00:00, 24.25it/s]Animation 8: Create(VGroup of 2 submobjects), etc.:  60%|######    | 6/10 [00:00<00:00, 22.34it/s]Animation 8: Create(VGroup of 2 submobjects), etc.:  90%|######### | 9/10 [00:00<00:00, 21.40it/s]                                                                                                  [10/14/26 16:25:48] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_2675925142_4                         
+                             7426394.mp4'                                      
+[10/14/26 16:25:54] INFO     Animation 9 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B05_Fenc                         
+                             e\1167814662_2474900572_3                         
+                             472160586.mp4'                                    
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B05                         
+                             _Fence.mp4'                                       
+                                                                               
+                    INFO     Rendered B05_Fence                    scene.py:278
+                             Played 10 animations                              
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/8 [00:00<?, ?it/s]                                                                                         ~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                             Animation 3: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/14 [00:00<?, ?it/s]                                                                                              Animation 4: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                             Animation 5: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]                                                                                             Animation 7: _MethodAnimation(VGroup of 2 submobjects):   0%|          | 0/8 [00:00<?, ?it/s]                                                                                             Animation 8: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                                         [audit] scenes: 13 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B06_Gate
+Manim Community v0.20.1
+
+[10/14/26 16:26:05] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1697911619_2649232327_34                         
+                             7140081.mp4'                                      
+Animation 1: _MethodAnimation(VGroup of 7 submobjects):   0%|          | 0/24 [00:00<?, ?it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):   8%|8         | 2/24 [00:00<00:01, 18.60it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  17%|#6        | 4/24 [00:00<00:01, 14.74it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  25%|##5       | 6/24 [00:00<00:01, 14.56it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  33%|###3      | 8/24 [00:00<00:01, 14.56it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  42%|####1     | 10/24 [00:00<00:00, 15.30it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  50%|#####     | 12/24 [00:00<00:00, 15.89it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  58%|#####8    | 14/24 [00:00<00:00, 16.40it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  67%|######6   | 16/24 [00:01<00:00, 16.58it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  75%|#######5  | 18/24 [00:01<00:00, 16.16it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  83%|########3 | 20/24 [00:01<00:00, 16.56it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  92%|#########1| 22/24 [00:01<00:00, 15.59it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects): 100%|##########| 24/24 [00:01<00:00, 15.75it/s]                                                                                                       [10/14/26 16:26:07] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1167814662_3715266402_33                         
+                             13147905.mp4'                                     
+[10/14/26 16:26:09] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1167814662_223169271_102                         
+                             0200529.mp4'                                      
+[10/14/26 16:26:10] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1167814662_819468285_265                         
+                             8788616.mp4'                                      
+Animation 4: _MethodAnimation(VGroup of 9 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]Animation 4: _MethodAnimation(VGroup of 9 submobjects):  22%|##2       | 2/9 [00:00<00:00, 13.22it/s]Animation 4: _MethodAnimation(VGroup of 9 submobjects):  44%|####4     | 4/9 [00:00<00:00, 10.33it/s]Animation 4: _MethodAnimation(VGroup of 9 submobjects):  67%|######6   | 6/9 [00:00<00:00, 10.51it/s]Animation 4: _MethodAnimation(VGroup of 9 submobjects):  89%|########8 | 8/9 [00:00<00:00, 11.04it/s]                                                                                                     [10/14/26 16:26:12] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1167814662_4269841665_23                         
+                             28917420.mp4'                                     
+Animation 5: FadeIn(Dot):   0%|          | 0/6 [00:00<?, ?it/s]Animation 5: FadeIn(Dot):  50%|#####     | 3/6 [00:00<00:00, 24.80it/s]Animation 5: FadeIn(Dot): 100%|##########| 6/6 [00:00<00:00, 20.90it/s]                                                                                           INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1167814662_2921989404_12                         
+                             66479015.mp4'                                     
+[10/14/26 16:26:17] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B06_Gate                         
+                             \1167814662_1021951402_53                         
+                             2722561.mp4'                                      
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B06                         
+                             _Gate.mp4'                                        
+                                                                               
+                    INFO     Rendered B06_Gate                     scene.py:278
+                             Played 7 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: _MethodAnimation(VGroup of 7 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]Animation 1: _MethodAnimation(VGroup of 7 submobjects):  53%|#####3    | 8/15 [00:00<00:00, 76.42it/s]                                                                                                      Animation 4: _MethodAnimation(VGroup of 9 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                             Animation 5: FadeIn(Dot):   0%|          | 0/4 [00:00<?, ?it/s]                                                               [audit] scenes: 11 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B07_Eval
+Manim Community v0.20.1
+
+[10/14/26 16:26:31] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1697911619_164492435_228                         
+                             1384810.mp4'                                      
+Animation 1: _MethodAnimation(VGroup of 6 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  12%|#1        | 2/17 [00:00<00:00, 16.52it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  24%|##3       | 4/17 [00:00<00:00, 14.52it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  35%|###5      | 6/17 [00:00<00:00, 14.19it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  47%|####7     | 8/17 [00:00<00:00, 13.80it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  59%|#####8    | 10/17 [00:00<00:00, 13.87it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  71%|#######   | 12/17 [00:00<00:00, 13.78it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  82%|########2 | 14/17 [00:00<00:00, 14.11it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  94%|#########4| 16/17 [00:01<00:00, 13.51it/s]                                                                                                       [10/14/26 16:26:33] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_4205706910_30                         
+                             42712944.mp4'                                     
+Animation 2: FadeIn(Text('held back')):   0%|          | 0/8 [00:00<?, ?it/s]Animation 2: FadeIn(Text('held back')):  38%|###7      | 3/8 [00:00<00:00, 21.90it/s]Animation 2: FadeIn(Text('held back')):  75%|#######5  | 6/8 [00:00<00:00, 19.81it/s]Animation 2: FadeIn(Text('held back')): 100%|##########| 8/8 [00:00<00:00, 19.19it/s]                                                                                     [10/14/26 16:26:35] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_1547885852_16                         
+                             32518562.mp4'                                     
+[10/14/26 16:26:36] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_2410975989_88                         
+                             5819706.mp4'                                      
+Animation 4: LaggedStart(Group):   0%|          | 0/17 [00:00<?, ?it/s]Animation 4: LaggedStart(Group):  24%|##3       | 4/17 [00:00<00:00, 24.45it/s]Animation 4: LaggedStart(Group):  41%|####1     | 7/17 [00:00<00:00, 21.72it/s]Animation 4: LaggedStart(Group):  59%|#####8    | 10/17 [00:00<00:00, 21.28it/s]Animation 4: LaggedStart(Group):  76%|#######6  | 13/17 [00:00<00:00, 21.33it/s]Animation 4: LaggedStart(Group):  94%|#########4| 16/17 [00:00<00:00, 21.15it/s]                                                                                [10/14/26 16:26:38] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_2161615107_31                         
+                             64173811.mp4'                                     
+[10/14/26 16:26:44] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_713725392_394                         
+                             0058279.mp4'                                      
+Animation 6: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  12%|#1        | 2/17 [00:00<00:01, 12.49it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  24%|##3       | 4/17 [00:00<00:01, 11.11it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  35%|###5      | 6/17 [00:00<00:00, 11.52it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  47%|####7     | 8/17 [00:00<00:00, 10.13it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  59%|#####8    | 10/17 [00:00<00:00, 10.13it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  71%|#######   | 12/17 [00:01<00:00, 10.45it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  82%|########2 | 14/17 [00:01<00:00, 10.96it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  94%|#########4| 16/17 [00:01<00:00, 11.76it/s]                                                                                                       [10/14/26 16:26:46] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_3683625448_40                         
+                             56065132.mp4'                                     
+[10/14/26 16:26:52] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B07_Eval                         
+                             \1167814662_2024277596_30                         
+                             22565073.mp4'                                     
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B07                         
+                             _Eval.mp4'                                        
+                                                                               
+                    INFO     Rendered B07_Eval                     scene.py:278
+                             Played 8 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: _MethodAnimation(VGroup of 6 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]Animation 1: _MethodAnimation(VGroup of 6 submobjects):  73%|#######2  | 8/11 [00:00<00:00, 72.72it/s]                                                                                                      Animation 2: FadeIn(Text('held back')):   0%|          | 0/5 [00:00<?, ?it/s]                                                                             Animation 4: LaggedStart(Group):   0%|          | 0/11 [00:00<?, ?it/s]                                                                       Animation 6: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]Animation 6: _MethodAnimation(VGroup of 3 submobjects):  64%|######3   | 7/11 [00:00<00:00, 63.29it/s]                                                                                                      [audit] scenes: 12 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B08_First
+Manim Community v0.20.1
+
+Animation 0: LaggedStart(Group):   0%|          | 0/24 [00:00<?, ?it/s]Animation 0: LaggedStart(Group):  12%|#2        | 3/24 [00:00<00:00, 25.39it/s]Animation 0: LaggedStart(Group):  25%|##5       | 6/24 [00:00<00:00, 21.03it/s]Animation 0: LaggedStart(Group):  38%|###7      | 9/24 [00:00<00:00, 20.06it/s]Animation 0: LaggedStart(Group):  50%|#####     | 12/24 [00:00<00:00, 19.38it/s]Animation 0: LaggedStart(Group):  58%|#####8    | 14/24 [00:00<00:00, 19.12it/s]Animation 0: LaggedStart(Group):  67%|######6   | 16/24 [00:00<00:00, 18.80it/s]Animation 0: LaggedStart(Group):  75%|#######5  | 18/24 [00:00<00:00, 18.87it/s]Animation 0: LaggedStart(Group):  88%|########7 | 21/24 [00:01<00:00, 19.26it/s]Animation 0: LaggedStart(Group): 100%|##########| 24/24 [00:01<00:00, 19.55it/s]                                                                                [10/14/26 16:27:06] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B08_Firs                         
+                             t\1697911619_3720858415_3                         
+                             823568298.mp4'                                    
+[10/14/26 16:27:17] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B08_Firs                         
+                             t\1167814662_3498173264_3                         
+                             662456478.mp4'                                    
+Animation 2: LaggedStart(Group):   0%|          | 0/39 [00:00<?, ?it/s]Animation 2: LaggedStart(Group):   8%|7         | 3/39 [00:00<00:01, 24.08it/s]Animation 2: LaggedStart(Group):  15%|#5        | 6/39 [00:00<00:01, 19.73it/s]Animation 2: LaggedStart(Group):  23%|##3       | 9/39 [00:00<00:01, 19.55it/s]Animation 2: LaggedStart(Group):  28%|##8       | 11/39 [00:00<00:01, 19.16it/s]Animation 2: LaggedStart(Group):  36%|###5      | 14/39 [00:00<00:01, 19.36it/s]Animation 2: LaggedStart(Group):  41%|####1     | 16/39 [00:00<00:01, 19.46it/s]Animation 2: LaggedStart(Group):  46%|####6     | 18/39 [00:00<00:01, 19.50it/s]Animation 2: LaggedStart(Group):  51%|#####1    | 20/39 [00:01<00:00, 19.44it/s]Animation 2: LaggedStart(Group):  56%|#####6    | 22/39 [00:01<00:00, 19.53it/s]Animation 2: LaggedStart(Group):  64%|######4   | 25/39 [00:01<00:00, 19.76it/s]Animation 2: LaggedStart(Group):  69%|######9   | 27/39 [00:01<00:00, 19.61it/s]Animation 2: LaggedStart(Group):  77%|#######6  | 30/39 [00:01<00:00, 19.78it/s]Animation 2: LaggedStart(Group):  82%|########2 | 32/39 [00:01<00:00, 19.61it/s]Animation 2: LaggedStart(Group):  87%|########7 | 34/39 [00:01<00:00, 18.97it/s]Animation 2: LaggedStart(Group):  92%|#########2| 36/39 [00:01<00:00, 19.24it/s]Animation 2: LaggedStart(Group):  97%|#########7| 38/39 [00:01<00:00, 18.97it/s]                                                                                [10/14/26 16:27:20] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B08_Firs                         
+                             t\1167814662_3439805887_7                         
+                             1069954.mp4'                                      
+Animation 3: Create(VGroup of 2 submobjects):   0%|          | 0/9 [00:00<?, ?it/s]Animation 3: Create(VGroup of 2 submobjects):  33%|###3      | 3/9 [00:00<00:00, 23.18it/s]Animation 3: Create(VGroup of 2 submobjects):  67%|######6   | 6/9 [00:00<00:00, 21.96it/s]Animation 3: Create(VGroup of 2 submobjects): 100%|##########| 9/9 [00:00<00:00, 20.71it/s]                                                                                           [10/14/26 16:27:21] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B08_Firs                         
+                             t\1167814662_1525131690_4                         
+                             6165701.mp4'                                      
+[10/14/26 16:27:26] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B08_Firs                         
+                             t\1167814662_2343875364_3                         
+                             67681547.mp4'                                     
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B08                         
+                             _First.mp4'                                       
+                                                                               
+                    INFO     Rendered B08_First                    scene.py:278
+                             Played 5 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: LaggedStart(Group):   0%|          | 0/15 [00:00<?, ?it/s]                                                                       ~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: LaggedStart(Group):   0%|          | 0/24 [00:00<?, ?it/s]                                                                       Animation 3: Create(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   [audit] scenes: 7 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B09_Risk
+Manim Community v0.20.1
+
+[10/14/26 16:27:44] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1697911619_192559027_286                         
+                             4197112.mp4'                                      
+Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/10 [00:00<?, ?it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  30%|###       | 3/10 [00:00<00:00, 22.61it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  60%|######    | 6/10 [00:00<00:00, 20.17it/s]Animation 1: FadeIn(VGroup of 2 submobjects):  90%|######### | 9/10 [00:00<00:00, 21.08it/s]                                                                                            [10/14/26 16:27:46] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_4247542462_30                         
+                             43728785.mp4'                                     
+[10/14/26 16:27:49] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_1183333308_14                         
+                             7036615.mp4'                                      
+[10/14/26 16:27:51] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_2131503491_36                         
+                             66794022.mp4'                                     
+Animation 4: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/10 [00:00<?, ?it/s]Animation 4: FadeIn(VGroup of 2 submobjects), etc.:  30%|###       | 3/10 [00:00<00:00, 22.16it/s]Animation 4: FadeIn(VGroup of 2 submobjects), etc.:  60%|######    | 6/10 [00:00<00:00, 19.88it/s]Animation 4: FadeIn(VGroup of 2 submobjects), etc.:  90%|######### | 9/10 [00:00<00:00, 20.25it/s]                                                                                                  [10/14/26 16:27:52] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_1610385440_31                         
+                             58691010.mp4'                                     
+[10/14/26 16:27:57] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_4158589918_33                         
+                             51671821.mp4'                                     
+Animation 6: Create(Line):   0%|          | 0/17 [00:00<?, ?it/s]Animation 6: Create(Line):  18%|#7        | 3/17 [00:00<00:00, 26.19it/s]Animation 6: Create(Line):  35%|###5      | 6/17 [00:00<00:00, 21.43it/s]Animation 6: Create(Line):  53%|#####2    | 9/17 [00:00<00:00, 20.68it/s]Animation 6: Create(Line):  71%|#######   | 12/17 [00:00<00:00, 20.65it/s]Animation 6: Create(Line):  88%|########8 | 15/17 [00:00<00:00, 20.38it/s]                                                                          [10/14/26 16:27:59] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_3925803417_17                         
+                             97197281.mp4'                                     
+Animation 7: _MethodAnimation(Dot), etc.:   0%|          | 0/10 [00:00<?, ?it/s]Animation 7: _MethodAnimation(Dot), etc.:  20%|##        | 2/10 [00:00<00:00, 18.44it/s]Animation 7: _MethodAnimation(Dot), etc.:  40%|####      | 4/10 [00:00<00:00, 16.17it/s]Animation 7: _MethodAnimation(Dot), etc.:  60%|######    | 6/10 [00:00<00:00, 16.02it/s]Animation 7: _MethodAnimation(Dot), etc.:  80%|########  | 8/10 [00:00<00:00, 16.04it/s]Animation 7: _MethodAnimation(Dot), etc.: 100%|##########| 10/10 [00:00<00:00, 15.93it/s]                                                                                         [10/14/26 16:28:00] INFO     Animation 7 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_2624152490_76                         
+                             7671558.mp4'                                      
+[10/14/26 16:28:06] INFO     Animation 8 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B09_Risk                         
+                             \1167814662_4009286741_12                         
+                             67576034.mp4'                                     
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B09                         
+                             _Risk.mp4'                                        
+                                                                               
+                    INFO     Rendered B09_Risk                     scene.py:278
+                             Played 9 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 1: FadeIn(VGroup of 2 submobjects):   0%|          | 0/6 [00:00<?, ?it/s]                                                                                   Animation 4: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                                         Animation 6: Create(Line):   0%|          | 0/11 [00:00<?, ?it/s]                                                                 Animation 7: _MethodAnimation(Dot), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                               [audit] scenes: 14 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B10_Why
+Manim Community v0.20.1
+
+[10/14/26 16:28:25] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1697911619_3430426287_388                         
+                             9187737.mp4'                                      
+[10/14/26 16:28:26] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1167814662_720499678_4054                         
+                             773623.mp4'                                       
+Animation 2: _MethodAnimation(VGroup of 7 submobjects):   0%|          | 0/17 [00:00<?, ?it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  12%|#1        | 2/17 [00:00<00:01, 11.63it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  24%|##3       | 4/17 [00:00<00:01,  9.33it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  29%|##9       | 5/17 [00:00<00:01,  9.38it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  35%|###5      | 6/17 [00:00<00:01,  9.10it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  47%|####7     | 8/17 [00:00<00:00,  9.31it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  53%|#####2    | 9/17 [00:00<00:00,  9.37it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  59%|#####8    | 10/17 [00:01<00:00,  9.35it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  65%|######4   | 11/17 [00:01<00:00,  8.81it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  71%|#######   | 12/17 [00:01<00:00,  8.66it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  76%|#######6  | 13/17 [00:01<00:00,  8.82it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  88%|########8 | 15/17 [00:01<00:00,  9.80it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects): 100%|##########| 17/17 [00:01<00:00, 10.47it/s]                                                                                                       [10/14/26 16:28:29] INFO     Animation 2 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1167814662_2239183445_290                         
+                             5854429.mp4'                                      
+Animation 3: FadeIn(Text('NBA RAG app')), etc.:   0%|          | 0/9 [00:00<?, ?it/s]Animation 3: FadeIn(Text('NBA RAG app')), etc.:  33%|###3      | 3/9 [00:00<00:00, 17.89it/s]Animation 3: FadeIn(Text('NBA RAG app')), etc.:  56%|#####5    | 5/9 [00:00<00:00, 14.47it/s]Animation 3: FadeIn(Text('NBA RAG app')), etc.:  78%|#######7  | 7/9 [00:00<00:00, 14.70it/s]Animation 3: FadeIn(Text('NBA RAG app')), etc.: 100%|##########| 9/9 [00:00<00:00, 15.42it/s]                                                                                             [10/14/26 16:28:32] INFO     Animation 3 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1167814662_1303076314_421                         
+                             1553151.mp4'                                      
+[10/14/26 16:28:35] INFO     Animation 4 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1167814662_4094552654_127                         
+                             8651097.mp4'                                      
+Animation 5: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/20 [00:00<?, ?it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  10%|#         | 2/20 [00:00<00:01, 17.09it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  20%|##        | 4/20 [00:00<00:01, 14.25it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  30%|###       | 6/20 [00:00<00:00, 14.05it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  40%|####      | 8/20 [00:00<00:00, 13.30it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  50%|#####     | 10/20 [00:00<00:00, 13.54it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  60%|######    | 12/20 [00:00<00:00, 13.59it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  70%|#######   | 14/20 [00:01<00:00, 13.59it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  80%|########  | 16/20 [00:01<00:00, 13.89it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  90%|######### | 18/20 [00:01<00:00, 13.86it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects): 100%|##########| 20/20 [00:01<00:00, 13.86it/s]                                                                                                       [10/14/26 16:28:37] INFO     Animation 5 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1167814662_2118204899_302                         
+                             9071398.mp4'                                      
+[10/14/26 16:28:42] INFO     Animation 6 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B10_Why\                         
+                             1167814662_795320064_4034                         
+                             438173.mp4'                                       
+                    INFO     Combining to Movie file.  scene_file_writer.py:753
+                    INFO                               scene_file_writer.py:904
+                             File ready at                                     
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\B10                         
+                             _Why.mp4'                                         
+                                                                               
+                    INFO     Rendered B10_Why                      scene.py:278
+                             Played 7 animations                               
+You are using manim version v0.20.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+~\Documents\GitHub\brutalist.art\runtime\qc\manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: _MethodAnimation(VGroup of 7 submobjects):   0%|          | 0/11 [00:00<?, ?it/s]Animation 2: _MethodAnimation(VGroup of 7 submobjects):  73%|#######2  | 8/11 [00:00<00:00, 75.14it/s]                                                                                                      Animation 3: FadeIn(Text('NBA RAG app')), etc.:   0%|          | 0/6 [00:00<?, ?it/s]                                                                                     Animation 5: _MethodAnimation(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 5: _MethodAnimation(VGroup of 3 submobjects):  67%|######6   | 8/12 [00:00<00:00, 75.25it/s]                                                                                                      [audit] scenes: 11 snapshots → CLEAN
+[audit] report: ~\Documents\GitHub\final-project-film\layout_audit.md
+[run] rendering B11_Honest
+Manim Community v0.20.1
+
+[10/14/26 16:29:00] INFO     Animation 0 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B11_Hone                         
+                             st\1697911619_958830685_1                         
+                             39702528.mp4'                                     
+Animation 1: FadeIn(VGroup of 3 submobjects):   0%|          | 0/12 [00:00<?, ?it/s]Animation 1: FadeIn(VGroup of 3 submobjects):  25%|##5       | 3/12 [00:00<00:00, 26.20it/s]Animation 1: FadeIn(VGroup of 3 submobjects):  50%|#####     | 6/12 [00:00<00:00, 23.51it/s]Animation 1: FadeIn(VGroup of 3 submobjects):  75%|#######5  | 9/12 [00:00<00:00, 20.83it/s]Animation 1: FadeIn(VGroup of 3 submobjects): 100%|##########| 12/12 [00:00<00:00, 21.13it/s]                                                                                             [10/14/26 16:29:01] INFO     Animation 1 : Partial     scene_file_writer.py:601
+                             movie file written in                             
+                             '~                                   
+                             Kommuri\Documents\GitHub\                         
+                             final-project-film\media\                         
+                             videos\scenes\2160p24\par                         
+                             tial_movie_files\B11_Hone                         
+                             st\1167814662_203865818_1                         
+                             914001228.mp4'                                    
+      0 [main] bash 9 dofork: child -1 - forked process 19908 died unexpectedly, retry 0, exit code 0xC000026B, errno 11
+~/Documents/GitHub/brutalist.art/runtime/scripts/run.sh: fork: retry: Resource temporarily unavailable

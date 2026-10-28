@@ -1,0 +1,88 @@
+[run] skip B03_ThePipeline — B03 already filled
+[run] skip B05_FirstMinute — B05 already filled
+[run] skip B06_FourSkills — B06 already filled
+[run] skip B07_InOutFirst — B07 already filled
+[run] skip B08_NameVariants — B08 already filled
+[run] skip B09_HaveAndNew — B09 already filled
+[run] skip B10_TodayAndWill — B10 already filled
+[run] skip B12_Outro — B12 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B04_Alternatives clean
+[run] rendering B04_Alternatives
+Manim Community v0.18.1
+
+[10/24/26 18:19:53] INFO     Animation 0 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             1552269881_2018016564_22313245                     
+                             7)                                                 
+
+                             natives/2724347209_1213501                         
+                             806_539638440.mp4'                                 
+                    INFO     Animation 2 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_3714279141_27104661                     
+                             66)                                                
+
+                             natives/2724347209_3429779                         
+                             565_2121341819.mp4'                                
+                    INFO     Animation 4 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             2724347209_1761455131_90627997                     
+                             5)                                                 
+
+                             natives/2724347209_4556381                         
+                             7_342420395.mp4'                                   
+
+                             natives/2724347209_2409218                         
+                             724_2048728477.mp4'                                
+                             natives/2724347209_4212260                         
+                             47_2653493322.mp4'                                 
+
+                             natives/2724347209_2965722                         
+                             149_2509584338.mp4'                                
+                             natives/2724347209_2318807                         
+                             196_446718296.mp4'                                 
+
+                             natives/2724347209_1032136                         
+                             093_1379678982.mp4'                                
+
+                             natives/2724347209_3467573                         
+                             515_3413974958.mp4'                                
+                             natives/2724347209_3975134                         
+                             974_513726136.mp4'                                 
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             _Alternatives.mp4'                                 
+                    INFO     Rendered B04_Alternatives              scene.py:247
+                             Played 13 animations                               
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+
+  if float(mob.get_stroke_opacity()) <= 0.02:
+
+
+
+
+
+
+[audit] scenes: 19 snapshots → CLEAN
+[remotion] B00: filled already (skip)
+[remotion] B01: filled already (skip)
+[remotion] B11: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled B04  MANIM    28.2s  ← B04.mp4
+[art] motion histogram: graphic:10  remotion:3
+[art] WARNING: 'graphic' carries 10/13 beats (76%) — over the ~40% pantry cap; convert the excess to another language (MOTION.md)
+[art] SKIN LINT: B12: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (13/13 filled)
+[art] slots: 13/13 filled — B00:VIDEO B01:VIDEO B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:VIDEO B12:MANIM
+[run] GATE V — frame-level visual QC on the compiled reel
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.

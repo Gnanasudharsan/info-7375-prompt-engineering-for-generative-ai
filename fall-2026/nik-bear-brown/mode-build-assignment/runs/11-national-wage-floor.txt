@@ -1,0 +1,5 @@
+$ python3 -c "...read data/bls/compact/soc_occupation_compact.csv for four SOC codes (.00 rows)"
+15-2051.00  Data Scientists                            OEWS 2024  employment 233440.0  annual median 112590.0  hourly median 54.13  (national)
+19-1021.00  Biochemists and Biophysicists              OEWS 2024  employment 34520.0  annual median 103650.0  hourly median 49.83  (national)
+19-1029.00  Biological Scientists, All Other           OEWS 2024  employment 59710.0  annual median 93330.0  hourly median 44.87  (national)
+19-1042.00  Medical Scientists, Except Epidemiologists OEWS 2024  employment 156300.0  annual median 100590.0  hourly median 48.36  (national)

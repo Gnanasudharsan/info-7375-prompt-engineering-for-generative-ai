@@ -1,0 +1,75 @@
+# v5, 2026-10-23, nine changed beats
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B01_Problem clean
+[gateW] B02_RealReply clean
+[gateW] B03_Tested clean
+[gateW] B12_Alternatives clean
+[gateW] B16_Intent clean
+[gateW] B17_MacLinux clean
+[gateW] B18_Why clean
+[gateW] B19_Learning clean
+[gateW] B20_Today clean
+[run] rendering B01_Problem
+[run] rendering B02_RealReply
+[run] rendering B03_Tested
+[run] rendering B12_Alternatives
+[run] rendering B16_Intent
+[run] rendering B17_MacLinux
+[run] rendering B18_Why
+[run] rendering B19_Learning
+[run] rendering B20_Today
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=44 BLOCKER=0 MAJOR=0 → final-project-pitch/_qc/REPORT.md
+[run] done → final-project-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see final-project-pitch/SHOTLIST.md
+# v5, 2026-10-23, B02 re-render
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B02_RealReply clean
+[run] rendering B02_RealReply
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=44 BLOCKER=0 MAJOR=0 → final-project-pitch/_qc/REPORT.md
+[run] done → final-project-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see final-project-pitch/SHOTLIST.md
+# v5, 2026-10-24, B11, B14, B15
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B11_Measure clean
+[gateW] B14_Skills clean
+[gateW] B15_Scope clean
+[run] rendering B11_Measure
+[run] rendering B14_Skills
+[run] rendering B15_Scope
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=44 BLOCKER=0 MAJOR=0 → final-project-pitch/_qc/REPORT.md
+[run] done → final-project-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see final-project-pitch/SHOTLIST.md

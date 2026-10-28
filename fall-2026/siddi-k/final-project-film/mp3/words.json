@@ -1,0 +1,2708 @@
+{
+  "fps": 24,
+  "beats": {
+    "BIDEA": [
+      {
+        "text": "Hi,",
+        "startFrame": 0,
+        "endFrame": 25
+      },
+      {
+        "text": "I'm",
+        "startFrame": 32,
+        "endFrame": 37
+      },
+      {
+        "text": "Siddi",
+        "startFrame": 49,
+        "endFrame": 59
+      },
+      {
+        "text": "Kommuri.",
+        "startFrame": 60,
+        "endFrame": 70
+      },
+      {
+        "text": "I'm",
+        "startFrame": 72,
+        "endFrame": 77
+      },
+      {
+        "text": "on",
+        "startFrame": 77,
+        "endFrame": 78
+      },
+      {
+        "text": "an",
+        "startFrame": 78,
+        "endFrame": 82
+      },
+      {
+        "text": "F-1",
+        "startFrame": 82,
+        "endFrame": 92
+      },
+      {
+        "text": "student",
+        "startFrame": 92,
+        "endFrame": 101
+      },
+      {
+        "text": "visa,",
+        "startFrame": 101,
+        "endFrame": 110
+      },
+      {
+        "text": "looking",
+        "startFrame": 110,
+        "endFrame": 121
+      },
+      {
+        "text": "for",
+        "startFrame": 121,
+        "endFrame": 127
+      },
+      {
+        "text": "data",
+        "startFrame": 127,
+        "endFrame": 134
+      },
+      {
+        "text": "jobs.",
+        "startFrame": 134,
+        "endFrame": 147
+      },
+      {
+        "text": "The",
+        "startFrame": 159,
+        "endFrame": 163
+      },
+      {
+        "text": "easy",
+        "startFrame": 163,
+        "endFrame": 169
+      },
+      {
+        "text": "question",
+        "startFrame": 169,
+        "endFrame": 180
+      },
+      {
+        "text": "is,",
+        "startFrame": 180,
+        "endFrame": 191
+      },
+      {
+        "text": "which",
+        "startFrame": 194,
+        "endFrame": 197
+      },
+      {
+        "text": "companies",
+        "startFrame": 204,
+        "endFrame": 211
+      },
+      {
+        "text": "sponsor",
+        "startFrame": 212,
+        "endFrame": 220
+      },
+      {
+        "text": "H-1B",
+        "startFrame": 220,
+        "endFrame": 240
+      },
+      {
+        "text": "visas?",
+        "startFrame": 240,
+        "endFrame": 249
+      },
+      {
+        "text": "The",
+        "startFrame": 265,
+        "endFrame": 268
+      },
+      {
+        "text": "one",
+        "startFrame": 268,
+        "endFrame": 272
+      },
+      {
+        "text": "I",
+        "startFrame": 272,
+        "endFrame": 275
+      },
+      {
+        "text": "actually",
+        "startFrame": 275,
+        "endFrame": 285
+      },
+      {
+        "text": "need",
+        "startFrame": 285,
+        "endFrame": 292
+      },
+      {
+        "text": "is",
+        "startFrame": 292,
+        "endFrame": 298
+      },
+      {
+        "text": "narrower:",
+        "startFrame": 298,
+        "endFrame": 307
+      },
+      {
+        "text": "which",
+        "startFrame": 317,
+        "endFrame": 324
+      },
+      {
+        "text": "ones",
+        "startFrame": 324,
+        "endFrame": 332
+      },
+      {
+        "text": "sponsor",
+        "startFrame": 332,
+        "endFrame": 340
+      },
+      {
+        "text": "data",
+        "startFrame": 340,
+        "endFrame": 348
+      },
+      {
+        "text": "roles?",
+        "startFrame": 348,
+        "endFrame": 348
+      }
+    ],
+    "B00": [
+      {
+        "text": "My",
+        "startFrame": 0,
+        "endFrame": 10
+      },
+      {
+        "text": "final",
+        "startFrame": 10,
+        "endFrame": 19
+      },
+      {
+        "text": "project",
+        "startFrame": 19,
+        "endFrame": 30
+      },
+      {
+        "text": "is",
+        "startFrame": 30,
+        "endFrame": 37
+      },
+      {
+        "text": "Sponsor",
+        "startFrame": 37,
+        "endFrame": 46
+      },
+      {
+        "text": "Triage,",
+        "startFrame": 59,
+        "endFrame": 70
+      },
+      {
+        "text": "an",
+        "startFrame": 71,
+        "endFrame": 74
+      },
+      {
+        "text": "agent",
+        "startFrame": 74,
+        "endFrame": 81
+      },
+      {
+        "text": "that",
+        "startFrame": 81,
+        "endFrame": 86
+      },
+      {
+        "text": "will",
+        "startFrame": 86,
+        "endFrame": 89
+      },
+      {
+        "text": "check",
+        "startFrame": 89,
+        "endFrame": 94
+      },
+      {
+        "text": "each",
+        "startFrame": 94,
+        "endFrame": 102
+      },
+      {
+        "text": "job",
+        "startFrame": 102,
+        "endFrame": 110
+      },
+      {
+        "text": "posting",
+        "startFrame": 110,
+        "endFrame": 121
+      },
+      {
+        "text": "three",
+        "startFrame": 121,
+        "endFrame": 130
+      },
+      {
+        "text": "ways:",
+        "startFrame": 130,
+        "endFrame": 137
+      },
+      {
+        "text": "has",
+        "startFrame": 153,
+        "endFrame": 159
+      },
+      {
+        "text": "this",
+        "startFrame": 159,
+        "endFrame": 164
+      },
+      {
+        "text": "company",
+        "startFrame": 164,
+        "endFrame": 173
+      },
+      {
+        "text": "sponsored",
+        "startFrame": 173,
+        "endFrame": 184
+      },
+      {
+        "text": "a",
+        "startFrame": 184,
+        "endFrame": 189
+      },
+      {
+        "text": "data",
+        "startFrame": 189,
+        "endFrame": 193
+      },
+      {
+        "text": "role,",
+        "startFrame": 193,
+        "endFrame": 201
+      },
+      {
+        "text": "is",
+        "startFrame": 208,
+        "endFrame": 212
+      },
+      {
+        "text": "the",
+        "startFrame": 212,
+        "endFrame": 215
+      },
+      {
+        "text": "posting",
+        "startFrame": 215,
+        "endFrame": 225
+      },
+      {
+        "text": "live,",
+        "startFrame": 225,
+        "endFrame": 233
+      },
+      {
+        "text": "and",
+        "startFrame": 245,
+        "endFrame": 247
+      },
+      {
+        "text": "is",
+        "startFrame": 247,
+        "endFrame": 251
+      },
+      {
+        "text": "there",
+        "startFrame": 252,
+        "endFrame": 254
+      },
+      {
+        "text": "time",
+        "startFrame": 254,
+        "endFrame": 262
+      },
+      {
+        "text": "left",
+        "startFrame": 262,
+        "endFrame": 269
+      },
+      {
+        "text": "on",
+        "startFrame": 269,
+        "endFrame": 274
+      },
+      {
+        "text": "my",
+        "startFrame": 274,
+        "endFrame": 278
+      },
+      {
+        "text": "OPT?",
+        "startFrame": 278,
+        "endFrame": 292
+      },
+      {
+        "text": "It",
+        "startFrame": 308,
+        "endFrame": 311
+      },
+      {
+        "text": "will",
+        "startFrame": 311,
+        "endFrame": 312
+      },
+      {
+        "text": "be",
+        "startFrame": 312,
+        "endFrame": 315
+      },
+      {
+        "text": "a",
+        "startFrame": 315,
+        "endFrame": 318
+      },
+      {
+        "text": "GitHub",
+        "startFrame": 318,
+        "endFrame": 326
+      },
+      {
+        "text": "repo:",
+        "startFrame": 326,
+        "endFrame": 337
+      },
+      {
+        "text": "the",
+        "startFrame": 351,
+        "endFrame": 353
+      },
+      {
+        "text": "agent,",
+        "startFrame": 353,
+        "endFrame": 364
+      },
+      {
+        "text": "tests,",
+        "startFrame": 364,
+        "endFrame": 378
+      },
+      {
+        "text": "an",
+        "startFrame": 378,
+        "endFrame": 388
+      },
+      {
+        "text": "evaluation,",
+        "startFrame": 388,
+        "endFrame": 400
+      },
+      {
+        "text": "and",
+        "startFrame": 400,
+        "endFrame": 418
+      },
+      {
+        "text": "a",
+        "startFrame": 418,
+        "endFrame": 420
+      },
+      {
+        "text": "report.",
+        "startFrame": 420,
+        "endFrame": 427
+      }
+    ],
+    "B01": [
+      {
+        "text": "Why",
+        "startFrame": 0,
+        "endFrame": 10
+      },
+      {
+        "text": "care?",
+        "startFrame": 10,
+        "endFrame": 18
+      },
+      {
+        "text": "The",
+        "startFrame": 27,
+        "endFrame": 29
+      },
+      {
+        "text": "usual",
+        "startFrame": 29,
+        "endFrame": 36
+      },
+      {
+        "text": "shortcut",
+        "startFrame": 36,
+        "endFrame": 48
+      },
+      {
+        "text": "is",
+        "startFrame": 48,
+        "endFrame": 55
+      },
+      {
+        "text": "the",
+        "startFrame": 55,
+        "endFrame": 59
+      },
+      {
+        "text": "approval",
+        "startFrame": 59,
+        "endFrame": 67
+      },
+      {
+        "text": "count.",
+        "startFrame": 67,
+        "endFrame": 77
+      },
+      {
+        "text": "In",
+        "startFrame": 89,
+        "endFrame": 98
+      },
+      {
+        "text": "the",
+        "startFrame": 98,
+        "endFrame": 101
+      },
+      {
+        "text": "80",
+        "startFrame": 101,
+        "endFrame": 107
+      },
+      {
+        "text": "Days",
+        "startFrame": 107,
+        "endFrame": 115
+      },
+      {
+        "text": "CSV,",
+        "startFrame": 115,
+        "endFrame": 130
+      },
+      {
+        "text": "a",
+        "startFrame": 143,
+        "endFrame": 144
+      },
+      {
+        "text": "course-repo",
+        "startFrame": 152,
+        "endFrame": 159
+      },
+      {
+        "text": "table",
+        "startFrame": 160,
+        "endFrame": 170
+      },
+      {
+        "text": "built",
+        "startFrame": 170,
+        "endFrame": 178
+      },
+      {
+        "text": "from",
+        "startFrame": 178,
+        "endFrame": 182
+      },
+      {
+        "text": "public",
+        "startFrame": 182,
+        "endFrame": 191
+      },
+      {
+        "text": "H-1B",
+        "startFrame": 191,
+        "endFrame": 208
+      },
+      {
+        "text": "data,",
+        "startFrame": 208,
+        "endFrame": 217
+      },
+      {
+        "text": "Databricks",
+        "startFrame": 229,
+        "endFrame": 242
+      },
+      {
+        "text": "has",
+        "startFrame": 242,
+        "endFrame": 246
+      },
+      {
+        "text": "one",
+        "startFrame": 252,
+        "endFrame": 258
+      },
+      {
+        "text": "thousand",
+        "startFrame": 259,
+        "endFrame": 264
+      },
+      {
+        "text": "six",
+        "startFrame": 265,
+        "endFrame": 270
+      },
+      {
+        "text": "hundred",
+        "startFrame": 271,
+        "endFrame": 276
+      },
+      {
+        "text": "forty",
+        "startFrame": 277,
+        "endFrame": 283
+      },
+      {
+        "text": "approvals,",
+        "startFrame": 283,
+        "endFrame": 297
+      },
+      {
+        "text": "but",
+        "startFrame": 308,
+        "endFrame": 311
+      },
+      {
+        "text": "its",
+        "startFrame": 311,
+        "endFrame": 314
+      },
+      {
+        "text": "five",
+        "startFrame": 314,
+        "endFrame": 322
+      },
+      {
+        "text": "top",
+        "startFrame": 322,
+        "endFrame": 329
+      },
+      {
+        "text": "sponsored",
+        "startFrame": 329,
+        "endFrame": 341
+      },
+      {
+        "text": "titles",
+        "startFrame": 341,
+        "endFrame": 350
+      },
+      {
+        "text": "are",
+        "startFrame": 350,
+        "endFrame": 358
+      },
+      {
+        "text": "software",
+        "startFrame": 358,
+        "endFrame": 370
+      },
+      {
+        "text": "and",
+        "startFrame": 370,
+        "endFrame": 378
+      },
+      {
+        "text": "solutions",
+        "startFrame": 378,
+        "endFrame": 387
+      },
+      {
+        "text": "roles.",
+        "startFrame": 387,
+        "endFrame": 399
+      },
+      {
+        "text": "None",
+        "startFrame": 416,
+        "endFrame": 422
+      },
+      {
+        "text": "is",
+        "startFrame": 422,
+        "endFrame": 434
+      },
+      {
+        "text": "a",
+        "startFrame": 434,
+        "endFrame": 437
+      },
+      {
+        "text": "data",
+        "startFrame": 437,
+        "endFrame": 443
+      },
+      {
+        "text": "role.",
+        "startFrame": 443,
+        "endFrame": 451
+      }
+    ],
+    "B02": [
+      {
+        "text": "Second,",
+        "startFrame": 0,
+        "endFrame": 14
+      },
+      {
+        "text": "the",
+        "startFrame": 20,
+        "endFrame": 21
+      },
+      {
+        "text": "repo's",
+        "startFrame": 21,
+        "endFrame": 34
+      },
+      {
+        "text": "own",
+        "startFrame": 34,
+        "endFrame": 38
+      },
+      {
+        "text": "page",
+        "startFrame": 38,
+        "endFrame": 46
+      },
+      {
+        "text": "check.",
+        "startFrame": 46,
+        "endFrame": 59
+      },
+      {
+        "text": "On",
+        "startFrame": 69,
+        "endFrame": 73
+      },
+      {
+        "text": "October",
+        "startFrame": 73,
+        "endFrame": 79
+      },
+      {
+        "text": "third,",
+        "startFrame": 89,
+        "endFrame": 97
+      },
+      {
+        "text": "my",
+        "startFrame": 98,
+        "endFrame": 100
+      },
+      {
+        "text": "recipe",
+        "startFrame": 100,
+        "endFrame": 108
+      },
+      {
+        "text": "gave",
+        "startFrame": 108,
+        "endFrame": 115
+      },
+      {
+        "text": "it",
+        "startFrame": 115,
+        "endFrame": 120
+      },
+      {
+        "text": "a",
+        "startFrame": 120,
+        "endFrame": 121
+      },
+      {
+        "text": "Klaviyo",
+        "startFrame": 128,
+        "endFrame": 133
+      },
+      {
+        "text": "job",
+        "startFrame": 134,
+        "endFrame": 142
+      },
+      {
+        "text": "ID",
+        "startFrame": 142,
+        "endFrame": 154
+      },
+      {
+        "text": "that",
+        "startFrame": 154,
+        "endFrame": 159
+      },
+      {
+        "text": "doesn't",
+        "startFrame": 159,
+        "endFrame": 168
+      },
+      {
+        "text": "exist.",
+        "startFrame": 168,
+        "endFrame": 175
+      },
+      {
+        "text": "The",
+        "startFrame": 190,
+        "endFrame": 194
+      },
+      {
+        "text": "page",
+        "startFrame": 194,
+        "endFrame": 204
+      },
+      {
+        "text": "said",
+        "startFrame": 204,
+        "endFrame": 211
+      },
+      {
+        "text": "active.",
+        "startFrame": 211,
+        "endFrame": 221
+      },
+      {
+        "text": "Greenhouse's",
+        "startFrame": 241,
+        "endFrame": 257
+      },
+      {
+        "text": "API",
+        "startFrame": 257,
+        "endFrame": 264
+      },
+      {
+        "text": "said",
+        "startFrame": 264,
+        "endFrame": 279
+      },
+      {
+        "text": "four",
+        "startFrame": 287,
+        "endFrame": 294
+      },
+      {
+        "text": "oh",
+        "startFrame": 295,
+        "endFrame": 302
+      },
+      {
+        "text": "four.",
+        "startFrame": 303,
+        "endFrame": 310
+      },
+      {
+        "text": "My",
+        "startFrame": 311,
+        "endFrame": 316
+      },
+      {
+        "text": "recipe",
+        "startFrame": 316,
+        "endFrame": 327
+      },
+      {
+        "text": "already",
+        "startFrame": 327,
+        "endFrame": 339
+      },
+      {
+        "text": "lets",
+        "startFrame": 339,
+        "endFrame": 347
+      },
+      {
+        "text": "the",
+        "startFrame": 347,
+        "endFrame": 351
+      },
+      {
+        "text": "API",
+        "startFrame": 351,
+        "endFrame": 359
+      },
+      {
+        "text": "win.",
+        "startFrame": 359,
+        "endFrame": 371
+      }
+    ],
+    "B03": [
+      {
+        "text": "Who",
+        "startFrame": 0,
+        "endFrame": 10
+      },
+      {
+        "text": "opens",
+        "startFrame": 10,
+        "endFrame": 18
+      },
+      {
+        "text": "it?",
+        "startFrame": 18,
+        "endFrame": 25
+      },
+      {
+        "text": "Students",
+        "startFrame": 36,
+        "endFrame": 45
+      },
+      {
+        "text": "like",
+        "startFrame": 45,
+        "endFrame": 51
+      },
+      {
+        "text": "me,",
+        "startFrame": 51,
+        "endFrame": 58
+      },
+      {
+        "text": "and",
+        "startFrame": 63,
+        "endFrame": 70
+      },
+      {
+        "text": "a",
+        "startFrame": 70,
+        "endFrame": 73
+      },
+      {
+        "text": "hiring",
+        "startFrame": 73,
+        "endFrame": 82
+      },
+      {
+        "text": "manager",
+        "startFrame": 82,
+        "endFrame": 95
+      },
+      {
+        "text": "for",
+        "startFrame": 95,
+        "endFrame": 101
+      },
+      {
+        "text": "data",
+        "startFrame": 101,
+        "endFrame": 108
+      },
+      {
+        "text": "engineering",
+        "startFrame": 108,
+        "endFrame": 119
+      },
+      {
+        "text": "roles.",
+        "startFrame": 119,
+        "endFrame": 132
+      },
+      {
+        "text": "In",
+        "startFrame": 149,
+        "endFrame": 154
+      },
+      {
+        "text": "the",
+        "startFrame": 154,
+        "endFrame": 156
+      },
+      {
+        "text": "first",
+        "startFrame": 156,
+        "endFrame": 161
+      },
+      {
+        "text": "minute,",
+        "startFrame": 161,
+        "endFrame": 169
+      },
+      {
+        "text": "they'll",
+        "startFrame": 180,
+        "endFrame": 183
+      },
+      {
+        "text": "run",
+        "startFrame": 183,
+        "endFrame": 188
+      },
+      {
+        "text": "one",
+        "startFrame": 188,
+        "endFrame": 196
+      },
+      {
+        "text": "offline",
+        "startFrame": 196,
+        "endFrame": 206
+      },
+      {
+        "text": "command",
+        "startFrame": 206,
+        "endFrame": 216
+      },
+      {
+        "text": "and",
+        "startFrame": 216,
+        "endFrame": 228
+      },
+      {
+        "text": "read",
+        "startFrame": 228,
+        "endFrame": 232
+      },
+      {
+        "text": "the",
+        "startFrame": 232,
+        "endFrame": 237
+      },
+      {
+        "text": "report,",
+        "startFrame": 237,
+        "endFrame": 245
+      },
+      {
+        "text": "every",
+        "startFrame": 256,
+        "endFrame": 264
+      },
+      {
+        "text": "decision",
+        "startFrame": 264,
+        "endFrame": 276
+      },
+      {
+        "text": "and",
+        "startFrame": 276,
+        "endFrame": 281
+      },
+      {
+        "text": "number",
+        "startFrame": 281,
+        "endFrame": 288
+      },
+      {
+        "text": "traced",
+        "startFrame": 291,
+        "endFrame": 295
+      },
+      {
+        "text": "to",
+        "startFrame": 295,
+        "endFrame": 300
+      },
+      {
+        "text": "a",
+        "startFrame": 300,
+        "endFrame": 303
+      },
+      {
+        "text": "file",
+        "startFrame": 303,
+        "endFrame": 314
+      },
+      {
+        "text": "and",
+        "startFrame": 316,
+        "endFrame": 318
+      },
+      {
+        "text": "line.",
+        "startFrame": 318,
+        "endFrame": 324
+      }
+    ],
+    "B04": [
+      {
+        "text": "What",
+        "startFrame": 0,
+        "endFrame": 10
+      },
+      {
+        "text": "would",
+        "startFrame": 10,
+        "endFrame": 12
+      },
+      {
+        "text": "it",
+        "startFrame": 12,
+        "endFrame": 14
+      },
+      {
+        "text": "prove?",
+        "startFrame": 14,
+        "endFrame": 21
+      },
+      {
+        "text": "That",
+        "startFrame": 21,
+        "endFrame": 34
+      },
+      {
+        "text": "I",
+        "startFrame": 34,
+        "endFrame": 37
+      },
+      {
+        "text": "can",
+        "startFrame": 37,
+        "endFrame": 41
+      },
+      {
+        "text": "build",
+        "startFrame": 41,
+        "endFrame": 46
+      },
+      {
+        "text": "an",
+        "startFrame": 46,
+        "endFrame": 50
+      },
+      {
+        "text": "agent",
+        "startFrame": 50,
+        "endFrame": 58
+      },
+      {
+        "text": "loop",
+        "startFrame": 58,
+        "endFrame": 64
+      },
+      {
+        "text": "with",
+        "startFrame": 64,
+        "endFrame": 70
+      },
+      {
+        "text": "limits.",
+        "startFrame": 70,
+        "endFrame": 76
+      },
+      {
+        "text": "It'll",
+        "startFrame": 94,
+        "endFrame": 97
+      },
+      {
+        "text": "take",
+        "startFrame": 97,
+        "endFrame": 101
+      },
+      {
+        "text": "a",
+        "startFrame": 101,
+        "endFrame": 104
+      },
+      {
+        "text": "posting,",
+        "startFrame": 104,
+        "endFrame": 114
+      },
+      {
+        "text": "pick",
+        "startFrame": 124,
+        "endFrame": 130
+      },
+      {
+        "text": "the",
+        "startFrame": 130,
+        "endFrame": 134
+      },
+      {
+        "text": "missing",
+        "startFrame": 134,
+        "endFrame": 139
+      },
+      {
+        "text": "check,",
+        "startFrame": 139,
+        "endFrame": 147
+      },
+      {
+        "text": "call",
+        "startFrame": 157,
+        "endFrame": 162
+      },
+      {
+        "text": "one",
+        "startFrame": 162,
+        "endFrame": 168
+      },
+      {
+        "text": "tool,",
+        "startFrame": 168,
+        "endFrame": 177
+      },
+      {
+        "text": "and",
+        "startFrame": 177,
+        "endFrame": 185
+      },
+      {
+        "text": "record",
+        "startFrame": 185,
+        "endFrame": 192
+      },
+      {
+        "text": "the",
+        "startFrame": 192,
+        "endFrame": 197
+      },
+      {
+        "text": "result",
+        "startFrame": 197,
+        "endFrame": 205
+      },
+      {
+        "text": "with",
+        "startFrame": 205,
+        "endFrame": 211
+      },
+      {
+        "text": "its",
+        "startFrame": 211,
+        "endFrame": 215
+      },
+      {
+        "text": "source.",
+        "startFrame": 215,
+        "endFrame": 221
+      },
+      {
+        "text": "It'll",
+        "startFrame": 240,
+        "endFrame": 246
+      },
+      {
+        "text": "stop",
+        "startFrame": 246,
+        "endFrame": 253
+      },
+      {
+        "text": "when",
+        "startFrame": 253,
+        "endFrame": 259
+      },
+      {
+        "text": "the",
+        "startFrame": 259,
+        "endFrame": 262
+      },
+      {
+        "text": "queue",
+        "startFrame": 262,
+        "endFrame": 266
+      },
+      {
+        "text": "is",
+        "startFrame": 266,
+        "endFrame": 272
+      },
+      {
+        "text": "empty",
+        "startFrame": 272,
+        "endFrame": 281
+      },
+      {
+        "text": "or",
+        "startFrame": 281,
+        "endFrame": 289
+      },
+      {
+        "text": "the",
+        "startFrame": 289,
+        "endFrame": 294
+      },
+      {
+        "text": "budget",
+        "startFrame": 294,
+        "endFrame": 301
+      },
+      {
+        "text": "runs",
+        "startFrame": 301,
+        "endFrame": 308
+      },
+      {
+        "text": "out,",
+        "startFrame": 308,
+        "endFrame": 317
+      },
+      {
+        "text": "not",
+        "startFrame": 322,
+        "endFrame": 327
+      },
+      {
+        "text": "when",
+        "startFrame": 327,
+        "endFrame": 330
+      },
+      {
+        "text": "a",
+        "startFrame": 330,
+        "endFrame": 332
+      },
+      {
+        "text": "model",
+        "startFrame": 332,
+        "endFrame": 338
+      },
+      {
+        "text": "says",
+        "startFrame": 338,
+        "endFrame": 344
+      },
+      {
+        "text": "so.",
+        "startFrame": 344,
+        "endFrame": 350
+      }
+    ],
+    "B05": [
+      {
+        "text": "Its",
+        "startFrame": 0,
+        "endFrame": 10
+      },
+      {
+        "text": "tools",
+        "startFrame": 10,
+        "endFrame": 17
+      },
+      {
+        "text": "will",
+        "startFrame": 17,
+        "endFrame": 23
+      },
+      {
+        "text": "be",
+        "startFrame": 23,
+        "endFrame": 25
+      },
+      {
+        "text": "fenced",
+        "startFrame": 25,
+        "endFrame": 34
+      },
+      {
+        "text": "in",
+        "startFrame": 34,
+        "endFrame": 38
+      },
+      {
+        "text": "code:",
+        "startFrame": 38,
+        "endFrame": 47
+      },
+      {
+        "text": "the",
+        "startFrame": 57,
+        "endFrame": 63
+      },
+      {
+        "text": "CSV",
+        "startFrame": 63,
+        "endFrame": 76
+      },
+      {
+        "text": "and",
+        "startFrame": 76,
+        "endFrame": 85
+      },
+      {
+        "text": "Greenhouse's",
+        "startFrame": 85,
+        "endFrame": 100
+      },
+      {
+        "text": "API,",
+        "startFrame": 100,
+        "endFrame": 112
+      },
+      {
+        "text": "nothing",
+        "startFrame": 128,
+        "endFrame": 135
+      },
+      {
+        "text": "else.",
+        "startFrame": 135,
+        "endFrame": 144
+      },
+      {
+        "text": "It",
+        "startFrame": 156,
+        "endFrame": 163
+      },
+      {
+        "text": "will",
+        "startFrame": 163,
+        "endFrame": 165
+      },
+      {
+        "text": "never",
+        "startFrame": 165,
+        "endFrame": 171
+      },
+      {
+        "text": "apply",
+        "startFrame": 171,
+        "endFrame": 184
+      },
+      {
+        "text": "or",
+        "startFrame": 184,
+        "endFrame": 192
+      },
+      {
+        "text": "message",
+        "startFrame": 192,
+        "endFrame": 199
+      },
+      {
+        "text": "anyone,",
+        "startFrame": 199,
+        "endFrame": 212
+      },
+      {
+        "text": "and",
+        "startFrame": 224,
+        "endFrame": 225
+      },
+      {
+        "text": "it",
+        "startFrame": 225,
+        "endFrame": 228
+      },
+      {
+        "text": "won't",
+        "startFrame": 228,
+        "endFrame": 233
+      },
+      {
+        "text": "promise",
+        "startFrame": 233,
+        "endFrame": 242
+      },
+      {
+        "text": "that",
+        "startFrame": 242,
+        "endFrame": 249
+      },
+      {
+        "text": "a",
+        "startFrame": 249,
+        "endFrame": 251
+      },
+      {
+        "text": "specific",
+        "startFrame": 251,
+        "endFrame": 260
+      },
+      {
+        "text": "job",
+        "startFrame": 260,
+        "endFrame": 270
+      },
+      {
+        "text": "will",
+        "startFrame": 270,
+        "endFrame": 275
+      },
+      {
+        "text": "be",
+        "startFrame": 275,
+        "endFrame": 278
+      },
+      {
+        "text": "sponsored.",
+        "startFrame": 278,
+        "endFrame": 289
+      }
+    ],
+    "B06": [
+      {
+        "text": "Every",
+        "startFrame": 0,
+        "endFrame": 12
+      },
+      {
+        "text": "Apply",
+        "startFrame": 12,
+        "endFrame": 21
+      },
+      {
+        "text": "and",
+        "startFrame": 21,
+        "endFrame": 30
+      },
+      {
+        "text": "every",
+        "startFrame": 30,
+        "endFrame": 37
+      },
+      {
+        "text": "Unresolved",
+        "startFrame": 37,
+        "endFrame": 52
+      },
+      {
+        "text": "will",
+        "startFrame": 52,
+        "endFrame": 57
+      },
+      {
+        "text": "come",
+        "startFrame": 57,
+        "endFrame": 62
+      },
+      {
+        "text": "back",
+        "startFrame": 62,
+        "endFrame": 68
+      },
+      {
+        "text": "to",
+        "startFrame": 68,
+        "endFrame": 73
+      },
+      {
+        "text": "me",
+        "startFrame": 73,
+        "endFrame": 76
+      },
+      {
+        "text": "with",
+        "startFrame": 76,
+        "endFrame": 81
+      },
+      {
+        "text": "its",
+        "startFrame": 81,
+        "endFrame": 84
+      },
+      {
+        "text": "evidence,",
+        "startFrame": 84,
+        "endFrame": 93
+      },
+      {
+        "text": "and",
+        "startFrame": 93,
+        "endFrame": 109
+      },
+      {
+        "text": "I'll",
+        "startFrame": 109,
+        "endFrame": 115
+      },
+      {
+        "text": "approve,",
+        "startFrame": 115,
+        "endFrame": 126
+      },
+      {
+        "text": "refuse,",
+        "startFrame": 134,
+        "endFrame": 141
+      },
+      {
+        "text": "or",
+        "startFrame": 150,
+        "endFrame": 153
+      },
+      {
+        "text": "defer.",
+        "startFrame": 153,
+        "endFrame": 159
+      },
+      {
+        "text": "That's",
+        "startFrame": 171,
+        "endFrame": 184
+      },
+      {
+        "text": "the",
+        "startFrame": 184,
+        "endFrame": 187
+      },
+      {
+        "text": "human",
+        "startFrame": 187,
+        "endFrame": 192
+      },
+      {
+        "text": "gate.",
+        "startFrame": 192,
+        "endFrame": 200
+      }
+    ],
+    "B07": [
+      {
+        "text": "The",
+        "startFrame": 0,
+        "endFrame": 9
+      },
+      {
+        "text": "proof",
+        "startFrame": 9,
+        "endFrame": 15
+      },
+      {
+        "text": "will",
+        "startFrame": 15,
+        "endFrame": 21
+      },
+      {
+        "text": "be",
+        "startFrame": 21,
+        "endFrame": 24
+      },
+      {
+        "text": "an",
+        "startFrame": 26,
+        "endFrame": 27
+      },
+      {
+        "text": "evaluation:",
+        "startFrame": 27,
+        "endFrame": 44
+      },
+      {
+        "text": "about",
+        "startFrame": 58,
+        "endFrame": 64
+      },
+      {
+        "text": "forty",
+        "startFrame": 74,
+        "endFrame": 84
+      },
+      {
+        "text": "hand-labelled",
+        "startFrame": 85,
+        "endFrame": 94
+      },
+      {
+        "text": "public",
+        "startFrame": 96,
+        "endFrame": 103
+      },
+      {
+        "text": "postings,",
+        "startFrame": 103,
+        "endFrame": 120
+      },
+      {
+        "text": "some",
+        "startFrame": 130,
+        "endFrame": 134
+      },
+      {
+        "text": "held",
+        "startFrame": 134,
+        "endFrame": 141
+      },
+      {
+        "text": "back,",
+        "startFrame": 141,
+        "endFrame": 147
+      },
+      {
+        "text": "and",
+        "startFrame": 147,
+        "endFrame": 156
+      },
+      {
+        "text": "at",
+        "startFrame": 156,
+        "endFrame": 158
+      },
+      {
+        "text": "least",
+        "startFrame": 158,
+        "endFrame": 161
+      },
+      {
+        "text": "five",
+        "startFrame": 161,
+        "endFrame": 174
+      },
+      {
+        "text": "planted",
+        "startFrame": 174,
+        "endFrame": 185
+      },
+      {
+        "text": "failures.",
+        "startFrame": 185,
+        "endFrame": 195
+      },
+      {
+        "text": "I",
+        "startFrame": 211,
+        "endFrame": 217
+      },
+      {
+        "text": "don't",
+        "startFrame": 217,
+        "endFrame": 221
+      },
+      {
+        "text": "know",
+        "startFrame": 221,
+        "endFrame": 223
+      },
+      {
+        "text": "yet",
+        "startFrame": 223,
+        "endFrame": 228
+      },
+      {
+        "text": "whether",
+        "startFrame": 228,
+        "endFrame": 232
+      },
+      {
+        "text": "Claude",
+        "startFrame": 232,
+        "endFrame": 242
+      },
+      {
+        "text": "helps",
+        "startFrame": 242,
+        "endFrame": 250
+      },
+      {
+        "text": "classify",
+        "startFrame": 250,
+        "endFrame": 261
+      },
+      {
+        "text": "job",
+        "startFrame": 261,
+        "endFrame": 272
+      },
+      {
+        "text": "titles.",
+        "startFrame": 272,
+        "endFrame": 282
+      },
+      {
+        "text": "I'll",
+        "startFrame": 298,
+        "endFrame": 303
+      },
+      {
+        "text": "test",
+        "startFrame": 303,
+        "endFrame": 310
+      },
+      {
+        "text": "it",
+        "startFrame": 310,
+        "endFrame": 313
+      },
+      {
+        "text": "against",
+        "startFrame": 313,
+        "endFrame": 319
+      },
+      {
+        "text": "the",
+        "startFrame": 319,
+        "endFrame": 324
+      },
+      {
+        "text": "recipe's",
+        "startFrame": 324,
+        "endFrame": 333
+      },
+      {
+        "text": "patterns,",
+        "startFrame": 333,
+        "endFrame": 345
+      },
+      {
+        "text": "and",
+        "startFrame": 345,
+        "endFrame": 361
+      },
+      {
+        "text": "keep",
+        "startFrame": 361,
+        "endFrame": 367
+      },
+      {
+        "text": "whichever",
+        "startFrame": 367,
+        "endFrame": 376
+      },
+      {
+        "text": "wins.",
+        "startFrame": 376,
+        "endFrame": 385
+      }
+    ],
+    "B08": [
+      {
+        "text": "First,",
+        "startFrame": 0,
+        "endFrame": 12
+      },
+      {
+        "text": "I'll",
+        "startFrame": 20,
+        "endFrame": 23
+      },
+      {
+        "text": "build",
+        "startFrame": 23,
+        "endFrame": 28
+      },
+      {
+        "text": "the",
+        "startFrame": 28,
+        "endFrame": 34
+      },
+      {
+        "text": "loop,",
+        "startFrame": 34,
+        "endFrame": 37
+      },
+      {
+        "text": "offline,",
+        "startFrame": 37,
+        "endFrame": 52
+      },
+      {
+        "text": "on",
+        "startFrame": 52,
+        "endFrame": 61
+      },
+      {
+        "text": "the",
+        "startFrame": 61,
+        "endFrame": 64
+      },
+      {
+        "text": "seven",
+        "startFrame": 64,
+        "endFrame": 72
+      },
+      {
+        "text": "postings",
+        "startFrame": 72,
+        "endFrame": 87
+      },
+      {
+        "text": "from",
+        "startFrame": 87,
+        "endFrame": 92
+      },
+      {
+        "text": "that",
+        "startFrame": 92,
+        "endFrame": 96
+      },
+      {
+        "text": "October",
+        "startFrame": 96,
+        "endFrame": 107
+      },
+      {
+        "text": "run,",
+        "startFrame": 107,
+        "endFrame": 115
+      },
+      {
+        "text": "two",
+        "startFrame": 124,
+        "endFrame": 127
+      },
+      {
+        "text": "of",
+        "startFrame": 127,
+        "endFrame": 130
+      },
+      {
+        "text": "them",
+        "startFrame": 130,
+        "endFrame": 133
+      },
+      {
+        "text": "made-up",
+        "startFrame": 138,
+        "endFrame": 142
+      },
+      {
+        "text": "tests.",
+        "startFrame": 143,
+        "endFrame": 152
+      },
+      {
+        "text": "I'll",
+        "startFrame": 167,
+        "endFrame": 175
+      },
+      {
+        "text": "know",
+        "startFrame": 175,
+        "endFrame": 178
+      },
+      {
+        "text": "it",
+        "startFrame": 178,
+        "endFrame": 182
+      },
+      {
+        "text": "ran",
+        "startFrame": 182,
+        "endFrame": 188
+      },
+      {
+        "text": "if",
+        "startFrame": 188,
+        "endFrame": 193
+      },
+      {
+        "text": "it",
+        "startFrame": 193,
+        "endFrame": 196
+      },
+      {
+        "text": "exits",
+        "startFrame": 196,
+        "endFrame": 201
+      },
+      {
+        "text": "cleanly,",
+        "startFrame": 201,
+        "endFrame": 216
+      },
+      {
+        "text": "stays",
+        "startFrame": 226,
+        "endFrame": 230
+      },
+      {
+        "text": "under",
+        "startFrame": 230,
+        "endFrame": 237
+      },
+      {
+        "text": "budget,",
+        "startFrame": 237,
+        "endFrame": 245
+      },
+      {
+        "text": "and",
+        "startFrame": 250,
+        "endFrame": 252
+      },
+      {
+        "text": "matches",
+        "startFrame": 252,
+        "endFrame": 260
+      },
+      {
+        "text": "the",
+        "startFrame": 260,
+        "endFrame": 265
+      },
+      {
+        "text": "recipe:",
+        "startFrame": 265,
+        "endFrame": 275
+      },
+      {
+        "text": "one",
+        "startFrame": 290,
+        "endFrame": 294
+      },
+      {
+        "text": "Apply,",
+        "startFrame": 294,
+        "endFrame": 303
+      },
+      {
+        "text": "two",
+        "startFrame": 313,
+        "endFrame": 316
+      },
+      {
+        "text": "Consider,",
+        "startFrame": 316,
+        "endFrame": 327
+      },
+      {
+        "text": "one",
+        "startFrame": 333,
+        "endFrame": 336
+      },
+      {
+        "text": "Skip,",
+        "startFrame": 336,
+        "endFrame": 342
+      },
+      {
+        "text": "three",
+        "startFrame": 349,
+        "endFrame": 355
+      },
+      {
+        "text": "Unresolved.",
+        "startFrame": 355,
+        "endFrame": 372
+      }
+    ],
+    "B09": [
+      {
+        "text": "The",
+        "startFrame": 0,
+        "endFrame": 9
+      },
+      {
+        "text": "risk",
+        "startFrame": 9,
+        "endFrame": 16
+      },
+      {
+        "text": "is",
+        "startFrame": 16,
+        "endFrame": 23
+      },
+      {
+        "text": "thin",
+        "startFrame": 23,
+        "endFrame": 29
+      },
+      {
+        "text": "data.",
+        "startFrame": 29,
+        "endFrame": 38
+      },
+      {
+        "text": "More",
+        "startFrame": 54,
+        "endFrame": 59
+      },
+      {
+        "text": "than",
+        "startFrame": 59,
+        "endFrame": 63
+      },
+      {
+        "text": "half",
+        "startFrame": 63,
+        "endFrame": 67
+      },
+      {
+        "text": "the",
+        "startFrame": 67,
+        "endFrame": 72
+      },
+      {
+        "text": "sponsoring",
+        "startFrame": 72,
+        "endFrame": 82
+      },
+      {
+        "text": "companies",
+        "startFrame": 82,
+        "endFrame": 94
+      },
+      {
+        "text": "in",
+        "startFrame": 94,
+        "endFrame": 99
+      },
+      {
+        "text": "the",
+        "startFrame": 99,
+        "endFrame": 102
+      },
+      {
+        "text": "CSV",
+        "startFrame": 102,
+        "endFrame": 113
+      },
+      {
+        "text": "list",
+        "startFrame": 113,
+        "endFrame": 121
+      },
+      {
+        "text": "just",
+        "startFrame": 121,
+        "endFrame": 129
+      },
+      {
+        "text": "one",
+        "startFrame": 129,
+        "endFrame": 135
+      },
+      {
+        "text": "title.",
+        "startFrame": 135,
+        "endFrame": 145
+      },
+      {
+        "text": "In",
+        "startFrame": 159,
+        "endFrame": 165
+      },
+      {
+        "text": "my",
+        "startFrame": 165,
+        "endFrame": 168
+      },
+      {
+        "text": "run,",
+        "startFrame": 168,
+        "endFrame": 177
+      },
+      {
+        "text": "two",
+        "startFrame": 184,
+        "endFrame": 187
+      },
+      {
+        "text": "real",
+        "startFrame": 187,
+        "endFrame": 194
+      },
+      {
+        "text": "postings",
+        "startFrame": 194,
+        "endFrame": 208
+      },
+      {
+        "text": "came",
+        "startFrame": 208,
+        "endFrame": 214
+      },
+      {
+        "text": "out",
+        "startFrame": 214,
+        "endFrame": 219
+      },
+      {
+        "text": "Unresolved,",
+        "startFrame": 219,
+        "endFrame": 232
+      },
+      {
+        "text": "and",
+        "startFrame": 232,
+        "endFrame": 247
+      },
+      {
+        "text": "two",
+        "startFrame": 247,
+        "endFrame": 253
+      },
+      {
+        "text": "only",
+        "startFrame": 253,
+        "endFrame": 262
+      },
+      {
+        "text": "Likely.",
+        "startFrame": 262,
+        "endFrame": 271
+      },
+      {
+        "text": "I'll",
+        "startFrame": 290,
+        "endFrame": 295
+      },
+      {
+        "text": "measure",
+        "startFrame": 295,
+        "endFrame": 301
+      },
+      {
+        "text": "that",
+        "startFrame": 301,
+        "endFrame": 306
+      },
+      {
+        "text": "rate",
+        "startFrame": 306,
+        "endFrame": 311
+      },
+      {
+        "text": "first,",
+        "startFrame": 311,
+        "endFrame": 323
+      },
+      {
+        "text": "and",
+        "startFrame": 329,
+        "endFrame": 334
+      },
+      {
+        "text": "if",
+        "startFrame": 334,
+        "endFrame": 337
+      },
+      {
+        "text": "it's",
+        "startFrame": 337,
+        "endFrame": 341
+      },
+      {
+        "text": "too",
+        "startFrame": 341,
+        "endFrame": 346
+      },
+      {
+        "text": "high,",
+        "startFrame": 346,
+        "endFrame": 355
+      },
+      {
+        "text": "use",
+        "startFrame": 365,
+        "endFrame": 369
+      },
+      {
+        "text": "the",
+        "startFrame": 369,
+        "endFrame": 373
+      },
+      {
+        "text": "Labor",
+        "startFrame": 373,
+        "endFrame": 378
+      },
+      {
+        "text": "Department's",
+        "startFrame": 378,
+        "endFrame": 396
+      },
+      {
+        "text": "disclosure",
+        "startFrame": 396,
+        "endFrame": 408
+      },
+      {
+        "text": "data,",
+        "startFrame": 408,
+        "endFrame": 416
+      },
+      {
+        "text": "which",
+        "startFrame": 425,
+        "endFrame": 431
+      },
+      {
+        "text": "lists",
+        "startFrame": 431,
+        "endFrame": 438
+      },
+      {
+        "text": "the",
+        "startFrame": 438,
+        "endFrame": 443
+      },
+      {
+        "text": "job",
+        "startFrame": 443,
+        "endFrame": 450
+      },
+      {
+        "text": "title",
+        "startFrame": 450,
+        "endFrame": 460
+      },
+      {
+        "text": "on",
+        "startFrame": 460,
+        "endFrame": 466
+      },
+      {
+        "text": "every",
+        "startFrame": 466,
+        "endFrame": 475
+      },
+      {
+        "text": "application.",
+        "startFrame": 475,
+        "endFrame": 491
+      }
+    ],
+    "B10": [
+      {
+        "text": "Why",
+        "startFrame": 0,
+        "endFrame": 11
+      },
+      {
+        "text": "this",
+        "startFrame": 11,
+        "endFrame": 16
+      },
+      {
+        "text": "project?",
+        "startFrame": 16,
+        "endFrame": 28
+      },
+      {
+        "text": "It's",
+        "startFrame": 40,
+        "endFrame": 45
+      },
+      {
+        "text": "my",
+        "startFrame": 45,
+        "endFrame": 48
+      },
+      {
+        "text": "own",
+        "startFrame": 48,
+        "endFrame": 54
+      },
+      {
+        "text": "problem,",
+        "startFrame": 54,
+        "endFrame": 64
+      },
+      {
+        "text": "so",
+        "startFrame": 64,
+        "endFrame": 72
+      },
+      {
+        "text": "I'll",
+        "startFrame": 72,
+        "endFrame": 77
+      },
+      {
+        "text": "notice",
+        "startFrame": 77,
+        "endFrame": 84
+      },
+      {
+        "text": "when",
+        "startFrame": 84,
+        "endFrame": 89
+      },
+      {
+        "text": "it's",
+        "startFrame": 89,
+        "endFrame": 94
+      },
+      {
+        "text": "wrong.",
+        "startFrame": 94,
+        "endFrame": 98
+      },
+      {
+        "text": "It's",
+        "startFrame": 115,
+        "endFrame": 120
+      },
+      {
+        "text": "a",
+        "startFrame": 120,
+        "endFrame": 121
+      },
+      {
+        "text": "mix:",
+        "startFrame": 121,
+        "endFrame": 124
+      },
+      {
+        "text": "I've",
+        "startFrame": 139,
+        "endFrame": 146
+      },
+      {
+        "text": "built",
+        "startFrame": 146,
+        "endFrame": 150
+      },
+      {
+        "text": "Python",
+        "startFrame": 150,
+        "endFrame": 160
+      },
+      {
+        "text": "data",
+        "startFrame": 160,
+        "endFrame": 168
+      },
+      {
+        "text": "work",
+        "startFrame": 168,
+        "endFrame": 175
+      },
+      {
+        "text": "and",
+        "startFrame": 175,
+        "endFrame": 182
+      },
+      {
+        "text": "an",
+        "startFrame": 182,
+        "endFrame": 185
+      },
+      {
+        "text": "NBA",
+        "startFrame": 185,
+        "endFrame": 196
+      },
+      {
+        "text": "RAG",
+        "startFrame": 196,
+        "endFrame": 206
+      },
+      {
+        "text": "app",
+        "startFrame": 206,
+        "endFrame": 212
+      },
+      {
+        "text": "with",
+        "startFrame": 212,
+        "endFrame": 217
+      },
+      {
+        "text": "a",
+        "startFrame": 217,
+        "endFrame": 219
+      },
+      {
+        "text": "retrieval",
+        "startFrame": 219,
+        "endFrame": 233
+      },
+      {
+        "text": "evaluation.",
+        "startFrame": 233,
+        "endFrame": 250
+      },
+      {
+        "text": "Agent",
+        "startFrame": 271,
+        "endFrame": 279
+      },
+      {
+        "text": "loops,",
+        "startFrame": 279,
+        "endFrame": 284
+      },
+      {
+        "text": "permissions",
+        "startFrame": 296,
+        "endFrame": 302
+      },
+      {
+        "text": "and",
+        "startFrame": 311,
+        "endFrame": 313
+      },
+      {
+        "text": "held-out",
+        "startFrame": 318,
+        "endFrame": 323
+      },
+      {
+        "text": "evaluation",
+        "startFrame": 324,
+        "endFrame": 336
+      },
+      {
+        "text": "are",
+        "startFrame": 336,
+        "endFrame": 346
+      },
+      {
+        "text": "new.",
+        "startFrame": 346,
+        "endFrame": 351
+      }
+    ],
+    "B11": [
+      {
+        "text": "One",
+        "startFrame": 0,
+        "endFrame": 11
+      },
+      {
+        "text": "honest",
+        "startFrame": 11,
+        "endFrame": 19
+      },
+      {
+        "text": "note:",
+        "startFrame": 19,
+        "endFrame": 26
+      },
+      {
+        "text": "in",
+        "startFrame": 40,
+        "endFrame": 42
+      },
+      {
+        "text": "the",
+        "startFrame": 42,
+        "endFrame": 44
+      },
+      {
+        "text": "recipe,",
+        "startFrame": 44,
+        "endFrame": 54
+      },
+      {
+        "text": "Claude",
+        "startFrame": 65,
+        "endFrame": 71
+      },
+      {
+        "text": "wrote",
+        "startFrame": 71,
+        "endFrame": 74
+      },
+      {
+        "text": "the",
+        "startFrame": 74,
+        "endFrame": 79
+      },
+      {
+        "text": "code",
+        "startFrame": 79,
+        "endFrame": 86
+      },
+      {
+        "text": "and",
+        "startFrame": 86,
+        "endFrame": 93
+      },
+      {
+        "text": "I",
+        "startFrame": 93,
+        "endFrame": 96
+      },
+      {
+        "text": "accepted",
+        "startFrame": 96,
+        "endFrame": 107
+      },
+      {
+        "text": "it",
+        "startFrame": 107,
+        "endFrame": 112
+      },
+      {
+        "text": "unchanged.",
+        "startFrame": 112,
+        "endFrame": 124
+      },
+      {
+        "text": "This",
+        "startFrame": 138,
+        "endFrame": 149
+      },
+      {
+        "text": "time",
+        "startFrame": 149,
+        "endFrame": 156
+      },
+      {
+        "text": "I'll",
+        "startFrame": 161,
+        "endFrame": 164
+      },
+      {
+        "text": "write",
+        "startFrame": 164,
+        "endFrame": 168
+      },
+      {
+        "text": "the",
+        "startFrame": 168,
+        "endFrame": 171
+      },
+      {
+        "text": "contract",
+        "startFrame": 171,
+        "endFrame": 182
+      },
+      {
+        "text": "and",
+        "startFrame": 182,
+        "endFrame": 188
+      },
+      {
+        "text": "tests",
+        "startFrame": 188,
+        "endFrame": 194
+      },
+      {
+        "text": "first,",
+        "startFrame": 194,
+        "endFrame": 203
+      },
+      {
+        "text": "and",
+        "startFrame": 203,
+        "endFrame": 216
+      },
+      {
+        "text": "check",
+        "startFrame": 216,
+        "endFrame": 221
+      },
+      {
+        "text": "the",
+        "startFrame": 221,
+        "endFrame": 226
+      },
+      {
+        "text": "rows",
+        "startFrame": 226,
+        "endFrame": 231
+      },
+      {
+        "text": "myself.",
+        "startFrame": 231,
+        "endFrame": 242
+      },
+      {
+        "text": "Today,",
+        "startFrame": 262,
+        "endFrame": 268
+      },
+      {
+        "text": "the",
+        "startFrame": 279,
+        "endFrame": 281
+      },
+      {
+        "text": "recipe",
+        "startFrame": 281,
+        "endFrame": 293
+      },
+      {
+        "text": "and",
+        "startFrame": 293,
+        "endFrame": 301
+      },
+      {
+        "text": "its",
+        "startFrame": 301,
+        "endFrame": 305
+      },
+      {
+        "text": "twelve",
+        "startFrame": 308,
+        "endFrame": 311
+      },
+      {
+        "text": "passing",
+        "startFrame": 312,
+        "endFrame": 323
+      },
+      {
+        "text": "tests",
+        "startFrame": 323,
+        "endFrame": 331
+      },
+      {
+        "text": "exist.",
+        "startFrame": 331,
+        "endFrame": 346
+      },
+      {
+        "text": "Everything",
+        "startFrame": 359,
+        "endFrame": 368
+      },
+      {
+        "text": "else",
+        "startFrame": 368,
+        "endFrame": 374
+      },
+      {
+        "text": "here",
+        "startFrame": 374,
+        "endFrame": 381
+      },
+      {
+        "text": "is",
+        "startFrame": 381,
+        "endFrame": 386
+      },
+      {
+        "text": "a",
+        "startFrame": 386,
+        "endFrame": 388
+      },
+      {
+        "text": "plan.",
+        "startFrame": 388,
+        "endFrame": 395
+      }
+    ],
+    "BOUT": [
+      {
+        "text": "Sponsor",
+        "startFrame": 0,
+        "endFrame": 17
+      },
+      {
+        "text": "Triage.",
+        "startFrame": 17,
+        "endFrame": 29
+      },
+      {
+        "text": "A",
+        "startFrame": 37,
+        "endFrame": 39
+      },
+      {
+        "text": "pitch",
+        "startFrame": 39,
+        "endFrame": 45
+      },
+      {
+        "text": "by",
+        "startFrame": 45,
+        "endFrame": 50
+      },
+      {
+        "text": "Siddi",
+        "startFrame": 50,
+        "endFrame": 50
+      },
+      {
+        "text": "Kommuri.",
+        "startFrame": 50,
+        "endFrame": 50
+      }
+    ]
+  }
+}

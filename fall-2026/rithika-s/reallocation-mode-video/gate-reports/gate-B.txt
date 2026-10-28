@@ -1,0 +1,9 @@
+# Gate B — manim_layout_audit.py --curve-strict, per scene (final scenes.py, sha256 7b84c1c59ff0…)
+B01_Persona    [audit] scenes: 27 snapshots → CLEAN
+B02_CantSee    [audit] scenes: 20 snapshots → CLEAN
+B03_Gates      [audit] scenes: 36 snapshots → CLEAN
+B04_Removed    [audit] scenes: 21 snapshots → CLEAN
+B05_Bugs       [audit] scenes: 26 snapshots → CLEAN
+B06_Fixes      [audit] scenes: 51 snapshots → CLEAN
+B07_Caveats    [audit] scenes: 20 snapshots → CLEAN
+BOUT_Status    [audit] scenes: 20 snapshots → CLEAN

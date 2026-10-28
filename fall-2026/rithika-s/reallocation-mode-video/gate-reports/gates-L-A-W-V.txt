@@ -1,0 +1,46 @@
+# Gates L, A, W, V — final scenes.py
+
+./art run only re-checks scenes it re-renders, so the final evidence spans three passes:
+run 6 (B01 B02 B04 B05 B07, code unchanged since), run 7 (B03 B06), run 8 (BOUT). Gate W skips the outro by design.
+
+## art run pass 6
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[gateW] B01_Persona clean
+[gateW] B02_CantSee clean
+[gateW] B03_Gates clean
+[gateW] B04_Removed clean
+[gateW] B05_Bugs clean
+[gateW] B06_Fixes clean
+[gateW] B07_Caveats clean
+[gate-v] frames=16 BLOCKER=0 MAJOR=0 → ~/info-7375-prompt-engineering-for-generative-ai/youtube/rithika-reallocation-mode-video/_qc/REPORT.md
+
+## art run pass 7
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[gateW] B03_Gates clean
+[gateW] B06_Fixes clean
+[gate-v] frames=16 BLOCKER=0 MAJOR=0 → ~/info-7375-prompt-engineering-for-generative-ai/youtube/rithika-reallocation-mode-video/_qc/REPORT.md
+
+## art run pass 8
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[gate-v] frames=16 BLOCKER=0 MAJOR=0 → ~/info-7375-prompt-engineering-for-generative-ai/youtube/rithika-reallocation-mode-video/_qc/REPORT.md
+
+## Gate A re-run directly on all 8 final scenes (2026-10-21)
+B01_Persona   [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B02_CantSee   [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B03_Gates     [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B04_Removed   [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B05_Bugs      [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B06_Fixes     [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+B07_Caveats   [static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+BOUT_Status   [static-check] 1 scene(s): 1 clean · 0 warn · 0 error

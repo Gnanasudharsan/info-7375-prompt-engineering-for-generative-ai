@@ -1,0 +1,108 @@
+[run] skip B00_Pipeline — B00 already filled
+[run] skip B02_CrossCheck — B02 already filled
+[run] skip B03_FirstMinute — B03 already filled
+[run] skip B04_Funnel — B04 already filled
+[run] skip B05_Conflict — B05 already filled
+[run] skip B06_Labels — B06 already filled
+[run] skip B07_Rules — B07 already filled
+[run] skip B08_Evidence — B08 already filled
+[run] skip B09_NotTraining — B09 already filled
+[run] skip B10_Out — B10 already filled
+[run] skip B11_EvalLog — B11 already filled
+[run] skip B12_EntityRes — B12 already filled
+[run] skip B13_Confirm — B13 already filled
+[run] skip B15_HandCheck — B15 already filled
+[run] skip B16_Decisions — B16 already filled
+[run] skip B17_Status — B17 already filled
+[run] skip B18_WhyNow — B18 already filled
+[run] GATE L — beat-mix lint
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+[run] GATE SHAPE — finance chart-shape enforcement
+[gate-shape] skip — not a finance reel (beat_sheet.json)
+[run] GATE A — static pre-flight
+
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+[run] GATE W — WCAG contrast + margins + text-overlap (independent second check)
+[gateW] B14_WhyProject clean
+[run] rendering B14_WhyProject
+Manim Community v0.18.1
+
+Animation 0: _MethodAnimation(VGroup of 3 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 0: _MethodAnimation(VGroup of 3 submobjects), etc.:  67%|██████▋   | 10/15 [00:00<00:00, 91.53it/s]                                                                                                             [10/11/26 11:57:03] INFO     Animation 0 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/3429491395_93                         
+                             1694216_2239042888.mp4'                            
+[10/11/26 11:57:04] INFO     Animation 1 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_64                         
+                             3485841_4060152263.mp4'                            
+Animation 2: FadeOut(VGroup of 4 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]Animation 2: FadeOut(VGroup of 4 submobjects), etc.:  60%|██████    | 9/15 [00:00<00:00, 82.50it/s]                                                                                                   [10/11/26 11:57:05] INFO     Animation 2 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_33                         
+                             63918214_1106384153.mp4'                           
+                    INFO     Animation 3 : Using cached     cairo_renderer.py:88
+                             data (hash :                                       
+                             1606801221_392946347_413113250                     
+                             8)                                                 
+Animation 3: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]                                                                                                             INFO     Animation 4 : Partial      scene_file_writer.py:527
+                             movie file written in                              
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/partial_movie_files/B1                         
+                             4_WhyProject/1606801221_42                         
+                             83994334_3405849728.mp4'                           
+                    INFO     Combining to Movie file.   scene_file_writer.py:617
+                    INFO                                scene_file_writer.py:737
+                             File ready at                                      
+                             '/Users/sreevarshansathiya                         
+                             murthy/Downloads/final-pro                         
+                             ject-film/youtube/show-tel                         
+                             l-reallocation-recipe-pitc                         
+                             h/media/videos/scenes/2160                         
+                             p24/B14_WhyProject.mp4'                            
+                                                                                
+                    INFO     Rendered B14_WhyProject                scene.py:247
+                             Played 5 animations                                
+You are using manim version v0.18.1, but version v0.22.0 is available.
+You should consider upgrading via pip install -U manim
+Animation 0: _MethodAnimation(VGroup of 3 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                                   /Users/sreevarshansathiyamurthy/Downloads/BrutFilm/runtime/qc/manim_layout_audit.py:149: DeprecationWarning: This method is not guaranteed to stay around. Please prefer getting the attribute normally.
+  if float(mob.get_stroke_opacity()) <= 0.02:
+Animation 2: FadeOut(VGroup of 4 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                          Animation 3: FadeIn(VGroup of 2 submobjects), etc.:   0%|          | 0/9 [00:00<?, ?it/s]                                                                                         [audit] scenes: 6 snapshots → CLEAN
+[audit] report: /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/layout_audit.md
+[remotion] BIDEA: filled already (skip)
+[remotion] BDEFS: filled already (skip)
+[remotion] BOUT: filled already (skip)
+[remotion] done — run `bash scripts/run.sh <REEL>` to compile the cut
+[art] compiled B14  MANIM     8.8s  ← B14.mp4
+[art] motion histogram: graphic:18  remotion:3
+[art] SKIN LINT: BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk
+[art] SKIN LINT: BOUT: palette=claude but the outro is 'ShowTellCard' — OUTRO LAW wants ClaudeTitleOutro
+[art] build stamp → beat_sheet.json (21/21 filled)
+[art] QC contact sheet → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/qc-sheet.png
+[art] wrote /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/show-tell-reallocation-recipe-pitch-slate.mp4  (236.8s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 21/21 filled — BIDEA:VIDEO BDEFS:VIDEO B00:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:MANIM B08:MANIM B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM B15:MANIM B16:MANIM B17:MANIM B18:MANIM BOUT:VIDEO
+[run] GATE V — frame-level visual QC on the compiled reel
+[gate-v] frames=42 BLOCKER=0 MAJOR=0 → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/_qc/REPORT.md
+[run] done → /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch  (QC gates: on)
+[run] REVIEW built; no final exported. Use ./art final <reel> for a verified master.
+[run] any remaining slates are YOUR slots — see /Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/SHOTLIST.md

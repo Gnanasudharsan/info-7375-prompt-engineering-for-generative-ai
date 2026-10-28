@@ -1,0 +1,14 @@
+# captured 2026-10-11 11:08 EDT by Claude Code in the-reallocation-engine at ded8454: re-run of the 2026-10-02 worked run into /tmp (committed run folder untouched)
+$ python3 scripts/contrib/2026fa/Sreevarshann-newgrad-de-ml-optwindow/run.py --run-date 2026-10-02 --out-root /tmp/reallocation-demo
+plan: {'scoreable': 3, 'blocked': 0, 'network': 53, 'verify_posting': 61, 'rejected_checks': 0, 'cannot_verify': 66}  provisional=True
+roles.json: 3 role(s) -> /tmp/reallocation-demo/2026-10-02/roles.json
+scorer: $ npm run score -- /tmp/reallocation-demo/2026-10-02/roles.json --out-dir /tmp/reallocation-demo/2026-10-02
+
+> the-reallocation-engine@1.0.0 score
+> node scripts/score/role-scorer.mjs /tmp/reallocation-demo/2026-10-02/roles.json --out-dir /tmp/reallocation-demo/2026-10-02
+
+✓ scored 3 roles → Apply 0 · Consider 0 · Skip 3 (skip 100%)
+  ../../../../../tmp/reallocation-demo/2026-10-02/role-scores.json  +  ../../../../../tmp/reallocation-demo/2026-10-02/role-scores.md
+report: /tmp/reallocation-demo/2026-10-02/report.md
+run-log: /tmp/reallocation-demo/2026-10-02/run-log.json
+[exit 0]

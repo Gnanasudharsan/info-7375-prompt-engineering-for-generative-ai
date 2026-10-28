@@ -1,0 +1,6 @@
+[emit] MISSING master: cuegate-pitch.mp4 — compile the clean cut first
+[emit] MISSING master: cuegate-pitch-short-cut.mp4 — compile the clean cut first
+[emit] cuegate-pitch.srt  (16 cues, 221s)
+[emit] cuegate-pitch-youtube.md
+[emit] playlist: 'INFO 7375 final project pitch' · shorts: None
+[emit] staged. Publish with youtube_publish.py --no-pairs --schedule-scope playlist --interval-hours 2

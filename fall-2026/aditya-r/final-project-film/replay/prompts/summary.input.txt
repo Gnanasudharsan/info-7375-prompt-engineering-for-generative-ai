@@ -1,0 +1,5 @@
+Client: {client}
+Check-in date: {day1}
+
+Transcript:
+{transcript}

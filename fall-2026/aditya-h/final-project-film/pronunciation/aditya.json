@@ -1,0 +1,20 @@
+{
+  "voice": "am_michael",
+  "note": "Voice-only rewrites for Aditya Hasija's pitch film. Surname pronunciation picked by Aditya from voice-samples/ (version A, ha-SEE-ja), 2026-10-14. On-screen text and narration_text are untouched.",
+  "entries": [
+    {
+      "patterns": [
+        "(?P<w>\\bHasija\\b)"
+      ],
+      "say": "Ha-see-jah",
+      "example": "Hi, I'm Aditya Hasija."
+    },
+    {
+      "patterns": [
+        "(?P<w>\\bA/B\\b)"
+      ],
+      "say": "A B",
+      "example": "run real A/B tests"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Lato,40,&H00F5F9FA,&H00F5F9FA,&H2629393D,&H00000000,0,0,0,0,100,100,0.3,0,3,14,0,2,360,360,72,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:01.42,0:00:03.46,Default,,0,0,0,,SponsorScout. A final project pitch by Akshit
+Dialogue: 0,0:00:03.46,0:00:05.58,Default,,0,0,0,,Verma. I'll show what already ran,
+Dialogue: 0,0:00:05.58,0:00:07.04,Default,,0,0,0,,and what I will build.
+Dialogue: 0,0:00:07.04,0:00:09.38,Default,,0,0,0,,The question isn't which companies to apply
+Dialogue: 0,0:00:09.38,0:00:12.00,Default,,0,0,0,,to. It's which ones to network with.
+Dialogue: 0,0:00:12.83,0:00:14.62,Default,,0,0,0,,SponsorScout will be a Claude Code workflow
+Dialogue: 0,0:00:14.62,0:00:16.75,Default,,0,0,0,,that tells an international student,
+Dialogue: 0,0:00:16.75,0:00:18.12,Default,,0,0,0,,for each company,
+Dialogue: 0,0:00:18.12,0:00:19.75,Default,,0,0,0,,whether to apply,
+Dialogue: 0,0:00:19.75,0:00:21.46,Default,,0,0,0,,network, check by hand,
+Dialogue: 0,0:00:21.46,0:00:24.12,Default,,0,0,0,,or skip, with the record behind every
+Dialogue: 0,0:00:24.12,0:00:24.79,Default,,0,0,0,,answer.
+Dialogue: 0,0:00:24.79,0:00:26.37,Default,,0,0,0,,Done, it will be a repository,
+Dialogue: 0,0:00:26.37,0:00:28.96,Default,,0,0,0,,in Python and Claude Code on public
+Dialogue: 0,0:00:28.96,0:00:31.07,Default,,0,0,0,,data: a recipe,
+Dialogue: 0,0:00:31.17,0:00:32.96,Default,,0,0,0,,a prototype, tests,
+Dialogue: 0,0:00:32.96,0:00:34.37,Default,,0,0,0,,an evaluation log,
+Dialogue: 0,0:00:34.37,0:00:36.04,Default,,0,0,0,,and a report you can trace row
+Dialogue: 0,0:00:36.04,0:00:36.96,Default,,0,0,0,,by row.
+Dialogue: 0,0:00:36.96,0:00:39.00,Default,,0,0,0,,Each company gets three checks.
+Dialogue: 0,0:00:39.00,0:00:40.75,Default,,0,0,0,,Has it sponsored data roles,
+Dialogue: 0,0:00:40.75,0:00:43.28,Default,,0,0,0,,in public H one B records?
+Dialogue: 0,0:00:43.29,0:00:45.17,Default,,0,0,0,,Has it raised money recently,
+Dialogue: 0,0:00:45.17,0:00:48.50,Default,,0,0,0,,in S E C Form D filings?
+Dialogue: 0,0:00:48.50,0:00:50.96,Default,,0,0,0,,Is an entry-level data job open on
+Dialogue: 0,0:00:50.96,0:00:52.12,Default,,0,0,0,,its board today?
+Dialogue: 0,0:00:52.12,0:00:53.62,Default,,0,0,0,,The engine's own scorer,
+Dialogue: 0,0:00:53.62,0:00:55.50,Default,,0,0,0,,which I had Claude Code run on
+Dialogue: 0,0:00:55.50,0:00:58.21,Default,,0,0,0,,October third, gives a sponsor with no
+Dialogue: 0,0:00:58.21,0:00:59.62,Default,,0,0,0,,open job a zero,
+Dialogue: 0,0:00:59.62,0:01:00.95,Default,,0,0,0,,and skips it.
+Dialogue: 0,0:01:01.21,0:01:03.87,Default,,0,0,0,,SponsorScout puts it on a networking list.
+Dialogue: 0,0:01:03.87,0:01:06.00,Default,,0,0,0,,So a student can stop applying where
+Dialogue: 0,0:01:06.00,0:01:06.96,Default,,0,0,0,,nothing is open,
+Dialogue: 0,0:01:06.96,0:01:09.79,Default,,0,0,0,,and keep the sponsors worth contacting.
+Dialogue: 0,0:01:09.79,0:01:12.24,Default,,0,0,0,,I also looked at My Visa Jobs.
+Dialogue: 0,0:01:12.33,0:01:14.50,Default,,0,0,0,,It lists sponsors and their past job
+Dialogue: 0,0:01:14.50,0:01:17.04,Default,,0,0,0,,counts. It doesn't take a sponsor with
+Dialogue: 0,0:01:17.04,0:01:19.21,Default,,0,0,0,,nothing open and tell you to network
+Dialogue: 0,0:01:19.21,0:01:19.81,Default,,0,0,0,,there.
+Dialogue: 0,0:01:19.71,0:01:22.42,Default,,0,0,0,,I'm targeting data analyst and data engineer
+Dialogue: 0,0:01:22.42,0:01:24.79,Default,,0,0,0,,roles, so my reader is a data
+Dialogue: 0,0:01:24.79,0:01:28.17,Default,,0,0,0,,hiring manager. In sixty seconds,
+Dialogue: 0,0:01:28.17,0:01:30.53,Default,,0,0,0,,they'll run one offline command,
+Dialogue: 0,0:01:30.71,0:01:31.91,Default,,0,0,0,,open the report,
+Dialogue: 0,0:01:31.92,0:01:33.71,Default,,0,0,0,,and trace a networking row to its
+Dialogue: 0,0:01:33.71,0:01:34.42,Default,,0,0,0,,source.
+Dialogue: 0,0:01:34.42,0:01:35.87,Default,,0,0,0,,This already ran.
+Dialogue: 0,0:01:36.08,0:01:37.25,Default,,0,0,0,,On October third,
+Dialogue: 0,0:01:37.25,0:01:39.71,Default,,0,0,0,,the prototype fetched sixteen job boards
+Dialogue: 0,0:01:39.71,0:01:42.58,Default,,0,0,0,,and sorted one hundred twenty-three sponsors:
+Dialogue: 0,0:01:42.58,0:01:43.87,Default,,0,0,0,,two to apply,
+Dialogue: 0,0:01:43.87,0:01:45.04,Default,,0,0,0,,one to network,
+Dialogue: 0,0:01:45.04,0:01:47.46,Default,,0,0,0,,one hundred seven to check by hand,
+Dialogue: 0,0:01:47.46,0:01:48.87,Default,,0,0,0,,thirteen to skip.
+Dialogue: 0,0:01:49.04,0:01:50.83,Default,,0,0,0,,The job seeker is fictional.
+Dialogue: 0,0:01:50.83,0:01:52.57,Default,,0,0,0,,Run one got one wrong:
+Dialogue: 0,0:01:52.58,0:01:55.00,Default,,0,0,0,,Zoox landed in apply on part-time,
+Dialogue: 0,0:01:55.00,0:01:57.41,Default,,0,0,0,,contract student-worker postings.
+Dialogue: 0,0:01:57.54,0:01:58.79,Default,,0,0,0,,Claude flagged it.
+Dialogue: 0,0:01:58.79,0:01:59.75,Default,,0,0,0,,I chose the fix,
+Dialogue: 0,0:01:59.75,0:02:01.57,Default,,0,0,0,,and a test pins it.
+Dialogue: 0,0:02:01.67,0:02:04.37,Default,,0,0,0,,All twenty-five tests passed again on October
+Dialogue: 0,0:02:04.37,0:02:04.97,Default,,0,0,0,,twelfth.
+Dialogue: 0,0:02:05.17,0:02:06.99,Default,,0,0,0,,What can a reviewer conclude?
+Dialogue: 0,0:02:07.25,0:02:09.71,Default,,0,0,0,,Source grounding: every number is labelled
+Dialogue: 0,0:02:09.71,0:02:12.12,Default,,0,0,0,,a record or my own input.
+Dialogue: 0,0:02:12.33,0:02:15.33,Default,,0,0,0,,Verification: an unconfirmed board never
+Dialogue: 0,0:02:15.33,0:02:16.50,Default,,0,0,0,,reaches the scorer,
+Dialogue: 0,0:02:16.50,0:02:18.12,Default,,0,0,0,,which would treat it as open.
+Dialogue: 0,0:02:18.12,0:02:20.79,Default,,0,0,0,,Agent loops: Claude Code stops at the
+Dialogue: 0,0:02:20.79,0:02:23.04,Default,,0,0,0,,human gates for my sign-off.
+Dialogue: 0,0:02:23.04,0:02:25.16,Default,,0,0,0,,Evaluation is still to come:
+Dialogue: 0,0:02:25.25,0:02:27.00,Default,,0,0,0,,a hand-checked set of verdicts,
+Dialogue: 0,0:02:27.00,0:02:28.79,Default,,0,0,0,,with the wrong ones logged.
+Dialogue: 0,0:02:28.79,0:02:29.79,Default,,0,0,0,,It will never apply,
+Dialogue: 0,0:02:29.79,0:02:32.41,Default,,0,0,0,,email, or contact anyone.
+Dialogue: 0,0:02:32.42,0:02:33.58,Default,,0,0,0,,The person decides.
+Dialogue: 0,0:02:33.58,0:02:36.04,Default,,0,0,0,,And it won't score résumé fit,
+Dialogue: 0,0:02:36.04,0:02:38.37,Default,,0,0,0,,so no real résumé goes in.
+Dialogue: 0,0:02:38.37,0:02:40.91,Default,,0,0,0,,First, I'll build a board resolver.
+Dialogue: 0,0:02:41.17,0:02:43.37,Default,,0,0,0,,Today sixteen of the hundred twenty-three
+Dialogue: 0,0:02:43.37,0:02:45.82,Default,,0,0,0,,companies have a confirmed board.
+Dialogue: 0,0:02:45.92,0:02:47.54,Default,,0,0,0,,You'll know it ran when that number
+Dialogue: 0,0:02:47.54,0:02:50.42,Default,,0,0,0,,rises, each new board saved with its
+Dialogue: 0,0:02:50.42,0:02:52.33,Default,,0,0,0,,raw response and a test.
+Dialogue: 0,0:02:52.33,0:02:53.70,Default,,0,0,0,,What could sink it:
+Dialogue: 0,0:02:53.79,0:02:55.42,Default,,0,0,0,,many of the other hundred and seven
+Dialogue: 0,0:02:55.42,0:02:57.32,Default,,0,0,0,,may have no public board,
+Dialogue: 0,0:02:57.33,0:02:58.82,Default,,0,0,0,,and I don't know how many.
+Dialogue: 0,0:02:59.00,0:03:01.37,Default,,0,0,0,,I'll use only public Greenhouse,
+Dialogue: 0,0:03:01.50,0:03:03.17,Default,,0,0,0,,Lever and Ashby boards,
+Dialogue: 0,0:03:03.17,0:03:05.83,Default,,0,0,0,,never scrape, and report coverage even if
+Dialogue: 0,0:03:05.83,0:03:06.58,Default,,0,0,0,,it's low.
+Dialogue: 0,0:03:06.58,0:03:08.79,Default,,0,0,0,,I also don't know if recent funding
+Dialogue: 0,0:03:08.79,0:03:12.17,Default,,0,0,0,,predicts hiring. I'll find out by re-checking
+Dialogue: 0,0:03:12.17,0:03:14.62,Default,,0,0,0,,the networking targets' boards after fourteen
+Dialogue: 0,0:03:14.62,0:03:18.00,Default,,0,0,0,,days, and logging whether a posting appeared.
+Dialogue: 0,0:03:18.00,0:03:20.17,Default,,0,0,0,,I picked it because I'm job hunting
+Dialogue: 0,0:03:20.17,0:03:22.29,Default,,0,0,0,,too, and I wanted a smarter strategy
+Dialogue: 0,0:03:22.29,0:03:24.95,Default,,0,0,0,,than a hundred-plus applications a day.
+Dialogue: 0,0:03:25.00,0:03:25.95,Default,,0,0,0,,It's a mix.
+Dialogue: 0,0:03:26.25,0:03:27.83,Default,,0,0,0,,What I can show is judgment,
+Dialogue: 0,0:03:27.83,0:03:30.46,Default,,0,0,0,,not code: Claude Code wrote most of
+Dialogue: 0,0:03:30.46,0:03:32.58,Default,,0,0,0,,the prototype; I set its rules,
+Dialogue: 0,0:03:32.58,0:03:34.50,Default,,0,0,0,,like requiring recent funding,
+Dialogue: 0,0:03:34.50,0:03:36.70,Default,,0,0,0,,and signed its human gates.
+Dialogue: 0,0:03:36.92,0:03:38.03,Default,,0,0,0,,New for me:
+Dialogue: 0,0:03:38.12,0:03:41.00,Default,,0,0,0,,evaluation, and resolving boards at scale.
+Dialogue: 0,0:03:42.37,0:03:44.04,Default,,0,0,0,,SponsorScout. A pitch by Akshit Verma.

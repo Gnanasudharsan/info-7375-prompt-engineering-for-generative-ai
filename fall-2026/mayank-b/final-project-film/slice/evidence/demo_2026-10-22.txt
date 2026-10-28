@@ -1,0 +1,23 @@
+$ python3 -m source_check.demo air_canada_shape
+answer : You can claim the bereavement fare after your trip, within 90 days.
+verdict: HOLD
+reason : answer says 'after travel', policy says 'before travel'
+policy : BRV-2026-03: Bereavement fares must be requested before travel. They cannot be claimed after the trip.
+
+$ python3 -m source_check.demo within_vs_after
+answer : You can ask for a refund up to 90 days after your flight.
+verdict: HOLD
+reason : answer says '90 days after travel', policy says 'within 90 days of purchase'
+policy : RFD-2026-01: Refunds can be requested within 90 days of purchase.
+
+$ python3 -m source_check.demo booking_vs_departure
+answer : Cancelling is free up to 24 hours before departure.
+verdict: HOLD
+reason : answer says '24 hours before departure', policy says 'within 24 hours of booking'
+policy : CXL-2025-09: Cancellation is free within 24 hours of booking.
+
+$ python3 -m source_check.demo matching_refund
+answer : You can request a refund within 90 days of buying your ticket.
+verdict: PASS
+policy : RFD-2026-01: Refunds can be requested within 90 days of purchase.
+

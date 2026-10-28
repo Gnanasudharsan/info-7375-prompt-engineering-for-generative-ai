@@ -1,0 +1,31 @@
+{
+  "status": "ready",
+  "output": "~/Projects/seeded-faults-film-build/seeded-faults-pitch/exports/landscape/seeded-faults-pitch.mp4",
+  "sha256": "96f04f518e9daef164aa1bb3a910df45efde21e98418d9bfe1421e987961a68e",
+  "duration_s": 216.45833333333334,
+  "input_sha256": {
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B00.mp4": "5383e8271786454cc5590c3be5016055ed34a53bc84df965daf00ac730de5d98",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B01.mp4": "b3503ad3da34c99a8c02e2f2fa7f05df50e285404be8347075cbc270e9fdb3c4",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B02.mp4": "eb94fb5a7e46b3a03763a3a9dee0c91a6a4aac7eb0c42e7c4ab7d640ec36ca9b",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B03.mp4": "a67158089a0955126d78ffd8c34ad8ebc65428458bacca31f728391799803843",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B04.mp4": "4496a22452975680325412f3d53c8f0688d27a684b7a8794797db3b2173a98b9",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B05.mp4": "377708ac48b4b972b8fe40dc81a6cc40fecf32bc5a697859faf43c62b1ac8534",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B06.mp4": "8642771f1b8f4b5c7780dd3007c69f48ad370503ccbd499fd4fa8d733e3e7b3a",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B07.mp4": "05327c132c1d156cf0f9b8d7894925e38253daa8ba6355abdc1bb013592f0d8f",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B08.mp4": "a8934b53cda9c0d356ac6aa46335d8ab52c3c1c55de4b62c57081d747b76e92e",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/B09.mp4": "674f24e61e4d5b8beddcb15850f7e3adfe44d1a929c5ec95fc9823afb0d3f3a8",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/manim/BOUT.mp4": "0be1ca918ddc0b669eb4a6ec981040b6f89f13339ebe3d12b05b9383bc9d29df",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B00.mp3": "cb2177c0f4a940099a759f0c59e4b6c7a94c7eea8c6dd41d799aaf59b6d93448",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B01.mp3": "a26753299ce4beb21516121aecbe5f61984dfaaf6aec3ed1b8da9383c3fd2ecc",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B02.mp3": "ca83c4f9c7baacdaedaadaa131a66d1fd2442e09625c1d44f1795846e5a2552b",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B03.mp3": "c6681302194052fe67bf3e3cac109141679090e3aa02bf4b4cdb27deff756ef4",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B04.mp3": "447c88c594f4a80f8bca8b269d6b9fec58a3c55c46bf9e5cdf28f7606b33544f",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B05.mp3": "e8221ad3f96b12d03ba850c7c78b2465cecc2b5a40a5a851236caf2a5d418812",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B06.mp3": "5b33bd85fa98cacea481ed27b137b1486610a914fe0fe1da018555ff80e88c33",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B07.mp3": "f10bab628821224bafa6c8c0cb12eb060adbf91da1117cba33d47d97d922dfb5",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B08.mp3": "21ab85e2ca3aa1656c7310e00de4643c0601246c161e79df052fafba12068acb",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-B09.mp3": "ac2f90ac7a6e292f8901c2ceb35ae1aa04f23b99205ef5378afe02878ea479c4",
+    "~/Projects/seeded-faults-film-build/seeded-faults-pitch/mp3/beat-BOUT.mp3": "84dc0ed22f09be6f0de54047c54521d8678a9197f603f5bced69621fafa6bb4f"
+  },
+  "at": "2026-10-14T19:38:54.908093+00:00"
+}

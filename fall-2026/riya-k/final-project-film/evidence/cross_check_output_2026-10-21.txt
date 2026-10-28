@@ -1,0 +1,12 @@
+Q01  AGREE     sql [(59,)]  python [(59,)]
+Q02  AGREE     sql [('USA', 13), ('Canada', 8), ('Brazil', 5)]  python [('USA', 13), ('Canada', 8), ('Brazil', 5)]
+     flag: ordered question with tied counts inside the top 5 and no tie rule in the question
+Q03  AGREE     sql [('USA', 523.06), ('Canada', 303.96), ('France', 195.1)]  python [('USA', 523.06), ('Canada', 303.96), ('France', 195.1)]
+Q04  AGREE     sql [(59,)]  python [(59,)]
+     flag: answer equals every customer, so it cannot tell 'bought Rock' from 'all customers'
+Q05  AGREE     sql [('Jane', 'Peacock', 21)]  python [('Jane', 'Peacock', 21)]
+Q06  AGREE     sql [(1069,)]  python [(1069,)]
+Q07  AGREE     sql [('Alternative & Punk',), ('Jazz',), ('Latin',)]  python [('Alternative & Punk',), ('Jazz',), ('Latin',)]
+Q08  AGREE     sql [(450.58,)]  python [(450.58,)]
+
+gold SQL and the plain-Python recomputation agree on 8/8 questions; 2 flagged

@@ -1,0 +1,163 @@
+diff --git a/runtime/remotion/src/Root.tsx b/runtime/remotion/src/Root.tsx
+index b8b80af..db979a5 100644
+--- a/runtime/remotion/src/Root.tsx
++++ b/runtime/remotion/src/Root.tsx
+@@ -155,6 +155,9 @@ import {InYourHandsCosts, inYourHandsCostsSchema} from './scenes/InYourHandsCost
+ import {InYourHandsSubscription, inYourHandsSubscriptionSchema} from './scenes/InYourHandsSubscription';
+ 
+ import {LayerStackPreview, SourceFlowPreview, ChipGridPreview, PredictCardPreview} from './illustrations/previews';
++import {RibosomeTape, CodonTable, ReadingFrame, LayerStackBeat} from './illustrations/molecular';
++import {TrainingLoop, CorpusCard, TokenBars, TwoGaps, LossFloor, TargetStack, BoundaryCard, SubmissionOutro, ReconstructedComposer} from './illustrations/pretraining';
++import {PitchOutro} from './illustrations/pitch';
+ // ── claude-liam-claude-science — rhetorical + structural patterns ──
+ import {AttritionChain, ScaleComparison, BinaryBranch, DivergentFates} from './deckPatterns';
+ import {
+@@ -2222,6 +2225,96 @@ export const RemotionRoot: React.FC = () => {
+       <Composition id="Illu-SourceFlow" component={SourceFlowPreview} durationInFrames={180} fps={30} width={1280} height={720} />
+       <Composition id="Illu-ChipGrid" component={ChipGridPreview} durationInFrames={150} fps={30} width={1280} height={720} />
+       <Composition id="Illu-PredictCard" component={PredictCardPreview} durationInFrames={150} fps={30} width={1280} height={720} />
++      {/* ── concept-illustration library (MOLECULAR family) — built for
++           claude-liam-how-ribosomes-read-mrna after GATE L returned a genuine
++           miss for translation subject matter. Props-driven; durationSeconds
++           comes from the beat's measured audio so useP() spans the real clock. ── */}
++      <Composition
++        id="RibosomeTape"
++        component={RibosomeTape}
++        durationInFrames={450}
++        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 15) * 30)})}
++        fps={30}
++        width={1920}
++        height={1080}
++        defaultProps={{phase: 'cycle' as const, tape: 'AUGGCUUCAGAUCCGAAUUAG', spark: 'Dock, bond, eject.', folderLabel: '@NikBearBrown'}}
++      />
++      <Composition
++        id="CodonTable"
++        component={CodonTable}
++        durationInFrames={480}
++        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 16) * 30)})}
++        fps={30}
++        width={1920}
++        height={1080}
++        defaultProps={{spark: 'Sixty-four spellings, twenty words.', caption: 'Redundancy is the error tolerance.', folderLabel: '@NikBearBrown'}}
++      />
++      <Composition
++        id="ReadingFrame"
++        component={ReadingFrame}
++        durationInFrames={450}
++        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 15) * 30)})}
++        fps={30}
++        width={1920}
++        height={1080}
++        defaultProps={{tape: 'AUGGCUUCAGAUCCGAAUUAG', deleteAt: 7, spark: 'Shift one. Lose everything after.', folderLabel: '@NikBearBrown'}}
++      />
++      {/* 1280×720: LayerStack's geometry is authored on the library's native
++          stage; the 16:9 upscale to the reel canvas is exact. */}
++      <Composition
++        id="LayerStackBeat"
++        component={LayerStackBeat}
++        durationInFrames={510}
++        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 17) * 30)})}
++        fps={30}
++        width={1280}
++        height={720}
++        defaultProps={{layers: [], caption: '', spark: '', folderLabel: '@NikBearBrown'}}
++      />
++      {/* ── INFO 7375 Final Project Pitch (youtube/brutalist/final-project-film): the author-credited
++           outro. Not ClaudeTitleOutro, which hardcodes @NikBearBrown. ── */}
++      <Composition
++        id="PitchOutro"
++        component={PitchOutro as any}
++        durationInFrames={7 * 30}
++        calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? 7) * 30)})}
++        fps={30}
++        width={1920}
++        height={1080}
++        defaultProps={{
++          title: 'SponsorScout', author: 'Akshit Verma', course: 'INFO 7375 · Final Project Pitch',
++        } as any}
++      />
++      {/* ── concept-illustration library (PRETRAINING family) — built for
++           youtube/brutalist/week-01-video (INFO 7375 Wk01) after GATE L missed.
++           Every number rendered comes from that reel's code/OUTPUT.txt. ── */}
++      {([
++        ['TrainingLoop', TrainingLoop, 17],
++        ['CorpusCard', CorpusCard, 16],
++        ['TokenBars', TokenBars, 16],
++        ['TwoGaps', TwoGaps, 18],
++        ['LossFloor', LossFloor, 17],
++        ['TargetStack', TargetStack, 17],
++        ['BoundaryCard', BoundaryCard, 19],
++        ['SubmissionOutro', SubmissionOutro, 9],
++        ['ReconstructedComposer', ReconstructedComposer, 12],
++      ] as const).map(([id, Comp, secs]) => (
++        <Composition
++          key={id}
++          id={id}
++          component={Comp as any}
++          durationInFrames={secs * 30}
++          calculateMetadata={({props}) => ({durationInFrames: Math.ceil(((props as any).durationSeconds ?? secs) * 30)})}
++          fps={30}
++          width={1920}
++          height={1080}
++          defaultProps={{
++            spark: '', folderLabel: 'INFO 7375 · Week 01', phase: 'converge',
++            title: 'What Pretraining Actually Targets', thesis: 'the token that followed, not the truth',
++            author: 'Akshit Verma', course: 'INFO 7375', week: 'Week 01',
++          } as any}
++        />
++      ))}
+       {/* ── claude-liam-claude-science — structural illustrations (parameterized) ── */}
+       <Composition id="ClaudeScienceLayerStack" component={ClaudeScienceLayerStack}
+         durationInFrames={900} fps={30} width={1280} height={720}
+diff --git a/runtime/scripts/compile.py b/runtime/scripts/compile.py
+index f085271..9cbb3e2 100644
+--- a/runtime/scripts/compile.py
++++ b/runtime/scripts/compile.py
+@@ -34,6 +34,11 @@ from build_safety import (BuildError, ApprovalError, atomic_json, file_digest,
+                           require_paperwork, validate_approvals, validate_project,
+                           writable_path, record_failure, require_short_duration)
+ 
++# ART_BURNIN=0 keeps a --review cut (GATE F still applies) but omits the review
++# burn-ins: the per-beat "B00 GRAPHIC VIDEO 0.0s +9.9s" chips and the running
++# timecode. Default 1 = unchanged behaviour. Opt-in, for cuts meant to be watched.
++BURN_IN = os.environ.get("ART_BURNIN", "1") != "0"
++
+ FFMPEG = shutil.which("ffmpeg") or "ffmpeg"
+ FFPROBE = shutil.which("ffprobe") or "ffprobe"
+ INK_RGB = (47, 42, 38)        # #2F2A26
+@@ -738,7 +743,7 @@ def compile_reel(a):
+     meta_flags = sheet.get("metadata", {})
+     keep_labels = bool(meta_flags.get("keep_review_labels"))
+     label_pngs = []   # list of (png_path, ts, dur)
+-    if a.review:
++    if a.review and BURN_IN:
+         for bid, ts, dur, status, stype in report:
+             png = work / f"lbl-{bid}.png"
+             make_label_png(png, f"{bid} {stype} {status} {ts:6.1f}s +{dur:.1f}s",
+@@ -759,7 +764,9 @@ def compile_reel(a):
+     title_png = None
+     first_beat_dur = float(beats[0].get("actual_duration_s")
+                            or beats[0].get("estimated_duration_s") or 6.0) if beats else 0.0
+-    if channel_title and font:
++    # ART_CHANNEL_TITLE=0 (opt-in; default 1 = unchanged): keep metadata.channel_title for bookend_check but
++    # don't burn it into beat one, where burned-in captions sit (INFO 7375 pitch film, 2026-10-14).
++    if channel_title and font and os.environ.get("ART_CHANNEL_TITLE", "1") != "0":
+         title_png = work / "channel_title.png"
+         make_channel_title_png(title_png, channel_title, font, int(h * 0.030))
+ 
+@@ -785,8 +792,13 @@ def compile_reel(a):
+                       f"overlay=(W-w)/2:H-h-40"
+                       f":enable='between(t,0,{first_beat_dur:.3f})'[vtitle]")
+             prev = "vtitle"
+-        if a.review and drawtext:
+-            fc.append(f"[{prev}]drawtext=fontfile={font}:text='%{{pts\\:hms}}'"
++        if a.review and drawtext and BURN_IN:
++            # ffmpeg filtergraphs treat ':' as the option separator and '\' as
++            # the escape char, so a raw Windows path (C:\Users\...) is parsed to
++            # pieces. Forward slashes + an escaped drive colon + quoting survive
++            # both passes; on POSIX paths this is a no-op.
++            font_arg = str(font).replace("\\", "/").replace(":", r"\:")
++            fc.append(f"[{prev}]drawtext=fontfile='{font_arg}':text='%{{pts\\:hms}}'"
+                       f":fontcolor=white:fontsize={int(h*0.04)}:box=1"
+                       f":boxcolor=black@0.55:boxborderw=8:x=w-text_w-16:y=16[vout]")
+         else:

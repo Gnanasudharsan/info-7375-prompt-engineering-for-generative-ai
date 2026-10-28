@@ -1,0 +1,606 @@
+{
+  "metadata": {
+    "slug": "marino-desk-assistant-pitch",
+    "title": "Marino Desk Assistant: A Pitch",
+    "topic": "INFO 7375 · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "author": "Shubham Bagwe",
+    "persona": "Shubham Bagwe (script written with Claude, synthetic voice)",
+    "handle": "github.com/bagwe-shubham1727/marino-rag",
+    "voice": "am_michael",
+    "voice_kokoro": "am_michael",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Course pitch, not a channel explainer. The assignment says to narrate as myself and not use the instructor's name, persona or credit line, so there is no Liam greeting, no hesitant-writer/terms cards, no Your Turn composer (a pitch has no viewer exercise), and no verdict card; B15 states exists vs will-exist instead. The outro is kept, as my own drawn beat.",
+    "audience": "a hiring manager or engineer reviewing a new-grad full-stack portfolio; the INFO 7375 graders",
+    "source_doc": "my marino-rag repo (github.com/bagwe-shubham1727/marino-rag, commit dd3205e), tests re-run 2026-10-13; recreation.northeastern.edu site search and Alumni page, checked 2026-10-13 (evidence/)",
+    "playlist": "INFO 7375 Fall 2026",
+    "chapter_number": 0,
+    "tags": [
+      "INFO 7375",
+      "final project pitch",
+      "RAG",
+      "source grounding",
+      "evaluation",
+      "Shubham Bagwe"
+    ],
+    "build": {
+      "at": "2026-10-13T18:15:27",
+      "cut": "master",
+      "filled": 16,
+      "of": 16,
+      "slates": [],
+      "skin_warnings": [
+        "B01: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B01",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q1 what is it",
+      "claim_status": "framing",
+      "narration_text": "I'm Shubham Baag-way, and this is my final project pitch, written with Claude and spoken by a synthetic voice. Marino Desk Assistant will answer front-desk questions at Northeastern's Marino Recreation Center, like fees, hours and guest rules, from the public recreation website, and quote the page it used.",
+      "estimated_duration_s": 18.5,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A desk bell lands on a kraft counter; a chat window slides in beside it and one answer line draws with a terracotta link dot. Label 'Desk Assistant'. Corner tag 'synthetic voice · script written with Claude'.",
+        "manim": {
+          "class": "B01_Desk"
+        },
+        "motion_claim": "A desk bell lands on a kraft counter; a chat window slides in beside it and one answer line draws with a terracotta link dot. Label 'Desk Assistant'. Corner tag 'synthetic voice · script written with Claude'."
+      },
+      "actual_duration_s": 20.053,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 20.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q1 the artifact",
+      "claim_status": "planned",
+      "narration_text": "When it's done, it will be a public GitHub repository: a Python and FastAPI backend, a Next.js chat window, Claude writing the answers, and an evaluation report. A first version already exists, and its sixty tests passed today.",
+      "estimated_duration_s": 14.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An open kraft box labelled 'GitHub repo'; four parts drop in (dark server block, chat window card, report page, a small kraft log). Beside it a dark server stack labelled 'first version' whose lights turn on, with '60 tests pass'. Corner tag 'planned repo · real: 60 tests pass'.",
+        "manim": {
+          "class": "B02_Repo"
+        },
+        "motion_claim": "An open kraft box labelled 'GitHub repo'; four parts drop in (dark server block, chat window card, report page, a small kraft log). Beside it a dark server stack labelled 'first version' whose lights turn on, with '60 tests pass'. Corner tag 'planned repo · real: 60 tests pass'."
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 15.957,
+      "render_duration_s": 15.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2 the desk problem",
+      "claim_status": "framing",
+      "narration_text": "Here's the problem. A member at the desk asks what an alumni membership costs. The answer is on the website, inside a page of about eight hundred words of fee tables, while the member waits.",
+      "estimated_duration_s": 13.5,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The bell rings (two arcs); a tall page of scribbled lines slides up past a window frame, as if scrolled. Label '~800 words'. Corner tag 'illustration'.",
+        "manim": {
+          "class": "B03_Scroll"
+        },
+        "motion_claim": "The bell rings (two arcs); a tall page of scribbled lines slides up past a window frame, as if scrolled. Label '~800 words'. Corner tag 'illustration'."
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 11.669,
+      "render_duration_s": 11.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2 the alternatives",
+      "claim_status": "exists",
+      "narration_text": "I looked at what we use now. The site's own search returns pages, not answers. A search for guest pass today returned five pages, with the home page first. Manual lookup means scrolling until you find the line.",
+      "estimated_duration_s": 14.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A search pill with a magnifier; five result cards drop into a column; the first is labelled 'Home'. Labels 'guest pass', '5 pages'. Corner tag 'real search · 2026-10-13'.",
+        "manim": {
+          "class": "B04_Search"
+        },
+        "motion_claim": "A search pill with a magnifier; five result cards drop into a column; the first is labelled 'Home'. Labels 'guest pass', '5 pages'. Corner tag 'real search · 2026-10-13'."
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 14.059,
+      "render_duration_s": 14.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q2 the difference",
+      "claim_status": "planned",
+      "narration_text": "Mine will save the desk assistant that scroll. It will give one answer, quote the exact line, and link to it, which the site search doesn't do. And when the website doesn't say, it will answer: I don't know.",
+      "estimated_duration_s": 15.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One answer bubble draws with a bracketed quote line and a link pill; a second, plain bubble appears below. Labels 'quote + link', 'I don't know'. Corner tag 'constructed · planned answer'.",
+        "manim": {
+          "class": "B05_Answer"
+        },
+        "motion_claim": "One answer bubble draws with a bracketed quote line and a link pill; a second, plain bubble appears below. Labels 'quote + link', 'I don't know'. Corner tag 'constructed · planned answer'."
+      },
+      "actual_duration_s": 12.203,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 12.208333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q3 who opens it",
+      "claim_status": "planned",
+      "narration_text": "My target role is new-grad full-stack engineer, so my reader is a hiring manager or an engineer. In sixty seconds, they'll see the evaluation table in the read-me, run one command, ask a fee question, and watch it refuse an off-topic one.",
+      "estimated_duration_s": 16.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A browser window with a dark title bar; a table of rows grows in it; a cursor clicks; a small chat card slides out. Labels 'hiring manager', '60 s'. Corner tag 'constructed · planned repo'.",
+        "manim": {
+          "class": "B06_Reader"
+        },
+        "motion_claim": "A browser window with a dark title bar; a table of rows grows in it; a cursor clicks; a small chat card slides out. Labels 'hiring manager', '60 s'. Corner tag 'constructed · planned repo'."
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 16.469,
+      "render_duration_s": 16.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q4 what it proves: grounding + contract",
+      "claim_status": "exists",
+      "narration_text": "What will it prove? Source grounding: it already retrieves five passages and reranks them to three. Next, a prompt contract: Claude must return the answer, the quoted line, the link and the date, and a quote that isn't in the page fails.",
+      "estimated_duration_s": 16.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Five page cards in a row; two slide away, leaving three. Then a contract slip with four slots fills in, and one slot gets a cross. Labels '5 → 3', 'contract'. Corner tag 'exists: 5 → 3 · planned: contract'.",
+        "manim": {
+          "class": "B07_Contract"
+        },
+        "motion_claim": "Five page cards in a row; two slide away, leaving three. Then a contract slip with four slots fills in, and one slot gets a cross. Labels '5 → 3', 'contract'. Corner tag 'exists: 5 → 3 · planned: contract'."
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 14.933,
+      "render_duration_s": 14.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q4 evaluation evidence (will)",
+      "claim_status": "planned",
+      "narration_text": "And evaluation: fifty real desk questions with my own answer keys, scored three ways. Did it cite the right page? Was the answer right? Did it refuse when it should? Every miss goes in the report.",
+      "estimated_duration_s": 13.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A grid of fifty small pages draws in; three grey score bars grow beside it; a few pages get a terracotta dot and fly into a report book. Labels '50 questions', '3 scores'. Corner tag 'constructed · planned'.",
+        "manim": {
+          "class": "B08_Eval"
+        },
+        "motion_claim": "A grid of fifty small pages draws in; three grey score bars grow beside it; a few pages get a terracotta dot and fly into a report book. Labels '50 questions', '3 scores'. Corner tag 'constructed · planned'."
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 12.907,
+      "render_duration_s": 12.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q4 what a reviewer can conclude",
+      "claim_status": "framing",
+      "narration_text": "A reviewer could fairly conclude that I can specify, ground and evaluate an AI app, and measure where it's wrong. Not that it's always accurate, and not that Marino uses it officially.",
+      "estimated_duration_s": 12.3,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Left: a window with a ruler of bars and an ink check, labelled 'fair'. Right: a dashed badge struck through, labelled 'not claimed'. Corner tag 'illustration'.",
+        "manim": {
+          "class": "B09_Fair"
+        },
+        "motion_claim": "Left: a window with a ruler of bars and an ink check, labelled 'fair'. Right: a dashed badge struck through, labelled 'not claimed'. Corner tag 'illustration'."
+      },
+      "actual_duration_s": 11.904,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 11.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5 in and out",
+      "claim_status": "framing",
+      "narration_text": "What's in: the public recreation pages, with fees, hours and policies. Deliberately out: internal staff documents. They aren't public, so the finished repo never indexes them. It also won't check live court availability.",
+      "estimated_duration_s": 12.7,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Inside a fence line: a stack of web pages labelled 'public site'. Outside: a dark locked box labelled 'staff docs' that slides further away. Corner tag 'illustration'.",
+        "manim": {
+          "class": "B10_Scope"
+        },
+        "motion_claim": "Inside a fence line: a stack of web pages labelled 'public site'. Outside: a dark locked box labelled 'staff docs' that slides further away. Corner tag 'illustration'."
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 14.571,
+      "render_duration_s": 14.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q5 what comes first",
+      "claim_status": "planned",
+      "narration_text": "The first piece I'll make run is a public-only index and a retrieval check: fifty questions, each with its source page, and a script that counts how many find the right page in the top three. You'll know it ran when that report is in the repo, with the crawl date.",
+      "estimated_duration_s": 19.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Web pages stream into a box (the index); a report page rises beside it with rows and a stamped date. Labels 'top 3', 'report.md'. Corner tag 'constructed · planned'.",
+        "manim": {
+          "class": "B11_First"
+        },
+        "motion_claim": "Web pages stream into a box (the index); a report page rises beside it with rows and a stamped date. Labels 'top 3', 'report.md'. Corner tag 'constructed · planned'."
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 16.043,
+      "render_duration_s": 16.083333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q6 the risk",
+      "claim_status": "exists",
+      "narration_text": "What could sink it? Prices that depend on the date. Today, the alumni page lists five yearly prices for the same membership, from four hundred eighty dollars in September down to one hundred twenty in June. A model that doesn't know today's date can quote the wrong one, confidently.",
+      "estimated_duration_s": 18.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Five grey bars step down along a month line (Sep to Jun); a terracotta marker slides along and stops on the wrong bar. Labels '$480', '$120', 'Sep → Jun'. Corner tag 'real prices · wrong pick illustrated'.",
+        "manim": {
+          "class": "B12_Prices"
+        },
+        "motion_claim": "Five grey bars step down along a month line (Sep to Jun); a terracotta marker slides along and stops on the wrong bar. Labels '$480', '$120', 'Sep → Jun'. Corner tag 'real prices · wrong pick illustrated'."
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 17.856,
+      "render_duration_s": 17.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q6 mitigation + limitation",
+      "claim_status": "planned",
+      "narration_text": "So the contract will pass in today's date and require the quoted row, the evaluation will include date questions, and every answer will show its crawl date. The limit I can't fix: it's only as current as the last crawl.",
+      "estimated_duration_s": 15.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A calendar page drops into the contract slip from B07; a date stamp lands on an answer card. Labels 'today's date', 'crawl date'. Corner tag 'constructed · planned'.",
+        "manim": {
+          "class": "B13_Dates"
+        },
+        "motion_claim": "A calendar page drops into the contract slip from B07; a date stamp lands on an answer card. Labels 'today's date', 'crawl date'. Corner tag 'constructed · planned'."
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 14.101,
+      "render_duration_s": 14.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "Q7 why this project",
+      "claim_status": "framing",
+      "narration_text": "Why this project? I work the Marino front desk, and these are the questions I get. It's a mix. Backend and cloud I already have: I wrote the EventFlow Engine myself, a Node pipeline on Google Cloud. The Marino repo's current code was mostly AI-generated under my direction, so it isn't my proof. New to me: answer keys, measuring a model's misses, and prompt contracts.",
+      "estimated_duration_s": 25.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two shelves. Left: one solid crate labelled 'EventFlow' with a terracotta dot. Right: a dashed crate labelled 'evaluation' draws itself and a terracotta dot lights. Corner tag 'evidence: robust-data-processor (EventFlow)'.",
+        "manim": {
+          "class": "B14_Why"
+        },
+        "motion_claim": "Two shelves. Left: one solid crate labelled 'EventFlow' with a terracotta dot. Right: a dashed crate labelled 'evaluation' draws itself and a terracotta dot lights. Corner tag 'evidence: robust-data-processor (EventFlow)'."
+      },
+      "actual_duration_s": 23.573,
+      "audio_file": "mp3/beat-B14.mp3",
+      "render_duration_s": 23.583333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "pitch",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "summary: exists vs will exist",
+      "claim_status": "exists",
+      "narration_text": "Exists today: the first version, its retrieval and chat code, sixty passing tests, and the checks in this film, all run on October thirteenth. Will exist: the public-only index, Claude under the contract, and the fifty-question evaluation with its report.",
+      "estimated_duration_s": 15.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two columns. Left 'exists today': three solid crates with checks and the real line '60 passed'. Right 'will exist': three dashed crates draw in. Corner tag 'summary · tests re-run 2026-10-13'.",
+        "manim": {
+          "class": "B15_Ledger"
+        },
+        "motion_claim": "Two columns. Left 'exists today': three solid crates with checks and the real line '60 passed'. Right 'will exist': three dashed crates draw in. Corner tag 'summary · tests re-run 2026-10-13'."
+      },
+      "audio_file": "mp3/beat-B15.mp3",
+      "actual_duration_s": 16.277,
+      "render_duration_s": 16.291666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "assignment_question": "outro",
+      "claim_status": "framing",
+      "narration_text": "Marino Desk Assistant: a pitch by Shubham Baag-way.",
+      "estimated_duration_s": 3.5,
+      "voice": "am_michael",
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "engine": "kokoro",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The desk bell from B01 returns small; the title and the repo link settle beneath it.",
+        "manim": {
+          "class": "BOUT_Close"
+        },
+        "remotion": {
+          "props": {
+            "title": "Marino Desk Assistant: A Pitch",
+            "handle": "github.com/bagwe-shubham1727/marino-rag",
+            "subline": ""
+          }
+        }
+      },
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.499,
+      "render_duration_s": 4.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:15:27"
+      }
+    }
+  ]
+}

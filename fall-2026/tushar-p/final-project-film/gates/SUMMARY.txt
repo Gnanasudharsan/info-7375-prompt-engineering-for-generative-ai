@@ -1,0 +1,91 @@
+PASS 01 schema
+PASS 02 build_safety (project + approvals)
+PASS 03 paperwork
+PASS 04_beat_lint (rc=0)
+PASS 05_gate_shape (rc=0)
+PASS 06 Gate A static pre-flight (13 scenes; warnings: B05_SixtySeconds)
+PASS 07 Gate W contrast/margins (13 scenes; warnings: none)
+PASS 08 Gate B layout audit, strict (13 scenes, 0 findings)
+PASS 09 Gate V on final master (frames=26 BLOCKER=0 MAJOR=0)
+PASS 10 render integrity
+PASS 11 toolkit unit tests (Ran 122 tests in 7.594s)
+FAIL 12 smoke test (examples/_smoke as shipped): [kokoro] REFUSED: metadata.slug must be a filename, not a path — same toolkit fixture issue — see 12_smoke.txt
+STOPPED at 12 — see ~/Documents/Northeastern University/Brutalist/youtube/brutalist/agent-proving-ground/_qc/gates/12_smoke.txt
+
+Earlier run (2026-10-22, before B00 opened on the name alone):
+PASS 01 schema
+PASS 02 build_safety (project + approvals)
+PASS 03 paperwork
+PASS 04_beat_lint (rc=0)
+PASS 05_gate_shape (rc=0)
+PASS 06 Gate A static pre-flight (13 scenes; warnings: B05_SixtySeconds)
+PASS 07 Gate W contrast/margins (13 scenes; warnings: none)
+PASS 08 Gate B layout audit, strict (13 scenes, 0 findings)
+PASS 09 Gate V on final master (frames=26 BLOCKER=0 MAJOR=0)
+PASS 10 render integrity
+PASS 11 toolkit unit tests (Ran 122 tests in 7.611s)
+FAIL 12 smoke test (examples/_smoke as shipped): [kokoro] REFUSED: metadata.slug must be a filename, not a path — same toolkit fixture issue — see 12_smoke.txt
+STOPPED at 12 — see ~/Documents/Northeastern University/Brutalist/youtube/brutalist/agent-proving-ground/_qc/gates/12_smoke.txt
+
+Earlier run (2026-10-22, before B00, B01 and B10 were revised and the 23% → 69% figure was removed):
+PASS 01 schema
+PASS 02 build_safety (project + approvals)
+PASS 03 paperwork
+PASS 04_beat_lint (rc=0)
+PASS 05_gate_shape (rc=0)
+PASS 06 Gate A static pre-flight (13 scenes; warnings: B05_SixtySeconds)
+PASS 07 Gate W contrast/margins (13 scenes; warnings: none)
+PASS 08 Gate B layout audit, strict (13 scenes, 0 findings)
+PASS 09 Gate V on final master (frames=26 BLOCKER=0 MAJOR=0)
+PASS 10 render integrity
+PASS 11 toolkit unit tests (Ran 122 tests in 7.550s)
+FAIL 12 smoke test (examples/_smoke as shipped): [kokoro] REFUSED: metadata.slug must be a filename, not a path — same toolkit fixture issue — see 12_smoke.txt
+STOPPED at 12 — see ~/Documents/Northeastern University/Brutalist/youtube/brutalist/agent-proving-ground/_qc/gates/12_smoke.txt
+
+Earlier run (2026-10-22, before the B10 stat changed to "23% base → 69% fine-tuned …"):
+PASS 01 schema
+PASS 02 build_safety (project + approvals)
+PASS 03 paperwork
+PASS 04_beat_lint (rc=0)
+PASS 05_gate_shape (rc=0)
+PASS 06 Gate A static pre-flight (13 scenes; warnings: B05_SixtySeconds)
+PASS 07 Gate W contrast/margins (13 scenes; warnings: none)
+PASS 08 Gate B layout audit, strict (13 scenes, 0 findings)
+PASS 09 Gate V on final master (frames=26 BLOCKER=0 MAJOR=0)
+PASS 10 render integrity
+PASS 11 toolkit unit tests (Ran 122 tests in 7.732s)
+FAIL 12 smoke test (examples/_smoke as shipped): [kokoro] REFUSED: metadata.slug must be a filename, not a path — same toolkit fixture issue — see 12_smoke.txt
+STOPPED at 12 — see ~/Documents/Northeastern University/Brutalist/youtube/brutalist/agent-proving-ground/_qc/gates/12_smoke.txt
+
+Earlier run (2026-10-14, before the 2026-10-22 resubmission changes to B02, B06, B07, B09 and B10):
+PASS 01 schema
+PASS 02 build_safety (project + approvals)
+PASS 03 paperwork
+PASS 04_beat_lint (rc=0)
+PASS 05_gate_shape (rc=0)
+PASS 06 Gate A static pre-flight (13 scenes; warnings: B05_SixtySeconds)
+PASS 07 Gate W contrast/margins (13 scenes; warnings: none)
+PASS 08 Gate B layout audit, strict (13 scenes, 0 findings)
+PASS 09 Gate V on final master (frames=26 BLOCKER=0 MAJOR=0)
+PASS 10 render integrity
+PASS 11 toolkit unit tests (Ran 122 tests in 7.691s)
+STOPPED at 12 smoke — see ~/Documents/Northeastern University/Brutalist/youtube/brutalist/agent-proving-ground/_qc/gates/12_smoke.txt
+
+Earlier run (2026-10-13, before the B06/B07 future-tense change):
+PASS 01 schema
+PASS 02 build_safety (project + approvals)
+PASS 03 paperwork
+PASS 04_beat_lint (rc=0)
+PASS 05_gate_shape (rc=0)
+PASS 06 Gate A static pre-flight (13 scenes; warnings: B05_SixtySeconds)
+PASS 07 Gate W contrast/margins (13 scenes; warnings: none)
+PASS 08 Gate B layout audit, strict (13 scenes, 0 findings)
+PASS 09 Gate V on final master (frames=26 BLOCKER=0 MAJOR=0)
+PASS 10 render integrity
+FAIL 11 toolkit unit tests, run 1: test_math_layout could not import matplotlib (not installed in .venv) — see 11_unit_tests_run1.txt
+PASS 11 toolkit unit tests, run 2 (after matplotlib 3.11.2 installed in .venv; Ran 122 tests in 7.872s)
+FAIL 12 smoke test, run 1 (examples/_smoke as shipped): [kokoro] REFUSED: metadata.slug must be a filename, not a path — fixture slug "_smoke" fails build_safety's slug rule — see 12_smoke.txt
+NOT RUN 12 smoke test, run 2 (scratch copy, slug "smoke"): smoke_test.sh hardcodes examples/_smoke and cannot be pointed elsewhere without editing — see 12_smoke_scratch.txt
+STOPPED at 12 — no toolkit or film changes made
+
+Local home and temp paths shortened; no other edits.

@@ -1,0 +1,179 @@
+{
+  "_comment": "Config for lectern/faculty_feed.py: the watched schools, the AI queries, page counts and the Discord channel. Edit here; the code does not change. Public by design: the faculty search is shown openly.",
+  "feeds": {
+    "chronicle": "https://jobs.chronicle.com/jobsrss/",
+    "insidehighered": "https://careers.insidehighered.com/jobsrss/"
+  },
+  "user_agent": "Lectern-faculty-feed/1.0 (personal job-search research; plain GET of keyword RSS)",
+  "delay_seconds": 3,
+  "ai_queries": [
+    "\"artificial intelligence\" business",
+    "\"artificial intelligence\" professor",
+    "\"machine learning\" business school",
+    "\"generative AI\" business",
+    "AI \"school of business\"",
+    "\"artificial intelligence\" \"college of business\"",
+    "\"business analytics\" \"artificial intelligence\"",
+    "AI management faculty"
+  ],
+  "ai_query_pages": 3,
+  "school_query_pages": 2,
+  "max_age_days": 75,
+  "watch_schools": {
+    "Harvard Business School": {
+      "institution": "Harvard",
+      "aliases": [
+        "harvard university",
+        "harvard business school",
+        "harvard"
+      ]
+    },
+    "MIT Sloan": {
+      "institution": "Massachusetts Institute of Technology",
+      "aliases": [
+        "massachusetts institute of technology",
+        "mit sloan",
+        "mit"
+      ]
+    },
+    "Duke Fuqua": {
+      "institution": "Duke University",
+      "aliases": [
+        "duke university",
+        "fuqua",
+        "duke"
+      ]
+    },
+    "Cornell Johnson": {
+      "institution": "Cornell University",
+      "aliases": [
+        "cornell university",
+        "cornell"
+      ]
+    },
+    "Vanderbilt Owen": {
+      "institution": "Vanderbilt University",
+      "aliases": [
+        "vanderbilt university",
+        "vanderbilt"
+      ]
+    },
+    "UCLA Anderson": {
+      "institution": "University of California, Los Angeles",
+      "aliases": [
+        "university of california, los angeles",
+        "university of california los angeles",
+        "ucla"
+      ]
+    },
+    "UT Austin McCombs": {
+      "institution": "University of Texas at Austin",
+      "aliases": [
+        "university of texas at austin",
+        "ut austin",
+        "mccombs"
+      ]
+    },
+    "UT Dallas Jindal": {
+      "institution": "University of Texas at Dallas",
+      "aliases": [
+        "university of texas at dallas",
+        "ut dallas",
+        "jindal"
+      ]
+    },
+    "Boston College Carroll": {
+      "institution": "Boston College",
+      "aliases": [
+        "boston college",
+        "carroll school"
+      ]
+    },
+    "UC San Diego Rady": {
+      "institution": "University of California, San Diego",
+      "aliases": [
+        "university of california, san diego",
+        "university of california san diego",
+        "uc san diego",
+        "ucsd",
+        "rady"
+      ]
+    },
+    "UNC Kenan-Flagler": {
+      "institution": "University of North Carolina at Chapel Hill",
+      "aliases": [
+        "university of north carolina at chapel hill",
+        "unc chapel hill",
+        "unc-chapel hill",
+        "kenan-flagler",
+        "kenan flagler"
+      ]
+    },
+    "Northeastern D'Amore-McKim": {
+      "institution": "Northeastern University",
+      "aliases": [
+        "northeastern university",
+        "d'amore-mckim",
+        "damore-mckim"
+      ]
+    },
+    "Brown School of Professional Studies": {
+      "institution": "Brown University",
+      "aliases": [
+        "brown university"
+      ]
+    },
+    "Virginia Darden": {
+      "institution": "University of Virginia",
+      "aliases": [
+        "university of virginia",
+        "darden"
+      ]
+    },
+    "Dartmouth Tuck": {
+      "institution": "Dartmouth College",
+      "aliases": [
+        "dartmouth college",
+        "tuck school"
+      ]
+    },
+    "Rice Jones": {
+      "institution": "Rice University",
+      "aliases": [
+        "rice university",
+        "jones graduate school"
+      ]
+    },
+    "emlyon Business School": {
+      "institution": "emlyon business school",
+      "aliases": [
+        "emlyon"
+      ]
+    },
+    "IESE Business School": {
+      "institution": "IESE Business School",
+      "aliases": [
+        "iese business school"
+      ]
+    },
+    "London Business School": {
+      "institution": "London Business School",
+      "aliases": [
+        "london business school"
+      ]
+    },
+    "HEC Paris": {
+      "institution": "HEC Paris",
+      "aliases": [
+        "hec paris"
+      ]
+    },
+    "ESADE Business School": {
+      "institution": "ESADE Business School",
+      "aliases": [
+        "esade"
+      ]
+    }
+  },
+  "discord_channel": "professor-bear"
+}

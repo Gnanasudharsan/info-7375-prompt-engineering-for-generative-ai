@@ -1,0 +1,4 @@
+name: dbt_try
+version: "1.0"
+profile: dbt_try
+model-paths: ["models"]

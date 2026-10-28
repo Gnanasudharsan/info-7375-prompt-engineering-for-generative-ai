@@ -1,0 +1,408 @@
+{
+  "metadata": {
+    "slug": "seeded-faults-pitch",
+    "title": "Seeded Faults",
+    "topic": "DATA ENGINEERING · FINAL PROJECT PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "atharva-c",
+    "author": "Atharva C",
+    "voice": "am_michael",
+    "voice_kokoro": "am_michael",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "INFO 7375 pitch film: the assignment requires narrating as myself with no instructor name, persona or credit line, so the persona cold open, recap and Your Turn bookends are dropped and the outro is a drawn title scene with my own name.",
+    "audience": "INFO 7375 instructor/TAs; data engineering hiring managers",
+    "source_doc": "PROJECT-BRIEF.md and evidence/2026-10-09-first-planted-fault/ in the submission folder",
+    "tags": [
+      "data engineering",
+      "data quality",
+      "dbt",
+      "Great Expectations",
+      "Claude Code",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-14T15:38:54",
+      "cut": "master",
+      "filled": 11,
+      "of": 11,
+      "slates": [],
+      "skin_warnings": [
+        "B00: palette=claude but the cold open is 'un-annotated' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "what is it",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi, I'm Atharva, and I'm aiming for a job as a data engineer. So for my final project, I want to build something called Seeded Faults. The idea is simple: Claude Code writes data-quality tests for a table, and then I check whether those tests actually catch anything.",
+      "estimated_duration_s": 14,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A single table icon with a row of checkmarks beside it, one checkmark drawn with a question mark",
+        "manim": {
+          "class": "B00_TableAndTests"
+        },
+        "motion_claim": "A single table icon with a row of checkmarks beside it, one checkmark drawn with a question mark"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "actual_duration_s": 18.33,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 18.333333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "what is it",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "By the end, it'll be a public GitHub repo. There'll be a script that plants faults in the data, a small dbt project running on DuckDB, the prompt contract that Claude follows, an evaluation log, and a write-up of everything the tests missed. To be clear, none of that exists yet. Right now I have this plan, and one small test I ran by hand.",
+      "estimated_duration_s": 17,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Repository folder tree drawn as boxes; each box stamped 'WILL EXIST'",
+        "manim": {
+          "class": "B01_PlannedRepo"
+        },
+        "motion_claim": "Repository folder tree drawn as boxes; each box stamped 'WILL EXIST'"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "on_screen_label": "CONSTRUCTED — planned layout",
+      "actual_duration_s": 23.17,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 23.208333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "why care",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So why bother? Think about the last time you added tests to a new table. They pass on clean data, and it feels safe. But a test that's never failed hasn't really proven anything. My guess is that AI-written tests make this worse, because they look so complete. That's exactly what I want to measure.",
+      "estimated_duration_s": 15,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Green 'all tests passed' badge, with a crack running through it",
+        "manim": {
+          "class": "B02_CrackedPass"
+        },
+        "motion_claim": "Green 'all tests passed' badge, with a crack running through it"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "actual_duration_s": 19.35,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 19.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "why care",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Before pitching this, I tried the tools data engineers already use. In Great Expectations, version 1.24, I wrote every check myself. I planted fifty missing values, and my check caught all fifty. dbt did the same with tests I wrote in YAML. The dbt-expectations package gives you more test types, but you still write them by hand. Every time, a test only checked what I'd thought to write. Nothing told me what I'd missed. That missing score is what Seeded Faults will add.",
+      "estimated_duration_s": 26,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three tool boxes (Great Expectations, dbt, dbt-expectations), each with a hand-written checklist; a fourth box with a caught/missed scoreboard",
+        "manim": {
+          "class": "B03_FiftyCaught"
+        },
+        "motion_claim": "Three tool boxes (Great Expectations, dbt, dbt-expectations), each with a hand-written checklist; a fourth box with a caught/missed scoreboard"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "evidence": "Ran 2026-10-09 in sandbox: GX 1.24.0 and dbt 1.12.5 not_null check — clean sample 0 failures, 50 planted nulls → 50 caught. dbt-expectations README read 2026-10-09 (hub.getdbt.com/metaplane/dbt_expectations, v0.10.10). See FRICTIONAL.md.",
+      "actual_duration_s": 33.72,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 33.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "who opens it",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So who's this for? A hiring manager on a data engineering team. In the first minute, they open the README and see one table: every fault I planted, whether it was caught, and why not if it wasn't. And one command reruns the whole thing.",
+      "estimated_duration_s": 14,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Mock README with a caught/missed table — rows blank or clearly placeholder",
+        "manim": {
+          "class": "B04_ReadmeMock"
+        },
+        "motion_claim": "Mock README with a caught/missed table — rows blank or clearly placeholder"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "on_screen_label": "CONSTRUCTED — mock-up, no results yet",
+      "actual_duration_s": 15.57,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 15.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "what it proves",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What will that tell them about me? It'll show the skills from this course: a written prompt contract, checking Claude's work instead of trusting it, and an evaluation anyone can rerun. It'll also show the data engineering side: SQL, dbt, and thinking about keys and grain. And the proof will be the log in the repo, not me saying so in this video.",
+      "estimated_duration_s": 18,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three linked icons: contract, magnifier, repeat-loop; arrow to a log file",
+        "manim": {
+          "class": "B05_Proof"
+        },
+        "motion_claim": "Three linked icons: contract, magnifier, repeat-loop; arrow to a log file"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "actual_duration_s": 22.85,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 22.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "in out first",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "To keep it finishable, the scope is tight. One public table of New York City taxi trips, a fixed list of fifteen to twenty fault types, and the tests written by Claude. It won't repair data, and it won't touch a live warehouse. The first thing I'll build is a script that plants every fault on that list. You'll know it worked when the eval command prints a table of what was caught and what was missed.",
+      "estimated_duration_s": 22,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A box split IN / OUT; a '1' badge on the fault-injection script",
+        "manim": {
+          "class": "B06_Scope"
+        },
+        "motion_claim": "A box split IN / OUT; a '1' badge on the fault-injection script"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "actual_duration_s": 24.55,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 24.583333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "risk",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Now, what could sink it? Claude might write tests that pass everything and catch almost nothing, or tests so strict they flag perfectly clean data. So I'll count false alarms on clean data, not just catches. And I'll lock the fault list before Claude writes a single test, so I can't quietly tune one to fit the other.",
+      "estimated_duration_s": 18,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A balance: 'missed faults' on one side, 'false alarms' on the other",
+        "manim": {
+          "class": "B07_Balance"
+        },
+        "motion_claim": "A balance: 'missed faults' on one side, 'false alarms' on the other"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "actual_duration_s": 21.03,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 21.041666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "why this project",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why this project? Honestly, it's a mix. SQL and data pipelines are things I already do, and you can check that: my Crime Rate Management System is on GitHub. It's an Oracle database I built on my own, with its own testing script. The new part for me is prompt contracts, evaluating what an AI produces, and fault injection.",
+      "estimated_duration_s": 18,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two columns: 'already have' (with a drawn repo card labelled DMDD_FinalProject) and 'learning'",
+        "manim": {
+          "class": "B08_TwoColumns"
+        },
+        "motion_claim": "Two columns: 'already have' (with a drawn repo card labelled DMDD_FinalProject) and 'learning'"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "evidence": "Public repos checked 2026-10-09 via GitHub API: github.com/Arc-211/DMDD_FinalProject (CRMS, solo; SQL + testing.sql) and github.com/Arc-211/Chinook_ADF (ADF pipeline JSON).",
+      "actual_duration_s": 22.98,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 23.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "close",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So that's Seeded Faults: tests for your data, tested. It isn't built yet. Next up is the fault-injection script, and how it goes, good or bad, will be in the repo's log.",
+      "estimated_duration_s": 12,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The cracked badge from B02, now beside a scoreboard with empty rows",
+        "manim": {
+          "class": "B09_Close"
+        },
+        "motion_claim": "The cracked badge from B02, now beside a scoreboard with empty rows"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, narration carries the explanation; only underfill and clustered are waived."
+      },
+      "actual_duration_s": 11.5,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 11.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Seeded Faults. By Atharva C.",
+      "estimated_duration_s": 3.5,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Title and author name, drawn.",
+        "manim": {
+          "class": "BOUT_Title"
+        },
+        "motion_claim": "title lands, name lands"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Title card: one title and one name by design."
+      },
+      "actual_duration_s": 3.176,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 3.2083333333333335,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-14T15:38:54"
+      }
+    }
+  ]
+}

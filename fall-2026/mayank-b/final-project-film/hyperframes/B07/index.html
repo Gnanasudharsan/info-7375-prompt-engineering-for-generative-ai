@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>B07</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#FAF9F5;color:#3D3929;font-family:Inter,Arial,sans-serif}
+#root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#FAF9F5}
+.stage{position:absolute;left:120px;top:70px;width:1680px;height:790px;display:flex;flex-direction:column;gap:40px}
+.stage>.h+*{margin-top:auto}.stage>*:last-child{margin-bottom:auto}
+.chip{position:absolute;right:120px;top:66px;font:700 30px Inter,Arial,sans-serif;letter-spacing:1px;padding:10px 24px;border:3px solid #3D3929;border-radius:999px;background:#FFFFFF;color:#3D3929}
+.chip.real{background:#3D3929;color:#FAF9F5}
+.h{font:800 64px/1.1 Inter,Arial,sans-serif;letter-spacing:-1.5px;max-width:1260px}
+.sub{font:500 36px/1.35 Inter,Arial,sans-serif;color:#6B6857}
+.row{display:flex;gap:34px;align-items:stretch}
+.col{display:flex;flex-direction:column;gap:22px}
+.card{background:#FFFFFF;border:3px solid #E5E2D9;border-radius:22px;padding:32px 38px}
+.card.focus{border-color:#D97757}
+.lbl{font:700 30px Inter,Arial,sans-serif;color:#6B6857;letter-spacing:.5px}
+.big{font:600 48px/1.3 Inter,Arial,sans-serif}
+.body{font:500 38px/1.35 Inter,Arial,sans-serif}
+.mark{background:#F6DCCF;border-bottom:6px solid #D97757;padding:0 10px;border-radius:8px}
+.mono{font-family:'JetBrains Mono',Menlo,monospace}
+.stamp{display:inline-block;font:800 40px Inter,Arial,sans-serif;color:#FFFFFF;padding:10px 30px;border-radius:12px;letter-spacing:2px}
+.hold{background:#A3402A}.pass{background:#3E6B4C}
+.term{background:#2B2A25;color:#F3F1EA;border-radius:20px;padding:32px 40px;font:500 33px/1.55 'JetBrains Mono',Menlo,monospace}
+.term .ok{color:#9FD3A8}.term .bad{color:#E8A487}.term .dim{color:#B9B5A6}
+.arrow{flex:0 0 auto;align-self:center;width:90px;height:8px;background:#3D3929;position:relative;border-radius:4px}
+.arrow:after{content:"";position:absolute;right:-6px;top:-13px;border-left:26px solid #3D3929;border-top:17px solid transparent;border-bottom:17px solid transparent}
+.tick{color:#3E6B4C;font-weight:800}.cross{color:#A3402A;font-weight:800}
+
+.terms{display:flex;gap:30px}.terms .term{flex:1;font-size:30px}.foot{font:600 32px Inter,Arial,sans-serif;color:#6B6857}</style></head><body>
+<div id="root" data-composition-id="B07" data-start="0" data-duration="17.880" data-width="1920" data-height="1080">
+<div id="scene" class="clip" data-start="0" data-duration="17.880" data-track-index="1">
+<div class="chip real" id="chip">real output</div>
+<div class="stage">
+
+<div class="h" id="hd">This part already runs</div>
+<div class="terms">
+<div class="term" id="t1"><div class="dim">$ python3 -m pytest -v</div>
+<div id="l1">test_air_canada_shape_holds <span class="ok">PASSED</span></div>
+<div id="l2">test_within_90_days_vs_90_days_after_holds <span class="ok">PASSED</span></div>
+<div id="l3">test_matching_answer_passes_and_logs_version <span class="ok">PASSED</span></div>
+<div id="l4" class="ok">21 passed in 0.02s</div></div>
+<div class="term" id="t2" style="flex:0 0 640px"><div class="dim"># the check broken on purpose</div>
+<div id="l5"><span class="dim">ignore before/after:</span> <span class="bad">6 failed</span></div>
+<div id="l6"><span class="dim">ignore dates:</span> <span class="bad">6 failed</span></div>
+<div id="l7"><span class="dim">allow extra fields:</span> <span class="bad">2 failed</span></div></div>
+</div>
+<div class="foot" id="ft">Run 2026-10-25 on synthetic data · claims written by hand · Claude extraction not built yet</div>
+</div></div></div>
+<script>
+const C={"runs": 0.75, "air": 5.333, "within": 6.417, "match": 9.083, "all": 10.583, "broken": 12.708, "fail": 13.958, "hand": 16.5};
+const tl=gsap.timeline({paused:true});
+const IN=(s,t,v)=>tl.from(s,Object.assign({opacity:0,y:28,duration:.55,ease:'power3.out'},v||{}),t);
+IN('#hd',.2);IN('#t1',C.runs-.3,{x:-40,y:0});IN('#l1',C.air-.1,{x:-20,y:0,duration:.35});IN('#l2',C.within-.1,{x:-20,y:0,duration:.35});IN('#l3',C.match-.1,{x:-20,y:0,duration:.35});IN('#l4',C.all-.1,{scale:1.2,y:0,ease:'back.out(2)'});IN('#t2',C.broken-.3,{x:40,y:0});IN('#l5,#l6,#l7',C.fail-.3,{x:-20,y:0,stagger:.25,ease:'back.out(2)'});IN('#ft',C.hand-.4);IN('#chip',.1,{y:-20});
+window.__timelines=window.__timelines||{};window.__timelines['B07']=tl;
+</script></body></html>

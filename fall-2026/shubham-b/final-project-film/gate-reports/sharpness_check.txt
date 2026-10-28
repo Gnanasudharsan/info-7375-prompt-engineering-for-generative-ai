@@ -1,0 +1,3 @@
+$ python3 runtime/scripts/sharpness_check.py ../final-project-film
+[sharpness] GATE SHARPNESS PASS — 16 beats, median LV=252.2
+exit=0

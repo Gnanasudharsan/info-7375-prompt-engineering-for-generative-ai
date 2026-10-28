@@ -1,0 +1,12 @@
+$ npm run ats:liveness -- <figma posting> <dash page> <made-up closed greenhouse id>   (playwright 1.61.0 installed with --no-save to match the cached browser)
+npm notice run the-reallocation-engine@1.0.0 ats:liveness
+npm notice run node scripts/ats/check-liveness.mjs https://boards.greenhouse.io/figma/jobs/6118332004?gh_jid=6118332004 https://damore-mckim.northeastern.edu/dash/about/ https://boards.greenhouse.io/figma/jobs/1000000001
+Checking 3 URL(s)...
+
+✅ active     https://boards.greenhouse.io/figma/jobs/6118332004?gh_jid=6118332004
+⚠️ uncertain  https://damore-mckim.northeastern.edu/dash/about/
+           content present but no visible apply control found
+⚠️ uncertain  https://boards.greenhouse.io/figma/jobs/1000000001
+           content present but no visible apply control found
+
+Results: 1 active  0 expired  2 uncertain

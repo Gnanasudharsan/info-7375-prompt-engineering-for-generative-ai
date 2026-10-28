@@ -1,0 +1,882 @@
+{
+  "metadata": {
+    "slug": "tracecase-pitch",
+    "title": "TraceCase: An Agent That Finds Out Why",
+    "topic": "FINAL PROJECT · PITCH",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "ashwin-t",
+    "channel_title": "Ashwin Thankachan",
+    "persona": "Ashwin Thankachan (first person)",
+    "voice": "am_michael",
+    "voice_kokoro": "am_michael",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "greeting_language": "English (Hi)",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Course pitch film, not a channel reel: opens on the hesitant writer per show-tell; no verdict card; no Your Turn (the assignment asks for a pitch, not a viewer exercise). Narrated as myself with my own name on the outro, as the assignment requires.",
+    "audience": "INFO 7375 instructor and TAs; backend engineering hiring managers",
+    "source_doc": "PROJECT-BRIEF.md (2026-10-13); HolmesGPT and AIOpsLab public pages (read 2026-10-13)",
+    "playlist": "INFO 7375 Final Project",
+    "chapter_number": 0,
+    "tags": [
+      "TraceCase",
+      "pitch",
+      "agent",
+      "OpenTelemetry",
+      "Redis",
+      "Spring Boot",
+      "INFO 7375"
+    ],
+    "build": {
+      "at": "2026-10-13T18:14:24",
+      "cut": "master",
+      "filled": 18,
+      "of": 18,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi, I'm Ashwin. When a service breaks, a dashboard tells you that something is wrong. It doesn't tell you why. So I want to build an agent that finds out, shows its evidence, and lets a person decide what happens next.",
+      "estimated_duration_s": 17.1,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'Monitor: is it down?'"
+          },
+          {
+            "at": 0.6,
+            "event": "backspaces 'is it down?' → 'why is it down?'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Monitor: is it down?",
+            "triggerWords": "is it down",
+            "replacementWords": "why is it down",
+            "fontSize": 70,
+            "charMs": 26,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "tracecase-pitch",
+            "banner": ""
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer types the monitoring question and corrects it to the real one: why.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "actual_duration_s": 15.776,
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "render_duration_s": 15.791666666666666,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It's called TraceCase, and it isn't built yet. It will read a small Spring Boot service's logs, traces, and deploy history, and propose one fix. A person must approve that fix before it runs.",
+      "estimated_duration_s": 14.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A server stack sits left with a terracotta warning light; three sources (log page, trace bars, deploy timeline) appear beside it; a magnifying glass passes over them; a proposal card slides right and stops at a closed barrier arm.",
+        "show": [
+          {
+            "at": 0.15,
+            "event": "service + name"
+          },
+          {
+            "at": 0.45,
+            "event": "logs, traces, deploys"
+          },
+          {
+            "at": 0.7,
+            "event": "proposal card"
+          },
+          {
+            "at": 0.88,
+            "event": "stops at the gate"
+          }
+        ],
+        "manim": {
+          "class": "B00_WhatItIs"
+        },
+        "motion_claim": "A server stack sits left with a terracotta warning light; three sources (log page, trace bars, deploy timeline) appear beside it; a magnifying glass passes over them; a proposal card slides right and stops at a closed barrier arm."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.867,
+      "audio_file": "mp3/beat-B00.mp3",
+      "render_duration_s": 13.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "When it's done, it will be one public repo: the demo service, the agent, an approval screen, failures I can trigger on purpose, and an evaluation report.",
+      "estimated_duration_s": 11.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An open repo box; five objects rise out of it one by one: server, magnifier, approval page, a red switch, report bars.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "open box"
+          },
+          {
+            "at": 0.45,
+            "event": "service, agent"
+          },
+          {
+            "at": 0.7,
+            "event": "approval, switch"
+          },
+          {
+            "at": 0.88,
+            "event": "report"
+          }
+        ],
+        "manim": {
+          "class": "B01_Repo"
+        },
+        "motion_claim": "An open repo box; five objects rise out of it one by one: server, magnifier, approval page, a red switch, report bars."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 10.752,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 10.791666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "My Cloud Pulse team project answered one question: is the service healthy? When the answer is no, an engineer still digs through logs by hand, under pressure, to find out why.",
+      "estimated_duration_s": 12.9,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A health light goes from grey to terracotta; log pages pile up beside it; a cursor digs through them; a large question mark appears.",
+        "show": [
+          {
+            "at": 0.25,
+            "event": "health light turns red"
+          },
+          {
+            "at": 0.6,
+            "event": "pile of logs"
+          },
+          {
+            "at": 0.85,
+            "event": "why?"
+          }
+        ],
+        "manim": {
+          "class": "B02_Why"
+        },
+        "motion_claim": "A health light goes from grey to terracotta; log pages pile up beside it; a cursor digs through them; a large question mark appears."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.971,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 13.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Holmes G P T, an open-source agent, already investigates incidents, and asks a person before any change. Microsoft's A I Ops Lab evaluates agents like this, on Kubernetes. Or you dig by hand.",
+      "estimated_duration_s": 13.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three plinths in a row, each with one object: a magnifier with a small approve gate, a lab flask on a cluster, a dashboard page with a cursor.",
+        "show": [
+          {
+            "at": 0.25,
+            "event": "HolmesGPT"
+          },
+          {
+            "at": 0.55,
+            "event": "AIOpsLab"
+          },
+          {
+            "at": 0.85,
+            "event": "by hand"
+          }
+        ],
+        "manim": {
+          "class": "B03_Alternatives"
+        },
+        "motion_claim": "Three plinths in a row, each with one object: a magnifier with a small approve gate, a lab flask on a cluster, a dashboard page with a cursor."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 16.0,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 16.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "TraceCase will be smaller, and easy to check. It will run on a laptop with no Kubernetes, come with its own service to break, and every claim must point to a real log line or trace.",
+      "estimated_duration_s": 15.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A fourth plinth: TraceCase. A claim card with a leader line pinned to one trace span; then a barrier arm that stays down when the card is swapped.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "claim pinned to evidence"
+          },
+          {
+            "at": 0.75,
+            "event": "gate stays shut on a mismatch"
+          }
+        ],
+        "manim": {
+          "class": "B04_Different"
+        },
+        "motion_claim": "A fourth plinth: TraceCase. A claim card with a leader line pinned to one trace span; then a barrier arm that stays down when the card is swapped."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.099,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 13.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "A hiring manager for a backend role. In the first minute, they'll start the demo, break it with one command, watch the agent investigate, and approve or reject its fix.",
+      "estimated_duration_s": 12.5,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A terminal block; a switch flips and the service light turns terracotta; step cards appear one by one; a pair of approve / reject pills, the cursor clicks approve.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "start + break"
+          },
+          {
+            "at": 0.6,
+            "event": "steps"
+          },
+          {
+            "at": 0.85,
+            "event": "approve / reject"
+          }
+        ],
+        "manim": {
+          "class": "B05_FirstMinute"
+        },
+        "motion_claim": "A terminal block; a switch flips and the service light turns terracotta; step cards appear one by one; a pair of approve / reject pills, the cursor clicks approve."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 11.925,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 11.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "What will it show about me? First, a loop with a budget. Observe, pick a tool, record the evidence, update the guess. It stops on a supported cause, or at a limit. Never because the model says it's done.",
+      "estimated_duration_s": 16.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Four stations on a ring (observe, tool, record, update); a terracotta dot travels the ring; a budget meter beside it drains with each lap; three exit doors light up one at a time.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "ring"
+          },
+          {
+            "at": 0.5,
+            "event": "dot loops, budget drains"
+          },
+          {
+            "at": 0.8,
+            "event": "three exits"
+          }
+        ],
+        "manim": {
+          "class": "B06_Loop"
+        },
+        "motion_claim": "Four stations on a ring (observe, tool, record, update); a terracotta dot travels the ring; a budget meter beside it drains with each lap; three exit doors light up one at a time."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 14.059,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 14.083333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Second, control. Each step must match a fixed format, a prompt contract that code checks. Tools come from an allow-list, never a shell. And a claim citing evidence that doesn't exist is rejected.",
+      "estimated_duration_s": 13.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A short menu card of three safe actions with a lock; a shell prompt block is crossed out; then two claim slips: one pinned to a real span gets a check, one pinned to nothing gets a cross.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "allow-list menu, shell crossed out"
+          },
+          {
+            "at": 0.7,
+            "event": "real citation ✓"
+          },
+          {
+            "at": 0.9,
+            "event": "missing citation ✗"
+          }
+        ],
+        "manim": {
+          "class": "B07_Grounding"
+        },
+        "motion_claim": "A short menu card of three safe actions with a lock; a shell prompt block is crossed out; then two claim slips: one pinned to a real span gets a check, one pinned to nothing gets a cross."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 13.845,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 13.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Third, a human gate. The approval records the exact action, its target, and its evidence. If any of those change, it stops counting.",
+      "estimated_duration_s": 9.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An approval card with three fields and a seal; the barrier lifts; then one field changes, the seal breaks and the barrier drops again.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "card fields"
+          },
+          {
+            "at": 0.6,
+            "event": "gate lifts"
+          },
+          {
+            "at": 0.85,
+            "event": "field changes, gate drops"
+          }
+        ],
+        "manim": {
+          "class": "B08_Gate"
+        },
+        "motion_claim": "An approval card with three fields and a seal; the barrier lifts; then one field changes, the seal breaks and the barrier drops again."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.365,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 9.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Fourth, evaluation. About thirty failure scenarios, ten locked away before I tune anything, against a summarize-the-logs baseline. I'll count right answers, honest I-don't-knows, and unsupported claims. I have no numbers yet.",
+      "estimated_duration_s": 12.9,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Thirty small tiles drop into a grid; ten of them slide into a locked box; a big hero counter reads '? / 10' because nothing has been measured.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "thirty tiles"
+          },
+          {
+            "at": 0.45,
+            "event": "ten locked away"
+          },
+          {
+            "at": 0.85,
+            "event": "? / 10"
+          }
+        ],
+        "manim": {
+          "class": "B09_Eval"
+        },
+        "motion_claim": "Thirty small tiles drop into a grid; ten of them slide into a locked box; a big hero counter reads '? / 10' because nothing has been measured."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 16.64,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 16.666666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The demo will be realistic: a Spring Boot API and a worker, Postgres, and Redis as a cache and a queue, so there are real failures to find, like a stale cache. Open Telemetry traces will tie it together.",
+      "estimated_duration_s": 16.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "API and worker stacks, a Postgres cylinder, a dark Redis block between them; a queue of small crates backs up into the Redis block; one trace line threads through every part.",
+        "show": [
+          {
+            "at": 0.2,
+            "event": "API, worker, Postgres"
+          },
+          {
+            "at": 0.45,
+            "event": "Redis"
+          },
+          {
+            "at": 0.7,
+            "event": "queue backs up"
+          },
+          {
+            "at": 0.9,
+            "event": "trace threads through"
+          }
+        ],
+        "manim": {
+          "class": "B10_Stack"
+        },
+        "motion_claim": "API and worker stacks, a Postgres cylinder, a dark Redis block between them; a queue of small crates backs up into the Redis block; one trace line threads through every part."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 14.891,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 14.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "In scope: one demo service, and failures I design. That's also my honest limit: it won't prove anything about real production systems. And it never runs arbitrary commands.",
+      "estimated_duration_s": 11.7,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A fenced square holds the service; a terminal prompt outside the fence is crossed out.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "fence + service"
+          },
+          {
+            "at": 0.75,
+            "event": "outside crossed out"
+          }
+        ],
+        "manim": {
+          "class": "B11_Boundary"
+        },
+        "motion_claim": "A fenced square holds the service; a terminal prompt outside the fence is crossed out."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.971,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 13.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The first piece: the demo with one failure I can trigger, and a trace that shows it. A saved trace and a dated log will prove it ran.",
+      "estimated_duration_s": 11.7,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A service with a switch; the switch flips and one span on a trace waterfall turns terracotta; a dated log page slides underneath.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "switch flips"
+          },
+          {
+            "at": 0.6,
+            "event": "red span in trace"
+          },
+          {
+            "at": 0.85,
+            "event": "dated log"
+          }
+        ],
+        "manim": {
+          "class": "B12_FirstPiece"
+        },
+        "motion_claim": "A service with a switch; the switch flips and one span on a trace waterfall turns terracotta; a dated log page slides underneath."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.237,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 9.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The biggest risk is approving one thing and running another. So I'll trigger it on purpose. Approve fix A, swap in fix B, and the system must refuse until a person looks again.",
+      "estimated_duration_s": 13.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Card A is approved (seal); a hand-off swaps it for card B; the barrier stays down and a cross lands on B.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "A approved"
+          },
+          {
+            "at": 0.6,
+            "event": "swap to B"
+          },
+          {
+            "at": 0.85,
+            "event": "refused"
+          }
+        ],
+        "manim": {
+          "class": "B13_Swap"
+        },
+        "motion_claim": "Card A is approved (seal); a hand-off swaps it for card B; the barrier stays down and a cross lands on B."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 12.544,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 12.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why this project? Mostly to learn. The jobs I apply for ask for agents, observability, and evaluation, and my resume doesn't show them yet. I'm building on Spring Boot work from Cloud Pulse, and language-model services from my My Ed Master internship.",
+      "estimated_duration_s": 17.5,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two shelves: 'new' holds ghosted outline blocks; 'built before' holds solid blocks that land one by one.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "new shelf"
+          },
+          {
+            "at": 0.75,
+            "event": "built-before blocks land"
+          }
+        ],
+        "manim": {
+          "class": "B14_Shelves"
+        },
+        "motion_claim": "Two shelves: 'new' holds ghosted outline blocks; 'built before' holds solid blocks that land one by one."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 18.667,
+      "audio_file": "mp3/beat-B14.mp3",
+      "render_duration_s": 18.708333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Where it stands today: a written brief, and this film. No TraceCase code exists yet. Everything else you saw, I will build by December.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Two trays: 'exists' holds a page and a film frame; 'will exist' holds a ghosted server outline.",
+        "show": [
+          {
+            "at": 0.3,
+            "event": "exists tray"
+          },
+          {
+            "at": 0.7,
+            "event": "will-exist ghost"
+          }
+        ],
+        "manim": {
+          "class": "B15_ExistsWill"
+        },
+        "motion_claim": "Two trays: 'exists' holds a page and a film frame; 'will exist' holds a ghosted server outline."
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, the voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "actual_duration_s": 9.515,
+      "audio_file": "mp3/beat-B15.mp3",
+      "render_duration_s": 9.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-13T18:14:24"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "TraceCase: An Agent That Finds Out Why. A pitch by Ashwin Thankachan.",
+      "estimated_duration_s": 4.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "title restates; my name"
+          }
+        ],
+        "remotion": {
+          "pattern": "ClaudeTitleOutro",
+          "props": {
+            "title": "TraceCase: An Agent That Finds Out Why",
+            "slug": "tracecase-pitch",
+            "handle": "Ashwin Thankachan",
+            "subline": ""
+          }
+        }
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "actual_duration_s": 6.312,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "render_duration_s": 6.333333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BOUT.mp4",
+        "filled_by": "media",
+        "at": "2026-10-13T18:14:24"
+      }
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "number": 1,
+  "relative": "youtube/show-tell-reallocation-recipe-pitch",
+  "reel": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch",
+  "beats": 21,
+  "sheet_sha256": "37e257eab3021dbaf20b3287ee530c1bb5f8feb70309c39a13d2489168bb6155",
+  "master": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/show-tell-reallocation-recipe-pitch-slate.mp4",
+  "stale": true,
+  "width": 1920,
+  "height": 1080,
+  "duration": "238.625000",
+  "audio_stream": true,
+  "declared_slates": [],
+  "findings": [],
+  "pantry": [],
+  "code_displays": [],
+  "evidence_file_candidates": [],
+  "samples": [
+    {
+      "beat": "BIDEA",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/media/BIDEA.mp4",
+      "seconds": 8.12,
+      "status": "sampled"
+    },
+    {
+      "beat": "BDEFS",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/media/BDEFS.mp4",
+      "seconds": 8.399999999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B00",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B00.mp4",
+      "seconds": 14.933333099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B02",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B02.mp4",
+      "seconds": 11.579166899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B03",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B03.mp4",
+      "seconds": 8.0791669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B04",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B04.mp4",
+      "seconds": 9.6541669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B05",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B05.mp4",
+      "seconds": 8.8666669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B06",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B06.mp4",
+      "seconds": 3.5,
+      "status": "sampled"
+    },
+    {
+      "beat": "B07",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B07.mp4",
+      "seconds": 8.5458331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B08",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B08.mp4",
+      "seconds": 8.5458331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B09",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B09.mp4",
+      "seconds": 2.3333331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B10",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B10.mp4",
+      "seconds": 5.25,
+      "status": "sampled"
+    },
+    {
+      "beat": "B11",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B11.mp4",
+      "seconds": 9.362499999999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B12",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B12.mp4",
+      "seconds": 9.3041669,
+      "status": "sampled"
+    },
+    {
+      "beat": "B13",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B13.mp4",
+      "seconds": 6.0083331,
+      "status": "sampled"
+    },
+    {
+      "beat": "B14",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B14.mp4",
+      "seconds": 6.095833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B15",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B15.mp4",
+      "seconds": 7.7875,
+      "status": "sampled"
+    },
+    {
+      "beat": "B16",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B16.mp4",
+      "seconds": 8.516666899999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B17",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B17.mp4",
+      "seconds": 6.795833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "B18",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/manim/B18.mp4",
+      "seconds": 6.970833099999999,
+      "status": "sampled"
+    },
+    {
+      "beat": "BOUT",
+      "source": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/media/BOUT.mp4",
+      "seconds": 6.6733331,
+      "status": "sampled"
+    }
+  ],
+  "contact": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/_qc/gates4/audit-queue/01-contact.jpg",
+  "visual_review": "not yet reviewed",
+  "master_contact": "/Users/sreevarshansathiyamurthy/Downloads/final-project-film/youtube/show-tell-reallocation-recipe-pitch/_qc/gates4/audit-queue/01-master.jpg"
+}

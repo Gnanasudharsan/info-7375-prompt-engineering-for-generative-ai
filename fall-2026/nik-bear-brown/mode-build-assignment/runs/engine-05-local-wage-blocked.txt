@@ -1,0 +1,15 @@
+$ npm run bls:local-wage -- --metro "Boston-Cambridge-Nashua, MA-NH" --soc 19-1042 --json
+missing .venv — create it with:
+  python3.13 -m venv .venv
+  .venv/bin/pip install -r data/bls/local-wage/requirements.txt
+
+$ npm run bls:local-wage -- --metro "Boston-Cambridge-Nashua, MA-NH" --soc 15-2051 --json
+missing .venv — create it with:
+  python3.13 -m venv .venv
+  .venv/bin/pip install -r data/bls/local-wage/requirements.txt
+
+$ npm run bls:local-wage -- --metro "Boston-Cambridge-Nashua, MA-NH" --soc 19-1029 --json
+missing .venv — create it with:
+  python3.13 -m venv .venv
+  .venv/bin/pip install -r data/bls/local-wage/requirements.txt
+

@@ -1,0 +1,2 @@
+[bookend] BLOCKED — 1 failure(s) in bitecheck-pitch:
+  ✗ OUTRO (BOUT): no ClaudeTitleOutro beat — add beat_id=BOUT

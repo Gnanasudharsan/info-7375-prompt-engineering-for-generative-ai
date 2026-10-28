@@ -1,0 +1,1 @@
+[content-default] FAIL ClaudeDefinitions.tsx: prop='title' default="'Terms In This Film'" — must be sentinel '⚠ SET IN BEAT SHEET'

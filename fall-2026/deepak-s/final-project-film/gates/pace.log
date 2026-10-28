@@ -1,0 +1,24 @@
+[pacing] CueGate   durations: real (timings.json)
+beat   type          dur  status
+------------------------------------------------------------------------------
+B00    default      9.7s  ok
+B01    default      5.6s  ok
+B02    default     17.0s  ok
+B03    default     12.1s  ok
+B04    default     19.2s  ⚑ OVER CEILING (19.2>18s) → likely >1 idea; consider splitting
+B05    default     17.0s  ok
+B06    default     15.4s  ok
+B07A   default     17.5s  ok
+B07B   default     12.9s  ok
+B08    default     17.9s  ok
+B09    default     13.3s  ok
+B10    default     12.8s  ok
+B11    default     27.6s  ⚑ OVER CEILING (27.6>18s) → likely >1 idea; consider splitting
+B12    default      8.4s  ok
+B13    default      8.1s  ok
+BOUT   default      6.0s  ok
+------------------------------------------------------------------------------
+[pacing] narration total 220.6s + ~15s inter-beat holds = ~235.6s (3.9 min) — this is an OUTPUT, not a target.
+[pacing] 2 dense beat(s) → consider splitting: B04(19s), B11(28s)
+[pacing] 16 content beat(s) have no content_type → floors used are generic defaults. Run media-router `recommend.py --tag` first for sharper floors.
+[pacing] reminder: never split a beat or speed the voice to hit a clock number. If a fixed target is forcing that, it's a production compromise with a learning cost.

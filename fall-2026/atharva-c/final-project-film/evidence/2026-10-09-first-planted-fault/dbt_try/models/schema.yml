@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: trips
+    columns:
+      - name: passenger_count
+        data_tests:
+          - not_null
+      - name: payment_type
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0, 1, 2, 3, 4, 5, 6]
+                quote: false

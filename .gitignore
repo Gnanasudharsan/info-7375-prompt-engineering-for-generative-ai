@@ -37,3 +37,5 @@ __pycache__/
 
 # Files over 25 MB (25,000,000 bytes), inventoried for this checkout.
 # Gitignore cannot express size rules; refresh this list for new large files.
+# Canvas exports are never pushed.
+*.imscc

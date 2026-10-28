@@ -1,0 +1,827 @@
+{
+  "metadata": {
+    "slug": "productlens-ai-pitch",
+    "title": "ProductLens AI",
+    "topic": "PITCH · FINAL PROJECT",
+    "skill": "show-tell",
+    "style_preset": "show-tell",
+    "channel": "aditya-hasija",
+    "channel_title": "Aditya Hasija",
+    "persona": "Aditya Hasija (first person)",
+    "voice": "am_michael",
+    "voice_kokoro": "am_michael",
+    "voice_note": "Synthetic local Kokoro voice reading Aditya's script in first person (disclosed in SOURCES.md).",
+    "engine": "kokoro",
+    "clock": "narration",
+    "palette": "claude",
+    "register": "Plain",
+    "fps": 24,
+    "aspect_ratio": "16:9",
+    "width": 3840,
+    "height": 2160,
+    "caption_policy": "none",
+    "bookend_exempt": [
+      "cold-open",
+      "bvdt",
+      "bhtf"
+    ],
+    "bookend_exempt_reason": "Course pitch film (INFO7375 final project pitch, 2–4 min): opens on the hesitant writer, no terms card, no verdict card and no Your Turn beat; runtime goes to the seven required pitch answers. Spoken outro stays.",
+    "audience": "INFO7375 instructor and TAs; hiring managers for AI product manager roles",
+    "source_doc": "SCRIPT-v2.md (approved 2026-10-25); research/baseline-v2-prompt.md (Aditya's own run, 2026-10-25)",
+    "honesty": "Past tense only for what exists. Drawings of the unbuilt product tagged 'constructed'; Aditya's real run tagged.",
+    "tags": [
+      "AI product management",
+      "decision brief",
+      "multi-agent",
+      "evaluation",
+      "source grounding"
+    ],
+    "build": {
+      "at": "2026-10-25T20:07:39",
+      "cut": "master",
+      "filled": 20,
+      "of": 20,
+      "slates": [],
+      "skin_warnings": [
+        "BIDEA: palette=claude but the cold open is 'BrutalistHesitantWriter' — COLD OPEN LAW wants ClaudeComposerAsk",
+        "BOUT: palette=claude but the outro is 'un-annotated' — OUTRO LAW wants ClaudeTitleOutro"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "BIDEA",
+      "act": "the question",
+      "lane": "bookend",
+      "proof_gate": "SHOW",
+      "narration_text": "Hi, I'm Aditya Hasija. Product managers ask one question all the time: should we build this feature? I think a better question is: what should we test first?",
+      "estimated_duration_s": 11.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "REMOTION",
+        "source": "own",
+        "show": [
+          {
+            "at": 0.0,
+            "event": "types 'Should we build this feature?'"
+          },
+          {
+            "at": 0.6,
+            "event": "corrects to 'Should we test first?'"
+          }
+        ],
+        "remotion": {
+          "pattern": "BrutalistHesitantWriter",
+          "props": {
+            "text": "Should we build this feature?",
+            "triggerWords": "build this feature?",
+            "replacementWords": "test first?",
+            "fontSize": 70,
+            "charMs": 22,
+            "hesitateBetween": 6,
+            "hesitateWithin": 1,
+            "mistakeRate": 2,
+            "jitter": 20,
+            "seed": "productlens-ai-pitch",
+            "banner": ""
+          }
+        }
+      },
+      "lead_silence_s": 0.8,
+      "motion_claim": "The writer types the usual question and corrects it to the better one.",
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Hesitant-writer bookend: the correction is the motion."
+      },
+      "audio_file": "mp3/beat-BIDEA.mp3",
+      "actual_duration_s": 10.97,
+      "render_duration_s": 11.0,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/BIDEA.mp4",
+        "filled_by": "media",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B00",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Say you're a product manager at an online shoe store, and your team wants a one-page checkout.",
+      "estimated_duration_s": 6.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A kraft shopping cart; a four-step strip of checkout pages folds into one page.",
+        "show": [],
+        "manim": {
+          "class": "B00_Checkout"
+        },
+        "motion_claim": "A kraft shopping cart; a four-step strip of checkout pages folds into one page.",
+        "labels": [
+          "4 steps",
+          "1 page"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B00.mp3",
+      "actual_duration_s": 5.78,
+      "render_duration_s": 5.791666666666667,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Before you build it, you need to know what customers want, what other stores do, and what could go wrong. That research takes days, and a good-sounding idea isn't always a good decision.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three question cards rise in turn beside the folded page: customers, competitors, risks.",
+        "show": [],
+        "manim": {
+          "class": "B01_Questions"
+        },
+        "motion_claim": "Three question cards rise in turn beside the folded page: customers, competitors, risks.",
+        "labels": [
+          "customers",
+          "competitors",
+          "risks"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B01.mp3",
+      "actual_duration_s": 11.88,
+      "render_duration_s": 11.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "That's the job of my project, ProductLens AI. You type in the feature and the goal, say, more completed purchases, and attach a few public articles. It will give back a one-page decision brief.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A feature card and two article pages slide into a dark machine; one brief page slides out.",
+        "show": [],
+        "manim": {
+          "class": "B02_InOut"
+        },
+        "motion_claim": "A feature card and two article pages slide into a dark machine; one brief page slides out.",
+        "labels": [
+          "feature",
+          "brief"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B02.mp3",
+      "actual_duration_s": 13.61,
+      "render_duration_s": 13.625,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The brief will list the biggest risks, the numbers to watch, like checkout completion, and the first experiment to run. Every claim in it will be marked: backed by a source, or an assumption.",
+      "estimated_duration_s": 13.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The brief page is large: three section bars draw in; 'sourced' and 'assumption' tags land on lines.",
+        "show": [],
+        "manim": {
+          "class": "B03_Brief"
+        },
+        "motion_claim": "The brief page is large: three section bars draw in; 'sourced' and 'assumption' tags land on lines.",
+        "labels": [
+          "sourced",
+          "assumption"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B03.mp3",
+      "actual_duration_s": 11.99,
+      "render_duration_s": 12.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Inside, three AI agents will each take one angle: the market, the customers, and the risks. A fourth agent, the checker, compares their work to the sources and can send one back to fix it, once.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The idea card splits to three agent blocks; their pages go to a review desk; one goes back once.",
+        "show": [],
+        "manim": {
+          "class": "B04_Agents"
+        },
+        "motion_claim": "The idea card splits to three agent blocks; their pages go to a review desk; one goes back once.",
+        "labels": [
+          "market",
+          "customers",
+          "risks"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B04.mp3",
+      "actual_duration_s": 13.33,
+      "render_duration_s": 13.333333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Can't a chatbot already do this? I tested it myself. On October 25th, I gave ChatGPT the shoe-store idea plus a made-up claim: Baymard, a checkout research firm, says one-page checkouts always convert better. Their research says it depends.",
+      "estimated_duration_s": 15.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Aditya's real ChatGPT screenshot (cropped to the conversation, date visible); the planted line is underlined.",
+        "show": [],
+        "manim": {
+          "class": "B05_RealRun"
+        },
+        "motion_claim": "Aditya's real ChatGPT screenshot (cropped to the conversation, date visible); the planted line is underlined.",
+        "labels": [
+          "planted claim"
+        ],
+        "honesty_tag": "real run · Oct 25 · by Aditya"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B05.mp3",
+      "actual_duration_s": 17.94,
+      "render_duration_s": 17.958333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It caught my made-up claim right away, and the advice was solid. But only one paragraph had a source, and it rarely said which points were facts and which were guesses.",
+      "estimated_duration_s": 12.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "The screenshot pans down; its one source chip is circled; unlabelled rows get grey '?' marks.",
+        "show": [],
+        "manim": {
+          "class": "B06_RealGap"
+        },
+        "motion_claim": "The screenshot pans down; its one source chip is circled; unlabelled rows get grey '?' marks.",
+        "labels": [
+          "1 source"
+        ],
+        "honesty_tag": "real run · Oct 25 · by Aditya"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B06.mp3",
+      "actual_duration_s": 10.52,
+      "render_duration_s": 10.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "That's the gap I'm aiming at. Tools like DimeADozen and ValidatorAI already score whole startup ideas. ProductLens is for one feature in a product that already exists, with every claim labelled and checked.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A big 'startup idea' crate beside one small feature card that gets a 'sourced' tag and a check.",
+        "show": [],
+        "manim": {
+          "class": "B07_Narrower"
+        },
+        "motion_claim": "A big 'startup idea' crate beside one small feature card that gets a 'sourced' tag and a check.",
+        "labels": [
+          "startup idea",
+          "one feature"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B07.mp3",
+      "actual_duration_s": 14.91,
+      "render_duration_s": 14.916666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B07.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "When it's done, it will be a GitHub repository with the app, a set of made-up test ideas, and a score sheet.",
+      "estimated_duration_s": 8.8,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A release parcel opens: an app window, a fan of test cards, and a score sheet rise out.",
+        "show": [],
+        "manim": {
+          "class": "B08_Repo"
+        },
+        "motion_claim": "A release parcel opens: an app window, a fan of test cards, and a score sheet rise out.",
+        "labels": [
+          "GitHub repo"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B08.mp3",
+      "actual_duration_s": 7.0,
+      "render_duration_s": 7.0,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B08.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "If you're hiring for an AI product role, you'd open it and, within a minute, see one sample brief and how often the checker caught planted mistakes, misses included.",
+      "estimated_duration_s": 11.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Three pages land on a desk in order (README, brief, scores); a cursor touches each.",
+        "show": [],
+        "manim": {
+          "class": "B09_FirstMinute"
+        },
+        "motion_claim": "Three pages land on a desk in order (README, brief, scores); a cursor touches each.",
+        "labels": [
+          "README",
+          "brief",
+          "scores"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B09.mp3",
+      "actual_duration_s": 11.22,
+      "render_duration_s": 11.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It should show that I can write clear instructions an AI has to follow, check its answers against sources, and measure how well it works. It won't show I'm a machine learning engineer.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "An instruction page and a gate; the agent's answer must fit a dashed outline before the barrier lifts.",
+        "show": [],
+        "manim": {
+          "class": "B10_Contract"
+        },
+        "motion_claim": "An instruction page and a gate; the agent's answer must fit a dashed outline before the barrier lifts.",
+        "labels": [
+          "instructions",
+          "format"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B10.mp3",
+      "actual_duration_s": 11.95,
+      "render_duration_s": 11.958333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The first step is small: one agent, one feature idea, run from the command line. You'll know it worked when it saves a log where every quoted source checks out.",
+      "estimated_duration_s": 12.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "One parcel rides a short conveyor; a single log page drops out and a check draws on it.",
+        "show": [],
+        "manim": {
+          "class": "B11_FirstRun"
+        },
+        "motion_claim": "One parcel rides a short conveyor; a single log page drops out and a check draws on it.",
+        "labels": [
+          "first run"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B11.mp3",
+      "actual_duration_s": 10.47,
+      "render_duration_s": 10.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "It won't plug into company data, run real A/B tests, or say go or no-go. It suggests the test; people decide.",
+      "estimated_duration_s": 8.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A card marked 'go / no-go' rides to a gate; the barrier drops and it slides away.",
+        "show": [],
+        "manim": {
+          "class": "B12_NoVerdict"
+        },
+        "motion_claim": "A card marked 'go / no-go' rides to a gate; the barrier drops and it slides away.",
+        "labels": [
+          "no verdict"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B12.mp3",
+      "actual_duration_s": 8.41,
+      "render_duration_s": 8.416666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "The biggest risk is a checker that agrees with everything, since it's the same AI grading its own team.",
+      "estimated_duration_s": 7.6,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A cracked page slides under an approval stamp; the stamp approves it anyway.",
+        "show": [],
+        "manim": {
+          "class": "B13_RubberStamp"
+        },
+        "motion_claim": "A cracked page slides under an approval stamp; the stamp approves it anyway.",
+        "labels": [
+          "rubber stamp"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B13.mp3",
+      "actual_duration_s": 6.7,
+      "render_duration_s": 6.708333333333333,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "So I'll hide mistakes in ten test ideas and count how many it catches. If it misses too many, those checks move into plain code.",
+      "estimated_duration_s": 10.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Test samples slide into a bench; a tally grows; a small code block docks beside it.",
+        "show": [],
+        "manim": {
+          "class": "B14_CatchRate"
+        },
+        "motion_claim": "Test samples slide into a bench; a tally grows; a small code block docks beside it.",
+        "labels": [
+          "catch rate"
+        ],
+        "honesty_tag": "constructed"
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B14.mp3",
+      "actual_duration_s": 8.85,
+      "render_duration_s": 8.875,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "I changed this from my first pitch, a pre-mortem tool for startup ideas, because it was too close to an AI wrapper. I wanted something built for product managers, with real everyday use.",
+      "estimated_duration_s": 13.2,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Last pitch's idea crate shrinks away; the product-manager feature card takes its place.",
+        "show": [],
+        "manim": {
+          "class": "B15_Pivot"
+        },
+        "motion_claim": "Last pitch's idea crate shrinks away; the product-manager feature card takes its place.",
+        "labels": [
+          "first pitch",
+          "for PMs"
+        ],
+        "honesty_tag": null
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B15.mp3",
+      "actual_duration_s": 13.14,
+      "render_duration_s": 13.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Why this project? It's a mix. I've spent years in product roles writing requirements and doing research, and my WorkShip, SkillPort and Touchline projects are on GitHub. Building and testing AI agents is the new part.",
+      "estimated_duration_s": 14.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A filled 'have' shelf beside an outlined 'new' shelf.",
+        "show": [],
+        "manim": {
+          "class": "B16_Shelves"
+        },
+        "motion_claim": "A filled 'have' shelf beside an outlined 'new' shelf.",
+        "labels": [
+          "have",
+          "new"
+        ],
+        "honesty_tag": null
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B16.mp3",
+      "actual_duration_s": 15.53,
+      "render_duration_s": 15.541666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B16.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "B17",
+      "act": "show-tell",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "Today, ProductLens is a plan: the idea, a written outline, and my chatbot test. Everything else I'll build with Claude Code in the next two weeks.",
+      "estimated_duration_s": 10.4,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "A small 'exists' tray with three items; a long row of dashed 'will build' slots.",
+        "show": [],
+        "manim": {
+          "class": "B17_Status"
+        },
+        "motion_claim": "A small 'exists' tray with three items; a long row of dashed 'will build' slots.",
+        "labels": [
+          "exists",
+          "will build"
+        ],
+        "honesty_tag": null
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "show-tell style: one drawn object or scene on a cream stage per beat, minimal labels, voice carries the explanation. Only underfill and clustered are waived; edge-bleed, empty-frame and contrast still apply."
+      },
+      "audio_file": "mp3/beat-B17.mp3",
+      "actual_duration_s": 10.13,
+      "render_duration_s": 10.166666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B17.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    },
+    {
+      "beat_id": "BOUT",
+      "act": "outro",
+      "lane": "manim",
+      "proof_gate": "SHOW",
+      "narration_text": "ProductLens AI. Aditya Hasija.",
+      "estimated_duration_s": 3.0,
+      "voice": "am_michael",
+      "engine": "kokoro",
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "own",
+        "visual_intent": "Title 'ProductLens AI' with the feature card above; 'Aditya Hasija' below.",
+        "show": [],
+        "manim": {
+          "class": "BOUT_Title"
+        },
+        "labels": [
+          "ProductLens AI",
+          "Aditya Hasija"
+        ],
+        "honesty_tag": null
+      },
+      "qc": {
+        "sparse_by_design": true,
+        "sparse_reason": "Outro title card: title and name only."
+      },
+      "kind": "outro_voice",
+      "tail_silence_s": 1.0,
+      "audio_file": "mp3/beat-BOUT.mp3",
+      "actual_duration_s": 4.11,
+      "render_duration_s": 4.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/BOUT.mp4",
+        "filled_by": "manim",
+        "at": "2026-10-25T20:07:39"
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+test_fractional_second_beats_have_exact_frame_count (test_compile_frame_count.FrameClockTests.test_fractional_second_beats_have_exact_frame_count) ... ok
+test_bad_and_tiny_boxes_fail_closed (test_frame_contrast_regions.RegionalContrastTests.test_bad_and_tiny_boxes_fail_closed) ... ok
+test_dark_text_on_light_card (test_frame_contrast_regions.RegionalContrastTests.test_dark_text_on_light_card) ... ok
+test_empty_region_fails (test_frame_contrast_regions.RegionalContrastTests.test_empty_region_fails) ... ok
+test_low_contrast_still_fails (test_frame_contrast_regions.RegionalContrastTests.test_low_contrast_still_fails) ... ok
+test_changed_result_media (test_godot_gamedev.GamedevEvidenceTests.test_changed_result_media) ... ok
+test_changed_source (test_godot_gamedev.GamedevEvidenceTests.test_changed_source) ... ok
+test_cli_from_another_directory (test_godot_gamedev.GamedevEvidenceTests.test_cli_from_another_directory) ... ok
+test_display_mismatch (test_godot_gamedev.GamedevEvidenceTests.test_display_mismatch) ... ok
+test_import_settings_are_source (test_godot_gamedev.GamedevEvidenceTests.test_import_settings_are_source) ... ok
+test_invented_excerpt (test_godot_gamedev.GamedevEvidenceTests.test_invented_excerpt) ... ok
+test_missing_component_beat (test_godot_gamedev.GamedevEvidenceTests.test_missing_component_beat) ... ok
+test_missing_pair (test_godot_gamedev.GamedevEvidenceTests.test_missing_pair) ... ok
+test_missing_source_coverage (test_godot_gamedev.GamedevEvidenceTests.test_missing_source_coverage) ... ok
+test_paired_result (test_godot_gamedev.GamedevEvidenceTests.test_paired_result) ... ok
+test_result_not_adjacent (test_godot_gamedev.GamedevEvidenceTests.test_result_not_adjacent) ... ok
+test_skill_help_discovery (test_godot_gamedev.GamedevEvidenceTests.test_skill_help_discovery) ... ok
+test_symlink_escape (test_godot_gamedev.GamedevEvidenceTests.test_symlink_escape) ... ok
+test_unlinked_result_media (test_godot_gamedev.GamedevEvidenceTests.test_unlinked_result_media) ... ok
+test_unrecorded_code (test_godot_gamedev.GamedevEvidenceTests.test_unrecorded_code) ... ok
+test_valid (test_godot_gamedev.GamedevEvidenceTests.test_valid) ... ok
+test_changed_quote (test_godot_gdd.GddGate.test_changed_quote) ... ok
+test_display_mismatch (test_godot_gdd.GddGate.test_display_mismatch) ... ok
+test_escape (test_godot_gdd.GddGate.test_escape) ... ok
+test_hash (test_godot_gdd.GddGate.test_hash) ... ok
+test_missing_section (test_godot_gdd.GddGate.test_missing_section) ... ok
+test_missing_status (test_godot_gdd.GddGate.test_missing_status) ... ok
+test_symlink_escape (test_godot_gdd.GddGate.test_symlink_escape) ... ok
+test_unknown_beat (test_godot_gdd.GddGate.test_unknown_beat) ... ok
+test_unreasoned_exclusion (test_godot_gdd.GddGate.test_unreasoned_exclusion) ... ok
+test_valid (test_godot_gdd.GddGate.test_valid) ... ok
+test_skills_and_alias_resolve_from_other_directory (test_godot_walkthrough.DiscoveryTests.test_skills_and_alias_resolve_from_other_directory) ... ok
+test_capture_hash_changed (test_godot_walkthrough.EvidenceTests.test_capture_hash_changed) ... ok
+test_cli_fails_closed (test_godot_walkthrough.EvidenceTests.test_cli_fails_closed) ... ok
+test_duplicate_features (test_godot_walkthrough.EvidenceTests.test_duplicate_features) ... ok
+test_escape_paths (test_godot_walkthrough.EvidenceTests.test_escape_paths) ... ok
+test_low_resolution_is_not_final_4k (test_godot_walkthrough.EvidenceTests.test_low_resolution_is_not_final_4k) ... ok
+test_missing_beat (test_godot_walkthrough.EvidenceTests.test_missing_beat) ... ok
+test_missing_clip (test_godot_walkthrough.EvidenceTests.test_missing_clip) ... ok
+test_missing_feature_cannot_be_silently_passed (test_godot_walkthrough.EvidenceTests.test_missing_feature_cannot_be_silently_passed) ... ok
+test_missing_input_log (test_godot_walkthrough.EvidenceTests.test_missing_input_log) ... ok
+test_no_capture_for_implemented_feature (test_godot_walkthrough.EvidenceTests.test_no_capture_for_implemented_feature) ... ok
+test_no_visible_before_state (test_godot_walkthrough.EvidenceTests.test_no_visible_before_state) ... ok
+test_nonfinite_time (test_godot_walkthrough.EvidenceTests.test_nonfinite_time) ... ok
+test_planned_feature_explicitly_excluded (test_godot_walkthrough.EvidenceTests.test_planned_feature_explicitly_excluded) ... ok
+test_real_probe_and_valid_pilot (test_godot_walkthrough.EvidenceTests.test_real_probe_and_valid_pilot) ... ok
+test_source_build_changed (test_godot_walkthrough.EvidenceTests.test_source_build_changed) ... ok
+test_symlink_escape (test_godot_walkthrough.EvidenceTests.test_symlink_escape) ... ok
+test_times_past_end (test_godot_walkthrough.EvidenceTests.test_times_past_end) ... ok
+test_math_layout (unittest.loader._FailedTest.test_math_layout) ... ERROR
+test_declared_silence_is_per_beat (test_pipeline_safety.MediaTests.test_declared_silence_is_per_beat) ... ok
+test_derivative_cannot_target_parent (test_pipeline_safety.MediaTests.test_derivative_cannot_target_parent) ... ok
+test_empty_frame_is_not_clean (test_pipeline_safety.MediaTests.test_empty_frame_is_not_clean) ... ok
+test_exact_180_short_is_blocked_not_ready (test_pipeline_safety.MediaTests.test_exact_180_short_is_blocked_not_ready) ... ok
+test_final_paperwork_cannot_be_bypassed (test_pipeline_safety.MediaTests.test_final_paperwork_cannot_be_bypassed) ... ok
+test_final_qc_failure_preserves_previous_final (test_pipeline_safety.MediaTests.test_final_qc_failure_preserves_previous_final) ... [art] REFUSED: injected required gate failure
+ok
+test_global_audio_cannot_override_source_report (test_pipeline_safety.MediaTests.test_global_audio_cannot_override_source_report) ... ok
+test_missing_narration_blocks_instead_of_muting_everything (test_pipeline_safety.MediaTests.test_missing_narration_blocks_instead_of_muting_everything) ... ok
+test_missing_portrait_blocks_and_quarantines_stale_slot (test_pipeline_safety.MediaTests.test_missing_portrait_blocks_and_quarantines_stale_slot) ... ok
+test_missing_report_sound_blocks (test_pipeline_safety.MediaTests.test_missing_report_sound_blocks) ... ok
+test_native_portrait_cut_reuses_independent_assets_without_rewrite (test_pipeline_safety.MediaTests.test_native_portrait_cut_reuses_independent_assets_without_rewrite) ... ok
+test_pantry_accepts_pcm_mov_report (test_pipeline_safety.MediaTests.test_pantry_accepts_pcm_mov_report) ... ok
+test_pantry_preserves_report_sound (test_pipeline_safety.MediaTests.test_pantry_preserves_report_sound) ... ok
+test_pending_notes_block_direct_final (test_pipeline_safety.MediaTests.test_pending_notes_block_direct_final) ... ok
+test_report_between_narration_beats_keeps_clock_and_sound (test_pipeline_safety.MediaTests.test_report_between_narration_beats_keeps_clock_and_sound) ... ok
+test_report_sound_duration_and_framing_survive (test_pipeline_safety.MediaTests.test_report_sound_duration_and_framing_survive) ... ok
+test_short_copies_audio_and_prints_only_outro_command (test_pipeline_safety.MediaTests.test_short_copies_audio_and_prints_only_outro_command) ... ok
+test_short_recut_breaks_legacy_media_link (test_pipeline_safety.MediaTests.test_short_recut_breaks_legacy_media_link) ... ok
+test_source_edit_during_final_blocks_promotion (test_pipeline_safety.MediaTests.test_source_edit_during_final_blocks_promotion) ... [art] REFUSED: Source media or narration changed during rendering; rebuild the new revision
+ok
+test_tts_writer_breaks_legacy_short_audio_link (test_pipeline_safety.MediaTests.test_tts_writer_breaks_legacy_short_audio_link) ... ok
+test_vertical_keeps_report_and_does_not_modify_parent (test_pipeline_safety.MediaTests.test_vertical_keeps_report_and_does_not_modify_parent) ... ok
+test_zero_frame_qc_fails_and_replaces_stale_verdict (test_pipeline_safety.MediaTests.test_zero_frame_qc_fails_and_replaces_stale_verdict) ... ok
+test_approved_legacy_voice_is_used (test_pipeline_safety.SafetyTests.test_approved_legacy_voice_is_used) ... ok
+test_conflicting_voice_aliases_fail (test_pipeline_safety.SafetyTests.test_conflicting_voice_aliases_fail) ... ok
+test_copy_breaks_legacy_file_symlink (test_pipeline_safety.SafetyTests.test_copy_breaks_legacy_file_symlink) ... ok
+test_cut_planner_uses_render_clock_and_keeps_outro (test_pipeline_safety.SafetyTests.test_cut_planner_uses_render_clock_and_keeps_outro) ... ok
+test_duplicate_and_unsafe_ids_fail (test_pipeline_safety.SafetyTests.test_duplicate_and_unsafe_ids_fail) ... ok
+test_duration_extension_failure_is_not_success (test_pipeline_safety.SafetyTests.test_duration_extension_failure_is_not_success) ... ok
+test_encoded_short_checks_container_and_each_stream (test_pipeline_safety.SafetyTests.test_encoded_short_checks_container_and_each_stream) ... ok
+test_existing_portrait_pattern_does_not_get_double_suffix (test_pipeline_safety.SafetyTests.test_existing_portrait_pattern_does_not_get_double_suffix) ... ok
+test_failed_force_render_preserves_old_media (test_pipeline_safety.SafetyTests.test_failed_force_render_preserves_old_media) ... ok
+test_malformed_approval_is_a_controlled_failure (test_pipeline_safety.SafetyTests.test_malformed_approval_is_a_controlled_failure) ... ok
+test_missing_final_checker_is_a_failure (test_pipeline_safety.SafetyTests.test_missing_final_checker_is_a_failure) ... ok
+test_narration_change_invalidates_approval (test_pipeline_safety.SafetyTests.test_narration_change_invalidates_approval) ... ok
+test_notes_change_invalidates_approval (test_pipeline_safety.SafetyTests.test_notes_change_invalidates_approval) ... ok
+test_pending_feedback_blocks_dry_run_and_no_gate_flag (test_pipeline_safety.SafetyTests.test_pending_feedback_blocks_dry_run_and_no_gate_flag) ... ok
+test_renderer_failure_is_nonzero_and_preserves_sheet (test_pipeline_safety.SafetyTests.test_renderer_failure_is_nonzero_and_preserves_sheet) ... [remotion] FAILED: B00
+ok
+test_report_cannot_be_auto_dropped (test_pipeline_safety.SafetyTests.test_report_cannot_be_auto_dropped) ... ok
+test_report_cannot_be_manually_dropped (test_pipeline_safety.SafetyTests.test_report_cannot_be_manually_dropped) ... ok
+test_run_failure_replaces_old_ready_state (test_pipeline_safety.SafetyTests.test_run_failure_replaces_old_ready_state) ... ok
+test_short_checks_frame_rounded_timeline (test_pipeline_safety.SafetyTests.test_short_checks_frame_rounded_timeline) ... ok
+test_short_duration_is_strict_and_fail_closed (test_pipeline_safety.SafetyTests.test_short_duration_is_strict_and_fail_closed) ... ok
+test_source_report_is_never_voiced (test_pipeline_safety.SafetyTests.test_source_report_is_never_voiced) ... ok
+test_voice_change_invalidates_approval (test_pipeline_safety.SafetyTests.test_voice_change_invalidates_approval) ... ok
+test_writes_reject_parent_directory_symlink (test_pipeline_safety.SafetyTests.test_writes_reject_parent_directory_symlink) ... ok
+test_aliases_do_not_create_duplicate_films (test_repoloop.RepoloopTests.test_aliases_do_not_create_duplicate_films) ... ok
+test_changed_source_requeues_without_discarding_render (test_repoloop.RepoloopTests.test_changed_source_requeues_without_discarding_render) ... ok
+test_completed_survives_rescan (test_repoloop.RepoloopTests.test_completed_survives_rescan) ... ok
+test_error_result_even_with_zero_exit_not_success (test_repoloop.RepoloopTests.test_error_result_even_with_zero_exit_not_success) ... ok
+test_example_index_read_only_and_skips_derivatives (test_repoloop.RepoloopTests.test_example_index_read_only_and_skips_derivatives) ... ok
+test_feedback_requeues (test_repoloop.RepoloopTests.test_feedback_requeues) ... ok
+test_intros_first_and_all_skills_discovered (test_repoloop.RepoloopTests.test_intros_first_and_all_skills_discovered) ... ok
+test_live_worker_not_reset_by_rescan (test_repoloop.RepoloopTests.test_live_worker_not_reset_by_rescan) ... ok
+test_lock_excludes_duplicate_worker_and_releases (test_repoloop.RepoloopTests.test_lock_excludes_duplicate_worker_and_releases) ... ok
+test_old_review_cannot_complete_new_attempt (test_repoloop.RepoloopTests.test_old_review_cannot_complete_new_attempt) ... ok
+test_rate_limit_recognized (test_repoloop.RepoloopTests.test_rate_limit_recognized) ... ok
+test_removed_entry_retired_not_deleted (test_repoloop.RepoloopTests.test_removed_entry_retired_not_deleted) ... ok
+test_revoked_login_recognized (test_repoloop.RepoloopTests.test_revoked_login_recognized) ... ok
+test_runtime_utilities_covered (test_repoloop.RepoloopTests.test_runtime_utilities_covered) ... ok
+test_sandbox_is_fail_closed (test_repoloop.RepoloopTests.test_sandbox_is_fail_closed) ... ok
+test_short_verifier_rejects_exact_180_before_visual_review (test_repoloop.RepoloopTests.test_short_verifier_rejects_exact_180_before_visual_review) ... ok
+test_shorts_discovery_is_independent_and_requires_verified_parent (test_repoloop.RepoloopTests.test_shorts_discovery_is_independent_and_requires_verified_parent) ... ok
+test_snapshot_recovers_partial_copy_and_skips_media_links (test_repoloop.RepoloopTests.test_snapshot_recovers_partial_copy_and_skips_media_links) ... ok
+test_stop_request_stops_owned_process (test_repoloop.RepoloopTests.test_stop_request_stops_owned_process) ... ok
+test_timeout_stops_owned_process (test_repoloop.RepoloopTests.test_timeout_stops_owned_process) ... ok
+test_worker_has_no_api_fallback (test_repoloop.RepoloopTests.test_worker_has_no_api_fallback) ... ok
+test_code_math_not_confused_with_explanation (test_review_queue_audit.QueueAuditTests.test_code_math_not_confused_with_explanation) ... ok
+test_inventory_ignores_commands_and_review_prompts (test_review_queue_audit.QueueAuditTests.test_inventory_ignores_commands_and_review_prompts) ... ok
+
+======================================================================
+ERROR: test_math_layout (unittest.loader._FailedTest.test_math_layout)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_math_layout
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.14/Frameworks/Python.framework/Versions/3.12/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "~/Documents/Northeastern University/Brutalist/tests/test_math_layout.py", line 7, in <module>
+    from typeset_math import typeset
+  File "~/Documents/Northeastern University/Brutalist/runtime/scripts/typeset_math.py", line 6, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'
+
+
+----------------------------------------------------------------------
+Ran 118 tests in 7.209s
+
+FAILED (errors=1)

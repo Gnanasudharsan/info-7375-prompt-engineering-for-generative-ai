@@ -1,0 +1,20 @@
+# recreation.northeastern.edu site search, run 2026-10-13 15:19 EDT by Claude Code (public site; the WordPress ?s= search behind the site's search box)
+
+$ GET https://recreation.northeastern.edu/?s=alumni+membership+fees
+1 result page(s), no answer text:
+  - Alumni | https://recreation.northeastern.edu/alumni/
+
+$ GET https://recreation.northeastern.edu/?s=guest+pass
+5 result page(s), no answer text:
+  - Home | https://recreation.northeastern.edu/
+  - Instructional Recreation Class Descriptions | https://recreation.northeastern.edu/class-descriptions-2/
+  - Facility Reservation | https://recreation.northeastern.edu/facility-reservation/
+  - Equipment Rentals | https://recreation.northeastern.edu/equipment-rentals/
+  - Policies | https://recreation.northeastern.edu/policies/
+
+$ GET https://recreation.northeastern.edu/?s=pool+hours
+4 result page(s), no answer text:
+  - Aquatics | https://recreation.northeastern.edu/aquatics-2/
+  - Part-Time/Non-Benefits Eligible Employees and Visiting Scholars | https://recreation.northeastern.edu/part-time-non-benefits-eligible-employees-and-visiting-scholars/
+  - Policies | https://recreation.northeastern.edu/policies/
+  - Cabot Physical Education Center | https://recreation.northeastern.edu/cabot-physical-education-center/

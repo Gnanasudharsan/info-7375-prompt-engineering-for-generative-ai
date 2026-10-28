@@ -1,0 +1,159 @@
+# Console-only gate results — re-run 2026-10-12 20:45 for the FINAL film/cite-and-seek-pitch.mp4 (sha256 b08dbb34a8ef…), toolkit 5a00f54
+## Gate A BIDEA_Intro
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W BIDEA_Intro
+[gateW] NOTICE Scene class(es) NOT analysed (name must look like B07_Foo / B18A_Foo): BIDEA_Intro
+exit=0
+## Gate A B00_WhatItIs
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B00_WhatItIs
+[gateW] B00_WhatItIs clean
+exit=0
+## Gate A B01_Hypothesis
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B01_Hypothesis
+[gateW] B01_Hypothesis clean
+exit=0
+## Gate A B02_Checkable
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B02_Checkable
+[gateW] B02_Checkable clean
+exit=0
+## Gate A B03_Data
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B03_Data
+[gateW] B03_Data clean
+exit=0
+## Gate A B04_Retrieve
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B04_Retrieve
+[gateW] B04_Retrieve clean
+exit=0
+## Gate A B05_Answer
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B05_Answer
+[gateW] B05_Answer clean
+exit=0
+## Gate A B06_Abstain
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B06_Abstain
+[gateW] B06_Abstain clean
+exit=0
+## Gate A B07_Skills
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B07_Skills
+[gateW] B07_Skills clean
+exit=0
+## Gate A B07B_Conclude
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B07B_Conclude
+[gateW] B07B_Conclude clean
+exit=0
+## Gate A B08_Order
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B08_Order
+[gateW] B08_Order clean
+exit=0
+## Gate A B09_Alternative
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B09_Alternative
+[gateW] B09_Alternative clean
+exit=0
+## Gate A B09B_Instead
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B09B_Instead
+[gateW] B09B_Instead clean
+exit=0
+## Gate A B10_Reader
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B10_Reader
+[gateW] B10_Reader clean
+exit=0
+## Gate A B11_Scope
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B11_Scope
+[gateW] B11_Scope clean
+exit=0
+## Gate A B12_First
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B12_First
+[gateW] B12_First clean
+exit=0
+## Gate A B13_Risk
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B13_Risk
+[gateW] B13_Risk clean
+exit=0
+## Gate A B14_Built
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B14_Built
+[gateW] B14_Built clean
+exit=0
+## Gate A B15_WillBuild
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B15_WillBuild
+[gateW] B15_WillBuild clean
+exit=0
+## Gate A B16_Why
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W B16_Why
+[gateW] B16_Why clean
+exit=0
+## Gate A BOUT_Close
+[static-check] 1 scene(s): 1 clean · 0 warn · 0 error
+exit=0
+## Gate W BOUT_Close
+[gateW] NOTICE Scene class(es) NOT analysed (name must look like B07_Foo / B18A_Foo): BOUT_Close
+exit=0
+## runtime/qc/beat_lint.py
+[beat-lint] clean — beat mix OK (beat_sheet.json)
+exit=0
+## runtime/qc/factcheck_check.py
+[factcheck] clean — every row resolved, every claim-bearing beat covered
+[factcheck] rows=44 beats_covered=23 claim_bearing_beats=1 uncovered=0
+exit=0
+## runtime/scripts/bookend_check.py
+[bookend] PASS — four bookends correct for cite-and-seek-pitch
+exit=0
+## runtime/qc/frame_check.py
+[frame-check] cite-and-seek-pitch  canvas=3840×2160  beats=23
+[frame-check] PASS — 23 beats checked, no violations.
+exit=0
+## runtime/qc/content_check.py
+[content-check] cite-and-seek-pitch  beats=23
+[content-check] PASS — 23 beats checked, no violations.
+exit=0
+## runtime/qc/lane_check.py
+[lane-check] cite-and-seek-pitch  cut=master  known_slates=[]
+[lane-check] PASS — 23 beats checked, no lane violations.
+exit=0
+## runtime/qc/banned_card_check.py
+[banned-card] PASS — film
+exit=0
+## runtime/qc/placeholder_check.py
+exit=0
+## runtime/qc/content_default_check.py
+[content-default] FAIL ClaudeComposerAsk.tsx: prop='segment' default="'Photoelectric Effect'" — must be sentinel '⚠ SET IN BEAT SHEET'
+[content-default] FAIL ClaudeComposerAsk.tsx: prop='greeting' default="'Hola, Bear'" — must be sentinel '⚠ SET IN BEAT SHEET'
+[content-default] FAIL ClaudeComposerAsk.tsx: prop='runningText' default="'running simulation…'" — must be sentinel '⚠ SET IN BEAT SHEET'
+exit=2
