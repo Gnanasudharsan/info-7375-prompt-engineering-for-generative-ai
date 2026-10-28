@@ -1,0 +1,16 @@
+
+==================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_rule_contract.py _________________
+ImportError while importing test module '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/tests/test_rule_contract.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/test_rule_contract.py:8: in <module>
+    from jobwatch.rule import judge_posting
+E   ModuleNotFoundError: No module named 'jobwatch.rule'
+=========================== short test summary info ============================
+ERROR tests/test_rule_contract.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.04s
