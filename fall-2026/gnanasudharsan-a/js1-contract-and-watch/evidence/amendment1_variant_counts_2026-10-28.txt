@@ -1,0 +1,60 @@
+Claude Code output, 2026-10-28, offline analysis on data/raw/anthropic_20261028T192103Z.json, no code changed.
+
+Method: jobwatch.rule.judge_posting (committed code at b1f1e45) run on every posting;
+a posting passes a variant if every non-skills condition passes and distinct shipped-skill
+count >= the variant threshold. Variants C/D add 'research engineer' to an in-memory copy of
+persona target_roles only; no file on disk was modified.
+
+postings: 680
+shipped skills: ['Python', 'SQL', 'PyTorch', 'Hugging Face Transformers', 'sentence-transformers', 'FastAPI', 'MLflow', 'PostgreSQL', 'AWS']
+
+== Count table
+variant       | definition                            | passing
+----------------------------------------------------------------
+current rule  | threshold 3, current target_roles     | 0
+A             | threshold 1, current target_roles     | 2
+B             | threshold 2, current target_roles     | 0
+C             | threshold 1, + 'research engineer'    | 21
+D             | threshold 2, + 'research engineer'    | 7
+
+== current rule (threshold 3, current target_roles): 0
+  (no passing postings)
+
+== A (threshold 1, current target_roles): 2
+  5057647008 | Applied AI Engineer, Enterprise  | skills=1: Python | San Francisco, CA | New York City, NY
+  5445410008 | Applied AI Engineer, Public Sector  | skills=1: Python | Washington, DC
+
+== B (threshold 2, current target_roles): 0
+  (no passing postings)
+
+== C (threshold 1, + 'research engineer'): 21
+  5057647008 | Applied AI Engineer, Enterprise  | skills=1: Python | San Francisco, CA | New York City, NY
+  5445410008 | Applied AI Engineer, Public Sector  | skills=1: Python | Washington, DC
+  4949336008 | ML/Research Engineer, Safeguards | skills=1: Python | San Francisco, CA | New York City, NY
+  5254364008 | Research Engineer, Code RL (Reinforcement Learning) | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY
+  5285246008 | Research Engineer, Computer Use | skills=1: Python | San Francisco, CA | New York City, NY | Seattle, WA
+  4669581008 | Research Engineer, Discovery | skills=2: PyTorch, AWS | San Francisco, CA
+  4980430008 | Research Engineer, Interpretability | skills=2: Python, PyTorch | San Francisco, CA
+  4017331008 | Research Engineer, Knowledge Team | skills=1: Python | Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY
+  5265365008 | Research Engineer, Life Sciences | skills=1: Python | San Francisco, CA
+  4613568008 | Research Engineer, Machine Learning (Reinforcement Learning)  | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY
+  5198108008 | Research Engineer, Machine Learning (RL Velocity) | skills=1: PyTorch | Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY
+  5438030008 | Research Engineer / Performance Engineer, RL Distributed Systems | skills=1: Python | San Francisco, CA | New York City, NY | Seattle, WA
+  5198255008 | Research Engineer, Post-Training Model Evaluations | skills=1: Python | San Francisco, CA | Seattle, WA
+  4938432008 | Research Engineer, Pretraining Scaling | skills=1: PyTorch | San Francisco, CA
+  4613592008 | Research Engineer, Production Model Post-Training | skills=1: Python | San Francisco, CA | New York City, NY | Seattle, WA
+  4616971008 | Research Engineer/Research Scientist, Pre-training | skills=2: Python, PyTorch | Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY
+  5438044008 | Research Engineer / Research Scientist, RL Frontiers | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY | Seattle, WA
+  4951814008 |  Research Engineer / Research Scientist, Tokens | skills=1: PyTorch | New York City, NY; New York City, NY | Seattle, WA; San Francisco, CA
+  4952051008 | Research Engineer, RL Engineering | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY | Seattle, WA
+  4631822008 | Research Engineer / Scientist, Alignment | skills=1: Python | San Francisco, CA
+  5458420008 | Security Engineer / Research Engineer, RL Security | skills=1: Python | San Francisco, CA | New York City, NY | Seattle, WA
+
+== D (threshold 2, + 'research engineer'): 7
+  5254364008 | Research Engineer, Code RL (Reinforcement Learning) | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY
+  4669581008 | Research Engineer, Discovery | skills=2: PyTorch, AWS | San Francisco, CA
+  4980430008 | Research Engineer, Interpretability | skills=2: Python, PyTorch | San Francisco, CA
+  4613568008 | Research Engineer, Machine Learning (Reinforcement Learning)  | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY
+  4616971008 | Research Engineer/Research Scientist, Pre-training | skills=2: Python, PyTorch | Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY
+  5438044008 | Research Engineer / Research Scientist, RL Frontiers | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY | Seattle, WA
+  4952051008 | Research Engineer, RL Engineering | skills=2: Python, PyTorch | San Francisco, CA | New York City, NY | Seattle, WA

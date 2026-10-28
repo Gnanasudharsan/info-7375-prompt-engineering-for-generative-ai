@@ -39,3 +39,20 @@ Otherwise NOT_RELEVANT.
 
 ## What a failure looks like
 2026-10-28: A failure would be if an HTML entity unescaping bug caused description text to retain entity codes, preventing regex skill extraction from recognizing exact skill strings like `"PyTorch"`.
+
+## Amendment 1 — 2026-10-28 (after the first offline run on real data)
+Where this amendment conflicts with the sections above (conditions 1 and 5, and the allow-list in In and Refuses), this amendment governs.
+
+Reason: The initial rule execution on real Greenhouse board data (commit b1f1e45) yielded 0 relevant postings. Analysis of the per-condition breakdown showed two binding constraints: strict title matching limited matches to 10 postings (all titled "Applied AI Engineer"), and the requirement of at least 3 shipped skills yielded 0 overlapping postings because none of the title matches contained 3 or more shipped skills.
+
+Evidence: Testing variant hypothetical rule sets yielded: Variant A (threshold 1) = 2 matches; Variant B (threshold 2) = 0 matches; Variant C (threshold 1 + "research engineer") = 21 matches; Variant D (threshold 2 + "research engineer") = 7 matches (computed offline by Claude Code from data/raw/anthropic_20261028T192103Z.json; output saved in `evidence/amendment1_variant_counts_2026-10-28.txt`). Variant D was selected because a skill threshold of 2 maintains rigorous filtering (avoiding single-keyword false positives) while "research engineer" unlocks Anthropic's actual core ML/AI role nomenclature, yielding a healthy sample size of 7 relevant jobs without breaking existing test coverage.
+
+Changes:
+1. Skills threshold: Lowered from 3 to 2 distinct shipped skills.
+2. Title phrases / target_roles: Added `"research engineer"` to Ananya's target title phrases and `target_roles` in her persona, labeled as a persona extension reflecting Anthropic's primary ML engineering nomenclature.
+3. Allow-list: Expanded to two allowed hosts with stated purposes: `boards-api.greenhouse.io` (for public job board data fetching) and `api.anthropic.com` (for executing the Claude judge model).
+4. Known limits: 
+   - The `"Remote"` location prefix passes remote postings regardless of country code or region if no specific domestic restriction is parsed.
+   - Anthropic “Research Engineer” roles may expect research depth beyond a new-grad profile; the rule doesn’t check this.
+
+Tests changed: No existing test changed; all still pass at threshold 2. Added `test_amendment1_research_engineer_title_is_a_role_match` and `test_amendment1_two_skills_is_enough`, written before implementing this amendment.

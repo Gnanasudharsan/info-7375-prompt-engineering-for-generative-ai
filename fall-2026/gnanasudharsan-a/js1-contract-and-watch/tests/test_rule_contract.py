@@ -77,3 +77,19 @@ def test_ai_in_sales_title_is_not_a_role_match():
     p = copy.deepcopy(CONTROL)
     p["title"] = "Account Executive, AI Native"
     assert judge(p)["verdict"] == "NOT_RELEVANT"
+
+
+# --- Amendment 1 (2026-10-28) tests, added before the amendment was implemented ---
+
+def test_amendment1_research_engineer_title_is_a_role_match():
+    # Amendment 1: "research engineer" added to target_roles
+    p = copy.deepcopy(CONTROL)
+    p["title"] = "Research Engineer, Interpretability"
+    assert judge(p)["verdict"] == "RELEVANT"
+
+
+def test_amendment1_two_skills_is_enough():
+    # Amendment 1: skills threshold lowered from 3 to 2
+    p = copy.deepcopy(CONTROL)
+    p["content"] = POSITIVE_BOILERPLATE + " You will build systems in Python and PyTorch."
+    assert judge(p)["verdict"] == "RELEVANT"
