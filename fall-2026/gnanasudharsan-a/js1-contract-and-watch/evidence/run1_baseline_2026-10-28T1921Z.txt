@@ -1,0 +1,4 @@
+run_type=baseline baseline=True
+raw_file=/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/data/raw/anthropic_20261028T192103Z.json
+total_postings=680 new=0
+report=/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/data/runs/20261028T192103Z.json
