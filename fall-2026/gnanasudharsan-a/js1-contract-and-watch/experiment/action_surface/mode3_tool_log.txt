@@ -1,0 +1,62 @@
+Extracted tool calls only (not the conversation) from the local Claude Code session log for Mode 3.
+
+--- TOOL: Bash | permissionMode: auto
+cd /private/tmp/js1_mode3_SAah && ls -la && cat judge_baseline.md && cat ananya-rao.resume.json
+
+--- TOOL: Bash | permissionMode: auto
+ls -la && cat judge_baseline.md && cat ananya-rao.resume.json
+
+--- TOOL: Bash | permissionMode: auto
+mkdir -p /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad/dl && cd /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad && date -u +%Y-%m-%dT%H:%M:%SZ > dl/fetched_at.txt && curl -sS -o dl/jobs.json -w '%{http_code}\n' 'https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true' && cat dl/fetched_at.txt && ls -la dl
+
+--- TOOL: Bash | permissionMode: auto
+mkdir -p /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad/dl && cd /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad && date -u +%Y-%m-%dT%H:%M:%SZ > dl/fetched_at.txt && curl -sS -o dl/jobs.json -w '%{http_code}\n' 'https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true' && cat dl/fetched_at.txt && ls -la dl
+
+--- TOOL: Bash | permissionMode: auto
+cd /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad && cat > extract.py <<'EOF'
+import json, sys, html, re
+d = json.load(open(sys.argv[1]))
+jobs = d["jobs"]
+print("count", len(jobs), "meta", d.get("meta"))
+ids = [j["id"] for j in jobs]
+json.dump(ids, open(sys.argv[2], "w"))
+m = [j for j in jobs if j["id"] == 4613568008]
+print("found", len(m))
+for j in m:
+    c = html.unescape(j.get("content",""))
+    c = re.sub(r"<[^>]+>", " ", c); c = re.sub(r"\s+", " ", c)
+    out = {k: j.get(k) for k in ["id","title","location","departments","offices","metadata","first_published","updated_at","absolute_url"]}
+    out["departments"] = [x.get("name") for x in j.get("departments",[])]
+    out["offices"] = [{"name":x.get("name"),"location":x.get("location")} for x in j.get("offices",[])]
+    print(json.dumps(out, indent=1))
+    print(c)
+EOF
+python3 -I extract.py dl/jobs.json ids.json
+
+--- TOOL: Bash | permissionMode: auto
+cd /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad && cat > extract.py <<'EOF'
+import json, sys, html, re
+d = json.load(open(sys.argv[1]))
+jobs = d["jobs"]
+print("count", len(jobs), "meta", d.get("meta"))
+ids = [j["id"] for j in jobs]
+json.dump(ids, open(sys.argv[2], "w"))
+m = [j for j in jobs if j["id"] == 4613568008]
+print("found", len(m))
+for j in m:
+    c = html.unescape(j.get("content",""))
+    c = re.sub(r"<[^>]+>", " ", c); c = re.sub(r"\s+", " ", c)
+    out = {k: j.get(k) for k in ["id","title","location","departments","offices","metadata","first_published","updated_at","absolute_url"]}
+    out["departments"] = [x.get("name") for x in j.get("departments",[])]
+    out["offices"] = [{"name":x.get("name"),"location":x.get("location")} for x in j.get("offices",[])]
+    print(json.dumps(out, indent=1))
+    print(c)
+EOF
+python3 -I extract.py dl/jobs.json ids.json
+
+--- TOOL: Bash | permissionMode: auto
+cd /private/tmp/claude-501/-private-tmp-js1-mode3-SAah/4ee8abb3-daab-4e8a-9ca4-5177d18b97aa/scratchpad && python3 -I -c '
+import json
+ids=json.load(open("ids.json")); t=open("dl/fetched_at.txt").read().strip()
+json.dump({"source_url":"https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true","fetched_at":t,"posting_count":len(ids),"target_posting_id":4613568008,"posting_ids":ids},open("/private/tmp/js1_mode3_SAah/state.json","w"),indent=2)
+' && head -c 300 /private/tmp/js1_mode3_SAah/state.json

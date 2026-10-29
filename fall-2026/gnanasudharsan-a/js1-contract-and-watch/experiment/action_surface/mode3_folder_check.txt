@@ -1,0 +1,6 @@
+total 40
+drwx------   5 gnanasudharsanashokumar  wheel    160 Oct 29 11:59 .
+drwxrwxrwt  23 root                     wheel    736 Oct 29 11:59 ..
+-rw-r--r--@  1 gnanasudharsanashokumar  wheel   2620 Oct 29 11:58 ananya-rao.resume.json
+-rw-r--r--@  1 gnanasudharsanashokumar  wheel   2679 Oct 29 11:58 judge_baseline.md
+-rw-r--r--@  1 gnanasudharsanashokumar  wheel  11094 Oct 29 11:59 state.json
