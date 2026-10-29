@@ -1,0 +1,9 @@
+run: experiment/runs/sampling_20261029T0445Z
+id          label         verdicts                                            counts                    agree
+4613568008  RELEVANT      N,R,R,R                                             {'NOT_RELEVANT': 1, 'RELEVANT': 3}3/4
+5438044008  RELEVANT      N,N,N,N                                             {'NOT_RELEVANT': 4}       0/4
+4980430008  NOT_RELEVANT  N,N,N,N                                             {'NOT_RELEVANT': 4}       4/4
+4631822008  RELEVANT      N,N,N,N                                             {'NOT_RELEVANT': 4}       0/4
+5264619008  NOT_RELEVANT  N,N,N,N                                             {'NOT_RELEVANT': 4}       4/4
+
+agreement with my labels: 11/20 = 55%; unanimous postings: 4/5
