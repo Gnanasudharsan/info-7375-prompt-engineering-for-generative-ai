@@ -1,0 +1,14 @@
+run: experiment/runs/exp_revision_dev_20261029T0517Z | split: dev
+id          my label      claude          match  title
+4613568008  RELEVANT      RELEVANT        yes    Research Engineer, Machine Learning (Reinforc
+5438044008  RELEVANT      RELEVANT        yes    Research Engineer / Research Scientist, RL Fr
+4980430008  NOT_RELEVANT  NOT_RELEVANT    yes    Research Engineer, Interpretability
+4631822008  RELEVANT      RELEVANT        yes    Research Engineer / Scientist, Alignment
+5264619008  NOT_RELEVANT  NOT_RELEVANT    yes    Research Engineer, RL Scaling Science
+4669581008  NOT_RELEVANT  NOT_RELEVANT    yes    Research Engineer, Discovery
+5442934008  NOT_RELEVANT  NOT_RELEVANT    yes    Manager, Applied AI Engineering (Megas)
+5390811008  NOT_RELEVANT  NOT_RELEVANT    yes    Applied AI, Research Engineer
+5198255008  RELEVANT      RELEVANT        yes    Research Engineer, Post-Training Model Evalua
+4616971008  RELEVANT      RELEVANT        yes    Research Engineer/Research Scientist, Pre-tra
+
+pass rate: 10/10 = 100%

@@ -1,0 +1,72 @@
+{
+  "posting_id": 5264619008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:18:03.571295+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_revision.md",
+  "prompt_sha256": "6c2619620d021e9b6bdd413c7be6e62febb0d445c5e91e4fd1476846d8670b59",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "172ca5cd-2a75-4f84-8699-02f3d4541df1"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-dwmtamew",
+      "requested_session_id": "172ca5cd-2a75-4f84-8699-02f3d4541df1",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":6491,\"stop_reason\":\"end_turn\",\"session_id\":\"172ca5cd-2a75-4f84-8699-02f3d4541df1\",\"total_cost_usd\":0.042484,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":3719,\"cache_read_input_tokens\":1120,\"output_tokens\":625,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":3719,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":625,\"cache_read_input_tokens\":1120,\"cache_creation_input_tokens\":3719,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":3719},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":625,\"cacheReadInputTokens\":1120,\"cacheCreationInputTokens\":3719,\"webSearchRequests\":0,\"costUSD\":0.042484,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":3719,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5264619008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Location fails: the posting is based in London, UK (location.name: 'London, UK'). It is not US-based and is not designated Remote. The content describes a hybrid policy requiring staff to be in an office at least 25% of the time. Ananya is in Boston, MA and is willing to relocate within the US only, so a UK role does not meet the location criterion. This alone makes the posting NOT_RELEVANT. Notes on the other criteria: (1) Role type: 'Research Engineer' is in her target_roles. However, this role sits at the research/engineering boundary and asks for 'strong empirical research skills' in RL. It focuses on designing and interpreting large-scale RL experiments rather than mainly building and deploying systems, so it leans toward research. (2) Level: no explicit years-of-experience requirement, senior/staff title, or PhD requirement is stated. Experience 'will correlate with the internal job level', so level is not disqualifying on explicit terms. (3) Skills: the required section names only Python as a specific technology (fewer than 2), so the skills test is skipped. Separately, her background is RAG and transformer fine-tuning with no RL or distributed training; Ray and Kubernetes are listed only as familiar_with_not_shipped. (4) Sponsorship: the posting says 'We do sponsor visas!', so this is not disqualifying, although UK sponsorship does not fix the US location mismatch. Verdict: NOT_RELEVANT due to the non-US location.\\\", \\\"resume_fields_cited\\\": [\\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"target_roles\\\", \\\"needs_sponsorship\\\", \\\"experience\\\", \\\"skills.languages\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"education\\\"], \\\"posting_fields_cited\\\": [\\\"location.name\\\", \\\"title\\\", \\\"content\\\"]}\",\"ttft_ms\":6565,\"type\":\"result\",\"duration_ms\":6589,\"uuid\":\"7be25a72-b276-4f31-84ab-982476a557a3\",\"ttft_stream_ms\":966,\"time_to_request_ms\":93,\"first_content_frame_ms\":966,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "172ca5cd-2a75-4f84-8699-02f3d4541df1",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5264619008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Location fails: the posting is based in London, UK (location.name: 'London, UK'). It is not US-based and is not designated Remote. The content describes a hybrid policy requiring staff to be in an office at least 25% of the time. Ananya is in Boston, MA and is willing to relocate within the US only, so a UK role does not meet the location criterion. This alone makes the posting NOT_RELEVANT. Notes on the other criteria: (1) Role type: 'Research Engineer' is in her target_roles. However, this role sits at the research/engineering boundary and asks for 'strong empirical research skills' in RL. It focuses on designing and interpreting large-scale RL experiments rather than mainly building and deploying systems, so it leans toward research. (2) Level: no explicit years-of-experience requirement, senior/staff title, or PhD requirement is stated. Experience 'will correlate with the internal job level', so level is not disqualifying on explicit terms. (3) Skills: the required section names only Python as a specific technology (fewer than 2), so the skills test is skipped. Separately, her background is RAG and transformer fine-tuning with no RL or distributed training; Ray and Kubernetes are listed only as familiar_with_not_shipped. (4) Sponsorship: the posting says 'We do sponsor visas!', so this is not disqualifying, although UK sponsorship does not fix the US location mismatch. Verdict: NOT_RELEVANT due to the non-US location.\", \"resume_fields_cited\": [\"personal.location\", \"willing_to_relocate_us\", \"target_roles\", \"needs_sponsorship\", \"experience\", \"skills.languages\", \"skills.familiar_with_not_shipped\", \"education\"], \"posting_fields_cited\": [\"location.name\", \"title\", \"content\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5264619008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Location fails: the posting is based in London, UK (location.name: 'London, UK'). It is not US-based and is not designated Remote. The content describes a hybrid policy requiring staff to be in an office at least 25% of the time. Ananya is in Boston, MA and is willing to relocate within the US only, so a UK role does not meet the location criterion. This alone makes the posting NOT_RELEVANT. Notes on the other criteria: (1) Role type: 'Research Engineer' is in her target_roles. However, this role sits at the research/engineering boundary and asks for 'strong empirical research skills' in RL. It focuses on designing and interpreting large-scale RL experiments rather than mainly building and deploying systems, so it leans toward research. (2) Level: no explicit years-of-experience requirement, senior/staff title, or PhD requirement is stated. Experience 'will correlate with the internal job level', so level is not disqualifying on explicit terms. (3) Skills: the required section names only Python as a specific technology (fewer than 2), so the skills test is skipped. Separately, her background is RAG and transformer fine-tuning with no RL or distributed training; Ray and Kubernetes are listed only as familiar_with_not_shipped. (4) Sponsorship: the posting says 'We do sponsor visas!', so this is not disqualifying, although UK sponsorship does not fix the US location mismatch. Verdict: NOT_RELEVANT due to the non-US location.",
+    "resume_fields_cited": [
+      "personal.location",
+      "willing_to_relocate_us",
+      "target_roles",
+      "needs_sponsorship",
+      "experience",
+      "skills.languages",
+      "skills.familiar_with_not_shipped",
+      "education"
+    ],
+    "posting_fields_cited": [
+      "location.name",
+      "title",
+      "content"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

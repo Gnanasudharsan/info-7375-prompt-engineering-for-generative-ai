@@ -1,0 +1,73 @@
+{
+  "posting_id": 4631822008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:17:47.097261+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_revision.md",
+  "prompt_sha256": "6c2619620d021e9b6bdd413c7be6e62febb0d445c5e91e4fd1476846d8670b59",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "28a7362e-9c05-4440-ae41-555e3a4e3480"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-l7p7vc7d",
+      "requested_session_id": "28a7362e-9c05-4440-ae41-555e3a4e3480",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":15732,\"stop_reason\":\"end_turn\",\"session_id\":\"28a7362e-9c05-4440-ae41-555e3a4e3480\",\"total_cost_usd\":0.068168,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4147,\"cache_read_input_tokens\":1120,\"output_tokens\":1738,\"output_tokens_details\":{\"thinking_tokens\":802},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4147,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1738,\"cache_read_input_tokens\":1120,\"cache_creation_input_tokens\":4147,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4147},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1738,\"cacheReadInputTokens\":1120,\"cacheCreationInputTokens\":4147,\"webSearchRequests\":0,\"costUSD\":0.068168,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":802,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4147,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4631822008, \\\"verdict\\\": \\\"RELEVANT\\\", \\\"reasoning\\\": \\\"Role type: The title is 'Research Engineer / Scientist, Alignment', and 'Research Engineer' is one of Ananya's target roles. The rubric counts a Research Engineer role only if the work is mostly building, training, and running systems rather than publishing novel research. Most of the representative projects are hands-on engineering: training language models to subvert safety techniques, running multi-agent RL experiments, building tooling to evaluate LLM-generated jailbreaks, and writing scripts and prompts to generate evaluation questions. Contributing to papers and blog posts is only one item among several. The team describes the work as empirical and experimental, not theoretical. This makes it a borderline but acceptable research-engineering role, not pure data science or heavy academic research. Level: No years of experience are stated ('Years of experience required will correlate with the internal job level'). The title has no mid, senior, or staff marker. No PhD is required (minimum is a Bachelor's or equivalent, and 'Candidates need not have formal certifications or education credentials'). 'Significant software, ML, or research engineering experience' is qualitative, and the rules say not to infer seniority from demanding wording or from the $350K-$500K salary. Her MS in CS (AI concentration, ending 2026-12), her ML Engineer co-op (RAG QA prototype, transformer fine-tuning, MLflow experiment tracking), and her rag-eval-lab project show relevant empirical ML work. Skills: The required 'good fit' section names no specific technologies (only general software, ML, and research engineering experience, plus AI safety familiarity), so the skills test is skipped. Python is mentioned only as the interview language, and she has shipped Python. Kubernetes appears only under 'Strong candidates may also', so it is a nice-to-have, not a core requirement, and does not trigger the un-shipped-core rule even though Kubernetes is in her familiar-but-not-shipped list. Location: San Francisco, CA is US-based with a 25% in-office hybrid policy and a Bay Area preference. Ananya is in Boston but is willing to relocate within the US. Sponsorship: Ananya needs sponsorship, and the posting says 'We do sponsor visas!' with an immigration lawyer on retainer. There is no disclaimer. All criteria pass, so the verdict is RELEVANT. The main risk is the research-heavy framing of the Alignment Science team.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":8016,\"type\":\"result\",\"duration_ms\":15851,\"uuid\":\"88c0284a-bfcc-41c2-9598-99c1fb0f4f34\",\"ttft_stream_ms\":1261,\"time_to_request_ms\":114,\"first_content_frame_ms\":1261,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "28a7362e-9c05-4440-ae41-555e3a4e3480",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4631822008, \"verdict\": \"RELEVANT\", \"reasoning\": \"Role type: The title is 'Research Engineer / Scientist, Alignment', and 'Research Engineer' is one of Ananya's target roles. The rubric counts a Research Engineer role only if the work is mostly building, training, and running systems rather than publishing novel research. Most of the representative projects are hands-on engineering: training language models to subvert safety techniques, running multi-agent RL experiments, building tooling to evaluate LLM-generated jailbreaks, and writing scripts and prompts to generate evaluation questions. Contributing to papers and blog posts is only one item among several. The team describes the work as empirical and experimental, not theoretical. This makes it a borderline but acceptable research-engineering role, not pure data science or heavy academic research. Level: No years of experience are stated ('Years of experience required will correlate with the internal job level'). The title has no mid, senior, or staff marker. No PhD is required (minimum is a Bachelor's or equivalent, and 'Candidates need not have formal certifications or education credentials'). 'Significant software, ML, or research engineering experience' is qualitative, and the rules say not to infer seniority from demanding wording or from the $350K-$500K salary. Her MS in CS (AI concentration, ending 2026-12), her ML Engineer co-op (RAG QA prototype, transformer fine-tuning, MLflow experiment tracking), and her rag-eval-lab project show relevant empirical ML work. Skills: The required 'good fit' section names no specific technologies (only general software, ML, and research engineering experience, plus AI safety familiarity), so the skills test is skipped. Python is mentioned only as the interview language, and she has shipped Python. Kubernetes appears only under 'Strong candidates may also', so it is a nice-to-have, not a core requirement, and does not trigger the un-shipped-core rule even though Kubernetes is in her familiar-but-not-shipped list. Location: San Francisco, CA is US-based with a 25% in-office hybrid policy and a Bay Area preference. Ananya is in Boston but is willing to relocate within the US. Sponsorship: Ananya needs sponsorship, and the posting says 'We do sponsor visas!' with an immigration lawyer on retainer. There is no disclaimer. All criteria pass, so the verdict is RELEVANT. The main risk is the research-heavy framing of the Alignment Science team.\", \"resume_fields_cited\": [\"target_roles\", \"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.familiar_with_not_shipped\", \"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4631822008,
+    "verdict": "RELEVANT",
+    "reasoning": "Role type: The title is 'Research Engineer / Scientist, Alignment', and 'Research Engineer' is one of Ananya's target roles. The rubric counts a Research Engineer role only if the work is mostly building, training, and running systems rather than publishing novel research. Most of the representative projects are hands-on engineering: training language models to subvert safety techniques, running multi-agent RL experiments, building tooling to evaluate LLM-generated jailbreaks, and writing scripts and prompts to generate evaluation questions. Contributing to papers and blog posts is only one item among several. The team describes the work as empirical and experimental, not theoretical. This makes it a borderline but acceptable research-engineering role, not pure data science or heavy academic research. Level: No years of experience are stated ('Years of experience required will correlate with the internal job level'). The title has no mid, senior, or staff marker. No PhD is required (minimum is a Bachelor's or equivalent, and 'Candidates need not have formal certifications or education credentials'). 'Significant software, ML, or research engineering experience' is qualitative, and the rules say not to infer seniority from demanding wording or from the $350K-$500K salary. Her MS in CS (AI concentration, ending 2026-12), her ML Engineer co-op (RAG QA prototype, transformer fine-tuning, MLflow experiment tracking), and her rag-eval-lab project show relevant empirical ML work. Skills: The required 'good fit' section names no specific technologies (only general software, ML, and research engineering experience, plus AI safety familiarity), so the skills test is skipped. Python is mentioned only as the interview language, and she has shipped Python. Kubernetes appears only under 'Strong candidates may also', so it is a nice-to-have, not a core requirement, and does not trigger the un-shipped-core rule even though Kubernetes is in her familiar-but-not-shipped list. Location: San Francisco, CA is US-based with a 25% in-office hybrid policy and a Bay Area preference. Ananya is in Boston but is willing to relocate within the US. Sponsorship: Ananya needs sponsorship, and the posting says 'We do sponsor visas!' with an immigration lawyer on retainer. There is no disclaimer. All criteria pass, so the verdict is RELEVANT. The main risk is the research-heavy framing of the Alignment Science team.",
+    "resume_fields_cited": [
+      "target_roles",
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.familiar_with_not_shipped",
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "posting_id": 4616971008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:18:44.304598+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_revision.md",
+  "prompt_sha256": "6c2619620d021e9b6bdd413c7be6e62febb0d445c5e91e4fd1476846d8670b59",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "d263c958-0ffe-4017-8499-b33a83c0375d"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-c9xj1_tq",
+      "requested_session_id": "d263c958-0ffe-4017-8499-b33a83c0375d",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":12305,\"stop_reason\":\"end_turn\",\"session_id\":\"d263c958-0ffe-4017-8499-b33a83c0375d\",\"total_cost_usd\":0.06089599999999999,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4108,\"cache_read_input_tokens\":1120,\"output_tokens\":1390,\"output_tokens_details\":{\"thinking_tokens\":488},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4108,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1390,\"cache_read_input_tokens\":1120,\"cache_creation_input_tokens\":4108,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4108},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1390,\"cacheReadInputTokens\":1120,\"cacheCreationInputTokens\":4108,\"webSearchRequests\":0,\"costUSD\":0.06089599999999999,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":488,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4108,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4616971008, \\\"verdict\\\": \\\"RELEVANT\\\", \\\"reasoning\\\": \\\"Role type: The title is 'Research Engineer/Research Scientist, Pre-training', and 'Research Engineer' is one of Ananya's target roles. The responsibilities are mostly hands-on building and training work: implementing solutions in model architecture, data processing and optimizers; optimizing and scaling training infrastructure; building dev tooling; and working across the stack from low-level optimizations to model design. The sample projects follow the same pattern, including attention throughput optimization, dataset preparation, scaling distributed training and fault tolerance. The posting does not emphasize publishing novel research, so it is not excluded as heavy academic research. Level: The posting asks for an 'Advanced degree (MS or PhD)'. A PhD is not required, and Ananya's MS in Computer Science (AI concentration) at Boston University, ending 2026-12, meets this. No years of experience are stated; the Logistics section says only that years will correlate with internal job level. The title has no mid, senior or staff marker. Per the rules, the salary range ($350K–$850K) and soft phrases like 'significant software engineering experience' under 'You'll thrive if' do not count as explicit seniority requirements. Skills: The required qualifications name Python and deep learning frameworks, with PyTorch preferred. That is 2 specific technologies, and both are in her shipped list (skills.languages: Python; skills.ml_nlp: PyTorch). Kubernetes and GPUs/OS internals appear only under 'Preferred Experience', not as core requirements. So her not-shipped familiarity with Kubernetes does not disqualify her. Her co-op fine-tuning a transformer classifier with MLflow tracking and her RAG projects support the Python/PyTorch and language-model familiarity requirements. Location: The posting lists 'Remote-Friendly (Travel-Required)' plus San Francisco, Seattle and New York City, all in the US. Ananya is willing to relocate within the US. The 25% in-office hybrid expectation is compatible with this. Sponsorship: Ananya needs sponsorship, and the posting states 'We do sponsor visas!' with every reasonable effort and an immigration lawyer, so there is no disclaimer. All criteria pass, so the verdict is RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":5325,\"type\":\"result\",\"duration_ms\":12497,\"uuid\":\"c5860dcf-6eb8-48b1-b48a-e0e36e5007c9\",\"ttft_stream_ms\":1492,\"time_to_request_ms\":188,\"first_content_frame_ms\":1492,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "d263c958-0ffe-4017-8499-b33a83c0375d",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4616971008, \"verdict\": \"RELEVANT\", \"reasoning\": \"Role type: The title is 'Research Engineer/Research Scientist, Pre-training', and 'Research Engineer' is one of Ananya's target roles. The responsibilities are mostly hands-on building and training work: implementing solutions in model architecture, data processing and optimizers; optimizing and scaling training infrastructure; building dev tooling; and working across the stack from low-level optimizations to model design. The sample projects follow the same pattern, including attention throughput optimization, dataset preparation, scaling distributed training and fault tolerance. The posting does not emphasize publishing novel research, so it is not excluded as heavy academic research. Level: The posting asks for an 'Advanced degree (MS or PhD)'. A PhD is not required, and Ananya's MS in Computer Science (AI concentration) at Boston University, ending 2026-12, meets this. No years of experience are stated; the Logistics section says only that years will correlate with internal job level. The title has no mid, senior or staff marker. Per the rules, the salary range ($350K–$850K) and soft phrases like 'significant software engineering experience' under 'You'll thrive if' do not count as explicit seniority requirements. Skills: The required qualifications name Python and deep learning frameworks, with PyTorch preferred. That is 2 specific technologies, and both are in her shipped list (skills.languages: Python; skills.ml_nlp: PyTorch). Kubernetes and GPUs/OS internals appear only under 'Preferred Experience', not as core requirements. So her not-shipped familiarity with Kubernetes does not disqualify her. Her co-op fine-tuning a transformer classifier with MLflow tracking and her RAG projects support the Python/PyTorch and language-model familiarity requirements. Location: The posting lists 'Remote-Friendly (Travel-Required)' plus San Francisco, Seattle and New York City, all in the US. Ananya is willing to relocate within the US. The 25% in-office hybrid expectation is compatible with this. Sponsorship: Ananya needs sponsorship, and the posting states 'We do sponsor visas!' with every reasonable effort and an immigration lawyer, so there is no disclaimer. All criteria pass, so the verdict is RELEVANT.\", \"resume_fields_cited\": [\"target_roles\", \"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.ml_nlp\", \"skills.familiar_with_not_shipped\", \"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4616971008,
+    "verdict": "RELEVANT",
+    "reasoning": "Role type: The title is 'Research Engineer/Research Scientist, Pre-training', and 'Research Engineer' is one of Ananya's target roles. The responsibilities are mostly hands-on building and training work: implementing solutions in model architecture, data processing and optimizers; optimizing and scaling training infrastructure; building dev tooling; and working across the stack from low-level optimizations to model design. The sample projects follow the same pattern, including attention throughput optimization, dataset preparation, scaling distributed training and fault tolerance. The posting does not emphasize publishing novel research, so it is not excluded as heavy academic research. Level: The posting asks for an 'Advanced degree (MS or PhD)'. A PhD is not required, and Ananya's MS in Computer Science (AI concentration) at Boston University, ending 2026-12, meets this. No years of experience are stated; the Logistics section says only that years will correlate with internal job level. The title has no mid, senior or staff marker. Per the rules, the salary range ($350K–$850K) and soft phrases like 'significant software engineering experience' under 'You'll thrive if' do not count as explicit seniority requirements. Skills: The required qualifications name Python and deep learning frameworks, with PyTorch preferred. That is 2 specific technologies, and both are in her shipped list (skills.languages: Python; skills.ml_nlp: PyTorch). Kubernetes and GPUs/OS internals appear only under 'Preferred Experience', not as core requirements. So her not-shipped familiarity with Kubernetes does not disqualify her. Her co-op fine-tuning a transformer classifier with MLflow tracking and her RAG projects support the Python/PyTorch and language-model familiarity requirements. Location: The posting lists 'Remote-Friendly (Travel-Required)' plus San Francisco, Seattle and New York City, all in the US. Ananya is willing to relocate within the US. The 25% in-office hybrid expectation is compatible with this. Sponsorship: Ananya needs sponsorship, and the posting states 'We do sponsor visas!' with every reasonable effort and an immigration lawyer, so there is no disclaimer. All criteria pass, so the verdict is RELEVANT.",
+    "resume_fields_cited": [
+      "target_roles",
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.familiar_with_not_shipped",
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

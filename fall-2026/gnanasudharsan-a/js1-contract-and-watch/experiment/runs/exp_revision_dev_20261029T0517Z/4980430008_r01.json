@@ -1,0 +1,70 @@
+{
+  "posting_id": 4980430008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:17:40.105371+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_revision.md",
+  "prompt_sha256": "6c2619620d021e9b6bdd413c7be6e62febb0d445c5e91e4fd1476846d8670b59",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "57ba933b-b3a1-42b3-a16c-1bbf57438604"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-mr158hcp",
+      "requested_session_id": "57ba933b-b3a1-42b3-a16c-1bbf57438604",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":6049,\"stop_reason\":\"end_turn\",\"session_id\":\"57ba933b-b3a1-42b3-a16c-1bbf57438604\",\"total_cost_usd\":0.047175999999999996,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4448,\"cache_read_input_tokens\":1120,\"output_tokens\":568,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4448,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":568,\"cache_read_input_tokens\":1120,\"cache_creation_input_tokens\":4448,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4448},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":568,\"cacheReadInputTokens\":1120,\"cacheCreationInputTokens\":4448,\"webSearchRequests\":0,\"costUSD\":0.047175999999999996,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4448,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4980430008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Role type: Research Engineer, Interpretability is a hands-on engineering role. The work is building and maintaining inference and training infrastructure, activation extraction, steering-vector services, profiling and optimization, and research tooling. It is not publishing novel research, so the role type fits, and 'Research Engineer' is in her target_roles. Location (San Francisco, CA, US-based, and she is willing to relocate) and sponsorship ('We do sponsor visas!', which matters because she needs sponsorship) also pass. Skills: the required 'good fit' section names Python, Rust, Go, and Java. Python is in her shipped list, so the skills test is not the blocker. Level: this is the deciding factor. The 'You may be a good fit if you' section explicitly states 'Have 5-10+ years of experience building software.' That is an explicit years-of-experience requirement well above the 3+ year cutoff. Ananya is a new grad finishing her MS in CS (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op (2026-01 to 2026-08). The Logistics note that years required 'correlate with the internal job level' does not override the stated 5-10+ years. Per the rule, level is judged only on explicit requirements, and the salary range played no part in this decision. Because the role fails the level criterion, it is NOT_RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"education\\\", \\\"experience\\\", \\\"target_roles\\\", \\\"skills.languages\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":6127,\"type\":\"result\",\"duration_ms\":6149,\"uuid\":\"4bda9365-ec93-42a1-9c10-47952a122076\",\"ttft_stream_ms\":1488,\"time_to_request_ms\":95,\"first_content_frame_ms\":1489,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "57ba933b-b3a1-42b3-a16c-1bbf57438604",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4980430008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Role type: Research Engineer, Interpretability is a hands-on engineering role. The work is building and maintaining inference and training infrastructure, activation extraction, steering-vector services, profiling and optimization, and research tooling. It is not publishing novel research, so the role type fits, and 'Research Engineer' is in her target_roles. Location (San Francisco, CA, US-based, and she is willing to relocate) and sponsorship ('We do sponsor visas!', which matters because she needs sponsorship) also pass. Skills: the required 'good fit' section names Python, Rust, Go, and Java. Python is in her shipped list, so the skills test is not the blocker. Level: this is the deciding factor. The 'You may be a good fit if you' section explicitly states 'Have 5-10+ years of experience building software.' That is an explicit years-of-experience requirement well above the 3+ year cutoff. Ananya is a new grad finishing her MS in CS (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op (2026-01 to 2026-08). The Logistics note that years required 'correlate with the internal job level' does not override the stated 5-10+ years. Per the rule, level is judged only on explicit requirements, and the salary range played no part in this decision. Because the role fails the level criterion, it is NOT_RELEVANT.\", \"resume_fields_cited\": [\"education\", \"experience\", \"target_roles\", \"skills.languages\", \"needs_sponsorship\", \"willing_to_relocate_us\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4980430008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Role type: Research Engineer, Interpretability is a hands-on engineering role. The work is building and maintaining inference and training infrastructure, activation extraction, steering-vector services, profiling and optimization, and research tooling. It is not publishing novel research, so the role type fits, and 'Research Engineer' is in her target_roles. Location (San Francisco, CA, US-based, and she is willing to relocate) and sponsorship ('We do sponsor visas!', which matters because she needs sponsorship) also pass. Skills: the required 'good fit' section names Python, Rust, Go, and Java. Python is in her shipped list, so the skills test is not the blocker. Level: this is the deciding factor. The 'You may be a good fit if you' section explicitly states 'Have 5-10+ years of experience building software.' That is an explicit years-of-experience requirement well above the 3+ year cutoff. Ananya is a new grad finishing her MS in CS (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op (2026-01 to 2026-08). The Logistics note that years required 'correlate with the internal job level' does not override the stated 5-10+ years. Per the rule, level is judged only on explicit requirements, and the salary range played no part in this decision. Because the role fails the level criterion, it is NOT_RELEVANT.",
+    "resume_fields_cited": [
+      "education",
+      "experience",
+      "target_roles",
+      "skills.languages",
+      "needs_sponsorship",
+      "willing_to_relocate_us"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}
