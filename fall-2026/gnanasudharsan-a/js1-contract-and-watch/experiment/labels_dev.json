@@ -1,0 +1,72 @@
+[
+  {
+    "id": 4613568008,
+    "title": "Research Engineer, Machine Learning (Reinforcement Learning) ",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: responsibilities evaluation counts 6 of 6 bullets focused on hands-on infrastructure building, training optimization, and deployment; Points 2-5 passed with Python and PyTorch in the required section, US location, and no sponsorship bar."
+  },
+  {
+    "id": 5438044008,
+    "title": "Research Engineer / Research Scientist, RL Frontiers",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: responsibilities evaluation counts 7 of 7 bullets focused on hands-on experimental infrastructure and training; treating 'Minimum qualifications' as the required section, Python and PyTorch match skills fit."
+  },
+  {
+    "id": 4980430008,
+    "title": "Research Engineer, Interpretability",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "2",
+    "reason": "Explicitly requires 5-10+ years of software building experience, violating the new-grad level threshold."
+  },
+  {
+    "id": 4631822008,
+    "title": "Research Engineer / Scientist, Alignment",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: responsibilities evaluation counts 5 of 6 bullets focused on hands-on safety training, testing, and evaluation (excluding the research paper/blog publishing bullet); Point 3 triggered the tie-breaker because the required section names fewer than 2 specific technologies, allowing it to pass on role, level, location, and sponsorship."
+  },
+  {
+    "id": 5264619008,
+    "title": "Research Engineer, RL Scaling Science",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "4",
+    "reason": "Location is London, UK, which fails the US-based or Remote-Friendly location criteria."
+  },
+  {
+    "id": 4669581008,
+    "title": "Research Engineer, Discovery",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "2",
+    "reason": "Explicitly requires 6+ years of highly relevant experience in infrastructure engineering."
+  },
+  {
+    "id": 5442934008,
+    "title": "Manager, Applied AI Engineering (Megas) ",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "1",
+    "reason": "Point 1: role is focused on management and leadership ('build, coach, and grow a team') rather than hands-on ML/AI engineering."
+  },
+  {
+    "id": 5390811008,
+    "title": "Applied AI, Research Engineer ",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "1",
+    "reason": "Point 1: day-to-day work focuses heavily on customer GTM handshakes, sales enablement, and travel rather than hands-on ML systems building."
+  },
+  {
+    "id": 5198255008,
+    "title": "Research Engineer, Post-Training Model Evaluations",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: responsibilities evaluation counts 5 of 5 bullets focused on hands-on eval suite monitoring, debugging, and pipeline building; Point 3 triggered the tie-breaker because the required section names fewer than 2 specific technologies, passing on role, level, location, and sponsorship."
+  },
+  {
+    "id": 4616971008,
+    "title": "Research Engineer/Research Scientist, Pre-training",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: responsibilities evaluation counts 6 of 6 bullets focused on hands-on research implementation, training optimization, scaling, and dev tooling; treating 'Qualifications:' as the required section, she will meet the advanced degree requirement upon completing her MS (2026-12), and Python and PyTorch match required skills."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 5364804008,
+    "title": "Machine Learning Infrastructure Engineer, Safeguards Research",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: hands-on ML infrastructure engineering for safeguards research; Point 3 triggered the tie-breaker because the required section names fewer than 2 specific technologies, allowing it to pass on role, level, location, and sponsorship."
+  },
+  {
+    "id": 4938436008,
+    "title": "Research Engineer, Pretraining Scaling - London",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "4",
+    "reason": "Location is London, UK, which fails the US-based or Remote-Friendly location criteria."
+  },
+  {
+    "id": 5416709008,
+    "title": "Staff+ Site Reliability Engineer, Safeguards ML Infra",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "1",
+    "reason": "Point 1: role is focused on general site reliability engineering (SRE) and infrastructure operations rather than hands-on machine learning or AI engineering."
+  },
+  {
+    "id": 5254364008,
+    "title": "Research Engineer, Code RL (Reinforcement Learning)",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: hands-on reinforcement learning and code engineering; Point 3 triggered the tie-breaker because the required section names fewer than 2 specific technologies, passing on role, level, location, and sponsorship."
+  },
+  {
+    "id": 5223093008,
+    "title": "Engineering Manager, Research Productivity",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "1",
+    "reason": "Point 1: role is focused on people management ('experienced manager (at least 2 years)') rather than hands-on ML/AI engineering."
+  },
+  {
+    "id": 5459098008,
+    "title": "Research Engineer, Chip Design RL",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "1",
+    "reason": "Point 1: role focuses on hardware and chip design engineering (ASIC/FPGA, RTL, tape-out) rather than ML/AI software engineering."
+  },
+  {
+    "id": 5390754008,
+    "title": "Applied AI Engineer, Enterprise",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "4",
+    "reason": "Location is Paris, France, which fails the US-based or Remote-Friendly location criteria."
+  },
+  {
+    "id": 4952051008,
+    "title": "Research Engineer, RL Engineering",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: responsibilities evaluation shows core RL systems building and training optimization; treating 'Minimum qualifications' as the required section, Python and PyTorch match skills fit."
+  },
+  {
+    "id": 5404725008,
+    "title": "Staff+ Research Engineer, RL Data Platform",
+    "label": "NOT_RELEVANT",
+    "deciding_point": "2",
+    "reason": "Point 2: 'Staff+' title explicitly designates a senior level role exceeding the new-grad scope."
+  },
+  {
+    "id": 5285246008,
+    "title": "Research Engineer, Computer Use",
+    "label": "RELEVANT",
+    "deciding_point": "all",
+    "reason": "Point 1: hands-on computer use and agentic RL engineering role; Point 3 triggered the tie-breaker because the required section names fewer than 2 specific technologies, passing on role, level, location, and sponsorship."
+  }
+]
