@@ -28,6 +28,7 @@ Entries for 2026-10-28 were written at the end of the day from commits and termi
 ### 2026-10-28: 0 of 680 Baseline Finding Leading to Amendment 1
 - **What happened:** During its offline sanity check, Claude Code found that the initial strict rule yielded 0 relevant postings out of 680 (leaving the rule code unchanged).
 - **What I did:** Evaluated offline variant counts and introduced Amendment 1 (lowering skill threshold to ≥ 2 and adding "research engineer" to target titles), unlocking 7 relevant postings.
+- **Expected:** I expected the strict new-grad filtering rule to successfully find at least 50 to 100 relevant postings out of the initial 680 scraped jobs, assuming standard entry-level hiring volumes.
 - **Commit:** `c841810`, `ec82533`
 
 ### 2026-10-28: Corrected Provenance Header
@@ -60,12 +61,12 @@ Entries for 2026-10-28 were written at the end of the day from commits and termi
 
 ### 2026-10-28: Unresolved / Known Limitations & Lessons Learned
 - **What happened / Known limits:**
-  - Remote non-US locations pass the rule without country filtering.
-  - Anthropic "Research Engineer" roles may require research depth beyond new-grad scope.
-  - The seeded-run guard is only in the CLI; calling `run_watch()` directly with the project folder as root isn't blocked.
-  - Python 3.10 runtime remains untested.
-  - Absolute paths appear in some output records.
-  - The second-day live run is not completed yet (done 2026-10-29, `b04c897`).
+- Remote non-US locations pass the rule without country filtering.
+- Anthropic "Research Engineer" roles may require research depth beyond new-grad scope.
+- The seeded-run guard is only in the CLI; calling `run_watch()` directly with the project folder as root isn't blocked.
+- Python 3.10 runtime remains untested.
+- Absolute paths appear in some output records.
+- The second-day live run is not completed yet (done 2026-10-29, `b04c897`).
 - **Learned:** A rule can pass every unit test and still find nothing on real data; check per-condition pass rates on real data before trusting it.
 
 ### 2026-10-29: Backend Transition (No API Key) & Smoke Test
@@ -81,9 +82,46 @@ Entries for 2026-10-28 were written at the end of the day from commits and termi
 ### 2026-10-29: Sampling Trial Run & Disagreement Analysis
 - **What happened:** Ran 5 dev postings across 4 fresh calls each (20 total evaluations), achieving 55% agreement (11/20) and 4/5 unanimous postings. Unanimous disagreements clustered around two distinct rule/model gaps: implicit level signals (pay bands and seniority qualifications) and how experiments are categorized (evaluate vs. research).
 - **What I did:** Scored the sampling outputs, generated evidence files, and authored `SAMPLING_REPORT.md` to document the repeatability and divergence patterns.
+- **Expected:** I expected Claude's live judgments to achieve at least 80% to 90% agreement with my hand-crafted labels, assuming our definitions of a relevant new-grad ML role were largely aligned.
 - **Commit:** `b7e58f7` (sampling run), `1f1f07c` (scorer)
 
 ### 2026-10-29: Quoted Text Mismatch in Sampling Report
 - **What happened:** My first draft of Section 4 in `SAMPLING_REPORT.md` mistakenly quoted job description text as if it were Claude's generated reasoning. A grep check against the saved run outputs revealed 0 matches for those strings.
 - **What I did:** Replaced the incorrect text with Claude's actual reasoning phrases extracted directly from the run logs (`5438044008_r01.json` and `4631822008_r01.json`).
 - **Commit:** `e5ce9e5`
+
+### 2026-10-29: Two Revision Changes Applied by Accident
+- **What happened:** While writing `prompts/judge_revision.md`, I ran both candidate edits (experiments-as-evaluate in point 1, explicit-only level in point 2), so the revision briefly had two changes, which would break "one change at a time".
+- **What I did:** `diff` against the baseline showed two changed lines before any run. I reset the file to the baseline, applied only change (b), confirmed one changed line, and committed it before the revision's dev run (commit 05:17:08 UTC; order check in `evidence/exp_revision_order_check.txt`).
+- **Commit:** `908b8f7`
+
+### 2026-10-29: Hand-Typed Diff in the Experiment Report
+- **What happened:** In `EXPERIMENT_REPORT.md` I retyped the prompt diff by hand several times; versions had paraphrased wording, an invented `@@` header, wrong run-folder names, and made-up timestamps that did not match my files.
+- **What I did:** Replaced the typed diff with the exact added sentence and a pointer to the machine-generated `evidence/exp_prompt_diff.txt` (`diff -u`), and copied run-folder names from `ls` output. Lesson: only copy evidence from the terminal or files, never retype it.
+- **Commit:** `71830f9`, `0ab1c6c`
+
+### 2026-10-29: Prompt Experiment Result — Held-Out at the Ceiling
+- **What happened:** Baseline 7/10 on dev; the one-change revision 10/10 on dev; both 10/10 on held-out. Held-out had no research-blended posting with only implicit seniority signals, so it could not separate the prompts.
+- **What I did:** Reported generalization as untested instead of claiming the revision is better, and did not change either prompt after seeing held-out.
+- **Expected:** I expected the held-out set to show a clear drop for the baseline and a higher score for the revision, confirming that the explicit-level rule generalized successfully across unseen data.
+- **Commit:** `71830f9`
+
+### 2026-10-29: Action Surface — Clipboard Overwritten
+- **What happened:** For Mode 1, my clipboard was overwritten twice: copying the check commands, and then copying terminal output, replaced the prompt I meant to paste into Claude.ai.
+- **What I did:** Wrote the input to `experiment/action_surface/mode1_input.txt` and copied from that file right before pasting, which also records exactly what was pasted.
+- **Commit:** `93600bf`
+
+### 2026-10-29: Action Surface — Auto Mode Found in the Session Logs
+- **What happened:** In Mode 3, Claude Code never asked me for permission. Extracting the tool calls from the local session logs showed `permissionMode: auto` for both Mode 2 and Mode 3: every step was a raw Bash command approved by the auto-mode classifier, not by me. Mode 3 also wrote files in a scratchpad outside the sandbox folder, stayed on `boards-api.greenhouse.io` only by its own choice, and unescaped the double-escaped content once.
+- **What I did:** Recorded only the extracted tool calls (`mode2_tool_summary.txt`, `mode3_tool_log.txt`), not the transcripts, and used the finding in `ACTION_SURFACE.md`: the authority comes from the tool settings, not the task.
+- **Commit:** `93600bf`
+
+### 2026-10-29: Unresolved / Not Checked (as of submission)
+- Removed postings are not reported, and the state keeps removed ids, so a re-posted id would not be reported as new.
+- Remote postings outside the US pass the rule; Research Engineer roles may require research depth the rule does not check.
+- The revision prompt's generalization is untested (held-out ceiling); the watch still uses the baseline prompt.
+- Modes 2 and 3 were run only in auto mode; default permission mode was not tested. Each tool call appears twice in the session logs, which I did not verify.
+- Python 3.10 untested (3.14.0 only); the seeded-run guard is CLI-only; the claude_cli and API backends were not compared.
+- **Learned:** Repeatability is not correctness; a held-out set only tests what it contains; and an agent's reach is set by its permissions, not by the task it is given.
+
+_Note: 2026-10-29 entries in this section were organized with help from a Claude chat from my commits and evidence files; the events and decisions are mine._
