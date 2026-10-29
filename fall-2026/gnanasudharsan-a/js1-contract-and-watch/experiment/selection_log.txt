@@ -1,0 +1,10 @@
+raw_file: data/raw/anthropic_20261028T192103Z.json
+seed: 7375 (random.Random(7375).sample for the added postings; a fresh random.Random(7375).shuffle for the split)
+title filter: 'engineer' as substring AND whole word/phrase any of 'ai', 'ml', 'machine learning', 'research', 'nlp'
+total postings: 680
+rule RELEVANT pool: 7 (all taken)
+rule NOT_RELEVANT pool: 673
+NOT_RELEVANT title-filter pool: 54 (sampled 13)
+chosen: 20
+dev ids (10): 4613568008, 5438044008, 4980430008, 4631822008, 5264619008, 4669581008, 5442934008, 5390811008, 5198255008, 4616971008
+heldout ids (10): 5364804008, 4938436008, 5416709008, 5254364008, 5223093008, 5459098008, 5390754008, 4952051008, 5404725008, 5285246008
