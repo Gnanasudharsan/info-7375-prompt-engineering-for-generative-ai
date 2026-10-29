@@ -1,0 +1,10 @@
+run_type=live baseline=False
+raw_file=/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/data/raw/anthropic_20261029T044359Z.json
+total_postings=679 new=2
+NEW 5466517008 Senior Field Engineer, Data Center Design and Engineering
+NEW 5466480008 Staff+ Software Engineer, Deployment
+RULE 5466517008 NOT_RELEVANT [record (recomputable)]
+CLAUDE 5466517008 NOT_RELEVANT [judgment (model output, not fact)]
+RULE 5466480008 NOT_RELEVANT [record (recomputable)]
+CLAUDE 5466480008 NOT_RELEVANT [judgment (model output, not fact)]
+report=/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/data/runs/20261029T044359Z.json

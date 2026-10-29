@@ -1,0 +1,185 @@
+{
+  "run_type": "live",
+  "label": null,
+  "baseline": false,
+  "run_time_utc": "2026-10-29T04:43:59.644961Z",
+  "raw_file": "/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js1-contract-and-watch/data/raw/anthropic_20261029T044359Z.json",
+  "total_postings": 679,
+  "new_count": 2,
+  "new_postings": [
+    {
+      "id": 5466517008,
+      "title": "Senior Field Engineer, Data Center Design and Engineering"
+    },
+    {
+      "id": 5466480008,
+      "title": "Staff+ Software Engineer, Deployment"
+    }
+  ],
+  "claude_enabled": true,
+  "results": [
+    {
+      "id": 5466517008,
+      "title": "Senior Field Engineer, Data Center Design and Engineering",
+      "location": "Remote-Friendly, United States",
+      "department": "Compute",
+      "updated_at": "2026-10-28T21:20:34-04:00",
+      "rule_verdict": {
+        "verdict": "NOT_RELEVANT",
+        "label": "record (recomputable)"
+      },
+      "claude_verdict": {
+        "label": "judgment (model output, not fact)",
+        "status": "ok",
+        "backend": "claude_cli",
+        "model": "claude-opus-5-5",
+        "output": {
+          "id": 5466517008,
+          "verdict": "NOT_RELEVANT",
+          "reasoning": "Role type fails: 'Senior Field Engineer, Data Center Design and Engineering' in the Compute department is an on-site construction/infrastructure engineering role (walking installed work against design, resolving RFIs, commissioning power/cooling/controls, failure investigations with 5 Whys/8D), not hands-on ML, NLP, or AI systems engineering. It does not match any of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). Level fails: the title is explicitly Senior and the posting asks for years spent on active project sites in energy, power, heavy industrial, or data center environments, which is unrealistic for a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12 with one ML co-op. Skills: the required section names fewer than 2 specific technologies (drawings, single-line diagrams, P&IDs are domain artifacts; Procore/Primavera P6 are only nice-to-haves), so the skills test is skipped, and nothing in her shipped Python/PyTorch/Hugging Face/FastAPI/MLflow/AWS stack is relevant anyway. Location passes (Remote-Friendly, United States, though >50% site travel is required), and sponsorship passes ('We do sponsor visas!'), but the role-type and level failures are disqualifying.",
+          "resume_fields_cited": [
+            "target_roles",
+            "education",
+            "experience",
+            "skills.ml_nlp",
+            "skills.languages",
+            "needs_sponsorship",
+            "willing_to_relocate_us"
+          ],
+          "posting_fields_cited": [
+            "title",
+            "departments.name",
+            "content",
+            "location.name",
+            "offices.name",
+            "metadata.value"
+          ]
+        },
+        "failed_attempts": []
+      },
+      "justification": {
+        "title": {
+          "field": "title",
+          "passed": false,
+          "matches": []
+        },
+        "seniority": {
+          "field": "title",
+          "passed": false,
+          "excluded_words_found": [
+            "senior"
+          ]
+        },
+        "location": {
+          "field": "location.name",
+          "passed": true,
+          "matched_part": "Remote-Friendly, United States",
+          "matched_by": "contains \"united states\""
+        },
+        "sponsorship": {
+          "field": "content",
+          "passed": true,
+          "negative_phrase_found": false,
+          "result": "negative phrase \"not currently able to sponsor\" not found"
+        },
+        "skills": {
+          "field": "content",
+          "passed": false,
+          "matched": [],
+          "distinct_count": 0,
+          "required": 2
+        },
+        "failed_conditions": [
+          "title",
+          "seniority",
+          "skills"
+        ],
+        "summary": "title: no target role matched; seniority: senior; location.name: \"Remote-Friendly, United States\" (contains \"united states\"); content sponsorship: negative phrase \"not currently able to sponsor\" not found; skills (0/2): none; failed: title, seniority, skills"
+      }
+    },
+    {
+      "id": 5466480008,
+      "title": "Staff+ Software Engineer, Deployment",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "department": "Software Engineering - Infrastructure",
+      "updated_at": "2026-10-28T16:52:27-04:00",
+      "rule_verdict": {
+        "verdict": "NOT_RELEVANT",
+        "label": "record (recomputable)"
+      },
+      "claude_verdict": {
+        "label": "judgment (model output, not fact)",
+        "status": "ok",
+        "backend": "claude_cli",
+        "model": "claude-opus-5-5",
+        "output": {
+          "id": 5466480008,
+          "verdict": "NOT_RELEVANT",
+          "reasoning": "This posting fails on role type, level, and skills fit, though location and sponsorship pass. Role type: 'Staff+ Software Engineer, Deployment' sits in 'Software Engineering - Infrastructure'. The job is building deployment pipelines, progressive delivery, feature flags, runtime configuration, infrastructure-as-code, and artifact distribution. It is not hands-on ML, NLP, or AI systems engineering, and it matches none of Ananya's target roles (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, Research Engineer). Level: the title says Staff+, and the minimum qualifications require 'Experience leading the design, building, and operation of distributed systems or infrastructure in production, including technical direction across teams'. The $405,000-$485,000 salary also reflects a very senior level. This is not realistic for a new grad finishing an MS at Boston University in 2026-12 whose only experience is an 8-month ML Engineer co-op. Skills fit: the minimum qualifications name more than 2 technologies (Rust, Go, C++, Java, Kubernetes, AWS, GCP). Only AWS is in her shipped list, so fewer than 2 match and the skills test fails. Kubernetes is a core requirement, and she lists it only under familiar_with_not_shipped, which disqualifies on its own under the rules. She has also shipped none of the required backend or systems languages (Rust/Go/C++/Java); her languages are Python and SQL. Location passes: the posting is Remote-Friendly (Travel-Required) with US offices in San Francisco, Seattle, and New York City, and she is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which matters because she needs sponsorship. These do not outweigh the role, level, and skills failures.",
+          "resume_fields_cited": [
+            "target_roles",
+            "education",
+            "experience",
+            "skills.languages",
+            "skills.database_cloud",
+            "skills.familiar_with_not_shipped",
+            "needs_sponsorship",
+            "willing_to_relocate_us"
+          ],
+          "posting_fields_cited": [
+            "title",
+            "departments.name",
+            "content",
+            "location.name",
+            "offices.location"
+          ]
+        },
+        "failed_attempts": []
+      },
+      "justification": {
+        "title": {
+          "field": "title",
+          "passed": false,
+          "matches": []
+        },
+        "seniority": {
+          "field": "title",
+          "passed": false,
+          "excluded_words_found": [
+            "staff"
+          ]
+        },
+        "location": {
+          "field": "location.name",
+          "passed": true,
+          "matched_part": "Remote-Friendly (Travel-Required)",
+          "matched_by": "starts with \"remote-friendly\""
+        },
+        "sponsorship": {
+          "field": "content",
+          "passed": true,
+          "negative_phrase_found": false,
+          "result": "negative phrase \"not currently able to sponsor\" not found"
+        },
+        "skills": {
+          "field": "content",
+          "passed": false,
+          "matched": [
+            {
+              "skill": "AWS",
+              "resume_path": "skills.database_cloud"
+            }
+          ],
+          "distinct_count": 1,
+          "required": 2
+        },
+        "failed_conditions": [
+          "title",
+          "seniority",
+          "skills"
+        ],
+        "summary": "title: no target role matched; seniority: staff; location.name: \"Remote-Friendly (Travel-Required)\" (starts with \"remote-friendly\"); content sponsorship: negative phrase \"not currently able to sponsor\" not found; skills (1/2): AWS [skills.database_cloud]; failed: title, seniority, skills"
+      }
+    }
+  ]
+}
