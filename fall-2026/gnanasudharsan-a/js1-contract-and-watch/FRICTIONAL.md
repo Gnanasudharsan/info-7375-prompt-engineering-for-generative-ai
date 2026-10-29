@@ -86,4 +86,4 @@ Entries for 2026-10-28 were written at the end of the day from commits and termi
 ### 2026-10-29: Quoted Text Mismatch in Sampling Report
 - **What happened:** My first draft of Section 4 in `SAMPLING_REPORT.md` mistakenly quoted job description text as if it were Claude's generated reasoning. A grep check against the saved run outputs revealed 0 matches for those strings.
 - **What I did:** Replaced the incorrect text with Claude's actual reasoning phrases extracted directly from the run logs (`5438044008_r01.json` and `4631822008_r01.json`).
-- **Commit:** `(pending commit)`
+- **Commit:** `e5ce9e5`
