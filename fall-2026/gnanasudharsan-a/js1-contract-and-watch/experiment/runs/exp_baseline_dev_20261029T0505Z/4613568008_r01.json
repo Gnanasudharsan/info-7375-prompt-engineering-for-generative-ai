@@ -1,0 +1,73 @@
+{
+  "posting_id": 4613568008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:05:38.089237+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "d068aed5-974c-4aa3-bd43-f21a2a4ac310"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-z1bwqkqp",
+      "requested_session_id": "d068aed5-974c-4aa3-bd43-f21a2a4ac310",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":13004,\"stop_reason\":\"end_turn\",\"session_id\":\"d068aed5-974c-4aa3-bd43-f21a2a4ac310\",\"total_cost_usd\":0.0306192,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":346,\"cache_read_input_tokens\":4816,\"output_tokens\":1344,\"output_tokens_details\":{\"thinking_tokens\":484},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":346,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1344,\"cache_read_input_tokens\":4816,\"cache_creation_input_tokens\":346,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":346},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1344,\"cacheReadInputTokens\":4816,\"cacheCreationInputTokens\":346,\"webSearchRequests\":0,\"costUSD\":0.0306192,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":484,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":346,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4613568008, \\\"verdict\\\": \\\"RELEVANT\\\", \\\"reasoning\\\": \\\"This passes all five criteria, though it is a stretch on level. (1) Role type: The title is Research Engineer, which is in Ananya's target_roles. The role blends research and engineering, but the representative projects are mostly building work: architecting and optimizing RL training infrastructure, distributed experiment management on GPU clusters, building training environments and evaluations, profiling and benchmarking, caching, debugging distributed systems, automated testing frameworks and clean APIs. That matches the rule's exception for Research Engineer roles focused on building, training, and deploying systems. The posting also says strong candidates need not have academic research experience or publications, so it is not a heavy academic research role. (2) Level: The posting does not explicitly require 3+ years, a mid/senior level, or a PhD. It sets a Bachelor's minimum and says years of experience 'correlate with the internal job level requirements.' Two signals point to a senior hire: the $500,000-$850,000 salary band and the requirement for 'industry experience in machine learning research.' Ananya's ML Engineer co-op at Lumenwise Health (RAG prototype, transformer fine-tuning, MLflow tracking) and her in-progress MS (ending 2026-12) are partial evidence, not a strong match. Because none of the hard rejection triggers are stated, it is not excluded, but she is a stretch candidate. (3) Skills: The required section names Python, Trio (async), and PyTorch/TensorFlow/JAX. She has shipped two of these, Python and PyTorch, so the 2-of-shipped threshold is met. Trio/async is a gap. Kubernetes (familiar_with_not_shipped) and Rust/C++ appear only under 'Strong candidates may have,' so they are not core requirements and do not trigger rejection. (4) Location: San Francisco, CA or New York City, NY, with at least 25% of time in the office. Both are US locations, and she is willing to relocate within the US. (5) Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!' and promises reasonable effort plus an immigration lawyer. There is no disclaimer, so this passes.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"experience\\\", \\\"education\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\", \\\"personal.location\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":5609,\"type\":\"result\",\"duration_ms\":13061,\"uuid\":\"1b8fd105-bc22-456d-8fef-ded9662a17b9\",\"ttft_stream_ms\":1005,\"time_to_request_ms\":52,\"first_content_frame_ms\":1005,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "d068aed5-974c-4aa3-bd43-f21a2a4ac310",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4613568008, \"verdict\": \"RELEVANT\", \"reasoning\": \"This passes all five criteria, though it is a stretch on level. (1) Role type: The title is Research Engineer, which is in Ananya's target_roles. The role blends research and engineering, but the representative projects are mostly building work: architecting and optimizing RL training infrastructure, distributed experiment management on GPU clusters, building training environments and evaluations, profiling and benchmarking, caching, debugging distributed systems, automated testing frameworks and clean APIs. That matches the rule's exception for Research Engineer roles focused on building, training, and deploying systems. The posting also says strong candidates need not have academic research experience or publications, so it is not a heavy academic research role. (2) Level: The posting does not explicitly require 3+ years, a mid/senior level, or a PhD. It sets a Bachelor's minimum and says years of experience 'correlate with the internal job level requirements.' Two signals point to a senior hire: the $500,000-$850,000 salary band and the requirement for 'industry experience in machine learning research.' Ananya's ML Engineer co-op at Lumenwise Health (RAG prototype, transformer fine-tuning, MLflow tracking) and her in-progress MS (ending 2026-12) are partial evidence, not a strong match. Because none of the hard rejection triggers are stated, it is not excluded, but she is a stretch candidate. (3) Skills: The required section names Python, Trio (async), and PyTorch/TensorFlow/JAX. She has shipped two of these, Python and PyTorch, so the 2-of-shipped threshold is met. Trio/async is a gap. Kubernetes (familiar_with_not_shipped) and Rust/C++ appear only under 'Strong candidates may have,' so they are not core requirements and do not trigger rejection. (4) Location: San Francisco, CA or New York City, NY, with at least 25% of time in the office. Both are US locations, and she is willing to relocate within the US. (5) Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!' and promises reasonable effort plus an immigration lawyer. There is no disclaimer, so this passes.\", \"resume_fields_cited\": [\"target_roles\", \"experience\", \"education\", \"skills.languages\", \"skills.ml_nlp\", \"skills.familiar_with_not_shipped\", \"willing_to_relocate_us\", \"needs_sponsorship\", \"personal.location\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4613568008,
+    "verdict": "RELEVANT",
+    "reasoning": "This passes all five criteria, though it is a stretch on level. (1) Role type: The title is Research Engineer, which is in Ananya's target_roles. The role blends research and engineering, but the representative projects are mostly building work: architecting and optimizing RL training infrastructure, distributed experiment management on GPU clusters, building training environments and evaluations, profiling and benchmarking, caching, debugging distributed systems, automated testing frameworks and clean APIs. That matches the rule's exception for Research Engineer roles focused on building, training, and deploying systems. The posting also says strong candidates need not have academic research experience or publications, so it is not a heavy academic research role. (2) Level: The posting does not explicitly require 3+ years, a mid/senior level, or a PhD. It sets a Bachelor's minimum and says years of experience 'correlate with the internal job level requirements.' Two signals point to a senior hire: the $500,000-$850,000 salary band and the requirement for 'industry experience in machine learning research.' Ananya's ML Engineer co-op at Lumenwise Health (RAG prototype, transformer fine-tuning, MLflow tracking) and her in-progress MS (ending 2026-12) are partial evidence, not a strong match. Because none of the hard rejection triggers are stated, it is not excluded, but she is a stretch candidate. (3) Skills: The required section names Python, Trio (async), and PyTorch/TensorFlow/JAX. She has shipped two of these, Python and PyTorch, so the 2-of-shipped threshold is met. Trio/async is a gap. Kubernetes (familiar_with_not_shipped) and Rust/C++ appear only under 'Strong candidates may have,' so they are not core requirements and do not trigger rejection. (4) Location: San Francisco, CA or New York City, NY, with at least 25% of time in the office. Both are US locations, and she is willing to relocate within the US. (5) Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!' and promises reasonable effort plus an immigration lawyer. There is no disclaimer, so this passes.",
+    "resume_fields_cited": [
+      "target_roles",
+      "experience",
+      "education",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.familiar_with_not_shipped",
+      "willing_to_relocate_us",
+      "needs_sponsorship",
+      "personal.location"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "posting_id": 5438044008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:05:52.914364+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "c8b58d1f-8770-41a2-97b5-bbe26bb47a34"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-amppfbwk",
+      "requested_session_id": "c8b58d1f-8770-41a2-97b5-bbe26bb47a34",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":11754,\"stop_reason\":\"end_turn\",\"session_id\":\"c8b58d1f-8770-41a2-97b5-bbe26bb47a34\",\"total_cost_usd\":0.027452000000000004,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":344,\"cache_read_input_tokens\":4960,\"output_tokens\":1185,\"output_tokens_details\":{\"thinking_tokens\":306},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":344,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1185,\"cache_read_input_tokens\":4960,\"cache_creation_input_tokens\":344,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":344},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1185,\"cacheReadInputTokens\":4960,\"cacheCreationInputTokens\":344,\"webSearchRequests\":0,\"costUSD\":0.027452000000000004,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":306,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":344,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5438044008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Location, sponsorship, and the skills test all pass, but the role type and level fail.\\\\n\\\\nPasses: (1) Location: San Francisco, New York City, and Seattle are all US offices, and Ananya is willing to relocate within the US. (2) Sponsorship: the posting says 'We do sponsor visas!', which matters because she needs sponsorship. (3) Skills test: the required section names Python and 'JAX or PyTorch', and she has shipped both Python and PyTorch, so the technology test passes.\\\\n\\\\nFailure 1, role type: the title is a hybrid 'Research Engineer / Research Scientist', and the work centers on novel research rather than building, training, and deploying applied systems. Responsibilities include 'Develop next-generation model architectures and RL algorithms', studying RL scaling behavior, building scaling and cost models, and diagnosing frontier-scale training instabilities. Representative projects include developing a new attention variant and preparing Anthropic's 'largest-ever RL run'. This is frontier RL and scaling research, not the applied ML, NLP, or RAG engineering that matches her MLE, AI Engineer, and Applied NLP targets. Including 'Research Engineer' in target_roles does not override the rule that research-engineer roles count only when the work is mostly building and deploying systems.\\\\n\\\\nFailure 2, level: no explicit year count is given ('will correlate with the internal job level'), but the minimum qualifications are senior in practice. They require hands-on experience training large models in a distributed setting, including data, tensor, and pipeline parallelism tradeoffs. They also require a track record of original technical work in ML training or systems, and deep familiarity with large-scale optimization dynamics. The $500,000 to $850,000 salary range also points to a senior or staff level. Ananya is a new grad finishing her MS in December 2026. Her experience is one co-op building a RAG QA prototype and fine-tuning a small transformer classifier with MLflow, plus a solo coursework chunking-comparison project. She has no distributed large-model training, RL, or published or original methods work. Her Ray experience is listed only as familiar, not shipped. This is not a realistic new-grad fit.\\\", \\\"resume_fields_cited\\\": [\\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"target_roles\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\", \\\"personal.location\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":4383,\"type\":\"result\",\"duration_ms\":11899,\"uuid\":\"8f7b4e44-ce36-4a33-81ea-f2ec070c38c6\",\"ttft_stream_ms\":1455,\"time_to_request_ms\":142,\"first_content_frame_ms\":1455,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "c8b58d1f-8770-41a2-97b5-bbe26bb47a34",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5438044008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Location, sponsorship, and the skills test all pass, but the role type and level fail.\\n\\nPasses: (1) Location: San Francisco, New York City, and Seattle are all US offices, and Ananya is willing to relocate within the US. (2) Sponsorship: the posting says 'We do sponsor visas!', which matters because she needs sponsorship. (3) Skills test: the required section names Python and 'JAX or PyTorch', and she has shipped both Python and PyTorch, so the technology test passes.\\n\\nFailure 1, role type: the title is a hybrid 'Research Engineer / Research Scientist', and the work centers on novel research rather than building, training, and deploying applied systems. Responsibilities include 'Develop next-generation model architectures and RL algorithms', studying RL scaling behavior, building scaling and cost models, and diagnosing frontier-scale training instabilities. Representative projects include developing a new attention variant and preparing Anthropic's 'largest-ever RL run'. This is frontier RL and scaling research, not the applied ML, NLP, or RAG engineering that matches her MLE, AI Engineer, and Applied NLP targets. Including 'Research Engineer' in target_roles does not override the rule that research-engineer roles count only when the work is mostly building and deploying systems.\\n\\nFailure 2, level: no explicit year count is given ('will correlate with the internal job level'), but the minimum qualifications are senior in practice. They require hands-on experience training large models in a distributed setting, including data, tensor, and pipeline parallelism tradeoffs. They also require a track record of original technical work in ML training or systems, and deep familiarity with large-scale optimization dynamics. The $500,000 to $850,000 salary range also points to a senior or staff level. Ananya is a new grad finishing her MS in December 2026. Her experience is one co-op building a RAG QA prototype and fine-tuning a small transformer classifier with MLflow, plus a solo coursework chunking-comparison project. She has no distributed large-model training, RL, or published or original methods work. Her Ray experience is listed only as familiar, not shipped. This is not a realistic new-grad fit.\", \"resume_fields_cited\": [\"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.ml_nlp\", \"skills.familiar_with_not_shipped\", \"target_roles\", \"needs_sponsorship\", \"willing_to_relocate_us\", \"personal.location\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5438044008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Location, sponsorship, and the skills test all pass, but the role type and level fail.\n\nPasses: (1) Location: San Francisco, New York City, and Seattle are all US offices, and Ananya is willing to relocate within the US. (2) Sponsorship: the posting says 'We do sponsor visas!', which matters because she needs sponsorship. (3) Skills test: the required section names Python and 'JAX or PyTorch', and she has shipped both Python and PyTorch, so the technology test passes.\n\nFailure 1, role type: the title is a hybrid 'Research Engineer / Research Scientist', and the work centers on novel research rather than building, training, and deploying applied systems. Responsibilities include 'Develop next-generation model architectures and RL algorithms', studying RL scaling behavior, building scaling and cost models, and diagnosing frontier-scale training instabilities. Representative projects include developing a new attention variant and preparing Anthropic's 'largest-ever RL run'. This is frontier RL and scaling research, not the applied ML, NLP, or RAG engineering that matches her MLE, AI Engineer, and Applied NLP targets. Including 'Research Engineer' in target_roles does not override the rule that research-engineer roles count only when the work is mostly building and deploying systems.\n\nFailure 2, level: no explicit year count is given ('will correlate with the internal job level'), but the minimum qualifications are senior in practice. They require hands-on experience training large models in a distributed setting, including data, tensor, and pipeline parallelism tradeoffs. They also require a track record of original technical work in ML training or systems, and deep familiarity with large-scale optimization dynamics. The $500,000 to $850,000 salary range also points to a senior or staff level. Ananya is a new grad finishing her MS in December 2026. Her experience is one co-op building a RAG QA prototype and fine-tuning a small transformer classifier with MLflow, plus a solo coursework chunking-comparison project. She has no distributed large-model training, RL, or published or original methods work. Her Ray experience is listed only as familiar, not shipped. This is not a realistic new-grad fit.",
+    "resume_fields_cited": [
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.familiar_with_not_shipped",
+      "target_roles",
+      "needs_sponsorship",
+      "willing_to_relocate_us",
+      "personal.location"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

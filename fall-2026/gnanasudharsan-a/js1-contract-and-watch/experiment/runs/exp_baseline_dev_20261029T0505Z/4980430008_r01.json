@@ -1,0 +1,71 @@
+{
+  "posting_id": 4980430008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:06:05.704019+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "a19f6dab-6a14-49ad-9df2-70c5d7e8218a"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-m81dzw9p",
+      "requested_session_id": "a19f6dab-6a14-49ad-9df2-70c5d7e8218a",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":6801,\"stop_reason\":\"end_turn\",\"session_id\":\"a19f6dab-6a14-49ad-9df2-70c5d7e8218a\",\"total_cost_usd\":0.0179,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":345,\"cache_read_input_tokens\":5160,\"output_tokens\":705,\"output_tokens_details\":{\"thinking_tokens\":34},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":345,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":705,\"cache_read_input_tokens\":5160,\"cache_creation_input_tokens\":345,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":345},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":705,\"cacheReadInputTokens\":5160,\"cacheCreationInputTokens\":345,\"webSearchRequests\":0,\"costUSD\":0.0179,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":34,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":345,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4980430008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"This posting fails on level, even though it passes on role type, location, and sponsorship. Role type passes: 'Research Engineer' is in Ananya's target_roles. The responsibilities are hands-on engineering, not publishing research. They include building inference and training infrastructure, activation extraction, steering vector application, profiling and optimization, and research tooling. The posting says no research experience is required. Location passes: the role is based in San Francisco, CA, and Ananya is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which fits her needs_sponsorship=true. Level fails, and this is decisive. The 'You may be a good fit if you' section asks for '5-10+ years of experience building software'. The rubric rejects explicit requirements of 3+ years. Ananya is a new grad finishing an MS at Boston University (ending 2026-12) with one 8-month ML Engineer co-op (2026-01 to 2026-08), so she is far short of that bar. The $315,000-$560,000 salary range also points to a senior or staff level. The general 'apply even if you don't meet every qualification' language does not override a specific 5-10+ year requirement. Skills would not change the result. The core requirements name Python, Rust, Go, and Java, of which only Python is in her shipped list, and 'productive with Python' is the real requirement. PyTorch/CUDA, transformers, and large-scale distributed or multi-GPU work appear only under nice-to-haves. Ananya's Python, PyTorch, and Hugging Face Transformers work is relevant, but the experience requirement alone makes this NOT_RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"education\\\", \\\"experience\\\", \\\"target_roles\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":1352,\"type\":\"result\",\"duration_ms\":6898,\"uuid\":\"af0e6f7d-fdb6-4e44-8c4f-a94f3895400b\",\"ttft_stream_ms\":1065,\"time_to_request_ms\":91,\"first_content_frame_ms\":1065,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "a19f6dab-6a14-49ad-9df2-70c5d7e8218a",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4980430008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"This posting fails on level, even though it passes on role type, location, and sponsorship. Role type passes: 'Research Engineer' is in Ananya's target_roles. The responsibilities are hands-on engineering, not publishing research. They include building inference and training infrastructure, activation extraction, steering vector application, profiling and optimization, and research tooling. The posting says no research experience is required. Location passes: the role is based in San Francisco, CA, and Ananya is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which fits her needs_sponsorship=true. Level fails, and this is decisive. The 'You may be a good fit if you' section asks for '5-10+ years of experience building software'. The rubric rejects explicit requirements of 3+ years. Ananya is a new grad finishing an MS at Boston University (ending 2026-12) with one 8-month ML Engineer co-op (2026-01 to 2026-08), so she is far short of that bar. The $315,000-$560,000 salary range also points to a senior or staff level. The general 'apply even if you don't meet every qualification' language does not override a specific 5-10+ year requirement. Skills would not change the result. The core requirements name Python, Rust, Go, and Java, of which only Python is in her shipped list, and 'productive with Python' is the real requirement. PyTorch/CUDA, transformers, and large-scale distributed or multi-GPU work appear only under nice-to-haves. Ananya's Python, PyTorch, and Hugging Face Transformers work is relevant, but the experience requirement alone makes this NOT_RELEVANT.\", \"resume_fields_cited\": [\"education\", \"experience\", \"target_roles\", \"skills.languages\", \"skills.ml_nlp\", \"needs_sponsorship\", \"willing_to_relocate_us\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4980430008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "This posting fails on level, even though it passes on role type, location, and sponsorship. Role type passes: 'Research Engineer' is in Ananya's target_roles. The responsibilities are hands-on engineering, not publishing research. They include building inference and training infrastructure, activation extraction, steering vector application, profiling and optimization, and research tooling. The posting says no research experience is required. Location passes: the role is based in San Francisco, CA, and Ananya is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which fits her needs_sponsorship=true. Level fails, and this is decisive. The 'You may be a good fit if you' section asks for '5-10+ years of experience building software'. The rubric rejects explicit requirements of 3+ years. Ananya is a new grad finishing an MS at Boston University (ending 2026-12) with one 8-month ML Engineer co-op (2026-01 to 2026-08), so she is far short of that bar. The $315,000-$560,000 salary range also points to a senior or staff level. The general 'apply even if you don't meet every qualification' language does not override a specific 5-10+ year requirement. Skills would not change the result. The core requirements name Python, Rust, Go, and Java, of which only Python is in her shipped list, and 'productive with Python' is the real requirement. PyTorch/CUDA, transformers, and large-scale distributed or multi-GPU work appear only under nice-to-haves. Ananya's Python, PyTorch, and Hugging Face Transformers work is relevant, but the experience requirement alone makes this NOT_RELEVANT.",
+    "resume_fields_cited": [
+      "education",
+      "experience",
+      "target_roles",
+      "skills.languages",
+      "skills.ml_nlp",
+      "needs_sponsorship",
+      "willing_to_relocate_us"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

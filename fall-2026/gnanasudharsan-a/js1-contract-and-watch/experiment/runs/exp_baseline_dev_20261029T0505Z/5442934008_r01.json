@@ -1,0 +1,70 @@
+{
+  "posting_id": 5442934008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:06:44.534006+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "58255337-bf77-4905-bd03-f354e329752a"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-xfs_sbic",
+      "requested_session_id": "58255337-bf77-4905-bd03-f354e329752a",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":7636,\"stop_reason\":\"end_turn\",\"session_id\":\"58255337-bf77-4905-bd03-f354e329752a\",\"total_cost_usd\":0.053111200000000004,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4969,\"cache_read_input_tokens\":1056,\"output_tokens\":657,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4969,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":657,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":4969,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4969},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":657,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":4969,\"webSearchRequests\":0,\"costUSD\":0.053111200000000004,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4969,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5442934008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"This posting fails on both role type and level. Role type: the title is 'Manager, Applied AI Engineering (Megas)', a people-management and customer-facing leadership role. The main duties are to build, coach, and grow a team of Applied AI Engineers, staff pods, set performance goals, act as a senior technical advisor to strategic accounts, and travel to customer sites. That is not the individual-contributor ML/AI engineering role Ananya targets (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, or Research Engineer). Level: the posting explicitly asks for 6+ years of experience in technical roles and 4+ years in a formal leadership capacity, ideally including managing managers. Ananya is a new grad finishing an MS in Computer Science (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. This is far beyond the 3+ year rejection threshold. Skills: the requirements name only Python or TypeScript as a specific language, plus general LLM, agent, and MCP experience, so the 2-technology skills test is borderline. Her Python, RAG prototype, and evaluation work show some topical overlap, but this does not matter given the role and level disqualifications. Location (San Francisco, CA, hybrid with 25% in-office) is US-based and she is willing to relocate. Sponsorship is offered ('We do sponsor visas!'), which suits her need for sponsorship. Those positives do not outweigh the fact that this is a senior management role requiring 6+ and 4+ years of experience.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"skills.languages\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":7721,\"type\":\"result\",\"duration_ms\":7741,\"uuid\":\"5c89e019-9ad4-4a6f-843e-cfb545dc6823\",\"ttft_stream_ms\":1995,\"time_to_request_ms\":102,\"first_content_frame_ms\":1995,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "58255337-bf77-4905-bd03-f354e329752a",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5442934008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"This posting fails on both role type and level. Role type: the title is 'Manager, Applied AI Engineering (Megas)', a people-management and customer-facing leadership role. The main duties are to build, coach, and grow a team of Applied AI Engineers, staff pods, set performance goals, act as a senior technical advisor to strategic accounts, and travel to customer sites. That is not the individual-contributor ML/AI engineering role Ananya targets (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, or Research Engineer). Level: the posting explicitly asks for 6+ years of experience in technical roles and 4+ years in a formal leadership capacity, ideally including managing managers. Ananya is a new grad finishing an MS in Computer Science (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. This is far beyond the 3+ year rejection threshold. Skills: the requirements name only Python or TypeScript as a specific language, plus general LLM, agent, and MCP experience, so the 2-technology skills test is borderline. Her Python, RAG prototype, and evaluation work show some topical overlap, but this does not matter given the role and level disqualifications. Location (San Francisco, CA, hybrid with 25% in-office) is US-based and she is willing to relocate. Sponsorship is offered ('We do sponsor visas!'), which suits her need for sponsorship. Those positives do not outweigh the fact that this is a senior management role requiring 6+ and 4+ years of experience.\", \"resume_fields_cited\": [\"target_roles\", \"education\", \"experience\", \"skills.languages\", \"willing_to_relocate_us\", \"needs_sponsorship\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5442934008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "This posting fails on both role type and level. Role type: the title is 'Manager, Applied AI Engineering (Megas)', a people-management and customer-facing leadership role. The main duties are to build, coach, and grow a team of Applied AI Engineers, staff pods, set performance goals, act as a senior technical advisor to strategic accounts, and travel to customer sites. That is not the individual-contributor ML/AI engineering role Ananya targets (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, or Research Engineer). Level: the posting explicitly asks for 6+ years of experience in technical roles and 4+ years in a formal leadership capacity, ideally including managing managers. Ananya is a new grad finishing an MS in Computer Science (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. This is far beyond the 3+ year rejection threshold. Skills: the requirements name only Python or TypeScript as a specific language, plus general LLM, agent, and MCP experience, so the 2-technology skills test is borderline. Her Python, RAG prototype, and evaluation work show some topical overlap, but this does not matter given the role and level disqualifications. Location (San Francisco, CA, hybrid with 25% in-office) is US-based and she is willing to relocate. Sponsorship is offered ('We do sponsor visas!'), which suits her need for sponsorship. Those positives do not outweigh the fact that this is a senior management role requiring 6+ and 4+ years of experience.",
+    "resume_fields_cited": [
+      "target_roles",
+      "education",
+      "experience",
+      "skills.languages",
+      "willing_to_relocate_us",
+      "needs_sponsorship"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

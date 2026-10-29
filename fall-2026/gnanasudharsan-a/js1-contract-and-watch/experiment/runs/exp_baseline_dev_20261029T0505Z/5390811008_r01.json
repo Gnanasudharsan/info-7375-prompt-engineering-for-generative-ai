@@ -1,0 +1,73 @@
+{
+  "posting_id": 5390811008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:06:53.134343+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "6187dd63-cef2-4db0-9601-c57a88874b4b"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-t7vk8y7l",
+      "requested_session_id": "6187dd63-cef2-4db0-9601-c57a88874b4b",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":7436,\"stop_reason\":\"end_turn\",\"session_id\":\"6187dd63-cef2-4db0-9601-c57a88874b4b\",\"total_cost_usd\":0.0490472,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4311,\"cache_read_input_tokens\":1056,\"output_tokens\":717,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4311,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":717,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":4311,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4311},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":717,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":4311,\"webSearchRequests\":0,\"costUSD\":0.0490472,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4311,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5390811008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Level fails. The posting explicitly asks for '6+ years of experience as a Software Engineer, Technical Product Manager, Forward Deployed Engineer, AI startup founder, or similar technical role.' That is well above the 3+ year rejection threshold. The $300,000-$400,000 salary band also points to a senior role. Ananya is a new grad: she is finishing an MS in Computer Science (AI concentration) at Boston University, ending 2026-12, and her only industry experience is an 8-month Machine Learning Engineer Co-op at Lumenwise Health (2026-01 to 2026-08). Role type is also a weak fit. The title contains 'Research Engineer', which is in her target_roles. However, the work is largely go-to-market and field enablement: owning the 'technical<> GTM handshake' for launches, writing playbooks and training sessions, partnering with Sales on high-value accounts, and customer-facing work with travel. It is not core hands-on building, training, and deploying of ML systems. Her RAG prototype, evaluation work (300-question test set, the rag-eval-lab chunking comparison), and transformer fine-tuning do match the posting's 'demos, evals, and prototypes' and 'building with large language models' items. Skills test is skipped: the requirements name no specific technologies, only 'strong proficiency in at least one programming language' and LLM experience. Location passes: San Francisco, CA and New York City, NY are US offices with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which covers her needs_sponsorship=true. Still, the explicit 6+ years requirement alone disqualifies the role for a new-grad candidate.\\\", \\\"resume_fields_cited\\\": [\\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"target_roles\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\", \\\"personal.location\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":7621,\"type\":\"result\",\"duration_ms\":7642,\"uuid\":\"494ed8af-b4bc-409c-a1ea-4b95e826fb8b\",\"ttft_stream_ms\":1694,\"time_to_request_ms\":202,\"first_content_frame_ms\":1695,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "6187dd63-cef2-4db0-9601-c57a88874b4b",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5390811008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Level fails. The posting explicitly asks for '6+ years of experience as a Software Engineer, Technical Product Manager, Forward Deployed Engineer, AI startup founder, or similar technical role.' That is well above the 3+ year rejection threshold. The $300,000-$400,000 salary band also points to a senior role. Ananya is a new grad: she is finishing an MS in Computer Science (AI concentration) at Boston University, ending 2026-12, and her only industry experience is an 8-month Machine Learning Engineer Co-op at Lumenwise Health (2026-01 to 2026-08). Role type is also a weak fit. The title contains 'Research Engineer', which is in her target_roles. However, the work is largely go-to-market and field enablement: owning the 'technical<> GTM handshake' for launches, writing playbooks and training sessions, partnering with Sales on high-value accounts, and customer-facing work with travel. It is not core hands-on building, training, and deploying of ML systems. Her RAG prototype, evaluation work (300-question test set, the rag-eval-lab chunking comparison), and transformer fine-tuning do match the posting's 'demos, evals, and prototypes' and 'building with large language models' items. Skills test is skipped: the requirements name no specific technologies, only 'strong proficiency in at least one programming language' and LLM experience. Location passes: San Francisco, CA and New York City, NY are US offices with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which covers her needs_sponsorship=true. Still, the explicit 6+ years requirement alone disqualifies the role for a new-grad candidate.\", \"resume_fields_cited\": [\"education\", \"experience\", \"projects\", \"target_roles\", \"needs_sponsorship\", \"willing_to_relocate_us\", \"personal.location\", \"skills.languages\", \"skills.ml_nlp\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5390811008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Level fails. The posting explicitly asks for '6+ years of experience as a Software Engineer, Technical Product Manager, Forward Deployed Engineer, AI startup founder, or similar technical role.' That is well above the 3+ year rejection threshold. The $300,000-$400,000 salary band also points to a senior role. Ananya is a new grad: she is finishing an MS in Computer Science (AI concentration) at Boston University, ending 2026-12, and her only industry experience is an 8-month Machine Learning Engineer Co-op at Lumenwise Health (2026-01 to 2026-08). Role type is also a weak fit. The title contains 'Research Engineer', which is in her target_roles. However, the work is largely go-to-market and field enablement: owning the 'technical<> GTM handshake' for launches, writing playbooks and training sessions, partnering with Sales on high-value accounts, and customer-facing work with travel. It is not core hands-on building, training, and deploying of ML systems. Her RAG prototype, evaluation work (300-question test set, the rag-eval-lab chunking comparison), and transformer fine-tuning do match the posting's 'demos, evals, and prototypes' and 'building with large language models' items. Skills test is skipped: the requirements name no specific technologies, only 'strong proficiency in at least one programming language' and LLM experience. Location passes: San Francisco, CA and New York City, NY are US offices with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship passes: the posting says 'We do sponsor visas!', which covers her needs_sponsorship=true. Still, the explicit 6+ years requirement alone disqualifies the role for a new-grad candidate.",
+    "resume_fields_cited": [
+      "education",
+      "experience",
+      "projects",
+      "target_roles",
+      "needs_sponsorship",
+      "willing_to_relocate_us",
+      "personal.location",
+      "skills.languages",
+      "skills.ml_nlp"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

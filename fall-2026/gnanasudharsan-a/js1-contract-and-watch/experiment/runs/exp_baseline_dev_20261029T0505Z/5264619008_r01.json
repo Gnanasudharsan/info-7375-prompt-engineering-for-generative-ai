@@ -1,0 +1,73 @@
+{
+  "posting_id": 5264619008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:06:28.282019+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "5dfc6c05-dd37-4e21-821a-138035d28b37"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-oy4hroha",
+      "requested_session_id": "5dfc6c05-dd37-4e21-821a-138035d28b37",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":7946,\"stop_reason\":\"end_turn\",\"session_id\":\"5dfc6c05-dd37-4e21-821a-138035d28b37\",\"total_cost_usd\":0.019366200000000004,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":344,\"cache_read_input_tokens\":4431,\"output_tokens\":786,\"output_tokens_details\":{\"thinking_tokens\":87},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":344,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":786,\"cache_read_input_tokens\":4431,\"cache_creation_input_tokens\":344,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":344},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":786,\"cacheReadInputTokens\":4431,\"cacheCreationInputTokens\":344,\"webSearchRequests\":0,\"costUSD\":0.019366200000000004,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":87,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":344,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5264619008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Location is the decisive failure. The posting is based in London, UK (location.name), with a hybrid policy expecting staff in an Anthropic office at least 25% of the time. It is not US-based and not designated Remote or Remote-Friendly. Ananya is in Boston, MA and is willing to relocate only within the US (willing_to_relocate_us), so the location criterion is not met. Other factors were checked but do not change the verdict. (1) Role type: 'Research Engineer' is in her target_roles. The role does involve building benchmarks and shipping findings into production training recipes. However, it is framed as sitting 'at the boundary between research and engineering' and requires 'strong empirical research skills in Reinforcement Learning, large-scale ML training'. That makes it more research-heavy than her applied ML and NLP profile. (2) Level: no explicit years-of-experience or PhD requirement is stated ('Years of experience required will correlate with the internal job level'). But owning frontier-scale RL experiments end-to-end and experience with large-scale or distributed ML systems are a stretch for a new grad. Her experience is a single ML co-op (RAG prototype, small transformer classifier fine-tuning with MLflow) plus a coursework RAG project, with no RL work. (3) Skills: the minimum qualifications name only one specific technology, Python. Because fewer than 2 are named, the skills test is skipped per the rule. Python is in her skills.languages in any case. (4) Sponsorship: the posting says 'We do sponsor visas!', which suits her needs_sponsorship=true, but that sponsorship would be for a UK role. Because the location requirement fails, the verdict is NOT_RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\", \\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\"], \\\"posting_fields_cited\\\": [\\\"location.name\\\", \\\"title\\\", \\\"content\\\"]}\",\"ttft_ms\":2273,\"type\":\"result\",\"duration_ms\":8052,\"uuid\":\"4f831831-271a-4db5-8316-2d1c5f333b66\",\"ttft_stream_ms\":1457,\"time_to_request_ms\":102,\"first_content_frame_ms\":1457,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "5dfc6c05-dd37-4e21-821a-138035d28b37",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5264619008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Location is the decisive failure. The posting is based in London, UK (location.name), with a hybrid policy expecting staff in an Anthropic office at least 25% of the time. It is not US-based and not designated Remote or Remote-Friendly. Ananya is in Boston, MA and is willing to relocate only within the US (willing_to_relocate_us), so the location criterion is not met. Other factors were checked but do not change the verdict. (1) Role type: 'Research Engineer' is in her target_roles. The role does involve building benchmarks and shipping findings into production training recipes. However, it is framed as sitting 'at the boundary between research and engineering' and requires 'strong empirical research skills in Reinforcement Learning, large-scale ML training'. That makes it more research-heavy than her applied ML and NLP profile. (2) Level: no explicit years-of-experience or PhD requirement is stated ('Years of experience required will correlate with the internal job level'). But owning frontier-scale RL experiments end-to-end and experience with large-scale or distributed ML systems are a stretch for a new grad. Her experience is a single ML co-op (RAG prototype, small transformer classifier fine-tuning with MLflow) plus a coursework RAG project, with no RL work. (3) Skills: the minimum qualifications name only one specific technology, Python. Because fewer than 2 are named, the skills test is skipped per the rule. Python is in her skills.languages in any case. (4) Sponsorship: the posting says 'We do sponsor visas!', which suits her needs_sponsorship=true, but that sponsorship would be for a UK role. Because the location requirement fails, the verdict is NOT_RELEVANT.\", \"resume_fields_cited\": [\"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\", \"target_roles\", \"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.ml_nlp\"], \"posting_fields_cited\": [\"location.name\", \"title\", \"content\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5264619008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Location is the decisive failure. The posting is based in London, UK (location.name), with a hybrid policy expecting staff in an Anthropic office at least 25% of the time. It is not US-based and not designated Remote or Remote-Friendly. Ananya is in Boston, MA and is willing to relocate only within the US (willing_to_relocate_us), so the location criterion is not met. Other factors were checked but do not change the verdict. (1) Role type: 'Research Engineer' is in her target_roles. The role does involve building benchmarks and shipping findings into production training recipes. However, it is framed as sitting 'at the boundary between research and engineering' and requires 'strong empirical research skills in Reinforcement Learning, large-scale ML training'. That makes it more research-heavy than her applied ML and NLP profile. (2) Level: no explicit years-of-experience or PhD requirement is stated ('Years of experience required will correlate with the internal job level'). But owning frontier-scale RL experiments end-to-end and experience with large-scale or distributed ML systems are a stretch for a new grad. Her experience is a single ML co-op (RAG prototype, small transformer classifier fine-tuning with MLflow) plus a coursework RAG project, with no RL work. (3) Skills: the minimum qualifications name only one specific technology, Python. Because fewer than 2 are named, the skills test is skipped per the rule. Python is in her skills.languages in any case. (4) Sponsorship: the posting says 'We do sponsor visas!', which suits her needs_sponsorship=true, but that sponsorship would be for a UK role. Because the location requirement fails, the verdict is NOT_RELEVANT.",
+    "resume_fields_cited": [
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship",
+      "target_roles",
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.ml_nlp"
+    ],
+    "posting_fields_cited": [
+      "location.name",
+      "title",
+      "content"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}
