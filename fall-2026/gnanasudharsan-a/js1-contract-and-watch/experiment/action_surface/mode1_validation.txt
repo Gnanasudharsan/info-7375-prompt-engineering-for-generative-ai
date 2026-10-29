@@ -1,0 +1,3 @@
+reply characters: 3048
+signature: (text: str, expected_id: int) -> dict
+VALID -> RELEVANT
