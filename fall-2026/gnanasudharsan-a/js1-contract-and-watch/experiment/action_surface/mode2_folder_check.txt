@@ -1,0 +1,4 @@
+total 32
+drwx------   3 gnanasudharsanashokumar  wheel     96 Oct 29 11:51 .
+drwxrwxrwt  22 root                     wheel    704 Oct 29 11:53 ..
+-rw-r--r--@  1 gnanasudharsanashokumar  wheel  13146 Oct 29 11:51 posting_task.txt
