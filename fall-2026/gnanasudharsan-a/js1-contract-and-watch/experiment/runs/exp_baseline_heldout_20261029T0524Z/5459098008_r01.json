@@ -1,0 +1,75 @@
+{
+  "posting_id": 5459098008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:24:53.514470+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "f14a5ce2-862c-47cf-acf0-98ef9284351c"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-s56zxgis",
+      "requested_session_id": "f14a5ce2-862c-47cf-acf0-98ef9284351c",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":8890,\"stop_reason\":\"end_turn\",\"session_id\":\"f14a5ce2-862c-47cf-acf0-98ef9284351c\",\"total_cost_usd\":0.0496752,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":3847,\"cache_read_input_tokens\":1056,\"output_tokens\":934,\"output_tokens_details\":{\"thinking_tokens\":170},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":3847,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":934,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":3847,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":3847},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":934,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":3847,\"webSearchRequests\":0,\"costUSD\":0.0496752,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":170,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":3847,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5459098008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Ananya meets the location and sponsorship criteria, and the title matches her target roles, but the role fails the skills test. The level is also a poor fit.\\\\n\\\\nRole type: 'Research Engineer' is in her target_roles. The work involves building RL environments and evaluations, so it is hands-on engineering. However, the role is centered on deep chip-design domain expertise, not ML/NLP systems work.\\\\n\\\\nSkills: The 'You may be a good fit if you' section lists many specific hardware technologies: RTL, UVM, formal verification methods, synthesis, place-and-route, timing closure, PPA optimization, DFT, ECOs, and industry EDA tools. None of these appear in her shipped list (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS). With 2 or more required technologies and fewer than 2 matches, the skills rule makes this NOT_RELEVANT. Her education, co-op and projects are all in NLP, RAG and transformer fine-tuning, with no hardware or ASIC/FPGA background.\\\\n\\\\nLevel: The posting requires having 'taped out chips' and experience 'going from spec to silicon'. This implies years of industry hardware experience. The $500K–$850K salary range also points to a senior level. This is not realistic for a new grad finishing an MS in December 2026 with one ML co-op.\\\\n\\\\nLocation: San Francisco, CA is in the US with a 25% in-office hybrid policy. She is willing to relocate within the US, so this passes.\\\\n\\\\nSponsorship: The posting says 'We do sponsor visas!', which satisfies her needs_sponsorship=true requirement.\\\\n\\\\nThe skills mismatch and seniority mismatch make this posting NOT_RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.backend_automation\\\", \\\"skills.database_cloud\\\", \\\"experience\\\", \\\"education\\\", \\\"projects\\\", \\\"target_roles\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\", \\\"personal.location\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":2696,\"type\":\"result\",\"duration_ms\":8984,\"uuid\":\"a368a5ba-9eb7-41f4-91a1-efa242b51169\",\"ttft_stream_ms\":1175,\"time_to_request_ms\":89,\"first_content_frame_ms\":1175,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "f14a5ce2-862c-47cf-acf0-98ef9284351c",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5459098008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Ananya meets the location and sponsorship criteria, and the title matches her target roles, but the role fails the skills test. The level is also a poor fit.\\n\\nRole type: 'Research Engineer' is in her target_roles. The work involves building RL environments and evaluations, so it is hands-on engineering. However, the role is centered on deep chip-design domain expertise, not ML/NLP systems work.\\n\\nSkills: The 'You may be a good fit if you' section lists many specific hardware technologies: RTL, UVM, formal verification methods, synthesis, place-and-route, timing closure, PPA optimization, DFT, ECOs, and industry EDA tools. None of these appear in her shipped list (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS). With 2 or more required technologies and fewer than 2 matches, the skills rule makes this NOT_RELEVANT. Her education, co-op and projects are all in NLP, RAG and transformer fine-tuning, with no hardware or ASIC/FPGA background.\\n\\nLevel: The posting requires having 'taped out chips' and experience 'going from spec to silicon'. This implies years of industry hardware experience. The $500K–$850K salary range also points to a senior level. This is not realistic for a new grad finishing an MS in December 2026 with one ML co-op.\\n\\nLocation: San Francisco, CA is in the US with a 25% in-office hybrid policy. She is willing to relocate within the US, so this passes.\\n\\nSponsorship: The posting says 'We do sponsor visas!', which satisfies her needs_sponsorship=true requirement.\\n\\nThe skills mismatch and seniority mismatch make this posting NOT_RELEVANT.\", \"resume_fields_cited\": [\"skills.languages\", \"skills.ml_nlp\", \"skills.backend_automation\", \"skills.database_cloud\", \"experience\", \"education\", \"projects\", \"target_roles\", \"needs_sponsorship\", \"willing_to_relocate_us\", \"personal.location\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5459098008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Ananya meets the location and sponsorship criteria, and the title matches her target roles, but the role fails the skills test. The level is also a poor fit.\n\nRole type: 'Research Engineer' is in her target_roles. The work involves building RL environments and evaluations, so it is hands-on engineering. However, the role is centered on deep chip-design domain expertise, not ML/NLP systems work.\n\nSkills: The 'You may be a good fit if you' section lists many specific hardware technologies: RTL, UVM, formal verification methods, synthesis, place-and-route, timing closure, PPA optimization, DFT, ECOs, and industry EDA tools. None of these appear in her shipped list (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS). With 2 or more required technologies and fewer than 2 matches, the skills rule makes this NOT_RELEVANT. Her education, co-op and projects are all in NLP, RAG and transformer fine-tuning, with no hardware or ASIC/FPGA background.\n\nLevel: The posting requires having 'taped out chips' and experience 'going from spec to silicon'. This implies years of industry hardware experience. The $500K–$850K salary range also points to a senior level. This is not realistic for a new grad finishing an MS in December 2026 with one ML co-op.\n\nLocation: San Francisco, CA is in the US with a 25% in-office hybrid policy. She is willing to relocate within the US, so this passes.\n\nSponsorship: The posting says 'We do sponsor visas!', which satisfies her needs_sponsorship=true requirement.\n\nThe skills mismatch and seniority mismatch make this posting NOT_RELEVANT.",
+    "resume_fields_cited": [
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.backend_automation",
+      "skills.database_cloud",
+      "experience",
+      "education",
+      "projects",
+      "target_roles",
+      "needs_sponsorship",
+      "willing_to_relocate_us",
+      "personal.location"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

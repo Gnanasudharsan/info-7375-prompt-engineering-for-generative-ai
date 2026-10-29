@@ -1,0 +1,14 @@
+run: experiment/runs/exp_revision_heldout_20261029T0526Z | split: heldout
+id          my label      claude          match  title
+5364804008  RELEVANT      RELEVANT        yes    Machine Learning Infrastructure Engineer, Saf
+4938436008  NOT_RELEVANT  NOT_RELEVANT    yes    Research Engineer, Pretraining Scaling - Lond
+5416709008  NOT_RELEVANT  NOT_RELEVANT    yes    Staff+ Site Reliability Engineer, Safeguards 
+5254364008  RELEVANT      RELEVANT        yes    Research Engineer, Code RL (Reinforcement Lea
+5223093008  NOT_RELEVANT  NOT_RELEVANT    yes    Engineering Manager, Research Productivity
+5459098008  NOT_RELEVANT  NOT_RELEVANT    yes    Research Engineer, Chip Design RL
+5390754008  NOT_RELEVANT  NOT_RELEVANT    yes    Applied AI Engineer, Enterprise
+4952051008  RELEVANT      RELEVANT        yes    Research Engineer, RL Engineering
+5404725008  NOT_RELEVANT  NOT_RELEVANT    yes    Staff+ Research Engineer, RL Data Platform
+5285246008  RELEVANT      RELEVANT        yes    Research Engineer, Computer Use
+
+pass rate: 10/10 = 100%

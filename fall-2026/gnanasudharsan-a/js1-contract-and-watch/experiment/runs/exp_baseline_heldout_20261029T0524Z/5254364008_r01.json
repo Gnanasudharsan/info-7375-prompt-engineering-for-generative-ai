@@ -1,0 +1,73 @@
+{
+  "posting_id": 5254364008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:24:36.719711+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "5d067879-2144-4f1e-b4e8-5ec5f5e12b59"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-5z1_c5s8",
+      "requested_session_id": "5d067879-2144-4f1e-b4e8-5ec5f5e12b59",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":10099,\"stop_reason\":\"end_turn\",\"session_id\":\"5d067879-2144-4f1e-b4e8-5ec5f5e12b59\",\"total_cost_usd\":0.0541832,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4058,\"cache_read_input_tokens\":1056,\"output_tokens\":1075,\"output_tokens_details\":{\"thinking_tokens\":274},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4058,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1075,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":4058,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4058},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1075,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":4058,\"webSearchRequests\":0,\"costUSD\":0.0541832,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":274,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4058,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5254364008, \\\"verdict\\\": \\\"RELEVANT\\\", \\\"reasoning\\\": \\\"Role type: The title is Research Engineer, which is in Ananya's target_roles. The listed responsibilities are mostly hands-on engineering on AI systems. They include designing RL environments and coding tasks, building reward signals and verifiers, running training experiments, and improving the speed and reliability of training pipelines. The posting says the role 'blends research and engineering,' but it is centered on building, training, and shipping systems rather than publishing novel research, so it passes the role-type test. Level: The posting does not explicitly require 3+ years, a mid or senior title, or a PhD. Minimum education is a Bachelor's degree or equivalent, and experience 'will correlate with the internal job level requirements,' which is not an explicit exclusion. The $500K-$850K salary range suggests the bar may be senior in practice, but under the strict rule only explicit requirements disqualify, and the posting also encourages applicants who don't meet every qualification. Her MS in CS (AI concentration) at Boston University, ending 2026-12, and her ML Engineer co-op make her a plausible new-grad candidate. Skills: The required section ('You may be a good fit if you') names only one specific technology, Python. Async/concurrent programming, testing and performance are practices, not named technologies. Because fewer than 2 technologies are required, the skills test is skipped. For context, she has shipped Python, and the preferred section lists PyTorch, which she has also shipped. RL, RLHF, CUDA and distributed training also appear only as preferred, not required. Location: San Francisco, CA and New York City, NY, both in the US with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!', so sponsorship is not disclaimed. All five criteria pass, so the verdict is RELEVANT. Caveat: she has no RL or post-training experience, and the compensation band suggests a high bar, so competitiveness may be limited even though the posting qualifies.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\", \\\"personal.location\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":3219,\"type\":\"result\",\"duration_ms\":10189,\"uuid\":\"0b0e0d84-c716-4016-93af-f919ea1f337d\",\"ttft_stream_ms\":728,\"time_to_request_ms\":85,\"first_content_frame_ms\":728,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "5d067879-2144-4f1e-b4e8-5ec5f5e12b59",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5254364008, \"verdict\": \"RELEVANT\", \"reasoning\": \"Role type: The title is Research Engineer, which is in Ananya's target_roles. The listed responsibilities are mostly hands-on engineering on AI systems. They include designing RL environments and coding tasks, building reward signals and verifiers, running training experiments, and improving the speed and reliability of training pipelines. The posting says the role 'blends research and engineering,' but it is centered on building, training, and shipping systems rather than publishing novel research, so it passes the role-type test. Level: The posting does not explicitly require 3+ years, a mid or senior title, or a PhD. Minimum education is a Bachelor's degree or equivalent, and experience 'will correlate with the internal job level requirements,' which is not an explicit exclusion. The $500K-$850K salary range suggests the bar may be senior in practice, but under the strict rule only explicit requirements disqualify, and the posting also encourages applicants who don't meet every qualification. Her MS in CS (AI concentration) at Boston University, ending 2026-12, and her ML Engineer co-op make her a plausible new-grad candidate. Skills: The required section ('You may be a good fit if you') names only one specific technology, Python. Async/concurrent programming, testing and performance are practices, not named technologies. Because fewer than 2 technologies are required, the skills test is skipped. For context, she has shipped Python, and the preferred section lists PyTorch, which she has also shipped. RL, RLHF, CUDA and distributed training also appear only as preferred, not required. Location: San Francisco, CA and New York City, NY, both in the US with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!', so sponsorship is not disclaimed. All five criteria pass, so the verdict is RELEVANT. Caveat: she has no RL or post-training experience, and the compensation band suggests a high bar, so competitiveness may be limited even though the posting qualifies.\", \"resume_fields_cited\": [\"target_roles\", \"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.ml_nlp\", \"needs_sponsorship\", \"willing_to_relocate_us\", \"personal.location\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5254364008,
+    "verdict": "RELEVANT",
+    "reasoning": "Role type: The title is Research Engineer, which is in Ananya's target_roles. The listed responsibilities are mostly hands-on engineering on AI systems. They include designing RL environments and coding tasks, building reward signals and verifiers, running training experiments, and improving the speed and reliability of training pipelines. The posting says the role 'blends research and engineering,' but it is centered on building, training, and shipping systems rather than publishing novel research, so it passes the role-type test. Level: The posting does not explicitly require 3+ years, a mid or senior title, or a PhD. Minimum education is a Bachelor's degree or equivalent, and experience 'will correlate with the internal job level requirements,' which is not an explicit exclusion. The $500K-$850K salary range suggests the bar may be senior in practice, but under the strict rule only explicit requirements disqualify, and the posting also encourages applicants who don't meet every qualification. Her MS in CS (AI concentration) at Boston University, ending 2026-12, and her ML Engineer co-op make her a plausible new-grad candidate. Skills: The required section ('You may be a good fit if you') names only one specific technology, Python. Async/concurrent programming, testing and performance are practices, not named technologies. Because fewer than 2 technologies are required, the skills test is skipped. For context, she has shipped Python, and the preferred section lists PyTorch, which she has also shipped. RL, RLHF, CUDA and distributed training also appear only as preferred, not required. Location: San Francisco, CA and New York City, NY, both in the US with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!', so sponsorship is not disclaimed. All five criteria pass, so the verdict is RELEVANT. Caveat: she has no RL or post-training experience, and the compensation band suggests a high bar, so competitiveness may be limited even though the posting qualifies.",
+    "resume_fields_cited": [
+      "target_roles",
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.ml_nlp",
+      "needs_sponsorship",
+      "willing_to_relocate_us",
+      "personal.location"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "posting_id": 5364804008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:24:05.570753+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "d55abf64-08f1-40a5-89c0-5129e4707222"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-_u45cvnp",
+      "requested_session_id": "d55abf64-08f1-40a5-89c0-5129e4707222",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":12312,\"stop_reason\":\"end_turn\",\"session_id\":\"d55abf64-08f1-40a5-89c0-5129e4707222\",\"total_cost_usd\":0.057007199999999994,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":3931,\"cache_read_input_tokens\":1056,\"output_tokens\":1267,\"output_tokens_details\":{\"thinking_tokens\":357},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":3931,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1267,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":3931,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":3931},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1267,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":3931,\"webSearchRequests\":0,\"costUSD\":0.057007199999999994,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":357,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":3931,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5364804008, \\\"verdict\\\": \\\"RELEVANT\\\", \\\"reasoning\\\": \\\"This is RELEVANT under a strict reading of Ananya's rules, though it is a stretch on level. ROLE TYPE: The 'Machine Learning Infrastructure Engineer' title and responsibilities are hands-on ML systems engineering, not novel research or pure data science. The work includes building and scaling data pipelines, owning training, evaluation, and scoring workflows, building researcher-facing libraries and CLIs, moving research workflows into production-grade jobs, and improving large-scale inference throughput. This matches her target roles (ML Engineer, AI Engineer, Research Engineer). Her co-op fine-tuning a transformer classifier with MLflow tracking and her rag-eval-lab evaluation work map directly to the training and evaluation focus. LEVEL: The posting gives no explicit years requirement ('correlate with the internal job level'), no 'senior' or 'mid-level' label, and no PhD requirement (minimum is a Bachelor's or equivalent). Under the rule that only explicit 3+ years, mid/senior, or PhD requirements disqualify, it passes. Caveat: the $350k-$500k salary band and the minimum qualifications ('building and operating data-intensive or distributed systems in production', building infrastructure others depend on) suggest the role is pitched above new-grad level, so it is an ambitious application. SKILLS: The minimum qualifications name only one specific technology (Python). That is fewer than two, so the skills test is skipped per the rule. Python is in her shipped list anyway. Kubernetes and Ray, her un-shipped skills, are not named as requirements. The preferred items (transformers, model internals, evaluation harnesses, experiment tracking, classifiers) align well with her Hugging Face Transformers, PyTorch, and MLflow experience. LOCATION: San Francisco, CA or New York City, NY, both US-based, with a 25% in-office hybrid policy. She is in Boston but willing to relocate within the US. SPONSORSHIP: She needs sponsorship, and the posting says 'We do sponsor visas!' with an immigration lawyer on retainer. There is no disclaimer, so this passes. All hard criteria pass, so the verdict is RELEVANT, with the level being the main risk.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"experience\\\", \\\"projects\\\", \\\"education\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.backend_automation\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":4017,\"type\":\"result\",\"duration_ms\":12403,\"uuid\":\"8a16f901-a1cb-4e38-8138-3670962ffba0\",\"ttft_stream_ms\":1037,\"time_to_request_ms\":86,\"first_content_frame_ms\":1038,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "d55abf64-08f1-40a5-89c0-5129e4707222",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5364804008, \"verdict\": \"RELEVANT\", \"reasoning\": \"This is RELEVANT under a strict reading of Ananya's rules, though it is a stretch on level. ROLE TYPE: The 'Machine Learning Infrastructure Engineer' title and responsibilities are hands-on ML systems engineering, not novel research or pure data science. The work includes building and scaling data pipelines, owning training, evaluation, and scoring workflows, building researcher-facing libraries and CLIs, moving research workflows into production-grade jobs, and improving large-scale inference throughput. This matches her target roles (ML Engineer, AI Engineer, Research Engineer). Her co-op fine-tuning a transformer classifier with MLflow tracking and her rag-eval-lab evaluation work map directly to the training and evaluation focus. LEVEL: The posting gives no explicit years requirement ('correlate with the internal job level'), no 'senior' or 'mid-level' label, and no PhD requirement (minimum is a Bachelor's or equivalent). Under the rule that only explicit 3+ years, mid/senior, or PhD requirements disqualify, it passes. Caveat: the $350k-$500k salary band and the minimum qualifications ('building and operating data-intensive or distributed systems in production', building infrastructure others depend on) suggest the role is pitched above new-grad level, so it is an ambitious application. SKILLS: The minimum qualifications name only one specific technology (Python). That is fewer than two, so the skills test is skipped per the rule. Python is in her shipped list anyway. Kubernetes and Ray, her un-shipped skills, are not named as requirements. The preferred items (transformers, model internals, evaluation harnesses, experiment tracking, classifiers) align well with her Hugging Face Transformers, PyTorch, and MLflow experience. LOCATION: San Francisco, CA or New York City, NY, both US-based, with a 25% in-office hybrid policy. She is in Boston but willing to relocate within the US. SPONSORSHIP: She needs sponsorship, and the posting says 'We do sponsor visas!' with an immigration lawyer on retainer. There is no disclaimer, so this passes. All hard criteria pass, so the verdict is RELEVANT, with the level being the main risk.\", \"resume_fields_cited\": [\"target_roles\", \"experience\", \"projects\", \"education\", \"skills.languages\", \"skills.ml_nlp\", \"skills.backend_automation\", \"skills.familiar_with_not_shipped\", \"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5364804008,
+    "verdict": "RELEVANT",
+    "reasoning": "This is RELEVANT under a strict reading of Ananya's rules, though it is a stretch on level. ROLE TYPE: The 'Machine Learning Infrastructure Engineer' title and responsibilities are hands-on ML systems engineering, not novel research or pure data science. The work includes building and scaling data pipelines, owning training, evaluation, and scoring workflows, building researcher-facing libraries and CLIs, moving research workflows into production-grade jobs, and improving large-scale inference throughput. This matches her target roles (ML Engineer, AI Engineer, Research Engineer). Her co-op fine-tuning a transformer classifier with MLflow tracking and her rag-eval-lab evaluation work map directly to the training and evaluation focus. LEVEL: The posting gives no explicit years requirement ('correlate with the internal job level'), no 'senior' or 'mid-level' label, and no PhD requirement (minimum is a Bachelor's or equivalent). Under the rule that only explicit 3+ years, mid/senior, or PhD requirements disqualify, it passes. Caveat: the $350k-$500k salary band and the minimum qualifications ('building and operating data-intensive or distributed systems in production', building infrastructure others depend on) suggest the role is pitched above new-grad level, so it is an ambitious application. SKILLS: The minimum qualifications name only one specific technology (Python). That is fewer than two, so the skills test is skipped per the rule. Python is in her shipped list anyway. Kubernetes and Ray, her un-shipped skills, are not named as requirements. The preferred items (transformers, model internals, evaluation harnesses, experiment tracking, classifiers) align well with her Hugging Face Transformers, PyTorch, and MLflow experience. LOCATION: San Francisco, CA or New York City, NY, both US-based, with a 25% in-office hybrid policy. She is in Boston but willing to relocate within the US. SPONSORSHIP: She needs sponsorship, and the posting says 'We do sponsor visas!' with an immigration lawyer on retainer. There is no disclaimer, so this passes. All hard criteria pass, so the verdict is RELEVANT, with the level being the main risk.",
+    "resume_fields_cited": [
+      "target_roles",
+      "experience",
+      "projects",
+      "education",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.backend_automation",
+      "skills.familiar_with_not_shipped",
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

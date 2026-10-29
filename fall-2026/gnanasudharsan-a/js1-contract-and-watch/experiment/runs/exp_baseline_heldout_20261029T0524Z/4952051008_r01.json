@@ -1,0 +1,74 @@
+{
+  "posting_id": 4952051008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:25:12.375540+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "c3381528-aa67-4312-a951-0a5a6848721f"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-4_o96r7y",
+      "requested_session_id": "c3381528-aa67-4312-a951-0a5a6848721f",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":15665,\"stop_reason\":\"end_turn\",\"session_id\":\"c3381528-aa67-4312-a951-0a5a6848721f\",\"total_cost_usd\":0.0629912,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":3829,\"cache_read_input_tokens\":1056,\"output_tokens\":1607,\"output_tokens_details\":{\"thinking_tokens\":674},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":3829,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1607,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":3829,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":3829},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1607,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":3829,\"webSearchRequests\":0,\"costUSD\":0.0629912,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":674,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":3829,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4952051008, \\\"verdict\\\": \\\"RELEVANT\\\", \\\"reasoning\\\": \\\"Role type: The title is Research Engineer, which is in Ananya's target_roles. The responsibilities are mostly hands-on engineering rather than publishing novel research: build, own, and improve the core RL training system, implement new training methods as stable, fast, well-tested code, profile and optimize training and evaluation, build clean abstractions and APIs with automated testing, and debug across the stack. The research part is framed as studying training behavior in collaboration with research teams, not as an academic publishing role. This passes the role-type test. Level: The minimum qualifications do not state 3+ years of experience, a mid or senior level, or a PhD. Minimum education is a Bachelor's degree or equivalent, and years of experience are tied only to internal job level, not an explicit floor. Ananya's in-progress BU MS in CS (AI concentration, ending 2026-12) meets the education bar. Under the strict level rule, nothing explicitly disqualifies her. Caveats: the minimum qualifications ask for experience with large-scale ML training (RL, pretraining, or post-training) or its supporting systems, and with improving a large ML codebase. Her background is a co-op fine-tuning a small transformer classifier with MLflow tracking and building a RAG QA prototype, which is a clear stretch against that bar. The $500K–$850K salary range also suggests the team leans senior. These are weaknesses, not explicit disqualifiers, and the posting encourages applicants who do not meet every qualification. Skills: The required section names specific technologies: Python and one modern ML framework (JAX, PyTorch, or similar). Python (skills.languages) and PyTorch (skills.ml_nlp) are both in her shipped list, so she meets 2 named requirements and the skills test passes. JAX is an alternative, not a requirement. Distributed training, Rust/C++, and RL environments are preferred only, so her unshipped Kubernetes and Ray are not core requirements here. Location: San Francisco, New York City, or Seattle, all US-based, with a 25% in-office hybrid policy. Ananya is in Boston and willing to relocate within the US. Sponsorship: The posting says 'We do sponsor visas!' with a best-effort caveat, which satisfies her needs_sponsorship=true. Verdict: RELEVANT, but a reach application given the large-scale training experience gap.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.backend_automation\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":7884,\"type\":\"result\",\"duration_ms\":15795,\"uuid\":\"0dd7bae0-6bd6-4f6f-b5cd-f191fbe2ca38\",\"ttft_stream_ms\":1365,\"time_to_request_ms\":125,\"first_content_frame_ms\":1366,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "c3381528-aa67-4312-a951-0a5a6848721f",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4952051008, \"verdict\": \"RELEVANT\", \"reasoning\": \"Role type: The title is Research Engineer, which is in Ananya's target_roles. The responsibilities are mostly hands-on engineering rather than publishing novel research: build, own, and improve the core RL training system, implement new training methods as stable, fast, well-tested code, profile and optimize training and evaluation, build clean abstractions and APIs with automated testing, and debug across the stack. The research part is framed as studying training behavior in collaboration with research teams, not as an academic publishing role. This passes the role-type test. Level: The minimum qualifications do not state 3+ years of experience, a mid or senior level, or a PhD. Minimum education is a Bachelor's degree or equivalent, and years of experience are tied only to internal job level, not an explicit floor. Ananya's in-progress BU MS in CS (AI concentration, ending 2026-12) meets the education bar. Under the strict level rule, nothing explicitly disqualifies her. Caveats: the minimum qualifications ask for experience with large-scale ML training (RL, pretraining, or post-training) or its supporting systems, and with improving a large ML codebase. Her background is a co-op fine-tuning a small transformer classifier with MLflow tracking and building a RAG QA prototype, which is a clear stretch against that bar. The $500K–$850K salary range also suggests the team leans senior. These are weaknesses, not explicit disqualifiers, and the posting encourages applicants who do not meet every qualification. Skills: The required section names specific technologies: Python and one modern ML framework (JAX, PyTorch, or similar). Python (skills.languages) and PyTorch (skills.ml_nlp) are both in her shipped list, so she meets 2 named requirements and the skills test passes. JAX is an alternative, not a requirement. Distributed training, Rust/C++, and RL environments are preferred only, so her unshipped Kubernetes and Ray are not core requirements here. Location: San Francisco, New York City, or Seattle, all US-based, with a 25% in-office hybrid policy. Ananya is in Boston and willing to relocate within the US. Sponsorship: The posting says 'We do sponsor visas!' with a best-effort caveat, which satisfies her needs_sponsorship=true. Verdict: RELEVANT, but a reach application given the large-scale training experience gap.\", \"resume_fields_cited\": [\"target_roles\", \"education\", \"experience\", \"skills.languages\", \"skills.ml_nlp\", \"skills.backend_automation\", \"skills.familiar_with_not_shipped\", \"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4952051008,
+    "verdict": "RELEVANT",
+    "reasoning": "Role type: The title is Research Engineer, which is in Ananya's target_roles. The responsibilities are mostly hands-on engineering rather than publishing novel research: build, own, and improve the core RL training system, implement new training methods as stable, fast, well-tested code, profile and optimize training and evaluation, build clean abstractions and APIs with automated testing, and debug across the stack. The research part is framed as studying training behavior in collaboration with research teams, not as an academic publishing role. This passes the role-type test. Level: The minimum qualifications do not state 3+ years of experience, a mid or senior level, or a PhD. Minimum education is a Bachelor's degree or equivalent, and years of experience are tied only to internal job level, not an explicit floor. Ananya's in-progress BU MS in CS (AI concentration, ending 2026-12) meets the education bar. Under the strict level rule, nothing explicitly disqualifies her. Caveats: the minimum qualifications ask for experience with large-scale ML training (RL, pretraining, or post-training) or its supporting systems, and with improving a large ML codebase. Her background is a co-op fine-tuning a small transformer classifier with MLflow tracking and building a RAG QA prototype, which is a clear stretch against that bar. The $500K–$850K salary range also suggests the team leans senior. These are weaknesses, not explicit disqualifiers, and the posting encourages applicants who do not meet every qualification. Skills: The required section names specific technologies: Python and one modern ML framework (JAX, PyTorch, or similar). Python (skills.languages) and PyTorch (skills.ml_nlp) are both in her shipped list, so she meets 2 named requirements and the skills test passes. JAX is an alternative, not a requirement. Distributed training, Rust/C++, and RL environments are preferred only, so her unshipped Kubernetes and Ray are not core requirements here. Location: San Francisco, New York City, or Seattle, all US-based, with a 25% in-office hybrid policy. Ananya is in Boston and willing to relocate within the US. Sponsorship: The posting says 'We do sponsor visas!' with a best-effort caveat, which satisfies her needs_sponsorship=true. Verdict: RELEVANT, but a reach application given the large-scale training experience gap.",
+    "resume_fields_cited": [
+      "target_roles",
+      "education",
+      "experience",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.backend_automation",
+      "skills.familiar_with_not_shipped",
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

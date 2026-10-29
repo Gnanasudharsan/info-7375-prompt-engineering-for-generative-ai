@@ -1,0 +1,72 @@
+{
+  "posting_id": 5390754008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:25:03.311926+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "39ef2946-5be6-4b05-96e3-6fde91695df2"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-tc4b99lr",
+      "requested_session_id": "39ef2946-5be6-4b05-96e3-6fde91695df2",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":8124,\"stop_reason\":\"end_turn\",\"session_id\":\"39ef2946-5be6-4b05-96e3-6fde91695df2\",\"total_cost_usd\":0.07407520000000001,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":7167,\"cache_read_input_tokens\":1056,\"output_tokens\":826,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":7167,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":826,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":7167,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":7167},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":826,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":7167,\"webSearchRequests\":0,\"costUSD\":0.07407520000000001,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":7167,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5390754008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"This posting fails several of Ananya's criteria at once. (1) Location: the role is based in Paris, France (location.name), and the content says it serves enterprise customers in France, involves travel to customer sites across France, and expects staff in an office at least 25% of the time. It is not US-based and not listed as Remote. Her resume puts her in Boston, MA, and says she is willing to relocate within the US only. (2) Level: the qualifications ask for 6+ years of experience as a Software Engineer, Solutions Architect, Forward Deployed Engineer, or technical founder. That is far above the 3+ year cutoff. Ananya is a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. (3) Role type: despite the 'Applied AI Engineer' title, this is a customer-facing pre-sales and technical advisory role. The responsibilities center on working with Account Executives, building value-based business cases for C-level executives, guiding procurement cycles, owning the technical win in deals, and running executive briefings, while the systems integration partner does the actual build. That is not the hands-on building, training, and deploying of ML/NLP systems that matches her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). (4) Language: native or fluent French is listed as essential, and nothing in her profile shows French proficiency. (5) Skills: the requirements name few specific technologies (LLM-powered applications, prompting, context engineering, agent architectures, evaluation frameworks), so the strict skills test hardly applies. Her RAG prototype and retrieval evaluation work are thematically related, but that cannot offset the other failures. (6) Sponsorship: Anthropic says it does sponsor visas, which would be compatible with her needs_sponsorship=true, but that does not matter given the failures above. Verdict: NOT_RELEVANT, primarily because of the non-US location, the 6+ year experience requirement, and the sales/advisory nature of the role.\\\", \\\"resume_fields_cited\\\": [\\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"education\\\", \\\"experience\\\", \\\"target_roles\\\", \\\"needs_sponsorship\\\", \\\"projects\\\", \\\"skills.ml_nlp\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"location.name\\\", \\\"content\\\"]}\",\"ttft_ms\":8226,\"type\":\"result\",\"duration_ms\":8245,\"uuid\":\"f27c182e-13af-44ee-9719-744efdd5ff78\",\"ttft_stream_ms\":1785,\"time_to_request_ms\":116,\"first_content_frame_ms\":1785,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "39ef2946-5be6-4b05-96e3-6fde91695df2",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5390754008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"This posting fails several of Ananya's criteria at once. (1) Location: the role is based in Paris, France (location.name), and the content says it serves enterprise customers in France, involves travel to customer sites across France, and expects staff in an office at least 25% of the time. It is not US-based and not listed as Remote. Her resume puts her in Boston, MA, and says she is willing to relocate within the US only. (2) Level: the qualifications ask for 6+ years of experience as a Software Engineer, Solutions Architect, Forward Deployed Engineer, or technical founder. That is far above the 3+ year cutoff. Ananya is a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. (3) Role type: despite the 'Applied AI Engineer' title, this is a customer-facing pre-sales and technical advisory role. The responsibilities center on working with Account Executives, building value-based business cases for C-level executives, guiding procurement cycles, owning the technical win in deals, and running executive briefings, while the systems integration partner does the actual build. That is not the hands-on building, training, and deploying of ML/NLP systems that matches her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). (4) Language: native or fluent French is listed as essential, and nothing in her profile shows French proficiency. (5) Skills: the requirements name few specific technologies (LLM-powered applications, prompting, context engineering, agent architectures, evaluation frameworks), so the strict skills test hardly applies. Her RAG prototype and retrieval evaluation work are thematically related, but that cannot offset the other failures. (6) Sponsorship: Anthropic says it does sponsor visas, which would be compatible with her needs_sponsorship=true, but that does not matter given the failures above. Verdict: NOT_RELEVANT, primarily because of the non-US location, the 6+ year experience requirement, and the sales/advisory nature of the role.\", \"resume_fields_cited\": [\"personal.location\", \"willing_to_relocate_us\", \"education\", \"experience\", \"target_roles\", \"needs_sponsorship\", \"projects\", \"skills.ml_nlp\"], \"posting_fields_cited\": [\"title\", \"location.name\", \"content\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5390754008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "This posting fails several of Ananya's criteria at once. (1) Location: the role is based in Paris, France (location.name), and the content says it serves enterprise customers in France, involves travel to customer sites across France, and expects staff in an office at least 25% of the time. It is not US-based and not listed as Remote. Her resume puts her in Boston, MA, and says she is willing to relocate within the US only. (2) Level: the qualifications ask for 6+ years of experience as a Software Engineer, Solutions Architect, Forward Deployed Engineer, or technical founder. That is far above the 3+ year cutoff. Ananya is a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. (3) Role type: despite the 'Applied AI Engineer' title, this is a customer-facing pre-sales and technical advisory role. The responsibilities center on working with Account Executives, building value-based business cases for C-level executives, guiding procurement cycles, owning the technical win in deals, and running executive briefings, while the systems integration partner does the actual build. That is not the hands-on building, training, and deploying of ML/NLP systems that matches her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). (4) Language: native or fluent French is listed as essential, and nothing in her profile shows French proficiency. (5) Skills: the requirements name few specific technologies (LLM-powered applications, prompting, context engineering, agent architectures, evaluation frameworks), so the strict skills test hardly applies. Her RAG prototype and retrieval evaluation work are thematically related, but that cannot offset the other failures. (6) Sponsorship: Anthropic says it does sponsor visas, which would be compatible with her needs_sponsorship=true, but that does not matter given the failures above. Verdict: NOT_RELEVANT, primarily because of the non-US location, the 6+ year experience requirement, and the sales/advisory nature of the role.",
+    "resume_fields_cited": [
+      "personal.location",
+      "willing_to_relocate_us",
+      "education",
+      "experience",
+      "target_roles",
+      "needs_sponsorship",
+      "projects",
+      "skills.ml_nlp"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "location.name",
+      "content"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "posting_id": 5404725008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:25:28.817087+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "2093d1f0-2615-44fb-bd0e-d760105cc19a"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-_988kipx",
+      "requested_session_id": "2093d1f0-2615-44fb-bd0e-d760105cc19a",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":5855,\"stop_reason\":\"end_turn\",\"session_id\":\"2093d1f0-2615-44fb-bd0e-d760105cc19a\",\"total_cost_usd\":0.0447312,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4149,\"cache_read_input_tokens\":1056,\"output_tokens\":566,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4149,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":566,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":4149,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4149},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":566,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":4149,\"webSearchRequests\":0,\"costUSD\":0.0447312,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4149,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5404725008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Several labeling criteria fail. (1) Level: the title is 'Staff+ Research Engineer', which is explicitly senior/staff level. The posting describes a 'small, senior team' and a $500,000-$850,000 salary range, both consistent with a staff-level hire. Ananya is a new grad finishing her MS in Computer Science (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op. That level is not realistic for her. (2) Role type: although 'Research Engineer' is in her target roles, the work here is a full-stack platform role, not hands-on ML, NLP, or model building. It covers annotator web interfaces, backend services, data pipelines, and dashboards. It does not involve training or deploying ML models. (3) Skills fit: the required section names 3 specific technologies: TypeScript, React, and Python. Only Python is in her shipped list. She has no TypeScript or React experience, so fewer than 2 required technologies match and the skills test fails. Location (San Francisco / New York City, US-based, hybrid) and sponsorship ('We do sponsor visas!') are acceptable, and she is willing to relocate. However, the level, skills, and role-type failures make this NOT_RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"education\\\", \\\"experience\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.backend_automation\\\", \\\"skills.database_cloud\\\", \\\"target_roles\\\", \\\"needs_sponsorship\\\", \\\"willing_to_relocate_us\\\", \\\"personal.location\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":5946,\"type\":\"result\",\"duration_ms\":5972,\"uuid\":\"41f1a1ab-4de4-41f4-a918-b2bf9f42ec60\",\"ttft_stream_ms\":1477,\"time_to_request_ms\":112,\"first_content_frame_ms\":1478,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "2093d1f0-2615-44fb-bd0e-d760105cc19a",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5404725008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Several labeling criteria fail. (1) Level: the title is 'Staff+ Research Engineer', which is explicitly senior/staff level. The posting describes a 'small, senior team' and a $500,000-$850,000 salary range, both consistent with a staff-level hire. Ananya is a new grad finishing her MS in Computer Science (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op. That level is not realistic for her. (2) Role type: although 'Research Engineer' is in her target roles, the work here is a full-stack platform role, not hands-on ML, NLP, or model building. It covers annotator web interfaces, backend services, data pipelines, and dashboards. It does not involve training or deploying ML models. (3) Skills fit: the required section names 3 specific technologies: TypeScript, React, and Python. Only Python is in her shipped list. She has no TypeScript or React experience, so fewer than 2 required technologies match and the skills test fails. Location (San Francisco / New York City, US-based, hybrid) and sponsorship ('We do sponsor visas!') are acceptable, and she is willing to relocate. However, the level, skills, and role-type failures make this NOT_RELEVANT.\", \"resume_fields_cited\": [\"education\", \"experience\", \"skills.languages\", \"skills.ml_nlp\", \"skills.backend_automation\", \"skills.database_cloud\", \"target_roles\", \"needs_sponsorship\", \"willing_to_relocate_us\", \"personal.location\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5404725008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Several labeling criteria fail. (1) Level: the title is 'Staff+ Research Engineer', which is explicitly senior/staff level. The posting describes a 'small, senior team' and a $500,000-$850,000 salary range, both consistent with a staff-level hire. Ananya is a new grad finishing her MS in Computer Science (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op. That level is not realistic for her. (2) Role type: although 'Research Engineer' is in her target roles, the work here is a full-stack platform role, not hands-on ML, NLP, or model building. It covers annotator web interfaces, backend services, data pipelines, and dashboards. It does not involve training or deploying ML models. (3) Skills fit: the required section names 3 specific technologies: TypeScript, React, and Python. Only Python is in her shipped list. She has no TypeScript or React experience, so fewer than 2 required technologies match and the skills test fails. Location (San Francisco / New York City, US-based, hybrid) and sponsorship ('We do sponsor visas!') are acceptable, and she is willing to relocate. However, the level, skills, and role-type failures make this NOT_RELEVANT.",
+    "resume_fields_cited": [
+      "education",
+      "experience",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.backend_automation",
+      "skills.database_cloud",
+      "target_roles",
+      "needs_sponsorship",
+      "willing_to_relocate_us",
+      "personal.location"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

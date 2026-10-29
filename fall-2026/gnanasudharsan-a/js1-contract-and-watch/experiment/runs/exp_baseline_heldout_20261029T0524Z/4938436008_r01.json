@@ -1,0 +1,72 @@
+{
+  "posting_id": 4938436008,
+  "repeat": 1,
+  "timestamp_utc": "2026-10-29T05:24:21.295026+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "b258d6ad-880f-4f5b-ba44-91b59d3b5563"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-2h6e2tns",
+      "requested_session_id": "b258d6ad-880f-4f5b-ba44-91b59d3b5563",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":5916,\"stop_reason\":\"end_turn\",\"session_id\":\"b258d6ad-880f-4f5b-ba44-91b59d3b5563\",\"total_cost_usd\":0.045667200000000005,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":4316,\"cache_read_input_tokens\":1056,\"output_tokens\":546,\"output_tokens_details\":{\"thinking_tokens\":0},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":4316,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":546,\"cache_read_input_tokens\":1056,\"cache_creation_input_tokens\":4316,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":4316},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":546,\"cacheReadInputTokens\":1056,\"cacheCreationInputTokens\":4316,\"webSearchRequests\":0,\"costUSD\":0.045667200000000005,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":0,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":4316,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4938436008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Location is disqualifying: the role is based in London, UK and explicitly requires working in-office 5 days per week in London. It is neither US-based nor remote, and the candidate's relocation willingness is limited to the US (willing_to_relocate_us). Level is also a poor fit: although no explicit year count is stated, the posting expects hands-on experience training large language models or deep expertise in large-scale distributed systems, ownership of a frontier production pretraining pipeline, and on-call incident response across the full stack from hardware to training dynamics. That is unrealistic for a new grad finishing an MS at Boston University in 2026-12 whose experience is one ML co-op (a RAG prototype and fine-tuning a small classifier) plus a coursework project. Skills: the 'good fit' section names JAX, TPU, PyTorch, and large-scale distributed systems as alternatives. PyTorch is shipped, so the skills test alone would not reject it. The role type (Research Engineer, about 50/50 research and engineering) is in target_roles. Sponsorship is offered ('We do sponsor visas!'), which satisfies the needs_sponsorship requirement. Even so, the non-US, fully in-office London location is a hard rejection, and the level mismatch reinforces it.\\\", \\\"resume_fields_cited\\\": [\\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.ml_nlp\\\", \\\"target_roles\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"location.name\\\", \\\"content\\\"]}\",\"ttft_ms\":5972,\"type\":\"result\",\"duration_ms\":6011,\"uuid\":\"1f19ce7c-06e4-4b3b-bda0-6b8d0524c45a\",\"ttft_stream_ms\":1516,\"time_to_request_ms\":89,\"first_content_frame_ms\":1516,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "b258d6ad-880f-4f5b-ba44-91b59d3b5563",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4938436008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Location is disqualifying: the role is based in London, UK and explicitly requires working in-office 5 days per week in London. It is neither US-based nor remote, and the candidate's relocation willingness is limited to the US (willing_to_relocate_us). Level is also a poor fit: although no explicit year count is stated, the posting expects hands-on experience training large language models or deep expertise in large-scale distributed systems, ownership of a frontier production pretraining pipeline, and on-call incident response across the full stack from hardware to training dynamics. That is unrealistic for a new grad finishing an MS at Boston University in 2026-12 whose experience is one ML co-op (a RAG prototype and fine-tuning a small classifier) plus a coursework project. Skills: the 'good fit' section names JAX, TPU, PyTorch, and large-scale distributed systems as alternatives. PyTorch is shipped, so the skills test alone would not reject it. The role type (Research Engineer, about 50/50 research and engineering) is in target_roles. Sponsorship is offered ('We do sponsor visas!'), which satisfies the needs_sponsorship requirement. Even so, the non-US, fully in-office London location is a hard rejection, and the level mismatch reinforces it.\", \"resume_fields_cited\": [\"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\", \"education\", \"experience\", \"projects\", \"skills.ml_nlp\", \"target_roles\"], \"posting_fields_cited\": [\"title\", \"location.name\", \"content\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4938436008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Location is disqualifying: the role is based in London, UK and explicitly requires working in-office 5 days per week in London. It is neither US-based nor remote, and the candidate's relocation willingness is limited to the US (willing_to_relocate_us). Level is also a poor fit: although no explicit year count is stated, the posting expects hands-on experience training large language models or deep expertise in large-scale distributed systems, ownership of a frontier production pretraining pipeline, and on-call incident response across the full stack from hardware to training dynamics. That is unrealistic for a new grad finishing an MS at Boston University in 2026-12 whose experience is one ML co-op (a RAG prototype and fine-tuning a small classifier) plus a coursework project. Skills: the 'good fit' section names JAX, TPU, PyTorch, and large-scale distributed systems as alternatives. PyTorch is shipped, so the skills test alone would not reject it. The role type (Research Engineer, about 50/50 research and engineering) is in target_roles. Sponsorship is offered ('We do sponsor visas!'), which satisfies the needs_sponsorship requirement. Even so, the non-US, fully in-office London location is a hard rejection, and the level mismatch reinforces it.",
+    "resume_fields_cited": [
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship",
+      "education",
+      "experience",
+      "projects",
+      "skills.ml_nlp",
+      "target_roles"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "location.name",
+      "content"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}
