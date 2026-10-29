@@ -1,0 +1,15 @@
+Fresh-clone test, 2026-10-29T17:25Z, commit b22e534
+
+[notice] A new release of pip is available: 25.3 -> 26.2.2
+[notice] To update, run: /private/tmp/js1_freshclone_14GH/repo/fall-2026/gnanasudharsan-a/js1-contract-and-watch/.venv/bin/python3.14 -m pip install --upgrade pip
+--- pytest
+........................................................................ [ 63%]
+..........................................                               [100%]
+114 passed in 1.17s
+--- seeded watch (rule only)
+SEEDED run_type=seeded baseline=True
+SEEDED raw_file=data/raw/anthropic_20261028T192103Z.json
+SEEDED total_postings=680 new=0
+SEEDED report=/private/tmp/js1_freshclone_14GH/repo/fall-2026/gnanasudharsan-a/js1-contract-and-watch/seeded/data/runs/20261029T172542Z.json
+--- rescore baseline dev
+pass rate: 7/10 = 70%
