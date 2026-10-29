@@ -3,6 +3,8 @@ Author: Gnanasudharsan Ashokumar
 
 ## Entries
 
+Entries for 2026-10-28 were written at the end of the day from commits and terminal history (retrospective).
+
 ### 2026-10-28: Board Churn (678 to 680 postings)
 - **What happened:** An initial exploration curl fetched 678 postings, while the subsequent baseline run (commit `6baa583`) recorded 680 postings. Because only one watch run has happened so far, nothing about state additions has been tested yet.
 - **What I did:** Noted the churn; actual additions testing is deferred to run 2 tomorrow.
@@ -57,11 +59,31 @@ Author: Gnanasudharsan Ashokumar
 - **Commit:** `ec82533`
 
 ### 2026-10-28: Unresolved / Known Limitations & Lessons Learned
-- **What happened / Known limits:** 
+- **What happened / Known limits:**
   - Remote non-US locations pass the rule without country filtering.
   - Anthropic "Research Engineer" roles may require research depth beyond new-grad scope.
   - The seeded-run guard is only in the CLI; calling `run_watch()` directly with the project folder as root isn't blocked.
   - Python 3.10 runtime remains untested.
   - Absolute paths appear in some output records.
-  - The second-day live run is not completed yet.
+  - The second-day live run is not completed yet (done 2026-10-29, `b04c897`).
 - **Learned:** A rule can pass every unit test and still find nothing on real data; check per-condition pass rates on real data before trusting it.
+
+### 2026-10-29: Backend Transition (No API Key) & Smoke Test
+- **What happened:** Lacking an Anthropic API key or budget, I first switched the judge execution to Claude Code's non-interactive print mode (`JOBWATCH_BACKEND=claude_cli`) under my Enterprise login, and wrote Amendment 2 before any live call. The first live smoke test then returned `NOT_RELEVANT` for posting `4613568008` while my human label was `RELEVANT` (num_turns 1, temp cwd).
+- **What I did:** Formalized the CLI backend in Amendment 2 with all tools disabled (`--tools ""`) and a fresh empty temporary working directory per call, corrected an overclaim about test coverage, and kept both the label and the prompt unchanged after the smoke test.
+- **Commit:** `beb7793`, `14c75ac`, `96de51f`, `fe1df1d`
+
+### 2026-10-29: Second-Day Live Run (Run 2)
+- **What happened:** Executed the second calendar day watch run, resulting in 2 new additions and 3 removals (board size shifting 680 to 679). Recomputation matched successfully.
+- **What I did:** Verified state behavior; noted that because the state file persists removed IDs, a re-posted job ID would not trigger a new addition report.
+- **Commit:** `b04c897`
+
+### 2026-10-29: Sampling Trial Run & Disagreement Analysis
+- **What happened:** Ran 5 dev postings across 4 fresh calls each (20 total evaluations), achieving 55% agreement (11/20) and 4/5 unanimous postings. Unanimous disagreements clustered around two distinct rule/model gaps: implicit level signals (pay bands and seniority qualifications) and how experiments are categorized (evaluate vs. research).
+- **What I did:** Scored the sampling outputs, generated evidence files, and authored `SAMPLING_REPORT.md` to document the repeatability and divergence patterns.
+- **Commit:** `b7e58f7` (sampling run), `1f1f07c` (scorer)
+
+### 2026-10-29: Quoted Text Mismatch in Sampling Report
+- **What happened:** My first draft of Section 4 in `SAMPLING_REPORT.md` mistakenly quoted job description text as if it were Claude's generated reasoning. A grep check against the saved run outputs revealed 0 matches for those strings.
+- **What I did:** Replaced the incorrect text with Claude's actual reasoning phrases extracted directly from the run logs (`5438044008_r01.json` and `4631822008_r01.json`).
+- **Commit:** `(pending commit)`
