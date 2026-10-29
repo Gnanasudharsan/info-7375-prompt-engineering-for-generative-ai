@@ -125,3 +125,7 @@ Entries for 2026-10-28 were written at the end of the day from commits and termi
 - **Learned:** Repeatability is not correctness; a held-out set only tests what it contains; and an agent's reach is set by its permissions, not by the task it is given.
 
 _Note: 2026-10-29 entries in this section were organized with help from a Claude chat from my commits and evidence files; the events and decisions are mine._
+### 2026-10-29: Final Safety Check — Possibly-Real Email in a Test
+- **What happened:** A final grep for email addresses found `ananya.rao@gmail.com`, a test input Claude Code chose for "a real-looking email is refused". `@gmail.com` is a real domain, so that address could belong to a real person.
+- **What I did:** Switched the test input to the reserved `.test` domain (`ananya.rao@realmail.test`); 114 tests still pass. The two older pytest logs that print the old test name were left unchanged as historical evidence.
+- **Commit:** `d5b559c`
