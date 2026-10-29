@@ -1,0 +1,73 @@
+{
+  "posting_id": 5264619008,
+  "repeat": 2,
+  "timestamp_utc": "2026-10-29T04:49:04.359086+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "def157a0-8bd1-4adc-b56a-64d56f27a014"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-d7r976b1",
+      "requested_session_id": "def157a0-8bd1-4adc-b56a-64d56f27a014",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":8728,\"stop_reason\":\"end_turn\",\"session_id\":\"def157a0-8bd1-4adc-b56a-64d56f27a014\",\"total_cost_usd\":0.021486200000000004,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":344,\"cache_read_input_tokens\":4431,\"output_tokens\":892,\"output_tokens_details\":{\"thinking_tokens\":164},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":344,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":892,\"cache_read_input_tokens\":4431,\"cache_creation_input_tokens\":344,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":344},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":892,\"cacheReadInputTokens\":4431,\"cacheCreationInputTokens\":344,\"webSearchRequests\":0,\"costUSD\":0.021486200000000004,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":164,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":344,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 5264619008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"The decisive factor is location. The posting is based in London, UK (location.name), and the content describes a hybrid policy requiring staff in an office at least 25% of the time. It is not US-based and not designated Remote. Ananya is in Boston, MA, and is willing to relocate only within the US, so this fails the location criterion. Secondary concerns also point to NOT_RELEVANT. (1) Role type: although the title is Research Engineer, which is in her target_roles, the responsibilities lean toward empirical research rather than building and deploying systems. The work is designing and interpreting frontier-scale RL scaling experiments, investigating scaling trends and building long-horizon RL benchmarks. Preferred qualifications include published work in RL fundamentals. (2) Level: the minimum qualifications ask for strong empirical research skills in RL or large-scale ML training and a demonstrated ability to own large experiments end-to-end. The £375,000–£640,000 salary band and 'years of experience will correlate with the internal job level' suggest a role above new-grad level. Her background is one MS in progress (ending 2026-12), one co-op building a RAG prototype and fine-tuning a small transformer classifier, and one coursework RAG project. None of it involves RL or distributed training. (3) Skills: the required section names only one specific technology (Python), plus generic 'large-scale or distributed ML systems'. That is fewer than 2 specific technologies, so the skills test is skipped. Her only exposure to distributed tooling (Ray, Kubernetes) is listed as familiar_with_not_shipped. Sponsorship is not a blocker, because the posting says 'We do sponsor visas!' and she needs sponsorship. However, the non-US location alone makes this posting NOT_RELEVANT.\\\", \\\"resume_fields_cited\\\": [\\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\", \\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.familiar_with_not_shipped\\\"], \\\"posting_fields_cited\\\": [\\\"location.name\\\", \\\"title\\\", \\\"content\\\"]}\",\"ttft_ms\":2929,\"type\":\"result\",\"duration_ms\":8821,\"uuid\":\"3456a0e7-344c-4e4f-bb7a-189a74d7805d\",\"ttft_stream_ms\":1438,\"time_to_request_ms\":87,\"first_content_frame_ms\":1438,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "def157a0-8bd1-4adc-b56a-64d56f27a014",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 5264619008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"The decisive factor is location. The posting is based in London, UK (location.name), and the content describes a hybrid policy requiring staff in an office at least 25% of the time. It is not US-based and not designated Remote. Ananya is in Boston, MA, and is willing to relocate only within the US, so this fails the location criterion. Secondary concerns also point to NOT_RELEVANT. (1) Role type: although the title is Research Engineer, which is in her target_roles, the responsibilities lean toward empirical research rather than building and deploying systems. The work is designing and interpreting frontier-scale RL scaling experiments, investigating scaling trends and building long-horizon RL benchmarks. Preferred qualifications include published work in RL fundamentals. (2) Level: the minimum qualifications ask for strong empirical research skills in RL or large-scale ML training and a demonstrated ability to own large experiments end-to-end. The £375,000–£640,000 salary band and 'years of experience will correlate with the internal job level' suggest a role above new-grad level. Her background is one MS in progress (ending 2026-12), one co-op building a RAG prototype and fine-tuning a small transformer classifier, and one coursework RAG project. None of it involves RL or distributed training. (3) Skills: the required section names only one specific technology (Python), plus generic 'large-scale or distributed ML systems'. That is fewer than 2 specific technologies, so the skills test is skipped. Her only exposure to distributed tooling (Ray, Kubernetes) is listed as familiar_with_not_shipped. Sponsorship is not a blocker, because the posting says 'We do sponsor visas!' and she needs sponsorship. However, the non-US location alone makes this posting NOT_RELEVANT.\", \"resume_fields_cited\": [\"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\", \"target_roles\", \"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.familiar_with_not_shipped\"], \"posting_fields_cited\": [\"location.name\", \"title\", \"content\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 5264619008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "The decisive factor is location. The posting is based in London, UK (location.name), and the content describes a hybrid policy requiring staff in an office at least 25% of the time. It is not US-based and not designated Remote. Ananya is in Boston, MA, and is willing to relocate only within the US, so this fails the location criterion. Secondary concerns also point to NOT_RELEVANT. (1) Role type: although the title is Research Engineer, which is in her target_roles, the responsibilities lean toward empirical research rather than building and deploying systems. The work is designing and interpreting frontier-scale RL scaling experiments, investigating scaling trends and building long-horizon RL benchmarks. Preferred qualifications include published work in RL fundamentals. (2) Level: the minimum qualifications ask for strong empirical research skills in RL or large-scale ML training and a demonstrated ability to own large experiments end-to-end. The £375,000–£640,000 salary band and 'years of experience will correlate with the internal job level' suggest a role above new-grad level. Her background is one MS in progress (ending 2026-12), one co-op building a RAG prototype and fine-tuning a small transformer classifier, and one coursework RAG project. None of it involves RL or distributed training. (3) Skills: the required section names only one specific technology (Python), plus generic 'large-scale or distributed ML systems'. That is fewer than 2 specific technologies, so the skills test is skipped. Her only exposure to distributed tooling (Ray, Kubernetes) is listed as familiar_with_not_shipped. Sponsorship is not a blocker, because the posting says 'We do sponsor visas!' and she needs sponsorship. However, the non-US location alone makes this posting NOT_RELEVANT.",
+    "resume_fields_cited": [
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship",
+      "target_roles",
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.familiar_with_not_shipped"
+    ],
+    "posting_fields_cited": [
+      "location.name",
+      "title",
+      "content"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}

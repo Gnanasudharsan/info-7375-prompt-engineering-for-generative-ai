@@ -1,0 +1,41 @@
+{
+  "split": "dev",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "repeats": 4,
+  "label": "judgment (model output, not fact)",
+  "verdicts": {
+    "4613568008": [
+      "NOT_RELEVANT",
+      "RELEVANT",
+      "RELEVANT",
+      "RELEVANT"
+    ],
+    "5438044008": [
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT"
+    ],
+    "4980430008": [
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT"
+    ],
+    "4631822008": [
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT"
+    ],
+    "5264619008": [
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT",
+      "NOT_RELEVANT"
+    ]
+  }
+}

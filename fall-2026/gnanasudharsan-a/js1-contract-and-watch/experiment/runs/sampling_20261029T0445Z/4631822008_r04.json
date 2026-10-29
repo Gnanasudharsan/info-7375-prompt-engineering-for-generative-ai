@@ -1,0 +1,74 @@
+{
+  "posting_id": 4631822008,
+  "repeat": 4,
+  "timestamp_utc": "2026-10-29T04:48:40.077758+00:00",
+  "backend": "claude_cli",
+  "model": "claude-opus-5-5",
+  "prompt_file": "prompts/judge_baseline.md",
+  "prompt_sha256": "6e3d9d69f033d2a204ce16189a309baf3e00e31785d4953dd8a4f65f3942acf0",
+  "label": "judgment (model output, not fact)",
+  "attempts": [
+    {
+      "backend": "claude_cli",
+      "command": [
+        "/Users/gnanasudharsanashokumar/.local/bin/claude",
+        "-p",
+        "--model",
+        "claude-opus-5-5",
+        "--system-prompt",
+        "<prompt file text>",
+        "--output-format",
+        "json",
+        "--tools",
+        "",
+        "--strict-mcp-config",
+        "--safe-mode",
+        "--disable-slash-commands",
+        "--permission-prompts",
+        "none",
+        "--no-session-persistence",
+        "--session-id",
+        "ff54aa9b-303c-4fd3-99f8-64fe15a1f1e4"
+      ],
+      "cwd": "/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/jobwatch-claude-cli-8td_i2pj",
+      "requested_session_id": "ff54aa9b-303c-4fd3-99f8-64fe15a1f1e4",
+      "returncode": 0,
+      "raw_stdout": "{\"duration_api_ms\":15370,\"stop_reason\":\"end_turn\",\"session_id\":\"ff54aa9b-303c-4fd3-99f8-64fe15a1f1e4\",\"total_cost_usd\":0.0358594,\"usage\":{\"input_tokens\":2,\"cache_creation_input_tokens\":345,\"cache_read_input_tokens\":4857,\"output_tokens\":1606,\"output_tokens_details\":{\"thinking_tokens\":651},\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":345,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"global\",\"iterations\":[{\"input_tokens\":2,\"output_tokens\":1606,\"cache_read_input_tokens\":4857,\"cache_creation_input_tokens\":345,\"cache_creation\":{\"ephemeral_5m_input_tokens\":0,\"ephemeral_1h_input_tokens\":345},\"type\":\"message\"}],\"speed\":\"standard\",\"fallback_credit\":null},\"modelUsage\":{\"claude-opus-5-5\":{\"inputTokens\":2,\"outputTokens\":1606,\"cacheReadInputTokens\":4857,\"cacheCreationInputTokens\":345,\"webSearchRequests\":0,\"costUSD\":0.0358594,\"contextWindow\":1000000,\"maxOutputTokens\":128000,\"thinkingTokens\":651,\"cacheCreationEphemeral5mInputTokens\":0,\"cacheCreationEphemeral1hInputTokens\":345,\"canonicalModel\":\"claude-opus-5-5\",\"provider\":\"firstParty\",\"costBasis\":\"list\"}},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"fast_mode_disabled_reason\":\"sdk_opt_in_required\",\"subagent_stats\":{\"spawned\":0,\"requested\":{\"background\":0,\"foreground\":0,\"unset\":0},\"started_in_background\":0,\"max_depth\":0,\"spawned_by_subagents\":0,\"completed\":0,\"failed\":0,\"killed\":{\"parent\":0,\"user\":0,\"system\":0},\"refused\":{\"depth_limit\":0,\"concurrency_limit\":0,\"budget\":0},\"by_type\":{}},\"safety_stops\":0,\"is_error\":false,\"num_turns\":1,\"subtype\":\"success\",\"api_error_status\":null,\"result\":\"{\\\"id\\\": 4631822008, \\\"verdict\\\": \\\"NOT_RELEVANT\\\", \\\"reasoning\\\": \\\"Location, sponsorship, and skills pass, but role type and level fail. (1) Role type: The title is a hybrid 'Research Engineer / Scientist'. The posting describes the work as 'exploratory experimental research on AI safety' across Alignment Science research agendas (scalable oversight, AI control, model organisms of misalignment, model welfare). It expects candidates to 'contribute ideas, figures, and writing to research papers, blog posts, and talks', and it lists authoring ML/NLP/AI-safety research papers as a strong-candidate trait. Some projects are hands-on, such as building jailbreak-evaluation tooling and writing eval scripts. Still, the role centers on producing novel empirical research, not on building, training, and deploying production ML/NLP systems. Research Engineer is in target_roles, but Ananya's rule only accepts it when the work is mostly engineering, which this is not. (2) Level: The posting does not state a year count. However, its core asks are 'significant software, ML, or research engineering experience', prior experience contributing to empirical AI research projects, and familiarity with technical AI safety research. Its $350K–$500K band and level-dependent experience language also point to a mid-to-senior hire. Ananya is a new grad: MS CS (AI) at Boston University, ending 2026-12, with one 8-month ML Engineer co-op (RAG prototype, transformer classifier fine-tuning with MLflow) and one solo coursework project. She has no research publications and no AI safety research experience. That does not meet a 'significant experience' bar for a research-heavy role. (3) Skills: The required ('may be a good fit') section names fewer than 2 specific technologies. Python appears only as the interview language, and Kubernetes appears only under optional 'strong candidates may also' items, so it is not a core requirement. The skills test is therefore skipped and does not disqualify her; she has Python and PyTorch, and Kubernetes is only in her familiar-but-not-shipped list. (4) Location: San Francisco, CA, with a Bay Area preference and a 25% in-office hybrid policy. This is US-based, and Ananya (Boston, MA) is willing to relocate within the US, so it passes. (5) Sponsorship: The posting states 'We do sponsor visas!', which satisfies her needs_sponsorship=true. Net: the role type and seniority failures outweigh the passes on location and sponsorship.\\\", \\\"resume_fields_cited\\\": [\\\"target_roles\\\", \\\"education\\\", \\\"experience\\\", \\\"projects\\\", \\\"skills.languages\\\", \\\"skills.ml_nlp\\\", \\\"skills.familiar_with_not_shipped\\\", \\\"personal.location\\\", \\\"willing_to_relocate_us\\\", \\\"needs_sponsorship\\\"], \\\"posting_fields_cited\\\": [\\\"title\\\", \\\"content\\\", \\\"location.name\\\"]}\",\"ttft_ms\":7350,\"type\":\"result\",\"duration_ms\":15495,\"uuid\":\"7ca4ff5c-0a64-4012-a317-f5d903e6a296\",\"ttft_stream_ms\":1415,\"time_to_request_ms\":120,\"first_content_frame_ms\":1415,\"queued_turn_count\":0,\"result_index\":0}\n",
+      "stderr": "",
+      "reported_session_id": "ff54aa9b-303c-4fd3-99f8-64fe15a1f1e4",
+      "reported_models": [
+        "claude-opus-5-5"
+      ],
+      "subtype": "success",
+      "is_error": false,
+      "num_turns": 1,
+      "raw_text": "{\"id\": 4631822008, \"verdict\": \"NOT_RELEVANT\", \"reasoning\": \"Location, sponsorship, and skills pass, but role type and level fail. (1) Role type: The title is a hybrid 'Research Engineer / Scientist'. The posting describes the work as 'exploratory experimental research on AI safety' across Alignment Science research agendas (scalable oversight, AI control, model organisms of misalignment, model welfare). It expects candidates to 'contribute ideas, figures, and writing to research papers, blog posts, and talks', and it lists authoring ML/NLP/AI-safety research papers as a strong-candidate trait. Some projects are hands-on, such as building jailbreak-evaluation tooling and writing eval scripts. Still, the role centers on producing novel empirical research, not on building, training, and deploying production ML/NLP systems. Research Engineer is in target_roles, but Ananya's rule only accepts it when the work is mostly engineering, which this is not. (2) Level: The posting does not state a year count. However, its core asks are 'significant software, ML, or research engineering experience', prior experience contributing to empirical AI research projects, and familiarity with technical AI safety research. Its $350K–$500K band and level-dependent experience language also point to a mid-to-senior hire. Ananya is a new grad: MS CS (AI) at Boston University, ending 2026-12, with one 8-month ML Engineer co-op (RAG prototype, transformer classifier fine-tuning with MLflow) and one solo coursework project. She has no research publications and no AI safety research experience. That does not meet a 'significant experience' bar for a research-heavy role. (3) Skills: The required ('may be a good fit') section names fewer than 2 specific technologies. Python appears only as the interview language, and Kubernetes appears only under optional 'strong candidates may also' items, so it is not a core requirement. The skills test is therefore skipped and does not disqualify her; she has Python and PyTorch, and Kubernetes is only in her familiar-but-not-shipped list. (4) Location: San Francisco, CA, with a Bay Area preference and a 25% in-office hybrid policy. This is US-based, and Ananya (Boston, MA) is willing to relocate within the US, so it passes. (5) Sponsorship: The posting states 'We do sponsor visas!', which satisfies her needs_sponsorship=true. Net: the role type and seniority failures outweigh the passes on location and sponsorship.\", \"resume_fields_cited\": [\"target_roles\", \"education\", \"experience\", \"projects\", \"skills.languages\", \"skills.ml_nlp\", \"skills.familiar_with_not_shipped\", \"personal.location\", \"willing_to_relocate_us\", \"needs_sponsorship\"], \"posting_fields_cited\": [\"title\", \"content\", \"location.name\"]}"
+    }
+  ],
+  "parsed": {
+    "id": 4631822008,
+    "verdict": "NOT_RELEVANT",
+    "reasoning": "Location, sponsorship, and skills pass, but role type and level fail. (1) Role type: The title is a hybrid 'Research Engineer / Scientist'. The posting describes the work as 'exploratory experimental research on AI safety' across Alignment Science research agendas (scalable oversight, AI control, model organisms of misalignment, model welfare). It expects candidates to 'contribute ideas, figures, and writing to research papers, blog posts, and talks', and it lists authoring ML/NLP/AI-safety research papers as a strong-candidate trait. Some projects are hands-on, such as building jailbreak-evaluation tooling and writing eval scripts. Still, the role centers on producing novel empirical research, not on building, training, and deploying production ML/NLP systems. Research Engineer is in target_roles, but Ananya's rule only accepts it when the work is mostly engineering, which this is not. (2) Level: The posting does not state a year count. However, its core asks are 'significant software, ML, or research engineering experience', prior experience contributing to empirical AI research projects, and familiarity with technical AI safety research. Its $350K–$500K band and level-dependent experience language also point to a mid-to-senior hire. Ananya is a new grad: MS CS (AI) at Boston University, ending 2026-12, with one 8-month ML Engineer co-op (RAG prototype, transformer classifier fine-tuning with MLflow) and one solo coursework project. She has no research publications and no AI safety research experience. That does not meet a 'significant experience' bar for a research-heavy role. (3) Skills: The required ('may be a good fit') section names fewer than 2 specific technologies. Python appears only as the interview language, and Kubernetes appears only under optional 'strong candidates may also' items, so it is not a core requirement. The skills test is therefore skipped and does not disqualify her; she has Python and PyTorch, and Kubernetes is only in her familiar-but-not-shipped list. (4) Location: San Francisco, CA, with a Bay Area preference and a 25% in-office hybrid policy. This is US-based, and Ananya (Boston, MA) is willing to relocate within the US, so it passes. (5) Sponsorship: The posting states 'We do sponsor visas!', which satisfies her needs_sponsorship=true. Net: the role type and seniority failures outweigh the passes on location and sponsorship.",
+    "resume_fields_cited": [
+      "target_roles",
+      "education",
+      "experience",
+      "projects",
+      "skills.languages",
+      "skills.ml_nlp",
+      "skills.familiar_with_not_shipped",
+      "personal.location",
+      "willing_to_relocate_us",
+      "needs_sponsorship"
+    ],
+    "posting_fields_cited": [
+      "title",
+      "content",
+      "location.name"
+    ]
+  },
+  "validator": {
+    "status": "ok",
+    "failed_attempts": []
+  }
+}
