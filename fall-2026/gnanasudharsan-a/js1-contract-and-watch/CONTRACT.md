@@ -56,3 +56,14 @@ Changes:
    - Anthropic “Research Engineer” roles may expect research depth beyond a new-grad profile; the rule doesn’t check this.
 
 Tests changed: No test in tests/test_rule_contract.py was changed; all original tests still pass at threshold 2. Added test_amendment1_research_engineer_title_is_a_role_match and test_amendment1_two_skills_is_enough before implementation. Implementing the amendment broke two of Claude Code's own tests, which were updated: test_skill_mentioned_many_times_counts_once (now uses one repeated skill, so it tests dedup independent of the threshold) and test_real_persona_file_loads (expected target_roles now includes "Research Engineer").
+
+## Amendment 2 — 2026-10-29 (before any live Claude judge call)
+
+* **Scope:** This updates the network allow-list specified in In/Refuses and Amendment 1 change 3, as well as the requirement that `ANTHROPIC_API_KEY` must be loaded exclusively for the Claude judge.
+* **Reason:** I don't have an Anthropic API key or a budget for one, so the Claude judge runs through Claude Code's non-interactive print mode using my existing Claude Enterprise login.
+* **Changes:**
+  1. **Backend:** Setting `JOBWATCH_BACKEND=claude_cli` runs one fresh `claude -p` process for each judgment call. The direct API backend code remains available in the repository, but it is not used for this run.
+  2. **Hosts:** The board fetcher remains strictly restricted to `boards-api.greenhouse.io`. The Claude CLI connects to Anthropic's servers on its own to run the model, and my wrapper script cannot directly inspect or restrict those network connections.
+  3. **Safeguards instead:** To ensure the judge operates fairly and independently without cheating—such as preventing the model from reading my local label files or project code—all tools are completely disabled using `--tools ""`, every call runs inside a brand-new, empty temporary working directory, session persistence is turned off, and my baseline prompt file is passed directly as the system prompt.
+  4. **Known limits:** The CLI process might inject its own surrounding text or metadata; the `claude_cli` and direct API results are treated as separate execution conditions and are not directly compared; and the exact JSON output formatting from the CLI needs to be verified during the first live test.
+* **Tests:** The `claude_cli` backend functionality is fully covered by tests located in `tests/test_claude_cli_backend.py`, which was committed under `beb7793`.
