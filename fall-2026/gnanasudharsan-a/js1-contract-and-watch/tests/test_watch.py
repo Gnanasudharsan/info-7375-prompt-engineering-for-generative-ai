@@ -71,7 +71,7 @@ def test_real_persona_file_loads():
         "Research Engineer"]  # CONTRACT.md Amendment 1
 
 
-@pytest.mark.parametrize("email", ["ananya.rao@gmail.com", "someone@example.com.evil.org"])
+@pytest.mark.parametrize("email", ["ananya.rao@realmail.test", "someone@example.com.evil.org"])
 def test_real_looking_email_is_refused(email):
     resume = valid_persona()
     resume["personal"]["email"] = email
