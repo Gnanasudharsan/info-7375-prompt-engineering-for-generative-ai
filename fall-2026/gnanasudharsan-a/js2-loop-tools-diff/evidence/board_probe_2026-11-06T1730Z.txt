@@ -1,0 +1,12 @@
+Fri Nov  6 17:30:40 UTC 2026
+gh-anthropic | HTTP 200 | 480595 bytes | jobs=671 | https://boards-api.greenhouse.io/v1/boards/anthropic/jobs
+gh-BADNAME | HTTP 404 | 38 bytes | jobs=0 | https://boards-api.greenhouse.io/v1/boards/zz-no-such-board-7375/jobs
+ashby-openai | HTTP 200 | 13727200 bytes | jobs=821 | https://api.ashbyhq.com/posting-api/job-board/openai
+ashby-notion | HTTP 200 | 2818025 bytes | jobs=152 | https://api.ashbyhq.com/posting-api/job-board/notion
+ashby-BADNAME | HTTP 404 | 9 bytes | jobs=not-json | https://api.ashbyhq.com/posting-api/job-board/zz-no-such-board-7375
+lever-palantir | HTTP 000 | 9 bytes | jobs=not-json | https://api.lever.co/v0/postings/palantir?mode=json
+lever-BADNAME | HTTP 404 | 41 bytes | jobs=0 | https://api.lever.co/v0/postings/zz-no-such-board-7375?mode=json
+--- re-probe Fri Nov  6 17:32:24 UTC 2026 with stale-file fix, 60s timeout ---
+lever-palantir | HTTP 200 | 6s | 5942874 bytes | jobs=305 | https://api.lever.co/v0/postings/palantir?mode=json
+lever-spotify | HTTP 200 | 1s | 808277 bytes | jobs=85 | https://api.lever.co/v0/postings/spotify?mode=json
+lever-BADNAME | HTTP 404 | 0s | 41 bytes | jobs=NO-jobs-KEY | https://api.lever.co/v0/postings/zz-no-such-board-7375?mode=json
