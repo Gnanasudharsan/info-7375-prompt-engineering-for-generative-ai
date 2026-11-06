@@ -1,0 +1,5 @@
+Prediction written before live run 2 (2026-11-06, patched code 644e6ec):
+- 4 requests; exit incomplete, code 2 (the 404 board fails again).
+- anthropic: ok, not a baseline now; new >= 2 (seen in the seeded runs at 671/672), removed small.
+- notion and spotify: ok, small or zero new/removed. No suspect_empty (real responses).
+- State written for the 3 ok boards; the 404 board still absent from state.
