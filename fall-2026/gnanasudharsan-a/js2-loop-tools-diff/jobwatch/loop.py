@@ -196,8 +196,10 @@ class _Recorder:
 # --- the loop -------------------------------------------------------------------
 
 class _Loop:
-    def __init__(self, root, policy, transport, budgets, clock, sleep, recorder, persona):
+    def __init__(self, root, policy, transport, budgets, clock, sleep, recorder, persona,
+                 approved=False):
         self.root, self.policy, self.transport = root, policy, transport
+        self.approved = bool(approved)
         self.budgets, self.clock, self.sleep = budgets, clock, sleep
         self.rec, self.persona = recorder, persona
         self.requests_used = 0
@@ -318,9 +320,23 @@ class _Loop:
         ids = set(by_id)
         prior = state.get(board["id"])
         baseline = prior is None
+        suspect_empty = not ids and bool(prior)  # GATE Amendment 1
+        if suspect_empty and not self.approved:
+            # A failed board's counts are null and its state is not written; no retry.
+            detail = f"200 with zero postings; prior state has {len(prior)} id(s); needs --i-approve"
+            record.update(status="failed", reason="suspect_empty", detail=detail)
+            self.rec.trace("suspect_empty", board=board["id"], prior_count=len(prior),
+                           approved=False, state_written=False)
+            self.rec.trace("board_result", board=board["id"], status="failed",
+                           reason="suspect_empty", attempts=record["attempts"])
+            return
         new = [] if baseline else sorted(ids - set(prior))
         removed = [] if baseline else sorted(set(prior) - ids)
         record.update(status="ok", count=len(ids), new=new, removed=removed, baseline=baseline)
+        if suspect_empty:
+            record["approved_reset"] = True
+            self.rec.trace("approved_reset", board=board["id"], prior_count=len(prior),
+                           removed=removed, approved=True)
         self.ok_ids[board["id"]] = sorted(ids)
         self.new_postings[board["id"]] = [normalize(board["ats"], by_id[i]) for i in new]
         self.rec.trace("board_result", board=board["id"], status="ok", count=len(ids),
@@ -372,7 +388,7 @@ def run_loop(boards, *, root, policy, transport, budgets, clock=time.monotonic,
     rec = _Recorder(root, policy, run_id, clock, start)
     rec.trace("run_start", run_id=run_id, budgets=budgets, boards_listed=len(boards or []),
               approved=bool(approved))
-    loop = _Loop(root, policy, transport, budgets, clock, sleep, rec, persona)
+    loop = _Loop(root, policy, transport, budgets, clock, sleep, rec, persona, approved)
     budget_hit, judged, exit_status, reason = None, [], None, None
 
     try:
@@ -502,6 +518,14 @@ def format_report_md(report: dict) -> str:
             new = "baseline" if r["baseline"] else _fmt_ids(r["new"])
             lines.append(f"| {b} | {r['status']} | {count} | {new} | {_fmt_ids(r['removed'])} "
                          f"| {r['attempts']} |")
+        lines.append("")
+
+    resets = [b for b, r in boards.items() if r.get("approved_reset")]
+    if resets:
+        lines += ["## Approved state resets (--i-approve, GATE Amendment 1)", ""]
+        for b in resets:
+            lines.append(f"- **{b}**: 200 with zero postings after a non-empty state; reset approved, "
+                         f"removed {len(boards[b]['removed'])} prior id(s), state written as []")
         lines.append("")
 
     if report["skipped_duplicates"]:

@@ -1,0 +1,4 @@
+run 20261106T210118Z-SEEDED-A: the agent reports exit=incomplete
+  greenhouse:anthropic: prior 670 -> reported 672, new 2, removed 0 
+  lever:spotify: prior 84 -> reported 84, new 0, removed 0 
+VERDICT: no problem found

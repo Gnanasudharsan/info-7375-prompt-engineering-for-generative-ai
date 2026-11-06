@@ -1,0 +1,73 @@
+{
+  "run_id": "20261106T210118Z-SEEDED-A",
+  "exit": "incomplete",
+  "exit_code": 2,
+  "reason": "1 board(s) failed",
+  "note": "\"finished\" means the loop ran to the end, not that the answer is right (GATE \u00a72, \u00a78).",
+  "budgets": {
+    "max_boards": 5,
+    "max_requests": 10,
+    "max_seconds": 120,
+    "request_timeout": 30,
+    "max_judge_calls": 10
+  },
+  "budget_hit": null,
+  "counters": {
+    "requests_used": 3,
+    "seconds_used": 1.38,
+    "boards_attempted": 3,
+    "judge_calls_used": 0
+  },
+  "failed_boards": [
+    "ashby:notion"
+  ],
+  "boards_done": [
+    "greenhouse:anthropic",
+    "ashby:notion",
+    "lever:spotify"
+  ],
+  "boards_not_attempted": [],
+  "skipped_duplicates": [],
+  "boards": {
+    "greenhouse:anthropic": {
+      "ats": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 672,
+      "new": [
+        "5472952008",
+        "5475456008"
+      ],
+      "removed": [],
+      "baseline": false
+    },
+    "ashby:notion": {
+      "ats": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/notion",
+      "status": "failed",
+      "reason": "suspect_empty",
+      "attempts": 1,
+      "count": null,
+      "new": null,
+      "removed": null,
+      "baseline": null,
+      "detail": "200 with zero postings; prior state has 154 id(s); needs --i-approve"
+    },
+    "lever:spotify": {
+      "ats": "lever",
+      "url": "https://api.lever.co/v0/postings/spotify?mode=json",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 84,
+      "new": [],
+      "removed": [],
+      "baseline": false
+    }
+  },
+  "approved_flag": false,
+  "state_written": true,
+  "new_postings": []
+}

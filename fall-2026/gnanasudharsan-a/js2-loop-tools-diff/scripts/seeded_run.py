@@ -11,7 +11,7 @@ from jobwatch.policy import Policy
 from jobwatch.transport import UrllibTransport
 
 HERE = Path(__file__).resolve().parents[1]
-ROOT = HERE / "seeded"
+ROOT = HERE / (sys.argv[2] if len(sys.argv) > 2 else "seeded")
 BOARDS = [b for b in json.loads((HERE / "boards.json").read_text()) if not b["id"].startswith("greenhouse:zz")]
 NOTION = next(b["url"] for b in BOARDS if b["id"] == "ashby:notion")
 
@@ -19,7 +19,7 @@ NOTION = next(b["url"] for b in BOARDS if b["id"] == "ashby:notion")
 def main(mode):
     if mode == "A":
         if ROOT.exists():
-            sys.exit("seeded/ already exists; remove it on purpose before re-running mode A")
+            sys.exit(f"{ROOT.name}/ already exists; remove it on purpose before re-running mode A")
         (ROOT / "state").mkdir(parents=True)
         (ROOT / "runs").mkdir()
         (ROOT / "state" / "seen_ids.json").write_text((HERE / "evidence" / "state_after_run1.json").read_text())
