@@ -1,0 +1,6 @@
+Independent recomputation of 20261106T203437Z (does not import jobwatch)
+greenhouse:anthropic: HTTP 200, sha256 match=True, my count=670, report count=670, state ids=670, state==body ids: True
+ashby:notion: HTTP 200, sha256 match=True, my count=154, report count=154, state ids=154, state==body ids: True
+lever:spotify: HTTP 200, sha256 match=True, my count=84, report count=84, state ids=84, state==body ids: True
+greenhouse:zz-no-such-board-7375: HTTP 404, sha256 match=True, in state=False
+state keys: ['ashby:notion', 'greenhouse:anthropic', 'lever:spotify']

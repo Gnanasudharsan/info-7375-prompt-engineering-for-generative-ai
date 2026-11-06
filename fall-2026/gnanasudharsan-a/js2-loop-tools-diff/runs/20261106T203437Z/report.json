@@ -1,0 +1,82 @@
+{
+  "run_id": "20261106T203437Z",
+  "exit": "incomplete",
+  "exit_code": 2,
+  "reason": "1 board(s) failed",
+  "note": "\"finished\" means the loop ran to the end, not that the answer is right (GATE \u00a72, \u00a78).",
+  "budgets": {
+    "max_boards": 5,
+    "max_requests": 10,
+    "max_seconds": 120,
+    "request_timeout": 30,
+    "max_judge_calls": 10
+  },
+  "budget_hit": null,
+  "counters": {
+    "requests_used": 4,
+    "seconds_used": 1.975,
+    "boards_attempted": 4,
+    "judge_calls_used": 0
+  },
+  "failed_boards": [
+    "greenhouse:zz-no-such-board-7375"
+  ],
+  "boards_done": [
+    "greenhouse:anthropic",
+    "ashby:notion",
+    "lever:spotify",
+    "greenhouse:zz-no-such-board-7375"
+  ],
+  "boards_not_attempted": [],
+  "skipped_duplicates": [],
+  "boards": {
+    "greenhouse:anthropic": {
+      "ats": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 670,
+      "new": [],
+      "removed": [],
+      "baseline": true
+    },
+    "ashby:notion": {
+      "ats": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/notion",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 154,
+      "new": [],
+      "removed": [],
+      "baseline": true
+    },
+    "lever:spotify": {
+      "ats": "lever",
+      "url": "https://api.lever.co/v0/postings/spotify?mode=json",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 84,
+      "new": [],
+      "removed": [],
+      "baseline": true
+    },
+    "greenhouse:zz-no-such-board-7375": {
+      "ats": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/zz-no-such-board-7375/jobs?content=true",
+      "status": "failed",
+      "reason": "not_found",
+      "attempts": 1,
+      "count": null,
+      "new": null,
+      "removed": null,
+      "baseline": null,
+      "detail": "HTTP 404"
+    }
+  },
+  "approved_flag": false,
+  "state_written": true,
+  "new_postings": []
+}
