@@ -140,7 +140,10 @@ def test_L5_exit_codes_match_gate():
     (AS, Response(200, b"Not Found", {})),                        # Ashby non-JSON body
 ], ids=["gh-no-jobs-key", "lever-not-a-list", "ashby-not-json"])
 def test_L6_wrong_shape_is_bad_shape_not_empty_board(root, board, response):
-    seed_state(root, {board["id"]: ["x"], GH["id"]: ["1"]})
+    seed = {board["id"]: ["x"]}
+    if board is not GH:
+        seed[GH["id"]] = ["1"]
+    seed_state(root, seed)
     boards = [board] if board is GH else [board, GH]
     script = {board["url"]: [response, response]}
     if board is not GH:

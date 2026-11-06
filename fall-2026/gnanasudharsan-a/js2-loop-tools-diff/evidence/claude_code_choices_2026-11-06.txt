@@ -1,0 +1,63 @@
+# Claude Code final reply, session log 7096e7f8-1689-4f63-b005-7a56d5739b55.jsonl, timestamp 2026-11-06T20:27:05.621Z
+
+I built the four new modules and the suite runs **140 passed, 1 failed**. The one failure comes from the test's own setup, not the loop, and I left the test alone because you put `tests/` off-limits.
+
+Result of `.venv/bin/python -m pytest -q`:
+
+```text
+FAILED tests/test_loop.py::test_L6_wrong_shape_is_bad_shape_not_empty_board[gh-no-jobs-key]
+1 failed, 140 passed in 1.09s
+```
+
+**Why it fails:** when `board is GH`, the line `seed_state(root, {board["id"]: ["x"], GH["id"]: ["1"]})` uses the same key twice. Python keeps the last value, so the state file starts as `{"greenhouse:anthropic": ["1"]}` and `["x"]` is never written. The loop does treat the board as `bad_shape`, ends with `error` (no board succeeded) and leaves the state file exactly as seeded. Only the expected value is impossible. If you want to fix it, give the Greenhouse case its own seed. I haven't touched it.
+
+**New files:** `jobwatch/policy.py`, `jobwatch/transport.py`, `jobwatch/normalize.py` and `jobwatch/loop.py`, which includes the CLI. I changed no existing file and made no network request. I didn't run the CLI or commit anything.
+
+I also ran some offline checks in a scratch folder:
+- **Transport refusals:** http, `user:pass@`, port 8443 and off-list hosts are all refused before any socket opens.
+- **Redirects:** a redirect to `evil.com`, to another allowed host, or down to `http` is refused.
+- **Normalizers and judge:** a fake run produced a `NOT_RELEVANT` verdict with `None` for the fields the source lacked.
+- **Reports:** `report.md` lists failed boards first, and a config-error run writes its report but no state.
+
+## Choices GATE.md doesn't decide
+
+**Policy**
+1. **URL checks beyond §6:** I refuse URLs with credentials (`user:pass@`) and any port other than 443.
+2. **Symlinked folders:** if `runs/` or `state/` is itself a symlink pointing elsewhere, nothing inside it is allowed.
+3. **Root folders:** a path must be strictly inside `runs/` or `state/`; the folder itself doesn't count.
+4. **`runs/` is not readable:** I followed the §6 read list exactly.
+5. **Bad mode:** an unknown `mode` raises `ValueError`, because it's a coding bug rather than a refusal.
+6. **Deletes:** `check_delete` refuses anything outside `state/`, even with approval.
+
+**Transport**
+7. **Redirects are never followed.** A redirect to a different host, even an allowed one, is a `PolicyViolation` and stops the run. A same-host redirect comes back as its 3xx response, and the board fails with reason `redirect`. That way every HTTP request is counted against the budget.
+8. **Proxies:** environment proxy settings (`HTTPS_PROXY`) are ignored, so the connection always goes straight to the allowed host.
+9. **Whole-response timeout:** the 30 s limit covers the full body read, not just each socket read.
+10. **No size limit:** response bodies have no size cap (OpenAI's Ashby board was 13 MB).
+11. **Headers sent:** only `User-Agent: jobwatch-js2/1.0 (INFO 7375 course project)` and `Accept: application/json`.
+
+**Loop**
+12. **Duplicate boards:** a board counts as a duplicate if it has the same id **or** the same normalized GET URL (host lowercased, `:443` and fragment dropped). Duplicates are skipped up front, before any fetch.
+13. **Order of checks before each request:** repeat check, then policy, then budgets (requests, then seconds). Skipped duplicates don't count toward `max_boards`.
+14. **429 wait:** a 429 retry waits the `Retry-After` value rather than 2 s. A non-numeric `Retry-After` (an HTTP date) is not retried.
+15. **Failure reasons not in §5:** other statuses (403, 400, 204…) fail without a retry as `http_<code>`. A transient failure that fails again keeps its own reason: `timeout`, `connection_error`, `server_error` or `rate_limited`.
+16. **Budget hit mid-board:** if the budget runs out partway through a board, that board is marked `interrupted` with null counts. Boards never reached are `not_attempted`.
+17. **State on `budget-exhausted`:** I **write** state for boards that succeeded. §2 only forbids writing on `error`. If you'd rather write nothing on budget exhaustion, that's a one-line change.
+18. **Posting ids:** a posting with no usable id, or an item that isn't an object, makes the whole board `bad_shape`. Ids are stored as strings; `new` and `removed` are sorted, and `count` is the number of unique ids.
+19. **State format:** the state file is `{board_id: [ids]}`. This isn't compatible with the JS1 `{"seen_ids": …}` file, which would be reported as unreadable state and exit `error`. JS2 has no `state/` folder yet, so nothing is affected now.
+20. **Unexpected crashes:** any unexpected exception ends the run as `error` with the traceback in the trace, a report written and no state written. This keeps "every run writes a report" true, but bugs show up as `error` exits instead of tracebacks.
+21. **Run folder:** an existing `runs/<run_id>/` is never reused, so two runs in the same second fail. The run id uses JS1's `%Y%m%dT%H%M%SZ` format.
+22. **Raw files and trace times:** raw bodies are saved as `raw/<board_id with ':'→'_'>.attempt<n>.body`. Trace times are seconds since the run started, not UTC timestamps.
+23. **Config errors:** `gate_config.json` must have exactly the five keys, each a positive number. A bad config, boards file or persona still writes a trace and report with exit `error`. The CLI creates `runs/` if it's missing.
+
+**Judging**
+24. **Rule judge only:** the loop runs only the rule judge. The Claude judge is recorded as `not_run`, so `max_judge_calls` is reported as 0 used and nothing checks it yet.
+25. **`--i-approve` does nothing yet.** The flag is passed in and recorded, but the loop never deletes or resets state. Replacing a board's id list with `[]` (the §8 case) is treated as a normal update, as you asked.
+
+**Normalization**
+26. **Not checked against real responses.** The Ashby and Lever field names come from their public API shapes. The repo has no saved Ashby or Lever body, so check this on your first live run.
+27. **Lever content:** `description`, plus each `lists[].text`/`content`, plus `additional`. Requirements often live in `lists`. When the HTML field is missing, the plain-text version is used. Ashby works the same way: `descriptionHtml`, or `descriptionPlain` if that's missing.
+28. **Locations:** several locations are joined with `" | "` so `rule.py` can split them. I didn't use Ashby's `isRemote` or address country to build a location.
+29. **`updated_at` is `None` for Ashby and Lever.** They publish `publishedAt` and `createdAt`, which are different facts. Department comes from Ashby `department` and Lever `categories.department`; Lever `team` isn't used.
+
+**The rule judge will likely miss US jobs on Ashby.** Ashby writes locations like "San Francisco, California". The JS1 location check only matches "united states", a `, CA`-style ending or a "remote" prefix, so it will mark many US Ashby jobs `NOT_RELEVANT`. I didn't change `rule.py`. You may want a dated amendment to CONTRACT.md for this.

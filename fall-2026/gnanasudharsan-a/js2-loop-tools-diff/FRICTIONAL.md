@@ -12,3 +12,10 @@ Expected: the copied JS1 tests would pass unchanged in the JS2 folder.
 What happened: 2 collection errors, both FileNotFoundError for experiment/run_judge.py (the JS1 prompt-experiment runner, which JS2 does not include).
 Decision: removed tests/test_run_judge.py and lines 199-end of tests/test_claude_cli_backend.py (the run_judge loader + 2 tests). All 11 claude_cli backend tests are kept. This is not weakening a test: the code they test is not shipped in JS2, and they still pass in js1-contract-and-watch at e0d0e7e.
 Evidence: evidence/js1_baseline_in_js2_*.txt
+
+## 2026-11-06 ~15:27 ET — A loop test was wrong, not the code
+Expected: all 141 tests pass after Claude Code's build.
+What happened: 140 passed, 1 failed: test_L6[gh-no-jobs-key], "assert ['1'] == ['x']". When board is GH, the seed dict {board["id"]: ["x"], GH["id"]: ["1"]} has the same key twice, so the seed was ["1"]. Every check of the code's behavior (failed / bad_shape / 1 attempt / count and new None) passed.
+Claude Code's final reply (2026-11-06T20:27:05Z) gave the same diagnosis and did not edit tests/, as my prompt required. I confirmed it myself from the failure line before accepting it.
+Changed: only the test setup (seed GH once when board is GH). No assertion changed, so the test was not weakened. The test was drafted with Claude chat; I accepted it without catching the duplicate key.
+Evidence: evidence/L6_gh_failure_*.txt, evidence/claude_code_choices_2026-11-06.txt, evidence/tests_after_build_*.txt

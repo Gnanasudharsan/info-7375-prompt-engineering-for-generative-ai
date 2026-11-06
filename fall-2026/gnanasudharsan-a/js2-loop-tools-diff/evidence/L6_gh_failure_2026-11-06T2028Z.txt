@@ -1,0 +1,34 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_L6_wrong_shape_is_bad_shape_not_empty_board[gh-no-jobs-key] _______
+
+root = PosixPath('/private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/pytest-of-gnanasudharsanashokumar/pytest-4/test_L6_wrong_shape_is_bad_sha0')
+board = {'ats': 'greenhouse', 'id': 'greenhouse:anthropic', 'url': 'https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true'}
+response = Response(status=200, body=b'{"status": "ok"}', headers={})
+
+    @pytest.mark.parametrize("board,response", [
+        (GH, ok({"status": "ok"})),                                   # Greenhouse dict without "jobs"
+        (LV, ok({"ok": False, "error": "Document not found"})),       # Lever dict, not a list
+        (AS, Response(200, b"Not Found", {})),                        # Ashby non-JSON body
+    ], ids=["gh-no-jobs-key", "lever-not-a-list", "ashby-not-json"])
+    def test_L6_wrong_shape_is_bad_shape_not_empty_board(root, board, response):
+        seed_state(root, {board["id"]: ["x"], GH["id"]: ["1"]})
+        boards = [board] if board is GH else [board, GH]
+        script = {board["url"]: [response, response]}
+        if board is not GH:
+            script[GH["url"]] = [GH_OK]
+        res, t, _ = go(root, boards, script)
+        b = res.boards[board["id"]]
+        assert b["status"] == "failed" and b["reason"] == "bad_shape"
+        assert b["attempts"] == 1
+        assert b["count"] is None and b["new"] is None
+>       assert read_state(root)[board["id"]] == ["x"]
+E       AssertionError: assert ['1'] == ['x']
+E         
+E         At index 0 diff: '1' != 'x'
+E         Use -v to get more diff
+
+tests/test_loop.py:153: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_loop.py::test_L6_wrong_shape_is_bad_shape_not_empty_board[gh-no-jobs-key]
+1 failed in 0.06s
