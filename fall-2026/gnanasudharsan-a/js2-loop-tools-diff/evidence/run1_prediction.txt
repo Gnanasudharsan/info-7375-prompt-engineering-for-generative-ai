@@ -1,0 +1,6 @@
+Prediction written before live run 1 (2026-11-06):
+- 4 boards listed; 4 requests (404 is not retried; no timeouts expected).
+- greenhouse:anthropic, ashby:notion, lever:spotify: status ok, baseline=true (no state yet), new=[].
+- greenhouse:zz-no-such-board-7375: failed, reason not_found, attempts 1, new=null, removed=null.
+- Exit: incomplete, exit code 2. State written for the 3 ok boards only.
+- Counts near the probe: anthropic ~671, notion ~152, spotify ~85.
