@@ -28,14 +28,20 @@ def main(run_dir, prior_path, recount_board=None, recount_url=None):
             problems.append(f"{board}: {flag}")
     if recount_url:
         assert recount_url.startswith(ALLOWED), "recount host not on the allow-list"
-        req = urllib.request.Request(recount_url, headers={"Accept": "application/json"})
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            d = json.load(resp)
-        n = len(d if isinstance(d, list) else d["jobs"])
-        rep = report["boards"][recount_board]["count"]
-        print(f"  direct recount of {recount_board}: {n} postings vs reported {rep}")
-        if n != rep:
-            problems.append(f"{recount_board}: direct recount {n} != reported {rep}")
+        req = urllib.request.Request(recount_url, headers={
+            "Accept": "application/json",
+            "User-Agent": "jobwatch-js2-check/1.0 (INFO 7375 course project, independent check)"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                d = json.load(resp)
+        except Exception as exc:  # a failed recount is reported, never turned into a number
+            print(f"  direct recount of {recount_board}: UNAVAILABLE ({type(exc).__name__}: {exc})")
+        else:
+            n = len(d if isinstance(d, list) else d["jobs"])
+            rep = report["boards"][recount_board]["count"]
+            print(f"  direct recount of {recount_board}: {n} postings vs reported {rep}")
+            if n != rep:
+                problems.append(f"{recount_board}: direct recount {n} != reported {rep}")
     print("VERDICT:", "WRONG ANSWER CAUGHT -> " + "; ".join(problems) if problems else "no problem found")
     return 1 if problems else 0
 

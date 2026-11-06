@@ -19,3 +19,9 @@ What happened: 140 passed, 1 failed: test_L6[gh-no-jobs-key], "assert ['1'] == [
 Claude Code's final reply (2026-11-06T20:27:05Z) gave the same diagnosis and did not edit tests/, as my prompt required. I confirmed it myself from the failure line before accepting it.
 Changed: only the test setup (seed GH once when board is GH). No assertion changed, so the test was not weakened. The test was drafted with Claude chat; I accepted it without catching the duplicate key.
 Evidence: evidence/L6_gh_failure_*.txt, evidence/claude_code_choices_2026-11-06.txt, evidence/tests_after_build_*.txt
+
+## 2026-11-06 ~15:38 ET — The seeded demo, three small failures before it worked
+1. `python scripts/seeded_run.py` failed with ModuleNotFoundError: jobwatch, because scripts/ (not the project folder) was on the import path. The next commands still ran and failed one after another, and `tee` left two empty evidence files. Nothing was written to seeded/ or state/ (checked). Fix: PYTHONPATH=. and chaining with &&; deleted the empty files.
+2. My independent check flagged notion correctly, then crashed on the direct recount: HTTP 403 Forbidden from api.ashbyhq.com. It sent the default Python-urllib User-Agent; the loop's transport (custom UA) got 200 seconds earlier. After adding a User-Agent the recount returned 154. This supports, but does not prove, that Ashby blocks the default UA.
+3. An independent check that crashes is not a check. check_run.py now reports a failed recount as UNAVAILABLE instead of crashing, and never turns a failure into a number.
+Result: the agent said "finished" (code 0) for both seeded runs; my check caught both (FINISHED_WRONG_ANSWER.md).

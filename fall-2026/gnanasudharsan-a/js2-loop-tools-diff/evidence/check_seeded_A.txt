@@ -1,0 +1,6 @@
+run 20261106T203850Z-SEEDED-A: the agent reports exit=finished
+  greenhouse:anthropic: prior 670 -> reported 671, new 1, removed 0 
+  ashby:notion: prior 154 -> reported 0, new 0, removed 154 EMPTY-AFTER-NONEMPTY
+  lever:spotify: prior 84 -> reported 84, new 0, removed 0 
+  direct recount of ashby:notion: 154 postings vs reported 0
+VERDICT: WRONG ANSWER CAUGHT -> ashby:notion: EMPTY-AFTER-NONEMPTY; ashby:notion: direct recount 154 != reported 0

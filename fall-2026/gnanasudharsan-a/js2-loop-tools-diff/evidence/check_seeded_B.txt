@@ -1,0 +1,5 @@
+run 20261106T203859Z-SEEDED-B: the agent reports exit=finished
+  greenhouse:anthropic: prior 671 -> reported 671, new 0, removed 0 
+  ashby:notion: prior 0 -> reported 154, new 154, removed 0 ALL-NEW-AFTER-EMPTY-STATE
+  lever:spotify: prior 84 -> reported 84, new 0, removed 0 
+VERDICT: WRONG ANSWER CAUGHT -> ashby:notion: ALL-NEW-AFTER-EMPTY-STATE
