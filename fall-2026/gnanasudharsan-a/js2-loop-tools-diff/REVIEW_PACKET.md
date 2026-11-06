@@ -10,7 +10,7 @@ SEEDED run `seeded/runs/20261106T203850Z-SEEDED-A`, on the unpatched code (74034
 `tests/test_review_empty_board.py`, committed at 900c905, before the Claude Code session. Before the patch: **R1 and R5 fail** (the reproductions), R2–R4 pass (guards that must keep passing: approved reset, first-sight baseline, already-empty board). I predicted R2 would fail; it passed, because with approval Amendment 1 wants the old behavior. Recorded in FRICTIONAL; the 900c905 message is wrong on that point and is corrected there, not rewritten.
 Evidence: `evidence/review_tests_before_patch_*.txt`.
 
-## 3. What I asked Claude Code for (session <PATCH_SESSION>, default permission mode)
+## 3. What I asked Claude Code for (session 7a088b59-a0f1-417c-9b7c-ff067faaac7c, default permission mode)
 Implement Amendment 1 in jobwatch/loop.py only; with approval keep today's behavior and record it; change no other file; no network, no CLI, no commit; minimal change; run pytest and show the diff stat.
 
 ## 4. The diff read as a change in behavior (`evidence/review_patch_diff.txt`, +26 −2)
