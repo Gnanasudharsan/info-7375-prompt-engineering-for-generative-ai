@@ -1,8 +1,8 @@
 # Boundary tests — permission policy (GATE §6)
 Predictions written 2026-11-06, before any policy code existed.
-Interface under test: jobwatch/policy.py
+Interface under test: jobwatch/policy.py — Policy(root) with methods:
 - check_url(url, method="GET")        -> returns normally if allowed, raises PolicyViolation if not
-- check_path(path, mode)              -> mode is "read" or "write"
+- check_path(path, mode)              -> path relative to root (or absolute); mode is "read" or "write"
 - check_delete(path, approved=False)  -> deleting/resetting state/ needs approved=True (the --i-approve flag)
 
 | # | case | input | predicted | catches GATE wrong version |
