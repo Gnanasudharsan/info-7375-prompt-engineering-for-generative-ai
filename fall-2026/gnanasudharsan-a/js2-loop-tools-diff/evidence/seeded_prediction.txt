@@ -1,0 +1,5 @@
+Prediction written before the SEEDED GATE §8 demo (2026-11-06). SEEDED = notion response constructed in mode A.
+Mode A: exit finished, code 0. notion: ok, count 0, new 0, removed 154. Notion state written as [].
+        check_run (prior = state_after_run1) flags notion EMPTY-AFTER-NONEMPTY, and the direct notion recount (~154) != reported 0.
+Mode B: exit finished, code 0. notion: ok, count ~154, new ~154 (NOT baseline, because the state entry is [] not missing), removed 0.
+        check_run (prior = seeded state after A) flags notion ALL-NEW-AFTER-EMPTY-STATE.
