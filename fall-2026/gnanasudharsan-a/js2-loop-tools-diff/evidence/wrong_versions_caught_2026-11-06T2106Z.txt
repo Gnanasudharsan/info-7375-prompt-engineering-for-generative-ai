@@ -1,0 +1,10 @@
+#1  jobwatch/policy.py: CAUGHT   | 1 failed, 145 passed in 1.12s
+#2  jobwatch/policy.py: CAUGHT   | 1 failed, 145 passed in 0.75s
+#3  jobwatch/policy.py: CAUGHT   | 3 failed, 143 passed in 0.76s
+#4  jobwatch/loop.py: CAUGHT   | 1 failed, 145 passed in 0.76s
+#5  jobwatch/loop.py: CAUGHT   | 6 failed, 140 passed in 0.77s
+#6  jobwatch/loop.py: CAUGHT   | 2 failed, 144 passed in 0.75s
+#7  jobwatch/loop.py: CAUGHT   | 1 failed, 145 passed in 0.75s
+#8  jobwatch/loop.py: CAUGHT   | 3 failed, 143 passed in 0.76s
+#9  jobwatch/loop.py: CAUGHT   | 4 failed, 142 passed in 0.77s
+#10 jobwatch/policy.py: CAUGHT   | 2 failed, 144 passed in 0.76s

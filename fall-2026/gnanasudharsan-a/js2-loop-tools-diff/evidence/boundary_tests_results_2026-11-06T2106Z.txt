@@ -1,0 +1,25 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.0, pytest-8.4.2, pluggy-1.7.0 -- /Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js2-loop-tools-diff/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js2-loop-tools-diff
+plugins: anyio-4.16.0
+collecting ... collected 16 items
+
+tests/test_policy_boundary.py::test_url_boundary[B1] PASSED              [  6%]
+tests/test_policy_boundary.py::test_url_boundary[B2] PASSED              [ 12%]
+tests/test_policy_boundary.py::test_url_boundary[B3] PASSED              [ 18%]
+tests/test_policy_boundary.py::test_url_boundary[B4] PASSED              [ 25%]
+tests/test_policy_boundary.py::test_url_boundary[B5] PASSED              [ 31%]
+tests/test_policy_boundary.py::test_url_boundary[B6] PASSED              [ 37%]
+tests/test_policy_boundary.py::test_path_boundary[B7] PASSED             [ 43%]
+tests/test_policy_boundary.py::test_path_boundary[B8] PASSED             [ 50%]
+tests/test_policy_boundary.py::test_path_boundary[B9] PASSED             [ 56%]
+tests/test_policy_boundary.py::test_path_boundary[B10] PASSED            [ 62%]
+tests/test_policy_boundary.py::test_path_boundary[B11] PASSED            [ 68%]
+tests/test_policy_boundary.py::test_path_boundary[B12] PASSED            [ 75%]
+tests/test_policy_boundary.py::test_path_boundary[B13] PASSED            [ 81%]
+tests/test_policy_boundary.py::test_path_boundary[B16] PASSED            [ 87%]
+tests/test_policy_boundary.py::test_B14_delete_state_without_approval_refused PASSED [ 93%]
+tests/test_policy_boundary.py::test_B15_delete_state_with_approval_allowed PASSED [100%]
+
+============================== 16 passed in 0.03s ==============================

@@ -25,3 +25,26 @@ Interface under test: jobwatch/policy.py — Policy(root) with methods:
 | B16 | read outside allowed reads | read ../js1-contract-and-watch/CONTRACT.md | REFUSE | - |
 
 Results column will be filled from the actual pytest output, not edited by hand.
+
+## Results (generated from pytest -v output, not typed by hand)
+Source: evidence/boundary_tests_results_2026-11-06T2106Z.txt
+PASSED means the observed outcome equals the prediction above.
+
+| # | result |
+|---|---|
+| B1 | PASSED |
+| B2 | PASSED |
+| B3 | PASSED |
+| B4 | PASSED |
+| B5 | PASSED |
+| B6 | PASSED |
+| B7 | PASSED |
+| B8 | PASSED |
+| B9 | PASSED |
+| B10 | PASSED |
+| B11 | PASSED |
+| B12 | PASSED |
+| B13 | PASSED |
+| B14 | PASSED |
+| B15 | PASSED |
+| B16 | PASSED |
