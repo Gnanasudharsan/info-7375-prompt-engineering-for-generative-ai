@@ -1,0 +1,32 @@
+F...F                                                                    [100%]
+=================================== FAILURES ===================================
+_________ test_R1_empty_200_after_nonempty_is_suspect_without_approval _________
+
+root = PosixPath('/private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/pytest-of-gnanasudharsanashokumar/pytest-6/test_R1_empty_200_after_nonemp0')
+
+    def test_R1_empty_200_after_nonempty_is_suspect_without_approval(root):
+        seed_state(root, {AS["id"]: ["a1", "a2"], GH["id"]: ["1"]})
+        res, t = go(root, [AS, GH], {AS["url"]: [EMPTY, EMPTY], GH["url"]: [GH_OK]})
+        b = res.boards[AS["id"]]
+>       assert b["status"] == "failed" and b["reason"] == "suspect_empty"
+E       AssertionError: assert ('ok' == 'failed'
+E         
+E         - failed
+E         + ok)
+
+tests/test_review_empty_board.py:24: AssertionError
+___________________ test_R5_rule_applies_to_lever_lists_too ____________________
+
+root = PosixPath('/private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/pytest-of-gnanasudharsanashokumar/pytest-6/test_R5_rule_applies_to_lever_0')
+
+    def test_R5_rule_applies_to_lever_lists_too(root):
+        seed_state(root, {LV["id"]: ["l1"], GH["id"]: ["1"]})
+        res, _ = go(root, [LV, GH], {LV["url"]: [ok([])], GH["url"]: [GH_OK]})
+>       assert res.boards[LV["id"]]["reason"] == "suspect_empty"
+E       AssertionError: assert None == 'suspect_empty'
+
+tests/test_review_empty_board.py:59: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_review_empty_board.py::test_R1_empty_200_after_nonempty_is_suspect_without_approval
+FAILED tests/test_review_empty_board.py::test_R5_rule_applies_to_lever_lists_too
+2 failed, 3 passed in 0.07s

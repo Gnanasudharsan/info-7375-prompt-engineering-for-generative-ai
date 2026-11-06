@@ -74,3 +74,10 @@ A loop that stops is not a loop that succeeded. Every run writes `runs/<UTC>/tra
 
 ## 8. Known open case (not decided yet)
 A well-formed 200 with `"jobs": []` for a board that previously had postings. v1 treats it as a truly empty board. I expect this to be a finished-wrong-answer, will demonstrate it with a SEEDED response, catch it with an independent check, and decide the fix in a dated amendment.
+## Amendment 1 — 2026-11-06 (decides the §8 open case)
+Evidence: FINISHED_WRONG_ANSWER.md (SEEDED runs A and B; agent said "finished" twice, independent check caught both).
+Rule: a well-formed 200 with zero postings, for a board whose prior state has at least one id, is **suspect_empty**.
+- Without --i-approve: the board is failed, reason `suspect_empty`, new=null, removed=null, its state is NOT written, and the run cannot exit `finished` (GATE §2 then gives `incomplete`, or `error` if no other board succeeded).
+- With --i-approve: I am confirming the board really is empty. The board is ok, removed = the prior ids, and its state is written as [] (this is the "resetting state needs my approval" rule of §6, now used by the loop).
+- Unchanged: a board seen for the first time with zero postings is a normal baseline; a board whose prior state is already [] and stays empty is ok.
+Out of scope, on purpose: a large but partial drop (e.g. 154 -> 3) is not covered by this rule.
