@@ -25,3 +25,8 @@ Evidence: evidence/L6_gh_failure_*.txt, evidence/claude_code_choices_2026-11-06.
 2. My independent check flagged notion correctly, then crashed on the direct recount: HTTP 403 Forbidden from api.ashbyhq.com. It sent the default Python-urllib User-Agent; the loop's transport (custom UA) got 200 seconds earlier. After adding a User-Agent the recount returned 154. This supports, but does not prove, that Ashby blocks the default UA.
 3. An independent check that crashes is not a check. check_run.py now reports a failed recount as UNAVAILABLE instead of crashing, and never turns a failure into a number.
 Result: the agent said "finished" (code 0) for both seeded runs; my check caught both (FINISHED_WRONG_ANSWER.md).
+
+## 2026-11-06 ~15:41 ET — My review-test prediction was wrong for R2
+Predicted: R1, R2, R5 fail before the patch. Actual: R1 and R5 fail; R2 passes (evidence/review_tests_before_patch_*.txt).
+Why: with --i-approve, Amendment 1 asks for exactly what the old code already does (ok, removed = prior ids, state []), so R2 is a guard that the patch must keep, not a reproduction. The commit message of 900c905 states the wrong prediction; it is corrected here, not rewritten.
+Reproduction tests: R1 (Ashby dict) and R5 (Lever list). Guards: R2, R3, R4.
