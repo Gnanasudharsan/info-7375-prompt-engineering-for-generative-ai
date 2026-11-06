@@ -1,0 +1,216 @@
+{
+  "run_id": "20261106T210821Z",
+  "exit": "incomplete",
+  "exit_code": 2,
+  "reason": "1 board(s) failed",
+  "note": "\"finished\" means the loop ran to the end, not that the answer is right (GATE \u00a72, \u00a78).",
+  "budgets": {
+    "max_boards": 5,
+    "max_requests": 10,
+    "max_seconds": 120,
+    "request_timeout": 30,
+    "max_judge_calls": 10
+  },
+  "budget_hit": null,
+  "counters": {
+    "requests_used": 4,
+    "seconds_used": 1.948,
+    "boards_attempted": 4,
+    "judge_calls_used": 0
+  },
+  "failed_boards": [
+    "greenhouse:zz-no-such-board-7375"
+  ],
+  "boards_done": [
+    "greenhouse:anthropic",
+    "ashby:notion",
+    "lever:spotify",
+    "greenhouse:zz-no-such-board-7375"
+  ],
+  "boards_not_attempted": [],
+  "skipped_duplicates": [],
+  "boards": {
+    "greenhouse:anthropic": {
+      "ats": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 672,
+      "new": [
+        "5472952008",
+        "5475456008"
+      ],
+      "removed": [],
+      "baseline": false
+    },
+    "ashby:notion": {
+      "ats": "ashby",
+      "url": "https://api.ashbyhq.com/posting-api/job-board/notion",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 154,
+      "new": [],
+      "removed": [],
+      "baseline": false
+    },
+    "lever:spotify": {
+      "ats": "lever",
+      "url": "https://api.lever.co/v0/postings/spotify?mode=json",
+      "status": "ok",
+      "reason": null,
+      "attempts": 1,
+      "count": 84,
+      "new": [],
+      "removed": [],
+      "baseline": false
+    },
+    "greenhouse:zz-no-such-board-7375": {
+      "ats": "greenhouse",
+      "url": "https://boards-api.greenhouse.io/v1/boards/zz-no-such-board-7375/jobs?content=true",
+      "status": "failed",
+      "reason": "not_found",
+      "attempts": 1,
+      "count": null,
+      "new": null,
+      "removed": null,
+      "baseline": null,
+      "detail": "HTTP 404"
+    }
+  },
+  "approved_flag": false,
+  "state_written": true,
+  "new_postings": [
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5472952008",
+      "title": "Web Design Manager",
+      "location": "San Francisco, CA | New York City, NY",
+      "department": "Marketing & Brand",
+      "updated_at": "2026-11-06T15:36:04-05:00",
+      "absolute_url": "https://job-boards.greenhouse.io/anthropic/jobs/5472952008",
+      "fields_missing_at_source": [],
+      "rule_verdict": {
+        "verdict": "NOT_RELEVANT",
+        "label": "record (recomputable)"
+      },
+      "claude_verdict": {
+        "label": "judgment (model output, not fact)",
+        "status": "not_run",
+        "model": null,
+        "output": null,
+        "reason": "Claude judge not wired into the JS2 loop"
+      },
+      "justification": {
+        "title": {
+          "field": "title",
+          "passed": false,
+          "matches": []
+        },
+        "seniority": {
+          "field": "title",
+          "passed": false,
+          "excluded_words_found": [
+            "manager"
+          ]
+        },
+        "location": {
+          "field": "location.name",
+          "passed": true,
+          "matched_part": "San Francisco, CA",
+          "matched_by": "ends with \", ca\""
+        },
+        "sponsorship": {
+          "field": "content",
+          "passed": true,
+          "negative_phrase_found": false,
+          "result": "negative phrase \"not currently able to sponsor\" not found"
+        },
+        "skills": {
+          "field": "content",
+          "passed": false,
+          "matched": [],
+          "distinct_count": 0,
+          "required": 2
+        },
+        "failed_conditions": [
+          "title",
+          "seniority",
+          "skills"
+        ],
+        "summary": "title: no target role matched; seniority: manager; location.name: \"San Francisco, CA\" (ends with \", ca\"); content sponsorship: negative phrase \"not currently able to sponsor\" not found; skills (0/2): none; failed: title, seniority, skills"
+      }
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5475456008",
+      "title": "Finance Systems Lead, International",
+      "location": "Dublin, IE",
+      "department": "Finance",
+      "updated_at": "2026-11-06T15:50:15-05:00",
+      "absolute_url": "https://job-boards.greenhouse.io/anthropic/jobs/5475456008",
+      "fields_missing_at_source": [],
+      "rule_verdict": {
+        "verdict": "NOT_RELEVANT",
+        "label": "record (recomputable)"
+      },
+      "claude_verdict": {
+        "label": "judgment (model output, not fact)",
+        "status": "not_run",
+        "model": null,
+        "output": null,
+        "reason": "Claude judge not wired into the JS2 loop"
+      },
+      "justification": {
+        "title": {
+          "field": "title",
+          "passed": false,
+          "matches": []
+        },
+        "seniority": {
+          "field": "title",
+          "passed": false,
+          "excluded_words_found": [
+            "lead"
+          ]
+        },
+        "location": {
+          "field": "location.name",
+          "passed": false,
+          "matched_part": null,
+          "matched_by": null,
+          "value": "Dublin, IE"
+        },
+        "sponsorship": {
+          "field": "content",
+          "passed": true,
+          "negative_phrase_found": false,
+          "result": "negative phrase \"not currently able to sponsor\" not found"
+        },
+        "skills": {
+          "field": "content",
+          "passed": true,
+          "matched": [
+            {
+              "skill": "Python",
+              "resume_path": "skills.languages"
+            },
+            {
+              "skill": "SQL",
+              "resume_path": "skills.languages"
+            }
+          ],
+          "distinct_count": 2,
+          "required": 2
+        },
+        "failed_conditions": [
+          "title",
+          "seniority",
+          "location"
+        ],
+        "summary": "title: no target role matched; seniority: lead; location.name: no US or remote part; content sponsorship: negative phrase \"not currently able to sponsor\" not found; skills (2/2): Python [skills.languages], SQL [skills.languages]; failed: title, seniority, location"
+      }
+    }
+  ]
+}
