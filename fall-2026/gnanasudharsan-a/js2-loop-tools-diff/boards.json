@@ -1,0 +1,6 @@
+[
+  {"id": "greenhouse:anthropic", "ats": "greenhouse", "url": "https://boards-api.greenhouse.io/v1/boards/anthropic/jobs?content=true"},
+  {"id": "ashby:notion", "ats": "ashby", "url": "https://api.ashbyhq.com/posting-api/job-board/notion"},
+  {"id": "lever:spotify", "ats": "lever", "url": "https://api.lever.co/v0/postings/spotify?mode=json"},
+  {"id": "greenhouse:zz-no-such-board-7375", "ats": "greenhouse", "url": "https://boards-api.greenhouse.io/v1/boards/zz-no-such-board-7375/jobs?content=true"}
+]
