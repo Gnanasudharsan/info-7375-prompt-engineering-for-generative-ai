@@ -1,0 +1,18 @@
+Fresh clone test Fri Nov  6 21:10:41 UTC 2026 at fd0b4fa, Python 3.14.0
+..                                                                       [100%]
+146 passed in 1.11s
+#1  jobwatch/policy.py: CAUGHT   | 1 failed, 145 passed in 0.73s
+#2  jobwatch/policy.py: CAUGHT   | 1 failed, 145 passed in 0.73s
+#3  jobwatch/policy.py: CAUGHT   | 3 failed, 143 passed in 0.74s
+#4  jobwatch/loop.py: CAUGHT   | 1 failed, 145 passed in 0.75s
+#5  jobwatch/loop.py: CAUGHT   | 6 failed, 140 passed in 0.76s
+#6  jobwatch/loop.py: CAUGHT   | 2 failed, 144 passed in 0.75s
+#7  jobwatch/loop.py: CAUGHT   | 1 failed, 145 passed in 0.77s
+#8  jobwatch/loop.py: CAUGHT   | 3 failed, 143 passed in 0.80s
+#9  jobwatch/loop.py: CAUGHT   | 4 failed, 142 passed in 0.77s
+#10 jobwatch/policy.py: CAUGHT   | 2 failed, 144 passed in 0.76s
+run 20261106T210821Z: the agent reports exit=incomplete
+  greenhouse:anthropic: prior 670 -> reported 672, new 2, removed 0 
+  ashby:notion: prior 154 -> reported 154, new 0, removed 0 
+  lever:spotify: prior 84 -> reported 84, new 0, removed 0 
+VERDICT: no problem found

@@ -34,3 +34,7 @@ Reproduction tests: R1 (Ashby dict) and R5 (Lever list). Guards: R2, R3, R4.
 ## 2026-11-06 ~16:00 ET — Review patch session
 Claude Code (session 7a088b59-a0f1-417c-9b7c-ff067faaac7c, default mode) asked only to read files, run pytest, and edit jobwatch/loop.py; I approved each one and denied nothing. Diff +26 −2 in one file. I re-ran the SEEDED reproduction myself in seeded_after_patch/: exit incomplete, notion suspect_empty, 154 ids kept.
 Mistake: I committed 644e6ec with the placeholder <PATCH_SESSION> in REVIEW_PACKET.md and the commit message. Filled in afterwards; the 644e6ec message stays as it is.
+
+## 2026-11-06 ~16:10 ET — Fresh clone and sign-off
+Fresh clone of my fork at fd0b4fa into /tmp: 146 passed, wrong versions 10/10 caught, offline check of run 2 clean (evidence/freshclone_test_2026-11-06.txt). No live requests from the clone. Signed the README sign-off after reading it.
+Unresolved: everything in the sign-off's "Not checked" list, especially the timeout overshoot, the untested transport, and the partial-drop case.

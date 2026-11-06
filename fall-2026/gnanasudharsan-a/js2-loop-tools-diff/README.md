@@ -83,7 +83,7 @@ Raw bodies are gzipped after each run; the sha256 in each trace is of the uncomp
 - That the 403 from Ashby was caused by the User-Agent (adding one fixed it; that is all I showed).
 - That `suspect_empty` is a complete defense against bad board responses.
 
-**Signed or withheld:** ____________ (name, date)
+**Signed:** Gnanasudharsan Ashokumar, 2026-11-06
 
 ## Driver's seat
 | part | what Claude did | what I did | why it stays mine | evidence |
