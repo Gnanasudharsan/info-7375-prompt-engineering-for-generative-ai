@@ -4,13 +4,16 @@ Gnanasudharsan Ashokumar · INFO 7375 Fall 2026 · fictional persona Ananya Rao 
 A bounded loop that watches four job boards on three applicant-tracking systems, under a permission policy enforced in code, with one Claude Code change reviewed on evidence.
 **Started from:** my own Job-Search Agent 1 code (js1-contract-and-watch, final e0d0e7e), copied at d76a1a6. I did not use Lectern or the Reallocation Engine providers.
 
+**Read in this order:** this README (sign-off, driver's seat) → GATE.md → FINISHED_WRONG_ANSWER.md → REVIEW_PACKET.md → BOUNDARY_TESTS.md → FRICTIONAL.md.
+
 ## Language and toolchain
 Python 3.14.0 (venv) · pytest 8.4.2 · macOS 27.2 · git 2.54.0 · Claude Code 2.1.319 (used for the build and for one patch).
 The loop, transport and policy use the standard library only (urllib). requirements.txt is inherited from JS1 (anthropic and requests are used only by the JS1 Claude judge backend).
 
 ## Run it from a fresh clone
 ```bash
-cd fall-2026/gnanasudharsan-a/js2-loop-tools-diff
+git clone https://github.com/Gnanasudharsan/info-7375-prompt-engineering-for-generative-ai.git
+cd info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js2-loop-tools-diff
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python -m pytest -q                                   # 146 passed, no network
@@ -75,6 +78,7 @@ Raw bodies are gzipped after each run; the sha256 in each trace is of the uncomp
 - Check-then-write races (a symlink created after check_path) and case-variant paths on macOS.
 - Wrong versions #1, #2, #4 and #7 are each caught by only one test.
 - The Claude judge is not run by the loop; max_judge_calls is declared but unused.
+- Budget-exhausted, the seconds rule and duplicate boards were shown only in tests (L11–L14), never in a live run.
 - Python versions other than 3.14.0; boards other than these four.
 
 **Not claiming**

@@ -38,3 +38,20 @@ Mistake: I committed 644e6ec with the placeholder <PATCH_SESSION> in REVIEW_PACK
 ## 2026-11-06 ~16:10 ET — Fresh clone and sign-off
 Fresh clone of my fork at fd0b4fa into /tmp: 146 passed, wrong versions 10/10 caught, offline check of run 2 clean (evidence/freshclone_test_2026-11-06.txt). No live requests from the clone. Signed the README sign-off after reading it.
 Unresolved: everything in the sign-off's "Not checked" list, especially the timeout overshoot, the untested transport, and the partial-drop case.
+
+## 2026-11-06 ~12:35 ET (written retrospectively at ~16:20 ET) — GATE.md: what I accepted and changed
+Tried/expected: write GATE.md myself before any code. Claude chat drafted the structure and proposed budget values.
+I accepted the proposed values (5 boards, 10 requests, 120 s, 30 s timeout, 10 judge calls); I changed one thing: I added the seconds rule (elapsed + 30 s timeout > 120), because "check before" was ambiguous for time. Boards were chosen from my own probe (c869cf3). Committed at 80dece3 before Claude Code.
+Still do not fully understand: whether 120 s is the right budget; I never saw it hit in a real run.
+
+## 2026-11-06 ~14:00–15:27 ET (written retrospectively at ~16:20 ET) — Build session with Claude Code
+Ran Claude Code 2.1.319 in default permission mode (session 7096e7f8). Every bash prompt showed "Tip: auto mode handles these prompts for you"; I declined auto mode and "accept edits" each time and approved one action at a time (reads, file creation in jobwatch/, pytest).
+Accepted: the four new files (740343c) after reading them, and its 29 listed choices (evidence/claude_code_choices_2026-11-06.txt), including the stricter URL checks and never following redirects.
+Did not accept as verified: its scratch-folder checks of the transport (redirects, proxies); they are not in the repo, so they are listed under Not checked.
+Learned: auto mode is the default suggestion in every prompt; the authority it offers is the JS1 finding again.
+
+## 2026-11-06 ~16:20 ET — What I still don't understand, and next steps
+- Why Ashby answered 403 to the default Python-urllib User-Agent; I only showed that adding one fixed it.
+- Whether a partial drop (154 -> 3) should be suspect too, and what threshold would be sound. Next step: a GATE amendment with a test first.
+- Budget-exhausted and duplicate boards are shown only in tests (L11–L14), never in a live run.
+- Next steps if continued: transport tests (redirect, proxy), per-board --i-approve, a response size cap.
