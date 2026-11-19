@@ -1,0 +1,313 @@
+[
+ {
+  "n": 1,
+  "board": "ashby:notion",
+  "id": "43ffba97-b64a-4c6a-ac13-c803253c9413",
+  "filter_decision": "reject",
+  "filter_score": 1,
+  "rejected_by": []
+ },
+ {
+  "n": 2,
+  "board": "lever:spotify",
+  "id": "1961fa91-bdba-450a-bfb6-fc8d8d5c9e9c",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 3,
+  "board": "greenhouse:anthropic",
+  "id": "5459098008",
+  "filter_decision": "reject",
+  "filter_score": 3,
+  "rejected_by": []
+ },
+ {
+  "n": 4,
+  "board": "greenhouse:anthropic",
+  "id": "5452922008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 5,
+  "board": "greenhouse:anthropic",
+  "id": "5477464008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A4"
+  ]
+ },
+ {
+  "n": 6,
+  "board": "lever:spotify",
+  "id": "c73be71c-1a63-4906-9925-95f2115d1f1d",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1"
+  ]
+ },
+ {
+  "n": 7,
+  "board": "greenhouse:anthropic",
+  "id": "5470905008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A2",
+   "A4"
+  ]
+ },
+ {
+  "n": 8,
+  "board": "greenhouse:anthropic",
+  "id": "5416020008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 9,
+  "board": "greenhouse:anthropic",
+  "id": "5205704008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4",
+   "A6"
+  ]
+ },
+ {
+  "n": 10,
+  "board": "greenhouse:anthropic",
+  "id": "5194670008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A4"
+  ]
+ },
+ {
+  "n": 11,
+  "board": "greenhouse:anthropic",
+  "id": "5444778008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 12,
+  "board": "greenhouse:anthropic",
+  "id": "5430695008",
+  "filter_decision": "reject",
+  "filter_score": 0,
+  "rejected_by": []
+ },
+ {
+  "n": 13,
+  "board": "ashby:notion",
+  "id": "8e609b06-1c41-40a2-b198-467c85e9bb3d",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A2"
+  ]
+ },
+ {
+  "n": 14,
+  "board": "ashby:notion",
+  "id": "8a11a2bc-70cc-48a2-888b-44f522effd9b",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A2"
+  ]
+ },
+ {
+  "n": 15,
+  "board": "greenhouse:anthropic",
+  "id": "4461450008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A4"
+  ]
+ },
+ {
+  "n": 16,
+  "board": "greenhouse:anthropic",
+  "id": "5073998008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A2",
+   "A4"
+  ]
+ },
+ {
+  "n": 17,
+  "board": "lever:spotify",
+  "id": "9f66e598-8587-4a57-8552-2cdb8672014a",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A2"
+  ]
+ },
+ {
+  "n": 18,
+  "board": "lever:spotify",
+  "id": "2a55d6c9-c564-443a-be3e-a3851db5a93b",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A4"
+  ]
+ },
+ {
+  "n": 19,
+  "board": "greenhouse:anthropic",
+  "id": "5464894008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1"
+  ]
+ },
+ {
+  "n": 20,
+  "board": "greenhouse:anthropic",
+  "id": "5439391008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1"
+  ]
+ },
+ {
+  "n": 21,
+  "board": "greenhouse:anthropic",
+  "id": "5453573008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 22,
+  "board": "greenhouse:anthropic",
+  "id": "5342935008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 23,
+  "board": "greenhouse:anthropic",
+  "id": "5459272008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1"
+  ]
+ },
+ {
+  "n": 24,
+  "board": "ashby:notion",
+  "id": "ead663e3-3eb2-4e0e-97e5-86820062dd68",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A4"
+  ]
+ },
+ {
+  "n": 25,
+  "board": "ashby:notion",
+  "id": "be119222-db73-45fb-8634-0095154fcf1d",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A2",
+   "A4"
+  ]
+ },
+ {
+  "n": 26,
+  "board": "greenhouse:anthropic",
+  "id": "4610158008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A2"
+  ]
+ },
+ {
+  "n": 27,
+  "board": "greenhouse:anthropic",
+  "id": "5442934008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ },
+ {
+  "n": 28,
+  "board": "ashby:notion",
+  "id": "b06005d2-e24b-467b-b7ea-783bac7366da",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A2",
+   "A4"
+  ]
+ },
+ {
+  "n": 29,
+  "board": "greenhouse:anthropic",
+  "id": "5174747008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1"
+  ]
+ },
+ {
+  "n": 30,
+  "board": "greenhouse:anthropic",
+  "id": "5123039008",
+  "filter_decision": "reject",
+  "filter_score": null,
+  "rejected_by": [
+   "A1",
+   "A4"
+  ]
+ }
+]
