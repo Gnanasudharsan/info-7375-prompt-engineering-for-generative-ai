@@ -20,3 +20,4 @@ I pasted the finish-and-commit commands into scripts/label.py's prompt, interrup
 
 ## 2026-11-19 — Third correction: the latest "Finished hand-labeling" line and commit efa63293 are wrong
 I quit the labeler at item #1 (q) without labeling, then ran the finish commands and committed although the check printed 50 empty verdicts. No labels exist yet. From now on the commit is chained to a check that fails while any row is empty.
+## 2026-11-19 13:00 ET — Finished hand-labeling all 50 items (blind, scripts/label.py)
