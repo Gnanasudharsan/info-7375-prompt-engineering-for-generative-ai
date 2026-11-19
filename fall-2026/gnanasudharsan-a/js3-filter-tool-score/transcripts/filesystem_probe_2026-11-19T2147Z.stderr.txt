@@ -1,0 +1,8 @@
+Secure MCP Filesystem Server running on stdio
+Effective allowed directories (from the command line):
+  /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsprobe-vqt_cl1n
+Client does not support MCP Roots, using allowed directories set from server args: [
+  '/private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsprobe-vqt_cl1n'
+]
+Effective allowed directories (from the command line):
+  /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsprobe-vqt_cl1n

@@ -1,0 +1,3 @@
+repository.url = 'git+https://github.com/modelcontextprotocol/servers.git'
+dist.integrity = 'sha512-BoT8Gws5MsetfAey4vDyuzy8WYQES6mGYLSShuqSNGAC0X0NBV4p78/R78KfW4RkxtWz+zxhS9jwhzJrQUTt2Q=='
+license = 'SEE LICENSE IN LICENSE'

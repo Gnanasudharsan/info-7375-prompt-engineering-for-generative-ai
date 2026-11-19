@@ -1,0 +1,27 @@
+server: {'name': 'secure-filesystem-server', 'version': '2.4.0'} | protocol: 2025-06-18
+
+16 tools declared:
+  read_file                    annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  read_text_file               annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  read_media_file              annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  read_multiple_files          annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  write_file                   annotations={'readOnlyHint': False, 'idempotentHint': True, 'destructiveHint': True, 'openWorldHint': False}
+  append_file                  annotations={'readOnlyHint': False, 'idempotentHint': False, 'destructiveHint': False, 'openWorldHint': False}
+  edit_file                    annotations={'readOnlyHint': False, 'idempotentHint': False, 'destructiveHint': True, 'openWorldHint': False}
+  create_directory             annotations={'readOnlyHint': False, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  list_directory               annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  list_directory_with_sizes    annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  directory_tree               annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  move_file                    annotations={'readOnlyHint': False, 'idempotentHint': False, 'destructiveHint': True, 'openWorldHint': False}
+  copy_file                    annotations={'readOnlyHint': False, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  search_files                 annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  get_file_info                annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+  list_allowed_directories     annotations={'readOnlyHint': True, 'idempotentHint': True, 'destructiveHint': False, 'openWorldHint': False}
+
+allowed: {'isError': False, 'text': 'Allowed directories:\n/private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsprobe-vqt_cl1n'}
+inside : {'isError': False, 'text': 'hello from inside the allowed folder\n'}
+outside: {'isError': True, 'text': 'Access denied - path outside allowed directories: /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsoutside-fr2byj1e/secret.txt not in /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T'}
+dotdot : {'isError': True, 'text': 'Access denied - path outside allowed directories: /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsoutside-fr2byj1e/secret.txt not in /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T'}
+symlink: {'isError': True, 'text': 'Access denied - symlink target outside allowed directories: /private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/fsoutside-fr2byj1e/secret.txt not in /private/var/folders/nj/s4r8b4697qd56j7q1vm51r'}
+
+transcript: transcripts/filesystem_probe_2026-11-19T2147Z.jsonl
