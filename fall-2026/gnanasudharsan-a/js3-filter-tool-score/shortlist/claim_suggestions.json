@@ -1,0 +1,404 @@
+{
+  "author": "Codex",
+  "date": "2026-11-19",
+  "source": "runs/20261119T162945Z/raw/greenhouse_anthropic.attempt1.body.gz",
+  "suggestions": [
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5198255008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Have designed, run, and analyzed evaluations for ML models at scale",
+      "reason": "Expects at-scale evaluation experience and gives no explicit entry-level or minimum tenure criterion."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5198255008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA | Seattle, WA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5198255008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5198255008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Have strong Python skills",
+      "reason": "Explicitly asks for Python and ML evaluation. The persona lists Python and describes evaluating a QA prototype."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4938432008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Own critical aspects of our production pretraining pipeline",
+      "reason": "Owns model operations and builds evaluation infrastructure for production pretraining."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4938432008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "deep expertise with JAX, TPU, PyTorch, or large-scale distributed systems",
+      "reason": "Deep expertise is a barrier, but the posting gives no explicit entry-level or minimum tenure criterion."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4938432008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4938432008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4938432008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "deep expertise with JAX, TPU, PyTorch, or large-scale distributed systems",
+      "reason": "The résumé lists PyTorch, but its projects do not show the deep PyTorch expertise or hands-on LLM training the posting asks for."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4613592008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Design, build, and run robust, efficient pipelines for model fine-tuning and evaluation",
+      "reason": "Builds and runs model fine-tuning and evaluation pipelines."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4613592008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "We welcome candidates at various experience levels, with a preference for senior engineers",
+      "reason": "Welcomes a range of levels and prefers senior candidates. It leaves new-grad eligibility unclear."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4613592008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4613592008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4613592008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "proficiency in Python, deep learning frameworks, and distributed computing is required",
+      "reason": "Explicitly requires Python and deep learning frameworks and asks for LLM fine-tuning or evaluation. The persona lists Python and describes transformer fine-tuning."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5438044008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Develop next-generation model architectures and RL algorithms",
+      "reason": "Develops model architectures and implements RL algorithms at scale."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5438044008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Hands-on experience training large models in a distributed setting",
+      "reason": "Requires distributed training and a technical track record. It gives no explicit entry-level or minimum tenure criterion."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5438044008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5438044008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5438044008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Strong programming skills in Python and JAX or PyTorch",
+      "reason": "Explicitly asks for Python and accepts PyTorch, both listed in the persona."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4951814008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "You want to build large scale ML systems from the ground up.",
+      "reason": "Builds ML systems, runs experiments, and improves research infrastructure."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4951814008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Have significant software engineering experience",
+      "reason": "Asks for significant experience without specifying an entry-level path or minimum tenure."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4951814008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "New York City, NY; New York City, NY | Seattle, WA; San Francisco, CA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4951814008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4951814008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Language modeling with transformers",
+      "reason": "Names PyTorch and transformer modeling as preferred skills, overlapping with the persona’s ML stack and transformer project."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4952051008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Build, own, and improve the core RL training system",
+      "reason": "Builds core RL training systems and implements new training methods."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4952051008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Experience with large-scale machine learning training",
+      "reason": "Asks for training experience at scale and gives no explicit entry-level or minimum tenure criterion."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4952051008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4952051008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4952051008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Proficiency in Python and experience working in, debugging, and improving a large ML codebase",
+      "reason": "Explicitly asks for Python and accepts PyTorch as a modern ML framework. Both are listed in the persona."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4631822008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "You want to build and run elegant and thorough machine learning experiments",
+      "reason": "Builds and runs ML experiments for alignment research."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4631822008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Have significant software, ML, or research engineering experience",
+      "reason": "Asks for significant engineering experience without an explicit entry-level or minimum tenure criterion."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4631822008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4631822008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "4631822008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Have some experience contributing to empirical AI research projects",
+      "reason": "Python is mentioned for interviews. The qualifications focus on empirical AI research, and the posting gives limited direct evidence of overlap with the persona’s shipped stack."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5468947008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Conduct research and implement solutions in areas such as model architecture",
+      "reason": "Implements model architectures and optimizes training infrastructure."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5468947008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Strong software engineering skills with a proven track record of building complex systems",
+      "reason": "An MS meets the listed degree criterion. A track record building complex systems is also expected, and new-grad fit remains unclear."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5468947008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5468947008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5468947008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Expertise in Python and experience with deep learning frameworks (PyTorch preferred)",
+      "reason": "Explicitly asks for Python and prefers PyTorch, both listed in the persona."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5458420008",
+      "claim": "role: hands-on ML/AI engineering",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "Design, build, and operate security controls for RL training systems",
+      "reason": "Builds security controls directly in RL training systems. This is an ML infrastructure role with a security focus."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5458420008",
+      "claim": "level: realistic for a new grad",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Experience designing, building, and operating large-scale distributed systems or security systems in production",
+      "reason": "Requires hands-on production systems experience without an explicit entry-level or minimum tenure criterion."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5458420008",
+      "claim": "location: US-based or remote-US",
+      "label": "SUPPORTED",
+      "field": "location",
+      "quote": "San Francisco, CA | New York City, NY | Seattle, WA",
+      "reason": "The posting lists at least one US office for this role."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5458420008",
+      "claim": "sponsorship: does not rule out sponsorship",
+      "label": "SUPPORTED",
+      "field": "description",
+      "quote": "We do sponsor visas!",
+      "reason": "The posting explicitly allows visa sponsorship and says success varies by role and candidate."
+    },
+    {
+      "board": "greenhouse:anthropic",
+      "id": "5458420008",
+      "claim": "skills: asks for skills she has shipped",
+      "label": "INSUFFICIENT",
+      "field": "description",
+      "quote": "Strong software engineering skills in Python and at least one systems language",
+      "reason": "The résumé lists Python, but shows no shipped work in a systems language or production security, both central to this role."
+    }
+  ],
+  "status": "Codex-generated decisions pending human review"
+}
