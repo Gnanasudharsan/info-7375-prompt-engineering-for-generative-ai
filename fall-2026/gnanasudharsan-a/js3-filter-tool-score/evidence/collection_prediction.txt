@@ -1,0 +1,4 @@
+Prediction written before the JS3 collection run (2026-11-19), unchanged JS2 loop:
+- 4 requests; exit incomplete, code 2 (board 4 is the deliberate 404 carried over from JS2).
+- anthropic, notion, spotify: ok, baseline (no state in this folder yet).
+- Counts near the JS2 run 2 values (672 / 154 / 84) but drifted after 13 days; total roughly 850-1000 postings.
