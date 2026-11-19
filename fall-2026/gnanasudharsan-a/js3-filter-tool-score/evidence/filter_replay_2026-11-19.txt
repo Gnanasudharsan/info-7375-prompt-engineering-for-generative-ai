@@ -1,0 +1,6 @@
+filter_v1.jsonl: same 899 records excluding optional changes metadata. Archive SHA-256 0d3c0ba1748891de5fe04a1c377a5608eaab79a3693421af34dad678990091cc
+filter_v1_C1.jsonl: byte-identical. Archive SHA-256 f8cb6e698465599ca4228b5c412e3dd5318d8b2d9367c2d3964abcb72bc99ad0
+filter_v1_C2.jsonl: byte-identical. Archive SHA-256 4a896dac376018cc64adf2ef237aef11daf89b0f952172eeea251fc1e4e05f0c
+filter_v1_C3.jsonl: byte-identical. Archive SHA-256 5f6c31f3419212f78094ef02ff87b4010b97b79dee8d1653a5bed2432e04aa65
+filter_v1_C4.jsonl: byte-identical. Archive SHA-256 ce1465dec53e522f3167bc0bfaaf3ba9d5d457d91f818140cf753cc5a1b34a9d
+filter_v1_C1_C4.jsonl: byte-identical. Archive SHA-256 d51419d4dcdb17cab256e5b0952be24976a4d524138c6a54ef5380d13bdf9279

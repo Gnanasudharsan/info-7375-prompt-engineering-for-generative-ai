@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-19",
+  "client": "Claude Code 2.1.328",
+  "model": "claude-opus-5-5",
+  "prompt": "Use the lookup_score MCP tool with board greenhouse:anthropic and id 5198255008. Report the archived filter decision and numeric score in one sentence. Use only the tool result.",
+  "captured_message_blocks": [
+    {
+      "type": "tool_use",
+      "id": "toolu_01NSqhqoRvCqWmcFwE6Lw6HX",
+      "name": "mcp__js3-score__lookup_score",
+      "input": {
+        "board": "greenhouse:anthropic",
+        "id": "5198255008"
+      },
+      "caller": {
+        "type": "direct"
+      }
+    },
+    {
+      "tool_use_id": "toolu_01NSqhqoRvCqWmcFwE6Lw6HX",
+      "type": "tool_result",
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"board\": \"greenhouse:anthropic\", \"id\": \"5198255008\", \"title\": \"Research Engineer, Post-Training Model Evaluations\", \"location\": \"San Francisco, CA | Seattle, WA\", \"decision\": \"keep\", \"rejected_by\": [], \"score\": 5, \"components\": {\"B1\": 3, \"B2\": [\"evaluation\"], \"B3\": [\"python\"]}, \"matched\": {\"B1\": \"research engineer\"}, \"changes\": [\"C1\", \"C4\"]}"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "text": "The archived v1.1 filter decision for greenhouse:anthropic 5198255008 (\"Research Engineer, Post-Training Model Evaluations\") is **keep**, with a numeric score of **5**."
+    }
+  ]
+}

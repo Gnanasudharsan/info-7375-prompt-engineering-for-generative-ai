@@ -1,0 +1,212 @@
+FFFFFFFFF                                                                [100%]
+=================================== FAILURES ===================================
+_________________ test_initialize_and_no_reply_to_notification _________________
+
+    def test_initialize_and_no_reply_to_notification():
+>       out = session([INIT, NOTE])
+              ^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:26: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...": {"name": "test", "version": "0"}}}\n{"jsonrpc": "2.0", "method": "notifications/initialized"}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+_________________ test_tools_list_declares_one_read_only_tool __________________
+
+    def test_tools_list_declares_one_read_only_tool():
+>       out = session([INIT, NOTE, {"jsonrpc": "2.0", "id": 2, "method": "tools/list"}])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-....0", "method": "notifications/initialized"}\n{"jsonrpc": "2.0", "id": 2, "method": "tools/list"}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+_____ test_call_returns_filter_result_and_claims_for_a_shortlisted_posting _____
+
+    def test_call_returns_filter_result_and_claims_for_a_shortlisted_posting():
+        board, pid = kept_id()
+>       out = session([INIT, NOTE, call(3, {"board": board, "id": pid})])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...: {"name": "score_posting", "arguments": {"board": "greenhouse:anthropic", "id": "5364804008"}}}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+______________ test_bad_input_is_a_tool_error_not_a_crash[args0] _______________
+
+args = {'board': 'greenhouse:anthropic', 'id': '../../etc/passwd'}
+
+    @pytest.mark.parametrize("args", [{"board": "greenhouse:anthropic", "id": "../../etc/passwd"},
+                                      {"board": "greenhouse:anthropic", "id": "000000"},
+                                      {"board": "evil:board", "id": "1"}])
+    def test_bad_input_is_a_tool_error_not_a_crash(args):
+>       out = session([INIT, NOTE, call(4, args)])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...me": "score_posting", "arguments": {"board": "greenhouse:anthropic", "id": "../../etc/passwd"}}}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+______________ test_bad_input_is_a_tool_error_not_a_crash[args1] _______________
+
+args = {'board': 'greenhouse:anthropic', 'id': '000000'}
+
+    @pytest.mark.parametrize("args", [{"board": "greenhouse:anthropic", "id": "../../etc/passwd"},
+                                      {"board": "greenhouse:anthropic", "id": "000000"},
+                                      {"board": "evil:board", "id": "1"}])
+    def test_bad_input_is_a_tool_error_not_a_crash(args):
+>       out = session([INIT, NOTE, call(4, args)])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...ams": {"name": "score_posting", "arguments": {"board": "greenhouse:anthropic", "id": "000000"}}}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+______________ test_bad_input_is_a_tool_error_not_a_crash[args2] _______________
+
+args = {'board': 'evil:board', 'id': '1'}
+
+    @pytest.mark.parametrize("args", [{"board": "greenhouse:anthropic", "id": "../../etc/passwd"},
+                                      {"board": "greenhouse:anthropic", "id": "000000"},
+                                      {"board": "evil:board", "id": "1"}])
+    def test_bad_input_is_a_tool_error_not_a_crash(args):
+>       out = session([INIT, NOTE, call(4, args)])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...ols/call", "params": {"name": "score_posting", "arguments": {"board": "evil:board", "id": "1"}}}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+_______________________ test_unknown_method_and_bad_json _______________________
+
+    def test_unknown_method_and_bad_json():
+>       out = session([INIT, NOTE, {"jsonrpc": "2.0", "id": 5, "method": "files/write"}, "{not json"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...": "notifications/initialized"}\n{"jsonrpc": "2.0", "id": 5, "method": "files/write"}\n{not json\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+_______________________ test_writes_only_its_transcript ________________________
+
+tmp_path = PosixPath('/private/var/folders/nj/s4r8b4697qd56j7q1vm51rsh0000gn/T/pytest-of-gnanasudharsanashokumar/pytest-22/test_writes_only_its_transcrip0')
+
+    def test_writes_only_its_transcript(tmp_path):
+        before = {p for p in ROOT.rglob("*") if ".venv" not in p.parts and "transcripts" not in p.parts and ".pytest_cache" not in p.parts and "__pycache__" not in p.parts}
+>       board, pid = kept_id(); session([INIT, NOTE, call(6, {"board": board, "id": pid})])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...: {"name": "score_posting", "arguments": {"board": "greenhouse:anthropic", "id": "5364804008"}}}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+___________________ test_transcript_records_both_directions ____________________
+
+    def test_transcript_records_both_directions():
+>       board, pid = kept_id(); session([INIT, NOTE, call(7, {"board": board, "id": pid})])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_mcp_server.py:63: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_mcp_server.py:9: in session
+    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudhars.../7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+kwargs = {'capture_output': True, 'cwd': PosixPath('/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-...: {"name": "score_posting", "arguments": {"board": "greenhouse:anthropic", "id": "5364804008"}}}\n', 'text': True, ...}
+
+    def refuse(*args, **kwargs):
+>       raise AssertionError(f"a test tried to start a real process: {args[:1]}")
+E       AssertionError: a test tried to start a real process: (['/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/.venv/bin/python', '/Users/gnanasudharsanashokumar/Downloads/7375/info-7375-prompt-engineering-for-generative-ai/fall-2026/gnanasudharsan-a/js3-filter-tool-score/mcp/server.py'],)
+
+tests/conftest.py:19: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_mcp_server.py::test_initialize_and_no_reply_to_notification
+FAILED tests/test_mcp_server.py::test_tools_list_declares_one_read_only_tool
+FAILED tests/test_mcp_server.py::test_call_returns_filter_result_and_claims_for_a_shortlisted_posting
+FAILED tests/test_mcp_server.py::test_bad_input_is_a_tool_error_not_a_crash[args0]
+FAILED tests/test_mcp_server.py::test_bad_input_is_a_tool_error_not_a_crash[args1]
+FAILED tests/test_mcp_server.py::test_bad_input_is_a_tool_error_not_a_crash[args2]
+FAILED tests/test_mcp_server.py::test_unknown_method_and_bad_json - Assertion...
+FAILED tests/test_mcp_server.py::test_writes_only_its_transcript - AssertionE...
+FAILED tests/test_mcp_server.py::test_transcript_records_both_directions - As...
+9 failed in 0.13s
