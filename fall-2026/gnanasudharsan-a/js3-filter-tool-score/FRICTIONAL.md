@@ -26,3 +26,8 @@ I quit the labeler at item #1 (q) without labeling, then ran the finish commands
 What happened: [in my own words — e.g. "I used <tool> to draft verdicts/reasons for items __ to __", or "for all 50"].
 Why that matters: the audit must be my judgment ("judge each yourself"). The v1 file is renamed ai_assisted_verdicts_v1.csv and is NOT reported as a hand audit.
 What I did instead: a fresh blind random sample of 30 rejects (seed 7378, excluding the 50 already seen), labeled by me; the close calls and kept postings relabeled by me after unblinding, and reported as such.
+
+## 2026-11-19 — Post-unblind corrections to two v2 labels (#27, #29)
+Commit 5a5dcf26 says it made these corrections, but the fix values were blank and nothing changed; the corrections are made here.
+#27 Manager, Applied AI Engineering: blind RELEVANT -> NOT_RELEVANT. I marked it relevant for the technical overlap (LLMs, applied AI) but it is a management role; my own rule excludes it. Corrected after seeing the filter rejected it (A1, A4), so AUDIT.md reports both the blind and the corrected numbers.
+#29 Staff+ Software Engineer, Full-stack: blind CANNOT_TELL -> NOT_RELEVANT. My own reason already said staff-level; the CANNOT_TELL was inconsistent.
