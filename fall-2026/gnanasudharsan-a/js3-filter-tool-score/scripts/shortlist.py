@@ -51,9 +51,9 @@ for r in kept:
     add("skills: asks for skills she has shipped", "SUPPORTED" if len(found) >= 2 else "INSUFFICIENT",
         f"found: {', '.join(found) or 'none'} | " + (first(ss, rf"\b{found[0]}\b") or "") if found else "found: none")
 out = Path("shortlist"); out.mkdir(exist_ok=True)
-(out / "shortlist_v1_1.json").write_text(json.dumps(rows, indent=1))
-with open(out / "claim_labels.csv", "w", newline="") as fh:
+with open(out / "claim_labels.csv", "x", newline="") as fh:
     w = csv.DictWriter(fh, fieldnames=list(rows[0]) + ["my_label", "my_note"]); w.writeheader()
     for x in rows: w.writerow({**x, "my_label": "", "my_note": ""})
+(out / "shortlist_v1_1.json").write_text(json.dumps(rows, indent=1))
 from collections import Counter
 print(len(kept), "postings,", len(rows), "claims; proposed:", Counter((x["claim"].split(":")[0], x["proposed"]) for x in rows))

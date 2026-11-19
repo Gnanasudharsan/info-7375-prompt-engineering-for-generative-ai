@@ -2,9 +2,9 @@
 r = RELEVANT, n = NOT_RELEVANT, c = CANNOT_TELL, s = skip for now, q = save and quit."""
 import csv, re
 from pathlib import Path
-sheet = Path("audit/label_sheet_v2.md").read_text()
+sheet = Path(__import__("sys").argv[1] if len(__import__("sys").argv) > 2 else "audit/label_sheet_v2.md").read_text()
 blocks = {int(m.group(1)): m.group(0) for m in re.finditer(r"## #(\d+) .*?(?=\n## #|\Z)", sheet, re.S)}
-path = Path("audit/hand_verdicts_v2.csv")
+path = Path(__import__("sys").argv[2] if len(__import__("sys").argv) > 2 else "audit/hand_verdicts_v2.csv")
 rows = list(csv.DictReader(path.open()))
 codes = {"r": "RELEVANT", "n": "NOT_RELEVANT", "c": "CANNOT_TELL"}
 def save():

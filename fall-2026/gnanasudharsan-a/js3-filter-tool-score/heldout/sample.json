@@ -1,0 +1,170 @@
+[
+ {
+  "n": 1,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5391504008"
+ },
+ {
+  "n": 2,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "4020350008"
+ },
+ {
+  "n": 3,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5460837008"
+ },
+ {
+  "n": 4,
+  "stratum": "random",
+  "board": "lever:spotify",
+  "id": "01b41b49-7d43-4933-9ba7-06ebe0a2a749"
+ },
+ {
+  "n": 5,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5428014008"
+ },
+ {
+  "n": 6,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5456405008"
+ },
+ {
+  "n": 7,
+  "stratum": "keep",
+  "board": "greenhouse:anthropic",
+  "id": "4631822008"
+ },
+ {
+  "n": 8,
+  "stratum": "keep",
+  "board": "greenhouse:anthropic",
+  "id": "5364804008"
+ },
+ {
+  "n": 9,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5455627008"
+ },
+ {
+  "n": 10,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5076754008"
+ },
+ {
+  "n": 11,
+  "stratum": "random",
+  "board": "ashby:notion",
+  "id": "57b88701-42ce-4c7d-901d-bf65a6256ebc"
+ },
+ {
+  "n": 12,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5432554008"
+ },
+ {
+  "n": 13,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5282833008"
+ },
+ {
+  "n": 14,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5443882008"
+ },
+ {
+  "n": 15,
+  "stratum": "random",
+  "board": "ashby:notion",
+  "id": "e41aff37-7811-42f3-94fc-1aff18500ad0"
+ },
+ {
+  "n": 16,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5115935008"
+ },
+ {
+  "n": 17,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5432575008"
+ },
+ {
+  "n": 18,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5076109008"
+ },
+ {
+  "n": 19,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5442680008"
+ },
+ {
+  "n": 20,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5439524008"
+ },
+ {
+  "n": 21,
+  "stratum": "random",
+  "board": "lever:spotify",
+  "id": "ffe7380b-8c91-4201-bf60-25273493a1d8"
+ },
+ {
+  "n": 22,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5473195008"
+ },
+ {
+  "n": 23,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5426933008"
+ },
+ {
+  "n": 24,
+  "stratum": "near",
+  "board": "greenhouse:anthropic",
+  "id": "5460211008"
+ },
+ {
+  "n": 25,
+  "stratum": "near",
+  "board": "ashby:notion",
+  "id": "85947779-6b87-466a-98bc-30a640448c28"
+ },
+ {
+  "n": 26,
+  "stratum": "keep",
+  "board": "greenhouse:anthropic",
+  "id": "4951814008"
+ },
+ {
+  "n": 27,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5367562008"
+ },
+ {
+  "n": 28,
+  "stratum": "random",
+  "board": "greenhouse:anthropic",
+  "id": "5468875008"
+ }
+]
