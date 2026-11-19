@@ -1,0 +1,33 @@
+# Claude Code v1.1 build reply, session 1475c16e-f56c-4072-b3e9-6874d8d39332.jsonl, timestamp 2026-11-19T19:00:49.172Z
+
+The v1.1 switches are in, but one test fails: 191 pass and 1 fails. The failure comes from a disagreement between `tests/test_filter_v11.py` and the C3 rule in FILTER.md. I didn't change the test, and I didn't bend the code to make it pass.
+
+**`python -m pytest -q`**
+```
+FAILED tests/test_filter_v11.py::test_C3_a_real_level_statement_still_keeps[<p>New grads welcome.</p>]
+E       AssertionError: assert 'cannot_tell' == 'keep'
+1 failed, 191 passed in 0.71s
+```
+
+## The failing test
+The C3 row in the table says a kept posting becomes cannot_tell when the title has no level word and the text has no *numeric* experience statement. "New grads welcome." is in the content, not the title, and has no number. So the rule as written gives `cannot_tell`, but the test expects `keep`. The test matches your abstention rule (c) in §2: "the level claim is insufficient". It doesn't match the C3 row. One of the two needs to change, either by adding non-numeric level wording in the text to C3 or by changing the test's expected answer. That's your call.
+
+## What else I checked
+- **Switches off still gives v1.0.** I re-ran evaluate with no switches on all 899 postings in memory. Apart from the new `"changes": []` key, every row is identical to the saved `filter_v1.jsonl`.
+- **Unknown switches are refused.** `--changes C9` stops with an error, and so does `evaluate(changes={"C9"})`.
+- **I fixed the runner for gzipped bodies.** The raw files in `runs/20261119T162945Z/raw/` are now `*.body.gz`; they were plain `.body` when I wrote the runner. As written, the runner would have marked every board EXCLUDED, so I made it read `.gz` files too. No other file was touched.
+- **I didn't run `--changes` on the corpus,** since you only asked for pytest, so no new output files exist yet.
+
+## Choices FILTER.md v1.1 does not decide
+1. **The result now has a `"changes"` key, even with no switches.** It is `[]` when nothing is on, so a v1.0 result dict gains one key. That's because you asked for it to be recorded every time. Old `filter_v1.jsonl` rows don't have it.
+2. **C1, "US" without dots.** I applied the no-dot form to the three new phrases and also to the two v1.0 citizenship phrases ("us citizenship required", "must be a us citizen"). Forms like "U.S" with one dot or "U.S.A. citizens" are not covered. C1 only runs when the v1.0 A3 phrases didn't match, so a v1.0 match keeps its matched text.
+3. **C2 window.** It is 120 characters on *both* sides of the phrase, counted on the cleaned text (tags stripped, whitespace collapsed, lowercased), not on the raw HTML.
+4. **C2 has multiple occurrences.** A6 fires if *any* occurrence of any clearance phrase has no negation nearby. `matched["A6"]` is the first such occurrence. When every occurrence is negated, A6 doesn't fire and nothing is recorded about the negated match.
+5. **C2 negation is broad.** Matches are whole words, and "do not" and "most do not" are already covered by "not". Any "no" or "not" in the window cancels A6, including unrelated ones like "No visa sponsorship…" within 120 characters.
+6. **C3 title level words.** FILTER.md doesn't list them. I used the A1 words plus junior, jr, entry level, entry-level, new grad, new graduate, graduate, intern, internship, associate, early career, i, ii, iii.
+7. **C3 "numeric experience statement".** It is a number followed by years or yrs, alone or as "N+" / "N-M" / "N to M". It doesn't require the word "experience", so "founded 10 years ago" counts. Numbers written as words ("two years") don't count.
+8. **C3 and the deferral sentence.** I delete the sentence before searching. The sentence doesn't have to be present for C3 to apply, so any kept posting with no level signal abstains, on any board.
+9. **C3 keeps the score.** A C3 cannot_tell result carries the computed score, unlike a v1.0 cannot_tell, which has `score: None`.
+10. **C4 runs before C3.** A posting with B1 = 0 is rejected and never reaches C3. A C4 reject has `rejected_by: []` and keeps its score, the same as a below-threshold reject.
+11. **Output file names.** Switch ids are sorted and joined with `_`, so `--changes C2,C1` writes `filter_v1_C1_C2.jsonl`. An existing file is never overwritten, `filter_v1.jsonl` included.
+12. **C5 isn't implemented.** The table calls it a check, not a switch, and you asked for C1–C4.

@@ -59,6 +59,38 @@ FILTER_V1 = {
     "keep_threshold": 5,
 }
 
+# FILTER.md "v1.1 — proposed changes": each switch is off unless named in evaluate(changes=...).
+FILTER_V1_1 = {
+    "version": "1.1",
+    "switches": ("C1", "C2", "C3", "C4"),
+    # C1 — A3 also rejects these citizenship phrases, and "US" without dots
+    # (the no-dot form is applied to the v1.0 citizenship phrases too).
+    "C1_citizenship_phrases": ["verification of u.s. citizenship", "u.s. citizens only",
+                               "requires u.s. citizenship",
+                               "verification of us citizenship", "us citizens only",
+                               "requires us citizenship",
+                               "us citizenship required", "must be a us citizen"],
+    # C2 — A6 fires only for a clearance phrase with no negation within the window
+    # (characters of cleaned text, on either side of the phrase).
+    "C2_negations": ["not", "no", "do not", "most do not"],
+    "C2_window_chars": 120,
+    # C3 — a would-be keep becomes cannot_tell without a title level word or a numeric
+    # experience statement. Anthropic's deferral sentence is removed before searching.
+    "C3_title_level_words": ["senior", "sr", "staff", "principal", "lead", "manager", "director",
+                             "head", "vp", "distinguished", "junior", "jr", "entry level",
+                             "entry-level", "new grad", "new graduate", "graduate", "intern",
+                             "internship", "associate", "early career", "i", "ii", "iii"],
+    # Explicit level phrases in the text count as a level statement, like a numeric one.
+    "C3_text_level_phrases": ["new grad", "new grads", "new graduate", "new graduates",
+                              "entry-level", "early career", "junior"],
+    "C3_numeric_experience_pattern": (r"(?<![a-z0-9])\d+\s*(?:\+|(?:-|–|—|to)\s*\d+\s*\+?)?\s*"
+                                      r"(?:years?|yrs?)(?![a-z0-9])"),
+    "C3_deferral_pattern": (r"years of experience required will correlate with the internal "
+                            r"job level requirements for the position\.?"),
+    # C4 — keep requires B1 > 0.
+    "C4_min_b1": 1,
+}
+
 STAGE_A = ("A1", "A2", "A3", "A4", "A5", "A6", "A7")
 
 _TAG = re.compile(r"<[^>]+>")
@@ -120,7 +152,34 @@ def _us_or_remote_part(location_name: str):
     return None
 
 
-def _stage_a(title: str, text: str, location_name):
+def _negated(text: str, start: int, end: int) -> bool:
+    window = FILTER_V1_1["C2_window_chars"]
+    before, after = text[max(0, start - window):start], text[end:end + window]
+    return any(find(word, before) or find(word, after) for word in FILTER_V1_1["C2_negations"])
+
+
+def _clearance_c2(text: str):
+    """C2: the first clearance phrase occurrence (list order, then position) with no
+    negation within the window; None if every occurrence is negated."""
+    for phrase in FILTER_V1["A6_clearance_phrases"]:
+        for match in _pattern(phrase).finditer(text):
+            if not _negated(text, match.start(), match.end()):
+                return match.group(0)
+    return None
+
+
+def _has_level_signal(title: str, text: str) -> bool:
+    """C3: a level word in the title, or a level statement in the text other than the
+    deferral sentence: a numeric experience statement or an explicit level phrase."""
+    if _first(FILTER_V1_1["C3_title_level_words"], title):
+        return True
+    without_deferral = re.sub(FILTER_V1_1["C3_deferral_pattern"], " ", text)
+    if re.search(FILTER_V1_1["C3_numeric_experience_pattern"], without_deferral):
+        return True
+    return _first(FILTER_V1_1["C3_text_level_phrases"], without_deferral) is not None
+
+
+def _stage_a(title: str, text: str, location_name, changes=frozenset()):
     fired = {}
     found = _first(FILTER_V1["A1_title_seniority"], title)
     if found:
@@ -128,6 +187,8 @@ def _stage_a(title: str, text: str, location_name):
     if location_name is not None and _us_or_remote_part(location_name) is None:
         fired["A2"] = location_name
     found = _first(FILTER_V1["A3_sponsorship_phrases"], text)
+    if not found and "C1" in changes:
+        found = _first(FILTER_V1_1["C1_citizenship_phrases"], text)
     if found:
         fired["A3"] = found
     for match in re.finditer(FILTER_V1["A4_years_pattern"], text):
@@ -137,7 +198,8 @@ def _stage_a(title: str, text: str, location_name):
     match = re.search(FILTER_V1["A5_phd_required_pattern"], text)
     if match:
         fired["A5"] = match.group(0)
-    found = _first(FILTER_V1["A6_clearance_phrases"], text)
+    found = (_clearance_c2(text) if "C2" in changes
+             else _first(FILTER_V1["A6_clearance_phrases"], text))
     if found:
         fired["A6"] = found
     found = _first(FILTER_V1["A7_unpaid_words"], text)
@@ -150,7 +212,17 @@ def _distinct(words, text):
     return [w for w in words if find(w, text)]
 
 
-def evaluate(posting: dict) -> dict:
+def _check_changes(changes) -> frozenset:
+    changes = frozenset(changes or ())
+    unknown = changes - set(FILTER_V1_1["switches"])
+    if unknown:
+        raise ValueError(f"unknown v1.1 switch(es): {sorted(unknown)}; "
+                         f"allowed {list(FILTER_V1_1['switches'])}")
+    return changes
+
+
+def evaluate(posting: dict, changes=frozenset()) -> dict:
+    changes = _check_changes(changes)
     title = to_text(posting.get("title"))
     content = to_text(posting.get("content"))
     location_name = _location_name(posting.get("location"))
@@ -163,14 +235,14 @@ def evaluate(posting: dict) -> dict:
         "B2": _distinct(FILTER_V1["B2_topic_words"], content),
         "B3": _distinct(FILTER_V1["B3_skills"], content),
     }
-    matched = _stage_a(title, text, location_name)
+    matched = _stage_a(title, text, location_name, changes)
     if b1_found:
         matched["B1"] = b1_found
     rejected_by = [rule for rule in STAGE_A if rule in matched]
 
     def result(decision, score=None):
         return {"decision": decision, "rejected_by": rejected_by, "score": score,
-                "components": components, "matched": matched}
+                "components": components, "matched": matched, "changes": sorted(changes)}
 
     if rejected_by:
         return result("reject")
@@ -179,4 +251,10 @@ def evaluate(posting: dict) -> dict:
     score = (components["B1"]
              + min(len(components["B2"]), FILTER_V1["B2_max"])
              + min(len(components["B3"]), FILTER_V1["B3_max"]))
-    return result("keep" if score >= FILTER_V1["keep_threshold"] else "reject", score)
+    if score < FILTER_V1["keep_threshold"]:
+        return result("reject", score)
+    if "C4" in changes and components["B1"] < FILTER_V1_1["C4_min_b1"]:
+        return result("reject", score)
+    if "C3" in changes and not _has_level_signal(title, text):
+        return result("cannot_tell", score)
+    return result("keep", score)
