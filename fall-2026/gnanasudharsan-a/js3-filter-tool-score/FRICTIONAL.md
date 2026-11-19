@@ -6,3 +6,6 @@ Checked: git log, the file contents, and git ls-files before continuing.
 
 ## 2026-11-19 ~11:45 ET — FILTER.md: dropped "research engineer", then restored it
 I removed "research engineer" from B1 in 48c39853 without checking her résumé; resume.json target_roles lists "Research Engineer". Restored before any filter code existed, with the source named in the reason. profile.yml (primary/secondary roles) and resume.json (target_roles) disagree slightly; I treat resume.json as the fuller list.
+
+## 2026-11-19 12:10 ET — Started hand-labeling the 50-item audit sample (blind)
+Finished hand-labeling at 12:11 ET.
