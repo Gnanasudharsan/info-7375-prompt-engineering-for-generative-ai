@@ -1,31 +1,31 @@
 n,board,id,title,my_verdict,my_reason
-1,ashby:notion,43ffba97-b64a-4c6a-ac13-c803253c9413,"Software Engineering Intern, Frontend (Summer 2027)",,
-2,lever:spotify,1961fa91-bdba-450a-bfb6-fc8d8d5c9e9c,State and Local Government Affairs Manager,,
-3,greenhouse:anthropic,5459098008,"Research Engineer, Chip Design RL",,
-4,greenhouse:anthropic,5452922008,"Community Engagement Manager, Data Centers (New York)",,
-5,greenhouse:anthropic,5477464008,"Security Risk & Compliance, SOX IT ",,
-6,lever:spotify,c73be71c-1a63-4906-9925-95f2115d1f1d,Senior Software Engineer - Enterprise AI,,
-7,greenhouse:anthropic,5470905008,Enterprise Account Executive - FSI,,
-8,greenhouse:anthropic,5416020008,"Head of Regulated Industries, Customer Success",,
-9,greenhouse:anthropic,5205704008,"Staff+ Software Engineer, Public Sector",,
-10,greenhouse:anthropic,5194670008,"Enterprise Account Executive, Federal Civilian Sales",,
-11,greenhouse:anthropic,5444778008,"Marketing Manager, Tech Partnership",,
-12,greenhouse:anthropic,5430695008,Privacy Counsel ,,
-13,ashby:notion,8e609b06-1c41-40a2-b198-467c85e9bb3d,Field & Events Marketing Manager,,
-14,ashby:notion,8a11a2bc-70cc-48a2-888b-44f522effd9b,"Outcomes Architect, MEA (Customer Success)",,
-15,greenhouse:anthropic,4461450008,"Account Executive, AI Native",,
-16,greenhouse:anthropic,5073998008," Staff Software Engineer, Continuous Integration",,
-17,lever:spotify,9f66e598-8587-4a57-8552-2cdb8672014a,Senior Backend Engineer - Content Platform,,
-18,lever:spotify,2a55d6c9-c564-443a-be3e-a3851db5a93b,"Account Executive - Commercial, Spotify Technology",,
-19,greenhouse:anthropic,5464894008,"Manager, Enterprise Sales - Asset & Wealth Management",,
-20,greenhouse:anthropic,5439391008,"Technical Program Manager, Life Sciences",,
-21,greenhouse:anthropic,5453573008,"Policy Design Manager, Integrity and Authenticity",,
-22,greenhouse:anthropic,5342935008,"Staff+ Software Engineer, Safeguards Human Review Tooling",,
-23,greenhouse:anthropic,5459272008,Head of Sales Excellence & Methodology,,
-24,ashby:notion,ead663e3-3eb2-4e0e-97e5-86820062dd68,"Software Engineer, User Database Infrastructure",,
-25,ashby:notion,be119222-db73-45fb-8634-0095154fcf1d,Enterprise Solutions Consultant,,
-26,greenhouse:anthropic,4610158008,"[Expression of Interest] Research Engineer / Scientist, Alignment - London",,
-27,greenhouse:anthropic,5442934008,"Manager, Applied AI Engineering (Megas) ",,
-28,ashby:notion,b06005d2-e24b-467b-b7ea-783bac7366da,Commercial Outcomes Architect,,
-29,greenhouse:anthropic,5174747008,"Staff+ Software Engineer, Full-stack",,
-30,greenhouse:anthropic,5123039008,"Staff+ Software Engineer, Account Abuse",,
+1,ashby:notion,43ffba97-b64a-4c6a-ac13-c803253c9413,"Software Engineering Intern, Frontend (Summer 2027)",NOT_RELEVANT,"Frontend development internship, not ML/AI engineering."
+2,lever:spotify,1961fa91-bdba-450a-bfb6-fc8d8d5c9e9c,State and Local Government Affairs Manager,NOT_RELEVANT,"Government affairs and policy role requiring 5+ years, not ML/AI engineering."
+3,greenhouse:anthropic,5459098008,"Research Engineer, Chip Design RL",NOT_RELEVANT,Requires specialized chip design and RTL verification expertise outside Ananya's ML/NLP background.
+4,greenhouse:anthropic,5452922008,"Community Engagement Manager, Data Centers (New York)",NOT_RELEVANT,"Community relations and public policy role, not ML/AI engineering."
+5,greenhouse:anthropic,5477464008,"Security Risk & Compliance, SOX IT ",NOT_RELEVANT,"Senior IT security and compliance role, not ML/AI engineering."
+6,lever:spotify,c73be71c-1a63-4906-9925-95f2115d1f1d,Senior Software Engineer - Enterprise AI,NOT_RELEVANT,"Strong AI engineering match, but the role requires senior-level experience."
+7,greenhouse:anthropic,5470905008,Enterprise Account Executive - FSI,NOT_RELEVANT,"Enterprise sales role in South Korea, not ML/AI engineering."
+8,greenhouse:anthropic,5416020008,"Head of Regulated Industries, Customer Success",NOT_RELEVANT,"Senior customer success leadership role, not hands-on ML/AI engineering."
+9,greenhouse:anthropic,5205704008,"Staff+ Software Engineer, Public Sector",NOT_RELEVANT,"Staff-level engineering role involving government deployments and regulated systems, beyond new-grad experience."
+10,greenhouse:anthropic,5194670008,"Enterprise Account Executive, Federal Civilian Sales",NOT_RELEVANT,"Federal government sales role, not hands-on ML/AI engineering."
+11,greenhouse:anthropic,5444778008,"Marketing Manager, Tech Partnership",NOT_RELEVANT,"Tech partnership marketing role, not hands-on ML/AI engineering."
+12,greenhouse:anthropic,5430695008,Privacy Counsel ,NOT_RELEVANT,"Legal privacy role requiring a law degree, not ML/AI engineering."
+13,ashby:notion,8e609b06-1c41-40a2-b198-467c85e9bb3d,Field & Events Marketing Manager,NOT_RELEVANT,"Events and marketing role based in South Korea, not ML/AI engineering."
+14,ashby:notion,8a11a2bc-70cc-48a2-888b-44f522effd9b,"Outcomes Architect, MEA (Customer Success)",NOT_RELEVANT,"Customer success role based in Dublin, not hands-on ML/AI engineering."
+15,greenhouse:anthropic,4461450008,"Account Executive, AI Native",NOT_RELEVANT,"AI product sales and account management, not hands-on ML/AI engineering."
+16,greenhouse:anthropic,5073998008," Staff Software Engineer, Continuous Integration",NOT_RELEVANT,"Staff-level CI/CD engineering role in London, expecting 10+ years of experience."
+17,lever:spotify,9f66e598-8587-4a57-8552-2cdb8672014a,Senior Backend Engineer - Content Platform,NOT_RELEVANT,"Senior backend engineering role in London/Stockholm, not ML/AI engineering."
+18,lever:spotify,2a55d6c9-c564-443a-be3e-a3851db5a93b,"Account Executive - Commercial, Spotify Technology",NOT_RELEVANT,"Software sales role, not hands-on ML/AI engineering."
+19,greenhouse:anthropic,5464894008,"Manager, Enterprise Sales - Asset & Wealth Management",NOT_RELEVANT,"Enterprise sales leadership role, not hands-on ML/AI engineering."
+20,greenhouse:anthropic,5439391008,"Technical Program Manager, Life Sciences",NOT_RELEVANT,"Technical program management role focused on coordination and execution, not hands-on ML/AI engineering."
+21,greenhouse:anthropic,5453573008,"Policy Design Manager, Integrity and Authenticity",NOT_RELEVANT,"AI safety policy development role, not hands-on ML/AI engineering."
+22,greenhouse:anthropic,5342935008,"Staff+ Software Engineer, Safeguards Human Review Tooling",NOT_RELEVANT,"Staff-level engineering role building AI safety tools, beyond new-grad experience requirements."
+23,greenhouse:anthropic,5459272008,Head of Sales Excellence & Methodology,NOT_RELEVANT,"Senior sales leadership role focused on sales strategy and training, not hands-on ML/AI engineering."
+24,ashby:notion,ead663e3-3eb2-4e0e-97e5-86820062dd68,"Software Engineer, User Database Infrastructure",NOT_RELEVANT,"Backend database infrastructure role requiring technical leadership, not primarily ML/AI engineering."
+25,ashby:notion,be119222-db73-45fb-8634-0095154fcf1d,Enterprise Solutions Consultant,NOT_RELEVANT,"Customer-facing sales consulting role based in South Korea, not hands-on ML/AI engineering."
+26,greenhouse:anthropic,4610158008,"[Expression of Interest] Research Engineer / Scientist, Alignment - London",NOT_RELEVANT,"Relevant AI research work, but the position requires being based in London, outside the target US job market."
+27,greenhouse:anthropic,5442934008,"Manager, Applied AI Engineering (Megas) ",RELEVANT,"Strong match with applied AI, LLM architecture, evaluation frameworks, and production deployment."
+28,ashby:notion,b06005d2-e24b-467b-b7ea-783bac7366da,Commercial Outcomes Architect,NOT_RELEVANT,"Mainly a customer success role focused on adoption and renewals, not AI engineering. It's also based in Japan."
+29,greenhouse:anthropic,5174747008,"Staff+ Software Engineer, Full-stack",CANNOT_TELL,"Interesting work building Claude products, but it's a staff-level role requiring much more experience than a new grad."
+30,greenhouse:anthropic,5123039008,"Staff+ Software Engineer, Account Abuse",NOT_RELEVANT,"Python, SQL, and data analysis are a good match, but it's a staff-level security engineering role requiring more experience."
