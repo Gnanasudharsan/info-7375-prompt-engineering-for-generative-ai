@@ -1,0 +1,602 @@
+[
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5364804008",
+  "title": "Machine Learning Infrastructure Engineer, Safeguards Research",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "Key responsibilities Build and scale the infrastructure and data pipelines behind Safeguards machine learning research Own the training, evaluation, and scoring workflows researchers use, with a focus on cutting the time between an idea and a result Design tooling and interfaces, including libraries and command line tools, that researchers can use directly without needing to understand the systems"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5364804008",
+  "title": "Machine Learning Infrastructure Engineer, Safeguards Research",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $350,000 \u2014 $500,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5364804008",
+  "title": "Machine Learning Infrastructure Engineer, Safeguards Research",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5364804008",
+  "title": "Machine Learning Infrastructure Engineer, Safeguards Research",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5364804008",
+  "title": "Machine Learning Infrastructure Engineer, Safeguards Research",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: python, transformers | Key responsibilities Build and scale the infrastructure and data pipelines behind Safeguards machine learning research Own the training, evaluation, and scoring workflows researchers use, with a focus on cutting the time between an idea and a result Design tooling and interfaces, including libraries and command line tools, that researchers can use directly without nee"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5254364008",
+  "title": "Research Engineer, Code RL (Reinforcement Learning)",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "Our work spans several key areas: Developing systems that enable models to use computers effectively Advancing code generation through reinforcement learning Pioneering fundamental RL research for large language models Building scalable RL infrastructure and training methodologies Enhancing model reasoning capabilities We collaborate closely with Anthropic's alignment and frontier red teams to ens"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5254364008",
+  "title": "Research Engineer, Code RL (Reinforcement Learning)",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5254364008",
+  "title": "Research Engineer, Code RL (Reinforcement Learning)",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5254364008",
+  "title": "Research Engineer, Code RL (Reinforcement Learning)",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5254364008",
+  "title": "Research Engineer, Code RL (Reinforcement Learning)",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: python, pytorch | You may be a good fit if you: Have strong software-engineering skills and deep Python expertise, including async/concurrent programming Are comfortable owning systems end to end and debugging across the stack Can balance research exploration with engineering implementation, and engage rigorously in shaping experimental design and interpreting results Care about code qualit"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4017331008",
+  "title": "Research Engineer, Knowledge Team",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "Your job will be to design new architectures for how information is organized, and train language models to optimally use those architectures."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4017331008",
+  "title": "Research Engineer, Knowledge Team",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $350,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4017331008",
+  "title": "Research Engineer, Knowledge Team",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4017331008",
+  "title": "Research Engineer, Knowledge Team",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4017331008",
+  "title": "Research Engineer, Knowledge Team",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: python | You may be a good fit if you: Are a very experienced Python programmer who can quickly produce reliable, high quality code that your teammates love using Have good machine learning research experience Have experience developing software that utilizes Large Language Models such as Claude Are results-oriented, with a bias towards flexibility and impact Pick up slack, even if it goes "
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613568008",
+  "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "Our work spans several key areas: Developing systems that enable models to use computers effectively Advancing code generation through reinforcement learning Pioneering fundamental RL research for large language models Building scalable RL infrastructure and training methodologies Enhancing model reasoning capabilities We collaborate closely with Anthropic's alignment and frontier red teams to ens"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613568008",
+  "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613568008",
+  "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613568008",
+  "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613568008",
+  "title": "Research Engineer, Machine Learning (Reinforcement Learning)",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: python, pytorch | You may be a good fit if you: Are proficient in Python and async/concurrent programming with frameworks like Trio Have experience with machine learning frameworks (PyTorch, TensorFlow, JAX) Have industry experience in machine learning research Can balance research exploration with engineering implementation Enjoy pair programming (we love to pair!) Care about code quality,"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198108008",
+  "title": "Research Engineer, Machine Learning (RL Velocity)",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "About the role The RL Velocity team owns the efficiency and reliability of our RL Science stack - the infrastructure, tooling, and systems that let researchers iterate quickly on training runs."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198108008",
+  "title": "Research Engineer, Machine Learning (RL Velocity)",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198108008",
+  "title": "Research Engineer, Machine Learning (RL Velocity)",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198108008",
+  "title": "Research Engineer, Machine Learning (RL Velocity)",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198108008",
+  "title": "Research Engineer, Machine Learning (RL Velocity)",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: pytorch | Responsibilities Build and improve the RL training infrastructure that researchers depend on day-to-day Identify and remove bottlenecks across the RL stack: debugging, profiling, and rearchitecting where needed Partner closely with researchers and with adjacent engineering teams (inference, sandboxing, and many more) to understand pain points and ship tooling that makes them faste"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438030008",
+  "title": "Research Engineer / Performance Engineer, RL Distributed Systems",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "Training, sampling, and environment execution run concurrently across a large fleet of accelerators and hosts, exchange data continuously, and have to keep making progress while hardware fails, load shifts, and the research changes underneath them."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438030008",
+  "title": "Research Engineer / Performance Engineer, RL Distributed Systems",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438030008",
+  "title": "Research Engineer / Performance Engineer, RL Distributed Systems",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY | Seattle, WA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438030008",
+  "title": "Research Engineer / Performance Engineer, RL Distributed Systems",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438030008",
+  "title": "Research Engineer / Performance Engineer, RL Distributed Systems",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: python | Key responsibilities Design, build, and operate the distributed systems that run RL at scale, across training, sampling, and environment execution Find and remove whatever currently limits the system, whether it's scheduling, data movement, storage, networking, or coordination Build fault tolerance into every layer: failure detection, isolation, and recovery that keep long-running "
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198255008",
+  "title": "Research Engineer, Post-Training Model Evaluations",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "About the role Anthropic's production models undergo sophisticated post-training processes to enhance their capabilities, alignment, and safety."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198255008",
+  "title": "Research Engineer, Post-Training Model Evaluations",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198255008",
+  "title": "Research Engineer, Post-Training Model Evaluations",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | Seattle, WA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198255008",
+  "title": "Research Engineer, Post-Training Model Evaluations",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5198255008",
+  "title": "Research Engineer, Post-Training Model Evaluations",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: python | Responsibilities Steer the eval strategy for production Claude models: study and optimize the eval mix so it gives the most accurate and complete assessment of model quality Run and monitor the eval fleet live to understand how each Claude model is developing as it trains Advise teams across post-training on eval methodology, and help eval authors bring new evals up to the bar for "
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4938432008",
+  "title": "Research Engineer, Pretraining Scaling",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "About the Role: Anthropic's ML Performance and Scaling team trains our production pretrained models, work that directly shapes the company's future and our mission to build safe, beneficial AI systems."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4938432008",
+  "title": "Research Engineer, Pretraining Scaling",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $350,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4938432008",
+  "title": "Research Engineer, Pretraining Scaling",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4938432008",
+  "title": "Research Engineer, Pretraining Scaling",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4938432008",
+  "title": "Research Engineer, Pretraining Scaling",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: pytorch | Responsibilities: Own critical aspects of our production pretraining pipeline, including model operations, performance optimization, observability, and reliability Debug and resolve complex issues across the full stack\u2014from hardware errors and networking to training dynamics and evaluation infrastructure Design and run experiments to improve training efficiency, reduce step time, "
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613592008",
+  "title": "Research Engineer, Production Model Post-Training",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "About the role Anthropic's production models undergo sophisticated post-training processes to enhance their capabilities, alignment, and safety."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613592008",
+  "title": "Research Engineer, Production Model Post-Training",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $350,000 \u2014 $500,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613592008",
+  "title": "Research Engineer, Production Model Post-Training",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY | Seattle, WA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613592008",
+  "title": "Research Engineer, Production Model Post-Training",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4613592008",
+  "title": "Research Engineer, Production Model Post-Training",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: python | Note: For this role, we conduct all interviews in Python."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438044008",
+  "title": "Research Engineer / Research Scientist, RL Frontiers",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "You'll develop next-generation architectures and RL algorithms, take them from a small-scale result to a frontier-scale run, and understand every place they behave differently along the way."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438044008",
+  "title": "Research Engineer / Research Scientist, RL Frontiers",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438044008",
+  "title": "Research Engineer / Research Scientist, RL Frontiers",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY | Seattle, WA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438044008",
+  "title": "Research Engineer / Research Scientist, RL Frontiers",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5438044008",
+  "title": "Research Engineer / Research Scientist, RL Frontiers",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: python, pytorch | Key responsibilities Study how RL training and sampling scale with model size, context length, and compute, and find the algorithmic and systems changes that keep scaling efficient Develop next-generation model architectures and RL algorithms, and make them run efficiently at frontier scale Take promising small-scale results to frontier-scale runs, and diagnose why they be"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4951814008",
+  "title": "Research Engineer / Research Scientist, Tokens",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "You want to build large scale ML systems from the ground up."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4951814008",
+  "title": "Research Engineer / Research Scientist, Tokens",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $350,000 \u2014 $500,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4951814008",
+  "title": "Research Engineer / Research Scientist, Tokens",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: New York City, NY; New York City, NY | Seattle, WA; San Francisco, CA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4951814008",
+  "title": "Research Engineer / Research Scientist, Tokens",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4951814008",
+  "title": "Research Engineer / Research Scientist, Tokens",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: pytorch, transformers | You may be a good fit if you: Have significant software engineering experience Are results-oriented, with a bias towards flexibility and impact Pick up slack, even if it goes outside your job description Enjoy pair programming (we love to pair!) Want to learn more about machine learning research Care about the societal impacts of your work Strong candidates may also "
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4952051008",
+  "title": "Research Engineer, RL Engineering",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "This role sits on the team that builds and owns the RL training system: the system that trains our production models and that researchers across Anthropic run their experiments on."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4952051008",
+  "title": "Research Engineer, RL Engineering",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4952051008",
+  "title": "Research Engineer, RL Engineering",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY | Seattle, WA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4952051008",
+  "title": "Research Engineer, RL Engineering",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4952051008",
+  "title": "Research Engineer, RL Engineering",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: python, pytorch | Key responsibilities Build, own, and improve the core RL training system that serves Anthropic's production and research runs Work across the stack (orchestration, environments, training, inference, evaluation) wherever the system needs it Study how RL training behaves at scale and contribute to the research that improves it, in collaboration with teams across Anthropic Im"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4631822008",
+  "title": "Research Engineer / Scientist, Alignment",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "About the role: You want to build and run elegant and thorough machine learning experiments to help us understand and steer the behavior of powerful AI systems."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4631822008",
+  "title": "Research Engineer / Scientist, Alignment",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $350,000 \u2014 $500,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4631822008",
+  "title": "Research Engineer / Scientist, Alignment",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4631822008",
+  "title": "Research Engineer / Scientist, Alignment",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "4631822008",
+  "title": "Research Engineer / Scientist, Alignment",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: python | Note: For this role, we conduct all interviews in Python and prefer candidates to be based in the Bay Area."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5468947008",
+  "title": "Research Engineer / Scientist, Pre-training",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "We are seeking a Research Engineer to join our Pre-training team, responsible for developing the next generation of large language models."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5468947008",
+  "title": "Research Engineer / Scientist, Pre-training",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $500,000 \u2014 $850,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5468947008",
+  "title": "Research Engineer / Scientist, Pre-training",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: Remote-Friendly (Travel-Required) | San Francisco, CA | Seattle, WA | New York City, NY"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5468947008",
+  "title": "Research Engineer / Scientist, Pre-training",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5468947008",
+  "title": "Research Engineer / Scientist, Pre-training",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "SUPPORTED",
+  "span": "found: python, pytorch | Key Responsibilities Conduct research and implement solutions in areas such as model architecture, algorithms, data processing, and optimizer development Independently lead small research projects while collaborating with team members on larger initiatives Design, run, and analyze scientific experiments to advance our understanding of large language models Optimize and sca"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5458420008",
+  "title": "Security Engineer / Research Engineer, RL Security",
+  "claim": "role: hands-on ML/AI engineering",
+  "proposed": "SUPPORTED",
+  "span": "At frontier scale, an RL run is a large distributed system: training, sampling, and environment execution run concurrently across a large fleet of accelerators and hosts."
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5458420008",
+  "title": "Security Engineer / Research Engineer, RL Security",
+  "claim": "level: realistic for a new grad",
+  "proposed": "INSUFFICIENT",
+  "span": "Annual Salary: $320,000 \u2014 $405,000 USD Logistics Minimum education: Bachelor\u2019s degree or an equivalent combination of education, training, and/or experience Required field of study: A field relevant to the role as demonstrated through coursework, training, or professional experience Minimum years of experience: Years of experience required will correlate with the internal job level requirements fo"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5458420008",
+  "title": "Security Engineer / Research Engineer, RL Security",
+  "claim": "location: US-based or remote-US",
+  "proposed": "SUPPORTED",
+  "span": "location: San Francisco, CA | New York City, NY | Seattle, WA"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5458420008",
+  "title": "Security Engineer / Research Engineer, RL Security",
+  "claim": "sponsorship: does not rule out sponsorship",
+  "proposed": "SUPPORTED",
+  "span": "Visa sponsorship: We do sponsor visas!"
+ },
+ {
+  "board": "greenhouse:anthropic",
+  "id": "5458420008",
+  "title": "Security Engineer / Research Engineer, RL Security",
+  "claim": "skills: asks for skills she has shipped",
+  "proposed": "INSUFFICIENT",
+  "span": "found: python | Key responsibilities Design, build, and operate security controls for RL training systems and the infrastructure they run on Work across the stack (orchestration, environments, training, inference) wherever the work is needed Review designs and code across the RL stack, find security problems, and fix them Build shared libraries and tooling that other RL engineers and researchers b"
+ }
+]
