@@ -1,0 +1,62 @@
+#1   ashby:notion           score=1     rejected_by=-            me=NOT_RELEVANT  Software Engineering Intern, Frontend (Summer 2027
+      my reason: Frontend development internship, not ML/AI engineering.
+#2   lever:spotify          score=None  rejected_by=A1,A4        me=NOT_RELEVANT  State and Local Government Affairs Manager
+      my reason: Government affairs and policy role requiring 5+ years, not ML/AI engineering.
+#3   greenhouse:anthropic   score=3     rejected_by=-            me=NOT_RELEVANT  Research Engineer, Chip Design RL
+      my reason: Requires specialized chip design and RTL verification expertise outside Ananya's ML/NLP background.
+#4   greenhouse:anthropic   score=None  rejected_by=A1,A4        me=NOT_RELEVANT  Community Engagement Manager, Data Centers (New Yo
+      my reason: Community relations and public policy role, not ML/AI engineering.
+#5   greenhouse:anthropic   score=None  rejected_by=A4           me=NOT_RELEVANT  Security Risk & Compliance, SOX IT 
+      my reason: Senior IT security and compliance role, not ML/AI engineering.
+#6   lever:spotify          score=None  rejected_by=A1           me=NOT_RELEVANT  Senior Software Engineer - Enterprise AI
+      my reason: Strong AI engineering match, but the role requires senior-level experience.
+#7   greenhouse:anthropic   score=None  rejected_by=A2,A4        me=NOT_RELEVANT  Enterprise Account Executive - FSI
+      my reason: Enterprise sales role in South Korea, not ML/AI engineering.
+#8   greenhouse:anthropic   score=None  rejected_by=A1,A4        me=NOT_RELEVANT  Head of Regulated Industries, Customer Success
+      my reason: Senior customer success leadership role, not hands-on ML/AI engineering.
+#9   greenhouse:anthropic   score=None  rejected_by=A1,A4,A6     me=NOT_RELEVANT  Staff+ Software Engineer, Public Sector
+      my reason: Staff-level engineering role involving government deployments and regulated systems, beyond new-grad experience.
+#10  greenhouse:anthropic   score=None  rejected_by=A4           me=NOT_RELEVANT  Enterprise Account Executive, Federal Civilian Sal
+      my reason: Federal government sales role, not hands-on ML/AI engineering.
+#11  greenhouse:anthropic   score=None  rejected_by=A1,A4        me=NOT_RELEVANT  Marketing Manager, Tech Partnership
+      my reason: Tech partnership marketing role, not hands-on ML/AI engineering.
+#12  greenhouse:anthropic   score=0     rejected_by=-            me=NOT_RELEVANT  Privacy Counsel 
+      my reason: Legal privacy role requiring a law degree, not ML/AI engineering.
+#13  ashby:notion           score=None  rejected_by=A1,A2        me=NOT_RELEVANT  Field & Events Marketing Manager
+      my reason: Events and marketing role based in South Korea, not ML/AI engineering.
+#14  ashby:notion           score=None  rejected_by=A2           me=NOT_RELEVANT  Outcomes Architect, MEA (Customer Success)
+      my reason: Customer success role based in Dublin, not hands-on ML/AI engineering.
+#15  greenhouse:anthropic   score=None  rejected_by=A4           me=NOT_RELEVANT  Account Executive, AI Native
+      my reason: AI product sales and account management, not hands-on ML/AI engineering.
+#16  greenhouse:anthropic   score=None  rejected_by=A1,A2,A4     me=NOT_RELEVANT   Staff Software Engineer, Continuous Integration
+      my reason: Staff-level CI/CD engineering role in London, expecting 10+ years of experience.
+#17  lever:spotify          score=None  rejected_by=A1,A2        me=NOT_RELEVANT  Senior Backend Engineer - Content Platform
+      my reason: Senior backend engineering role in London/Stockholm, not ML/AI engineering.
+#18  lever:spotify          score=None  rejected_by=A4           me=NOT_RELEVANT  Account Executive - Commercial, Spotify Technology
+      my reason: Software sales role, not hands-on ML/AI engineering.
+#19  greenhouse:anthropic   score=None  rejected_by=A1           me=NOT_RELEVANT  Manager, Enterprise Sales - Asset & Wealth Managem
+      my reason: Enterprise sales leadership role, not hands-on ML/AI engineering.
+#20  greenhouse:anthropic   score=None  rejected_by=A1           me=NOT_RELEVANT  Technical Program Manager, Life Sciences
+      my reason: Technical program management role focused on coordination and execution, not hands-on ML/AI engineering.
+#21  greenhouse:anthropic   score=None  rejected_by=A1,A4        me=NOT_RELEVANT  Policy Design Manager, Integrity and Authenticity
+      my reason: AI safety policy development role, not hands-on ML/AI engineering.
+#22  greenhouse:anthropic   score=None  rejected_by=A1,A4        me=NOT_RELEVANT  Staff+ Software Engineer, Safeguards Human Review 
+      my reason: Staff-level engineering role building AI safety tools, beyond new-grad experience requirements.
+#23  greenhouse:anthropic   score=None  rejected_by=A1           me=NOT_RELEVANT  Head of Sales Excellence & Methodology
+      my reason: Senior sales leadership role focused on sales strategy and training, not hands-on ML/AI engineering.
+#24  ashby:notion           score=None  rejected_by=A4           me=NOT_RELEVANT  Software Engineer, User Database Infrastructure
+      my reason: Backend database infrastructure role requiring technical leadership, not primarily ML/AI engineering.
+#25  ashby:notion           score=None  rejected_by=A2,A4        me=NOT_RELEVANT  Enterprise Solutions Consultant
+      my reason: Customer-facing sales consulting role based in South Korea, not hands-on ML/AI engineering.
+#26  greenhouse:anthropic   score=None  rejected_by=A2           me=NOT_RELEVANT  [Expression of Interest] Research Engineer / Scien
+      my reason: Relevant AI research work, but the position requires being based in London, outside the target US job market.
+#27  greenhouse:anthropic   score=None  rejected_by=A1,A4        me=RELEVANT      Manager, Applied AI Engineering (Megas)   <== FALSE REJECT
+      my reason: Strong match with applied AI, LLM architecture, evaluation frameworks, and production deployment.
+#28  ashby:notion           score=None  rejected_by=A2,A4        me=NOT_RELEVANT  Commercial Outcomes Architect
+      my reason: Mainly a customer success role focused on adoption and renewals, not AI engineering. It's also based in Japan.
+#29  greenhouse:anthropic   score=None  rejected_by=A1           me=CANNOT_TELL   Staff+ Software Engineer, Full-stack  <== I could not tell
+      my reason: Interesting work building Claude products, but it's a staff-level role requiring much more experience than a new grad.
+#30  greenhouse:anthropic   score=None  rejected_by=A1,A4        me=NOT_RELEVANT  Staff+ Software Engineer, Account Abuse
+      my reason: Python, SQL, and data analysis are a good match, but it's a staff-level security engineering role requiring more experience.
+
+False rejects: 1/30; could not tell: 1/30; exact 95% interval for the false-reject rate among random rejects: 0.1% to 17.2%
