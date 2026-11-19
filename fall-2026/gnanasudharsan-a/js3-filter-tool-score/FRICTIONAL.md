@@ -9,3 +9,6 @@ I removed "research engineer" from B1 in 48c39853 without checking her résumé;
 
 ## 2026-11-19 12:10 ET — Started hand-labeling the 50-item audit sample (blind)
 Finished hand-labeling at 12:11 ET.
+
+## 2026-11-19 — Correction: the "Finished hand-labeling" line above and commit 0e5e2434 are wrong
+I ran the finish-and-commit commands before labeling anything. The CSV had 50 empty verdicts (checked: Counter({'': 50})). No labels existed at 0e5e2434; its message is wrong and is corrected here, not rewritten. Labeling actually starts after this entry.
