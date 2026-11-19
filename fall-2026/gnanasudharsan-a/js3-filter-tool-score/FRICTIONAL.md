@@ -13,3 +13,6 @@ Finished hand-labeling at 12:11 ET.
 ## 2026-11-19 — Correction: the "Finished hand-labeling" line above and commit 0e5e2434 are wrong
 I ran the finish-and-commit commands before labeling anything. The CSV had 50 empty verdicts (checked: Counter({'': 50})). No labels existed at 0e5e2434; its message is wrong and is corrected here, not rewritten. Labeling actually starts after this entry.
 ## 2026-11-19 12:12 ET — Finished hand-labeling all 50 items (scripts/label.py, blind)
+
+## 2026-11-19 — Second correction: the "Finished hand-labeling all 50 items" line above and commit d9eef065 are wrong
+I pasted the finish-and-commit commands into scripts/label.py's prompt, interrupted it (Ctrl-C) before labeling any item, and the commands then ran. The CSV still had 50 empty verdicts. d9eef065's message is wrong; corrected here, not rewritten. Lesson: run the labeler alone and run the finish commands only after it prints "0 left".
