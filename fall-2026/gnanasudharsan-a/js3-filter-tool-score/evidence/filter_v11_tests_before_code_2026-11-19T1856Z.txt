@@ -1,0 +1,142 @@
+FFFFFFFFFFFF                                                             [100%]
+=================================== FAILURES ===================================
+__________________________ test_switches_off_is_v1_0 ___________________________
+
+    def test_switches_off_is_v1_0():
+>       assert evaluate(P()) == evaluate(P(), changes=frozenset())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:12: TypeError
+_ test_C1_citizenship_wording_rejects_only_with_switch[This position requires verification of U.S. citizenship.] _
+
+text = 'This position requires verification of U.S. citizenship.'
+
+    @pytest.mark.parametrize("text", ["This position requires verification of U.S. citizenship.",
+                                      "Open to U.S. citizens only.", "This role requires US citizenship."])
+    def test_C1_citizenship_wording_rejects_only_with_switch(text):
+        post = P(content=GOOD + f"<p>{text}</p>")
+        assert "A3" not in evaluate(post)["rejected_by"]
+>       r = evaluate(post, changes={"C1"})
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:21: TypeError
+_ test_C1_citizenship_wording_rejects_only_with_switch[Open to U.S. citizens only.] _
+
+text = 'Open to U.S. citizens only.'
+
+    @pytest.mark.parametrize("text", ["This position requires verification of U.S. citizenship.",
+                                      "Open to U.S. citizens only.", "This role requires US citizenship."])
+    def test_C1_citizenship_wording_rejects_only_with_switch(text):
+        post = P(content=GOOD + f"<p>{text}</p>")
+        assert "A3" not in evaluate(post)["rejected_by"]
+>       r = evaluate(post, changes={"C1"})
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:21: TypeError
+_ test_C1_citizenship_wording_rejects_only_with_switch[This role requires US citizenship.] _
+
+text = 'This role requires US citizenship.'
+
+    @pytest.mark.parametrize("text", ["This position requires verification of U.S. citizenship.",
+                                      "Open to U.S. citizens only.", "This role requires US citizenship."])
+    def test_C1_citizenship_wording_rejects_only_with_switch(text):
+        post = P(content=GOOD + f"<p>{text}</p>")
+        assert "A3" not in evaluate(post)["rejected_by"]
+>       r = evaluate(post, changes={"C1"})
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:21: TypeError
+__________________ test_C2_negated_clearance_no_longer_fires ___________________
+
+    def test_C2_negated_clearance_no_longer_fires():
+        post = P(content=GOOD + FALSE_FRIEND)
+        assert "A6" in evaluate(post)["rejected_by"]
+>       assert "A6" not in evaluate(post, changes={"C2"})["rejected_by"]
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:29: TypeError
+______________________ test_C2_real_clearance_still_fires ______________________
+
+    def test_C2_real_clearance_still_fires():
+>       assert "A6" in evaluate(P(content=GOOD + REAL_CLEARANCE), changes={"C2"})["rejected_by"]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:33: TypeError
+________________ test_C3_deferral_only_keep_becomes_cannot_tell ________________
+
+    def test_C3_deferral_only_keep_becomes_cannot_tell():
+        post = P(title="Research Engineer, Pretraining", content=GOOD + DEFER)
+        assert evaluate(post)["decision"] == "keep"
+>       r = evaluate(post, changes={"C3"})
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:40: TypeError
+_ test_C3_a_real_level_statement_still_keeps[<p>1-2 years of experience is fine.</p>] _
+
+extra = '<p>1-2 years of experience is fine.</p>'
+
+    @pytest.mark.parametrize("extra", ["<p>1-2 years of experience is fine.</p>", "<p>New grads welcome.</p>"])
+    def test_C3_a_real_level_statement_still_keeps(extra):
+>       assert evaluate(P(content=GOOD + DEFER + extra), changes={"C3"})["decision"] == "keep"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:46: TypeError
+____ test_C3_a_real_level_statement_still_keeps[<p>New grads welcome.</p>] _____
+
+extra = '<p>New grads welcome.</p>'
+
+    @pytest.mark.parametrize("extra", ["<p>1-2 years of experience is fine.</p>", "<p>New grads welcome.</p>"])
+    def test_C3_a_real_level_statement_still_keeps(extra):
+>       assert evaluate(P(content=GOOD + DEFER + extra), changes={"C3"})["decision"] == "keep"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:46: TypeError
+________________________ test_C3_does_not_touch_rejects ________________________
+
+    def test_C3_does_not_touch_rejects():
+>       assert evaluate(P(title="Senior ML Engineer", content=GOOD + DEFER), changes={"C3"})["decision"] == "reject"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:50: TypeError
+____________________ test_C4_content_only_keep_is_rejected _____________________
+
+    def test_C4_content_only_keep_is_rejected():
+        post = P(title="Research Scientist, Discovery")
+        assert evaluate(post)["decision"] == "keep"
+>       r = evaluate(post, changes={"C4"})
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:57: TypeError
+________________________ test_C4_title_role_still_keeps ________________________
+
+    def test_C4_title_role_still_keeps():
+>       assert evaluate(P(), changes={"C4"})["decision"] == "keep"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: evaluate() got an unexpected keyword argument 'changes'
+
+tests/test_filter_v11.py:62: TypeError
+=========================== short test summary info ============================
+FAILED tests/test_filter_v11.py::test_switches_off_is_v1_0 - TypeError: evalu...
+FAILED tests/test_filter_v11.py::test_C1_citizenship_wording_rejects_only_with_switch[This position requires verification of U.S. citizenship.]
+FAILED tests/test_filter_v11.py::test_C1_citizenship_wording_rejects_only_with_switch[Open to U.S. citizens only.]
+FAILED tests/test_filter_v11.py::test_C1_citizenship_wording_rejects_only_with_switch[This role requires US citizenship.]
+FAILED tests/test_filter_v11.py::test_C2_negated_clearance_no_longer_fires - ...
+FAILED tests/test_filter_v11.py::test_C2_real_clearance_still_fires - TypeErr...
+FAILED tests/test_filter_v11.py::test_C3_deferral_only_keep_becomes_cannot_tell
+FAILED tests/test_filter_v11.py::test_C3_a_real_level_statement_still_keeps[<p>1-2 years of experience is fine.</p>]
+FAILED tests/test_filter_v11.py::test_C3_a_real_level_statement_still_keeps[<p>New grads welcome.</p>]
+FAILED tests/test_filter_v11.py::test_C3_does_not_touch_rejects - TypeError: ...
+FAILED tests/test_filter_v11.py::test_C4_content_only_keep_is_rejected - Type...
+FAILED tests/test_filter_v11.py::test_C4_title_role_still_keeps - TypeError: ...
+12 failed in 0.03s

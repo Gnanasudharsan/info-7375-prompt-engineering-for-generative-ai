@@ -60,5 +60,17 @@ cannot pass or fail A2 and forces "I cannot tell"; a failed board is reported as
 | W4 | Any "N years" rejects, including ranges and small N | one regex for years | "1-3 years" or "2+ years" wrongly rejects entry-level roles |
 | W5 | Title-only filter (Stage B ignores content) | titles are short and clean | a "Machine Learning" title with sales/marketing content is kept |
 
+## v1.1 — proposed changes (2026-11-19), each to be measured alone against v1.0 before it is kept or rejected
+Prompted by audit/AUDIT.md. Each change is a separate switch, so its effect can be measured by itself.
+| id | change | reason (from the audit) |
+|---|---|---|
+| C1 | A3 also rejects citizenship wording: "verification of U.S. citizenship", "U.S. citizens only", "requires U.S. citizenship", and "US" without dots | v2 #9 says "requires verification of U.S. citizenship" and A3 did not fire (a miss). |
+| C2 | A6 fires only when no negation ("not", "no", "do not", "most do not") appears within 120 characters of the clearance phrase | v1 #3 "…a US security clearance, though most do not" fired A6: the false friend. v2 #9 "Active federal security clearance (Secret or above)" must still fire. |
+| C3 | A posting that would be kept becomes **cannot_tell** if its title has no level word and its text has no numeric experience statement other than Anthropic's deferral sentence ("Years of experience required will correlate with the internal job level…") | 6 of my 10 kept-sample labels were CANNOT_TELL; Anthropic never states a numeric level (the deferral is in all 638 of its postings). Risk to measure: it may also abstain on #26, my only RELEVANT keep. |
+| C4 | Keep requires B1 > 0 (a role phrase in the title); content alone cannot reach keep | v1 #16 "Research Scientist, Discovery" was kept on content only; I labeled it NOT_RELEVANT. Risk to measure: it may drop relevant postings with unusual titles. |
+| C5 | Check only, not a change: count postings that pass A2 only because of "remote" while naming a non-US place | My prediction of a "remote" false friend. If the count is 0, it is recorded as checked and not needed. |
+
+§3 addition: **greenhouse:anthropic never states a numeric level.** Every posting carries the deferral sentence above, so the level must be inferred from other text; this is a property of the source, not of a posting.
+
 ## Changelog
 - 1.0 (2026-11-19): first version, from the persona only (profile.yml: target roles, needs_sponsorship, excluded clearance and unpaid roles, open_to_remote). Nothing measured yet.
