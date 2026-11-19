@@ -1,29 +1,29 @@
 n,board,id,title,my_verdict,my_reason
-1,greenhouse:anthropic,5391504008,Head of National Security Sales (DoW/IC),,
-2,greenhouse:anthropic,4020350008,Performance Engineer,,
-3,greenhouse:anthropic,5460837008,International Finance Program Management,,
-4,lever:spotify,01b41b49-7d43-4933-9ba7-06ebe0a2a749,Head of Measurement & Advertising Effectiveness,,
-5,greenhouse:anthropic,5428014008,"Product Designer, Safeguards",,
-6,greenhouse:anthropic,5456405008,Principal Engineer Capacity/Compute,,
-7,greenhouse:anthropic,4631822008,"Research Engineer / Scientist, Alignment",,
-8,greenhouse:anthropic,5364804008,"Machine Learning Infrastructure Engineer, Safeguards Research",,
-9,greenhouse:anthropic,5455627008,"Applied AI Architect, Public Sector (Federal Civilan)",,
-10,greenhouse:anthropic,5076754008,"Director, Revenue Accounting",,
-11,ashby:notion,57b88701-42ce-4c7d-901d-bf65a6256ebc,Global Demo Engineer,,
-12,greenhouse:anthropic,5432554008,"Applied AI Architects, Partner",,
-13,greenhouse:anthropic,5282833008,"Manager, Enterprise Sales - Hedge Funds",,
-14,greenhouse:anthropic,5443882008,Applied AI Architect,,
-15,ashby:notion,e41aff37-7811-42f3-94fc-1aff18500ad0,"Outcomes Architect, Italy (Customer Success)",,
-16,greenhouse:anthropic,5115935008,"Research Engineer, Machine Learning (Reinforcement Learning)",,
-17,greenhouse:anthropic,5432575008,"Applied AI Engineer, Startups",,
-18,greenhouse:anthropic,5076109008,Applied AI Architect,,
-19,greenhouse:anthropic,5442680008,"Staff Research Engineer, Multi-Agent Scaling",,
-20,greenhouse:anthropic,5439524008,IT Support Engineer,,
-21,lever:spotify,ffe7380b-8c91-4201-bf60-25273493a1d8,Content Marketing Manager Indonesia,,
-22,greenhouse:anthropic,5473195008,"Applied AI Architect, International Policy",,
-23,greenhouse:anthropic,5426933008,"Applied AI Architect, Partnerships",,
-24,greenhouse:anthropic,5460211008,"Applied AI Architect, Public Sector (GovTech)",,
-25,ashby:notion,85947779-6b87-466a-98bc-30a640448c28,"Software Engineer, Early Career (AI)",,
-26,greenhouse:anthropic,4951814008," Research Engineer / Research Scientist, Tokens",,
-27,greenhouse:anthropic,5367562008,"Developer Relations Manager, Claude Platform",,
-28,greenhouse:anthropic,5468875008,Data Center Strategic Sourcing Lead - Construction,,
+1,greenhouse:anthropic,5391504008,Head of National Security Sales (DoW/IC),NOT_RELEVANT,"This is a senior sales leadership position focused on national security, revenue targets, and managing sales teams—not a hands-on ML/AI engineering role suitable for a new graduate."
+2,greenhouse:anthropic,4020350008,Performance Engineer,NOT_RELEVANT,"Although this is a hands-on ML systems engineering role in the US, it expects significant experience with large-scale distributed systems, GPU programming, and performance optimization. The requirements are beyond the fictional new graduate's demonstrated experience."
+3,greenhouse:anthropic,5460837008,International Finance Program Management,NOT_RELEVANT,"This is a finance program management role, not hands-on ML/AI engineering. It's also based in Dublin, Ireland, which does not meet the US-based location requirement."
+4,lever:spotify,01b41b49-7d43-4933-9ba7-06ebe0a2a749,Head of Measurement & Advertising Effectiveness,NOT_RELEVANT,"This is a senior executive leadership role focused on advertising strategy, measurement science, and managing an organization. It is not a hands-on ML/AI engineering position suitable for a new graduate."
+5,greenhouse:anthropic,5428014008,"Product Designer, Safeguards",NOT_RELEVANT,"This is primarily a product design and UI/UX role focused on user interfaces, prototyping, and product experiences—not hands-on ML/AI model engineering or research."
+6,greenhouse:anthropic,5456405008,Principal Engineer Capacity/Compute,NOT_RELEVANT,"Although the role involves hands-on data engineering, infrastructure, and compute systems, the Principal Engineer title indicates senior-level responsibilities beyond a new graduate's expected experience."
+7,greenhouse:anthropic,4631822008,"Research Engineer / Scientist, Alignment",CANNOT_TELL,"This is a hands-on ML/AI research role involving alignment experiments and AI safety, and it's based in the US. However, the excerpt doesn't establish whether it's realistic for a new graduate or specify the required experience level."
+8,greenhouse:anthropic,5364804008,"Machine Learning Infrastructure Engineer, Safeguards Research",CANNOT_TELL,"This is a hands-on ML infrastructure engineering role involving data pipelines, model training, evaluation, and research tooling. It matches Ananya's technical interests and is US-based, but the posting expects a track record of large-scale systems experience without clearly establishing new-graduate eligibility."
+9,greenhouse:anthropic,5455627008,"Applied AI Architect, Public Sector (Federal Civilan)",NOT_RELEVANT,"This is primarily a senior customer-facing, pre-sales AI solutions architect role focused on government clients, technical consulting, and enterprise deployments—not a hands-on ML/AI engineering or research position suitable for a new graduate."
+10,greenhouse:anthropic,5076754008,"Director, Revenue Accounting",NOT_RELEVANT,"This is a senior accounting leadership role focused on revenue recognition, financial reporting, and accounting operations. It is unrelated to hands-on ML/AI engineering and unsuitable for a new graduate."
+11,ashby:notion,57b88701-42ce-4c7d-901d-bf65a6256ebc,Global Demo Engineer,NOT_RELEVANT,"This is primarily a customer-facing demo engineering role focused on sales enablement, product demonstrations, and building a global demo function. It is not a hands-on ML/AI model engineering or research role suitable for a new graduate."
+12,greenhouse:anthropic,5432554008,"Applied AI Architects, Partner",NOT_RELEVANT,"This is a pre-sales AI solutions architect role focused on partnerships, technical consulting, and business development—not hands-on ML/AI engineering. It's also based in Seoul, South Korea, which fails the US-location requirement."
+13,greenhouse:anthropic,5282833008,"Manager, Enterprise Sales - Hedge Funds",NOT_RELEVANT,"This is a senior enterprise sales management role focused on leading sales teams, managing hedge fund accounts, and driving AI adoption—not hands-on ML/AI engineering or research suitable for a new graduate."
+14,greenhouse:anthropic,5443882008,Applied AI Architect,NOT_RELEVANT,"This is a pre-sales AI solutions architect role focused on enterprise consulting, customer relationships, and AI deployment guidance—not hands-on ML/AI engineering or research. It is also based in Bangalore, India, which fails the US-location requirement."
+15,ashby:notion,e41aff37-7811-42f3-94fc-1aff18500ad0,"Outcomes Architect, Italy (Customer Success)",NOT_RELEVANT,"This is a customer success role focused on workflow adoption, account management, renewals, and customer outcomes—not hands-on ML/AI engineering or research. It is also based in Dublin, Ireland, which fails the US-location requirement."
+16,greenhouse:anthropic,5115935008,"Research Engineer, Machine Learning (Reinforcement Learning)",NOT_RELEVANT,"Although this is a hands-on ML/AI research engineering role focused on reinforcement learning and large language models, it is based in London, UK, which fails Ananya's US-based location requirement."
+17,greenhouse:anthropic,5432575008,"Applied AI Engineer, Startups",NOT_RELEVANT,"Although this role includes hands-on AI engineering, prototyping, and evaluation frameworks, it is based in London, UK, which fails Ananya's US-based location requirement."
+18,greenhouse:anthropic,5076109008,Applied AI Architect,NOT_RELEVANT,"This is a pre-sales AI solutions architect role focused on enterprise consulting, customer engagement, and deployment guidance—not hands-on ML/AI research. It is also based in Tokyo, Japan, which fails Ananya's US-based location requirement."
+19,greenhouse:anthropic,5442680008,"Staff Research Engineer, Multi-Agent Scaling",NOT_RELEVANT,"Although this is a hands-on ML/AI research engineering role involving multi-agent systems, large-scale experiments, and evaluations, the Staff Research Engineer title and requirement for significant engineering experience indicate a senior-level position unsuitable for Ananya as a new graduate."
+20,greenhouse:anthropic,5439524008,IT Support Engineer,NOT_RELEVANT,"This is an IT support role focused on troubleshooting devices, software, accounts, and employee technical issues—not hands-on ML/AI engineering or research. It is also based in Dublin, Ireland, which fails Ananya's US-location requirement."
+21,lever:spotify,ffe7380b-8c91-4201-bf60-25273493a1d8,Content Marketing Manager Indonesia,NOT_RELEVANT,"This is a content marketing role focused on social media, cultural campaigns, and creator partnerships—not hands-on ML/AI engineering or research. It is also based in Jakarta, Indonesia, which fails Ananya's US-location requirement."
+22,greenhouse:anthropic,5473195008,"Applied AI Architect, International Policy",NOT_RELEVANT,"Although this US-based role involves AI prototypes and evaluations, its primary focus is government advisory work, international policy, and technical consulting—not hands-on ML/AI engineering or research suitable for a new graduate."
+23,greenhouse:anthropic,5426933008,"Applied AI Architect, Partnerships",NOT_RELEVANT,"This is a pre-sales AI solutions architect role focused on partnerships, technical consulting, and business development—not hands-on ML/AI engineering or research. It is also based in Munich, Germany, which fails Ananya's US-location requirement."
+24,greenhouse:anthropic,5460211008,"Applied AI Architect, Public Sector (GovTech)",NOT_RELEVANT,"Although this role is US-based and involves AI technology, it primarily focuses on pre-sales consulting, government technology partnerships, customer advisory work, and enterprise AI deployments—not hands-on ML/AI engineering or research suitable for a new graduate."
+25,ashby:notion,85947779-6b87-466a-98bc-30a640448c28,"Software Engineer, Early Career (AI)",CANNOT_TELL,"This is a strong technical match: an early-career AI engineering role involving LLMs, embeddings, retrieval, and AI-powered features, based in San Francisco. However, the posting explicitly states “This is NOT a new grad role!” and requires candidates to start full-time immediately."
+26,greenhouse:anthropic,4951814008," Research Engineer / Research Scientist, Tokens",CANNOT_TELL,"This is a hands-on ML/AI research engineering role involving large-scale ML systems, infrastructure, and experimentation. It is US-based, but the posting expects significant software engineering experience and does not clearly establish eligibility for a new graduate."
+27,greenhouse:anthropic,5367562008,"Developer Relations Manager, Claude Platform",CANNOT_TELL,"This is a hands-on ML/AI research engineering role involving large-scale ML systems, infrastructure, and experimentation. It is US-based, but the posting expects significant software engineering experience and does not clearly establish eligibility for a new graduate."
+28,greenhouse:anthropic,5468875008,Data Center Strategic Sourcing Lead - Construction,NOT_RELEVANT,your short reason here
