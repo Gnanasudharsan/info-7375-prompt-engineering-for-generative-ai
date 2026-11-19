@@ -88,7 +88,7 @@ All numbers below are computed by scripts/audit_report.py from my blind hand ver
 - Predicted Notion/Spotify kept 0 was a blind spot: not supported — every Notion/Spotify posting in my random samples was a correct reject by my labels.
 
 ## Rule changes after measuring
-See FILTER.md changelog (v1.1): every rule added, cut, or rejected, with the numbers that motivated it.
+FILTER.md changelog 1.1: **added C1, C4; rejected C2, C3; C5 recorded.** Each was measured alone (evidence/measure_changes_*.txt). The labels used are my dev set, so these numbers are optimistic.
 
 ## Every audited posting
 ### v1 random rejects

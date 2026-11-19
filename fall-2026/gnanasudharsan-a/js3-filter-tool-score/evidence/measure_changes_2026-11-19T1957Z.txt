@@ -1,0 +1,52 @@
+
+=== v1.0 baseline: keep 17 | reject 882 | cannot_tell 0  (A3 fired 0, A6 fired 21)
+    on my 80 labels: kept&RELEVANT 1 | kept&NOT_RELEVANT 3 | kept&CANNOT_TELL 10 | rejected&RELEVANT 0 | cannot_tell&CANNOT_TELL 0 | cannot_tell&RELEVANT 0 | cannot_tell&NOT_RELEVANT 0
+
+=== C1 alone: keep 17 | reject 882 | cannot_tell 0  (A3 fired 2, A6 fired 21)
+    on my 80 labels: kept&RELEVANT 1 | kept&NOT_RELEVANT 3 | kept&CANNOT_TELL 10 | rejected&RELEVANT 0 | cannot_tell&CANNOT_TELL 0 | cannot_tell&RELEVANT 0 | cannot_tell&NOT_RELEVANT 0
+    0 postings changed decision:
+    A3 now fires on 2 more and 0 fewer postings (even where another rule already rejects):
+      +A3  me=-             Customer Success Manager, Public Sector (National Security)   | was matched: None  now: requires u.s. citizenship
+      +A3  me=NOT_RELEVANT  Staff+ Software Engineer, Public Sector  | was matched: None  now: verification of u.s. citizenship
+
+=== C2 alone: keep 17 | reject 882 | cannot_tell 0  (A3 fired 0, A6 fired 17)
+    on my 80 labels: kept&RELEVANT 1 | kept&NOT_RELEVANT 3 | kept&CANNOT_TELL 10 | rejected&RELEVANT 0 | cannot_tell&CANNOT_TELL 0 | cannot_tell&RELEVANT 0 | cannot_tell&NOT_RELEVANT 0
+    0 postings changed decision:
+    A6 now fires on 0 more and 4 fewer postings (even where another rule already rejects):
+      -A6  me=-             Applied AI Architect, Public Sector (Federal Civilan)  | was matched: security clearance  now: None
+      -A6  me=-             AWS GTM Partnership Lead, Public Sector & Nonprofits  | was matched: security clearance  now: None
+      -A6  me=-             Staff / Senior Software Engineer, Security Fusion Platform  | was matched: security clearance  now: None
+      -A6  me=-             Technical Program Manager, Public Sector  | was matched: security clearance  now: None
+
+=== C3 alone: keep 0 | reject 882 | cannot_tell 17  (A3 fired 0, A6 fired 21)
+    on my 80 labels: kept&RELEVANT 0 | kept&NOT_RELEVANT 0 | kept&CANNOT_TELL 0 | rejected&RELEVANT 0 | cannot_tell&CANNOT_TELL 10 | cannot_tell&RELEVANT 1 | cannot_tell&NOT_RELEVANT 3
+    17 postings changed decision:
+             keep -> cannot_tell me=-             greenhouse:anthropic   Machine Learning Infrastructure Engineer, Safeguards Researc
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Performance Engineer, Inference Systems
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Code RL (Reinforcement Learning)
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Knowledge Team
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Machine Learning (Reinforcement Learning)
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Machine Learning (RL Velocity)
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer / Performance Engineer, RL Distributed Sys
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Post-Training Model Evaluations
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Pretraining Scaling
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, Production Model Post-Training
+             keep -> cannot_tell me=NOT_RELEVANT  greenhouse:anthropic   Research Engineer / Research Scientist, RL Frontiers
+             keep -> cannot_tell me=-             greenhouse:anthropic    Research Engineer / Research Scientist, Tokens
+             keep -> cannot_tell me=CANNOT_TELL   greenhouse:anthropic   Research Engineer, RL Engineering
+             keep -> cannot_tell me=-             greenhouse:anthropic   Research Engineer / Scientist, Alignment
+             keep -> cannot_tell me=RELEVANT      greenhouse:anthropic   Research Engineer / Scientist, Pre-training
+             keep -> cannot_tell me=NOT_RELEVANT  greenhouse:anthropic   Research Scientist, Discovery (Engineering & Applied Science
+             keep -> cannot_tell me=NOT_RELEVANT  greenhouse:anthropic   Security Engineer / Research Engineer, RL Security
+
+=== C4 alone: keep 15 | reject 884 | cannot_tell 0  (A3 fired 0, A6 fired 21)
+    on my 80 labels: kept&RELEVANT 1 | kept&NOT_RELEVANT 2 | kept&CANNOT_TELL 9 | rejected&RELEVANT 0 | cannot_tell&CANNOT_TELL 0 | cannot_tell&RELEVANT 0 | cannot_tell&NOT_RELEVANT 0
+    2 postings changed decision:
+             keep -> reject      me=CANNOT_TELL   greenhouse:anthropic   Performance Engineer, Inference Systems
+             keep -> reject      me=NOT_RELEVANT  greenhouse:anthropic   Research Scientist, Discovery (Engineering & Applied Science
+
+=== C5 check: 4 postings pass A2 through 'remote' while naming a non-US place and no US place
+      reject      me=-             Community Engagement Manager, Data Centres (Austra | Sydney, Australia | Remote-Friendly, Australia
+      reject      me=-             Community Engagement Manager, Data Centres (Canada | Alberta, CAN | Remote-Friendly, Canada
+      reject      me=-             Data Center Capacity Delivery, Canada              | Remote-Friendly (Travel Required) | Canada
+      reject      me=-             Transaction Manager, Canada                        | Remote-Friendly (Travel Required) | Canada

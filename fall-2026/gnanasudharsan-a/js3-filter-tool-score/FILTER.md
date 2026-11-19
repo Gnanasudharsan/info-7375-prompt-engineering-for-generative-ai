@@ -74,3 +74,11 @@ Prompted by audit/AUDIT.md. Each change is a separate switch, so its effect can 
 
 ## Changelog
 - 1.0 (2026-11-19): first version, from the persona only (profile.yml: target roles, needs_sponsorship, excluded clearance and unpaid roles, open_to_remote). Nothing measured yet.
+- 1.1 (2026-11-19): **v1.1 = v1.0 + C1 + C4.** Each change was measured alone against v1.0 on the 899-posting corpus and on my 80 hand labels
+  (scripts/measure_changes.py, evidence/measure_changes_*.txt). I accepted the decisions proposed from these measurements. The labels are my dev set
+  (they motivated the changes), so these numbers are optimistic; the held-out measurement is in the score report.
+  - **C1 ADDED** (widen A3 to citizenship wording): A3 fires on +2 postings with real text ("verification of U.S. citizenship", "requires u.s. citizenship"), 0 decisions change, no label contradicted.
+  - **C4 ADDED** (keep requires a B1 title role phrase): keep 17 -> 15; removed 1 I labeled NOT_RELEVANT (Research Scientist, Discovery) and 1 CANNOT_TELL; lost no RELEVANT.
+  - **C2 REJECTED** (A6 ignores clearance near a negation): 3 correct removals, 1 wrong removal (AWS GTM Partnership Lead: an unrelated "not" 120 characters earlier cancelled "Active security clearance (TS/SCI required)"), and it still fires on the false friend it was built for (v1 #3: "relevant for only some roles" has no negation word). Not kept; a sentence-level version is not tested.
+  - **C3 REJECTED as a decision change** (abstain without a level statement): all 17 keeps become cannot_tell, including my only RELEVANT (#26), because Anthropic never states a numeric level. Kept instead as a shortlist label: Anthropic level claims are "insufficient".
+  - **C5 RECORDED, not fixed** ("remote" false friend): 4 postings pass A2 only through "remote" while naming Australia or Canada ("Remote-Friendly | Canada"); 0 decisions change (all rejected by other rules). Fix not tested; listed under Not checked.
