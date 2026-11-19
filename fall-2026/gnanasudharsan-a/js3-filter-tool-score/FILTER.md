@@ -82,3 +82,14 @@ Prompted by audit/AUDIT.md. Each change is a separate switch, so its effect can 
   - **C2 REJECTED** (A6 ignores clearance near a negation): 3 correct removals, 1 wrong removal (AWS GTM Partnership Lead: an unrelated "not" 120 characters earlier cancelled "Active security clearance (TS/SCI required)"), and it still fires on the false friend it was built for (v1 #3: "relevant for only some roles" has no negation word). Not kept; a sentence-level version is not tested.
   - **C3 REJECTED as a decision change** (abstain without a level statement): all 17 keeps become cannot_tell, including my only RELEVANT (#26), because Anthropic never states a numeric level. Kept instead as a shortlist label: Anthropic level claims are "insufficient".
   - **C5 RECORDED, not fixed** ("remote" false friend): 4 postings pass A2 only through "remote" while naming Australia or Canada ("Remote-Friendly | Canada"); 0 decisions change (all rejected by other rules). Fix not tested; listed under Not checked.
+
+## Shortlist claim rules (v1.1, written before the shortlist was generated)
+Each kept posting gets five claims. The script proposes a label from the posting's own text; I confirm or change every label.
+| claim | proposed SUPPORTED when | proposed CONTRADICTED when | otherwise |
+|---|---|---|---|
+| role: "hands-on ML/AI engineering" | a sentence has a build verb (build, design, implement, train, develop, deploy) and an ML term (model, ML, machine learning, LLM, language model, RL, training, inference, evaluation) | — | INSUFFICIENT |
+| level: "realistic for a new grad" | the text has a level phrase (new grad, entry-level, early career, junior) | title seniority word, or N+ years with N >= 3 | INSUFFICIENT (e.g. only Anthropic's "will correlate with the internal job level" sentence) |
+| location: "US-based or remote-US" | a location part names a US state code or "United States" | every part is non-US | INSUFFICIENT (e.g. bare "Remote") |
+| sponsorship: "does not rule out sponsorship" | the text says the company sponsors visas | an A3 disclaimer is present | INSUFFICIENT (silent) |
+| skills: "asks for skills she has shipped" | >= 2 of her shipped skills appear in the text | — | INSUFFICIENT |
+A proposed label is a starting point only: a word match is not entailment, and the span must actually state the claim.
