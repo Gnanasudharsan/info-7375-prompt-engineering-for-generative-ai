@@ -15,7 +15,8 @@ All numbers below are computed by scripts/audit_report.py from my blind hand ver
 ## 2. Kept postings (10 random of 17)
 - My verdicts: RELEVANT 1, NOT_RELEVANT 3, CANNOT_TELL 6.
 - Wrong keeps (I said NOT_RELEVANT): 3/10, exact 95% interval 6.7% to 65.2% — too wide to rank the filter's precision.
-- **Why so many CANNOT_TELL — tested, not assumed:** of my 6 CANNOT_TELL kept postings, **6** state no "N+ years" (A4 did not fire) and have no level word in the title.
+- **Why so many CANNOT_TELL — tested, not assumed:** of my 6 CANNOT_TELL kept postings, **0** mention no years of experience or level anywhere in the text and have no level word in the title.
+  (An earlier version of this check used "A4 did not fire", which is true of every kept posting by construction; corrected.)
   The filter never asked for a level signal: FILTER.md abstention rule (c) ("level insufficient and no title level signal") was not implemented (Claude Code choice #11).
 
 ## 3. Close calls (15, score 4-6)

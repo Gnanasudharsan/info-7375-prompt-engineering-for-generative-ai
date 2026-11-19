@@ -32,7 +32,12 @@ total = len(filt); rej = sum(r["decision"] == "reject" for r in filt.values()); 
 
 level_words = re.compile(r"\b(senior|sr|staff|principal|lead|manager|junior|new grad|entry|intern|associate)\b", re.I)
 ct_k = [n for n in K if final(h1[n]) == "CANNOT_TELL"]
-no_level = [n for n in ct_k if "A4" not in filt[(s1[n]["board"], s1[n]["id"])]["matched"]
+import gzip, html as _h
+from jobwatch.loop import _parse_jobs
+_raw = json.loads(gzip.decompress(open("runs/20261119T162945Z/raw/greenhouse_anthropic.attempt1.body.gz", "rb").read()))
+_content = {str(j["id"]): re.sub(r"<[^>]+>", " ", _h.unescape(_h.unescape(j.get("content") or ""))) for j in _raw["jobs"]}
+years_any = re.compile(r"\b\d+\s*\+?\s*(?:-\s*\d+\s*)?years?\b|\byears of (?:experience|industry)\b|\bnew grad|\bentry[- ]level\b", re.I)
+no_level = [n for n in ct_k if not years_any.search(_content.get(s1[n]["id"], ""))
             and not level_words.search(filt[(s1[n]["board"], s1[n]["id"])]["title"] or "")]
 
 def row(s, h, n):
@@ -58,7 +63,8 @@ All numbers below are computed by scripts/audit_report.py from my blind hand ver
 ## 2. Kept postings ({len(K)} random of {kept})
 - My verdicts: RELEVANT {kv['RELEVANT']}, NOT_RELEVANT {kv['NOT_RELEVANT']}, CANNOT_TELL {kv['CANNOT_TELL']}.
 - Wrong keeps (I said NOT_RELEVANT): {kv['NOT_RELEVANT']}/{len(K)}, exact 95% interval {iv(kv['NOT_RELEVANT'], len(K))} — too wide to rank the filter's precision.
-- **Why so many CANNOT_TELL — tested, not assumed:** of my {len(ct_k)} CANNOT_TELL kept postings, **{len(no_level)}** state no "N+ years" (A4 did not fire) and have no level word in the title.
+- **Why so many CANNOT_TELL — tested, not assumed:** of my {len(ct_k)} CANNOT_TELL kept postings, **{len(no_level)}** mention no years of experience or level anywhere in the text and have no level word in the title.
+  (An earlier version of this check used "A4 did not fire", which is true of every kept posting by construction; corrected.)
   The filter never asked for a level signal: FILTER.md abstention rule (c) ("level insufficient and no title level signal") was not implemented (Claude Code choice #11).
 
 ## 3. Close calls ({len(C)}, score 4-6)
