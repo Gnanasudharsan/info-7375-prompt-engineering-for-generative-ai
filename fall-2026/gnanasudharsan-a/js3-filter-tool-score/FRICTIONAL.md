@@ -29,3 +29,7 @@ Commit e03212c7 renamed the v1 file to ai_assisted and called the v1 verdicts AI
 Commit 5a5dcf26 says it made these corrections, but the fix values were blank and nothing changed; the corrections are made here.
 #27 Manager, Applied AI Engineering: blind RELEVANT -> NOT_RELEVANT. I marked it relevant for the technical overlap (LLMs, applied AI) but it is a management role; my own rule excludes it. Corrected after seeing the filter rejected it (A1, A4), so AUDIT.md reports both the blind and the corrected numbers.
 #29 Staff+ Software Engineer, Full-stack: blind CANNOT_TELL -> NOT_RELEVANT. My own reason already said staff-level; the CANNOT_TELL was inconsistent.
+
+## 2026-11-19 — C3 wording vs. my test (found by Claude Code during the v1.1 build)
+The C3 row said "no numeric experience statement", but test_C3_a_real_level_statement_still_keeps expects "New grads welcome." to count as a level signal. Claude Code flagged the conflict and changed neither. The test was drafted with Claude chat and reflects my abstention rule (c) ("level claim insufficient"); the table row was too narrow. I amended the C3 row (non-numeric level phrases count) before any v1.1 measurement. The test is unchanged.
+Also noted from its choices: C2's negation check is broad ("no"/"not" anywhere within 120 characters cancels A6, e.g. a nearby "No visa sponsorship"). To be measured, not assumed.
