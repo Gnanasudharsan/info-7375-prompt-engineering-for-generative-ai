@@ -21,3 +21,8 @@ I pasted the finish-and-commit commands into scripts/label.py's prompt, interrup
 ## 2026-11-19 — Third correction: the latest "Finished hand-labeling" line and commit efa63293 are wrong
 I quit the labeler at item #1 (q) without labeling, then ran the finish commands and committed although the check printed 50 empty verdicts. No labels exist yet. From now on the commit is chained to a check that fails while any row is empty.
 ## 2026-11-19 13:00 ET — Finished hand-labeling all 50 items (blind, scripts/label.py)
+
+## 2026-11-19 ~HH:MM ET — The v1 verdicts were not fully my own hand judgments
+What happened: [in my own words — e.g. "I used <tool> to draft verdicts/reasons for items __ to __", or "for all 50"].
+Why that matters: the audit must be my judgment ("judge each yourself"). The v1 file is renamed ai_assisted_verdicts_v1.csv and is NOT reported as a hand audit.
+What I did instead: a fresh blind random sample of 30 rejects (seed 7378, excluding the 50 already seen), labeled by me; the close calls and kept postings relabeled by me after unblinding, and reported as such.
