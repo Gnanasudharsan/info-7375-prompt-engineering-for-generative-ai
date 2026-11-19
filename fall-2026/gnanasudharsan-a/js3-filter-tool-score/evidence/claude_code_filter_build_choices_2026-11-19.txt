@@ -1,0 +1,66 @@
+# Claude Code build reply, session 1475c16e-f56c-4072-b3e9-6874d8d39332.jsonl, timestamp 2026-11-19T16:39:55.898Z
+
+I built `jobwatch/filter.py` and `scripts/run_filter.py`. All 180 tests pass, and the run kept 17 of 899 postings. I didn't edit any protected file, made no network calls, didn't run the loop CLI and didn't commit. Bare `python` isn't on PATH here, so both commands ran inside the project's `.venv`.
+
+**`python -m pytest -q`**
+```
+........................................................................ [ 40%]
+........................................................................ [ 80%]
+....................................                                     [100%]
+180 passed in 0.93s
+```
+
+**`PYTHONPATH=. python scripts/run_filter.py runs/20261119T162945Z`**
+```
+FILTER v1.0 on runs/20261119T162945Z -> runs/20261119T162945Z/filter_v1.jsonl (899 postings)
+  greenhouse:anthropic: 638 postings | keep 17 | reject 621 | cannot_tell 0
+  ashby:notion: 169 postings | keep 0 | reject 169 | cannot_tell 0
+  lever:spotify: 92 postings | keep 0 | reject 92 | cannot_tell 0
+  greenhouse:zz-no-such-board-7375: EXCLUDED (absent, not zero) - greenhouse_zz-no-such-board-7375.attempt1.body: no "jobs" list
+  total: keep 17 | reject 882 | cannot_tell 0
+  Stage A rules fired (a posting can fire several): A1 450, A2 284, A3 0, A4 525, A5 0, A6 21, A7 0
+  rejected on score only (< 5): 97
+  close calls (score 4-6): 15
+```
+
+I read the output without changing anything. All 35 distinct locations that A2 rejected are outside the US (London, Dublin, Tokyo, Singapore, …), so the US check doesn't seem to be wrongly rejecting US locations. All 17 kept postings are Anthropic roles in the US or remote, and most are "Research Engineer".
+
+None of the tests look wrong to me.
+
+## Choices FILTER.md does not decide
+
+**Matching**
+1. **What counts as a word boundary.** No letter or digit may come directly before or after a match, and phrases allow any amount of whitespace between their words. So punctuation and hyphens are boundaries: "sr" matches "Sr.", and "transformers" also matches inside "sentence-transformers". That one text then counts once in B2 and twice in B3.
+2. **No plurals or variants.** "LLMs", "embedding", "fine tuning" (no hyphen) and "US citizenship required" (no dots) do not match.
+3. **HTML handling.** I unescape, strip tags, then unescape and strip again, because escaped HTML can hold escaped entities. Then I collapse whitespace and lowercase. Departments are never read.
+4. **Which fields each rule reads.** A1 and B1 read the title. B2 and B3 read the content. A3–A7 say "Text", and I read that as title + content.
+
+**Stage A**
+
+5. **What counts as US for A2.** I split the location on `|` and `;`. A posting passes if any part contains the whole word "remote", or one of "united states" / "usa" / "us" / "u.s." / "u.s.a.", or ends in ", <state code or full state name>" (DC included).
+   - So "Remote – London" passes, because the rule says "nor remote" without limiting it to the US.
+   - A US city with no state ("San Francisco", "Boston") is rejected, because the location is known but not recognized.
+6. **A3 phrase list.** I took the quoted examples as the complete list. JS1's "not currently able to sponsor" is not in it, so it does not reject. A3 fired 0 times.
+7. **A4 pattern.** Only "N+ year(s)" with N ≥ 3 counts, whatever follows ("5+ years of Python" fires). "At least 3 years", "minimum of 5 years" and "3 or more years" don't fire.
+8. **A5 phrasing.** It fires on "PhD/Ph.D. (degree) (is) required" and "require(s) a PhD". It does not fire when "required" appears later in the sentence.
+9. **A6 and A7 are literal.** "No security clearance needed" would fire A6, and a benefit like "volunteer time off" would fire A7. In this run A6 fired 21 times and A7 fired 0 times. I didn't check whether the 21 are real clearance requirements.
+
+**Abstention and scoring**
+
+10. **A missing title is treated as empty.** It can't trigger A1 or B1, and the posting is not sent to cannot_tell, since FILTER.md only lists location and content for abstention.
+11. **Only (a) and (b) of the abstention rule are implemented.** Part (c), "level claim insufficient and no title level signal", is about justification claims, so it's not in the filter.
+12. **Order of checks.** Stage A runs even when location or content is missing, which is why a seniority reject wins over a missing location.
+13. **Score is `None` when a posting is rejected by Stage A or is cannot_tell.** Components are still computed for every posting so the audit can see them.
+14. **Components keep the full list.** `components.B2` and `B3` list every distinct match in FILTER_V1 order; the caps only limit the points.
+15. **What `matched` holds.** It has the matched text for each Stage A rule that fired. For A2 that is the whole location string. For A4 it is the first "N+ years" with N ≥ 3. It also includes B1's phrase when the title matches.
+
+**The runner**
+
+16. **Which body it reads.** It maps boards to files through `boards.json` and uses the latest `attemptN.body` for each board. It parses with `jobwatch.loop._parse_jobs` (imported, not edited). A board with no posting list is printed as EXCLUDED, never counted as 0.
+17. **It won't overwrite.** If `filter_v1.jsonl` already exists the script refuses to write, so a second run needs that file moved first.
+
+## Things FILTER.md v1.0 decides that the numbers make visible
+These aren't my choices, and I didn't adjust for them:
+- **B1 isn't required.** Content alone can reach 5 (up to 9 points). That's how "Performance Engineer, Inference Systems" and "Research Scientist, Discovery" were kept with no B1 match.
+- **A4 is the biggest reject rule.** It fired 525 times, more than A1's 450.
+- **Notion and Spotify kept nothing.**
