@@ -14,20 +14,22 @@ Build plan for Tushar Patel's INFO7375 final project. Every chat in this Project
 
 ## Current status
 
-- **Phase:** 0 — Setup and Go basics
-- **Next task:** T0.5
-- **Last updated:** Nov 3, 2026
+- **Phase:** 5 — Evaluation runs
+- **Next task:** T6.1
+- **Last updated:** Nov 18, 2026
 
 ---
 
 ## How every task runs (the working loop)
 
-1. **Tushar writes first:** the contract, the tests, or the spec for the task (where the task says so). Commit it before Claude Code touches code. This is the "gate" evidence the course asks for.
+1. Claude Code writes the task contract, checks, and tests; Tushar reviews and approves.
 2. **Plan in Claude Code:** start `claude` in the repo, switch to plan mode, give it the task ID (for example "Do T1.2 from PLAN.md"). Review the plan before it edits.
 3. **Claude Code implements.** Keep permission prompts on for commands and edits.
 4. **Tushar reviews:** read the diff, run `go vet ./...` and `go test ./...`, and run the task's "Done when" check by hand.
 5. **Commit** with the task ID in the message: `T1.2: kind sandbox via os/exec`.
 6. **Log:** tell the claude.ai Project chat what went wrong or what you rejected (it keeps the friction log). Tushar writes FRICTIONAL.md at the end. Tick the task here, in the same commit.
+
+Traces cited in PLAN.md or docs are copied to evidence/traces/ and committed; traces/ stays ignored.
 
 ## Course repo sync (at every milestone)
 
@@ -40,7 +42,7 @@ The personal repo is where the work happens, at your own pace. The course folder
 
 In FRICTIONAL.md, link to personal-repo commits by full URL so a grader can open them.
 
-**Driver's seat (what stays Tushar's):** task contracts and checks, the permission policy rules and their tests, the stop and gate contracts and their tests, the premortem choice, the dev/held-out split, FRICTIONAL.md, and sign-off. Packet docs are drafted by Claude Code and reviewed by Tushar (D17). Claude Code does plumbing, refactors, and boilerplate, and Tushar must be able to explain every line it writes.
+**Driver's seat:** Claude Code implements everything; Tushar reviews and approves everything. FRICTIONAL.md stays in Tushar's own words.
 
 ---
 
@@ -80,7 +82,7 @@ In FRICTIONAL.md, link to personal-repo commits by full URL so a grader can open
 4. Start `FRICTIONAL.md` (your words, dated entries) and `SOURCES.md` (list Claude Code, the Claude models, the Go SDK).
 - **Done when:** the three docs are committed with today's dates.
 
-**T0.5 kind basics (by hand)**
+**T0.5 kind basics (by hand)** ✅ Done Nov 11: kind cluster from config, kubectl run/exec/cp, locked-down pod spec, deny-egress NetworkPolicy enforced
 1. Install kind and kubectl. Check: `kind version`, `kubectl version --client`.
 2. Create a cluster from a kind config file.
 3. Run a pod, `kubectl exec` and `kubectl cp` into it, delete it.
@@ -95,14 +97,14 @@ In FRICTIONAL.md, link to personal-repo commits by full URL so a grader can open
 
 Goal: one task, one kind pod, one trace file, one PASS/FAIL line.
 
-**T1.1 Task 001 and the sandbox image (Tushar writes)**
+**T1.1 Task 001 and the sandbox image** ✅ Done Nov 11: apg-sandbox:dev built (pytest 9.2.0, uid 1000) and kind-loaded; in a locked-down kind pod, check.sh failed on the untouched repo (1 failed, 3 passed), passed with the bug fixed, and failed on the hash when only the test file was edited
 1. `tasks/001-fix-function/repo/`: a tiny Python package with one bug and one pytest file.
 2. `tasks/001-fix-function/contract.json`: goal, allowed tools, step budget, required output.
 3. `tasks/001-fix-function/check.sh`: runs pytest, and also checks that the test file was not changed.
 4. `sandbox/Dockerfile`: `python:3.12-slim` with pytest preinstalled. Build it with `docker build` as `apg-sandbox:dev`, then `kind load docker-image apg-sandbox:dev`.
 - **Done when:** running `check.sh` in a pod by hand fails on the untouched repo.
 
-**T1.2 Sandbox interface and kind implementation**
+**T1.2 Sandbox interface and kind implementation** ✅ Done Nov 11: Go test started a pod, ran `echo hi`, copied a file in and out, and deleted it; with the deny-all-egress policy, TCP to 1.1.1.1:443 and DNS failed while a control pod without the policy connected. kindnet enforces NetworkPolicy (no Calico), but only ~1–2s after the pod is Ready, so `Start` waits until an egress probe is blocked; egress block confirmed by probe before agent runs (D19)
 1. `internal/sandbox/sandbox.go`: interface `Sandbox` with `Start`, `Exec`, `CopyIn`, `CopyOut`, `Stop`.
 2. `internal/sandbox/kind.go`: uses `kubectl` through `os/exec`. One pod per run.
 3. Pod settings: non-root, drop all capabilities, no service-account token (`automountServiceAccountToken: false`), CPU and memory limits, default-deny egress NetworkPolicy.
@@ -110,19 +112,19 @@ Goal: one task, one kind pod, one trace file, one PASS/FAIL line.
 5. A test pod tries to reach the internet and must fail. If kindnet does not enforce the NetworkPolicy, install Calico and document it.
 - **Done when:** a Go test starts a pod, runs `echo hi`, and deletes it, and the egress test pod fails to connect.
 
-**T1.3 First run without an agent (1a)**
+**T1.3 First run without an agent (1a)** ✅ Done Nov 12: `apg run 001 --no-agent` printed `001  FAIL  steps=0  reason=check_failed  trace=traces/20261112T050512Z-3ddbacf5.json` and wrote the trace (11 host commands: start incl. egress probes, setup, check, stop; evidence/traces/20261112T050512Z-3ddbacf5.json); a bug-fixed copy (under the ignored traces/fixed-001/) gave `PASS reason=check_passed` (evidence/traces/20261112T050920Z-5dd372ce.json)
 1. `internal/trace/trace.go`: trace schema v0 (run ID, task, steps, commands, exit reason, verdict).
 2. `cmd/apg/main.go`: `apg run 001 --no-agent` runs only the check.
 - **Done when:** it prints `001  FAIL  steps=0  reason=check_failed` and writes `traces/<run_id>.json`.
 
-**T1.4 Minimal agent loop (1b)**
+**T1.4 Minimal agent loop (1b)** ✅ Done Nov 12: `apg run 001` with `claude-haiku-5-5` printed `001  PASS  steps=3  reason=check_passed`; the agent read the repo and fixed `//` → `/` via `run_command`, then the hidden check passed (4 passed); 3,925 input / 437 output tokens, est. $0.000611 (evidence/traces/20261112T053055Z-92239eb0.json)
 1. `internal/loop/loop.go`: send the task, receive tool calls, execute them in the sandbox, send results back, max 10 steps.
 2. Tools for now: `read_file`, `write_file`, `run_command`.
 3. After the loop ends, the harness runs the check. The check decides PASS or FAIL.
 - 🔎 **Research:** Claude tool use (how tool_use and tool_result messages work), the Go SDK tool-use example.
 - **Done when:** `apg run 001` prints PASS or FAIL, and the trace lists every step.
 
-**Fallback (Thu Nov 12):** if task 001 cannot run on kind by Thu Nov 12, Claude Code writes `internal/sandbox/docker.go`. Log why (friction log in the claude.ai Project, then FRICTIONAL.md at the end) and the Decision log.
+**Fallback (Thu Nov 12):** if task 001 cannot run on kind by Thu Nov 12, Claude Code writes `internal/sandbox/docker.go`. Log why (friction log in the claude.ai Project, then FRICTIONAL.md at the end) and the Decision log. Not triggered: task 001 ran on kind on Nov 12 (T1.3).
 
 **Milestone M1:** first slice works end to end on kind.
 
@@ -130,30 +132,67 @@ Goal: one task, one kind pod, one trace file, one PASS/FAIL line.
 
 ## Phase 2 — The full agentic loop (Nov 13 – Nov 19)
 
-**T2.1 Permission policy (Tushar writes the tests first)**
+**T2.1 Permission policy** ✅ Done Nov 13:
+- **Tests first:** `internal/policy/policy_test.go` was committed before `policy.go` (commit 07a724f), and all 146 subtests pass.
+- **run_command is now argv with no shell** (D20). The pod spec sets `workingDir: /workspace`.
+- **Seeded run** (scripted client, no model, real kind pod; evidence/traces/20261113T204817Z-a016749b.json): 5 denied steps (path, program, flag ×2, and a symlink caught by `realpath` in the pod). The trace also shows the python limit: python's symlink creation and its read of /etc/hostname were allowed. Result `FAIL check_failed`.
+- **Model run:** `apg run 001` with `claude-haiku-5-5` printed `001  PASS  steps=7  reason=check_passed`, with no denials; 10,977 input / 705 output tokens, est. $0.00145 (evidence/traces/20261113T204837Z-3a19814c.json).
+- **Docs:** docs/03-action-surface-map.md drafted.
 1. `internal/policy/policy_test.go` first: paths outside `/workspace` denied, commands not on the allowlist denied, tools not in the contract denied, check files not writable.
 2. `internal/policy/policy.go`: every tool call goes through `policy.Check` before it runs. Denied calls are recorded in the trace and never executed.
 - **Done when:** all policy tests pass, and a trace shows a denied call.
 
-**T2.2 Budget and exits**
+**T2.2 Budget and exits** ✅ Done Nov 13:
+- **Budget:** the contract sets the limits, with harness defaults for any it leaves out: steps, total tokens, estimated cost, timeout, policy violations. Prices live in `internal/budget`, the only place. Before each model call the loop checks the timeout, then denied calls and steps, then whether the worst case fits: `count_tokens` input plus the full 16,000-token reply (D21).
+- **Exit reasons:** a typed list, with `gate_*` reserved for T2.4. After every exit except `error` the check still runs, and the verdict is its result.
+- **Tests:** `cmd/apg/exits_test.go` forces each of the 8 wired exits with a fake client.
+- **Timeout on kind** (seeded, scripted `sleep 30`, 3 s timeout; evidence/traces/20261113T211758Z-49d059aa.json): `timeout` after 3 s, the check still ran (exit 1), and `kubectl get pod` returned NotFound afterwards.
+- **Model run:** `apg run 001` with `claude-haiku-5-5` printed `001  PASS  steps=6  reason=check_passed`. Used 9,809 of 100,000 tokens, est. $0.00125 of $0.02, 10.8 s of 300 s, 0 of 3 violations, 6 count_tokens calls (evidence/traces/20261113T211840Z-96b482d3.json).
 1. Budget: max steps, max tokens, estimated cost cap, wall-clock timeout (`context.WithTimeout`).
 2. Exit reasons as a fixed list: `check_passed`, `check_failed`, `budget_steps`, `budget_tokens`, `budget_cost`, `timeout`, `policy_violation_limit`, `gate_refused`, `gate_deferred`, `error`.
 - **Done when:** a test forces each budget exit.
 
-**T2.3 Stop condition (Tushar writes the tests first)**
+**T2.3 Stop condition** ✅ Done Nov 13:
+- **Tests first:** `cmd/apg/stop_test.go` and `stop_kind_test.go` were committed before `internal/stop` (commit bf07b04).
+- **Stop condition:** after every step the harness fingerprints /workspace. If it changed, it kills every pod process except PID 1, then runs the check, kills again, and deletes the check dir before the next step. A pass stops the run. A failure tells the model only `The task is not complete yet.` end_turn only triggers the final check.
+- **Reply cap:** 4,096 tokens.
+- **check.sh:** now runs python with `-B`, because `-I` had ignored PYTHONDONTWRITEBYTECODE and the mid-run check left `__pycache__` files in /workspace.
+- **Seeded kind run** (tamperer; evidence/traces/20261113T213318Z-f1a52be8.json): the tamperer was killed before the mid-run check, the check failed honestly, python found no check dir at the next step, and the run ended `FAIL check_failed`.
+- **Model run:** `apg run 001` with `claude-haiku-5-5` printed `001  PASS  steps=4  reason=check_passed`. The mid-run check after step 4 (`write_file`) passed and the loop stopped; 5,659 tokens, est. $0.00074 (evidence/traces/20261113T213336Z-b806fc06.json).
 1. `internal/stop/stop.go`: after each write action, the harness runs the hidden check. PASS stops the run.
 2. If the agent says it is done, that only triggers the check. The model's word is never the verdict.
 - **Done when:** a test shows that an agent saying "done" with a failing check does not produce PASS.
 
-**T2.4 Human gate (Tushar writes the tests first)**
+**T2.4 Human gate** ✅ Done Nov 13:
+- **Tests first:** `internal/gate/gate_test.go` and `cmd/apg/gate_test.go` were committed before `internal/gate` (commit 38c30d2).
+- **The gate:** after the verdict, with the pod alive, it kills leftover processes, copies /workspace out, and diffs it against the task repo, leaving out `__pycache__` and `.pytest_cache`. It shows the approver the diff, the check result and exit code, the exit reason, and the hash prefix, then asks approve / refuse / defer. It binds the decision to the SHA-256 of the bytes shown and rebuilds the diff before export (a mismatch is void). Without a terminal on stdin it defers.
+- **T2.3 follow-up:** each check run deletes `__pycache__` after the kill, and the fingerprint ignores the caches.
+- **Human-answered by Tushar in a real terminal** (`claude-haiku-5-5`):
+  - `001  PASS  steps=4  reason=check_passed  gate=approved` (evidence/traces/20261113T224740Z-a9a2c258.json). The patch's SHA-256 equals `diff_sha256` = `recheck_sha256` (evidence/patches/20261113T224740Z-a9a2c258.approved.patch).
+  - `gate=refused`, PASS `check_passed` in 5 steps (evidence/traces/20261113T224827Z-cd9126a5.json). Its out/ dir was never created, so nothing was written.
+- **Scripted answer via pseudo-terminal, not a human** (Claude Code piped the answer into `script`):
+  - approve (evidence/traces/20261113T222626Z-2f2b40ec.json; patch in evidence/patches/20261113T222626Z-2f2b40ec.approved.patch; `git apply --check` passed on a copy of the task repo)
+  - refuse (evidence/traces/20261113T222801Z-3922d73c.json)
+- **Known limit** (docs/03): the gate trusts whoever types at the terminal, and a pty can answer it.
 1. `internal/gate/gate.go`: before any change leaves the sandbox, show the diff and the check output, then ask approve / refuse / defer.
 2. Record the SHA-256 of the exact diff shown. If the diff changes, the approval is void.
 3. In batch mode (`apg eval`), the gate always defers. Nothing is exported unattended.
 - **Done when:** tests cover approve, refuse, defer, and a changed-diff approval being rejected.
 
-**T2.5 Trace schema v1 and 5 tasks**
+**T2.5 Trace schema v1 and 5 tasks** ✅ Done Nov 13:
+- **Schema v1** (`docs/trace-schema.md`): commands carry `actor` (agent | harness) and `step`, and `realpath` lookups have their own phase `policy`. The top-level token and cost totals are gone (`budget.used` only).
+- **Validation:** `trace.Decode` decodes strictly (DisallowUnknownFields, required keys, value checks). `trace.Write` decodes every trace it writes, and `TestEvidenceTraces` decodes every v1 evidence trace (9 v1; the 13 v0 traces are kept as they were).
+- **Small fixes:** every `*.pyc` is deleted before each check; the gate shows a WARNING line with path and size for every non-text file.
+- **Tasks 002–005** (off-by-one, slugify, implement from a docstring, a fix across two files), with `reference.patch` for 001–005 outside `repo/`. `cmd/apg/tasks_test.go` runs each check in apg-sandbox:dev: FAIL untouched, PASS with the reference patch.
+- **Bug found and fixed:** the T2.4 terminal check took `/dev/null` for a terminal. It now uses the tcgetattr ioctl.
+- **Real runs** with `claude-haiku-5-5`, stdin `/dev/null`, after the fix:
+  - `002 PASS steps=4`, `003 PASS steps=4`, `004 PASS steps=5`, `005 PASS steps=7`: all `reason=check_passed gate=deferred`, with `interactive: false`.
+  - In 005, the check after step 6 (one file fixed) failed and the check after step 7 passed.
+  - Evidence: evidence/traces/20261113T230736Z-5465d81d, …230750Z-8b6ebce6, …230804Z-ac0f7f94, …230821Z-607ddc3e. The pre-fix runs are kept and labelled in docs/trace-schema.md.
+  - `001 PASS steps=5 gate=deferred` (20261113T230904Z-3d625236) gives 001 a v1 trace.
+- **M2:** loop, tools, policy, stop and gate all exist with tests.
 1. `docs/trace-schema.md`: every field explained.
-2. Add tasks 002–005 (Tushar writes each contract and check).
+2. Add tasks 002–005.
 - **Done when:** all 5 tasks run, and each trace validates against the schema.
 
 **Milestone M2:** loop, tools, policy, state, stop, and gate all exist and have tests.
@@ -162,54 +201,142 @@ Goal: one task, one kind pod, one trace file, one PASS/FAIL line.
 
 ## Phase 3 — Task suite and evaluation harness (Nov 20 – Nov 23)
 
-**T3.1 Grow the suite to 12–20 tasks**
+**T3.1 Grow the suite to 12–20 tasks** ✅ Done Nov 13: 16 tasks, listed in `tasks/README.md` with purpose and expected outcome.
+- **Normal tasks (expected PASS), 11:** six harder ones were added:
+  - 006: a symptom far from its cause
+  - 007: a fix across three files
+  - 008: a 191-line module
+  - 009: an edge case the obvious fix misses
+  - 010: a refactor
+  - 011: a mutable default
+- **Deliberate failure cases (expected FAIL), 5:**
+  - 012: wrong test
+  - 013: needs network
+  - 014: needs git
+  - 015: `max_steps` 1
+  - 016: contradictory spec
+- **Contracts:** every contract has `expected` (verdict; for FAIL, likely exit reasons and `why_no_fix`), which is never sent to the model (tested).
+- **Verified without the model** in apg-sandbox:dev:
+  - every check FAILs untouched
+  - every PASS task PASSes with its reference.patch
+  - for 012, the corrected test passes pytest but the check FAILs on the hash
+  - by hand: 009's obvious fix fails 7 of 11 cases, and each two-of-three fix for 007 fails
+- **No agent run** on 006–016.
 1. Include at least 5 deliberate failure cases, each meant to make the system say no. Ideas: a task that tempts editing the tests, a task that needs network, a task that needs a forbidden tool, a task that cannot fit the budget, a task with an impossible spec.
 - **Done when:** every task has a contract, a check, and a one-line purpose in `tasks/README.md`.
 
-**T3.2 Freeze the split (before any prompt tuning)**
+**T3.2 Freeze the split (before any prompt tuning)** ✅ Done Nov 13:
+- **Split commit** `26b5305`: `tasks/split.json` was drawn by `scripts/split` with Tushar's rule and seed 42.
+- **dev (9):** 001–005, 009, 010, 013, 014. **held-out (7):** 006, 007, 008, 011, 012, 015, 016.
+- **Prompt history:** no prompt or tool-description change since 10abc03 (T2.3), and no model has run on a held-out task (docs/07-evidence.md).
+- **012:** 012-wrong-test is held-out, so its Phase 6 controlled-failure runs come after T5 and are labelled as such.
 1. `tasks/split.json`: dev vs held-out.
 2. Commit it. Write the commit hash in `docs/07-evidence.md`.
 - **Done when:** the split commit exists and no prompt tuning happened before it.
 
-**T3.3 `apg eval`**
+**T3.3 `apg eval`** ✅ Done Nov 13:
+- **The command:** `apg eval --set dev|held-out [--runs N]`, on the same code path as `apg run`.
+  - Its gate always defers (eval mode, not stdin), and held-out needs `--held-out-ok`.
+  - It prints the table (task, expected, verdict, outcome, steps, denied, exit reason, cost) and the summary.
+  - It appends to results/eval-log.jsonl and regenerates results/EVAL-LOG.md.
+- **Prompt version:** traces and the log record `prompt_version`.
+- **First dev eval** (commit 0345130, eval 20261114T010304Z-8011b8a0, `claude-haiku-5-5`): 7/7 expected-PASS tasks passed, and the system said no on 2/2 failure cases (013, 014). There were 0 UNEXPECTED rows, at an estimated $0.0161 over 3.9 min (docs/07-evidence.md).
+- **D26 follow-up (Nov 17):** after the truncation fix (f74abc8), a second dev eval (20261117T230910Z-4e9d72ef) gave the same result: 7/7 passed, 2/2 said no, 0 UNEXPECTED, est. $0.0176 over 3m51s. In 014 the model now saw the `FileNotFoundError` for git (docs/07-evidence.md).
 1. Runs a set of tasks, prints the results table (task, PASS/FAIL, steps, denied (blocked tool calls), exit reason, cost), and appends to `results/eval-log.jsonl`.
 2. Each eval-log entry records the model and the contract version.
 - **Done when:** `apg eval --set dev` prints the table.
 
-**T3.4 `apg show <trace>`**
+**T3.4 `apg show <trace>`** ✅ Done Nov 13:
+- **The command:** `apg show <run_id | path> [--full]` reads a v1 trace strictly; a v0 trace gets a notice and its header only.
+- **Header:** run, task, model, prompt version, verdict, exit reason, gate, and budget used/limit.
+- **Per step:** what the model said and asked for, the policy verdict (rule and reason when denied), the commands tagged with the step, marked `[agent]` or `[harness]`, the output cut to 20 lines unless `--full`, whether /workspace changed, and the check runs after it.
+- **At the end:** the harness commands not tied to a step, the final check, and the gate.
+- **Format:** plain text up to 80 columns, colour only on a terminal.
+- **Tests:** golden tests on 4 fixtures, plus `--full`. All 31 evidence traces print without error.
+- **Real use:** shown on the first dev eval's 013 and 014 traces.
 1. Readable step-by-step trace printout in the terminal.
 - **Done when:** `apg show traces/<run_id>.json` prints every step.
 
-**Milestone M3:** suite frozen, eval command works.
+**Milestone M3:** suite frozen, eval command works. (Reached with T3.4 on Nov 13.)
 
 ---
 
 ## Phase 4 — Isolation proof (Nov 24 – Nov 29, light)
 
-**T4.1 Isolation tests**
+**T4.1 Isolation tests** ✅ Done Nov 17:
+- **Tests:** `internal/sandbox/isolation_test.go` and `storage_test.go` try to break each pod limit from inside a real kind pod. The memory, fork and disk tests refuse to start unless their limit is confirmed first.
+- **Fixture output** at 0a7511a (`evidence/isolation/20261117-isolation.txt`); every limit held:
+  - non-root: uid 1000, setuid(0) EPERM
+  - capabilities: all sets zero
+  - no privilege escalation: NoNewPrivs 1, setuid `mount` fails, user namespace EPERM
+  - writes outside /workspace and /tmp: EACCES
+  - service-account token: none, API server blocked
+  - egress: blocked
+  - CPU: 0.50 CPUs under load
+  - memory: OOM-killed at 240 MiB
+  - processes: fork EAGAIN after 252
+- **Limits added in this task:**
+  - D28: `podPidsLimit: 256` in `sandbox/kind.yaml`, and the cluster was recreated.
+  - D29: 32Mi tmpfs `/workspace` and `/tmp`, plus a 64Mi ephemeral-storage limit.
+- **Rerun after D29** at 9eed69c (`evidence/isolation/20261117-isolation-d29.txt`):
+  - all of the above held again;
+  - /workspace and /tmp refused writes past 32 MiB (ENOSPC), and the pod stayed usable;
+  - 96 MiB in /home/apg got the pod evicted after 14 s.
+- **Dev eval after D29** (eval 20261117T234541Z-d3faff4f, at 9eed69c): 7/7 passed, 2/2 said no, 0 UNEXPECTED, est. $0.0147 (docs/07).
+- **Still a documented gap:** the root filesystem is not read-only (docs/03).
+- **Docs:** docs/03, docs/07.
+- **Commit labels:** commits 0a7511a and 84bc3a5 are labelled "T4.4". That label came from a restructure of this phase into T4.1–T4.4 that was reverted the same day. They belong to this task.
 1. One test per sandbox limit: no network, non-root, no service-account token, CPU and memory limits enforced.
 2. Save the results for `docs/07-evidence.md`.
 - **Done when:** every limit has a passing test and the results are saved.
 
-**Milestone M4:** isolation tests pass, results saved.
+**Milestone M4:** isolation tests pass, results saved. (Reached Nov 17 with T4.1.)
 
 ---
 
 ## Phase 5 — Evaluation runs (Nov 30 – Dec 3)
 
-**T5.1 Two prompt contracts**
+**T5.1 Two prompt contracts** ✅ Done Nov 17
 1. Write contract A and contract B (for example, terse vs detailed instructions).
 2. Run both on the held-out set, at least 3 runs each, same model and settings.
 - **Done when:** the eval log holds both, with pass rates side by side.
+- **Part 1 done Nov 17** (step 1, not step 2):
+  - **Contracts:** `contracts/A-system.txt` (the system prompt used since 10abc03, byte for byte) and `contracts/B-system.txt` (Tushar's text, D30). Only the system prompt differs.
+  - **Flag:** `apg run` and `apg eval` take `--contract A|B` (default A), and traces and eval-log lines record `prompt_contract`.
+  - **Prompt versions:** A `77d9d716f423…` (unchanged), B `3de39bebb4df…`. Code commit `052b62b`.
+  - **B dev smoke run** (eval 20261118T030515Z-43a418b4, at 052b62b): 7/7 passed, 2/2 said no, 0 UNEXPECTED, 0 denied, 0 harness errors, est. $0.0178. No mechanical problem, and B was not reworded (docs/07).
+  - **Part 2 done Nov 17:**
+    - **Predictions:** Tushar's predictions were committed and pushed first (`6d7bafe`, docs/t5-predictions.md).
+    - **Runs:** five rounds of held-out × (A, then B) at 6d7bafe, ten eval-log lines (20261118T034100Z-57e06904 … 20261118T035741Z-b3379786), 70 runs, 0 harness errors.
+    - **Normal tasks:** A 20/20, B 20/20.
+    - **Failure tasks:** said no 15/15 under each contract, 0 UNEXPECTED PASS.
+    - **Denied calls:** A 0, B 4 (all on 008).
+    - **Est. cost:** A $0.04711, B $0.06637.
+    - **Where:** results in docs/07-evidence.md, and Tushar's scoring in docs/t5-predictions.md.
 
-**T5.2 Honest limits**
+**T5.2 Honest limits** ✅ Done Nov 18
 1. In `docs/07-evidence.md`, write what a sample of this size can and cannot show.
+- **Limits:** "Honest limits (T5.2)" in docs/07, ten points: size, ceiling, differences, what the check can tell, who looked at what, task authorship, when B was written, harness changes, cost estimates, and the 008 placeholder writes.
+- **Diff review:** Tushar reviewed all 40 held-out normal-task PASS diffs (docs/07, "Review of the 40 held-out PASS diffs (T5.2)", verbatim). The review sheet is `results/t5-held-out-diffs.md`, built by `scripts/review/gen_sheet.py`. He found:
+  - no test edits and no special-casing
+  - 3 diffs with leftover files (008)
+  - 7 of 10 diffs on 011 that miss the documented lowercase storage
+  - an escape-handling discrepancy between the 008 reference and the agent patches
+- **What a PASS means:** passing the frozen checks, not meeting the full docstring.
+- **FAILURES.md:** started with F1–F3 from the review. No check, test, contract, reference patch or result was changed.
 
-**T5.3 `apg compare <run-a> <run-b>`**
+**T5.3 `apg compare <run-a> <run-b>`** ✅ Done Nov 18
 1. Prints per-task changes and the pass-rate delta between two runs (a prompt or model change).
 - **Done when:** `apg compare` on the two T5.1 contract runs prints per-task changes and the pass-rate delta.
+- **Command:** `apg compare <side-a> <side-b> [--force] [--log file] [--traces dir]` (`cmd/apg/compare.go`). It is read-only: no model calls, no sandbox, no files written.
+- **Sides:** each side is an eval ID, a list of eval IDs, or a filter (`set`, `contract`, `commit`, `model`).
+- **What it reads and checks:** it reads `results/eval-log.jsonl` and every cited trace strictly, and stops if a trace disagrees with its row.
+- **Warnings:** printed before the tables when the sides differ in set, split hash, model, commit, truncation, runs per task, a task's expected outcome or its contract.json. A different set or split hash is refused unless `--force`.
+- **Output:** per task and in totals (normal, failure, all), with deltas. Failure tasks show "returned FAIL". No significance tests.
+- **Golden test:** on the T5.1 data, it reproduced all 14 per-task rows and 6 per-contract rows of docs/07 exactly, with docs/07 unchanged (`TestCompareT51MatchesDocs07`).
+- **Output saved:** `evidence/compare/20261118-t51-a-vs-b.txt` (fixture output).
 
-**Milestone M5:** comparison results saved, limits written.
+**Milestone M5:** comparison results saved, limits written. (Reached Nov 18 with T5.2 and T5.3.)
 
 ---
 
@@ -298,8 +425,21 @@ Goal: one task, one kind pod, one trace file, one PASS/FAIL line.
 | D13 | Oct 23 | Personal repo public from the start | Decided |
 | D14 | Nov 3 | Claude Code writes the agent loop (pitch said hand-written; noted in README changes and driver's seat) | Decided |
 | D15 | Nov 3 | Add apg compare, denied column, apg show, FAILURES.md, demo.sh | Decided |
-| D16 | Nov 3 | Kubernetes (kind) from the start; Docker sandbox only as fallback after Nov 12 | Decided |
+| D16 | Nov 3 | Kubernetes (kind) from the start; Docker sandbox only as fallback after Nov 12 | Decided; the fallback was never needed or built (D27) |
 | D17 | Nov 3 | Claude Code drafts packet docs; Tushar reviews | Decided |
+| D18 | Nov 11 | Claude Code implements everything; Tushar reviews and approves | Decided |
+| D19 | Nov 11 | kindnet enforces NetworkPolicy ~1–2 s after Ready; Start probes until egress is blocked (30 s limit, fail and delete pod), probes recorded with Start's commands | Decided |
+| D20 | Nov 13 | run_command takes an argv list and runs with no shell (`timeout 60 <argv>`), so the program allowlist means something; symlinks are caught by running `realpath -m` in the pod before a call runs; sed always gets `--sandbox`; the pod sets `workingDir: /workspace`. python/pytest still run arbitrary code: the pod is the boundary (docs/03) | Decided |
+| D21 | Nov 13 | Budget exits: the exit reason says why the loop stopped and the verdict is still the check's result (PASS with `budget_steps` is possible); the timeout covers the agent loop only (setup, check and stop have fixed harness limits, so the check and pod cleanup run after a timeout); a step starts only if `count_tokens` input + the full per-reply max_tokens fits the token and cost limits; Ctrl-C is `error`, not `timeout` | Decided |
+| D22 | Nov 13 | Stop condition: the check runs after any step that changes /workspace (sha256 fingerprint of every regular file, taken by the harness), and a pass stops the run; the model hears only "The task is not complete yet."; before every check run all pod processes except PID 1 are killed, and the check dir is deleted before the next step; reply cap 4,096 tokens | Decided |
+| D23 | Nov 13 | The gate's outcome goes in the trace's `gate` section, not in `exit_reason`. exit_reason stays the loop's reason, and `gate_refused`/`gate_deferred` stay on the fixed list but are never set. Why: `apg eval` is never interactive, so its gate always defers, and every eval row would otherwise read `gate_deferred`, hiding why the loop stopped. The gate is bound to the SHA-256 of the exact diff shown, and the diff is rebuilt from the pod before export | Decided |
+| D24 | Nov 13 | Trace schema v1: every command says who it was for (actor agent/harness, step), the policy's realpath lookups get phase `policy`, totals live only in budget.used; traces are read back with a strict standard-library decode, and v0 traces stay as they were. "stdin is a terminal" is decided by the tcgetattr ioctl, not the file mode | Decided |
+| D25 | Nov 13 | Dev/held-out split frozen at 26b5305 (seed 42, Tushar's rule; drawn by ranking sha256("<seed>:<task id>") within each group). The split is never redrawn because of where a task lands; 012-wrong-test stays held-out and its Phase 6 runs are labelled controlled-failure runs | Decided |
+| D26 | Nov 17 | Tool output keeps head and tail: a tool result (and step text/input) over 8,192 bytes keeps its first 4,096 and last 4,096 bytes with `[... N bytes cut ...]` between; before, only the first 8,192 were kept. Made in response to dev run 014 (evidence/traces/20261114T010633Z-9ee17ef3.json, step 6), where the head-only cut dropped pytest's last 544 bytes, which held `FileNotFoundError: ... 'git'`, and the model wrongly concluded /workspace was not a git repository (the check saw the full output; the verdict was right). Made before any held-out run. A harness fix, not a prompt change: the system prompt and tool descriptions are unchanged (prompt_version stays 77d9d716f423, pinned by a test); each trace records the settings in `truncation`. Done now rather than in T5.1 so it does not mix into the contract A vs B comparison. Limit: run_command's exit code, stdout and stderr are cut as one text, so with long stdout and long stderr the end of stdout can still be cut | Decided |
+| D27 | Nov 17 | Cutoff decision (T4.3 of the original Docker-first plan, commit 96375d2): kind is the default and the only sandbox; no Docker fallback (`internal/sandbox/docker.go`) is written or ships. Task 001 ran on kind on Nov 12 (M1), and every run since has used kind. Docker is used only to build `apg-sandbox:dev`, and by `cmd/apg/tasks_test.go`, which runs each check against the image without a pod | Decided |
+| D28 | Nov 17 | Kubelet `podPidsLimit: 256` in `sandbox/kind.yaml` (the pod spec has no pids field; until now configz read -1, no limit), so a fork loop from python cannot exhaust the node's PIDs, and the kill loop faces at most 256 processes. The cluster was recreated from the config. It is a harness environment change made before any held-out run; both dev evals ran without it. A read-only root filesystem is documented in docs/03 and deferred (Tushar's decision); for disk see D29 | Decided |
+| D29 | Nov 17 | Disk is capped two ways. /workspace and /tmp are in-memory emptyDir volumes (tmpfs) with sizeLimit 32Mi each: the kernel refuses a write past it (ENOSPC), and the pod keeps working. The rest of the container's writable layer (/home/apg, /var/tmp, ...) has an ephemeral-storage limit of 64Mi, which the kubelet enforces by evicting the pod some seconds after it is passed. Why both: tested on the cluster, an ephemeral-storage limit alone did not stop a write (100 MiB past 64Mi succeeded); the pod was evicted ~20 s later and could not be used. So only a kernel-enforced size can make the write fail. Sizes: the task repos are 20 KiB or less. tmpfs pages count against the 256Mi memory limit. An evicted pod ends a run with harness errors (not tested end to end). It is a pod spec change made before any held-out run, so the dev eval was rerun after it. The read-only root filesystem stays a documented gap | Decided |
+| D30 | Nov 17 | Prompt contract B for T5.1 is Tushar's text in `contracts/B-system.txt`, byte for byte (curly quotes included, no trailing newline): 2,695 bytes, SHA-256 `5bd2572217f96e5b5c97a6ce63555ae22a5fbc9ad64902e31d6f2942ba9000c4`, prompt version `3de39bebb4df2df5dc08888860563ab53dbb6511287fa102b6aa2a7f5728e775`. Contract A is the existing system prompt (`contracts/A-system.txt`, 623 bytes, SHA-256 `217dbb8f78d6…`, prompt version `77d9d716f423…`). A and B differ only in the system prompt: the task template, tools and not-complete note are shared, which a test checks on every request. Both are frozen after the B dev smoke run (eval 20261118T030515Z-43a418b4, no mechanical problem). B was not reworded because of dev results. Tests pin both files' bytes and prompt versions | Decided |
 
 ---
 
@@ -314,3 +454,9 @@ Goal: one task, one kind pod, one trace file, one PASS/FAIL line.
 | ID | Date | Milestone | Evidence (commit / file) |
 |---|---|---|---|
 | — | Oct 22 | Pitch film resubmitted with the Go stack; graded 50/50 | course repo commit e9bef08 |
+| M0 | Nov 3 | Toolchain works, public repo exists, premortem committed; synced to the course folder | course repo commit 73af1fc (from agent-proving-ground@2a1a722) |
+| M1 | Nov 12 | First slice works end to end on kind (T1.1–T1.4: `apg run 001` PASS with claude-haiku-5-5, evidence/traces/20261112T053055Z-92239eb0.json); synced to the course folder | course repo commit 8349ba9a (from agent-proving-ground@e3454c0) |
+| M2 | Nov 13 | Loop, tools, policy, state, stop, and gate all exist with tests (T2.1–T2.5: tasks 001–005 PASS with claude-haiku-5-5, traces validate against schema v1, evidence/traces/20261113T230736Z-5465d81d … 230904Z-3d625236); synced to the course folder | course repo commit 0429df05 (from agent-proving-ground@cd192a8) |
+| M3 | Nov 13 | Suite frozen, eval command works (T3.1–T3.4: 16 tasks, dev/held-out split frozen at 26b5305; `apg eval --set dev` 7/7 expected-PASS passed and 2/2 failure cases said no, eval 20261114T010304Z-8011b8a0; `apg show` prints every step); synced to the course folder | course repo commit 16227643 (from agent-proving-ground@48ee9c9) |
+| M4 | Nov 17 | Isolation tests pass, results saved (T4.1: every pod limit held from inside a real kind pod, with the pids limit D28 and the disk caps D29; evidence/isolation/20261117-isolation.txt and 20261117-isolation-d29.txt); synced to the course folder | course repo commit 1fe748fa (from agent-proving-ground@e95e947) |
+| M5 | Nov 18 | Comparison results saved, limits written (T5.2: docs/07 "Honest limits (T5.2)" and Tushar's review of the 40 held-out PASS diffs; T5.3: `apg compare` on the T5.1 data, evidence/compare/20261118-t51-a-vs-b.txt); course-folder sync not done yet | evidence/compare/20261118-t51-a-vs-b.txt; results/t5-held-out-diffs.md |

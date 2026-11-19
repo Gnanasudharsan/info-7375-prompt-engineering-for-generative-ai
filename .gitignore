@@ -39,3 +39,9 @@ __pycache__/
 # Gitignore cannot express size rules; refresh this list for new large files.
 # Canvas exports are never pushed.
 *.imscc
+
+# Private: exams for TAs only. Never commit.
+4TAs/
+/4TAs/
+# Reference pantries are local-only; never publish them.
+**/[Pp][Aa][Nn][Tt][Rr][Yy]/
