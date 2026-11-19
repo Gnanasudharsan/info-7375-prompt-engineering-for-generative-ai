@@ -1,0 +1,9 @@
+{
+  "_fixture_note": "CONSTRUCTED test fixture written by hand on 2026-10-28. Same as board_base.json plus one invented posting (id 1003).",
+  "jobs": [
+    {"id": 1001, "title": "Fixture Posting A", "location": {"name": "Fixture City, MA"}, "updated_at": "2026-10-01T00:00:00-04:00", "content": "constructed"},
+    {"id": 1002, "title": "Fixture Posting B", "location": {"name": "Remote"}, "updated_at": "2026-10-02T00:00:00-04:00", "content": "constructed"},
+    {"id": 1003, "title": "Fixture Posting C", "location": {"name": "Fixture Town, NY"}, "updated_at": "2026-10-03T00:00:00-04:00", "content": "constructed"}
+  ],
+  "meta": {"total": 3}
+}

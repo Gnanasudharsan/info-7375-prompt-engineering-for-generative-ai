@@ -1,0 +1,14 @@
+{
+  "_fixture_note": "CONSTRUCTED test fixture written by hand on 2026-10-28. Minimal fictional persona; tests mutate copies of it.",
+  "personal": {"name": "Fixture Person", "email": "fixture.person@example.com", "phone": "(617) 555-0100"},
+  "skills": {
+    "languages": ["Python"],
+    "ml_nlp": ["PyTorch"],
+    "backend_automation": ["FastAPI"],
+    "database_cloud": ["AWS"],
+    "familiar_with_not_shipped": ["Ray"]
+  },
+  "target_roles": ["ML Engineer"],
+  "willing_to_relocate_us": true,
+  "needs_sponsorship": true
+}
