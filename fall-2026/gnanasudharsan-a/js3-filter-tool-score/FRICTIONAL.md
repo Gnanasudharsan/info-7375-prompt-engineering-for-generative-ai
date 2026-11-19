@@ -43,3 +43,11 @@ The independent filter replay found the same scores, rules and decisions as the 
 
 ## 2026-11-19 — Shortlist claim labels: Codex involvement
 Codex (OpenAI) reviewed 44 of the 75 shortlist claims (nine postings) and wrote suggestions with quotes and reasons (shortlist/CODEX_REVIEW.md, shortlist/claim_suggestions.json). Those 44 rows then had labels in my_label that I cannot vouch for as my own review, so they were moved to prefill_label (kept, not counted) and cleared. I review the 44 myself in scripts/review_claims.py, which does not show Codex's labels. My 31 earlier labels are unchanged. SHORTLIST.md reports my labels against Codex's.
+Decision (same day): I rebuild the MCP server myself from mcp/TOOL_SPEC.md and tests/test_mcp_server.py. Codex's files are moved, unchanged, to codex_unrequested/ and are not used.
+For my server (mcp/server.py), the spec and tests do come first; the "written before the server" claims are true for it, not for Codex's.
+
+## 2026-11-19 ~16:45 ET — My own JS1 test guard blocked the MCP tests
+Claude Code built mcp/server.py (stdlib only); all 9 MCP tests failed because tests/conftest.py (JS1) blocks subprocess.run in every test, so no real `claude` process can start.
+Claude Code did not edit conftest or the tests; it checked with --noconftest (9 passed) and reported. I kept the guard and changed only how tests/test_mcp_server.py launches the server
+(it keeps the real subprocess.run taken at import time). No assertion changed.
+Also: pytest no longer collects codex_unrequested/ (norecursedirs in pytest.ini); its test imported the moved Codex server and broke collection.

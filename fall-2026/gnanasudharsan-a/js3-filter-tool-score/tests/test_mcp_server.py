@@ -4,9 +4,13 @@ from pathlib import Path
 import pytest
 ROOT = Path(__file__).resolve().parents[1]
 SERVER = ROOT / "mcp" / "server.py"
+# tests/conftest.py (from JS1) blocks subprocess.run in every test so no real `claude` process can start.
+# These tests must start the MCP server itself, so they keep the real function, taken at import time.
+# Only this module does this; the guard still applies to every other test.
+_REAL_RUN = subprocess.run
 
 def session(messages):
-    p = subprocess.run([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
+    p = _REAL_RUN([sys.executable, str(SERVER)], input="\n".join(json.dumps(m) if isinstance(m, dict) else m for m in messages) + "\n",
                        capture_output=True, text=True, cwd=ROOT, timeout=20)
     return [json.loads(l) for l in p.stdout.splitlines() if l.strip()]
 

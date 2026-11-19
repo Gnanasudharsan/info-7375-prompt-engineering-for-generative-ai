@@ -1,0 +1,37 @@
+# Claude Code MCP build reply, session 645fc518-bc75-4c0a-99b4-eb91b948cd1e.jsonl, timestamp 2026-11-19T21:41:03.771Z
+
+I built `mcp/server.py`, but the test command you asked for fails 9 of 9. The failures come from `tests/conftest.py`, not from the server.
+
+**`python -m pytest tests/test_mcp_server.py -q`** (there's no `python` on PATH here, so I used `.venv/bin/python`):
+```
+9 failed in 0.07s
+AssertionError: a test tried to start a real process: (['.venv/bin/python', '.../mcp/server.py'],)
+```
+`tests/conftest.py` has an autouse fixture, `no_real_subprocess`, that replaces `subprocess.run` with a function that refuses to run. `tests/test_mcp_server.py` starts the server with `subprocess.run`, so every test is stopped before the server runs. I didn't edit either file.
+
+**To check the server anyway**, I ran the same file with `--noconftest`, which skips that fixture without changing any file. Result: **9 passed in 0.31s**. Treat this as a check only; the real suite stays red until you decide how to resolve it. Either the conftest fixture lets this test start the server, or the test calls `main()` in-process.
+
+I also sent a few lines by hand:
+- `server/discover` before `initialize` gets a -32601 error, no crash.
+- `[1,2]` gets -32600.
+- An unknown tool name gets -32602.
+- An unknown id gets `isError: true`.
+
+Those runs created `transcripts/server-*.jsonl` files, and `transcripts/` is now untracked in git status. No other files changed.
+
+**Choices the spec doesn't decide:**
+1. **Exact output fields.** I added `board` and `id` beside the five spec fields. `claims` only appears when the posting is shortlisted (no `null` otherwise).
+2. **What a claim looks like.** Each one is `{"claim", "label"}`, and `label` comes from the `my_label` column. I left out `my_note`, the Codex columns, `proposed` and `span`.
+3. **Id rule.** Letters, digits and hyphens, **1–64 characters**. The length cap is my addition. A bad id is rejected before either file is opened.
+4. **Missing `board` or `id`** is a tool error (`isError`), not -32602. I return -32602 only when `params` or `arguments` isn't an object, or the tool name isn't `score_posting`.
+5. **Missing `arguments`** counts as `{}`, so the reply is a tool error saying the board is unknown.
+6. **No check that `initialize` came first.** `tools/list` and `tools/call` work before `initialize`. Unknown methods get -32601 at any time.
+7. **Unknown notifications** (any message with no `id`) are silently ignored, as JSON-RPC requires.
+8. **Error codes the spec doesn't list:** -32600 for non-objects, batch arrays or a missing `jsonrpc: "2.0"`, and -32603 for an unexpected internal exception.
+9. **A missing or corrupt data file** returns `isError: true` with only the exception type, so file contents and paths don't leak.
+10. **Files are re-read on every call**, not cached at startup, so results follow the current files.
+11. **Blank input lines** are skipped and not logged.
+12. **Transcript format.** Lines that aren't valid JSON are logged as the raw string. The filename timestamp includes microseconds (`server-20261119T214049053817Z.jsonl`) so sessions started close together don't collide. The file is opened in exclusive-create mode, and `ts` is ISO 8601 with a trailing `Z`.
+13. **`transcripts/` is created if it's missing.** It already existed here.
+14. **Server version is `1.0.0`**, the tool description is my wording, and the `inputSchema` has an enum for boards, a pattern for ids, and `additionalProperties: false`. That schema is advisory; the server enforces the rules itself and doesn't reject extra keys.
+15. **Encoding.** stdin is read as UTF-8 with invalid bytes replaced. Output is ASCII-escaped JSON, one object per line, flushed after each one.
