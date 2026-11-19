@@ -21,7 +21,7 @@ boundaries), never substrings.
 ### Stage B — score (only for postings that pass Stage A)
 | id | component | points | reason |
 |---|---|---|---|
-| B1 | Title has a role phrase: machine learning, ml engineer, ai engineer, applied ai, nlp, llm | 3 (once) | Her target roles are hands-on ML / AI / NLP engineering. |
+| B1 | Title has a role phrase: machine learning, ml engineer, ai engineer, applied ai, nlp, llm, research engineer | 3 (once) | Her target roles (resume.json target_roles) are hands-on ML / AI / NLP engineering, including Research Engineer. |
 | B2 | Content has topic words: pytorch, transformers, hugging face, natural language, nlp, llm, large language model, embeddings, retrieval, rag, fine-tuning, inference, mlops, evaluation | 1 per distinct word, max 5 | The work itself is ML engineering, not only the title. Capped so long postings cannot win by repetition. |
 | B3 | Content names her shipped skills: python, pytorch, sql, transformers, sentence-transformers, fastapi, mlflow, postgresql, aws | 1 per distinct skill, max 4 | She can do the job with what she has shipped. Capped for the same reason. |
 
