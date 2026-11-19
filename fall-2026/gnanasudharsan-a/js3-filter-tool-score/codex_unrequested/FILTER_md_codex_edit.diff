@@ -1,0 +1,23 @@
+diff --git a/fall-2026/gnanasudharsan-a/js3-filter-tool-score/FILTER.md b/fall-2026/gnanasudharsan-a/js3-filter-tool-score/FILTER.md
+index 4b41148d..7d95188f 100644
+--- a/fall-2026/gnanasudharsan-a/js3-filter-tool-score/FILTER.md
++++ b/fall-2026/gnanasudharsan-a/js3-filter-tool-score/FILTER.md
+@@ -76,7 +76,7 @@ Prompted by audit/AUDIT.md. Each change is a separate switch, so its effect can
+ - 1.0 (2026-11-19): first version, from the persona only (profile.yml: target roles, needs_sponsorship, excluded clearance and unpaid roles, open_to_remote). Nothing measured yet.
+ - 1.1 (2026-11-19): **v1.1 = v1.0 + C1 + C4.** Each change was measured alone against v1.0 on the 899-posting corpus and on my 80 hand labels
+   (scripts/measure_changes.py, evidence/measure_changes_*.txt). I accepted the decisions proposed from these measurements. The labels are my dev set
+-  (they motivated the changes), so these numbers are optimistic; the held-out measurement is in the score report.
++  (they motivated the changes), so these numbers are optimistic; a held-out measurement is pending (see SCORE.md).
+   - **C1 ADDED** (widen A3 to citizenship wording): A3 fires on +2 postings with real text ("verification of U.S. citizenship", "requires u.s. citizenship"), 0 decisions change, no label contradicted.
+   - **C4 ADDED** (keep requires a B1 title role phrase): keep 17 -> 15; removed 1 I labeled NOT_RELEVANT (Research Scientist, Discovery) and 1 CANNOT_TELL; lost no RELEVANT.
+   - **C2 REJECTED** (A6 ignores clearance near a negation): 3 correct removals, 1 wrong removal (AWS GTM Partnership Lead: an unrelated "not" 120 characters earlier cancelled "Active security clearance (TS/SCI required)"), and it still fires on the false friend it was built for (v1 #3: "relevant for only some roles" has no negation word). Not kept; a sentence-level version is not tested.
+@@ -93,3 +93,9 @@ Each kept posting gets five claims. The script proposes a label from the posting
+ | sponsorship: "does not rule out sponsorship" | the text says the company sponsors visas | an A3 disclaimer is present | INSUFFICIENT (silent) |
+ | skills: "asks for skills she has shipped" | >= 2 of her shipped skills appear in the text | — | INSUFFICIENT |
+ A proposed label is a starting point only: a word match is not entailment, and the span must actually state the claim.
++
++## 2026-11-19 independent replay
++
++The v1.0 baseline and archived run files are preserved. C1, C2, the revised C3 (called C3′ in the follow-up request), and C4 were replayed one at a time against v1.0. C1+C4 was also replayed to check the existing v1.1 configuration. The [score report](SCORE.md) records the outcomes and [the evaluation table](evidence/confirmed_evaluation_2026-11-19.md) shows both blind and corrected development-set counts. Held-out measurement is pending.
++
++The shortlist's label for new-grad fit and the filter's posting decision answer different questions. The Pre-training role passed v1.1 even though the Codex level review found the posting unclear about new-grad fit. C3′ would abstain, but the student's posting-level audit labeled this role relevant. This illustrates the cost of treating every unknown level as a reason to hide a posting.

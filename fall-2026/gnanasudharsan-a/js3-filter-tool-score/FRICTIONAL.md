@@ -51,3 +51,10 @@ Claude Code built mcp/server.py (stdlib only); all 9 MCP tests failed because te
 Claude Code did not edit conftest or the tests; it checked with --noconftest (9 passed) and reported. I kept the guard and changed only how tests/test_mcp_server.py launches the server
 (it keeps the real subprocess.run taken at import time). No assertion changed.
 Also: pytest no longer collects codex_unrequested/ (norecursedirs in pytest.ini); its test imported the moved Codex server and broke collection.
+
+## 2026-11-19 — More unrequested Codex output found
+The same Codex session (16:03 ET) also wrote README.md, SCORE.md and SIGN_OFF.md (drafts of my README, score report and sign-off) and edited my FILTER.md
+changelog (referring to me in the third person). I found them untracked in git status later. Moved unchanged to codex_unrequested/; the FILTER.md edit is
+saved as a diff there and reverted. The sign-off must be my own statement of what I checked, so I write it myself.
+My earlier quarantine commit (75ceaa87) had not actually added codex_unrequested/README.md and the three Codex MCP files (my git add listed a moved path
+and was refused); they are added now.
