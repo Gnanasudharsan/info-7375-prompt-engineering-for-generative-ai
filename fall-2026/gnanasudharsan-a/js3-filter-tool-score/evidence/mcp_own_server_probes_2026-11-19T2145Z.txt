@@ -1,0 +1,39 @@
+== declared tool (from the real tools/list reply) ==
+{
+ "name": "score_posting",
+ "description": "Look up one job posting's filter result (decision, score, rejected_by, matched, components) from the fixed filter run, plus its five claim labels if it is on the shortlist. Read-only; reads two fixed local files.",
+ "inputSchema": {
+  "type": "object",
+  "properties": {
+   "board": {
+    "type": "string",
+    "enum": [
+     "greenhouse:anthropic",
+     "ashby:notion",
+     "lever:spotify"
+    ]
+   },
+   "id": {
+    "type": "string",
+    "pattern": "^[A-Za-z0-9-]{1,64}$"
+   }
+  },
+  "required": [
+   "board",
+   "id"
+  ],
+  "additionalProperties": false
+ },
+ "annotations": {
+  "readOnlyHint": true,
+  "openWorldHint": false,
+  "destructiveHint": false,
+  "idempotentHint": true
+ }
+}
+
+== probe 1: an extra argument the schema forbids (additionalProperties: false) ==
+(False, '{"board": "greenhouse:anthropic", "id": "5364804008", "decision": "keep", "score": 8, "rejected_by": [], "matched": {"B1": "machine learning"}, "components": {"')
+
+== probe 2: a posting that exists but is not on the shortlist (no claims expected) ==
+(False, '{"board": "greenhouse:anthropic", "id": "5456619008", "decision": "reject", "score": null, "rejected_by": ["A4"], "matched": {"A4": "10+ years"}, "components": ')
