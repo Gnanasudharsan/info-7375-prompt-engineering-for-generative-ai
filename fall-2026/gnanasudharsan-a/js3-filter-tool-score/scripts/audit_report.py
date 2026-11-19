@@ -37,6 +37,7 @@ from jobwatch.loop import _parse_jobs
 _raw = json.loads(gzip.decompress(open("runs/20261119T162945Z/raw/greenhouse_anthropic.attempt1.body.gz", "rb").read()))
 _content = {str(j["id"]): re.sub(r"<[^>]+>", " ", _h.unescape(_h.unescape(j.get("content") or ""))) for j in _raw["jobs"]}
 years_any = re.compile(r"\b\d+\s*\+?\s*(?:-\s*\d+\s*)?years?\b|\byears of (?:experience|industry)\b|\bnew grad|\bentry[- ]level\b", re.I)
+_defer = re.compile(r"years of experience required will correlate with the internal job level", re.I)
 no_level = [n for n in ct_k if not years_any.search(_content.get(s1[n]["id"], ""))
             and not level_words.search(filt[(s1[n]["board"], s1[n]["id"])]["title"] or "")]
 
@@ -65,7 +66,9 @@ All numbers below are computed by scripts/audit_report.py from my blind hand ver
 - Wrong keeps (I said NOT_RELEVANT): {kv['NOT_RELEVANT']}/{len(K)}, exact 95% interval {iv(kv['NOT_RELEVANT'], len(K))} — too wide to rank the filter's precision.
 - **Why so many CANNOT_TELL — tested, not assumed:** of my {len(ct_k)} CANNOT_TELL kept postings, **{len(no_level)}** mention no years of experience or level anywhere in the text and have no level word in the title.
   (An earlier version of this check used "A4 did not fire", which is true of every kept posting by construction; corrected.)
-  The filter never asked for a level signal: FILTER.md abstention rule (c) ("level insufficient and no title level signal") was not implemented (Claude Code choice #11).
+  **What they do say:** all {len(ct_k)} contain Anthropic's sentence "Minimum years of experience: Years of experience required will correlate with the internal job level requirements for the position" — years are mentioned but no number is given, so the level claim is *insufficient*. This sentence appears in {sum(1 for k, r in filt.items() if r["decision"] == "keep" and _defer.search(_content.get(k[1], "")))} of {kept} kept postings and in {sum(1 for c in _content.values() if _defer.search(c))} of {len(_content)} Anthropic postings.
+  My own check above matched "years of experience" inside that sentence: a false friend in the audit tool itself — the words match, but no requirement is stated.
+  The filter never asked for a level signal: FILTER.md abstention rule (c) was not implemented (Claude Code choice #11). This motivates change C3 in FILTER.md v1.1.
 
 ## 3. Close calls ({len(C)}, score 4-6)
 - My verdicts: RELEVANT {cv['RELEVANT']}, NOT_RELEVANT {cv['NOT_RELEVANT']}, CANNOT_TELL {cv['CANNOT_TELL']}. This is where my judgment and the threshold disagree most.

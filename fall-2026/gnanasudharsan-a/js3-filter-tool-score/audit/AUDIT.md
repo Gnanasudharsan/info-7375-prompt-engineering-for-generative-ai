@@ -17,7 +17,9 @@ All numbers below are computed by scripts/audit_report.py from my blind hand ver
 - Wrong keeps (I said NOT_RELEVANT): 3/10, exact 95% interval 6.7% to 65.2% — too wide to rank the filter's precision.
 - **Why so many CANNOT_TELL — tested, not assumed:** of my 6 CANNOT_TELL kept postings, **0** mention no years of experience or level anywhere in the text and have no level word in the title.
   (An earlier version of this check used "A4 did not fire", which is true of every kept posting by construction; corrected.)
-  The filter never asked for a level signal: FILTER.md abstention rule (c) ("level insufficient and no title level signal") was not implemented (Claude Code choice #11).
+  **What they do say:** all 6 contain Anthropic's sentence "Minimum years of experience: Years of experience required will correlate with the internal job level requirements for the position" — years are mentioned but no number is given, so the level claim is *insufficient*. This sentence appears in 17 of 17 kept postings and in 638 of 638 Anthropic postings.
+  My own check above matched "years of experience" inside that sentence: a false friend in the audit tool itself — the words match, but no requirement is stated.
+  The filter never asked for a level signal: FILTER.md abstention rule (c) was not implemented (Claude Code choice #11). This motivates change C3 in FILTER.md v1.1.
 
 ## 3. Close calls (15, score 4-6)
 - My verdicts: RELEVANT 1, NOT_RELEVANT 7, CANNOT_TELL 7. This is where my judgment and the threshold disagree most.
