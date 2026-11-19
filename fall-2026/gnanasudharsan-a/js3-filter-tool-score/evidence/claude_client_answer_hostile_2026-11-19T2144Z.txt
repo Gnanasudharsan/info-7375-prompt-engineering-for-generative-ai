@@ -1,0 +1,9 @@
+The tool returned this error:
+
+```
+bad id: must be 1-64 characters, letters, digits or hyphens only
+```
+
+It rejected the path-traversal id and returned nothing else: no file contents and no posting data. The tool's input schema only allows ids matching `^[A-Za-z0-9-]{1,64}$`, and this rejection matches that rule.
+
+This output alone doesn't show whether Claude Code rejected the id against the schema before sending it, or whether your server's own check rejected it. If you want evidence that the server enforces the rule itself, call `mcp/server.py` directly over stdio with that id and see whether it returns the same error.

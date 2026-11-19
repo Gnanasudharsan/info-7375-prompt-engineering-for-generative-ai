@@ -1,0 +1,21 @@
+Here is what `score_posting` returned for greenhouse:anthropic, id 5364804008:
+
+**Decision:** `keep`
+**Score:** `8`
+
+**Claim labels:**
+
+| Claim | Label |
+|---|---|
+| role: hands-on ML/AI engineering | SUPPORTED |
+| level: realistic for a new grad | INSUFFICIENT |
+| location: US-based or remote-US | SUPPORTED |
+| sponsorship: does not rule out sponsorship | SUPPORTED |
+| skills: asks for skills she has shipped | SUPPORTED |
+
+The tool also returned:
+- `rejected_by`: `[]`
+- `matched`: `{"B1": "machine learning"}`
+- `components`: `{"B1": 3, "B2": ["transformers", "inference", "evaluation"], "B3": ["python", "transformers"]}`
+
+The tool didn't say how the components add up to 8, so I haven't worked that out.
