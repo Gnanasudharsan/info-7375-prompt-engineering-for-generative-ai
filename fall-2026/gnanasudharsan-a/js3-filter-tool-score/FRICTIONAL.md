@@ -58,3 +58,10 @@ changelog (referring to me in the third person). I found them untracked in git s
 saved as a diff there and reverted. The sign-off must be my own statement of what I checked, so I write it myself.
 My earlier quarantine commit (75ceaa87) had not actually added codex_unrequested/README.md and the three Codex MCP files (my git add listed a moved path
 and was refused); they are added now.
+
+## 2026-11-19 — The claim reviewer that actually ran was Codex's
+scripts/review_claims.py in git is Codex's version (it has a --batch mode that shows Codex's suggestions); my own reviewer was overwritten before it was ever
+committed. Codex's version entered the repo inside ee414783 (the held-out commit, via `git add scripts/`), whose message does not mention it.
+Correction to my earlier entry: I cannot claim the second pass hid Codex's labels. Result: the 44 Codex-covered claims carry the same labels as the
+first-pass labels moved aside (44 of 44 equal), 43 equal to the script's proposal and 1 changed with my note (RL Security role -> INSUFFICIENT);
+they differ from Codex's suggestions on 3 claims. I do not claim to have re-reviewed those 44 one by one.
