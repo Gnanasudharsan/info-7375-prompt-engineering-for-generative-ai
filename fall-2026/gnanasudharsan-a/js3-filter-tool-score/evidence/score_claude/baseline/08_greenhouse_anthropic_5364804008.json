@@ -1,0 +1,31 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5364804008,
+  "verdict": "RELEVANT",
+  "reasoning": "Role type: This is a hands-on engineering role building ML systems. It owns the infrastructure, data pipelines, and training, evaluation and scoring workflows behind Safeguards ML research, and moves research workflows into production-grade jobs. That is building, training and deploying ML systems, not publishing research or doing pure data science. It fits her ML Engineer and Research Engineer targets. Level: The posting gives no explicit years-of-experience requirement, no mid or senior title, and no PhD requirement. Minimum education is a Bachelor's or equivalent, and years of experience are said to 'correlate with the internal job level requirements.' Under the strict rule, nothing explicitly disqualifies a new grad finishing an MS in CS (AI concentration) at BU in 2026-12 with an ML Engineer co-op. Two caveats: the $350K-$500K salary band suggests a senior-leaning level, and the minimum qualifications ask for experience building and operating data-intensive or distributed systems in production. Her record shows prototype and co-op-scale work (a RAG QA prototype, transformer fine-tuning with MLflow tracking), so this is a stretch. Skills: Python is the only specific technology named in the minimum qualifications. The other items ('distributed systems', 'tooling or infrastructure') are general competencies, not named technologies. With fewer than 2 named technologies, the skills test is skipped. Python is in her shipped list in any case. Several preferred qualifications match her background: transformers and language modeling, evaluation harnesses, experiment tracking (MLflow), and classifier development (her fine-tuned routing classifier). Kubernetes and Ray, which she has not shipped, are not required. Location: San Francisco, CA or New York City, NY. Both are US-based, the role is hybrid (25% in office), and she is willing to relocate within the US. Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!' with reasonable-effort language and no disclaimer. All criteria pass under strict application, so the verdict is RELEVANT, with the caution that the infrastructure scale and compensation band make this a reach application.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "projects",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.familiar_with_not_shipped",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

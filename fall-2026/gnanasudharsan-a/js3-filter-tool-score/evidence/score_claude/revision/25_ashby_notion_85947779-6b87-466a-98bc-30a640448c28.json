@@ -1,0 +1,11 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "judgment_unavailable",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": null,
+ "failed_attempts": [
+  "cli: exit 1, is_error=True, subtype='success'",
+  "cli: exit 1, is_error=True, subtype='success'"
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4020350008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Location and sponsorship both pass, but the role type and the seniority required are a poor fit, so the verdict is NOT_RELEVANT. (1) Role type: The title is 'Performance Engineer', which is not one of her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). The work is ML-adjacent but centers on low-level systems and infrastructure. Example projects include writing GPU kernels for low-precision inference, custom load-balancing algorithms, fault-tolerant distributed systems on complex network topologies, and debugging kernel-level network latency spikes. The posting looks for people with 'a track record of solving large-scale systems problems' who will 'grow to become an expert in ML'. That is systems and performance engineering, not building, training, or deploying ML/NLP models, which is her focus. (2) Level: The posting asks for 'significant software engineering or machine learning experience, particularly at supercomputing scale'. It says years of experience track internal job levels, and the pay range of $280,000 to $850,000 points to senior hires. Ananya is finishing an MS in CS (AI concentration) at Boston University in 2026-12. Her only industry experience is an 8-month ML Engineer co-op building a RAG prototype and fine-tuning a small transformer classifier. She has nothing at supercomputing or distributed-systems scale, so the level is unrealistic for her even without an explicit year count. (3) Skills: The 'good fit' section names no specific technologies, so the skills test is skipped. Her strengths in PyTorch, Hugging Face Transformers, sentence-transformers, FastAPI, and MLflow do not match the GPU programming, OS internals, and ML framework internals the posting lists. Her only distributed-infra skills (Kubernetes, Ray) are familiar but not shipped. (4) Location: San Francisco, New York City, or Seattle, all US-based; she is willing to relocate within the US. This passes. (5) Sponsorship: The posting says 'We do sponsor visas!', which suits her need for sponsorship. This passes. The verdict rests on the systems-performance focus and the experience bar.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "projects",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.familiar_with_not_shipped",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

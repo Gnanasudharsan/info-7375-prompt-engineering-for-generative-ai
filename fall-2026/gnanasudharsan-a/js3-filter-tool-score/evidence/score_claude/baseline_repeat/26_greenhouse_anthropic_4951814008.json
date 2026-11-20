@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4951814008,
+  "verdict": "RELEVANT",
+  "reasoning": "Role type: The title is 'Research Engineer / Research Scientist, Tokens', but the content describes a hands-on engineering role. It calls for building large-scale ML systems from the ground up, making the cluster reliable, improving throughput and efficiency, running and designing experiments, and improving dev tooling. Representative projects are engineering work: optimizing an attention mechanism's throughput, comparing compute efficiency of Transformer variants, building a Wikipedia dataset for model consumption, scaling distributed training, and visualizing attention. This is building, training, and deploying systems rather than publishing novel research. 'Research Engineer' is in Ananya's target_roles, and the department is AI Research & Engineering. Level: The posting asks for 'significant software engineering experience' but states no explicit minimum years. It says years 'correlate with the internal job level' and the minimum education is a Bachelor's degree. There is no PhD requirement and no explicit mid/senior title. The high salary band ($350K-$500K) and the vague experience wording suggest a competitive, possibly experienced-leaning bar. However, the rule rejects only explicit 3+ years, mid/senior, or PhD requirements, and none are stated. Ananya's MS in CS (AI concentration, ending 2026-12) and her ML Engineer co-op (fine-tuning transformers, RAG, MLflow) are relevant. Skills: The required section ('You may be a good fit if you') names no specific technologies, so the skills test is skipped. Kubernetes appears only under 'Strong candidates may also have experience with' (GPUs, Kubernetes, PyTorch, OS internals), which is preferred, not required. Ananya ships PyTorch and has transformer language-model experience. Location: The offices are New York City, Seattle, and San Francisco, all US-based, with a 25% in-office hybrid policy. Ananya is in Boston and willing to relocate within the US. Sponsorship: The posting explicitly says 'We do sponsor visas!', which satisfies her needs_sponsorship=true. All criteria pass, so the verdict is RELEVANT. The caveat is that this is an evergreen, highly competitive posting.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.ml_nlp",
+   "skills.familiar_with_not_shipped",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "departments.name",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

@@ -1,0 +1,31 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5439524008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails on role type and on location. Role type: the job is 'IT Support Engineer' on the IT Operations team, listed under the Security department. The work is IT support and systems administration: triaging tickets, supporting macOS/ChromeOS/iOS/Android endpoints, administering Google Workspace and Slack, MDM, SSO/MFA access management, AV and conference rooms, printers, and an on-call rotation. It is not hands-on ML, NLP, or AI systems engineering. Ananya's target_roles are Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, and Research Engineer. Her experience as a Machine Learning Engineer Co-op covered RAG prototypes and transformer fine-tuning with MLflow, and her projects (rag-eval-lab) are retrieval and NLP work. None of this matches IT support. Location: the posting is in Dublin, IE, with compensation in EUR (\u20ac125,000\u2013\u20ac165,000) and a 25% in-office hybrid policy. That is neither US-based nor designated remote. Ananya is based in Boston, MA, and while she is willing to relocate, that applies only within the US. Skills: the required section names several technologies (macOS, ChromeOS, iOS, Android, Google Workspace, Slack, Bash or Python). Only Python overlaps with her shipped stack, which is fewer than 2, so the skills test also fails. Level is not a blocker, since no years of experience or PhD is required. Sponsorship is not a blocker either: the posting says 'We do sponsor visas!', which suits her needs_sponsorship=true. These do not outweigh the role-type and location failures, so the verdict is NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "experience",
+   "projects",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.database_cloud",
+   "education"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

@@ -1,0 +1,27 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5432554008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Fails on role type, level, and location. Role: 'Applied AI Architects, Partner' is a pre-sales, partner-facing Solutions Architect position focused on GSI/cloud partner relationships, GTM strategy, deal support, and events, not hands-on ML/NLP/AI engineering building, training, and deploying systems as required by Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). Level: the posting cites 5+ years of experience in customer-facing/partner-facing roles (Solutions Architect, Sales Engineer, TAM), far beyond a new grad finishing an MS at Boston University in 2026-12 with one ML co-op. Location: the role is based in Seoul, South Korea, not US-based or remote; Ananya is in Boston and willing to relocate only within the US. It also asks for fluency in Korean and English. Skills: the qualifications name few specific technologies (AWS, GCP), so the skills test is not decisive; the role fails on the other criteria regardless. Sponsorship: Anthropic states it sponsors visas, so this is not disqualifying, but the other failures make the posting NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship",
+   "skills.database_cloud"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

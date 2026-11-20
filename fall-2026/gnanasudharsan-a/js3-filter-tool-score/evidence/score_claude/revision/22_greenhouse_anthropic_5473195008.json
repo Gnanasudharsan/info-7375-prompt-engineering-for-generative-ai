@@ -1,0 +1,26 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5473195008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type: The title is 'Applied AI Architect, International Policy', a customer-facing technical advisory role and not hands-on ML/NLP engineering. The main duties are advising senior government officials and AI Safety Institutes, briefing them on frontier AI capabilities and harms, leading workshops and onboarding for partner institutions, guiding their integration with Claude Code and the Claude API, and traveling internationally to build relationships. Building demos and prototypes is part of the job, but it is not centered on building, training, and deploying ML systems. It does not match her target roles (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, Research Engineer). Level: The posting explicitly requires '4+ years of experience as a Customer Engineer, Forward Deployed Engineer, Sales Engineer, Solutions Architect, or Cybersecurity Engineer, working with governments, international organizations, or the public sector.' This exceeds the 3+ year rejection threshold. Ananya is a new grad finishing her MS in CS (AI concentration) at Boston University in 2026-12, and her only industry experience is an 8-month ML Engineer co-op at Lumenwise Health. She has no public-sector or customer-engineering background. Skills: The requirements name only one specific technology (Python, preferred), so the skills test is skipped. Location: San Francisco, CA and New York City, NY are US-based, and she is willing to relocate within the US, so location passes. Sponsorship: Anthropic states 'We do sponsor visas!', which is compatible with her need for sponsorship. Despite passing location and sponsorship, the posting fails on both role type and the explicit 4+ years requirement, so it is NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

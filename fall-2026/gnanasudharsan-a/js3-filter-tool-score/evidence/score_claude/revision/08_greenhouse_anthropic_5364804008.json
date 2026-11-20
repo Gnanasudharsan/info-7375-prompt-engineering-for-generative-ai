@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5364804008,
+  "verdict": "RELEVANT",
+  "reasoning": "Role type: This is a hands-on engineering role on ML systems, not pure data science or academic research. The engineer owns the infrastructure, data pipelines, and training, evaluation, and scoring workflows behind Safeguards ML research. The work includes training detection methods on model internals, moving research workflows into production-grade jobs, and improving large-scale inference throughput. That matches the ML Engineer and Research Engineer targets because the work is building, training, and deploying systems rather than publishing research. The preferred qualifications (transformers, model internals, evaluation harnesses, experiment tracking, classifier development) also line up with her co-op, where she fine-tuned a transformer classifier, tracked experiments in MLflow, and built a RAG QA prototype with a 300-question evaluation set. Level: There is no explicit years-of-experience requirement ('Years of experience required will correlate with the internal job level requirements'). The title has no senior, staff, or mid-level marker, and the minimum education is a Bachelor's degree or equivalent, with no PhD required. Per the rules, seniority is not inferred from the $350K-$500K salary range or from how demanding the qualifications sound. A new grad finishing an MS in CS (AI concentration) in 2026-12 with an ML Engineer co-op is not excluded on level. Skills: The minimum qualifications name only one specific technology, Python. The rest are general competencies such as data-intensive or distributed systems, tooling, and debugging. Since fewer than 2 specific technologies are required, the skills test is skipped. Python is in her shipped skills anyway. Location: San Francisco, CA and New York City, NY are both US-based, with a 25% in-office hybrid policy, and she is willing to relocate within the US. Sponsorship: She needs sponsorship, and the posting states 'We do sponsor visas!' and promises reasonable efforts plus an immigration lawyer. Sponsorship is offered, not disclaimed. All criteria pass, so the posting is RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "willing_to_relocate_us",
+   "needs_sponsorship",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

@@ -1,0 +1,27 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5460211008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "The role type is wrong. 'Applied AI Architect, Public Sector (GovTech)' is a pre-sales, customer-facing technical advisory role, not hands-on ML/NLP/AI engineering. The responsibilities focus on partnering with account executives, advising enterprise customers through Claude adoption, delivering technical content to executives and engineering teams, and frequent travel to customer sites. That does not match Ananya's target roles (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, Research Engineer). The level also fails: the posting explicitly asks for '5+ years of experience in technical customer-facing roles such as Solutions Architect, Sales Engineer, or Technical Account Manager'. This is above the 3+ year threshold, and Ananya is a new grad (MS CS with AI concentration at Boston University, ending 2026-12) whose only industry experience is an ML Engineer co-op. It also prefers US Secret Clearance and prior government contracting experience, which she lacks. On skills, the qualifications name few specific technologies (Python, plus generic cloud architecture and LLM frameworks). Python matches her shipped skills, but the skills test doesn't change the outcome given the role-type and level failures. Location (Washington, DC, US-based, and she is willing to relocate) and sponsorship ('We do sponsor visas!', which matters since she needs sponsorship) both pass. The role-type mismatch and the 5+ year requirement are each disqualifying on their own.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

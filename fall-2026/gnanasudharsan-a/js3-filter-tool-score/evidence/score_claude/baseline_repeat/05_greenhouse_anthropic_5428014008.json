@@ -1,0 +1,30 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5428014008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type fails: this is a Product Designer position (UI/UX craft, Figma prototyping, portfolio of user-centered design), not hands-on ML/NLP/AI systems engineering. It does not match any of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). Level is also a poor fit: minimum qualifications require a proven track record of designing and shipping complex enterprise/B2B SaaS or developer-tool products end-to-end plus a design portfolio, and the $305k-$460k salary band implies a senior level, while Ananya is a new-grad MS CS (AI) student finishing at Boston University in 2026-12 with one ML Engineer co-op. Skills fit fails: the required section names Figma and Claude Code, neither of which is in her shipped list (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS), and the preferred HTML/CSS/JS is also not in her skills. Location (San Francisco, New York City, Seattle; she is willing to relocate within the US) and sponsorship ('We do sponsor visas!', and she needs sponsorship) would both pass, but the role-type, level, and skills mismatches are decisive.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.database_cloud",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "departments.name",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

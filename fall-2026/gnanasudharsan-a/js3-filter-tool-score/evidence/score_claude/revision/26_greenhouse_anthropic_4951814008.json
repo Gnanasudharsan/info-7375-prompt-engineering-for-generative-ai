@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4951814008,
+  "verdict": "RELEVANT",
+  "reasoning": "Role type: The title is 'Research Engineer / Research Scientist, Tokens', but the work described is hands-on ML systems engineering. It covers building large-scale ML systems, making the cluster reliable, improving throughput and efficiency, and improving dev tooling. The representative projects include optimizing an attention mechanism's throughput, building a model-consumable Wikipedia dataset, scaling distributed training and visualizing attention. These are building and deploying tasks, not publishing novel research. 'Research Engineer' is in her target_roles, and her co-op (transformer fine-tuning, RAG prototype, MLflow tracking) and NLP/Deep Learning coursework fit this work. Level: There is no explicit years-of-experience number ('Years of experience required will correlate with the internal job level'), no mid/senior/staff title, and no PhD requirement. The minimum is a Bachelor's or equivalent. 'Significant software engineering experience' is qualitative, and per the rules seniority is not inferred from wording or from the $350k-$500k salary range. Skills: The required 'You may be a good fit if you' section names no specific technologies (software engineering experience, pair programming, interest in ML research). That is fewer than 2, so the skills test is skipped. GPUs, Kubernetes, PyTorch, transformers, RL and ETL appear only under 'Strong candidates may also have experience with', so they are preferred, not required. Kubernetes (familiar but not shipped) is therefore not a core requirement. She has shipped PyTorch and Hugging Face Transformers, which match the preferred list. Location: New York City, Seattle and San Francisco, all in the US, with a 25% in-office hybrid policy. She is in Boston and willing to relocate within the US. Sponsorship: She needs sponsorship, and the posting says 'We do sponsor visas!' with reasonable effort and an immigration lawyer, so there is no disclaimer. Caveat: This is an evergreen posting with a high bar, so a response is not guaranteed, but it meets every criterion.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.ml_nlp",
+   "skills.familiar_with_not_shipped",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

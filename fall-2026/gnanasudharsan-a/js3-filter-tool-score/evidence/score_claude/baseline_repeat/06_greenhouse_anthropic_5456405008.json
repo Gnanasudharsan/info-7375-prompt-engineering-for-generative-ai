@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5456405008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails on role type, level, and skills, so it is NOT_RELEVANT even though location and sponsorship are fine.\n\n(1) Role type: The title is 'Principal Engineer Capacity/Compute' in the 'Software Engineering - Infrastructure' department. The work is capacity and infrastructure engineering: telemetry data pipelines into BigQuery, Kubernetes operations, observability (Prometheus/Grafana), billing attribution, and forecasting. The posting describes it as 'a hands-on engineering role with a devops flavor.' It does not involve building, training, or deploying ML/NLP/AI systems, so it matches none of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer).\n\n(2) Level: 'Principal' is a very senior title. The role asks for 'a strong track record building and operating production systems' and 'deep experience' with a major cloud provider, and pays $320,000-$485,000. This is not realistic for a new grad finishing an MS at Boston University in 2026-12 whose only industry experience is an 8-month ML Engineer co-op.\n\n(3) Skills: The required section names many technologies: Python, SQL, BigQuery, AWS/GCP/Azure, Prometheus, PromQL, and Grafana, with Kubernetes central to the responsibilities. Python, SQL, and AWS are in her shipped list, so she technically meets the 2-technology threshold. However, Kubernetes is a core requirement ('Operate Kubernetes-native systems at scale') and is listed only in her familiar_with_not_shipped skills. The labeling rules say an un-shipped core requirement like Kubernetes makes the posting NOT_RELEVANT. She also has no shipped experience with BigQuery, Prometheus, PromQL, or Grafana.\n\n(4) Location: New York City, NY is US-based, and Ananya is willing to relocate within the US, so this passes.\n\n(5) Sponsorship: The posting says 'We do sponsor visas!' with caveats but no explicit disclaimer. Ananya needs sponsorship, and this criterion passes.\n\nThe role-type, seniority, and Kubernetes failures are each enough on their own to reject the posting.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.database_cloud",
+   "skills.familiar_with_not_shipped",
+   "needs_sponsorship",
+   "willing_to_relocate_us"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "departments.name",
+   "content",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

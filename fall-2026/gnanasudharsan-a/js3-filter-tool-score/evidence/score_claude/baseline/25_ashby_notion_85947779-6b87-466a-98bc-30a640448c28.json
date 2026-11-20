@@ -1,0 +1,11 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "judgment_unavailable",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": null,
+ "failed_attempts": [
+  "validator: id '85947779-6b87-466a-98bc-30a640448c28' does not match posting id '85947779-6b87-466a-98bc-30a640448c28'",
+  "validator: id '85947779-6b87-466a-98bc-30a640448c28' does not match posting id '85947779-6b87-466a-98bc-30a640448c28'"
+ ]
+}

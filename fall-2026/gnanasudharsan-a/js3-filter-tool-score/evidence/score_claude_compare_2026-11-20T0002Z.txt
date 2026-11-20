@@ -1,0 +1,11 @@
+judged in all three runs: 23 of 28 (the rest: judgment_unavailable)
+baseline         RELEVANT on my NOT_RELEVANT (false keep)  0 | RELEVANT on my CANNOT_TELL  2 | NOT_RELEVANT agreeing with me 19
+baseline_repeat  RELEVANT on my NOT_RELEVANT (false keep)  0 | RELEVANT on my CANNOT_TELL  3 | NOT_RELEVANT agreeing with me 19
+revision         RELEVANT on my NOT_RELEVANT (false keep)  1 | RELEVANT on my CANNOT_TELL  3 | NOT_RELEVANT agreeing with me 18
+
+CONTROL (identical prompt, two fresh runs): 1 of 23 verdicts differ
+   #7   NOT_RELEVANT -> RELEVANT   (me: CANNOT_TELL)
+
+PROMPT change (baseline -> revision): 2 of 23 verdicts differ
+   #2   NOT_RELEVANT -> RELEVANT   (me: NOT_RELEVANT)
+   #7   NOT_RELEVANT -> RELEVANT   (me: CANNOT_TELL)

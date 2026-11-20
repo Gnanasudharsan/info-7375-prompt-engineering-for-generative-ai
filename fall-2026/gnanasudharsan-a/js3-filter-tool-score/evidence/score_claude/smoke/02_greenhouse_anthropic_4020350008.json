@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4020350008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Location and sponsorship pass. The posting lists San Francisco, New York City and Seattle, which are all US offices, and Ananya is willing to relocate within the US. It says 'We do sponsor visas!', which works for her sponsorship need. Skills test skipped: the 'You may be a good fit if you' section names no specific technologies (it lists general areas like supercomputing-scale experience), so the posting does not meet the 2-technology threshold. Role type fails. This is a Performance Engineer role focused on systems problems, not on building, training and deploying ML/NLP models. The work is optimizing the throughput and robustness of very large distributed systems, writing GPU kernels for low-precision inference, building load-balancing algorithms, building fault-tolerant distributed systems and debugging kernel-level network latency. ML is something the hire 'will be excited to grow to become an expert in', not the core of the job. Her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer) do not include performance or systems engineering. Her experience is applied NLP: a RAG QA prototype, a fine-tuned transformer classifier tracked in MLflow, and a chunking-strategy study. None of it involves GPU kernels, OS internals or supercomputing-scale distributed systems. Level also fails. The posting asks for 'significant software engineering or machine learning experience, particularly at supercomputing scale' and 'a track record of solving large-scale systems problems'. It gives no year count, but this is an experienced-hire bar, and the $280K-$850K salary range points the same way. Ananya is a new grad (BU MS in CS with AI concentration, ending 2026-12) with one 8-month co-op, so this is not realistic for her. Verdict: NOT_RELEVANT because the role type and level do not fit, even though location and sponsorship are fine.",
+  "resume_fields_cited": [
+   "target_roles",
+   "experience",
+   "projects",
+   "education",
+   "skills.ml_nlp",
+   "skills.familiar_with_not_shipped",
+   "needs_sponsorship",
+   "willing_to_relocate_us"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

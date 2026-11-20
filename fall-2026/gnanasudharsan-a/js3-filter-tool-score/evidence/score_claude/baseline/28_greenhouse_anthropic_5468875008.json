@@ -1,0 +1,31 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5468875008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails on role type and level, and the skills test does not apply. Role type: the title is 'Data Center Strategic Sourcing Lead - Construction' and the work is procurement and supply chain for data center construction materials. That means sourcing electrical cable, conduit, breakers, pipe, valves, and fittings, negotiating Master Purchase Agreements, running RFQs, building should-cost models, and managing inventory and logistics. It involves no hands-on engineering on machine learning, NLP, or AI systems. It does not match any of Ananya's target roles (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, Research Engineer). Her MS in CS (AI concentration), her ML Engineer co-op building a RAG prototype and fine-tuning a transformer classifier, and her rag-eval-lab project are all unrelated to construction sourcing. Level: the minimum qualifications require 7+ years in sourcing, procurement, or supply chain, and 10+ years is preferred. That is far beyond a new grad finishing an MS in 2026-12 with an eight-month co-op. Skills: the required section names no specific software technologies, so the skills test is skipped. None of her shipped stack (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS) is relevant anyway. Location: San Francisco, CA and New York City, NY are US-based, and she is willing to relocate, so location passes. Sponsorship: the posting says 'We do sponsor visas!', so sponsorship passes even though she needs it. Location and sponsorship are satisfied, but the role type and level mismatches are each disqualifying.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "projects",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.database_cloud",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

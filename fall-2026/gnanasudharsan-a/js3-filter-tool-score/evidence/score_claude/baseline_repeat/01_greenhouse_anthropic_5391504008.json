@@ -1,0 +1,25 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5391504008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type: The posting is 'Head of National Security Sales (DoW/IC)' in the Sales department. It is a sales leadership role covering revenue targets, quotas, go-to-market strategy and relationship management. It is not hands-on ML/NLP/AI engineering and matches none of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). Level: It requires 15+ years of enterprise sales experience, including 5+ years managing sales teams selling into the DoW/IC. It also requires an active TS/SCI clearance. This is far beyond a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12 with one ML Engineer co-op. Skills: The required qualifications name almost no specific technologies (only generic references to CRM systems and compliance frameworks such as FedRAMP), so the skills test is skipped. Location: Washington, DC is US-based and Ananya is willing to relocate within the US, so location passes. Sponsorship: Anthropic says 'We do sponsor visas!', so this criterion is not disqualifying even though she needs sponsorship. The role type and level failures are decisive, so the verdict is NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "departments.name",
+   "content",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

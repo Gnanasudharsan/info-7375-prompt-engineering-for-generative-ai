@@ -1,0 +1,30 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5460837008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails several hard criteria. (1) Role type: 'International Finance Program Management' sits in the Finance department and is a non-engineering program/project management role. It covers international entity set-ups, governance, compliance coordination, vendor management and change management. Its only AI element is tracking Claude-powered automation initiatives, which is coordination work, not hands-on ML/NLP/AI engineering. It matches none of Ananya's target roles (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, Research Engineer). (2) Level: The minimum qualifications require 10+ years of program/project management or PMO experience, including at least 3 years in finance or accounting. This far exceeds the 3+ years exclusion threshold and is unrealistic for a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12 with one ML Engineer co-op. (3) Skills: The required section names tools such as Asana and Jira. None of these appear in her shipped stack (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS). Her ML/NLP, backend and cloud skills are not relevant to the role. (4) Location: The role is based in Dublin, IE, with a hybrid in-office expectation. It is not US-based and not designated remote. Ananya is in Boston, MA and is willing to relocate only within the US. (5) Sponsorship: Anthropic states it does sponsor visas, so sponsorship is not disqualifying on its own. However, the role type, level and location failures each independently make this posting NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.database_cloud",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "departments.name",
+   "content",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

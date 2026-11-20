@@ -1,0 +1,27 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5468875008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type fails: this is a Data Center Strategic Sourcing Lead (Construction) position focused on procurement of electrical and mechanical construction materials (cable, conduit, breakers, pipe, valves), negotiating supply agreements, RFQs, and logistics, not hands-on ML/NLP/AI engineering. It does not match any of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). Level also fails: the minimum qualifications explicitly require 7+ years of sourcing/procurement/supply chain experience (10+ preferred), which is far beyond a new grad finishing an MS in CS (AI concentration) at Boston University in 2026-12 with one ML co-op. The required section names no specific software technologies from her shipped list (Python, PyTorch, SQL, Hugging Face Transformers, etc.), so the skills test is skipped, but the role and level failures are independently disqualifying. Location (San Francisco, CA | New York City, NY) is US-based and acceptable given her willingness to relocate, and sponsorship is not disclaimed ('We do sponsor visas!'), which matters since she needs sponsorship, but these do not overcome the role and level mismatches.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.ml_nlp",
+   "skills.languages",
+   "needs_sponsorship",
+   "willing_to_relocate_us"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5442680008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type: The title 'Research Engineer' is in Ananya's target_roles, and the work is hands-on engineering in large part: building and scaling the systems that run agent teams, designing evaluations, and building tooling. Her RAG evaluation work at the Lumenwise co-op and in her rag-eval-lab project is loosely related to the evaluation focus. Level: This is the deciding factor. The title is explicitly 'Staff Research Engineer', a senior level well above new grad. Ananya is finishing an MS in CS (AI concentration) at Boston University, ending 2026-12, and has one 8-month ML Engineer co-op. The posting asks for 'significant software engineering, ML or research engineering experience' and for having 'owned something substantial end to end, such as a large system'. It says years of experience will 'correlate with the internal job level requirements', which for Staff means many years. The $500,000-$850,000 salary band confirms a senior/staff hire. Under the labeling rule, explicit mid/senior requirements are rejected. Skills: The required section names fewer than 2 specific technologies, so the skills test is skipped. The preferred items (distributed schedulers, sandboxed execution, inference/RL infrastructure) would rely on systems like Kubernetes and Ray, which she lists only as familiar_with_not_shipped. Location: San Francisco, New York City, or Seattle, all in the US, with a 25% in-office hybrid policy. Ananya is in Boston and willing to relocate within the US, so this passes. Sponsorship: Ananya needs sponsorship, and the posting states 'We do sponsor visas!', so this passes. Conclusion: Location, sponsorship, and role family are acceptable, but the explicit Staff level is not a realistic fit for a new grad with one co-op, so the verdict is NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "education",
+   "experience",
+   "projects",
+   "target_roles",
+   "skills.familiar_with_not_shipped",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

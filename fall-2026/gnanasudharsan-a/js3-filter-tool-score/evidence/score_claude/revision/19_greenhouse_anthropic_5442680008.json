@@ -1,0 +1,26 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5442680008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Level is the deciding factor. The title explicitly says 'Staff Research Engineer, Multi-Agent Scaling'. A Staff title is a senior designation, and the labeling rule says to reject explicit mid/senior/staff titles. Ananya is a new grad finishing an MS in Computer Science (AI concentration) at Boston University in 2026-12, with one ML Engineer co-op (2026-01 to 2026-08), so a Staff-level role is not realistic for her. This judgment rests only on the explicit title. It does not rely on the $500,000-$850,000 salary range or on how demanding the qualifications sound. The posting's 'years of experience will correlate with internal job level' line is consistent with that reading but is not needed. Other criteria for completeness: (1) Role type: 'Research Engineer' is in her target_roles, and the work is mostly building platforms, evaluations, and tooling for large agent teams rather than publishing, so role type alone would pass. (2) Skills: the required section ('You may be a good fit if you') names no specific technologies (fewer than 2), so the skills test is skipped. The 'strong candidates may also have' items (distributed schedulers, RL/inference infrastructure) are preferred, not required. (3) Location: San Francisco, CA / New York City, NY / Seattle, WA are US-based, and she is willing to relocate. (4) Sponsorship: the posting says 'We do sponsor visas!', which works with her needs_sponsorship=true. Role, skills, location, and sponsorship would all pass, but the explicit Staff seniority level makes this NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "education",
+   "experience",
+   "target_roles",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

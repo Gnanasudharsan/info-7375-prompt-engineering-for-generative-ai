@@ -1,0 +1,26 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5076754008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type: The posting is 'Director, Revenue Accounting' in the Finance department. It is a finance/accounting leadership role (ASC 606 revenue recognition, ASC 326/CECL, AR reconciliations, month-end close, audit coordination). It is not a hands-on ML, NLP, or AI engineering role and does not match any of Ananya's target roles (Machine Learning Engineer, AI Engineer, Applied NLP Engineer, ML Engineer, Research Engineer). Level: The posting explicitly requires '10+ years of accounting experience, with at least 3 years in public accounting' and carries a Director title. Both far exceed the 3+ year rejection threshold. Ananya is an MS CS (AI concentration) student at Boston University finishing in 2026-12, with one ML Engineer co-op. Skills: The required section names no specific technologies, so the skills test is skipped. ERP and NetSuite ARM appear only as preferred qualifications, and SQL appears only as a 'plus'. Location (San Francisco, CA | Seattle, WA; Ananya is willing to relocate within the US) and sponsorship ('We do sponsor visas!') would both pass. However, the role-type and level failures are each disqualifying on their own.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.ml_nlp",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "departments.name",
+   "content",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

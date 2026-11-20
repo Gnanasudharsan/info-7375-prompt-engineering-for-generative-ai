@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5456405008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This fails on role type and on level, and several skills are also a poor fit.\n\nRole type: The posting is 'Principal Engineer Capacity/Compute' on the Software Engineering - Infrastructure team. The work is capacity engineering: data pipelines that ingest telemetry and billing into BigQuery, Kubernetes operations, observability with Prometheus, PromQL and Grafana, cost attribution, forecasting, and scheduling efficiency. The posting calls it 'a hands-on engineering role with a devops flavor.' It is infrastructure, data engineering and observability work. It is not building, training or deploying ML, NLP or AI systems, so it does not match Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer).\n\nLevel: The title explicitly says 'Principal,' which is above senior. Under the rule, an explicit senior-or-higher title disqualifies a new grad finishing an MS at Boston University in 2026-12 with one co-op. This verdict rests on the title, not on the salary range.\n\nSkills: The required section names Python, SQL/BigQuery SQL, AWS/GCP/Azure, Prometheus, PromQL and Grafana. Python, SQL and AWS are in her shipped list, so she technically passes the minimum of two. However, the role is described as Kubernetes-native ('operate Kubernetes-native systems at scale'), and Kubernetes is only in her familiar_with_not_shipped list. The observability stack and BigQuery are not in her shipped skills either.\n\nLocation and sponsorship: New York City, NY is US-based and she is willing to relocate. The posting says 'We do sponsor visas!', so sponsorship, which she needs, is not a blocker.\n\nDespite the location and sponsorship fit, the infrastructure focus and the Principal level make this NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.database_cloud",
+   "skills.familiar_with_not_shipped",
+   "needs_sponsorship",
+   "willing_to_relocate_us"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "departments.name",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

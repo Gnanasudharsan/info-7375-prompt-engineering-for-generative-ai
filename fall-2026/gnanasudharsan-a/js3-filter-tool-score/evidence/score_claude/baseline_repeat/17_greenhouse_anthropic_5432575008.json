@@ -1,0 +1,28 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5432575008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Three of the hard criteria fail, so this posting is NOT_RELEVANT.\n\n(1) Location: the role is based in London, UK. That holds in location.name and in the GBP salary range (\u00a3225,000\u2013\u00a3255,000) in the content. It is not US-based and is not marked Remote; the content describes a hybrid policy requiring at least 25% in-office time. Ananya is in Boston, MA and is willing to relocate within the US only, so a UK role fails.\n\n(2) Level: the content asks for '4+ years of experience as a Software Engineer, Forward Deployed Engineer, or technical founder.' It also asks for experience in a customer-facing or pre-sales technical role, and for production experience building LLM-powered applications 'at scale.' Ananya is a new grad finishing an MS in Computer Science (AI concentration) at Boston University in 2026-12. Her only industry experience is an 8-month ML Engineer co-op (2026-01 to 2026-08). That is well below the 3+ year threshold.\n\n(3) Role type: this is not mainly hands-on ML/NLP system building. It is a customer-facing technical advisory role. Duties include pair programming with customers, pre-sales scoping, hackathons, webinars, developer events, and travel to customer sites. It sits closer to solutions or forward-deployed engineering than to the ML Engineer, AI Engineer, or Applied NLP Engineer roles in her target_roles.\n\nSkills: the requirements name only one specific technology (Python), which is fewer than 2, so the skills test is skipped. Python is in her shipped skills, and her RAG prototype and evaluation work are related experience, but this does not offset the failures above.\n\nSponsorship: the content says 'We do sponsor visas!', so sponsorship is not disqualifying even though she needs sponsorship. Location, seniority, and role type each rule the posting out on their own.",
+  "resume_fields_cited": [
+   "personal.location",
+   "willing_to_relocate_us",
+   "education",
+   "experience",
+   "target_roles",
+   "skills.languages",
+   "needs_sponsorship",
+   "projects"
+  ],
+  "posting_fields_cited": [
+   "location.name",
+   "content",
+   "title",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

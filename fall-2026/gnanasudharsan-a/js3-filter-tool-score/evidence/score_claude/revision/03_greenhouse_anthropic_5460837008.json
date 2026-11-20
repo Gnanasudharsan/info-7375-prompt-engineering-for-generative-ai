@@ -1,0 +1,30 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5460837008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails several criteria. (1) Role type: The title is 'International Finance Program Management' in the Finance department. The work is finance program and PMO management: international entity set-ups, governance, compliance coordination, vendor management, and change management. It is not hands-on ML, NLP, or AI engineering, and it does not match any of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). The only AI mention is coordinating and tracking Claude-powered automation initiatives, which is not building, training, or deploying ML systems. (2) Level: The minimum qualifications explicitly require 10+ years of program/project management or PMO experience, including at least 3 years in finance or accounting. This is far beyond the new-grad level of someone finishing an MS in Computer Science (AI concentration) at Boston University in 2026-12 with one ML Engineer co-op. (3) Skills fit: The required section names only a few specific technologies (Asana, Jira, Workday/entity management tools), and none of them are in her shipped list (Python, PyTorch, SQL, Hugging Face Transformers, sentence-transformers, FastAPI, MLflow, PostgreSQL, AWS). This is a further mismatch. (4) Location: The role is based in Dublin, IE, with a hybrid in-office expectation and EUR compensation. It is not US-based and not designated Remote, so it fails the location rule even though she is willing to relocate within the US. (5) Sponsorship: The posting says Anthropic does sponsor visas, so sponsorship is not disqualifying on its own. However, the role type, level, skills, and location failures each independently make this posting NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.database_cloud",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "departments.name",
+   "content",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

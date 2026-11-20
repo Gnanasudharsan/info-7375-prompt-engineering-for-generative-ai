@@ -1,0 +1,27 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5076109008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails several hard criteria. (1) Role type: 'Applied AI Architect' is a pre-sales, customer-facing technical advisory role (partnering with account executives, serving as technical advisor to enterprise customers, delivering technical content, traveling to customer sites). It is not hands-on ML/NLP engineering of building, training, and deploying systems, so it does not match her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). (2) Location: the role is based in Tokyo, Japan, and focuses on customers across Japan. It is neither US-based nor designated Remote, and her relocation willingness is limited to the US. (3) Level: the minimum qualifications require prior experience in customer-facing roles such as Solutions Architect, Sales Engineer, or Technical Account Manager, plus enterprise sales-cycle experience, and 5+ years is preferred. Her background is an in-progress MS (ending 2026-12) and one ML Engineer co-op, so the level is not realistic. (4) Language: native-level Japanese fluency is a minimum requirement, and nothing in her profile shows it. (5) Skills: the required section names fewer than 2 specific technologies. Python appears only as a preferred qualification, so the skills test is skipped, and the verdict rests on role, level, and location, which all fail. Sponsorship is not disqualifying, since Anthropic states it does sponsor visas, but that does not offset the other failures.",
+  "resume_fields_cited": [
+   "target_roles",
+   "experience",
+   "education",
+   "willing_to_relocate_us",
+   "personal.location",
+   "needs_sponsorship",
+   "skills.languages"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

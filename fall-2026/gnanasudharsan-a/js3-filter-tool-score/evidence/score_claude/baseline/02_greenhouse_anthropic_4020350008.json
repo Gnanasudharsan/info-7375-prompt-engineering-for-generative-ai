@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4020350008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Location and sponsorship pass. The posting lists US offices (San Francisco, New York City, Seattle) with a 25% in-office hybrid policy. Ananya is in Boston but willing to relocate within the US. The posting also says 'We do sponsor visas!', which covers her sponsorship need. The skills test is skipped: the 'You may be a good fit if you' section names no specific technologies, only general experience traits. Technical areas such as GPU/Accelerator programming, ML framework internals and OS internals appear only under 'may also have experience with'. The role type and level both fail. (1) Role type: 'Performance Engineer' is not one of her target roles. The job is systems performance engineering on ML infrastructure, not building, training and deploying ML/NLP models. Its sample projects are writing GPU kernels for low-precision inference, custom load-balancing algorithms, fault-tolerant distributed systems on complex network topologies, and debugging kernel-level network latency. Candidates are expected to be strong at large-scale systems first and to 'grow to become an expert in ML also'. Her background is applied ML/NLP work: a RAG question-answering prototype, transformer classifier fine-tuning with MLflow, and a project comparing RAG chunking strategies. She has no GPU kernel, distributed systems, OS internals or HPC experience, and distributed infrastructure tools like Kubernetes and Ray are only listed as familiar, not shipped. (2) Level: there is no explicit year count, but the role asks for 'significant software engineering or machine learning experience, particularly at supercomputing scale' and 'a track record of solving large-scale systems problems'. The $280,000 to $850,000 pay range also signals an experienced or senior role. That is not realistic for a new grad finishing an MS in 2026-12 whose only work history is one 8-month co-op. The poor role fit combined with the experienced-level expectations makes this NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "experience",
+   "projects",
+   "education",
+   "skills.familiar_with_not_shipped",
+   "skills.ml_nlp",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

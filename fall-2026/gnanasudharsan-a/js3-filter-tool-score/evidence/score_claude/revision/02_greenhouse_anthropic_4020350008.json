@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4020350008,
+  "verdict": "RELEVANT",
+  "reasoning": "Role type: This is a hands-on engineering role on AI systems. The posting describes building and optimizing the systems that train and serve Anthropic's large language models. Representative projects include low-latency, high-throughput LLM sampling, GPU kernels for low-precision inference, load-balancing for model serving, and fault-tolerant distributed systems. The work is building and deploying, not publishing novel research, and it is not pure data science. It sits in the 'AI Research & Engineering' department. The title 'Performance Engineer' is not one of her target_roles, and the role leans toward systems and infrastructure rather than modeling. The posting itself says candidates will 'grow to become an expert in ML also.' Still, it is AI-systems engineering, so it passes the role test, though this is a borderline fit. Level: There is no explicit years-of-experience requirement ('Years of experience required will correlate with the internal job level requirements'). The title has no mid, senior or staff marker, and no PhD is required (minimum education is a Bachelor's or equivalent). Per the rules, seniority is not inferred from the $280K-$850K salary range or from the 'significant... experience, particularly at supercomputing scale' wording, so the level test passes for an MS new grad finishing in 2026-12. Skills: The required section ('You may be a good fit if you') names no specific technologies. GPU/accelerator programming, ML framework internals, OS internals and transformers appear only under 'may also have experience with.' Because fewer than 2 technologies are required, the skills test is skipped. Her Hugging Face Transformers, PyTorch and RAG/latency work give partial overlap with the preferred items. Location: San Francisco, New York City and Seattle are all US offices with a 25% in-office hybrid policy. She is based in Boston and willing to relocate within the US. Sponsorship: The posting states 'We do sponsor visas!', which satisfies her needs_sponsorship=true. All criteria pass, so the verdict is RELEVANT, with the caveat that the systems-performance focus differs from her applied NLP/RAG background.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "projects",
+   "skills.ml_nlp",
+   "skills.languages",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "departments.name",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

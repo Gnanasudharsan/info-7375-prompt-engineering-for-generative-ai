@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5115935008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "The posting fails the location criterion. location.name is 'London, UK', and the content gives the salary in GBP (\u00a3260,000 to \u00a3630,000) and requires staff to be in an office at least 25% of the time. It is not US-based and is not designated Remote or Remote-Friendly. Ananya is based in Boston, MA, and is willing to relocate within the US only (willing_to_relocate_us: true), so this role is out of scope on location alone. The other criteria are mixed. Role type: 'Research Engineer' is in her target_roles, and much of the work is hands-on engineering (RL infrastructure, training environments, profiling, distributed systems). However, the role also requires contributing to research direction and doing 'fundamental research in reinforcement learning', which leans more research-heavy than her profile. Level: no PhD or explicit years threshold is stated, but 'Have industry experience in machine learning research' is a stretch for a new grad. Her experience is one ML Engineer co-op on RAG and classifier fine-tuning, not RL research. Skills: the required section names Python, Trio, PyTorch, TensorFlow and JAX. Python and PyTorch are in her shipped skills, so the skills test passes, though Trio and async concurrency are not shown. Kubernetes appears only under 'strong candidates may have', so it is not a core requirement. Sponsorship: the posting says 'We do sponsor visas!', which suits her needs_sponsorship: true, but that does not offset the non-US location. Verdict: NOT_RELEVANT, primarily because the role is located in London, UK.",
+  "resume_fields_cited": [
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship",
+   "target_roles",
+   "experience",
+   "education",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.familiar_with_not_shipped"
+  ],
+  "posting_fields_cited": [
+   "location.name",
+   "title",
+   "content",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

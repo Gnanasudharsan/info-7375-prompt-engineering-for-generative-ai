@@ -1,0 +1,30 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 4631822008,
+  "verdict": "RELEVANT",
+  "reasoning": "Role type: The title is 'Research Engineer / Scientist, Alignment', and the content frames the position as a Research Engineer on Alignment Science. Most of the representative projects are hands-on engineering. They include training language models to subvert safety techniques, running multi-agent RL experiments, building tooling to evaluate LLM-generated jailbreaks, and writing scripts and prompts to produce evaluation questions. Contributing to papers is listed as only one item among several. This fits the rubric's allowance for Research Engineer roles centered on building and training systems rather than mainly publishing novel research. 'Research Engineer' is also in Ananya's target_roles. Level: There is no stated years-of-experience requirement ('Years of experience required will correlate with the internal job level'), no mid/senior/staff title, and no PhD requirement. The minimum education is a Bachelor's or equivalent, which her in-progress Boston University MS in CS (AI concentration) exceeds. Per the rules, seniority is not inferred from the $350K-$500K salary or from 'significant ... experience' wording. Skills: The required 'You may be a good fit if you' section names no specific technologies. Kubernetes, LLMs, and RL appear only under 'Strong candidates may also' as preferred items, and the Python note concerns interview logistics. Fewer than 2 technologies are required, so the skills test is skipped. Her Python, PyTorch, Hugging Face Transformers, and MLflow experience is still well aligned with LLM experimentation. Location: San Francisco, CA, which is US-based, with a 25% hybrid in-office policy and a Bay Area preference. Ananya is in Boston, MA, and is willing to relocate within the US. Sponsorship: The posting states 'We do sponsor visas!' with best-effort support, which satisfies her need for sponsorship. All criteria pass.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.familiar_with_not_shipped",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

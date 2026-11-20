@@ -1,0 +1,26 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5367562008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type fails. This is a Developer Relations Manager position. It is a people-management and developer-ecosystem strategy role: building and leading a DevRel team, setting content and community strategy, recruiting and scaling a team, and working with Marketing and Communications. It is not hands-on ML/NLP/AI systems engineering, so it does not match any of Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer).\n\nLevel also fails. The minimum qualifications require proven experience building and leading developer relations or technical product teams and scaling teams in high-growth environments. The $290K-$435K salary band also points to a senior leadership level. That is not realistic for a new grad finishing an MS at Boston University in 2026-12 with one ML co-op.\n\nSkills test is skipped. The required section names no specific technologies, only general 'AI/ML and API concepts' and the ability to write code demos.\n\nLocation and sponsorship would pass. The role is in San Francisco or New York City, both US, and Ananya is willing to relocate. Anthropic states 'We do sponsor visas!', which covers her sponsorship need.\n\nThe role-type and level failures are decisive, so the verdict is NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

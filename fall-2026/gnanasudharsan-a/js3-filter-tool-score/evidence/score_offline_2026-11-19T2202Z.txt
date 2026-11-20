@@ -1,0 +1,7 @@
+baseline v1.0, threshold 5         held-out keeps  3 | keep&NOT_RELEVANT (false keep)  0 | keep&CANNOT_TELL  3 | reject&CANNOT_TELL  2
+setting: threshold 5 -> 6          held-out keeps  3 | keep&NOT_RELEVANT (false keep)  0 | keep&CANNOT_TELL  3 | reject&CANNOT_TELL  2
+   flips on held-out: []
+setting: threshold 5 -> 4          held-out keeps  3 | keep&NOT_RELEVANT (false keep)  0 | keep&CANNOT_TELL  3 | reject&CANNOT_TELL  2
+   flips on held-out: []
+filter file: v1.0 -> v1.1 (C4)     held-out keeps  3 | keep&NOT_RELEVANT (false keep)  0 | keep&CANNOT_TELL  3 | reject&CANNOT_TELL  2
+   flips on held-out: []

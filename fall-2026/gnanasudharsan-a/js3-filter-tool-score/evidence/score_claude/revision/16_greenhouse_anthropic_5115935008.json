@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5115935008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "The posting fails the location criterion. location.name is 'London, UK', the salary is in GBP (\u00a3260,000 \u2014 \u00a3630,000), and the content describes a hybrid policy requiring staff to be in an office at least 25% of the time. It is neither US-based nor designated Remote. Ananya is based in Boston, MA, and her willing_to_relocate_us flag covers relocation within the US only, so a London role is outside her search. The other criteria would largely pass. Role: 'Research Engineer' is in her target_roles, and the work is mostly hands-on engineering (RL infrastructure, training environments, evaluations, profiling, distributed systems). Level: no explicit years-of-experience floor, senior title, or PhD is required. 'Industry experience in machine learning research' is listed, but years 'correlate with internal job level', and her MLE co-op is relevant experience. Skills: the required section names Python, Trio, and PyTorch/TensorFlow/JAX, and she has shipped Python and PyTorch, so she meets the 2-technology threshold. Kubernetes and Rust/C++ appear only under 'strong candidates may have', so they are not core requirements. Sponsorship: the posting says 'We do sponsor visas!', which suits her need for sponsorship. Because the posting is located outside the US and is not remote, the verdict is NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "personal.location",
+   "willing_to_relocate_us",
+   "target_roles",
+   "experience",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.familiar_with_not_shipped",
+   "needs_sponsorship",
+   "education"
+  ],
+  "posting_fields_cited": [
+   "location.name",
+   "content",
+   "title",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

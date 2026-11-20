@@ -1,0 +1,27 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5443882008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "This posting fails several hard criteria at once. (1) Role type: 'Applied AI Architect' is a pre-sales, customer-facing role. The responsibilities are about being a trusted technical advisor to enterprises, partnering with account executives, delivering technical content to executives, and guiding customer architecture decisions. That is not hands-on building, training, or deploying of ML/NLP systems, so it does not match her target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). (2) Level: the posting requires '10+ years of experience in technical customer-facing roles such as Solutions Architect, Sales Engineer, or Technical Account Manager.' This is far above the 3+ year rejection threshold. Ananya is a new grad finishing her MS in CS (AI concentration) at Boston University in 2026-12, with one 8-month ML Engineer co-op. (3) Location: the role is in Bangalore, India, under a 25% in-office hybrid policy, and it requires travel within India/APAC and enterprise experience in India/APAC. It is not US-based and not designated Remote, while Ananya is in Boston, MA and willing to relocate only within the US. (4) Skills: the only specific technology named is Python ('Comfortable with Python'), which is fewer than 2 named technologies, so the skills test is skipped. Python is in her shipped list in any case. (5) Sponsorship: Anthropic states 'We do sponsor visas!', so sponsorship is not a blocker. Even so, the failures on role type, seniority, and location make this NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship",
+   "skills.languages"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

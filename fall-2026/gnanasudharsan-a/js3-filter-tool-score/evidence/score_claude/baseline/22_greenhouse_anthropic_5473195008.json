@@ -1,0 +1,27 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5473195008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "Role type: This is an Applied AI Architect role focused on customer- and government-facing technical advisory. The job involves briefing senior officials, leading workshops and enablement, guiding partner integrations with the Claude API, and traveling internationally. It is not hands-on ML/NLP engineering that builds, trains, and deploys systems. It is closer to a Solutions Architect or Forward Deployed Engineer role, which is not among Ananya's target roles (ML Engineer, AI Engineer, Applied NLP Engineer, Research Engineer). Level: The posting explicitly asks for 4+ years of experience as a Customer Engineer, Forward Deployed Engineer, Sales Engineer, Solutions Architect, or Cybersecurity Engineer working with governments or the public sector. This exceeds the 3+ year rejection threshold. Ananya is a new-grad MS student at Boston University (ending 2026-12) with one ML Engineer co-op (2026-01 to 2026-08) and no public-sector experience. The $240k-$315k salary range also points to a senior level. Skills: The qualifications name only Python as a specific technology, so the skills test is skipped. Location: San Francisco, CA and New York City, NY are US-based, and Ananya is willing to relocate. Sponsorship: Anthropic states it sponsors visas, which fits her sponsorship need. Location and sponsorship pass, but the role-type mismatch and the explicit 4+ year requirement make the posting NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "target_roles",
+   "education",
+   "experience",
+   "skills.languages",
+   "needs_sponsorship",
+   "willing_to_relocate_us",
+   "personal.location"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "departments.name",
+   "location.name"
+  ]
+ },
+ "failed_attempts": []
+}

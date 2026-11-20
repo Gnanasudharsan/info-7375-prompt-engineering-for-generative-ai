@@ -1,0 +1,31 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5364804008,
+  "verdict": "RELEVANT",
+  "reasoning": "This posting passes all five criteria when the rules are applied strictly, though the level is a stretch.\n\n(1) Role type: The role is hands-on ML engineering, not pure research or data science. The responsibilities are to build and scale infrastructure and data pipelines for ML research, own training, evaluation and scoring workflows, build libraries and CLI tools, and move research workflows into production-grade jobs. That matches the ML Engineer / Research Engineer targets in target_roles. Her co-op work (fine-tuning a transformer classifier, MLflow experiment tracking, a RAG prototype evaluated on a 300-question test set) and her rag-eval-lab project relate directly to the preferred qualifications on evaluation harnesses, experiment tracking, transformers and classifier development.\n\n(2) Level: Nothing disqualifies her under the rules. The posting does not require 3+ years, does not say mid or senior level, and does not require a PhD. It asks only for a Bachelor's or equivalent and says years of experience 'correlate with the internal job level.' Her MS in CS (AI concentration, ending 2026-12) and her 2026 ML Engineer co-op make her a plausible new-grad applicant. The main concern is that the $350K-$500K salary and the minimum qualification of 'experience building and operating data-intensive or distributed systems in production' suggest the company may expect more experience than she has. This is a stretch application, but the hard level rule is not triggered.\n\n(3) Skills: The only specific technology named in the minimum qualifications is Python. Concepts like distributed systems and data pipelines are not named technologies. Because fewer than 2 technologies are named, the skills test is skipped. Python is on her shipped list regardless. Kubernetes and Ray, which she has not shipped, are not required.\n\n(4) Location: San Francisco, CA or New York City, NY, both US-based, with a 25% in-office hybrid policy. She is in Boston, MA and willing_to_relocate_us is true.\n\n(5) Sponsorship: The posting says 'We do sponsor visas!' with a reasonable-effort caveat and no disclaimer. This works with needs_sponsorship = true.\n\nVerdict: RELEVANT. It is a reach on seniority, but no explicit exclusion rule applies.",
+  "resume_fields_cited": [
+   "education",
+   "experience",
+   "projects",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.backend_automation",
+   "skills.familiar_with_not_shipped",
+   "target_roles",
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship"
+  ],
+  "posting_fields_cited": [
+   "title",
+   "content",
+   "location.name",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}

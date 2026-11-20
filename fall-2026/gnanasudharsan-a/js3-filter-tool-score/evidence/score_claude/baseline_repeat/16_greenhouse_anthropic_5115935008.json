@@ -1,0 +1,29 @@
+{
+ "label": "judgment (model output, not fact)",
+ "status": "ok",
+ "backend": "claude_cli",
+ "model": "claude-opus-5-5",
+ "output": {
+  "id": 5115935008,
+  "verdict": "NOT_RELEVANT",
+  "reasoning": "The decisive failure is location. posting.location.name is 'London, UK', and the salary is listed in GBP (\u00a3260,000 to \u00a3630,000), which confirms a UK-based role. The posting is not designated Remote or Remote-Friendly; it says staff are expected in an office at least 25% of the time. Ananya is based in Boston, MA and is willing to relocate only within the US, so the location rule fails. Other criteria, for context: (1) Role type is borderline acceptable. The title is Research Engineer, which is in her target_roles. The listed projects are mostly hands-on engineering: RL infrastructure, training environments, profiling and optimization, distributed systems debugging, and APIs. However, the role also involves 'fundamental research in reinforcement learning' and contributing to research direction. (2) Level is a concern. The 'good fit' list asks for 'industry experience in machine learning research', and years of experience are tied to internal job levels. Ananya's only industry experience is an 8-month ML Engineer co-op focused on RAG and classifier fine-tuning, not ML research. No PhD or explicit 3+ years requirement is stated, and the posting says academic research and credentials are not required. (3) Skills pass the threshold. The core list names Python, Trio, PyTorch, TensorFlow and JAX. Python and PyTorch are both in her shipped list, so at least 2 match. Trio and async/concurrent programming are not shipped. Kubernetes appears only under 'strong candidates may have', so it is not a core requirement. (4) Sponsorship passes: the posting says 'We do sponsor visas!', which suits her needs_sponsorship=true. Even though sponsorship and skills pass, the non-US, non-remote location alone makes this NOT_RELEVANT.",
+  "resume_fields_cited": [
+   "personal.location",
+   "willing_to_relocate_us",
+   "needs_sponsorship",
+   "target_roles",
+   "experience",
+   "education",
+   "skills.languages",
+   "skills.ml_nlp",
+   "skills.familiar_with_not_shipped"
+  ],
+  "posting_fields_cited": [
+   "location.name",
+   "title",
+   "content",
+   "departments.name"
+  ]
+ },
+ "failed_attempts": []
+}
