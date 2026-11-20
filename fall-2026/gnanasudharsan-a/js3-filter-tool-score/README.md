@@ -58,7 +58,7 @@ script drafts, document drafts from my data), Claude Code (filter.py, run_filter
 **Not claiming:** an error rate for all postings; that the filter finds every relevant job; that anything was trained; that any employer would sponsor this
 fictional candidate; that a score is a probability of being hired.
 
-**Signed:** (I sign after reading and correcting every line above.)
+**Signed:** Gnanasudharsan Ashokumar, 2026-11-20. I read and corrected every line above.
 
 ## Driver's seat
 | Claude should | I should | why the judgment stays mine |
