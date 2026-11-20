@@ -72,10 +72,4 @@ they differ from Codex's suggestions on 3 claims. I do not claim to have re-revi
 - The Claude judge contract is Greenhouse-only (5 Lever/Ashby postings got no verdict); a board-neutral output contract is the next fix.
 - Codex changed far more than I asked; from now on I check `git status` after every agent session and never `git add scripts/` blindly.
 - Not done: a sentence-level C2, a C5 fix, varying the context or tool list given to Claude, a one-by-one re-review of the 44 Codex-covered claims.
-
-## 2026-11-20 — Unresolved and next
-- Held-out design: my audit used every close call as dev data, so threshold changes could not be measured; next time I reserve some close calls for held-out first.
-- Recall is unmeasured (0 relevant postings in held-out); a targeted held-out set of plausible ML roles would be needed.
-- The Claude judge contract is Greenhouse-only (5 Lever/Ashby postings got no verdict); a board-neutral output contract is the next fix.
-- Codex changed far more than I asked; from now on I check `git status` after every agent session and never `git add scripts/` blindly.
-- Not done: a sentence-level C2, a C5 fix, varying the context or tool list given to Claude, a one-by-one re-review of the 44 Codex-covered claims.
+- e410e142's message says it removed the duplicated entry; it did not (my venv was off, so the edit never ran). Removed in the next commit.
