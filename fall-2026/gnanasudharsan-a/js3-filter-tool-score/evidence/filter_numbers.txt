@@ -1,0 +1,9 @@
+{
+ "A4_min_years": 3,
+ "B1_points": 3,
+ "B2_max": 5,
+ "B3_max": 4,
+ "keep_threshold": 5,
+ "C2_window_chars": 120,
+ "C4_min_b1": 1
+}
