@@ -43,7 +43,7 @@ codex_unrequested/ holds files Codex created without being asked; they are not u
 - Each v1.1 change measured alone against v1.0 on the corpus and my labels; C1 and C4 kept, C2 and C3 rejected, C5 recorded.
 - My MCP server with Claude Code as a real client, both directions recorded; the server itself rejected a path-traversal id the client passed through.
 - The filesystem server denied reads outside its folder three ways (absolute path, "..", symlink).
-- On 28 held-out postings, the prompt change moved verdicts no more than an identical control run.
+- On 23 judged held-out postings (5 of 28 got no Claude verdict), the prompt change moved verdicts no more than an identical control run.
 
 **How:** by hand (all audit and held-out labels, predictions, every keep/reject decision on a rule, the trust decisions), with Claude chat (plans, test and
 script drafts, document drafts from my data), Claude Code (filter.py, run_filter.py, v1.1 switches, mcp/server.py, each action approved), and Codex

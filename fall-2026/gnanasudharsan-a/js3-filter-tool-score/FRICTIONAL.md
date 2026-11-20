@@ -65,3 +65,10 @@ committed. Codex's version entered the repo inside ee414783 (the held-out commit
 Correction to my earlier entry: I cannot claim the second pass hid Codex's labels. Result: the 44 Codex-covered claims carry the same labels as the
 first-pass labels moved aside (44 of 44 equal), 43 equal to the script's proposal and 1 changed with my note (RL Security role -> INSUFFICIENT);
 they differ from Codex's suggestions on 3 claims. I do not claim to have re-reviewed those 44 one by one.
+
+## 2026-11-20 — Unresolved and next
+- Held-out design: my audit used every close call as dev data, so threshold changes could not be measured; next time I reserve some close calls for held-out first.
+- Recall is unmeasured (0 relevant postings in held-out); a targeted held-out set of plausible ML roles would be needed.
+- The Claude judge contract is Greenhouse-only (5 Lever/Ashby postings got no verdict); a board-neutral output contract is the next fix.
+- Codex changed far more than I asked; from now on I check `git status` after every agent session and never `git add scripts/` blindly.
+- Not done: a sentence-level C2, a C5 fix, varying the context or tool list given to Claude, a one-by-one re-review of the 44 Codex-covered claims.
