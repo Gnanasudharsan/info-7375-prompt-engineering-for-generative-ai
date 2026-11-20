@@ -1,14 +1,24 @@
-## Shortlist review assistance
+# SOURCES.md — who and what contributed (JS3)
 
-On 2026-11-19, Codex read the archived Greenhouse descriptions for the nine postings with pending claims and recorded 44 Codex-generated classifications in `shortlist/claim_suggestions.json`. It used the fictional Ananya Rao résumé, the evidence rules in `FILTER.md`, and the original board snapshot at the path recorded in the JSON. For skills, Codex checked overlap with documented skills and project work. Where a generic skill match left a central requirement unclear, Codex used INSUFFICIENT. Codex implemented the batch reviewer and verified that each quoted excerpt appears in the snapshot.
+## People
+- **Me (Gnanasudharsan Ashokumar):** every hand label (audit v1: 50, audit v2: 30, held-out: 28, first-pass shortlist claim labels), every prediction,
+  the decisions on every rule change, the trust decisions, the sign-off. Persona Ananya Rao is fictional (persona/).
 
-Run `python3 scripts/review_claims.py --batch` from the project directory. Each screen covers the pending claims for one posting. Press `v` for its full archived description, enter a claim number to edit a label, and press `a` to explicitly approve and save the displayed batch. Press `n` to skip a posting or `q` to leave and resume later. A suggestion that changes the original proposal carries its attributed Codex rationale into the review CSV only when explicitly approved. Student-written notes are entered through the edit action.
+## AI tools
+- **Claude (chat, claude.ai), 2026-11-19:** planned the steps; drafted FILTER.md v1.0 and v1.1 tables (I edited and committed them), the tests
+  (tests/test_filter.py, test_filter_v11.py, test_mcp_server.py), mcp/TOOL_SPEC.md, the scripts in scripts/ except those listed under Claude Code and Codex,
+  and drafts of AUDIT.md, SHORTLIST.md, SCORE.md, mcp/EVALUATION.md and this README (generated from my labels and evidence; I reviewed them).
+- **Claude Code 2.1.x, default permission mode, three build sessions (every action approved by me):**
+  1475c16e (jobwatch/filter.py, scripts/run_filter.py; evidence/claude_code_filter_build_choices_2026-11-19.txt),
+  the v1.1 switches in the same session (evidence/claude_code_v11_build_choices_2026-11-19.txt),
+  645fc518 (mcp/server.py; evidence/claude_code_mcp_build_choices_2026-11-19.txt). Also the MCP client in the two real sessions (transcripts/claude_code_session_*).
+- **Claude (model behind `claude -p`)** as the judge in the score experiments (evidence/score_claude/), with the JS1 prompts.
+- **Codex (OpenAI), 2026-11-19 ~16:00 ET:** asked only to check shortlist labels. It suggested labels for 44 claims (shortlist/CODEX_REVIEW.md,
+  claim_suggestions.json, codex_* columns), replaced scripts/review_claims.py (the reviewer that ran in my second pass), and, without being asked, wrote an
+  MCP server, docs, drafts of README/SCORE/SIGN_OFF and a FILTER.md edit. All unrequested files are in codex_unrequested/ unchanged and are not used.
 
-## Filter, scoring and tool evidence
-
-- JS2 code copied at `9ef84715`. The prior Claude Code filter contributions are recorded in `evidence/claude_code_filter_build_choices_2026-11-19.txt` and `evidence/claude_code_v11_build_choices_2026-11-19.txt`. Student audit verdicts and post-unblind corrections are in the original audit CSVs.
-- The archived Greenhouse, Ashby and Lever board responses for run `20261119T162945Z` supply the filter inputs. `boards.json` records the endpoints and `runs/20261119T162945Z/report.md` records collection scope and the excluded failing board.
-- Codex wrote the standard-library MCP lookup, ran the Claude Code demo, evaluated the external reference server, and prepared the score report, reproducibility checks, and draft sign-off for student review.
-- MCP wire design follows the published 2025-11-25 [stdio transport](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports) and [tool messages](https://modelcontextprotocol.io/specification/2025-11-25/server/tools). External server version and pinned sources are in [MCP.md](MCP.md). Sources checked 2026-11-19.
-
-- **Codex (OpenAI), 2026-11-19:** reviewed 44 shortlist claims and wrote suggested labels, quotes and reasons (shortlist/CODEX_REVIEW.md, shortlist/claim_suggestions.json). Kept as a separate, disclosed second opinion (codex_* columns); every final claim label is mine.
+## Code and data I did not write
+- JS1/JS2 code carried over (jobwatch/ loop, transport, normalize, policy, claude_judge, persona; prompts/; tests) from my own earlier assignments.
+- Job postings: public Greenhouse (anthropic), Ashby (notion) and Lever (spotify) board APIs, collected once on 2026-11-19 (runs/20261119T162945Z).
+- @modelcontextprotocol/server-filesystem 2.4.0 (npm, github.com/modelcontextprotocol/servers), evaluated, not modified.
+- Python standard library; requirements.txt packages.
