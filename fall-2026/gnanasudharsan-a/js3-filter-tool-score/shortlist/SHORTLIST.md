@@ -4,7 +4,7 @@
 ## Summary
 - My labels: SUPPORTED 51, CONTRADICTED 0, INSUFFICIENT 24.
 - I changed 3 of 75 proposed labels.
-- Codex (OpenAI) suggested labels for 44 claims; I agreed with 41 and disagreed with 3 (Codex's labels were not shown while I labeled).
+- Codex (OpenAI) suggested labels for 44 claims; I agreed with 41 and disagreed with 3 (the second pass ran through Codex's modified reviewer, so I do not claim Codex's labels were hidden or that the 44 were re-reviewed one by one; see FRICTIONAL.md).
 - Verdicts under the abstention rule: I CANNOT TELL 15.
 
 ## Relevance is not entailment

@@ -24,7 +24,7 @@ L = [f"# SHORTLIST.md — source-grounded shortlist (filter v1.1 keeps, run 2026
      f"{len(by)} postings x 5 claims = {len(r)} claims. Labels are mine (shortlist/claim_labels.csv); the script's proposals and Codex's suggestions are kept beside them.",
      f"\n## Summary\n- My labels: SUPPORTED {mine['SUPPORTED']}, CONTRADICTED {mine['CONTRADICTED']}, INSUFFICIENT {mine['INSUFFICIENT']}.",
      f"- I changed {len(changed)} of {len(r)} proposed labels.",
-     f"- Codex (OpenAI) suggested labels for {len(cx)} claims; I agreed with {agree} and disagreed with {len(cx) - agree} (Codex's labels were not shown while I labeled).",
+     f"- Codex (OpenAI) suggested labels for {len(cx)} claims; I agreed with {agree} and disagreed with {len(cx) - agree} (the second pass ran through Codex's modified reviewer, so I do not claim Codex's labels were hidden or that the 44 were re-reviewed one by one; see FRICTIONAL.md).",
      f"- Verdicts under the abstention rule: " + ", ".join(f"{v} {n}" for v, n in Counter(verd.values()).items()) + ".",
      "\n## Relevance is not entailment",
      "The filter kept these postings because their words matched (a role phrase in the title, topic words, skills). For each, I labeled the role claim "
