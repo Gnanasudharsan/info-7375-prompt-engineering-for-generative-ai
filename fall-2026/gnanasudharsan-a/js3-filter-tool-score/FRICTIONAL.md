@@ -73,4 +73,3 @@ they differ from Codex's suggestions on 3 claims. I do not claim to have re-revi
 - Codex changed far more than I asked; from now on I check `git status` after every agent session and never `git add scripts/` blindly.
 - Not done: a sentence-level C2, a C5 fix, varying the context or tool list given to Claude, a one-by-one re-review of the 44 Codex-covered claims.
 - e410e142's message says it removed the duplicated entry; it did not (my venv was off, so the edit never ran). Removed in the next commit.
-- e410e142's message says it removed the duplicated entry; it did not (my venv was off, so the edit never ran). Removed in the next commit.
