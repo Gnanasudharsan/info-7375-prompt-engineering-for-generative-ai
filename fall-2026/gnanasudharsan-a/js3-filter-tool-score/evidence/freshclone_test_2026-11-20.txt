@@ -1,0 +1,11 @@
+fresh clone of 738966556371dea3c06c4417dc767b0db1ffbe7f, Fri Nov 20 00:37:27 UTC 2026
+201 passed in 1.67s
+audit_report ok
+
+=== v1.0 baseline: keep 17 | reject 882 | cannot_tell 0  (A3 fired 0, A6 fired 21)
+    on my 80 labels: kept&RELEVANT 1 | kept&NOT_RELEVANT 3 | kept&CANNOT_TELL 10 | rejected&RELEVANT 0 | cannot_tell&CANNOT_TELL 0 | cannot_tell&RELEVANT 0 | cannot_tell&NOT_RELEVANT 0
+shortlist_report ok
+baseline v1.0, threshold 5         held-out keeps  3 | keep&NOT_RELEVANT (false keep)  0 | keep&CANNOT_TELL  3 | reject&CANNOT_TELL  2
+setting: threshold 5 -> 6          held-out keeps  3 | keep&NOT_RELEVANT (false keep)  0 | keep&CANNOT_TELL  3 | reject&CANNOT_TELL  2
+judged in all three runs: 23 of 28 (the rest: judgment_unavailable)
+baseline         RELEVANT on my NOT_RELEVANT (false keep)  0 | RELEVANT on my CANNOT_TELL  2 | NOT_RELEVANT agreeing with me 19
