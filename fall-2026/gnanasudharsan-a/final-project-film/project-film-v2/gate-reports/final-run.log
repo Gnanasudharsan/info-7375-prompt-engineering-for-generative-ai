@@ -1,0 +1,6 @@
+[art] motion histogram: graphic:18  hold:2
+[art] WARNING: 'graphic' carries 18/20 beats (90%) — over the ~40% pantry cap; convert the excess to another language (MOTION.md)
+[art] build stamp → beat_sheet.json (20/20 filled)
+[art] wrote /Users/gnanasudharsanashokumar/info7375-films/decisiontrace-lite/final/decisiontrace-lite-film.mp4  (301.5s, audio: per-beat timeline (source audio preserved), drawtext: no — PIL overlays)
+[art] slots: 20/20 filled — B00:MANIM B01:MANIM B02:MANIM B03:MANIM B04:MANIM B05:MANIM B06:MANIM B07:VIDEO B08:STILL B09:MANIM B10:MANIM B11:MANIM B12:MANIM B13:MANIM B14:MANIM B15:MANIM B16:MANIM B17:MANIM B18:MANIM B19:MANIM
+EXIT 0

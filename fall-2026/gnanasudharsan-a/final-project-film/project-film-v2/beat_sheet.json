@@ -1,0 +1,575 @@
+{
+  "metadata": {
+    "title": "DecisionTrace Lite — Project Film",
+    "slug": "decisiontrace-lite-film",
+    "engine": "kokoro",
+    "voice_kokoro": "af_heart",
+    "aspect": "16:9",
+    "fit": "pad",
+    "build": {
+      "at": "2026-11-22T13:38:07",
+      "cut": "master",
+      "filled": 20,
+      "of": 20,
+      "slates": [],
+      "skin_warnings": []
+    }
+  },
+  "beats": [
+    {
+      "beat_id": "B00",
+      "act": "title",
+      "script_lines": [
+        "L01"
+      ],
+      "narration_text": "I'm Gnanasudharsan Ashokumar, and this is DecisionTrace Lite.",
+      "voice": "af_heart",
+      "engine": "kokoro-phoneme",
+      "estimated_duration_s": 3.7,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B00_Title"
+        }
+      },
+      "actual_duration_s": 4.1,
+      "audio_file": "mp3/beat-B00.mp3",
+      "phoneme_note": {
+        "tool": "tools/phoneme_name.py",
+        "variant": "E",
+        "name_ipa": "ɲˈɑːnɑːsˌuːdʰɚʃɑːn ɑːʃˈoʊk kuːmˈɑːɹ",
+        "phonemes": "aɪm ɲˈɑːnɑːsˌuːdʰɚʃɑːn ɑːʃˈoʊk kuːmˈɑːɹ, ænd ðɪs ɪz dᵻsˈɪʒən tɹˈeɪs lˈaɪt."
+      },
+      "render_duration_s": 4.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B00.mp4",
+        "filled_by": "manim:B00_Title",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B01",
+      "act": "the question",
+      "script_lines": [
+        "L02",
+        "L03"
+      ],
+      "narration_text": "Teams make decisions in meetings, emails and tickets. Months later, someone asks: why did we decide this, who approved it, and is it still true? The answer is scattered across documents, and some are out of date.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 17.1,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B01_Scattered"
+        }
+      },
+      "actual_duration_s": 12.65,
+      "audio_file": "mp3/beat-B01.mp3",
+      "render_duration_s": 12.666666666666666,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B01.mp4",
+        "filled_by": "manim:B01_Scattered",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B02",
+      "act": "what it does",
+      "script_lines": [
+        "L04",
+        "L05"
+      ],
+      "narration_text": "DecisionTrace Lite answers them: a short answer, the decision's current status, and a citation to the exact passage behind every claim. If the documents don't say, it says so instead of guessing.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 14.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B02_AnswerCard"
+        }
+      },
+      "actual_duration_s": 12.5,
+      "audio_file": "mp3/beat-B02.mp3",
+      "render_duration_s": 12.5,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B02.mp4",
+        "filled_by": "manim:B02_AnswerCard",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B03",
+      "act": "why it matters",
+      "script_lines": [
+        "L06",
+        "L07"
+      ],
+      "narration_text": "Why it matters: a wrong answer about a decision looks exactly like a right one, and acting on a reversed or unfinished decision means redoing work. An answer you can check in seconds is one a team can rely on. And I'll publish how often it's right.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 21.7,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B03_WhyItMatters"
+        }
+      },
+      "actual_duration_s": 15.55,
+      "audio_file": "mp3/beat-B03.mp3",
+      "render_duration_s": 15.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B03.mp4",
+        "filled_by": "manim:B03_WhyItMatters",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B04",
+      "act": "existing tools",
+      "script_lines": [
+        "L08",
+        "L09"
+      ],
+      "narration_text": "Here's what already exists. General tools like NotebookLM and ChatGPT answer questions about documents you upload, and point to where an answer came from.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 11.1,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B04_Tools"
+        }
+      },
+      "actual_duration_s": 10.22,
+      "audio_file": "mp3/beat-B04.mp3",
+      "render_duration_s": 10.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B04.mp4",
+        "filled_by": "manim:B04_Tools",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B05",
+      "act": "research",
+      "script_lines": [
+        "L11"
+      ],
+      "narration_text": "Research laid the groundwork. Retrieval-augmented generation, from Lewis and colleagues in 2020, grounds answers in retrieved text. The ALCE benchmark measures whether citations support their sentences. RAGAS scores how faithful an answer is to its sources.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 16.6,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B05_Research"
+        }
+      },
+      "actual_duration_s": 17.24,
+      "audio_file": "mp3/beat-B05.mp3",
+      "render_duration_s": 17.25,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B05.mp4",
+        "filled_by": "manim:B05_Research",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B06",
+      "act": "my test",
+      "script_lines": [
+        "L13"
+      ],
+      "narration_text": "So I tested two tools myself. On October ninth, I gave NotebookLM and ChatGPT six synthetic documents about a fictional company switching databases. The switch was approved, but not finished.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 13.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B06_TestSetup"
+        }
+      },
+      "actual_duration_s": 13.55,
+      "audio_file": "mp3/beat-B06.mp3",
+      "render_duration_s": 13.583333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B06.mp4",
+        "filled_by": "manim:B06_TestSetup",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B07",
+      "act": "notebooklm",
+      "script_lines": [
+        "L14"
+      ],
+      "narration_text": "NotebookLM got the facts right and refused to invent a budget. But it described the migration as if it were done.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 9.7,
+      "shot": {
+        "type": "STILL",
+        "motion": "hold",
+        "treatment": "none"
+      },
+      "actual_duration_s": 7.19,
+      "audio_file": "mp3/beat-B07.mp3",
+      "render_duration_s": 7.208333333333333,
+      "build": {
+        "status": "VIDEO",
+        "src": "media/B07.mp4",
+        "filled_by": "media",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B08",
+      "act": "chatgpt",
+      "script_lines": [
+        "L15"
+      ],
+      "narration_text": "ChatGPT got the status right, but it dated that status to an unrelated team retrospective, and nothing flagged it.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 8.8,
+      "shot": {
+        "type": "STILL",
+        "motion": "hold",
+        "treatment": "none"
+      },
+      "actual_duration_s": 7.66,
+      "audio_file": "mp3/beat-B08.mp3",
+      "render_duration_s": 7.666666666666667,
+      "build": {
+        "status": "STILL",
+        "src": "media/B08.png",
+        "filled_by": "still",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B09",
+      "act": "the gap",
+      "script_lines": [
+        "L16",
+        "L17"
+      ],
+      "narration_text": "Neither tool told me how often it's right. That's the gap. Existing tools find facts. DecisionTrace Lite is built around a decision's status. It checks every citation, and it publishes its score.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 14.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B09_Gap"
+        }
+      },
+      "actual_duration_s": 12.67,
+      "audio_file": "mp3/beat-B09.mp3",
+      "render_duration_s": 12.708333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B09.mp4",
+        "filled_by": "manim:B09_Gap",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B10",
+      "act": "larger system",
+      "script_lines": [
+        "L18",
+        "L19"
+      ],
+      "narration_text": "Here's the plan, step by step. This is a scoped-down version of a larger system I've built, with Neo4j, LangGraph, FastAPI and hallucination detection. Here I keep only the core: question in, grounded answer out, in plain Python with Claude.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 18.5,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B10_LargerToLite"
+        }
+      },
+      "actual_duration_s": 16.73,
+      "audio_file": "mp3/beat-B10.mp3",
+      "render_duration_s": 16.75,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B10.mp4",
+        "filled_by": "manim:B10_LargerToLite",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B11",
+      "act": "data",
+      "script_lines": [
+        "L20"
+      ],
+      "narration_text": "Step one: data. I'll grow my six synthetic Northwind Logistics documents into about fifty meeting notes, emails and tickets. Some decisions get reversed, some are unfinished, some documents contradict each other, and some questions have no answer. All of it is synthetic.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 19.4,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B11_Data"
+        }
+      },
+      "actual_duration_s": 17.37,
+      "audio_file": "mp3/beat-B11.mp3",
+      "render_duration_s": 17.375,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B11.mp4",
+        "filled_by": "manim:B11_Data",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B12",
+      "act": "test set",
+      "script_lines": [
+        "L21"
+      ],
+      "narration_text": "Step two: about fifty test questions I write by hand, each with the correct answer, status and supporting passages. I write them myself because Claude helps generate the documents, and a model grading its own homework isn't a test.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 18.0,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B12_TestSet"
+        }
+      },
+      "actual_duration_s": 14.42,
+      "audio_file": "mp3/beat-B12.mp3",
+      "render_duration_s": 14.458333333333334,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B12.mp4",
+        "filled_by": "manim:B12_TestSet",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B13",
+      "act": "retrieve + answer",
+      "script_lines": [
+        "L22",
+        "L23"
+      ],
+      "narration_text": "Step three: retrieval. A simple keyword ranker called BM25, written with Python's standard library, finds the most relevant passages. Step four: Claude returns structured JSON: an answer, a status, and a list of claims, each with a document ID and an exact quote.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 19.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B13_RetrieveAnswer"
+        }
+      },
+      "actual_duration_s": 18.11,
+      "audio_file": "mp3/beat-B13.mp3",
+      "render_duration_s": 18.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B13.mp4",
+        "filled_by": "manim:B13_RetrieveAnswer",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B14",
+      "act": "verify",
+      "script_lines": [
+        "L24",
+        "L25"
+      ],
+      "narration_text": "Step five: verification. Code checks that every quote appears word for word in its document, and a second Claude call judges whether the quote supports the claim. An answer that fails gets one retry. If it still fails, the tool says: not supported by the sources. Step six: the evaluation harness and a written report.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 25.4,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B14_VerifyLoop"
+        }
+      },
+      "actual_duration_s": 20.54,
+      "audio_file": "mp3/beat-B14.mp3",
+      "render_duration_s": 20.541666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B14.mp4",
+        "filled_by": "manim:B14_VerifyLoop",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B15",
+      "act": "resources",
+      "script_lines": [
+        "L26"
+      ],
+      "narration_text": "Resources. Claude runs through my Northeastern Claude Code seat, in non-interactive mode. Using it from a script is pending confirmation from my professor and Northeastern IT. If it isn't allowed, I'll request API credits instead. Saved responses let me re-score without new calls. Compute is my M4 MacBook Pro, with no GPU, plus GitHub for the code.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 26.3,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B15_Resources"
+        }
+      },
+      "actual_duration_s": 23.51,
+      "audio_file": "mp3/beat-B15.mp3",
+      "render_duration_s": 23.541666666666668,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B15.mp4",
+        "filled_by": "manim:B15_Resources",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B16",
+      "act": "five measures",
+      "script_lines": [
+        "L27",
+        "L28",
+        "L29",
+        "L30",
+        "L31"
+      ],
+      "narration_text": "How will I know it worked? Along with basic correctness, I'll measure five things on my test set. One: citation validity. Every quote must exist in the cited document. Target: one hundred percent. Anything less is a bug. Two: citation support. Does each quote actually support its claim? Target: at least ninety percent. Three: status accuracy. Decided, in progress, or superseded? Target: at least eighty-five percent. Four: refusals. It should refuse at least nine in ten unanswerable questions, and no more than one in ten answerable ones.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 40.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B16_Measures"
+        }
+      },
+      "actual_duration_s": 36.88,
+      "audio_file": "mp3/beat-B16.mp3",
+      "render_duration_s": 36.916666666666664,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B16.mp4",
+        "filled_by": "manim:B16_Measures",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B17",
+      "act": "worked or not",
+      "script_lines": [
+        "L32",
+        "L33"
+      ],
+      "narration_text": "Five: does the verifier help? I'll compare the full tool against the same tool with verification off. It worked if it meets those targets, and the verifier improves support and status accuracy without costing more than five points of correctness. It didn't work if verification only adds refusals, or if the second Claude call disagrees with my own judgments too often to trust. Either way, I'll publish the numbers and the failures.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 33.2,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B17_Decision"
+        }
+      },
+      "actual_duration_s": 25.43,
+      "audio_file": "mp3/beat-B17.mp3",
+      "render_duration_s": 25.458333333333332,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B17.mp4",
+        "filled_by": "manim:B17_Decision",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B18",
+      "act": "first check",
+      "script_lines": [
+        "L34"
+      ],
+      "narration_text": "The first check: asked which database the tracking service uses, it has to say the switch is still in progress as of June ninth, citing the migration ticket. Those are the two things the other tools missed.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 17.1,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B18_FirstCheck"
+        }
+      },
+      "actual_duration_s": 12.12,
+      "audio_file": "mp3/beat-B18.mp3",
+      "render_duration_s": 12.125,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B18.mp4",
+        "filled_by": "manim:B18_FirstCheck",
+        "at": "2026-11-22T13:38:07"
+      }
+    },
+    {
+      "beat_id": "B19",
+      "act": "outro",
+      "script_lines": [
+        "L35"
+      ],
+      "narration_text": "That's DecisionTrace Lite. Thanks for watching.",
+      "voice": "af_heart",
+      "engine": "kokoro",
+      "estimated_duration_s": 2.8,
+      "shot": {
+        "type": "GRAPHIC",
+        "source": "manim",
+        "manim": {
+          "scene_class": "B19_Outro"
+        }
+      },
+      "actual_duration_s": 2.69,
+      "audio_file": "mp3/beat-B19.mp3",
+      "render_duration_s": 2.7083333333333335,
+      "build": {
+        "status": "MANIM",
+        "src": "manim/B19.mp4",
+        "filled_by": "manim:B19_Outro",
+        "at": "2026-11-22T13:38:07"
+      }
+    }
+  ]
+}

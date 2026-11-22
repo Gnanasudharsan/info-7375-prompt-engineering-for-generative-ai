@@ -1,0 +1,3 @@
+# The course repo's root .gitignore excludes every *.mp4, and ../.gitignore only re-allows
+# the pitch film. Allow exactly this film back in. Everything else follows ../.gitignore.
+!decisiontrace-lite-film.mp4
